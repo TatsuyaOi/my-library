@@ -1,0 +1,29 @@
+My Library テンプレート導入方法
+
+1. このZIPを展開します。
+2. 中のフォルダと index.html を、現在の my-library フォルダへコピーします。
+3. ルートの index.html は、現在の日本語フォルダ名に合わせた更新版です。
+4. GitHub Desktop を開きます。
+5. Summary に「カテゴリ用indexを追加」などと入力します。
+6. Commit to main → Push origin を押します。
+7. GitHub Pages の My Library を再読み込みします。
+
+資料を追加する方法
+- 例：「12_簿記」フォルダへ「貸倒引当金.html」を保存
+- 同じフォルダの index.html をメモ帳やVS Code等で開く
+- 下部の LIBRARY_ITEMS に1件追加
+
+例：
+{
+  title: "貸倒引当金",
+  group: "決算",
+  description: "貸倒引当金の意味と仕訳を整理",
+  file: "貸倒引当金.html",
+  tags: ["簿記3級", "仕訳"],
+  updated: "2026-08-23",
+  pinned: true
+},
+
+注意：
+GitHub Pages はフォルダ内のHTMLを自動一覧化しません。
+新しい資料を追加したときは、カテゴリの index.html にも1件登録してください。

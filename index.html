@@ -1,465 +1,150 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f7f7f5">
-  <meta name="color-scheme" content="light">
-  <title>My Library</title>
-
-  <style>
-    :root {
-      --bg: #f7f7f5;
-      --surface: #ffffff;
-      --text: #171717;
-      --muted: #6b6b6b;
-      --line: #e7e7e2;
-      --accent: #1f5eff;
-      --accent-soft: #edf2ff;
-      --radius: 22px;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.055);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Noto Sans JP",
-        "Hiragino Kaku Gothic ProN",
-        "Yu Gothic",
-        Meiryo,
-        sans-serif;
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    button,
-    input {
-      font: inherit;
-    }
-
-    .wrap {
-      width: min(100%, 760px);
-      margin: 0 auto;
-      padding:
-        max(24px, env(safe-area-inset-top))
-        18px
-        max(42px, env(safe-area-inset-bottom));
-    }
-
-    .hero {
-      padding: 18px 4px 10px;
-    }
-
-    .eyebrow {
-      margin: 0 0 4px;
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.25rem, 10vw, 4rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-    }
-
-    .lead {
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .search-area {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      padding: 12px 0 16px;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(247, 247, 245, 0.98) 72%,
-          rgba(247, 247, 245, 0)
-        );
-      backdrop-filter: blur(10px);
-    }
-
-    .search {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-height: 58px;
-      padding: 0 16px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .search-icon {
-      font-size: 1.2rem;
-      opacity: 0.55;
-    }
-
-    .search input {
-      width: 100%;
-      min-width: 0;
-      border: 0;
-      outline: 0;
-      background: transparent;
-      color: var(--text);
-      font-size: 1rem;
-    }
-
-    .search input::placeholder {
-      color: #999;
-    }
-
-    .section-title {
-      margin: 18px 4px 12px;
-      font-size: 1rem;
-      color: var(--muted);
-      font-weight: 800;
-      letter-spacing: 0.02em;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .card {
-      display: grid;
-      grid-template-columns: 54px 1fr auto;
-      align-items: center;
-      gap: 14px;
-      min-height: 108px;
-      padding: 18px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      text-decoration: none;
-      transition:
-        transform 0.16s ease,
-        border-color 0.16s ease,
-        background 0.16s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .card:active {
-      transform: scale(0.985);
-      background: #fbfbfa;
-    }
-
-    .icon {
-      display: grid;
-      place-items: center;
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      background: var(--accent-soft);
-      font-size: 1.65rem;
-    }
-
-    .card h2 {
-      margin: 0;
-      font-size: 1.18rem;
-      line-height: 1.25;
-    }
-
-    .card p {
-      margin: 5px 0 0;
-      color: var(--muted);
-      font-size: 0.86rem;
-      line-height: 1.45;
-    }
-
-    .arrow {
-      color: #aaa;
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .card[data-disabled="true"] {
-      cursor: pointer;
-    }
-
-    .card.hidden {
-      display: none;
-    }
-
-    .empty {
-      display: none;
-      margin: 22px 4px 0;
-      padding: 18px;
-      background: var(--surface);
-      border: 1px dashed #cfcfc8;
-      border-radius: 18px;
-      color: var(--muted);
-      text-align: center;
-    }
-
-    .notice {
-      margin-top: 22px;
-      padding: 17px 18px;
-      background: #fffbe9;
-      border: 1px solid #eee2a9;
-      border-radius: 18px;
-      font-size: 0.88rem;
-      color: #625729;
-    }
-
-    footer {
-      margin-top: 28px;
-      padding: 20px 4px 0;
-      color: #999;
-      font-size: 0.8rem;
-      text-align: center;
-    }
-
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: max(24px, env(safe-area-inset-bottom));
-      z-index: 100;
-      width: calc(100% - 36px);
-      max-width: 520px;
-      padding: 14px 18px;
-      border-radius: 16px;
-      background: #191919;
-      color: #fff;
-      text-align: center;
-      font-size: 0.9rem;
-      opacity: 0;
-      transform: translate(-50%, 16px);
-      pointer-events: none;
-      transition: 0.2s ease;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translate(-50%, 0);
-    }
-
-    @media (min-width: 650px) {
-      .wrap {
-        padding-left: 28px;
-        padding-right: 28px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .card {
-        grid-template-columns: 54px 1fr;
-      }
-
-      .arrow {
-        display: none;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f7f5">
+<title>My Library</title>
+<style>
+:root{--bg:#f7f7f5;--surface:#fff;--text:#171717;--muted:#6b6b6b;--line:#e7e7e2;--accent:#1f5eff;--soft:#edf2ff;--radius:22px;--shadow:0 10px 30px rgba(0,0,0,.055)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:18px;line-height:1.65}
+a{color:inherit}
+.wrap{width:min(100%,820px);margin:auto;padding:max(24px,env(safe-area-inset-top)) 18px max(42px,env(safe-area-inset-bottom))}
+.hero{padding:18px 4px 12px}
+.eyebrow{margin:0 0 4px;color:var(--accent);font-size:.78rem;font-weight:900;letter-spacing:.08em}
+h1{margin:0;font-size:clamp(2.4rem,10vw,4.2rem);line-height:1.05;letter-spacing:-.04em}
+.lead{margin:14px 0 0;color:var(--muted);font-size:.96rem}
+.search-area{position:sticky;top:0;z-index:10;padding:12px 0 16px;background:linear-gradient(to bottom,rgba(247,247,245,.98) 72%,rgba(247,247,245,0));backdrop-filter:blur(10px)}
+.search{display:flex;align-items:center;gap:10px;min-height:58px;padding:0 16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.search input{width:100%;border:0;outline:0;background:transparent;font:inherit;color:var(--text)}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:20px 4px 11px;color:var(--muted)}
+.section-head strong{font-size:.9rem;letter-spacing:.04em}
+.small{font-size:.74rem}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+.category{display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:14px;min-height:108px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);text-decoration:none}
+.icon{display:grid;place-items:center;width:54px;height:54px;border-radius:16px;background:var(--soft);font-size:1.65rem}
+.category h2{margin:0;font-size:1.15rem;line-height:1.25}
+.category p{margin:5px 0 0;color:var(--muted);font-size:.82rem;line-height:1.45}
+.arrow{color:#aaa;font-size:1.4rem;font-weight:700}
+.result-list{display:grid;gap:10px}
+.result{display:block;padding:16px 17px;background:#fff;border:1px solid var(--line);border-radius:18px;text-decoration:none;box-shadow:var(--shadow)}
+.result-top{display:flex;justify-content:space-between;gap:12px}
+.result h3{margin:0;font-size:1rem}
+.result p{margin:5px 0 0;color:var(--muted);font-size:.8rem}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:5px}
+.badge{display:inline-block;padding:3px 8px;background:var(--soft);color:var(--accent);border-radius:999px;font-size:.66rem;font-weight:900}
+.meta{margin-top:7px;color:#999;font-size:.7rem}
+.empty{padding:20px;background:#fff;border:1px dashed #ccc;border-radius:18px;color:var(--muted);text-align:center}
+.hidden{display:none!important}
+footer{margin-top:30px;text-align:center;color:#999;font-size:.76rem}
+@media(min-width:650px){.wrap{padding-left:28px;padding-right:28px}.grid{grid-template-columns:1fr 1fr}.category{grid-template-columns:54px 1fr}.category>.arrow{display:none}}
+</style>
 </head>
-
 <body>
-  <main class="wrap">
-    <header class="hero">
-      <p class="eyebrow">Personal HTML Library</p>
-      <h1>My Library</h1>
-      <p class="lead">
-        勉強・哲学・仕事・旅行など、自分のHTML資料をここからすぐ開くためのトップページです。
-      </p>
-    </header>
+<main class="wrap">
+<header class="hero">
+<p class="eyebrow">PERSONAL HTML LIBRARY</p>
+<h1>My Library</h1>
+<p class="lead">HTMLをフォルダへ追加してPushするだけ。カテゴリ一覧・検索・最近追加は自動更新されます。</p>
+</header>
 
-    <div class="search-area">
-      <label class="search" aria-label="ライブラリを検索">
-        <span class="search-icon" aria-hidden="true">⌕</span>
-        <input
-          id="searchInput"
-          type="search"
-          placeholder="項目を検索…"
-          autocomplete="off"
-        >
-      </label>
-    </div>
+<div class="search-area">
+<label class="search"><span>⌕</span><input id="search" type="search" placeholder="全資料を検索…" autocomplete="off"></label>
+</div>
 
-    <p class="section-title">LIBRARY</p>
+<section id="categoriesSection">
+  <div class="section-head"><strong>LIBRARY</strong><span class="small" id="totalCount"></span></div>
+  <div class="grid" id="categories"></div>
+</section>
 
-    <section class="grid" id="libraryGrid">
-      <!--
-        リンク先のページを作ったら data-disabled="true" を削除し、
-        href を実際のファイル / フォルダへ変更してください。
-        例：href="./bookkeeping/"
-      -->
+<section id="resultsSection" class="hidden">
+  <div class="section-head"><strong>検索結果</strong><span class="small" id="resultCount"></span></div>
+  <div class="result-list" id="results"></div>
+</section>
 
-      <a class="card" href="./bookkeeping/" data-disabled="true"
-         data-search="簿記 会計 仕訳 資産 負債 収益 費用">
-        <div class="icon">📘</div>
-        <div>
-          <h2>簿記</h2>
-          <p>簿記3級・仕訳・決算・勘定科目</p>
-        </div>
-        <span class="arrow">›</span>
-      </a>
+<section id="recentSection">
+  <div class="section-head"><strong>最近更新した資料</strong><span class="small">最新12件</span></div>
+  <div class="result-list" id="recent"></div>
+</section>
 
-      <a class="card" href="./study/" data-disabled="true"
-         data-search="勉強 学習 統計 危険物 IT 情報 資格">
-        <div class="icon">🎓</div>
-        <div>
-          <h2>勉強・資格</h2>
-          <p>統計・危険物・IT・その他の学習資料</p>
-        </div>
-        <span class="arrow">›</span>
-      </a>
+<footer>My Library · GitHub Pages</footer>
+</main>
 
-      <a class="card" href="./philosophy/" data-disabled="true"
-         data-search="哲学 ストア派 アウレリウス スピノザ 自省録 思想">
-        <div class="icon">🧠</div>
-        <div>
-          <h2>哲学</h2>
-          <p>ストア派・スピノザ・思想ノート</p>
-        </div>
-        <span class="arrow">›</span>
-      </a>
+<script>
+let library = {categories:[], items:[]};
+const $ = id => document.getElementById(id);
 
-      <a class="card" href="./work/" data-disabled="true"
-         data-search="仕事 研究 開発 技術 R&D 薄膜 スパッタリング">
-        <div class="icon">🔬</div>
-        <div>
-          <h2>仕事・研究</h2>
-          <p>技術資料・研究メモ・業務知識</p>
-        </div>
-        <span class="arrow">›</span>
-      </a>
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]))}
 
-      <a class="card" href="./travel/" data-disabled="true"
-         data-search="旅行 観光 ドライブ 沖縄 広島 旅程">
-        <div class="icon">✈️</div>
-        <div>
-          <h2>旅行</h2>
-          <p>旅行計画・観光地・ドライブ資料</p>
-        </div>
-        <span class="arrow">›</span>
-      </a>
+function itemHtml(item){
+  return `
+    <a class="result" href="${encodeURI(item.url)}">
+      <div class="badges">
+        <span class="badge">${esc(item.category_title || "")}</span>
+        ${item.group ? `<span class="badge">${esc(item.group)}</span>` : ""}
+        ${item.pinned ? `<span class="badge">★ よく見る</span>` : ""}
+      </div>
+      <div class="result-top"><h3>${esc(item.title)}</h3><span class="arrow">›</span></div>
+      ${item.description ? `<p>${esc(item.description)}</p>` : ""}
+      ${item.updated ? `<div class="meta">更新：${esc(item.updated)}</div>` : ""}
+    </a>`;
+}
 
-      <a class="card" href="./money/" data-disabled="true"
-         data-search="お金 投資 市場 マーケット 株 金融 資産">
-        <div class="icon">📈</div>
-        <div>
-          <h2>お金・市場</h2>
-          <p>投資・金融・マーケットのまとめ</p>
-        </div>
-        <span class="arrow">›</span>
-      </a>
+function renderCategories(){
+  $("categories").innerHTML = library.categories.map(c => `
+    <a class="category" href="${encodeURI("./"+c.folder+"/")}">
+      <div class="icon">${esc(c.icon || "📚")}</div>
+      <div>
+        <h2>${esc(c.title)}</h2>
+        <p>${esc(c.description || "")}<br>${c.count}件</p>
+      </div>
+      <span class="arrow">›</span>
+    </a>`).join("");
+  $("totalCount").textContent = `全 ${library.items.length} 件`;
+}
 
-      <a class="card" href="./life/" data-disabled="true"
-         data-search="生活 習慣 運動 食事 健康 便利">
-        <div class="icon">🏠</div>
-        <div>
-          <h2>生活</h2>
-          <p>習慣・運動・食事・暮らしのメモ</p>
-        </div>
-        <span class="arrow">›</span>
-      </a>
+function renderRecent(){
+  const items = [...library.items].slice(0,12);
+  $("recent").innerHTML = items.length ? items.map(itemHtml).join("") :
+    `<div class="empty">まだ資料がありません。</div>`;
+}
 
-      <a class="card" href="./archive/" data-disabled="true"
-         data-search="その他 アーカイブ 保存 資料 メモ">
-        <div class="icon">🗂️</div>
-        <div>
-          <h2>その他</h2>
-          <p>分類前の資料・アーカイブ</p>
-        </div>
-        <span class="arrow">›</span>
-      </a>
-    </section>
+function search(){
+  const q = $("search").value.trim().toLowerCase();
+  if(!q){
+    $("categoriesSection").classList.remove("hidden");
+    $("recentSection").classList.remove("hidden");
+    $("resultsSection").classList.add("hidden");
+    return;
+  }
+  const hits = library.items.filter(item => [
+    item.title,item.description,item.group,item.category_title,...(item.tags||[])
+  ].join(" ").toLowerCase().includes(q));
 
-    <div class="empty" id="emptyState">
-      該当する項目がありません。
-    </div>
+  $("categoriesSection").classList.add("hidden");
+  $("recentSection").classList.add("hidden");
+  $("resultsSection").classList.remove("hidden");
+  $("resultCount").textContent = `${hits.length} 件`;
+  $("results").innerHTML = hits.length ? hits.map(itemHtml).join("") :
+    `<div class="empty">該当する資料がありません。</div>`;
+}
 
-    <div class="notice">
-      <strong>現在はトップページだけの初期版です。</strong><br>
-      各カテゴリのHTMLを追加したら、このトップページから開けるようにしていきます。
-    </div>
-
-    <footer>
-      My Library · GitHub Pages
-    </footer>
-  </main>
-
-  <div class="toast" id="toast" role="status" aria-live="polite">
-    このカテゴリのページはまだ作成されていません。
-  </div>
-
-  <script>
-    const input = document.getElementById("searchInput");
-    const cards = [...document.querySelectorAll(".card")];
-    const emptyState = document.getElementById("emptyState");
-    const toast = document.getElementById("toast");
-    let toastTimer;
-
-    input.addEventListener("input", () => {
-      const keyword = input.value.trim().toLowerCase();
-      let visibleCount = 0;
-
-      cards.forEach(card => {
-        const text = (
-          card.textContent + " " + (card.dataset.search || "")
-        ).toLowerCase();
-
-        const match = text.includes(keyword);
-        card.classList.toggle("hidden", !match);
-        if (match) visibleCount++;
-      });
-
-      emptyState.style.display = visibleCount === 0 ? "block" : "none";
-    });
-
-    cards.forEach(card => {
-      card.addEventListener("click", event => {
-        if (card.dataset.disabled === "true") {
-          event.preventDefault();
-
-          clearTimeout(toastTimer);
-          toast.classList.add("show");
-
-          toastTimer = setTimeout(() => {
-            toast.classList.remove("show");
-          }, 2200);
-        }
-      });
-    });
-  </script>
+async function init(){
+  try{
+    const r = await fetch("./library-all.json",{cache:"no-store"});
+    if(!r.ok) throw new Error(r.status);
+    library = await r.json();
+    renderCategories();
+    renderRecent();
+  }catch(e){
+    $("categories").innerHTML = `<div class="empty">library-all.json を読み込めません。GitHub Actionsの完了を確認してください。</div>`;
+    console.error(e);
+  }
+}
+$("search").addEventListener("input",search);
+init();
+</script>
 </body>
 </html>

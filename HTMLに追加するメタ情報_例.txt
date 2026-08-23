@@ -1,0 +1,30 @@
+<!-- My Library用：必要に応じて <head> 内へ追加 -->
+<meta name="library-title" content="貸倒引当金">
+<meta name="library-group" content="決算">
+<meta name="library-tags" content="簿記3級,仕訳,決算">
+<meta name="library-description" content="貸倒引当金の意味・計算・仕訳を整理">
+<meta name="library-pinned" content="false">
+
+<!-- 任意設定
+<meta name="library-order" content="10">
+<meta name="library-hidden" content="true">
+-->
+
+タイトル以外は省略可能です。
+メタ情報がないHTMLでも自動登録されます。
+
+タイトルの自動判定順：
+1. library-title
+2. <title>
+3. 最初の <h1>
+4. ファイル名
+
+library-group:
+カテゴリページ内の小分類です。
+例：基礎 / 仕訳 / 決算 / 問題演習
+
+library-pinned:
+true にすると「★ よく見る」として先頭付近へ表示。
+
+library-hidden:
+true にするとHTMLは存在していても一覧から除外。
