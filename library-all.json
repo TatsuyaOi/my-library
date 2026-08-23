@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-08-23T08:12:01+00:00",
+  "generated_at": "2026-08-23T08:19:36+00:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -11,51 +11,59 @@
       "count": 1
     },
     {
-      "folder": "01_哲学",
+      "folder": "01_プロンプト",
+      "title": "プロンプト",
+      "icon": "🧩",
+      "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
+      "accent": "#59636f",
+      "count": 1
+    },
+    {
+      "folder": "11_哲学",
       "title": "哲学",
       "icon": "🧠",
       "description": "哲学者・思想・名言・自分の考えを整理するライブラリ",
       "accent": "#6f56d9",
-      "count": 0
+      "count": 1
     },
     {
-      "folder": "11_基本情報",
+      "folder": "21_基本情報",
       "title": "基本情報",
       "icon": "💻",
       "description": "IT・基本情報技術者・コンピュータ基礎を整理するライブラリ",
       "accent": "#2878d0",
-      "count": 0
+      "count": 1
     },
     {
-      "folder": "12_簿記",
+      "folder": "22_簿記",
       "title": "簿記",
       "icon": "📘",
       "description": "簿記・仕訳・勘定科目・決算を整理する学習ライブラリ",
       "accent": "#2366c8",
-      "count": 0
+      "count": 1
     },
     {
-      "folder": "21_旅行",
+      "folder": "31_旅行",
       "title": "旅行",
       "icon": "✈️",
       "description": "旅行計画・観光地・宿・移動・ドライブ情報をまとめるライブラリ",
       "accent": "#1687a7",
-      "count": 0
-    },
-    {
-      "folder": "31_仕事",
-      "title": "仕事",
-      "icon": "🔬",
-      "description": "仕事・研究開発・技術資料・業務知識を整理するライブラリ",
-      "accent": "#2f6b59",
-      "count": 0
+      "count": 1
     },
     {
       "folder": "41_AI",
       "title": "AI",
       "icon": "✨",
-      "description": "ChatGPT・Codex・AI活用・プロンプトを整理するライブラリ",
+      "description": "ChatGPT・Codex・AI活用・AI関連資料を整理するライブラリ",
       "accent": "#8b5a2b",
+      "count": 0
+    },
+    {
+      "folder": "51_仕事",
+      "title": "仕事",
+      "icon": "🔬",
+      "description": "仕事・研究開発・技術資料・業務知識を整理するライブラリ",
+      "accent": "#2f6b59",
       "count": 0
     },
     {
@@ -89,6 +97,99 @@
       "category_title": "マニュアル",
       "category_icon": "📖",
       "url": "./00_マニュアル/My Library 運用説明書.html"
+    },
+    {
+      "title": "My Library対応HTML生成プロンプト 使い方ガイド",
+      "description": "完成済みHTMLのMy Library対応化と、画像から見やすいHTMLを作るためのマスタープロンプトの使い方を初心者向けに解説",
+      "group": "HTML運用",
+      "tags": [
+        "My Library",
+        "GitHub Pages",
+        "HTML",
+        "プロンプト",
+        "画像埋め込み",
+        "変換",
+        "使い方"
+      ],
+      "pinned": true,
+      "order": 2,
+      "updated": "2026-08-23",
+      "file": "01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
+    },
+    {
+      "title": "簿記3級 取引の8要素 早見表",
+      "description": "簿記3級の取引要素について、増減時の借方・貸方と具体例を一覧で確認できる早見表の画像資料。",
+      "group": "画像資料",
+      "tags": [
+        "簿記3級",
+        "取引の8要素",
+        "資産",
+        "負債",
+        "純資産",
+        "収益",
+        "費用"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-23",
+      "file": "取引の8要素.html",
+      "category_folder": "22_簿記",
+      "category_title": "簿記",
+      "category_icon": "📘",
+      "url": "./22_簿記/取引の8要素.html"
+    },
+    {
+      "title": "沖縄2泊3日モデルプラン",
+      "description": "沖縄本島・石垣・竹富島を巡る2泊3日のモデルプランを1枚にまとめた画像資料。",
+      "group": "旅行計画",
+      "tags": [
+        "沖縄",
+        "旅行計画",
+        "2泊3日",
+        "本島",
+        "石垣",
+        "竹富島"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-23",
+      "file": "沖縄2泊3日モデルプラン.html",
+      "category_folder": "31_旅行",
+      "category_title": "旅行",
+      "category_icon": "✈️",
+      "url": "./31_旅行/沖縄2泊3日モデルプラン.html"
+    },
+    {
+      "title": "基本情報技術者試験（FE）総合復習ノート｜これまでの質問を完全統合",
+      "description": "これまで質問した基本情報技術者試験（FE）の内容を統合した、スマートフォン向け保存版総合復習ノート。",
+      "group": "未分類",
+      "tags": [],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-23",
+      "file": "FE総合復習ノート.html",
+      "category_folder": "21_基本情報",
+      "category_title": "基本情報",
+      "category_icon": "💻",
+      "url": "./21_基本情報/FE総合復習ノート.html"
+    },
+    {
+      "title": "北極星の哲学｜シンプル版",
+      "description": "哲学を北極星として、自分の判断・時間・行動を統治するための個人思想ノート。",
+      "group": "未分類",
+      "tags": [],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-23",
+      "file": "北極星の哲学.html",
+      "category_folder": "11_哲学",
+      "category_title": "哲学",
+      "category_icon": "🧠",
+      "url": "./11_哲学/北極星の哲学.html"
     }
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "category": {
+    "folder": "01_プロンプト",
+    "title": "プロンプト",
+    "icon": "🧩",
+    "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
+    "accent": "#59636f"
+  },
+  "generated_at": "2026-08-23T08:19:36+00:00",
+  "items": [
+    {
+      "title": "My Library対応HTML生成プロンプト 使い方ガイド",
+      "description": "完成済みHTMLのMy Library対応化と、画像から見やすいHTMLを作るためのマスタープロンプトの使い方を初心者向けに解説",
+      "group": "HTML運用",
+      "tags": [
+        "My Library",
+        "GitHub Pages",
+        "HTML",
+        "プロンプト",
+        "画像埋め込み",
+        "変換",
+        "使い方"
+      ],
+      "pinned": true,
+      "order": 2,
+      "updated": "2026-08-23",
+      "file": "01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
+    }
+  ]
+}
