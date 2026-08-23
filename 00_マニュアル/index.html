@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#4f5d75">
+<title>マニュアル | My Library</title>
+<style>
+:root{
+  --bg:#f6f7f9;--surface:#fff;--text:#17191c;--muted:#6e737b;
+  --line:#e4e7eb;--accent:#4f5d75;--accent-soft:rgba(79,93,117,.10);
+  --shadow:0 8px 24px rgba(0,0,0,.055);--radius:20px
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:18px;line-height:1.65}
+a{color:inherit} button,input{font:inherit}
+.wrap{width:min(100%,780px);margin:auto;padding:max(18px,env(safe-area-inset-top)) 16px max(42px,env(safe-area-inset-bottom))}
+.back{display:inline-flex;align-items:center;min-height:44px;padding:0 6px;color:var(--accent);font-weight:800;text-decoration:none}
+.hero{padding:14px 4px 18px}.hero-row{display:flex;align-items:center;gap:15px}
+.hero-icon{display:grid;place-items:center;width:64px;height:64px;flex:none;border-radius:20px;background:var(--accent-soft);font-size:2rem}
+h1{margin:0;font-size:clamp(2.2rem,10vw,3.8rem);line-height:1.05;letter-spacing:-.035em}
+.lead{margin:12px 0 0;color:var(--muted);font-size:.98rem}
+.search-wrap{position:sticky;top:0;z-index:10;padding:8px 0 12px;background:linear-gradient(to bottom,rgba(246,247,249,.97) 75%,rgba(246,247,249,0));backdrop-filter:blur(10px)}
+.search{display:flex;align-items:center;gap:10px;min-height:58px;padding:0 16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.search input{width:100%;border:0;outline:0;background:transparent;color:var(--text)}
+.filters{display:flex;gap:8px;overflow:auto;padding:2px 1px 14px;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}
+.filter{white-space:nowrap;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:9px 13px;font-size:.82rem;font-weight:800;cursor:pointer}
+.filter.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.section-title{display:flex;justify-content:space-between;align-items:center;margin:20px 4px 10px;font-size:.92rem;color:var(--muted);font-weight:900;letter-spacing:.03em}
+.count{font-size:.76rem;font-weight:700}.list{display:grid;gap:11px}
+.card{display:block;padding:17px 18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);text-decoration:none}
+.card-top{display:flex;align-items:flex-start;gap:10px}.card-main{min-width:0;flex:1}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.badge{display:inline-block;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.68rem;font-weight:900}
+.card h2{margin:0;font-size:1.08rem;line-height:1.35}.arrow{color:#aaa;font-size:1.35rem}
+.desc{margin:6px 0 0;color:var(--muted);font-size:.84rem;line-height:1.5}
+.tags{margin-top:8px;color:#8b9097;font-size:.72rem}.meta{margin-top:7px;color:#9a9ea4;font-size:.72rem}
+.empty{padding:26px 18px;background:#fff;border:1px dashed #cbd0d5;border-radius:18px;text-align:center;color:var(--muted)}
+footer{padding:28px 4px 6px;text-align:center;color:#999;font-size:.75rem}
+@media(min-width:680px){.wrap{padding-left:26px;padding-right:26px}.list{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<a class="back" href="../index.html">← My Library</a>
+<header class="hero">
+  <div class="hero-row">
+    <div class="hero-icon" id="categoryIcon">📖</div>
+    <h1 id="categoryTitle">マニュアル</h1>
+  </div>
+  <p class="lead" id="categoryDescription">My Libraryの運用説明書・設定資料</p>
+</header>
+<div class="search-wrap">
+<label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="マニュアルを検索…" autocomplete="off"></label>
+</div>
+<div class="filters" id="filters"></div>
+<div class="section-title"><span id="sectionLabel">すべての資料</span><span class="count" id="count"></span></div>
+<section class="list" id="list"><div class="empty">資料一覧を読み込んでいます…</div></section>
+<footer id="footer">マニュアル · My Library</footer>
+</main>
+<script>
+const els={title:document.getElementById("categoryTitle"),icon:document.getElementById("categoryIcon"),description:document.getElementById("categoryDescription"),filters:document.getElementById("filters"),input:document.getElementById("searchInput"),section:document.getElementById("sectionLabel"),count:document.getElementById("count"),list:document.getElementById("list"),footer:document.getElementById("footer")};
+let data=null,activeGroup="すべて";
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]))}
+function groups(){return ["すべて",...new Set((data.items||[]).map(x=>x.group||"未分類"))]}
+function renderFilters(){els.filters.innerHTML=groups().map(g=>`<button class="filter ${g===activeGroup?"active":""}" data-group="${esc(g)}">${esc(g)}</button>`).join("");els.filters.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{activeGroup=b.dataset.group;renderFilters();render()})}
+function render(){const q=els.input.value.trim().toLowerCase();const items=(data.items||[]).filter(x=>activeGroup==="すべて"||(x.group||"未分類")===activeGroup).filter(x=>[x.title,x.group,x.description,...(x.tags||[])].join(" ").toLowerCase().includes(q));els.section.textContent=activeGroup==="すべて"?"すべての資料":activeGroup;els.count.textContent=`${items.length} 件`;els.list.innerHTML=items.length?items.map(x=>`<a class="card" href="${encodeURI(x.file)}"><div class="card-top"><div class="card-main"><div class="badges">${x.pinned?'<span class="badge">★ よく見る</span>':''}${x.group?`<span class="badge">${esc(x.group)}</span>`:''}</div><h2>${esc(x.title)}</h2>${x.description?`<p class="desc">${esc(x.description)}</p>`:''}${(x.tags||[]).length?`<div class="tags">${x.tags.map(esc).join(" · ")}</div>`:''}${x.updated?`<div class="meta">更新：${esc(x.updated)}</div>`:''}</div><span class="arrow">›</span></div></a>`).join(""):'<div class="empty">まだマニュアルがありません。</div>'}
+async function init(){const r=await fetch("./library.json",{cache:"no-store"});data=await r.json();const c=data.category||{};els.title.textContent=c.title||"マニュアル";els.icon.textContent=c.icon||"📖";els.description.textContent=c.description||"";renderFilters();render()}
+els.input.addEventListener("input",render);init();
+</script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#4f5d75">
+
+<meta name="library-title" content="My Library 運用説明書">
+<meta name="library-group" content="My Library">
+<meta name="library-tags" content="GitHub,GitHub Pages,GitHub Actions,GitHub Desktop,HTML,運用,マニュアル">
+<meta name="library-description" content="My LibraryへのHTML追加・Commit・Push・自動一覧生成・トラブル対応までをまとめた運用マニュアル">
+<meta name="library-pinned" content="true">
+<meta name="library-order" content="1">
+
+<title>My Library 運用説明書</title>
+
+<style>
+:root{
+  --bg:#f4f5f7;
+  --paper:#fff;
+  --text:#17191c;
+  --muted:#66707b;
+  --line:#e3e6ea;
+  --accent:#4f5d75;
+  --accent2:#293241;
+  --soft:#eef1f5;
+  --ok:#217a4a;
+  --warn:#8a6318;
+  --radius:20px;
+  --shadow:0 10px 32px rgba(0,0,0,.055);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:85px}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;
+  font-size:18px;line-height:1.8
+}
+a{color:var(--accent);text-decoration-thickness:.08em;text-underline-offset:.15em}
+button,input{font:inherit}
+.wrap{
+  width:min(100%,850px);margin:auto;
+  padding:max(18px,env(safe-area-inset-top)) 16px max(48px,env(safe-area-inset-bottom))
+}
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px
+}
+.back{display:inline-flex;align-items:center;min-height:44px;font-weight:800;text-decoration:none}
+.version{font-size:.72rem;color:var(--muted)}
+.hero{
+  padding:27px 22px 25px;border-radius:28px;
+  background:linear-gradient(145deg,#293241,#56647c);
+  color:white;box-shadow:var(--shadow)
+}
+.kicker{margin:0 0 7px;font-size:.74rem;font-weight:900;letter-spacing:.11em;opacity:.75}
+h1{margin:0;font-size:clamp(2.2rem,10vw,4.4rem);line-height:1.08;letter-spacing:-.04em}
+.hero p{margin:16px 0 0;color:rgba(255,255,255,.8);font-size:.95rem}
+.quick{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px
+}
+.quick div{
+  padding:10px 7px;border:1px solid rgba(255,255,255,.15);
+  border-radius:13px;background:rgba(255,255,255,.08);text-align:center;
+  font-size:.74rem;font-weight:800
+}
+.search-area{
+  position:sticky;top:0;z-index:20;padding:13px 0;
+  background:linear-gradient(to bottom,rgba(244,245,247,.98) 78%,rgba(244,245,247,0));
+  backdrop-filter:blur(10px)
+}
+.search{
+  display:flex;align-items:center;gap:10px;padding:0 16px;min-height:56px;
+  background:white;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)
+}
+.search input{width:100%;border:0;outline:0;background:transparent;color:var(--text)}
+.toc{
+  margin:5px 0 24px;padding:18px;background:white;border:1px solid var(--line);
+  border-radius:var(--radius);box-shadow:var(--shadow)
+}
+.toc-title{margin:0 0 10px;font-size:.8rem;color:var(--muted);font-weight:900;letter-spacing:.05em}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.toc a{
+  display:block;padding:10px 12px;background:var(--soft);border-radius:12px;
+  color:var(--accent2);text-decoration:none;font-size:.8rem;font-weight:800
+}
+section.manual-section{
+  margin:15px 0;padding:21px 20px;background:var(--paper);
+  border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)
+}
+section.hidden{display:none}
+.num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:31px;height:31px;border-radius:10px;background:var(--accent);color:white;
+  font-size:.78rem;font-weight:900;margin-bottom:9px
+}
+h2{margin:0 0 12px;font-size:1.45rem;line-height:1.35;letter-spacing:-.02em}
+h3{margin:22px 0 8px;font-size:1.05rem}
+p{margin:8px 0}
+ul,ol{padding-left:1.4em}
+li+li{margin-top:6px}
+.flow{
+  margin:14px 0;padding:16px;background:#f7f8fa;border-left:5px solid var(--accent);
+  border-radius:5px 14px 14px 5px;font-weight:700;white-space:pre-line
+}
+.tip,.warning,.success{
+  margin:14px 0;padding:15px 16px;border-radius:15px;font-size:.9rem
+}
+.tip{background:#f0f4fa;border:1px solid #dce3ec}
+.warning{background:#fff8e8;border:1px solid #efdfb3;color:#6f541b}
+.success{background:#eef8f2;border:1px solid #cde7d6;color:#285e3d}
+code{
+  padding:.14em .36em;border-radius:.38em;background:#eef0f3;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.83em
+}
+pre{
+  overflow:auto;margin:13px 0;padding:15px;border-radius:15px;
+  background:#20242b;color:#eef1f5;font-size:.78rem;line-height:1.6
+}
+pre code{padding:0;background:none;color:inherit}
+table{width:100%;border-collapse:collapse;margin:13px 0;font-size:.84rem}
+th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f6f7f9}
+.checklist{list-style:none;padding:0}
+.checklist li{padding:8px 0;border-bottom:1px solid var(--line)}
+.checklist li::before{content:"□";margin-right:9px;color:var(--accent);font-weight:900}
+.highlight{
+  margin:19px 0;padding:19px;border-radius:18px;background:var(--accent2);color:white;
+  text-align:center;font-size:1.05rem;font-weight:900
+}
+footer{text-align:center;color:#9298a0;font-size:.72rem;padding:28px 0 6px}
+@media(max-width:540px){
+  body{font-size:18px}
+  .wrap{padding-left:13px;padding-right:13px}
+  .hero{padding:24px 19px}
+  .quick{grid-template-columns:1fr}
+  .toc-grid{grid-template-columns:1fr}
+  section.manual-section{padding:19px 17px}
+  table{font-size:.76rem}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="topbar">
+  <a class="back" href="./index.html">← マニュアル一覧</a>
+  <span class="version">2026-08-23</span>
+</div>
+
+<header class="hero">
+  <p class="kicker">MY LIBRARY OPERATIONS MANUAL</p>
+  <h1>My Library<br>運用説明書</h1>
+  <p>GitHub Pages・GitHub Actions・GitHub Desktopを使った、自動HTMLライブラリの普段の使い方と管理方法。</p>
+  <div class="quick">
+    <div>① HTMLを保存</div>
+    <div>② Commit</div>
+    <div>③ Push</div>
+  </div>
+</header>
+
+<div class="search-area">
+  <label class="search">
+    <span>⌕</span>
+    <input id="searchInput" type="search" placeholder="マニュアル内を検索…" autocomplete="off">
+  </label>
+</div>
+
+<nav class="toc">
+  <p class="toc-title">目次</p>
+  <div class="toc-grid">
+    <a href="#s1">仕組み</a>
+    <a href="#s2">フォルダ構成</a>
+    <a href="#s3">普段の追加方法</a>
+    <a href="#s4">メタ情報</a>
+    <a href="#s5">GitHub Desktop</a>
+    <a href="#s6">変更・削除</a>
+    <a href="#s7">カテゴリ管理</a>
+    <a href="#s8">トラブル対応</a>
+    <a href="#s9">安全上の注意</a>
+    <a href="#s10">チェックリスト</a>
+  </div>
+</nav>
+
+<section class="manual-section" id="s1" data-search="仕組み GitHub Actions Pages 自動 基本 運用">
+<span class="num">1</span>
+<h2>この仕組みの目的</h2>
+<p>My Libraryは、ChatGPT・Codexなどで作成したHTML資料をGitHubで一元管理し、GitHub PagesからPC・スマートフォンで読むための個人HTMLライブラリです。</p>
+<div class="flow">ChatGPT / Codex
+↓
+HTML作成
+↓
+PCの該当フォルダへ保存
+↓
+GitHub Desktop
+↓
+Commit → Push
+↓
+GitHub Actionsが自動整理
+↓
+GitHub Pages
+↓
+スマホのMy Library</div>
+<div class="success"><strong>最重要：</strong>普段は「HTMLを保存 → Commit → Push」まで覚えれば十分です。</div>
+
+<h3>GitHub Actionsが自動で行うこと</h3>
+<ul>
+<li>各カテゴリ内のHTMLを探索</li>
+<li>タイトル・説明・分類・タグを取得</li>
+<li>各カテゴリの <code>library.json</code> を生成</li>
+<li>全カテゴリ用 <code>library-all.json</code> を生成</li>
+<li>共通テンプレートを各カテゴリの <code>index.html</code> へ反映</li>
+<li>GitHub Pagesの表示を更新</li>
+</ul>
+</section>
+
+<section class="manual-section" id="s2" data-search="フォルダ 構成 ファイル index library json assets scripts workflow">
+<span class="num">2</span>
+<h2>フォルダとファイルの役割</h2>
+<pre><code>my-library
+├─ index.html
+├─ library-all.json
+├─ library.config.json
+├─ assets/
+│  └─ category-index.html
+├─ scripts/
+│  └─ build_library.py
+├─ .github/workflows/
+│  └─ rebuild-library.yml
+├─ 00_マニュアル/
+├─ 01_哲学/
+├─ 11_基本情報/
+├─ 12_簿記/
+├─ 21_旅行/
+├─ 31_仕事/
+├─ 41_AI/
+└─ 99_その他/</code></pre>
+
+<table>
+<tr><th>ファイル</th><th>役割</th><th>普段編集?</th></tr>
+<tr><td><code>index.html</code></td><td>My Libraryトップ</td><td>必要時のみ</td></tr>
+<tr><td><code>library.config.json</code></td><td>カテゴリ名・アイコン・色</td><td>カテゴリ変更時</td></tr>
+<tr><td><code>assets/category-index.html</code></td><td>カテゴリ共通デザイン</td><td>デザイン変更時</td></tr>
+<tr><td><code>library-all.json</code></td><td>全資料の検索データ</td><td>触らない</td></tr>
+<tr><td><code>各カテゴリ/library.json</code></td><td>カテゴリ資料一覧</td><td>触らない</td></tr>
+<tr><td><code>scripts/build_library.py</code></td><td>自動生成プログラム</td><td>通常触らない</td></tr>
+</table>
+</section>
+
+<section class="manual-section" id="s3" data-search="HTML 追加 保存 commit push 普段 手順">
+<span class="num">3</span>
+<h2>普段のHTML追加方法</h2>
+<p>例として、簿記の「貸倒引当金.html」を追加する場合です。</p>
+<ol>
+<li>ChatGPTなどで <code>貸倒引当金.html</code> を作成する。</li>
+<li><code>my-library/12_簿記/</code> に保存する。</li>
+<li>GitHub Desktopを開く。</li>
+<li>変更内容を確認する。</li>
+<li>Summaryへ <code>貸倒引当金教材を追加</code> などと入力する。</li>
+<li><strong>Commit to main</strong> を押す。</li>
+<li><strong>Push origin</strong> を押す。</li>
+<li>GitHub Actionsが自動実行される。</li>
+<li>少し待ってMy Libraryを再読み込みする。</li>
+</ol>
+<div class="highlight">HTML追加 → Commit → Push</div>
+</section>
+
+<section class="manual-section" id="s4" data-search="メタ meta library title group tags description pinned hidden order HTML head">
+<span class="num">4</span>
+<h2>My Library用メタ情報</h2>
+<p>普通のHTMLでも自動登録されますが、次の情報を <code>&lt;head&gt;</code> に入れると一覧がより見やすくなります。</p>
+<pre><code>&lt;meta name="library-title" content="貸倒引当金"&gt;
+&lt;meta name="library-group" content="決算"&gt;
+&lt;meta name="library-tags" content="簿記3級,仕訳,決算"&gt;
+&lt;meta name="library-description"
+      content="貸倒引当金の意味・計算・仕訳を整理"&gt;
+&lt;meta name="library-pinned" content="false"&gt;</code></pre>
+
+<table>
+<tr><th>項目</th><th>意味</th></tr>
+<tr><td><code>library-title</code></td><td>一覧に表示する資料名</td></tr>
+<tr><td><code>library-group</code></td><td>基礎・仕訳・決算などの小分類</td></tr>
+<tr><td><code>library-tags</code></td><td>検索に利用するキーワード</td></tr>
+<tr><td><code>library-description</code></td><td>一覧に表示する短い説明</td></tr>
+<tr><td><code>library-pinned</code></td><td><code>true</code> なら「★ よく見る」</td></tr>
+<tr><td><code>library-order</code></td><td>表示優先順位の補助設定</td></tr>
+<tr><td><code>library-hidden</code></td><td><code>true</code> なら一覧から非表示</td></tr>
+</table>
+
+<h3>メタ情報がない場合のタイトル判定</h3>
+<div class="flow">library-title
+↓
+&lt;title&gt;
+↓
+最初の &lt;h1&gt;
+↓
+HTMLファイル名</div>
+</section>
+
+<section class="manual-section" id="s5" data-search="GitHub Desktop commit push fetch pull origin 操作">
+<span class="num">5</span>
+<h2>GitHub Desktopの4つの基本操作</h2>
+<table>
+<tr><th>操作</th><th>意味</th></tr>
+<tr><td><strong>Commit</strong></td><td>PC上の変更を履歴として記録</td></tr>
+<tr><td><strong>Push</strong></td><td>PC → GitHubへ変更を送る</td></tr>
+<tr><td><strong>Fetch</strong></td><td>GitHub側に新しい変更があるか確認</td></tr>
+<tr><td><strong>Pull</strong></td><td>GitHub → PCへ最新変更を取り込む</td></tr>
+</table>
+
+<div class="tip">GitHub Actions自身がJSONなどを自動Commitするため、Push後にPC側よりGitHub側が新しくなる場合があります。そのときは <strong>Fetch origin → Pull origin</strong> を実行します。</div>
+
+<h3>推奨する開始手順</h3>
+<div class="flow">GitHub Desktopを開く
+↓
+Fetch origin
+↓
+Pull origin があればPull
+↓
+HTMLの追加・編集を開始</div>
+</section>
+
+<section class="manual-section" id="s6" data-search="修正 更新 削除 名前変更 rename delete edit">
+<span class="num">6</span>
+<h2>HTMLの修正・削除・名前変更</h2>
+
+<h3>修正</h3>
+<p>対象HTMLを編集して保存し、GitHub DesktopでCommit → Pushします。</p>
+
+<h3>削除</h3>
+<p>Windowsで対象HTMLを削除し、Commit → Pushします。GitHub Actionsが再生成され、My Libraryの一覧からも自動で消えます。</p>
+
+<h3>名前変更</h3>
+<p>Windows上でファイル名を変更し、Commit → Pushします。自動一覧も新しい名前・情報へ更新されます。</p>
+
+<div class="tip">Commitメッセージは「減価償却教材を更新」「旧教材を削除」のように、何をしたか分かる文章がおすすめです。</div>
+</section>
+
+<section class="manual-section" id="s7" data-search="カテゴリ 追加 変更 config color icon 表示名 assets template">
+<span class="num">7</span>
+<h2>カテゴリを管理する</h2>
+<p>カテゴリの設定は <code>library.config.json</code> で管理します。</p>
+<pre><code>"51_読書": {
+  "title": "読書",
+  "icon": "📚",
+  "description": "読書ノート・書籍要約",
+  "accent": "#7a5b3a"
+}</code></pre>
+
+<h3>カテゴリページのデザイン変更</h3>
+<p>各カテゴリの <code>index.html</code> を直接編集せず、<code>assets/category-index.html</code> を変更します。Push後、GitHub Actionsが全カテゴリへ反映します。</p>
+
+<div class="warning"><strong>原則触らない：</strong>各カテゴリの <code>library.json</code>、<code>library-all.json</code>、各カテゴリの自動生成 <code>index.html</code>。</div>
+</section>
+
+<section class="manual-section" id="s8" data-search="トラブル 表示されない action failure error pages github">
+<span class="num">8</span>
+<h2>トラブル時の確認順序</h2>
+<h3>HTMLを追加したのに表示されない</h3>
+<ol>
+<li>HTMLが正しいカテゴリフォルダにあるか。</li>
+<li>Commitしたか。</li>
+<li>Push originしたか。</li>
+<li>GitHubのCode画面にHTMLが存在するか。</li>
+<li>Actions → <strong>Rebuild My Library indexes</strong> が緑色か。</li>
+<li><strong>pages build and deployment</strong> が成功しているか。</li>
+<li>数十秒〜数分待ってブラウザを再読み込みする。</li>
+</ol>
+
+<h3>Actionsが赤色になった場合</h3>
+<p>GitHub → Actions → Rebuild My Library indexes → 失敗した実行を開き、赤くなった工程を確認します。</p>
+<p>主な原因はJSONの記述ミス、workflowやPythonスクリプトの変更ミス、書き込み権限などです。</p>
+</section>
+
+<section class="manual-section" id="s9" data-search="安全 セキュリティ public 機密 個人情報 password API">
+<span class="num">9</span>
+<h2>公開リポジトリでの注意</h2>
+<p>My LibraryがPublicリポジトリの場合、保存内容は第三者から閲覧される可能性があります。</p>
+<div class="warning">
+<strong>保存しないもの：</strong><br>
+パスワード / APIキー / 個人情報 / 顧客情報 / 社外秘資料 / 会社の機密情報 / 未公開研究情報 / 社内限定データ
+</div>
+<p>公開されても問題ない学習資料・一般情報だけを保存します。</p>
+</section>
+
+<section class="manual-section" id="s10" data-search="チェックリスト 日常 運用 確認">
+<span class="num">10</span>
+<h2>日常運用チェックリスト</h2>
+<h3>HTMLを追加するとき</h3>
+<ul class="checklist">
+<li>HTMLを作成した</li>
+<li>正しいカテゴリへ保存した</li>
+<li>必要ならMy Library用メタ情報を入れた</li>
+<li>GitHub Desktopで変更を確認した</li>
+<li>Summaryを入力した</li>
+<li>Commit to mainを実行した</li>
+<li>Push originを実行した</li>
+<li>必要ならActionsの成功を確認した</li>
+<li>My Libraryで表示を確認した</li>
+</ul>
+
+<h3>最重要ルール</h3>
+<div class="highlight">作成 → 保存 → Commit → Push<br>あとはGitHub Actionsに任せる。</div>
+</section>
+
+<footer>My Library 運用説明書 · 2026-08-23</footer>
+</main>
+
+<script>
+const input=document.getElementById("searchInput");
+const sections=[...document.querySelectorAll(".manual-section")];
+input.addEventListener("input",()=>{
+  const q=input.value.trim().toLowerCase();
+  sections.forEach(s=>{
+    const hay=(s.textContent+" "+(s.dataset.search||"")).toLowerCase();
+    s.classList.toggle("hidden",q && !hay.includes(q));
+  });
+});
+</script>
+</body>
+</html>

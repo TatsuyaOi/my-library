@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="これまで質問した基本情報技術者試験（FE）の内容を統合した、スマートフォン向け保存版総合復習ノート。">
+<meta name="category" content="学習・資格">
+<meta name="tags" content="基本情報技術者,FE,科目A,科目B,アルゴリズム,データベース,ネットワーク,セキュリティ">
+<meta name="created" content="2026-08-23">
+<meta name="updated" content="2026-08-23">
+<meta name="version" content="1.0">
+<title>基本情報技術者試験（FE）総合復習ノート｜これまでの質問を完全統合</title>
+<style>
+:root{
+  --bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#5d687c;--line:#dce2ec;
+  --accent:#2457d6;--accent2:#133786;--good:#16794d;--warn:#a96000;--danger:#b42318;
+  --code:#0f172a;--shadow:0 8px 28px rgba(30,45,80,.08);
+}
+@media(prefers-color-scheme:dark){
+ :root{--bg:#0d1320;--card:#151e2e;--text:#edf2ff;--muted:#aab4c7;--line:#2a3850;--accent:#79a3ff;--accent2:#b8cdff;--code:#080d16;--shadow:none}
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Yu Gothic",sans-serif;line-height:1.78;font-size:16px}
+a{color:var(--accent)} .wrap{max-width:1040px;margin:auto;padding:0 16px 80px}
+.hero{padding:48px 0 28px}.eyebrow{font-weight:800;color:var(--accent);letter-spacing:.08em;font-size:.85rem}
+h1{font-size:clamp(2rem,8vw,3.8rem);line-height:1.15;margin:.35rem 0 1rem}
+h2{font-size:clamp(1.55rem,5vw,2.25rem);line-height:1.3;margin:2.6rem 0 1rem;padding-top:12px}
+h3{font-size:1.25rem;line-height:1.4;margin:1.8rem 0 .6rem}
+h4{font-size:1.06rem;margin:1.3rem 0 .4rem}
+p{margin:.55rem 0 1rem}.lead{font-size:1.08rem;color:var(--muted);max-width:850px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:1.55rem;color:var(--accent)}.small{font-size:.9rem;color:var(--muted)}
+.badge{display:inline-block;border-radius:999px;padding:3px 9px;font-size:.78rem;font-weight:800;margin-right:5px}
+.badge.core{background:rgba(36,87,214,.12);color:var(--accent)}.badge.warn{background:rgba(169,96,0,.14);color:var(--warn)}
+.badge.good{background:rgba(22,121,77,.14);color:var(--good)}
+.callout{border-left:5px solid var(--accent);background:var(--card);padding:15px 17px;border-radius:8px 16px 16px 8px;margin:14px 0}
+.callout.warn{border-left-color:var(--warn)}.callout.danger{border-left-color:var(--danger)}
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:.94rem}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:rgba(36,87,214,.08);text-align:left}
+.table-wrap{overflow-x:auto;border-radius:12px;margin:12px 0 20px}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:rgba(127,127,127,.14);padding:.1em .35em;border-radius:5px}
+pre{background:var(--code);color:#e8eefb;padding:15px;border-radius:14px;overflow:auto;line-height:1.55}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin:10px 0}
+summary{cursor:pointer;font-weight:800;padding:13px 0;min-height:48px}
+ul,ol{padding-left:1.35rem}li{margin:.32rem 0}
+.toc{position:sticky;top:8px;z-index:10;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(10px);border:1px solid var(--line);padding:10px;border-radius:14px;margin:10px 0 24px;overflow-x:auto;white-space:nowrap}
+.toc a{display:inline-block;padding:8px 10px;text-decoration:none;font-weight:700;font-size:.9rem}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.toolbar input{flex:1;min-width:220px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:12px;padding:12px 14px;font-size:1rem}
+button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:12px;padding:10px 14px;font-weight:800;min-height:44px;cursor:pointer}
+.chapter{scroll-margin-top:76px}.term{padding:10px 0;border-bottom:1px dashed var(--line)}.term:last-child{border-bottom:0}
+.term b{color:var(--accent2)}.formula{font-size:1.05rem;font-weight:800;padding:12px 14px;border-radius:12px;background:rgba(36,87,214,.08);overflow:auto}
+.flow{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:12px 0}.node{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 10px;font-weight:700}.arrow{color:var(--muted);font-weight:900}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 9px}
+.quiz label{display:block;border:1px solid var(--line);border-radius:10px;padding:9px 10px;margin:6px 0;cursor:pointer}.answer{display:none;margin-top:8px;padding:10px;border-radius:10px;background:rgba(36,87,214,.08)}
+.progress{position:fixed;top:0;left:0;height:4px;background:var(--accent);width:0;z-index:99}
+.kbd{font-family:ui-monospace,monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 5px}
+footer{border-top:1px solid var(--line);margin-top:50px;padding-top:24px;color:var(--muted)}
+@media(max-width:600px){.wrap{padding-left:12px;padding-right:12px}.card{padding:15px}.hero{padding-top:32px}th,td{padding:8px 9px}.toc{margin-left:-4px;margin-right:-4px}}
+@media print{.toc,.toolbar,.progress,button{display:none!important}body{background:#fff;color:#000}.card,details{box-shadow:none;break-inside:avoid}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">学習・資格 / FUNDAMENTAL INFORMATION TECHNOLOGY ENGINEER</div>
+  <h1>基本情報技術者試験（FE）<br>総合復習ノート</h1>
+  <p class="lead">これまで質問・演習してきた内容を、重複を統合して「意味 → 仕組み → 例 → 試験での見分け方 → 間違えやすい点」の順で再構成した保存版。科目Aの知識整理と、科目Bの読解・トレースの両方を一冊で復習できます。</p>
+  <div class="grid">
+    <div class="card stat"><b>60問 / 90分</b><span>科目A：四肢択一</span></div>
+    <div class="card stat"><b>20問 / 100分</b><span>科目B：多肢選択</span></div>
+    <div class="card stat"><b>各600点以上</b><span>各科目1,000点満点</span></div>
+    <div class="card stat"><b>16 + 4</b><span>科目B：アルゴリズム16問＋セキュリティ4問</span></div>
+  </div>
+</header>
+
+<div class="callout">
+  <b>最初に覚える結論：</b> FEは「用語を知っている」だけでは足りません。科目Aでは<strong>似た用語を区別する力</strong>、科目Bでは<strong>変数・配列・ポインタの状態を1行ずつ追う力</strong>が得点に直結します。
+</div>
+
+<div class="toolbar">
+  <input id="search" type="search" placeholder="ページ内検索：例「HAVING」「RAID5」「公開鍵」「DFS」" aria-label="ページ内検索">
+  <button onclick="expandAll()">すべて開く</button>
+  <button onclick="collapseAll()">閉じる</button>
+  <button onclick="window.print()">印刷</button>
+</div>
+
+<nav class="toc" aria-label="目次">
+<a href="#exam">試験制度</a><a href="#math">基礎理論</a><a href="#algo">アルゴリズム</a><a href="#hardware">CPU・記憶</a>
+<a href="#os">OS</a><a href="#db">DB</a><a href="#network">ネットワーク</a><a href="#security">セキュリティ</a>
+<a href="#dev">開発</a><a href="#test">テスト</a><a href="#management">マネジメント</a><a href="#strategy">戦略・法務</a>
+<a href="#b">科目B攻略</a><a href="#weak">弱点整理</a><a href="#quiz">確認問題</a><a href="#index">質問索引</a>
+</nav>
+
+<section id="exam" class="chapter">
+<h2>1. 試験制度・勉強の全体像</h2>
+<div class="card">
+<h3>2026年8月時点の基本情報技術者試験</h3>
+<div class="table-wrap"><table>
+<tr><th></th><th>科目A</th><th>科目B</th></tr>
+<tr><td>役割</td><td>IT全般の基礎知識を問う</td><td>知識を使って問題を解く技能を問う</td></tr>
+<tr><td>時間</td><td>90分</td><td>100分</td></tr>
+<tr><td>問題数</td><td>60問</td><td>20問</td></tr>
+<tr><td>形式</td><td>四肢択一</td><td>多肢選択</td></tr>
+<tr><td>基準</td><td>600 / 1,000点以上</td><td>600 / 1,000点以上</td></tr>
+<tr><td>中心</td><td>テクノロジ・マネジメント・ストラテジ</td><td>アルゴリズムとプログラミング、情報セキュリティ</td></tr>
+</table></div>
+<p>CBT（Computer Based Testing）は、会場のPCで問題を解く方式です。FEは随時実施されており、科目A・Bを同日に受験します。科目Bはおおむね<strong>アルゴリズムとプログラミング8割、情報セキュリティ2割</strong>です。</p>
+<div class="callout warn"><b>650 / 610のような点数を見たとき：</b> 600点という基準との比較では両方とも基準以上です。ただし、受験直後の表示と最終的な合否確認は区別し、正式な結果は試験実施者の案内・マイページで確認します。</div>
+</div>
+
+<h3>勉強法の基本</h3>
+<div class="grid">
+<div class="card"><b>科目A</b><p>①用語の意味 → ②似た用語との差 → ③計算パターン → ④過去・公開問題で判別、の順。間違えた選択肢まで説明できる状態を目指します。</p></div>
+<div class="card"><b>科目B</b><p>コードを眺めて直感で答えず、変数表・配列表を作り、ループ1回ごとの変化を追います。特に添字、境界条件、ポインタ更新、再帰の戻りが重要です。</p></div>
+<div class="card"><b>誤答管理</b><p>「問題文」ではなく<strong>間違えた原因</strong>を記録します。例：用語未暗記／似た概念を混同／計算ミス／トレース省略／問題文読み落とし。</p></div>
+<div class="card"><b>模試</b><p>点数だけでなく、時間配分と誤答理由を分析。復習では同一問題を暗記するより、同じ論点を別形式で解けるか確認します。</p></div>
+</div>
+</section>
+
+<section id="math" class="chapter">
+<h2>2. 基礎理論・数学</h2>
+
+<details open><summary>2進数・ビット演算</summary>
+<div class="term"><b>ビット（bit）</b>：0か1のどちらかを表す情報の最小単位。8bit = 1byte。</div>
+<div class="term"><b>2進数 → 10進数</b>：各桁を2の累乗として足します。例：<code>10110₂ = 16 + 4 + 2 = 22₁₀</code>。</div>
+<div class="term"><b>10進数 → 2進数</b>：2で割った余りを下から読む方法、または「どの2の累乗を足すか」で考えます。</div>
+<div class="table-wrap"><table><tr><th>演算</th><th>1になる条件</th><th>典型用途</th></tr>
+<tr><td>AND</td><td>両方1</td><td>必要なビットだけ取り出す（マスク）</td></tr>
+<tr><td>OR</td><td>どちらか1</td><td>特定ビットを1にする</td></tr>
+<tr><td>XOR</td><td>異なる</td><td>反転・差分・パリティ</td></tr>
+<tr><td>NOT</td><td>0↔1</td><td>全ビット反転</td></tr></table></div>
+<p><b>ビットマスク</b>は「見る場所だけ1にした値」。対象値とANDを取ると必要部分だけ残せます。</p>
+<div class="callout warn"><b>ひっかけ：</b> XORは「どちらか一方だけ1」。ORの「少なくとも一方が1」と混同しない。</div>
+</details>
+
+<details><summary>集合・ベン図</summary>
+<p><b>和集合 A∪B</b>はAまたはBに属するもの。<b>積集合 A∩B</b>はAとBの両方。<b>補集合</b>は全体集合のうちAでない部分です。</p>
+<p>試験ではベン図だけでなく、データベース検索条件や論理式との対応も狙われます。ANDは積集合、ORは和集合の感覚です。</p>
+</details>
+
+<details><summary>グラフ・DFS・隣接行列</summary>
+<p>グラフは<strong>頂点（vertex）</strong>と<strong>辺（edge）</strong>で関係を表すデータ構造です。隣接行列では、頂点iとjが接続していれば該当セルを1などで表します。</p>
+<p><b>DFS（Depth-First Search、深さ優先探索）</b>は、一方向へ行けるところまで進み、行き止まりで戻る探索です。実装では<strong>再帰</strong>または<strong>スタック</strong>が自然です。一方、BFS（幅優先探索）はキューを使うのが典型です。</p>
+</details>
+
+<details><summary>ユークリッドの互除法</summary>
+<p>最大公約数を求める方法。<code>gcd(a,b) = gcd(b, a mod b)</code>を、余りが0になるまで繰り返します。</p>
+<pre>gcd(48,18)
+48 mod 18 = 12
+18 mod 12 = 6
+12 mod 6  = 0
+→ 最大公約数 6</pre>
+<p>科目Bでは再帰関数として出ることもあります。</p>
+</details>
+</section>
+
+<section id="algo" class="chapter">
+<h2>3. アルゴリズム・プログラミング・データ構造</h2>
+<div class="callout"><b>科目Bの中心。</b> 「何をしているコードか」より先に、<strong>変数・添字・データ構造がどう変化するか</strong>を追うのがコツです。</div>
+
+<details open><summary>擬似言語の読み方：変数・代入・分岐・ループ</summary>
+<p><b>代入</b>は右辺を計算して左辺へ保存する操作。数学の等式とは違います。<code>x ← x + 1</code>は「現在のxに1加えた値でxを更新」です。</p>
+<p><b>条件分岐</b>は条件の真偽で処理を分けます。複合条件ではAND/ORと括弧の優先順位を意識します。</p>
+<p><b>繰返し</b>は、初期値・継続条件・更新式の3点を確認します。最大の事故は「何回回るか」を感覚で決めることです。</p>
+<pre>i = 1,2,3 の3回なのか
+i = 0,1,2,3 の4回なのか
+境界を必ず書き出す。</pre>
+</details>
+
+<details><summary>配列・二次元配列・文字列</summary>
+<p><b>配列</b>は同種のデータを添字で管理する構造。問題では「添字が0始まりか1始まりか」が最重要です。</p>
+<p><b>二次元配列</b>は行×列。座標、行列、表、画像などを扱えます。<code>A[i][j]</code>のiとjの意味を問題文から確定させます。</p>
+<p><b>疎行列</b>は0が非常に多い行列。全要素を保存する代わりに「行番号・列番号・値」など非零要素だけを持つことでメモリを節約できます。</p>
+<p><b>文字列処理</b>では長さ、部分文字列、比較、走査位置を追います。終端条件と1文字ずれ（off-by-one）に注意。</p>
+</details>
+
+<details><summary>探索：線形探索と二分探索</summary>
+<div class="table-wrap"><table><tr><th></th><th>線形探索</th><th>二分探索</th></tr>
+<tr><td>考え方</td><td>先頭から順番に探す</td><td>中央と比較し範囲を半分に絞る</td></tr>
+<tr><td>前提</td><td>ほぼ不要</td><td><b>整列済み</b>であること</td></tr>
+<tr><td>計算量</td><td>O(n)</td><td>O(log n)</td></tr>
+</table></div>
+<p>二分探索では<code>low</code>、<code>high</code>、<code>mid</code>の更新を表にして追います。見つからない場合の終了条件も重要です。</p>
+</details>
+
+<details><summary>整列：選択ソートと挿入ソート</summary>
+<p><b>選択ソート</b>：未整列部分から最小（最大）を探し、先頭と交換。ポイントは「毎回、残り全部から選ぶ」。</p>
+<p><b>挿入ソート</b>：左側を整列済みとみなし、新しい要素を適切な位置へ差し込む。トランプを手札へ入れるイメージ。</p>
+<div class="callout warn"><b>見分け方：</b> 「最小値を探して交換」→選択、「前の要素をずらして差し込む」→挿入。</div>
+</details>
+
+<details><summary>スタック・キュー</summary>
+<div class="table-wrap"><table><tr><th></th><th>スタック</th><th>キュー</th></tr>
+<tr><td>原則</td><td>LIFO：後入れ先出し</td><td>FIFO：先入れ先出し</td></tr>
+<tr><td>操作</td><td>push / pop</td><td>enqueue / dequeue</td></tr>
+<tr><td>例</td><td>関数呼出し、Undo、DFS</td><td>待ち行列、BFS、印刷待ち</td></tr>
+</table></div>
+</details>
+
+<details><summary>連結リスト・ポインタ</summary>
+<p><b>単方向連結リスト</b>では各ノードが「値」と「次ノードへの参照」を持ちます。<code>head</code>は先頭、<code>tail</code>は末尾への参照です。</p>
+<p>先頭挿入は新ノードのnextを旧headへ向け、headを新ノードへ更新。末尾挿入では旧tail.nextを新ノードへ向け、tailを新ノードへ更新します。</p>
+<div class="flow"><span class="node">A</span><span class="arrow">→</span><span class="node">B</span><span class="arrow">→</span><span class="node">C</span><span class="arrow">→</span><span class="node">未定義/null</span></div>
+<p><b>科目Bの鉄則：</b> ノード名ではなく「各nextが今どこを指しているか」を図にする。代入順で結果が変わります。</p>
+</details>
+
+<details><summary>木構造・二分木・走査</summary>
+<p>木は階層構造。最上位がroot、末端がleaf。<b>二分木</b>は各ノードの子が最大2つです。</p>
+<p>代表的な走査は、前順（root→左→右）、間順（左→root→右）、後順（左→右→root）。問題の<code>Order</code>関数では「出力処理が再帰呼出しの前・間・後のどこにあるか」を見ます。</p>
+<p>配列表現では、0始まりなら左子<code>2i+1</code>、右子<code>2i+2</code>が典型。1始まりなら左<code>2i</code>、右<code>2i+1</code>です。</p>
+</details>
+
+<details><summary>再帰</summary>
+<p>関数が自分自身を呼び出す処理。必ず<strong>終了条件（base case）</strong>が必要です。</p>
+<p>追い方は「呼び出しで下る段階」と「returnで戻る段階」を分けます。スタックに呼出し状態が積まれるイメージが有効です。</p>
+</details>
+
+<details><summary>ハッシュ法・衝突・負荷率</summary>
+<p>ハッシュ関数でキーから配列位置を求め、平均的に高速な検索を実現します。典型は<code>key mod 表サイズ</code>。</p>
+<p><b>衝突</b>は異なるキーが同じ位置になること。オープンアドレス法では別の空き位置を探します。ダブルハッシュでは2つ目のハッシュ関数を再探索幅に使います。</p>
+<p><b>負荷率</b> = 格納済み要素数 ÷ ハッシュ表の大きさ。高すぎると衝突が増え、性能が落ちます。</p>
+</details>
+</section>
+
+<section id="hardware" class="chapter">
+<h2>4. CPU・メモリ・記憶装置</h2>
+<details open><summary>CPU・レジスタ・割込み</summary>
+<p>CPUは命令を取り出し、解読し、実行します。<b>レジスタ</b>はCPU内部の非常に高速な小容量記憶領域です。</p>
+<ul><li>プログラムカウンタ：次に実行する命令の位置</li><li>命令レジスタ：現在の命令</li><li>汎用レジスタ：演算値・一時データ</li></ul>
+<p><b>割込み</b>は、実行中の処理を一時中断して別処理へ移る仕組み。多重割込みでは、割込み処理中にさらに優先度の高い割込みを受ける場合があります。</p>
+<p><b>ディスパッチ</b>は、実行可能状態のタスクへCPU使用権を渡す処理です。</p>
+<p><b>リエントラント（再入可能）</b>なプログラムは、複数の実行主体が同時・途中から利用しても安全なように設計されています。</p>
+</details>
+<details><summary>RAM / ROM / DRAM / SRAM / Flash</summary>
+<div class="table-wrap"><table><tr><th>種類</th><th>特徴</th><th>代表用途</th></tr>
+<tr><td>DRAM</td><td>リフレッシュ必要、比較的高密度・安価</td><td>主記憶</td></tr>
+<tr><td>SRAM</td><td>高速、高価、リフレッシュ不要</td><td>キャッシュ</td></tr>
+<tr><td>ROM</td><td>基本的に不揮発</td><td>固定プログラム</td></tr>
+<tr><td>Flash</td><td>電気的に消去・書換可能、不揮発</td><td>SSD、USBメモリ</td></tr>
+</table></div>
+</details>
+<details><summary>キャッシュ・TLB・MMU・仮想記憶</summary>
+<p><b>キャッシュ</b>はCPUと主記憶の速度差を埋めます。時間的局所性（最近使ったものをまた使う）と空間的局所性（近くのものを使う）を利用します。</p>
+<p><b>MMU</b>は仮想アドレスと物理アドレスの変換を担い、<b>TLB</b>はそのページ変換情報を高速に参照するためのキャッシュです。</p>
+<p><b>仮想記憶</b>では主記憶に入り切らない内容を補助記憶と組み合わせて扱います。ページフォールトが多発するとスラッシングにつながります。</p>
+</details>
+<details><summary>ビデオメモリ容量</summary>
+<div class="formula">必要容量 = 横画素 × 縦画素 × 1画素当たりbit数 ÷ 8</div>
+<p>例：1920×1080、24bitカラーなら約6.22MB（単純計算）。問題ではKiB/MiB換算やダブルバッファ等の条件を確認します。</p>
+</details>
+<details><summary>磁気ディスクとRAID</summary>
+<p><b>トラック</b>は同心円状の記録領域、<b>セクタ</b>はトラックの分割単位、<b>シリンダ</b>は複数面の同じ半径位置のトラック群です。</p>
+<p><b>RAID</b>は複数ディスクを組み合わせ、性能・容量・耐障害性を調整する技術。</p>
+<div class="table-wrap"><table><tr><th>RAID</th><th>概要</th><th>実効容量の典型</th></tr>
+<tr><td>0</td><td>ストライピング、冗長性なし</td><td>N台分</td></tr>
+<tr><td>1</td><td>ミラーリング</td><td>おおむね半分</td></tr>
+<tr><td>5</td><td>分散パリティ、1台故障に耐える</td><td>(N−1)台分</td></tr>
+</table></div>
+</details>
+</section>
+
+<section id="os" class="chapter">
+<h2>5. OS・ソフトウェア</h2>
+<details open><summary>OSの役割・プロセス・タスク</summary>
+<p>OSはCPU、メモリ、入出力装置、ファイルなどの資源を管理し、アプリケーションに共通機能を提供します。</p>
+<p><b>プロセス／タスク</b>は実行中のプログラムを管理する単位として扱われます。状態は典型的に「実行可能 → 実行 → 待ち」などを遷移します。</p>
+</details>
+<details><summary>CPUスケジューリング・プリエンプティブ</summary>
+<p><b>プリエンプティブ</b>：OSが実行中タスクからCPUを強制的に取り上げられる。<b>ノンプリエンプティブ</b>：タスクが自発的にCPUを手放すまで基本的に切替えない。</p>
+<p>ディスパッチは選んだタスクにCPUを割り当てる瞬間の処理です。</p>
+</details>
+<details><summary>デッドロック</summary>
+<p>複数処理がお互いの資源解放を待ち、永久に進めなくなる状態。DBロックでもOS資源でも出ます。「AはXを保持してY待ち、BはYを保持してX待ち」の循環が典型です。</p>
+</details>
+<details><summary>コンパイラ・コールドスタート</summary>
+<p><b>コンパイラ</b>はソースコードを機械語などへまとめて変換します。インタプリタとの対比が頻出です。</p>
+<p><b>コールドスタート</b>は電源投入など、初期状態からシステムを起動すること。既存状態を利用するウォームスタートと対比されます。</p>
+</details>
+</section>
+
+<section id="db" class="chapter">
+<h2>6. データベース</h2>
+<div class="callout"><b>DBの中心軸：</b> 「表の構造」「SQLで取り出す」「同時更新を安全にする」「障害から戻す」の4本柱で整理すると混乱しません。</div>
+<details open><summary>関係データベース・キー・正規化</summary>
+<p><b>関係データベース</b>はデータを表（テーブル）で表現します。行がレコード、列が属性（フィールド）。</p>
+<p><b>主キー</b>は行を一意に識別し、<b>外部キー</b>は別テーブルの主キー等を参照して関係を作ります。<b>参照制約</b>は「存在しない親を指す子」など不整合を防ぎます。</p>
+<p><b>正規化</b>は重複や更新時の不整合を減らすために表を整理する考え方。試験では関数従属性、部分関数従属、推移的関数従属などが絡みます。</p>
+</details>
+<details><summary>SELECT / WHERE / JOIN</summary>
+<pre>SELECT 部署名, 氏名
+FROM 社員
+INNER JOIN 部署 ON 社員.部署ID = 部署.部署ID
+WHERE 社員.在籍 = 1;</pre>
+<p><b>WHERE</b>は行を絞る。<b>JOIN</b>は複数表を関連付ける。INNER JOINは結合条件を満たす行だけ残します。</p>
+<div class="callout warn"><b>JOINの読み方：</b> ①FROM/JOINで「どの表をつなぐか」→②ONで「何を同一視するか」→③WHEREで「どの行を残すか」。</div>
+</details>
+<details><summary>GROUP BY と HAVING</summary>
+<pre>SELECT 部署ID, COUNT(*)
+FROM 社員
+GROUP BY 部署ID
+HAVING COUNT(*) >= 5;</pre>
+<p><b>GROUP BY</b>は同じ値ごとに集約。<b>HAVING</b>は集約後のグループを絞ります。WHEREは集約前の個々の行を絞る、と覚えると強いです。</p>
+</details>
+<details><summary>サブクエリ</summary>
+<p>SQLの中に別のSELECTを入れる方法。まず内側のSELECTが何を返すかを日本語にし、その結果を外側でどう使うか考えます。</p>
+</details>
+<details><summary>結合アルゴリズム：ソートマージ結合</summary>
+<p>結合キーで両入力をソートし、先頭から比較しながら一致する行を結合します。ハッシュ結合などとの違いを概念で理解します。</p>
+</details>
+<details><summary>ロック・共有ロック・占有ロック</summary>
+<div class="table-wrap"><table><tr><th></th><th>共有ロック（S）</th><th>占有ロック（X）</th></tr>
+<tr><td>目的</td><td>読み取り</td><td>更新</td></tr>
+<tr><td>他のS</td><td>共存可</td><td>不可</td></tr>
+<tr><td>他のX</td><td>不可</td><td>不可</td></tr>
+</table></div>
+<p>ロック順序がバラバラだとデッドロックが発生しやすくなります。</p>
+</details>
+<details><summary>ログ・ロールバック・ロールフォワード</summary>
+<p><b>ロールバック</b>は未完了トランザクションの変更を取り消す方向。<b>ロールフォワード</b>はバックアップ後にログを適用し、障害直前へ進める方向です。</p>
+<div class="flow"><span class="node">バックアップ復元</span><span class="arrow">→</span><span class="node">更新ログ適用</span><span class="arrow">→</span><span class="node">直前状態へ</span></div>
+</details>
+</section>
+
+<section id="network" class="chapter">
+<h2>7. ネットワーク</h2>
+<details open><summary>OSI基本参照モデルとTCP/IP</summary>
+<div class="table-wrap"><table><tr><th>OSI層</th><th>役割のイメージ</th><th>例</th></tr>
+<tr><td>7 アプリケーション</td><td>利用者に近い通信機能</td><td>HTTP, SMTP, DNS</td></tr>
+<tr><td>4 トランスポート</td><td>端末間の通信制御</td><td>TCP, UDP</td></tr>
+<tr><td>3 ネットワーク</td><td>異なるネットワーク間の配送</td><td>IP, ルータ</td></tr>
+<tr><td>2 データリンク</td><td>同一リンク内のフレーム転送</td><td>Ethernet, MAC</td></tr>
+<tr><td>1 物理</td><td>電気・光・無線信号</td><td>ケーブル等</td></tr>
+</table></div>
+<p>OSIは7層、TCP/IPモデルはより少ない層にまとめます。試験では「どの層の仕事か」を聞く問題が多いです。</p>
+</details>
+<details><summary>IPv4・サブネットマスク・CIDR</summary>
+<p>IPv4は32bit。サブネットマスクはネットワーク部とホスト部の境界を示します。<code>/26</code>なら先頭26bitがネットワーク部、残り6bitがホスト部。</p>
+<div class="formula">ホスト部が h bit → アドレス数 2^h</div>
+<p>典型的なIPv4サブネットではネットワークアドレスとブロードキャストアドレスを除くため、利用可能ホスト数は<code>2^h - 2</code>とする問題が多いです。</p>
+<p><b>ネットワークアドレス</b>はIPアドレスとサブネットマスクのANDで求めます。</p>
+</details>
+<details><summary>RARP</summary>
+<p>RARP（Reverse Address Resolution Protocol）は、MACアドレスなどからIPアドレスを得る古い仕組み。現在はDHCP等が一般的ですが、試験用語としてARPとの方向の違いを整理します。</p>
+</details>
+<details><summary>CSMA / CSMA/CD / Ethernet</summary>
+<p><b>CSMA</b>は送信前に通信路が空いているか確認する考え方。<b>CSMA/CD</b>はさらに衝突（Collision）を検出して再送を行う方式で、従来の共有型Ethernetで使われました。</p>
+</details>
+<details><summary>HTTP / HTTPS / Proxy / Port</summary>
+<p>HTTPはWeb通信のアプリケーション層プロトコル。HTTPSはHTTPをTLSで保護します。</p>
+<p><b>プロキシ</b>はクライアントの代理として外部へアクセスします。キャッシュ、アクセス制御、匿名化などの目的があります。</p>
+<p><b>ポート番号</b>は同一ホスト上のどのアプリケーション／サービス宛てかを識別します。</p>
+</details>
+<details><summary>IPsec</summary>
+<p>IP層で通信を保護する仕組み。VPNで使われます。HTTPS/TLSが主にアプリケーション通信を保護するのに対し、IPsecはIPパケットレベルで保護する点を区別します。</p>
+</details>
+<details><summary>ポートスキャン・プライバシーセパレータ</summary>
+<p><b>ポートスキャン</b>は対象ホストのポートへ接続を試み、開いているサービスを調べる行為。管理目的にも攻撃準備にも使われます。</p>
+<p><b>プライバシーセパレータ</b>は無線LANアクセスポイント配下の端末同士の直接通信を制限する機能。公衆・ゲストWi-Fiで端末間攻撃を抑えるのに有効です。</p>
+</details>
+</section>
+
+<section id="security" class="chapter">
+<h2>8. 情報セキュリティ・暗号</h2>
+<details open><summary>共通鍵・公開鍵・ハイブリッド暗号</summary>
+<div class="table-wrap"><table><tr><th></th><th>共通鍵暗号</th><th>公開鍵暗号</th></tr>
+<tr><td>鍵</td><td>暗号化と復号で同じ秘密鍵</td><td>公開鍵と秘密鍵のペア</td></tr>
+<tr><td>速度</td><td>高速</td><td>比較的重い</td></tr>
+<tr><td>課題</td><td>鍵配送</td><td>計算コスト、公開鍵の真正性</td></tr>
+<tr><td>例</td><td>AES</td><td>RSA、楕円曲線系</td></tr>
+</table></div>
+<p><b>ハイブリッド暗号</b>は「公開鍵系でセッション鍵を安全に合意・配送し、その後は高速な共通鍵暗号で大量データを暗号化」という組合せです。</p>
+</details>
+<details><summary>AES / RSA / DH / ECDH</summary>
+<p><b>AES</b>：代表的な共通鍵ブロック暗号。<b>RSA</b>：公開鍵暗号・署名に使われる代表方式。<b>Diffie-Hellman（DH）</b>：盗聴される通信路上で共有秘密を合意する鍵交換方式。<b>ECDH</b>は楕円曲線上のDHです。</p>
+<div class="callout warn"><b>重要：</b> 「公開鍵暗号」と「鍵交換」は同じではありません。DH/ECDHは、相手の公開情報を用いて共有秘密を合意する仕組みです。</div>
+</details>
+<details><summary>ハッシュ・SHA-256・MAC</summary>
+<p><b>ハッシュ関数</b>は任意長データから固定長の値を作る一方向的な関数。SHA-256は代表例です。</p>
+<p><b>暗号化</b>は鍵を使って元に戻せることが目的。<b>ハッシュ</b>は通常、元データへ戻すことを目的にしません。</p>
+<p><b>MAC（Message Authentication Code）</b>は共有秘密を使い、メッセージの改ざん検出と送信者認証に使います。</p>
+</details>
+<details><summary>デジタル署名</summary>
+<p>送信者が秘密鍵で署名し、受信者が公開鍵で検証します。主に<strong>真正性・完全性・否認防止</strong>を支えます。秘密を隠す「暗号化」と目的が違います。</p>
+</details>
+<details><summary>PKI / CA / RA / 証明書 / CRL / OCSP</summary>
+<p><b>PKI</b>は公開鍵と本人・組織の結び付きを証明書で管理する仕組み。<b>CA</b>は証明書を発行・署名する認証局、<b>RA</b>は申請者確認など登録業務を担う役割です。</p>
+<p><b>CRL</b>は失効証明書リスト、<b>OCSP</b>は証明書の失効状態をオンラインで問い合わせる仕組み。</p>
+</details>
+<details><summary>TLS / HTTPS / Cipher Suite / PFS</summary>
+<p>TLSは通信の盗聴・改ざん等を防ぐためのプロトコル。HTTPSはHTTP over TLSです。</p>
+<p><b>Cipher Suite</b>は通信で使う暗号関連方式の組合せを表します。TLSのバージョンによって表し方は異なります。</p>
+<p><b>前方秘匿性（PFS）</b>は、長期秘密鍵が将来漏えいしても、過去のセッション鍵まで簡単に復元されない性質。エフェメラルなDH/ECDHが重要です。</p>
+</details>
+<details><summary>多要素認証</summary>
+<p>認証要素は「知識（PIN等）」「所持（ICカード等）」「生体（指紋等）」に大別。<b>異なる種類の要素を2つ以上</b>使うのが多要素認証です。ICカード＋PINは所持＋知識。</p>
+</details>
+<details><summary>攻撃：ゼロデイ・総当たり・SQLi・ランサムウェア</summary>
+<ul>
+<li><b>ゼロデイ攻撃</b>：修正が用意されていない脆弱性などを突く。</li>
+<li><b>ブルートフォース</b>：候補を総当たりする。</li>
+<li><b>SQLインジェクション</b>：入力値を介して意図しないSQLを実行させる。対策の中心はプレースホルダ／パラメータ化クエリ。</li>
+<li><b>ランサムウェア</b>：データ暗号化・窃取等を行い身代金を要求。バックアップ、脆弱性対策、権限最小化、監視など多層防御が重要。</li>
+</ul>
+</details>
+<details><summary>暗号解読の用語</summary>
+<p><b>差分解読</b>は入力差分と出力差分の偏りを利用する解析、<b>線形解読</b>は暗号内部の関係を線形近似して偏りを利用する解析。代数的解読は暗号を数式系として表現して解く考え方です。FEでは細部より「暗号方式への解析手法」という位置付けを押さえます。</p>
+</details>
+</section>
+
+<section id="dev" class="chapter">
+<h2>9. システム開発・設計</h2>
+<details open><summary>UML・クラス・インスタンス</summary>
+<p>UMLはシステムの構造や振る舞いを図で表す標準的なモデリング記法です。</p>
+<p><b>クラス</b>は設計図・型、<b>インスタンス</b>はそのクラスから作られた具体的な実体。たとえば「自動車クラス」に対し「自分の白い車」がインスタンス。</p>
+<p><b>アクティビティ図</b>は処理・業務の流れ、分岐、並行処理などを表すのに向きます。</p>
+</details>
+<details><summary>DFD / ER図 / 決定表 / フローチャート</summary>
+<p><b>DFD</b>はデータの流れ、処理、データストア、外部実体を表します。処理手順そのものより「データがどこからどこへ動くか」が中心。</p>
+<p><b>ER図</b>はエンティティと関係を表し、DB設計で使います。</p>
+<p><b>決定表</b>は条件の組合せと実行する処理を表形式で整理します。条件が複数あり、組合せ漏れを避けたいときに有効。</p>
+<p><b>フローチャート</b>は処理順序を記号で表します。</p>
+</details>
+<details><summary>XMLとDTD</summary>
+<p>XMLはタグを使って構造化データを表現します。DTD（Document Type Definition）は、そのXMLで使える要素や構造の規則を定義します。</p>
+</details>
+<details><summary>IDE / EUC / プロトタイピング / SOA / 3層構成</summary>
+<p><b>IDE</b>は編集・ビルド・デバッグ等を統合した開発環境。</p>
+<p><b>EUC</b>はEnd User Computingで、利用部門自身がITを活用して業務処理等を行う考え方。</p>
+<p><b>プロトタイピング</b>は試作品を早期に作って要求を確認・改善する方式。</p>
+<p><b>SOA</b>は業務機能をサービスとして疎結合に組み合わせる考え方。</p>
+<p><b>3層クライアントサーバ</b>は典型的にプレゼンテーション層、アプリケーション層、データ層へ分けます。</p>
+</details>
+</section>
+
+<section id="test" class="chapter">
+<h2>10. テスト・品質・要件</h2>
+<details open><summary>カバレッジ</summary>
+<p><b>命令網羅</b>：全命令を少なくとも1回。<b>分岐網羅</b>：各判定の真・偽を少なくとも1回。<b>条件網羅</b>：複合条件内の各条件が真・偽を取るようにする、など。</p>
+<p>「何を全部通すのか」を見れば区別できます。</p>
+</details>
+<details><summary>受入テスト・要件定義</summary>
+<p><b>要件定義</b>は「システムに何を求めるか」を明確にする工程。<b>受入テスト</b>は利用者・発注者側の視点で、要求を満たすか確認する最終段階のテストです。</p>
+</details>
+<details><summary>テストと監査</summary>
+<p><b>テスト</b>はシステム・ソフトウェアが仕様通り動くか確認。<b>監査</b>は独立・客観的な立場で、統制や管理が適切かを評価します。目的と立場が違います。</p>
+</details>
+</section>
+
+<section id="management" class="chapter">
+<h2>11. プロジェクト・サービス・監査・ISMS</h2>
+<details open><summary>プロジェクトマネジメント</summary>
+<p>期限・コスト・品質・スコープ・リスク・資源などを管理し、目標達成へ導きます。FEではWBS、進捗、リスク、見積りなど基本概念が出ます。</p>
+</details>
+<details><summary>サービスマネジメントとインシデント管理</summary>
+<p>ITサービスを安定して提供し、継続的に改善する活動。<b>インシデント管理</b>は障害・サービス中断等から、できるだけ早く正常サービスへ復旧させることが第一目的です。根本原因究明を主目的とする問題管理とは区別。</p>
+</details>
+<details><summary>コンティンジェンシー計画</summary>
+<p>災害・重大障害など非常事態に備えた対応計画。通常運用の手順ではなく、「想定外・緊急時にも事業を守る」ための備えです。</p>
+</details>
+<details><summary>システム監査</summary>
+<p>情報システムに関するリスクへの管理・統制が適切かを、独立・客観的に点検・評価します。開発者自身のテストとは立場が異なります。</p>
+</details>
+<details><summary>ISMS</summary>
+<p>ISMS（Information Security Management System）は情報セキュリティを組織的に管理・継続改善する仕組み。資産・リスクを把握し、対策を選び、運用し、評価・改善します。</p>
+<div class="flow"><span class="node">組織・資産把握</span><span class="arrow">→</span><span class="node">リスク評価</span><span class="arrow">→</span><span class="node">対策</span><span class="arrow">→</span><span class="node">運用</span><span class="arrow">→</span><span class="node">評価・改善</span></div>
+</details>
+</section>
+
+<section id="strategy" class="chapter">
+<h2>12. システム戦略・経営・会計・法務</h2>
+<details open><summary>BI / EA / BSC</summary>
+<p><b>BI（Business Intelligence）</b>：企業内外のデータを分析し、意思決定に活用。</p>
+<p><b>EA（Enterprise Architecture）</b>：組織全体を業務・データ・アプリケーション・技術などの観点から体系化し、全体最適を目指す考え方。</p>
+<p><b>BSC（Balanced Scorecard）</b>：財務だけでなく、顧客、内部プロセス、学習と成長など複数視点で戦略を管理します。</p>
+</details>
+<details><summary>SCM / MRP</summary>
+<p><b>SCM</b>は調達から生産、物流、販売までサプライチェーン全体を最適化。</p>
+<p><b>MRP</b>は生産計画や部品表、在庫などから必要資材の量と時期を計画します。</p>
+</details>
+<details><summary>キャッシュフロー計算書</summary>
+<p>現金及び現金同等物の増減を、営業・投資・財務活動などに分けて示します。<b>営業活動によるCF</b>は本業の事業活動による現金の流れ。</p>
+</details>
+<details><summary>デルファイ法・ワークサンプリング</summary>
+<p><b>デルファイ法</b>は複数の専門家へ匿名的に意見を求め、フィードバックを繰り返して予測・合意を形成する方法。</p>
+<p><b>ワークサンプリング法</b>はランダムな時点で作業状態を観測し、作業時間割合などを統計的に推定します。</p>
+</details>
+<details><summary>契約不適合責任・旧「瑕疵担保責任」</summary>
+<p>契約内容に適合しない目的物・成果物が引き渡された場合に、追完、代金減額、損害賠償、解除などが問題となる考え方です。現行法の問題では「契約不適合責任」という用語を中心に確認します。</p>
+</details>
+</section>
+
+<section id="b" class="chapter">
+<h2>13. 科目Bの解き方</h2>
+<div class="grid">
+<div class="card"><span class="badge core">STEP 1</span><h3>入出力を確認</h3><p>この関数は何を受け取り、何を返すのか。配列サイズや前提条件も確認。</p></div>
+<div class="card"><span class="badge core">STEP 2</span><h3>変数の役割を命名</h3><p>iは走査位置、countは件数、headは先頭…のように日本語で役割を付ける。</p></div>
+<div class="card"><span class="badge core">STEP 3</span><h3>1回ずつトレース</h3><p>ループを飛ばさず、表で値を更新。特に添字・ポインタ・再帰。</p></div>
+<div class="card"><span class="badge core">STEP 4</span><h3>境界条件を確認</h3><p>0件、1件、先頭、末尾、最大値、見つからない場合を確認。</p></div>
+</div>
+<h3>題材別の着眼点</h3>
+<div class="table-wrap"><table>
+<tr><th>題材</th><th>見る場所</th></tr>
+<tr><td>配列・文字列</td><td>添字開始、終了条件、要素数と最大添字</td></tr>
+<tr><td>二分探索</td><td>low/high/midの更新、整列済み前提</td></tr>
+<tr><td>連結リスト</td><td>next参照の更新順、head/tail、null</td></tr>
+<tr><td>再帰</td><td>終了条件、引数の変化、戻り値の積み上がり</td></tr>
+<tr><td>木・DFS</td><td>訪問順、スタック/再帰、既訪問管理</td></tr>
+<tr><td>ソート</td><td>比較対象、交換/シフト、整列済み領域</td></tr>
+<tr><td>セキュリティ</td><td>資産・脅威・脆弱性・対策の対応</td></tr>
+</table></div>
+</section>
+
+<section id="weak" class="chapter">
+<h2>14. これまでの誤答・弱点をどう整理するか</h2>
+<p>これまでの質問記録では、次の分野が繰り返し出ています。ここは「一度覚えたら終わり」ではなく、似た概念を比較して復習すると効率的です。</p>
+<div class="grid">
+<div class="card"><b>CPU・OS</b><p>レジスタ／割込み／ディスパッチ／プリエンプティブ／リエントラントを1枚の関係図で。</p></div>
+<div class="card"><b>DB</b><p>JOIN・HAVING・サブクエリと、ロック・ログ・復旧を別系統で整理。</p></div>
+<div class="card"><b>ネットワーク</b><p>OSI→IP→サブネット→LAN制御→HTTP/TLSの階層順で。</p></div>
+<div class="card"><b>暗号</b><p>暗号化・鍵交換・署名・ハッシュ・MAC・証明書を「目的」で区別。</p></div>
+<div class="card"><b>アルゴリズム</b><p>暗記より手トレース。配列・リスト・木・ハッシュを図にする。</p></div>
+</div>
+<div class="callout">
+<b>復習カードの理想形：</b><br>
+表：<strong>「共有ロックと占有ロックの違いは？」</strong><br>
+裏：定義だけでなく<strong>「共有同士は共存可、Xとは競合。読み取り＝S、更新＝X」</strong>まで書く。
+</div>
+</section>
+
+<section id="quiz" class="chapter">
+<h2>15. 20問の自己確認クイズ</h2>
+<p class="small">すべてオリジナル問題。答えはタップして確認。</p>
+<details class="quiz searchable"><summary>Q1. /26 のIPv4サブネットでホスト部は何bit？</summary><div class="answer" style="display:block">6bit。IPv4は32bitなので 32−26=6。</div></details>
+<details class="quiz searchable"><summary>Q2. 配列が整列済みであることが前提の代表的探索は？</summary><div class="answer" style="display:block">二分探索。探索範囲を半分ずつ絞る。</div></details>
+<details class="quiz searchable"><summary>Q3. DFSに自然に対応するデータ構造は？</summary><div class="answer" style="display:block">スタック。再帰も内部的には呼出しスタックを利用する。</div></details>
+<details class="quiz searchable"><summary>Q4. WHEREとHAVINGの大きな違いは？</summary><div class="answer" style="display:block">WHEREは集約前の行、HAVINGはGROUP BY等で集約後のグループを絞る。</div></details>
+<details class="quiz searchable"><summary>Q5. 共有ロック同士は共存できる？</summary><div class="answer" style="display:block">原則できる。共有ロックは読み取り用。</div></details>
+<details class="quiz searchable"><summary>Q6. RAID5を4台の同容量ディスクで組む典型的な実効容量は？</summary><div class="answer" style="display:block">3台分。(N−1)台分。</div></details>
+<details class="quiz searchable"><summary>Q7. SRAMの典型用途は？</summary><div class="answer" style="display:block">キャッシュメモリ。高速だが高価。</div></details>
+<details class="quiz searchable"><summary>Q8. TLBが高速化するものは？</summary><div class="answer" style="display:block">仮想アドレス→物理アドレスのページ変換情報の参照。</div></details>
+<details class="quiz searchable"><summary>Q9. XORが1になるのは？</summary><div class="answer" style="display:block">2つの入力が異なるとき。</div></details>
+<details class="quiz searchable"><summary>Q10. デジタル署名の主目的は秘密性？</summary><div class="answer" style="display:block">いいえ。主に真正性・完全性・否認防止。</div></details>
+<details class="quiz searchable"><summary>Q11. AESは共通鍵か公開鍵か？</summary><div class="answer" style="display:block">共通鍵暗号。</div></details>
+<details class="quiz searchable"><summary>Q12. ECDHは主に何をする？</summary><div class="answer" style="display:block">共有秘密／セッション鍵材料を合意する鍵交換。</div></details>
+<details class="quiz searchable"><summary>Q13. ICカード＋PINはなぜ多要素？</summary><div class="answer" style="display:block">所持要素＋知識要素という異なる種類を組み合わせるから。</div></details>
+<details class="quiz searchable"><summary>Q14. SQLインジェクション対策の代表は？</summary><div class="answer" style="display:block">プレースホルダ／パラメータ化クエリ。</div></details>
+<details class="quiz searchable"><summary>Q15. インシデント管理の第一目的は根本原因究明？</summary><div class="answer" style="display:block">いいえ。まずサービスを迅速に正常復旧すること。</div></details>
+<details class="quiz searchable"><summary>Q16. DFDは何を中心に描く？</summary><div class="answer" style="display:block">データの流れと処理・データストア・外部実体。</div></details>
+<details class="quiz searchable"><summary>Q17. BSCの特徴は？</summary><div class="answer" style="display:block">財務だけでなく複数の視点から戦略を管理する。</div></details>
+<details class="quiz searchable"><summary>Q18. MRPは何を計画する？</summary><div class="answer" style="display:block">生産に必要な資材の量と必要時期。</div></details>
+<details class="quiz searchable"><summary>Q19. 再帰関数で絶対必要なものは？</summary><div class="answer" style="display:block">終了条件（base case）。</div></details>
+<details class="quiz searchable"><summary>Q20. 科目Bで最も危険な解き方は？</summary><div class="answer" style="display:block">コードを雰囲気で読み、変数・添字をトレースせず答えること。</div></details>
+
+</section>
+
+<section class="chapter">
+<h2>16. 1〜3分で見返す超圧縮復習</h2>
+<div class="card">
+<ul>
+<li><b>科目B：</b> 添字・境界・代入順・ポインタ・再帰の戻りを手で追う。</li>
+<li><b>二分探索：</b> 整列済み、O(log n)。</li>
+<li><b>DFS：</b> スタック／再帰。BFSはキュー。</li>
+<li><b>ハッシュ：</b> 衝突と負荷率。modだけで終わらない。</li>
+<li><b>DRAM/SRAM：</b> 主記憶＝DRAM、キャッシュ＝SRAM。</li>
+<li><b>TLB：</b> アドレス変換のキャッシュ。</li>
+<li><b>RAID5：</b> 分散パリティ、典型容量(N−1)台分。</li>
+<li><b>DB：</b> WHERE＝集約前、HAVING＝集約後。Sロック同士は共存。</li>
+<li><b>ネット：</b> IPはL3、TCP/UDPはL4、HTTPはL7。/26→ホスト部6bit。</li>
+<li><b>暗号：</b> AES＝共通鍵、RSA＝公開鍵系、DH/ECDH＝鍵交換、SHA-256＝ハッシュ。</li>
+<li><b>署名：</b> 秘密性ではなく真正性・完全性・否認防止。</li>
+<li><b>PKI：</b> CA＝証明書、CRL/OCSP＝失効確認。</li>
+<li><b>インシデント管理：</b> まず復旧。根本原因は問題管理。</li>
+<li><b>UML/DFD/ER：</b> 振る舞い・データ流・DB関係を見分ける。</li>
+</ul>
+</div>
+</section>
+
+<section id="index" class="chapter">
+<h2>付録：これまで質問した項目の統合索引</h2>
+<p>重複を残した「質問テーマの棚卸し」をカテゴリ別に掲載しています。この索引からページ内検索すると、対応する解説へ戻れます。</p>
+<details class="searchable"><summary>試験制度・学習（19項目）</summary><div class="chips"><span class="chip">基本情報技術者試験とは</span><span class="chip">CBT方式</span><span class="chip">科目A・科目Bの違い</span><span class="chip">科目Aの出題形式</span><span class="chip">科目Bの出題形式</span><span class="chip">合格基準</span><span class="chip">試験時間</span><span class="chip">科目Aの勉強方法</span><span class="chip">科目Bの勉強方法</span><span class="chip">過去問の使い方</span><span class="chip">間違えた問題の復習</span><span class="chip">iPad学習</span><span class="chip">Goodnotes・OneNote・Notionでの誤答管理</span><span class="chip">Anki</span><span class="chip">模試</span><span class="chip">苦手分野分析</span><span class="chip">学習ロードマップ</span><span class="chip">CBT受験後の650点／610点の意味</span><span class="chip">600点基準との関係</span></div></details>
+<details class="searchable"><summary>基礎理論・数学（21項目）</summary><div class="chips"><span class="chip">二進数</span><span class="chip">二進数⇔十進数</span><span class="chip">ビット</span><span class="chip">ビット演算</span><span class="chip">AND</span><span class="chip">OR</span><span class="chip">XOR</span><span class="chip">NOT</span><span class="chip">ビットマスク</span><span class="chip">集合</span><span class="chip">ベン図</span><span class="chip">和集合</span><span class="chip">積集合</span><span class="chip">補集合</span><span class="chip">グラフ理論</span><span class="chip">頂点・辺</span><span class="chip">隣接行列</span><span class="chip">グラフの行列表現</span><span class="chip">DFS</span><span class="chip">ユークリッドの互除法</span><span class="chip">線形探索法</span></div></details>
+<details class="searchable"><summary>アルゴリズム・データ構造（55項目）</summary><div class="chips"><span class="chip">基本情報の擬似言語</span><span class="chip">変数</span><span class="chip">代入</span><span class="chip">条件分岐</span><span class="chip">if文</span><span class="chip">繰返し処理</span><span class="chip">ループ</span><span class="chip">配列</span><span class="chip">二次元配列</span><span class="chip">文字列処理</span><span class="chip">配列の要素</span><span class="chip">配列の添字</span><span class="chip">配列の連結</span><span class="chip">疎行列</span><span class="chip">二次元配列による疎行列処理</span><span class="chip">非零要素の格納</span><span class="chip">平均値アルゴリズム</span><span class="chip">線形探索</span><span class="chip">二分探索</span><span class="chip">探索アルゴリズム比較</span><span class="chip">選択ソート</span><span class="chip">挿入ソート</span><span class="chip">ソートアルゴリズム</span><span class="chip">再帰</span><span class="chip">再帰関数</span><span class="chip">スタック</span><span class="chip">キュー</span><span class="chip">リスト構造</span><span class="chip">単方向連結リスト</span><span class="chip">ノード</span><span class="chip">headポインタ</span><span class="chip">tailポインタ</span><span class="chip">リスト先頭挿入</span><span class="chip">リスト末尾挿入</span><span class="chip">リスト削除</span><span class="chip">ポインタ参照</span><span class="chip">未定義値判定</span><span class="chip">ノード接続</span><span class="chip">木構造</span><span class="chip">二分木</span><span class="chip">二分木の配列表現</span><span class="chip">木の走査</span><span class="chip">トラバーサル</span><span class="chip">Order関数</span><span class="chip">ハッシュ法</span><span class="chip">ハッシュ関数</span><span class="chip">ハッシュ値</span><span class="chip">ハッシュ表</span><span class="chip">ハッシュ配列</span><span class="chip">mod</span><span class="chip">衝突</span><span class="chip">衝突回避</span><span class="chip">オープンアドレス法</span><span class="chip">2つのハッシュ関数</span><span class="chip">負荷率</span></div></details>
+<details class="searchable"><summary>コンピュータ構成（30項目）</summary><div class="chips"><span class="chip">CPU</span><span class="chip">CPUレジスタ</span><span class="chip">レジスタの役割</span><span class="chip">割込み</span><span class="chip">多重割込み</span><span class="chip">ディスパッチ</span><span class="chip">リエントラント</span><span class="chip">メモリ</span><span class="chip">RAM</span><span class="chip">ROM</span><span class="chip">DRAM</span><span class="chip">SRAM</span><span class="chip">フラッシュメモリ</span><span class="chip">キャッシュメモリ</span><span class="chip">キャッシュの仕組み</span><span class="chip">TLB</span><span class="chip">MMU</span><span class="chip">仮想記憶</span><span class="chip">ビデオメモリ</span><span class="chip">ビデオメモリ容量計算</span><span class="chip">HDD・磁気ディスク</span><span class="chip">トラック</span><span class="chip">セクタ</span><span class="chip">シリンダ</span><span class="chip">ブロック</span><span class="chip">RAID</span><span class="chip">RAIDの種類</span><span class="chip">RAID5</span><span class="chip">RAID冗長性</span><span class="chip">RAID容量計算</span></div></details>
+<details class="searchable"><summary>OS・ソフトウェア（13項目）</summary><div class="chips"><span class="chip">OSの役割</span><span class="chip">プロセス</span><span class="chip">タスク</span><span class="chip">CPUスケジューリング</span><span class="chip">プリエンプティブ</span><span class="chip">ノンプリエンプティブ</span><span class="chip">デッドロック</span><span class="chip">ディスパッチ</span><span class="chip">割込み</span><span class="chip">多重割込み</span><span class="chip">コンパイラ</span><span class="chip">コンパイラの役割</span><span class="chip">コールドスタート</span></div></details>
+<details class="searchable"><summary>データベース（32項目）</summary><div class="chips"><span class="chip">データベース</span><span class="chip">DBMS</span><span class="chip">関係データベース</span><span class="chip">テーブル</span><span class="chip">レコード</span><span class="chip">フィールド</span><span class="chip">主キー</span><span class="chip">外部キー</span><span class="chip">参照制約</span><span class="chip">正規化</span><span class="chip">SQL</span><span class="chip">SELECT</span><span class="chip">WHERE</span><span class="chip">JOIN</span><span class="chip">INNER JOIN</span><span class="chip">JOINの考え方</span><span class="chip">GROUP BY</span><span class="chip">HAVING</span><span class="chip">サブクエリ</span><span class="chip">SQL問題の読み方</span><span class="chip">ソートマージ結合</span><span class="chip">ロック</span><span class="chip">共有ロック</span><span class="chip">占有ロック</span><span class="chip">排他制御</span><span class="chip">デッドロック</span><span class="chip">DBログ</span><span class="chip">ロールバック</span><span class="chip">ロールフォワード</span><span class="chip">バックアップ</span><span class="chip">フルバックアップ</span><span class="chip">障害復旧</span></div></details>
+<details class="searchable"><summary>ネットワーク（25項目）</summary><div class="chips"><span class="chip">ネットワーク基礎</span><span class="chip">OSI基本参照モデル</span><span class="chip">OSI各層</span><span class="chip">TCP/IP</span><span class="chip">OSIとTCP/IP</span><span class="chip">IPv4</span><span class="chip">IPアドレス</span><span class="chip">サブネットマスク</span><span class="chip">サブネット</span><span class="chip">ネットワークアドレス</span><span class="chip">IPv4計算</span><span class="chip">CIDR /26</span><span class="chip">RARP</span><span class="chip">CSMA</span><span class="chip">CSMA/CD</span><span class="chip">Ethernet</span><span class="chip">HTTP</span><span class="chip">HTTPS</span><span class="chip">HTTPプロキシ</span><span class="chip">プロキシサーバ</span><span class="chip">ポート番号</span><span class="chip">IPsec</span><span class="chip">ポートスキャン</span><span class="chip">ポートスキャナ</span><span class="chip">プライバシーセパレータ</span></div></details>
+<details class="searchable"><summary>情報セキュリティ・暗号（43項目）</summary><div class="chips"><span class="chip">暗号化</span><span class="chip">共通鍵暗号</span><span class="chip">公開鍵暗号</span><span class="chip">共通鍵と公開鍵の違い</span><span class="chip">ハイブリッド暗号</span><span class="chip">公開鍵で鍵共有→共通鍵で通信</span><span class="chip">AES</span><span class="chip">RSA</span><span class="chip">楕円曲線暗号</span><span class="chip">DH</span><span class="chip">Diffie-Hellman</span><span class="chip">ECDH</span><span class="chip">ハッシュ値</span><span class="chip">ハッシュ関数</span><span class="chip">SHA-256</span><span class="chip">ハッシュと暗号化の違い</span><span class="chip">認証</span><span class="chip">デジタル署名</span><span class="chip">MAC</span><span class="chip">メッセージ認証コード</span><span class="chip">多要素認証</span><span class="chip">ICカード＋PIN</span><span class="chip">PKI</span><span class="chip">CA</span><span class="chip">RA</span><span class="chip">電子証明書</span><span class="chip">CRL</span><span class="chip">OCSP</span><span class="chip">SSL</span><span class="chip">TLS</span><span class="chip">HTTPS</span><span class="chip">Cipher Suite</span><span class="chip">鍵交換</span><span class="chip">前方秘匿性</span><span class="chip">PFS</span><span class="chip">ゼロデイ攻撃</span><span class="chip">ブルートフォース</span><span class="chip">総当たり</span><span class="chip">代数的解読</span><span class="chip">線形・相関を利用した解読</span><span class="chip">差分解読法</span><span class="chip">SQLインジェクション</span><span class="chip">ランサムウェア</span></div></details>
+<details class="searchable"><summary>システム開発・設計（18項目）</summary><div class="chips"><span class="chip">UML</span><span class="chip">UMLアクティビティ図</span><span class="chip">クラス</span><span class="chip">インスタンス</span><span class="chip">クラスとインスタンスの違い</span><span class="chip">業務プロセスとUML</span><span class="chip">DFD</span><span class="chip">DFDの読み方</span><span class="chip">ER図</span><span class="chip">決定表</span><span class="chip">フローチャート</span><span class="chip">DTD</span><span class="chip">XMLとDTD</span><span class="chip">IDE</span><span class="chip">EUC</span><span class="chip">プロトタイピング</span><span class="chip">SOA</span><span class="chip">3層クライアントサーバシステム</span></div></details>
+<details class="searchable"><summary>テスト・品質（7項目）</summary><div class="chips"><span class="chip">テスト技法</span><span class="chip">判定条件</span><span class="chip">分岐網羅</span><span class="chip">判定条件網羅・カバレッジ</span><span class="chip">受入テスト</span><span class="chip">テストと監査の違い</span><span class="chip">要件定義</span></div></details>
+<details class="searchable"><summary>マネジメント（8項目）</summary><div class="chips"><span class="chip">プロジェクトマネジメント</span><span class="chip">サービスマネジメント</span><span class="chip">インシデント管理</span><span class="chip">コンティンジェンシー計画</span><span class="chip">システム監査</span><span class="chip">監査とテストの違い</span><span class="chip">ISMS</span><span class="chip">ISMS構築の順序</span></div></details>
+<details class="searchable"><summary>戦略・経営・会計・法務（16項目）</summary><div class="chips"><span class="chip">システム戦略</span><span class="chip">IT投資</span><span class="chip">BI</span><span class="chip">EA</span><span class="chip">BSC</span><span class="chip">Balanced Scorecard</span><span class="chip">SCM</span><span class="chip">Supply Chain Management</span><span class="chip">MRP</span><span class="chip">キャッシュフロー計算書</span><span class="chip">営業活動によるキャッシュフロー</span><span class="chip">デルファイ法</span><span class="chip">ワークサンプリング法</span><span class="chip">契約不適合責任</span><span class="chip">瑕疵担保責任</span><span class="chip">契約・法律関係</span></div></details>
+<details class="searchable"><summary>科目B演習題材（23項目）</summary><div class="chips"><span class="chip">繰返し</span><span class="chip">配列</span><span class="chip">条件分岐</span><span class="chip">再帰</span><span class="chip">キュー</span><span class="chip">ビット演算</span><span class="chip">単方向連結リスト</span><span class="chip">二分探索</span><span class="chip">選択ソート</span><span class="chip">二次元配列</span><span class="chip">二分木</span><span class="chip">DFS</span><span class="chip">ユークリッド互除法</span><span class="chip">文字列処理</span><span class="chip">平均計算</span><span class="chip">挿入ソート</span><span class="chip">多要素認証</span><span class="chip">SQLインジェクション</span><span class="chip">ランサムウェア</span><span class="chip">ログ管理</span><span class="chip">20問模試</span><span class="chip">アルゴリズム16問＋セキュリティ4問</span><span class="chip">ゲキムズ問題</span></div></details>
+
+</section>
+
+<section class="chapter">
+<h2>出典・参考資料</h2>
+<div class="card">
+<ol>
+<li><a href="https://www.ipa.go.jp/shiken/kubun/fe.html">IPA「基本情報技術者試験」</a> — 実施方式、試験時間、出題形式、問題数。</li>
+<li><a href="https://www.ipa.go.jp/shiken/syllabus/gaiyou.html">IPA「試験要綱・シラバスについて」</a> — 2026年7月10日更新。基本情報技術者試験シラバス Ver.9.2（2026年1月8日掲載）。</li>
+<li><a href="https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf">IPA「基本情報技術者試験（レベル2）シラバス Ver.9.2」</a> — 出題知識・技能の細目。</li>
+<li><a href="https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf">IPA「基本情報技術者試験 科目Bのサンプル問題」</a> — アルゴリズムとプログラミング／情報セキュリティの構成。</li>
+<li><a href="https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2026r08.html">IPA「問題冊子・解答例（2026年度）」</a> — 2026年度の公開問題。</li>
+</ol>
+<p class="small">確認日：2026-08-23。用語解説はFE学習向けに要約・再構成しています。制度・シラバスは変更される可能性があるため、受験直前はIPA公式情報を再確認してください。</p>
+</div>
+</section>
+
+<footer>
+<p><b>文書情報</b><br>カテゴリ：学習・資格 / タグ：基本情報技術者・FE・科目A・科目B / 作成日：2026-08-23 / 更新日：2026-08-23 / Version 1.0</p>
+<p>ファイル名：20260823_基本情報技術者_FE総合復習ノート.html</p>
+</footer>
+</div>
+
+<script>
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{
+ const h=document.documentElement;
+ const max=h.scrollHeight-h.clientHeight;
+ bar.style.width=(max? h.scrollTop/max*100:0)+'%';
+});
+const search=document.getElementById('search');
+search.addEventListener('input',()=>{
+ const q=search.value.trim().toLowerCase();
+ document.querySelectorAll('details.searchable, details.quiz').forEach(el=>{
+   el.style.display = !q || el.textContent.toLowerCase().includes(q) ? '' : 'none';
+ });
+ document.querySelectorAll('section.chapter').forEach(sec=>{
+   if(!q){sec.style.display='';return;}
+   const has=sec.textContent.toLowerCase().includes(q);
+   sec.style.display=has?'':'none';
+ });
+});
+function expandAll(){document.querySelectorAll('details').forEach(d=>d.open=true)}
+function collapseAll(){document.querySelectorAll('details').forEach(d=>d.open=false)}
+</script>
+</body>
+</html>

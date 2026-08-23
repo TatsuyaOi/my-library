@@ -1,6 +1,12 @@
 {
   "site_title": "My Library",
   "categories": {
+    "00_マニュアル": {
+      "title": "マニュアル",
+      "icon": "📖",
+      "description": "My Library・GitHub Pages・GitHub Actionsの運用方法と設定資料",
+      "accent": "#4f5d75"
+    },
     "01_哲学": {
       "title": "哲学",
       "icon": "🧠",

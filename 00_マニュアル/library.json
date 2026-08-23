@@ -1,0 +1,30 @@
+{
+  "category": {
+    "folder": "00_マニュアル",
+    "title": "マニュアル",
+    "icon": "📖",
+    "description": "My Library・GitHub Pages・GitHub Actionsの運用方法と設定資料",
+    "accent": "#4f5d75"
+  },
+  "generated_at": "2026-08-23T15:34:00+09:00",
+  "items": [
+    {
+      "title": "My Library 運用説明書",
+      "description": "My LibraryへのHTML追加・Commit・Push・自動一覧生成・トラブル対応までをまとめた運用マニュアル",
+      "group": "My Library",
+      "tags": [
+        "GitHub",
+        "GitHub Pages",
+        "GitHub Actions",
+        "GitHub Desktop",
+        "HTML",
+        "運用",
+        "マニュアル"
+      ],
+      "pinned": true,
+      "order": 1,
+      "updated": "2026-08-23",
+      "file": "My Library 運用説明書.html"
+    }
+  ]
+}
