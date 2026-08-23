@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-08-23T06:24:54+00:00",
+  "generated_at": "2026-08-23T06:26:37+00:00",
   "categories": [
     {
       "folder": "01_哲学",
@@ -68,11 +68,11 @@
       "pinned": false,
       "order": 999999,
       "updated": "2026-08-23",
-      "file": "01 北極星の哲学.html",
+      "file": "北極星の哲学.html",
       "category_folder": "01_哲学",
       "category_title": "哲学",
       "category_icon": "🧠",
-      "url": "./01_哲学/01 北極星の哲学.html"
+      "url": "./01_哲学/北極星の哲学.html"
     }
   ]
 }
