@@ -7,41 +7,47 @@
       "description": "My Library・GitHub Pages・GitHub Actionsの運用方法と設定資料",
       "accent": "#4f5d75"
     },
-    "01_哲学": {
+    "01_プロンプト": {
+      "title": "プロンプト",
+      "icon": "🧩",
+      "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
+      "accent": "#59636f"
+    },
+    "11_哲学": {
       "title": "哲学",
       "icon": "🧠",
       "description": "哲学者・思想・名言・自分の考えを整理するライブラリ",
       "accent": "#6f56d9"
     },
-    "11_基本情報": {
+    "21_基本情報": {
       "title": "基本情報",
       "icon": "💻",
       "description": "IT・基本情報技術者・コンピュータ基礎を整理するライブラリ",
       "accent": "#2878d0"
     },
-    "12_簿記": {
+    "22_簿記": {
       "title": "簿記",
       "icon": "📘",
       "description": "簿記・仕訳・勘定科目・決算を整理する学習ライブラリ",
       "accent": "#2366c8"
     },
-    "21_旅行": {
+    "31_旅行": {
       "title": "旅行",
       "icon": "✈️",
       "description": "旅行計画・観光地・宿・移動・ドライブ情報をまとめるライブラリ",
       "accent": "#1687a7"
     },
-    "31_仕事": {
+    "41_AI": {
+      "title": "AI",
+      "icon": "✨",
+      "description": "ChatGPT・Codex・AI活用・AI関連資料を整理するライブラリ",
+      "accent": "#8b5a2b"
+    },
+    "51_仕事": {
       "title": "仕事",
       "icon": "🔬",
       "description": "仕事・研究開発・技術資料・業務知識を整理するライブラリ",
       "accent": "#2f6b59"
-    },
-    "41_AI": {
-      "title": "AI",
-      "icon": "✨",
-      "description": "ChatGPT・Codex・AI活用・プロンプトを整理するライブラリ",
-      "accent": "#8b5a2b"
     },
     "99_その他": {
       "title": "その他",
