@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#425466">
+
+<meta name="library-title" content="My Library対応HTML生成プロンプト 使い方ガイド">
+<meta name="library-group" content="HTML運用">
+<meta name="library-tags" content="My Library,GitHub Pages,HTML,プロンプト,画像埋め込み,変換,使い方">
+<meta name="library-description" content="完成済みHTMLのMy Library対応化と、画像から見やすいHTMLを作るためのマスタープロンプトの使い方を初心者向けに解説">
+<meta name="library-pinned" content="true">
+<meta name="library-order" content="2">
+
+<title>My Library対応HTML生成プロンプト 使い方ガイド</title>
+
+<style>
+:root{
+  --bg:#f4f6f8;
+  --surface:#ffffff;
+  --text:#17202a;
+  --muted:#68737d;
+  --line:#e1e6eb;
+  --accent:#425466;
+  --accent2:#1769aa;
+  --soft:#edf3f8;
+  --ok:#1f7a4d;
+  --ok-soft:#eef8f2;
+  --warn:#8a6318;
+  --warn-soft:#fff8e8;
+  --code:#20252c;
+  --radius:22px;
+  --shadow:0 10px 28px rgba(0,0,0,.055);
+}
+*{box-sizing:border-box}
+html{
+  -webkit-text-size-adjust:100%;
+  scroll-behavior:smooth;
+  scroll-padding-top:84px;
+}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  font-size:18px;
+  line-height:1.78;
+}
+a{color:var(--accent2)}
+button,input{font:inherit}
+.wrap{
+  width:min(100%,860px);
+  margin:0 auto;
+  padding:max(18px,env(safe-area-inset-top)) 15px max(50px,env(safe-area-inset-bottom));
+}
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+.back{
+  color:var(--accent);
+  font-weight:800;
+  text-decoration:none;
+}
+.version{
+  color:var(--muted);
+  font-size:.72rem;
+}
+.hero{
+  padding:28px 22px;
+  background:linear-gradient(145deg,#2d3b49,#566b7f);
+  color:#fff;
+  border-radius:28px;
+  box-shadow:var(--shadow);
+}
+.kicker{
+  margin:0 0 7px;
+  opacity:.72;
+  font-size:.74rem;
+  font-weight:900;
+  letter-spacing:.1em;
+}
+h1{
+  margin:0;
+  font-size:clamp(2.15rem,9vw,4.15rem);
+  line-height:1.08;
+  letter-spacing:-.04em;
+}
+.hero p{
+  margin:15px 0 0;
+  color:rgba(255,255,255,.82);
+  font-size:.96rem;
+}
+.mode-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:20px;
+}
+.mode-chip{
+  padding:12px 10px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:15px;
+  background:rgba(255,255,255,.08);
+  font-size:.78rem;
+  font-weight:800;
+  text-align:center;
+}
+.sticky{
+  position:sticky;
+  top:0;
+  z-index:20;
+  padding:13px 0;
+  background:linear-gradient(to bottom,rgba(244,246,248,.98) 78%,rgba(244,246,248,0));
+  backdrop-filter:blur(10px);
+}
+.search{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:56px;
+  padding:0 16px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:17px;
+  box-shadow:var(--shadow);
+}
+.search input{
+  width:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:var(--text);
+}
+.toc{
+  margin:2px 0 22px;
+  padding:17px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.toc-label{
+  margin:0 0 10px;
+  color:var(--muted);
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+.toc-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.toc a{
+  display:block;
+  padding:10px 12px;
+  border-radius:12px;
+  background:var(--soft);
+  color:var(--accent);
+  text-decoration:none;
+  font-size:.8rem;
+  font-weight:800;
+}
+.section{
+  margin:14px 0;
+  padding:21px 19px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.section.hidden{display:none}
+.number{
+  display:inline-grid;
+  place-items:center;
+  width:32px;
+  height:32px;
+  margin-bottom:9px;
+  border-radius:10px;
+  background:var(--accent);
+  color:white;
+  font-size:.78rem;
+  font-weight:900;
+}
+h2{
+  margin:0 0 12px;
+  font-size:1.45rem;
+  line-height:1.35;
+  letter-spacing:-.02em;
+}
+h3{
+  margin:22px 0 8px;
+  font-size:1.05rem;
+}
+p{margin:8px 0}
+ul,ol{padding-left:1.35em}
+li+li{margin-top:7px}
+.flow{
+  margin:14px 0;
+  padding:17px;
+  border-left:5px solid var(--accent2);
+  border-radius:6px 15px 15px 6px;
+  background:#f6f9fc;
+  white-space:pre-line;
+  font-weight:800;
+}
+.good{
+  margin:14px 0;
+  padding:15px 16px;
+  border-radius:15px;
+  background:var(--ok-soft);
+  border:1px solid #cfe8da;
+  color:#285e3d;
+}
+.warning{
+  margin:14px 0;
+  padding:15px 16px;
+  border-radius:15px;
+  background:var(--warn-soft);
+  border:1px solid #efdfb3;
+  color:#6b531d;
+}
+.example{
+  margin:14px 0;
+  padding:17px;
+  border-radius:17px;
+  border:1px solid var(--line);
+  background:#fbfcfd;
+}
+.example-title{
+  margin:0 0 8px;
+  font-size:.78rem;
+  color:var(--accent2);
+  font-weight:900;
+  letter-spacing:.04em;
+}
+.copybox{
+  position:relative;
+}
+pre{
+  overflow:auto;
+  margin:10px 0;
+  padding:16px;
+  border-radius:15px;
+  background:var(--code);
+  color:#edf2f7;
+  font-size:.78rem;
+  line-height:1.65;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+code{
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+}
+.inline{
+  padding:.13em .38em;
+  background:#edf0f3;
+  border-radius:.4em;
+  font-size:.88em;
+}
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px;
+  margin-top:12px;
+}
+.compare-card{
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fafbfc;
+}
+.compare-card strong{
+  display:block;
+  margin-bottom:7px;
+}
+table{
+  width:100%;
+  margin:13px 0;
+  border-collapse:collapse;
+  font-size:.84rem;
+}
+th,td{
+  padding:10px;
+  border-bottom:1px solid var(--line);
+  text-align:left;
+  vertical-align:top;
+}
+th{background:#f6f8fa}
+.checklist{
+  list-style:none;
+  padding:0;
+}
+.checklist li{
+  padding:8px 0;
+  border-bottom:1px solid var(--line);
+}
+.checklist li::before{
+  content:"□";
+  margin-right:9px;
+  color:var(--accent2);
+  font-weight:900;
+}
+.big-rule{
+  margin:18px 0;
+  padding:19px;
+  border-radius:18px;
+  background:var(--accent);
+  color:#fff;
+  text-align:center;
+  font-size:1.05rem;
+  font-weight:900;
+}
+footer{
+  padding:28px 0 7px;
+  color:#8f98a1;
+  text-align:center;
+  font-size:.72rem;
+}
+@media(max-width:560px){
+  body{font-size:18px}
+  .wrap{padding-left:12px;padding-right:12px}
+  .hero{padding:25px 19px}
+  .mode-grid,.compare,.toc-grid{grid-template-columns:1fr}
+  .section{padding:19px 16px}
+  table{font-size:.76rem}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<div class="topbar">
+  <a class="back" href="./index.html">← マニュアル一覧</a>
+  <span class="version">2026-08-23</span>
+</div>
+
+<header class="hero">
+  <p class="kicker">MY LIBRARY PROMPT GUIDE</p>
+  <h1>HTML生成プロンプト<br>使い方ガイド</h1>
+  <p>
+    「完成済みHTMLをMy Library対応へ変換する」と
+    「画像を見やすいHTMLにする」の2つを、同じプロンプトで使い分ける方法を説明します。
+  </p>
+  <div class="mode-grid">
+    <div class="mode-chip">A：HTMLを変換</div>
+    <div class="mode-chip">B：画像をHTML化</div>
+  </div>
+</header>
+
+<div class="sticky">
+  <label class="search">
+    <span aria-hidden="true">⌕</span>
+    <input id="searchInput" type="search" placeholder="使い方を検索…" autocomplete="off">
+  </label>
+</div>
+
+<nav class="toc">
+  <p class="toc-label">目次</p>
+  <div class="toc-grid">
+    <a href="#s1">まず何ができる？</a>
+    <a href="#s2">最短の使い方</a>
+    <a href="#s3">モードA</a>
+    <a href="#s4">モードB</a>
+    <a href="#s5">変更する場所</a>
+    <a href="#s6">具体例</a>
+    <a href="#s7">GitHubへ入れる</a>
+    <a href="#s8">注意点</a>
+    <a href="#s9">おすすめ運用</a>
+    <a href="#s10">チェックリスト</a>
+  </div>
+</nav>
+
+<section class="section" id="s1" data-search="できること 目的 HTML 画像 変換 My Library GitHub">
+  <span class="number">1</span>
+  <h2>このプロンプトで何ができる？</h2>
+
+  <p>1つのプロンプトで、主に次の2つの使い方ができます。</p>
+
+  <div class="compare">
+    <div class="compare-card">
+      <strong>モードA：HTMLをMy Library対応化</strong>
+      すでに完成しているHTMLを、内容を変えずにGitHub Pages・My Libraryで管理しやすい形へ変換します。
+    </div>
+    <div class="compare-card">
+      <strong>モードB：画像をHTML化</strong>
+      1枚または数枚の画像を、スマホで見やすく拡大できる1ファイルHTMLへまとめます。
+    </div>
+  </div>
+
+  <div class="good">
+    <strong>ポイント：</strong>
+    「何の処理をするか」は、添付したファイルからAIが基本的に自動判定します。
+  </div>
+</section>
+
+<section class="section" id="s2" data-search="最短 使い方 手順 プロンプト 添付 ファイル">
+  <span class="number">2</span>
+  <h2>最短の使い方</h2>
+
+  <div class="flow">① マスタープロンプトをChatGPT / Codexへ貼る
+↓
+② 変換したいHTMLまたは画像を添付
+↓
+③ 必要なら保存先カテゴリ・小分類だけ変更
+↓
+④ 実行
+↓
+⑤ 完成したHTMLをダウンロード
+↓
+⑥ My Libraryの該当フォルダへ保存
+↓
+⑦ Commit → Push</div>
+
+  <p>毎回プロンプト全文を書き換える必要はありません。</p>
+
+  <div class="big-rule">基本は「ファイルを添付して、末尾の指定だけ変える」</div>
+</section>
+
+<section class="section" id="s3" data-search="モードA 完成済み HTML 変換 内容 変えない GitHub Pages">
+  <span class="number">3</span>
+  <h2>モードA：完成済みHTMLを変換する</h2>
+
+  <p>すでに教材・思想ノート・旅行資料などのHTMLが完成しているときに使います。</p>
+
+  <h3>何をしてくれる？</h3>
+  <ul>
+    <li>元の文章や情報は原則そのまま保持</li>
+    <li>My Library用メタ情報を追加</li>
+    <li>GitHub Pagesで問題になるローカルパスを修正</li>
+    <li>スマホではみ出す画像や表を調整</li>
+    <li>必要なら添付画像をHTML内へ埋め込み</li>
+    <li>GitHub Pagesで動く1ファイルHTMLへ整備</li>
+  </ul>
+
+  <div class="warning">
+    <strong>重要：</strong>
+    内容そのものを「もっと分かりやすく書き直す」プロンプトではありません。
+    元HTMLの内容を保ったまま、My Library向けに整える用途です。
+  </div>
+
+  <div class="example">
+    <p class="example-title">使うときのイメージ</p>
+    <pre><code>マスタープロンプトを使用してください。
+
+添付したHTMLをMy Library対応にしてください。
+
+保存先カテゴリ：12_簿記
+小分類：決算
+library-pinned：false</code></pre>
+  </div>
+</section>
+
+<section class="section" id="s4" data-search="モードB 画像 png jpg webp 埋め込み Base64 視認性">
+  <span class="number">4</span>
+  <h2>モードB：画像を見やすいHTMLにする</h2>
+
+  <p>画像しか持っていないときに使います。</p>
+
+  <p>例えば、次のような資料です。</p>
+  <ul>
+    <li>ChatGPTで生成した1枚図解</li>
+    <li>勉強用のまとめ画像</li>
+    <li>複数ページの旅行プラン画像</li>
+    <li>スクリーンショット資料</li>
+    <li>表・概念図・フローチャート画像</li>
+  </ul>
+
+  <h3>1枚の場合</h3>
+  <div class="flow">画像1枚
+↓
+画像データをHTML内部へ埋め込み
+↓
+スマホ幅いっぱいに表示
+↓
+タップで拡大
+↓
+1ファイルHTMLとして完成</div>
+
+  <h3>複数枚の場合</h3>
+  <div class="flow">画像1
+画像2
+画像3
+↓
+添付順に並べる
+↓
+各画像を拡大可能にする
+↓
+画像番号を表示
+↓
+1つのHTMLへまとめる</div>
+
+  <div class="good">
+    数枚程度なら画像もHTML内部へ入るため、
+    <strong>「HTMLファイル1個だけ」</strong>をGitHubへ保存すれば済みます。
+  </div>
+</section>
+
+<section class="section" id="s5" data-search="変更 今回の指定 保存先カテゴリ 小分類 pinned 出力方式">
+  <span class="number">5</span>
+  <h2>毎回どこを変更する？</h2>
+
+  <p>マスタープロンプトの最後にある<strong>「今回の指定」</strong>を変更します。</p>
+
+  <pre><code>処理モード：
+自動判定
+
+保存先カテゴリ：
+［例：12_簿記］
+
+小分類：
+［例：決算／画像資料／未分類］
+
+library-pinned：
+false
+
+出力方式：
+完成HTMLを1ファイル
+
+画像の扱い：
+1枚または数枚の場合はHTML内へ埋め込む
+
+元HTMLの内容：
+変更禁止</code></pre>
+
+  <table>
+    <tr><th>項目</th><th>どう設定する？</th></tr>
+    <tr><td>保存先カテゴリ</td><td>GitHubのフォルダ名を書く</td></tr>
+    <tr><td>小分類</td><td>カテゴリ内部の分類を書く</td></tr>
+    <tr><td>library-pinned</td><td>通常は false。重要資料だけ true</td></tr>
+    <tr><td>処理モード</td><td>基本は「自動判定」のまま</td></tr>
+    <tr><td>画像の扱い</td><td>通常はそのままでOK</td></tr>
+  </table>
+</section>
+
+<section class="section" id="s6" data-search="具体例 簿記 哲学 旅行 AI マニュアル 画像">
+  <span class="number">6</span>
+  <h2>具体的な使い方</h2>
+
+  <h3>例1：完成済みの簿記HTML</h3>
+  <div class="example">
+    <p class="example-title">添付</p>
+    <p><code class="inline">貸倒引当金.html</code></p>
+
+    <p class="example-title">今回の指定</p>
+    <pre><code>保存先カテゴリ：12_簿記
+小分類：決算
+library-pinned：false</code></pre>
+
+    <p>完成後は次へ保存します。</p>
+    <pre><code>my-library/
+└─ 12_簿記/
+   └─ 貸倒引当金.html</code></pre>
+  </div>
+
+  <h3>例2：哲学の1枚画像</h3>
+  <div class="example">
+    <p class="example-title">添付</p>
+    <p><code class="inline">ストア派まとめ.png</code></p>
+
+    <p class="example-title">今回の指定</p>
+    <pre><code>保存先カテゴリ：01_哲学
+小分類：ストア派
+library-pinned：false</code></pre>
+
+    <p>画像がHTML内に埋め込まれ、例えば次のようなファイルになります。</p>
+    <pre><code>ストア派まとめ_画像資料.html</code></pre>
+  </div>
+
+  <h3>例3：旅行画像が3枚</h3>
+  <div class="example">
+    <p>3枚をまとめて添付し、</p>
+    <pre><code>保存先カテゴリ：21_旅行
+小分類：沖縄
+library-pinned：true</code></pre>
+
+    <p>と指定します。3枚を順番に見られる旅行資料HTMLとしてまとめられます。</p>
+  </div>
+
+  <h3>例4：My Libraryの説明書</h3>
+  <div class="example">
+    <pre><code>保存先カテゴリ：00_マニュアル
+小分類：HTML運用
+library-pinned：true</code></pre>
+  </div>
+</section>
+
+<section class="section" id="s7" data-search="GitHub 保存 フォルダ Commit Push Actions 自動登録 library json">
+  <span class="number">7</span>
+  <h2>完成HTMLをGitHubへ入れる</h2>
+
+  <p>HTMLが完成したら、保存先カテゴリへ置きます。</p>
+
+  <pre><code>my-library
+├─ 00_マニュアル
+├─ 01_哲学
+├─ 11_基本情報
+├─ 12_簿記
+├─ 21_旅行
+├─ 31_仕事
+├─ 41_AI
+└─ 99_その他</code></pre>
+
+  <div class="flow">完成HTMLを保存
+↓
+GitHub Desktop
+↓
+Summaryを入力
+↓
+Commit to main
+↓
+Push origin
+↓
+GitHub Actions
+↓
+library.json 自動更新
+↓
+My Libraryへ自動表示</div>
+
+  <div class="good">
+    <strong>index.htmlやlibrary.jsonを手動で編集する必要はありません。</strong>
+    HTMLを正しいフォルダへ入れてPushすれば、自動化システムが一覧へ追加します。
+  </div>
+</section>
+
+<section class="section" id="s8" data-search="注意 内容変更 画像 外部ファイル ローカルパス file url 大容量">
+  <span class="number">8</span>
+  <h2>使うときの注意点</h2>
+
+  <h3>完成HTMLは「内容変更禁止」</h3>
+  <p>モードAでは、既存HTMLを教材として改善するのではなく、GitHub Pages対応へ整備する目的です。</p>
+
+  <h3>画像が多すぎる場合</h3>
+  <p>画像をすべてBase64で埋め込むとHTMLが非常に大きくなることがあります。その場合はAIがHTML＋imagesフォルダのZIP方式へ切り替えることがあります。</p>
+
+  <h3>外部ファイルがあるHTML</h3>
+  <p>HTMLが画像・CSS・JavaScriptなどを別ファイルで参照している場合、それらも一緒に添付した方が確実です。</p>
+
+  <div class="warning">
+    HTMLだけ添付し、HTML内で参照している画像が手元にない場合、
+    AIは存在しない画像を勝手に作ることはしません。
+  </div>
+
+  <h3>ローカルパス</h3>
+  <p>次のような記述はGitHub Pagesでは使えません。</p>
+
+  <pre><code>C:\Users\...
+file:///C:/...
+D:\資料\画像.png</code></pre>
+
+  <p>マスタープロンプトは、このような問題を検出して修正する想定です。</p>
+</section>
+
+<section class="section" id="s9" data-search="おすすめ 運用 ChatGPT Codex テンプレート 保存 メモ">
+  <span class="number">9</span>
+  <h2>おすすめの運用方法</h2>
+
+  <p>このマスタープロンプト自体を、My Libraryのマニュアルとして保存しておくと便利です。</p>
+
+  <div class="flow">00_マニュアル
+├─ My Library 運用説明書.html
+├─ HTML生成プロンプト 使い方ガイド.html
+└─ My Library対応HTML生成プロンプト.md</div>
+
+  <p>普段は次のように使い分けます。</p>
+
+  <table>
+    <tr><th>やりたいこと</th><th>添付するもの</th></tr>
+    <tr><td>既存教材をGitHub対応</td><td>完成HTML</td></tr>
+    <tr><td>1枚図解を保存</td><td>PNG / JPG / WebP 1枚</td></tr>
+    <tr><td>画像資料集を作る</td><td>画像を数枚</td></tr>
+    <tr><td>HTML＋画像をまとめる</td><td>HTML＋使用画像</td></tr>
+  </table>
+
+  <div class="big-rule">HTMLを作る → My Library形式へ変換 → 保存 → Commit → Push</div>
+</section>
+
+<section class="section" id="s10" data-search="チェックリスト 確認 手順">
+  <span class="number">10</span>
+  <h2>実行前チェックリスト</h2>
+
+  <ul class="checklist">
+    <li>マスタープロンプトを貼った</li>
+    <li>変換したいHTMLまたは画像を添付した</li>
+    <li>保存先カテゴリを指定した</li>
+    <li>必要なら小分類を指定した</li>
+    <li>重要資料だけ pinned=true にした</li>
+    <li>完成HTMLをダウンロードした</li>
+    <li>正しいMy Libraryフォルダへ保存した</li>
+    <li>GitHub DesktopでCommitした</li>
+    <li>Push originした</li>
+    <li>My Libraryで表示を確認した</li>
+  </ul>
+
+  <h3>迷ったとき</h3>
+  <p>細かい指定が分からなければ、保存先カテゴリだけ決めて、残りは「自動判定」のままでも構いません。</p>
+
+  <div class="good">
+    最も簡単な指示は、
+    <strong>「添付したファイルを、このマスタープロンプトに従ってMy Library対応HTMLにしてください」</strong>
+    です。
+  </div>
+</section>
+
+<footer>
+  My Library対応HTML生成プロンプト 使い方ガイド · 2026-08-23
+</footer>
+
+</main>
+
+<script>
+const input = document.getElementById("searchInput");
+const sections = [...document.querySelectorAll(".section")];
+
+input.addEventListener("input", () => {
+  const q = input.value.trim().toLowerCase();
+
+  sections.forEach(section => {
+    const haystack = (
+      section.textContent + " " + (section.dataset.search || "")
+    ).toLowerCase();
+
+    section.classList.toggle("hidden", q && !haystack.includes(q));
+  });
+});
+</script>
+</body>
+</html>
