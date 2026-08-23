@@ -1,7 +1,15 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-08-23T06:31:44+00:00",
+  "generated_at": "2026-08-23T06:40:38+00:00",
   "categories": [
+    {
+      "folder": "00_マニュアル",
+      "title": "マニュアル",
+      "icon": "📖",
+      "description": "My Library・GitHub Pages・GitHub Actionsの運用方法と設定資料",
+      "accent": "#4f5d75",
+      "count": 1
+    },
     {
       "folder": "01_哲学",
       "title": "哲学",
@@ -16,7 +24,7 @@
       "icon": "💻",
       "description": "IT・基本情報技術者・コンピュータ基礎を整理するライブラリ",
       "accent": "#2878d0",
-      "count": 0
+      "count": 1
     },
     {
       "folder": "12_簿記",
@@ -60,6 +68,42 @@
     }
   ],
   "items": [
+    {
+      "title": "My Library 運用説明書",
+      "description": "My LibraryへのHTML追加・Commit・Push・自動一覧生成・トラブル対応までをまとめた運用マニュアル",
+      "group": "My Library",
+      "tags": [
+        "GitHub",
+        "GitHub Pages",
+        "GitHub Actions",
+        "GitHub Desktop",
+        "HTML",
+        "運用",
+        "マニュアル"
+      ],
+      "pinned": true,
+      "order": 1,
+      "updated": "2026-08-23",
+      "file": "My Library 運用説明書.html",
+      "category_folder": "00_マニュアル",
+      "category_title": "マニュアル",
+      "category_icon": "📖",
+      "url": "./00_マニュアル/My Library 運用説明書.html"
+    },
+    {
+      "title": "基本情報技術者試験（FE）総合復習ノート｜これまでの質問を完全統合",
+      "description": "これまで質問した基本情報技術者試験（FE）の内容を統合した、スマートフォン向け保存版総合復習ノート。",
+      "group": "未分類",
+      "tags": [],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-23",
+      "file": "FE総合復習ノート.html",
+      "category_folder": "11_基本情報",
+      "category_title": "基本情報",
+      "category_icon": "💻",
+      "url": "./11_基本情報/FE総合復習ノート.html"
+    },
     {
       "title": "北極星の哲学｜シンプル版",
       "description": "哲学を北極星として、自分の判断・時間・行動を統治するための個人思想ノート。",
