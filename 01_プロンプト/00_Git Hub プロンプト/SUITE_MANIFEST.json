@@ -1,0 +1,62 @@
+{
+  "suite_version": "2.0",
+  "contract_version": "2.0",
+  "generated": "2026-08-24",
+  "files": [
+    {
+      "name": "00_github-library-foundation-builder_master-prompt_v1.0.md",
+      "bytes": 12096,
+      "sha256": "a1aadf1dd9b7c6f25908b050f8ccacb32aee8939472b6295c061a50e2f302b7c"
+    },
+    {
+      "name": "01_prompt-architect_master-prompt_v1.2.md",
+      "bytes": 48760,
+      "sha256": "38923048764db49929ed213b9053e020af10f2570037a98e16bb99e090be15bc"
+    },
+    {
+      "name": "02_html-guide-generator_master-prompt_v2.0.md",
+      "bytes": 21450,
+      "sha256": "e6ac7b82c79f26fccb5e473c25d9e39773ee16ae1461d546c4f06834dd8e4308"
+    },
+    {
+      "name": "03_visual-preview-generator_master-prompt_v2.2.md",
+      "bytes": 35412,
+      "sha256": "32ec7fbb875b34dd6fec83f2eaa94f52fe237f9fc9580160125f317fb1772cc6"
+    },
+    {
+      "name": "04_meta-json-generator_master-prompt_v2.0.md",
+      "bytes": 13231,
+      "sha256": "2654b442c17e81bac5fcbcd97542764cdd5a9c8b7b71fd7d96c49c8f344c9d8e"
+    },
+    {
+      "name": "05_library-json-builder_master-prompt_v2.0.md",
+      "bytes": 10786,
+      "sha256": "53c5360cdaa56b3a97af7a9766167cc3c1a59c3ac29a77201ca95eb14a14d822"
+    },
+    {
+      "name": "06_github-pages-index-generator_master-prompt_v2.0.md",
+      "bytes": 11258,
+      "sha256": "4e2f5c7251e9c71201232ff47fa572d8cd5ff3ae14b009d2cac76b521fec3a13"
+    },
+    {
+      "name": "07_pwa-generator_master-prompt_v2.0.md",
+      "bytes": 16290,
+      "sha256": "80cc2ee294a01a31ffc3305852d72a2674c1c85cf1ffcab391f9a1ec1c41ed42"
+    },
+    {
+      "name": "08_github-release-auditor_master-prompt_v2.0.md",
+      "bytes": 17560,
+      "sha256": "0ed855c602a23ccc825a844c2c19d33a9123838392057f50d9bd78e64cc7bcdd"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "bytes": 1374,
+      "sha256": "cb4e93a6f31fcc707cf5f9274662c77ac038d4ac198a503c9360863cd807b0d6"
+    },
+    {
+      "name": "README.md",
+      "bytes": 5314,
+      "sha256": "05520c4dbbcb3411893e0f73c363df5740387eb22a17748132690bf75edfed21"
+    }
+  ]
+}
