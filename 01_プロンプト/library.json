@@ -6,7 +6,7 @@
     "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
     "accent": "#59636f"
   },
-  "generated_at": "2026-08-23T08:19:36+00:00",
+  "generated_at": "2026-08-24T21:39:46+09:00",
   "items": [
     {
       "title": "My Library対応HTML生成プロンプト 使い方ガイド",
@@ -25,6 +25,40 @@
       "order": 2,
       "updated": "2026-08-23",
       "file": "01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
+    },
+    {
+      "title": "5段階・爆速学習チェーン｜15分・厳格試験官モード",
+      "description": "15分相当で全体像・誤解・難所・一括演習・厳格採点を回し、次回へ引き継げる弱点ノートを作る学習支援プロンプト。",
+      "group": "学習支援",
+      "tags": [
+        "学習プロンプト",
+        "資格試験",
+        "厳格採点",
+        "弱点分析",
+        "Prompt Chaining",
+        "15分学習"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-24",
+      "file": "03 5段階爆速チェーン/five-stage-rapid-learning-chain_guide.html"
+    },
+    {
+      "title": "ChatGPT用 視覚表現自動選択・4案個別生成マスタープロンプト",
+      "description": "文章・ニュース・学習・旅行・技術などを分析し、構造・役割・視線の流れが異なる4案を設計・生成するための再利用プロンプト。",
+      "group": "画像生成",
+      "tags": [
+        "画像生成",
+        "ChatGPT",
+        "プロンプト",
+        "情報設計",
+        "図解",
+        "スマホ最適化"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-24",
+      "file": "02_まとめ画像生成/visual-director-4-variants_guide.html"
     }
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "item_id": "visual-director-4-variants",
+  "preview": {
+    "file": "visual-director-4-variants_preview.webp",
+    "format": "webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 50010,
+    "alt": "視覚表現自動選択・4案個別生成マスタープロンプトを、4つの異なる役割カードで表したプレビュー画像"
+  },
+  "thumbnail": {
+    "file": "visual-director-4-variants_thumb.webp",
+    "format": "webp",
+    "width": 640,
+    "height": 800,
+    "bytes": 21564
+  },
+  "source_sha256": "bc902b5e4e98b5e047074a06766d27f9ab980493ba06d387b0f8397ce1714f22",
+  "preview_generated_from_source_sha256": "bc902b5e4e98b5e047074a06766d27f9ab980493ba06d387b0f8397ce1714f22",
+  "generator_prompt_id": "visual-preview-generator",
+  "generator_prompt_version": "2.2",
+  "generated_at": "2026-08-24T21:20:33+09:00"
+}
