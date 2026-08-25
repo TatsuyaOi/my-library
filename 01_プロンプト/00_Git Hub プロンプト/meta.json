@@ -1,0 +1,101 @@
+{
+  "schema_version": "2.0",
+  "id": "github-library-prompt-suite",
+  "slug": "github-library-prompt-suite",
+  "aliases": [],
+  "title": "GitHub Library Prompt Suite 9つのプロンプト一覧",
+  "type": "guide",
+  "category": "prompts",
+  "subcategory": "github-library",
+  "summary": "My Libraryの基盤構築から原本・HTML・画像・JSON・索引・PWA・公開監査まで、9本のマスタープロンプトの役割と推奨順序を一覧で確認できるガイド。",
+  "tags": [
+    "GitHub Pages",
+    "My Library",
+    "プロンプト",
+    "HTML",
+    "JSON",
+    "PWA",
+    "公開監査"
+  ],
+  "status": "active",
+  "visibility": "public",
+  "publish": true,
+  "version": "2.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-08-25",
+    "updated": "2026-08-25"
+  },
+  "files": {
+    "source": "README.md",
+    "guide": "github-library-prompt-suite_guide.html",
+    "preview": "github-library-prompt-suite_preview.png",
+    "thumbnail": null,
+    "additional": [
+      "00_github-library-foundation-builder_master-prompt_v1.0.md",
+      "01_prompt-architect_master-prompt_v1.2.md",
+      "02_html-guide-generator_master-prompt_v2.0.md",
+      "03_visual-preview-generator_master-prompt_v2.2.md",
+      "04_meta-json-generator_master-prompt_v2.0.md",
+      "05_library-json-builder_master-prompt_v2.0.md",
+      "06_github-pages-index-generator_master-prompt_v2.0.md",
+      "07_pwa-generator_master-prompt_v2.0.md",
+      "08_github-release-auditor_master-prompt_v2.0.md",
+      "CHANGELOG.md",
+      "SUITE_MANIFEST.json",
+      "VALIDATION_REPORT.md"
+    ]
+  },
+  "media": {
+    "preview": {
+      "alt": "GitHub Library Prompt Suiteの9本を、基盤構築から公開監査まで番号順に示した一覧図",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1309414,
+      "format": "png"
+    },
+    "thumbnail": {
+      "alt": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "format": null
+    }
+  },
+  "search": {
+    "keywords": [
+      "GitHub Library Prompt Suite",
+      "GitHub Pages",
+      "プロンプト設計",
+      "HTML説明書",
+      "プレビュー画像",
+      "meta.json",
+      "library.json",
+      "Pages索引",
+      "PWA",
+      "公開監査"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "integrity": {
+    "source_sha256": "565044fb10624f841b8b13dc37df30deeccf71b91ac03e842277c308a85e2832",
+    "guide_sha256": "913fdf11ad9115bad2bd8b5dd2966a8c2c4b1fbd8610ffb152f1236cbbcd1a5f",
+    "preview_sha256": "8bfdc7b40122d7b202b24b2002ac019550f89e3b437428c816b966f6bb787a5d",
+    "thumbnail_sha256": null,
+    "guide_generated_from_source_sha256": "565044fb10624f841b8b13dc37df30deeccf71b91ac03e842277c308a85e2832",
+    "preview_generated_from_source_sha256": "565044fb10624f841b8b13dc37df30deeccf71b91ac03e842277c308a85e2832",
+    "thumbnail_generated_from_preview_sha256": null
+  },
+  "provenance": {
+    "source_origin": "existing README and master prompts",
+    "guide_generator_prompt_id": null,
+    "guide_generator_prompt_version": null,
+    "guide_generated_at": "2026-08-25T22:20:34+09:00",
+    "preview_generator_prompt_id": "imagegen",
+    "preview_generator_prompt_version": null,
+    "preview_generated_at": "2026-08-25T22:20:34+09:00"
+  }
+}
