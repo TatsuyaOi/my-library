@@ -1,0 +1,88 @@
+{
+  "schema_version": "2.0",
+  "id": "five-stage-rapid-learning-chain",
+  "slug": "five-stage-rapid-learning-chain",
+  "aliases": [],
+  "title": "5段階・爆速学習チェーン｜15分・厳格試験官モード",
+  "type": "prompt",
+  "category": "prompts",
+  "subcategory": "learning",
+  "summary": "15分相当で「全体像→誤解→難所→一括演習→厳格採点」を回し、5〜10問の結果から次回へ引き継げる弱点ノートを作る、資格・仕事学習向けの再利用プロンプト。",
+  "tags": [
+    "学習プロンプト",
+    "資格試験",
+    "厳格採点",
+    "弱点分析",
+    "Prompt Chaining",
+    "15分学習"
+  ],
+  "status": "active",
+  "visibility": "public",
+  "publish": true,
+  "version": "1.1",
+  "language": "ja",
+  "dates": {
+    "created": "2026-08-24",
+    "updated": "2026-08-24"
+  },
+  "files": {
+    "source": "five-stage-rapid-learning-chain_prompt.md",
+    "guide": "five-stage-rapid-learning-chain_guide.html",
+    "preview": "five-stage-rapid-learning-chain_preview.webp",
+    "thumbnail": "five-stage-rapid-learning-chain_thumb.webp",
+    "additional": []
+  },
+  "media": {
+    "preview": {
+      "alt": "15分で全体像、誤解、難所、一括演習、弱点ノートを回す5段階学習チェーンの概要図",
+      "width": 1200,
+      "height": 1500,
+      "bytes": 84290,
+      "format": "webp"
+    },
+    "thumbnail": {
+      "alt": "15分で全体像、誤解、難所、一括演習、弱点ノートを回す5段階学習チェーンの概要図",
+      "width": 640,
+      "height": 800,
+      "bytes": 36428,
+      "format": "webp"
+    }
+  },
+  "search": {
+    "keywords": [
+      "5段階",
+      "爆速学習チェーン",
+      "15分",
+      "厳格試験官",
+      "一括出題",
+      "100点採点",
+      "今日の弱点ノート",
+      "簿記3級",
+      "危険物甲種",
+      "統計検定2級",
+      "Prompt Chain"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "integrity": {
+    "source_sha256": "a0b734db8a7696c0d70e3d9a47091080b6811a6c07ecd727cd19404a136848c4",
+    "guide_sha256": "5db3ebd041370e1c331244588ff1264ffe64603f918d69043982d88d509fc0ac",
+    "preview_sha256": "92aaf06dff793a45d965a5c0ac6e0f46dcd79ce48dbbdcc9d1787ad36b4ac631",
+    "thumbnail_sha256": "bb06081dc1b0b00e1f1c984933b7ec63f55828d3e17069f61c43b8b466ebf473",
+    "guide_generated_from_source_sha256": "a0b734db8a7696c0d70e3d9a47091080b6811a6c07ecd727cd19404a136848c4",
+    "preview_generated_from_source_sha256": "a0b734db8a7696c0d70e3d9a47091080b6811a6c07ecd727cd19404a136848c4",
+    "thumbnail_generated_from_preview_sha256": "92aaf06dff793a45d965a5c0ac6e0f46dcd79ce48dbbdcc9d1787ad36b4ac631"
+  },
+  "provenance": {
+    "source_origin": "user-provided-markdown",
+    "guide_generator_prompt_id": "html-guide-generator",
+    "guide_generator_prompt_version": "2.0",
+    "guide_generated_at": "2026-08-24T21:04:25+09:00",
+    "preview_generator_prompt_id": "visual-preview-generator",
+    "preview_generator_prompt_version": "2.2",
+    "preview_generated_at": "2026-08-24T21:04:25+09:00"
+  }
+}
