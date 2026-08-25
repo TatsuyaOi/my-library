@@ -64,6 +64,8 @@ h1{margin:0;font-size:clamp(2.2rem,10vw,3.8rem);line-height:1.05;letter-spacing:
   border:1px solid var(--line);border-radius:var(--radius);
   box-shadow:var(--shadow);text-decoration:none;-webkit-tap-highlight-color:transparent
 }
+.card.has-thumb{display:grid;grid-template-columns:92px minmax(0,1fr);gap:13px;align-items:start}
+.card-thumb{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line);border-radius:14px;background:var(--accent-soft)}
 .card:active{transform:scale(.987)}
 .card-top{display:flex;align-items:flex-start;gap:10px}
 .card-main{min-width:0;flex:1}
@@ -87,6 +89,7 @@ h1{margin:0;font-size:clamp(2.2rem,10vw,3.8rem);line-height:1.05;letter-spacing:
 }
 footer{padding:28px 4px 6px;text-align:center;color:#999;font-size:.75rem}
 @media(min-width:680px){.wrap{padding-left:26px;padding-right:26px}.list{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){.card.has-thumb{grid-template-columns:78px minmax(0,1fr);gap:11px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
@@ -199,7 +202,8 @@ function renderItems() {
   }
 
   els.list.innerHTML = items.map(item => `
-    <a class="card" href="${encodeURI(item.file)}">
+    <a class="card ${item.thumbnail ? 'has-thumb' : ''}" href="${encodeURI(item.file)}">
+      ${item.thumbnail ? `<img class="card-thumb" src="${encodeURI(item.thumbnail)}" alt="${escapeHtml(item.thumbnail_alt || item.title)}" width="640" height="800" loading="lazy" decoding="async">` : ''}
       <div class="card-top">
         <div class="card-main">
           <div class="badges">
