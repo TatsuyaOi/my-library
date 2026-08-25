@@ -95,6 +95,51 @@ def read_html_info(path: Path):
         "order": order,
     }
 
+def read_item_media(path: Path, category_dir: Path, fallback_alt: str):
+    meta_path = path.parent / "meta.json"
+    if not meta_path.is_file():
+        return {}
+
+    meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    files = meta.get("files") if isinstance(meta.get("files"), dict) else {}
+
+    # A folder can contain multiple HTML files. Only use media belonging to
+    # the guide currently being indexed.
+    if files.get("guide") != path.name:
+        return {}
+
+    def existing_media_file(name):
+        if not isinstance(name, str) or not name.strip():
+            return None
+
+        candidate = (path.parent / name).resolve()
+        try:
+            candidate.relative_to(ROOT.resolve())
+            relative = candidate.relative_to(category_dir.resolve())
+        except ValueError:
+            return None
+
+        if not candidate.is_file():
+            return None
+        return relative.as_posix()
+
+    preview = existing_media_file(files.get("preview"))
+    thumbnail = existing_media_file(files.get("thumbnail")) or preview
+    if not thumbnail and not preview:
+        return {}
+
+    media = meta.get("media") if isinstance(meta.get("media"), dict) else {}
+    thumbnail_meta = media.get("thumbnail") if isinstance(media.get("thumbnail"), dict) else {}
+    preview_meta = media.get("preview") if isinstance(media.get("preview"), dict) else {}
+    alt = thumbnail_meta.get("alt") or preview_meta.get("alt") or fallback_alt
+
+    result = {"thumbnail_alt": alt}
+    if thumbnail:
+        result["thumbnail"] = thumbnail
+    if preview:
+        result["preview"] = preview
+    return result
+
 def git_updated(path: Path):
     rel = path.relative_to(ROOT).as_posix()
     try:
@@ -110,9 +155,40 @@ def git_updated(path: Path):
         pass
     return datetime.fromtimestamp(path.stat().st_mtime).strftime("%Y-%m-%d")
 
+def git_tracked_files():
+    try:
+        output = subprocess.check_output(
+            ["git", "ls-files", "-z"],
+            cwd=ROOT,
+            text=True,
+            encoding="utf-8",
+            stderr=subprocess.DEVNULL,
+        )
+        return {item for item in output.split("\0") if item}
+    except Exception:
+        return None
+
+def write_json(path: Path, payload):
+    existing_text = path.read_text(encoding="utf-8") if path.is_file() else None
+    if existing_text is not None:
+        try:
+            existing = json.loads(existing_text)
+            existing_content = {key: value for key, value in existing.items() if key != "generated_at"}
+            new_content = {key: value for key, value in payload.items() if key != "generated_at"}
+            if existing_content == new_content and existing.get("generated_at"):
+                payload = dict(payload)
+                payload["generated_at"] = existing["generated_at"]
+        except (json.JSONDecodeError, AttributeError):
+            pass
+
+    new_text = json.dumps(payload, ensure_ascii=False, indent=2)
+    if existing_text != new_text:
+        path.write_text(new_text, encoding="utf-8")
+
 def build():
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
+    tracked_files = git_tracked_files()
 
     all_items = []
     categories_out = []
@@ -127,6 +203,8 @@ def build():
         items = []
         for path in sorted(category_dir.rglob("*.html")):
             if path.name.lower() == "index.html":
+                continue
+            if tracked_files is not None and path.relative_to(ROOT).as_posix() not in tracked_files:
                 continue
 
             info = read_html_info(path)
@@ -144,6 +222,7 @@ def build():
                 "updated": git_updated(path),
                 "file": rel,
             }
+            item.update(read_item_media(path, category_dir, info["title"]))
             items.append(item)
 
         # Pinned first, explicit order, recent date, title.
@@ -165,10 +244,7 @@ def build():
             "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
             "items": items,
         }
-        (category_dir / "library.json").write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2),
-            encoding="utf-8"
-        )
+        write_json(category_dir / "library.json", payload)
 
         categories_out.append({
             "folder": folder,
@@ -185,6 +261,10 @@ def build():
             global_item["category_title"] = category.get("title", folder)
             global_item["category_icon"] = category.get("icon", "📚")
             global_item["url"] = f"./{folder}/{item['file']}"
+            if item.get("thumbnail"):
+                global_item["thumbnail_url"] = f"./{folder}/{item['thumbnail']}"
+            if item.get("preview"):
+                global_item["preview_url"] = f"./{folder}/{item['preview']}"
             all_items.append(global_item)
 
     # Global newest-first index.
@@ -207,10 +287,7 @@ def build():
         "categories": categories_out,
         "items": all_items,
     }
-    (ROOT / "library-all.json").write_text(
-        json.dumps(global_payload, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
+    write_json(ROOT / "library-all.json", global_payload)
 
     print(f"Generated {len(categories_out)} categories / {len(all_items)} items.")
 

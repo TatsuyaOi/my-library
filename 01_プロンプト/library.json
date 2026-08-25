@@ -6,7 +6,7 @@
     "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
     "accent": "#59636f"
   },
-  "generated_at": "2026-08-25T13:01:37+00:00",
+  "generated_at": "2026-08-25T22:28:15+09:00",
   "items": [
     {
       "title": "My Library対応HTML生成プロンプト 使い方ガイド",
@@ -40,8 +40,11 @@
       ],
       "pinned": false,
       "order": 999999,
-      "updated": "2026-08-24",
-      "file": "03 5段階爆速チェーン/five-stage-rapid-learning-chain_guide.html"
+      "updated": "2026-08-25",
+      "file": "03 5段階爆速チェーン/five-stage-rapid-learning-chain_guide.html",
+      "thumbnail_alt": "15分で全体像、誤解、難所、一括演習、弱点ノートを回す5段階学習チェーンの概要図",
+      "thumbnail": "03 5段階爆速チェーン/five-stage-rapid-learning-chain_thumb.webp",
+      "preview": "03 5段階爆速チェーン/five-stage-rapid-learning-chain_preview.webp"
     },
     {
       "title": "ChatGPT用 視覚表現自動選択・4案個別生成マスタープロンプト",
@@ -57,8 +60,11 @@
       ],
       "pinned": false,
       "order": 999999,
-      "updated": "2026-08-24",
-      "file": "02_まとめ画像生成/visual-director-4-variants_guide.html"
+      "updated": "2026-08-25",
+      "file": "02_まとめ画像生成/visual-director-4-variants_guide.html",
+      "thumbnail_alt": "視覚表現自動選択・4案個別生成マスタープロンプトを、4つの異なる役割カードで表したプレビュー画像",
+      "thumbnail": "02_まとめ画像生成/visual-director-4-variants_thumb.webp",
+      "preview": "02_まとめ画像生成/visual-director-4-variants_preview.webp"
     }
   ]
 }
