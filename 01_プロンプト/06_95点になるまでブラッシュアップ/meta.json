@@ -1,0 +1,95 @@
+{
+  "schema_version": "2.0",
+  "id": "four-role-quality-gate",
+  "slug": "four-role-quality-gate",
+  "aliases": [
+    "adaptive-red-team-quality-gate",
+    "95-point-output-auditor"
+  ],
+  "title": "4役分離・連続2回95点 Quality Gate マスタープロンプト",
+  "type": "prompt",
+  "category": "prompts",
+  "subcategory": "quality-assurance",
+  "summary": "作成者・批判者・独立採点者・最終検査者を分離し、得点上限制と採点操作禁止を適用しながら、同一成果物が連続2回95点以上になるまで改善する汎用監査プロンプト。",
+  "tags": [
+    "品質監査",
+    "自己改善",
+    "Red Team",
+    "採点",
+    "プロンプト",
+    "Quality Gate",
+    "回帰チェック"
+  ],
+  "status": "active",
+  "visibility": "public",
+  "publish": true,
+  "version": "1.1",
+  "language": "ja",
+  "dates": {
+    "created": "2026-08-27",
+    "updated": "2026-08-27"
+  },
+  "files": {
+    "source": "four-role-quality-gate_prompt.md",
+    "guide": "four-role-quality-gate_guide.html",
+    "preview": "four-role-quality-gate_preview.webp",
+    "thumbnail": "four-role-quality-gate_thumb.webp",
+    "additional": [
+      "four-role-quality-gate_design-notes.md",
+      "four-role-quality-gate_artifact-manifest.json",
+      "four-role-quality-gate_short-prompt.md"
+    ]
+  },
+  "media": {
+    "preview": {
+      "alt": "作成者、批判者、独立採点者、最終検査者の4役と、同一成果物を連続2回95点以上で合格させるQuality Gateの流れを示す図",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 103962,
+      "format": "webp"
+    },
+    "thumbnail": {
+      "alt": "4役分離と連続2回95点Quality Gateの概要図",
+      "width": 640,
+      "height": 960,
+      "bytes": 46932,
+      "format": "webp"
+    }
+  },
+  "search": {
+    "keywords": [
+      "4役分離",
+      "95点",
+      "連続2回",
+      "自己採点",
+      "独立採点者",
+      "ワースト5",
+      "得点上限制",
+      "採点操作禁止",
+      "Red Team",
+      "回帰チェック"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "integrity": {
+    "source_sha256": "b15ca23baa1bedc8ca74d385b53844b784548431435c4dd4ca44eae33141d960",
+    "guide_sha256": "65febb62cec0258bbf81d58a3103accab6597700e5919b6495bcb389f5d0da7a",
+    "preview_sha256": "f4c27d1b791796dfb0df27e6b89c36ad216919502e48444e8596155560d2d3c8",
+    "thumbnail_sha256": "30c37606a43a065196579a6112835a2adae8d3a161b224d44457f3f8fbf23c03",
+    "guide_generated_from_source_sha256": "b15ca23baa1bedc8ca74d385b53844b784548431435c4dd4ca44eae33141d960",
+    "preview_generated_from_source_sha256": "b15ca23baa1bedc8ca74d385b53844b784548431435c4dd4ca44eae33141d960",
+    "thumbnail_generated_from_preview_sha256": "f4c27d1b791796dfb0df27e6b89c36ad216919502e48444e8596155560d2d3c8"
+  },
+  "provenance": {
+    "source_origin": "user-requested regeneration from Adaptive design plus strict Quality Gate controls",
+    "guide_generator_prompt_id": "html-guide-generator",
+    "guide_generator_prompt_version": "2.0",
+    "guide_generated_at": "2026-08-27T21:52:22+09:00",
+    "preview_generator_prompt_id": "visual-preview-generator",
+    "preview_generator_prompt_version": "2.2",
+    "preview_generated_at": "2026-08-27T21:52:22+09:00"
+  }
+}

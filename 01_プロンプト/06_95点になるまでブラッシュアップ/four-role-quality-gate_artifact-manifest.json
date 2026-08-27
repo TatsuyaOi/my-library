@@ -1,0 +1,25 @@
+{
+  "item_id": "four-role-quality-gate",
+  "preview": {
+    "file": "four-role-quality-gate_preview.webp",
+    "format": "webp",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 103962,
+    "alt": "作成者、批判者、独立採点者、最終検査者の4役と、同一成果物を連続2回95点以上で合格させるQuality Gateの流れを示す図"
+  },
+  "thumbnail": {
+    "file": "four-role-quality-gate_thumb.webp",
+    "format": "webp",
+    "width": 640,
+    "height": 960,
+    "bytes": 46932,
+    "alt": "4役分離と連続2回95点Quality Gateの概要図"
+  },
+  "source_sha256": "b15ca23baa1bedc8ca74d385b53844b784548431435c4dd4ca44eae33141d960",
+  "preview_generated_from_source_sha256": "b15ca23baa1bedc8ca74d385b53844b784548431435c4dd4ca44eae33141d960",
+  "thumbnail_generated_from_preview_sha256": "f4c27d1b791796dfb0df27e6b89c36ad216919502e48444e8596155560d2d3c8",
+  "generator_prompt_id": "visual-preview-generator",
+  "generator_prompt_version": "2.2",
+  "generated_at": "2026-08-27T21:52:22+09:00"
+}

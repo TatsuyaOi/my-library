@@ -128,6 +128,8 @@
     .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
     .action-button { color: #102044; background: #fff; border-color: transparent; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
     .action-button.secondary { color: #f3f7ff; background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.24); }
+    .preview-card { display: block; width: min(100%, 640px); margin: 18px auto 22px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); box-shadow: var(--shadow); }
+    .preview-card img { display: block; width: 100%; height: auto; }
     .metric-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin: 18px 0; }
     .metric { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px; box-shadow: 0 8px 24px rgba(21,34,58,.05); }
     .metric strong { display: block; font-size: clamp(1.55rem, 6vw, 2.4rem); line-height: 1.1; color: var(--accent); }
@@ -228,6 +230,8 @@
         <button class="action-button secondary" id="copySource" type="button">原本MDをコピー</button>
       </div>
     </section>
+
+    <a class="preview-card" href="five-stage-rapid-learning-chain_preview.webp" aria-label="プレビュー画像を原寸で開く"><img src="five-stage-rapid-learning-chain_preview.webp" alt="15分で全体像、誤解、難所、一括演習、弱点ノートを回す5段階学習チェーンの概要図" width="1200" height="1500" decoding="async"></a>
 
     <section class="metric-grid" aria-label="主要設定">
       <div class="metric"><strong>15分</strong><span>1セッション相当</span></div>

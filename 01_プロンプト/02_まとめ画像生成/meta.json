@@ -23,7 +23,7 @@
   "language": "ja",
   "dates": {
     "created": "2026-08-24",
-    "updated": "2026-08-24"
+    "updated": "2026-08-25"
   },
   "files": {
     "source": "visual-director-4-variants_prompt.md",
@@ -70,7 +70,7 @@
   },
   "integrity": {
     "source_sha256": "bc902b5e4e98b5e047074a06766d27f9ab980493ba06d387b0f8397ce1714f22",
-    "guide_sha256": "ff6292c622b97df2bded28ef5d404e4c450453e81deba19a6c913bb38dca1ac6",
+    "guide_sha256": "bc086d387e1dd66f05706aa356d52a13bf7977413e96f4d53b13cebd2ef63d49",
     "preview_sha256": "ff0e5bdae6ea6d2e0d9d3dbfc1340c4dfb60ac8df2f6c1abbef293b61c95a9b9",
     "thumbnail_sha256": "edbbfd774b5ae6c574587f2a34fb9a89b7daff2f4ac511afd12909f04be656d0",
     "guide_generated_from_source_sha256": "bc902b5e4e98b5e047074a06766d27f9ab980493ba06d387b0f8397ce1714f22",

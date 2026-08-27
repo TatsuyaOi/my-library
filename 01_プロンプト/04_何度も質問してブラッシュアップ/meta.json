@@ -1,0 +1,91 @@
+{
+  "schema_version": "2.0",
+  "id": "clarification-assumption-verification",
+  "slug": "clarification-assumption-verification",
+  "aliases": [],
+  "title": "不足情報確認・推測防止・自己検証マスタープロンプト",
+  "type": "prompt",
+  "category": "prompts",
+  "subcategory": "quality-control",
+  "summary": "重要な不足情報だけを確認し、暗黙の仮定、事実・推論の区別、論理整合性、反例、抜け漏れを回答前に自己検証・修復させるための3段階マスタープロンプト。",
+  "tags": [
+    "不足情報確認",
+    "推測防止",
+    "自己検証",
+    "確認質問",
+    "品質管理",
+    "プロンプト"
+  ],
+  "status": "draft",
+  "visibility": "private",
+  "publish": false,
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": "2026-08-26"
+  },
+  "files": {
+    "source": "clarification-assumption-verification_prompt.md",
+    "guide": "clarification-assumption-verification_guide.html",
+    "preview": "clarification-assumption-verification_preview.webp",
+    "thumbnail": "clarification-assumption-verification_thumb.webp",
+    "additional": [
+      "clarification-assumption-verification_design-notes.md",
+      "preview-manifest.json"
+    ]
+  },
+  "media": {
+    "preview": {
+      "alt": "不足情報確認、仮定管理、事実検証、最終修復の4段階と、短縮版・標準版・最大品質版の使い分けを示す日本語インフォグラフィック",
+      "width": 1200,
+      "height": 1500,
+      "bytes": 132130,
+      "format": "webp"
+    },
+    "thumbnail": {
+      "alt": "不足情報確認・推測防止・自己検証マスタープロンプトの概要サムネイル",
+      "width": 640,
+      "height": 800,
+      "bytes": 50142,
+      "format": "webp"
+    }
+  },
+  "search": {
+    "keywords": [
+      "不足情報",
+      "確認質問",
+      "推測防止",
+      "仮定管理",
+      "事実検証",
+      "自己検証",
+      "Red Team",
+      "ハルシネーション防止",
+      "clarification",
+      "assumption control",
+      "fact verification"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "integrity": {
+    "source_sha256": "947edf8ca53811487e0cfca75c0f7a970689c488c7d6703c9527e4c2861a5d2d",
+    "guide_sha256": "4b1825b40bb2365b9cbac3ff65a0fe52a60487ce5aca4f0de46d7b5712bc4247",
+    "preview_sha256": "94d93eb3bbf5b71179f83e1c4a8f0cff86fb051e5db07a0702f1006888c40c7a",
+    "thumbnail_sha256": "bca791646b730569b0ea6929ae8c86f76b3034a370f29431c05491d3289774ef",
+    "guide_generated_from_source_sha256": "947edf8ca53811487e0cfca75c0f7a970689c488c7d6703c9527e4c2861a5d2d",
+    "preview_generated_from_source_sha256": "947edf8ca53811487e0cfca75c0f7a970689c488c7d6703c9527e4c2861a5d2d",
+    "thumbnail_generated_from_preview_sha256": "94d93eb3bbf5b71179f83e1c4a8f0cff86fb051e5db07a0702f1006888c40c7a"
+  },
+  "provenance": {
+    "source_origin": "user-provided-markdown",
+    "guide_generator_prompt_id": "html-guide-generator",
+    "guide_generator_prompt_version": "2.0",
+    "guide_generated_at": "2026-08-26T21:47:42+09:00",
+    "preview_generator_prompt_id": "visual-preview-generator",
+    "preview_generator_prompt_version": "2.2",
+    "preview_generated_at": "2026-08-26T21:47:42+09:00"
+  }
+}

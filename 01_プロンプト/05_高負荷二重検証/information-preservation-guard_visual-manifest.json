@@ -1,0 +1,33 @@
+{
+  "item_id": "information-preservation-guard",
+  "preview": {
+    "file": "information-preservation-guard_preview.webp",
+    "format": "webp",
+    "width": 1600,
+    "height": 2000,
+    "bytes": 172838,
+    "alt": "情報完全保持・非圧縮ガードの二重検証ループを、中央の盾とLoop A・Loop B、保持・組立・再読込・修復の4工程で示した縦長インフォグラフィック"
+  },
+  "thumbnail": {
+    "file": "information-preservation-guard_thumb.webp",
+    "format": "webp",
+    "width": 640,
+    "height": 800,
+    "bytes": 47676,
+    "alt": "情報完全保持・非圧縮ガードの盾と二重検証ループを示すサムネイル"
+  },
+  "source_sha256": "f7254df2726aef9f82415ab9bf36bba94a3d054635be659aa2ef09c6c5735a5b",
+  "preview_generated_from_source_sha256": "f7254df2726aef9f82415ab9bf36bba94a3d054635be659aa2ef09c6c5735a5b",
+  "thumbnail_generated_from_preview_sha256": "0afdd8e103275be50f1743492eb48fbc2b212b85c76f68a4f3a9a2cd6cf53a6e",
+  "preview_sha256": "0afdd8e103275be50f1743492eb48fbc2b212b85c76f68a4f3a9a2cd6cf53a6e",
+  "thumbnail_sha256": "039004d3ebe6a8da46b7f134facb826eb6f6af875fddcecc5b4c78de53f3890b",
+  "generator_prompt_id": "visual-preview-generator",
+  "generator_prompt_version": "2.2",
+  "generated_at": "2026-08-26T12:28:02Z",
+  "design": {
+    "family": "D + F",
+    "format": "概念図・フロー型インフォグラフィック",
+    "aspect_ratio": "4:5",
+    "selection_reason": "抽象的な情報保持ルールと二重検証の循環構造を、盾・循環矢印・4工程カードで最短理解できるため。"
+  }
+}

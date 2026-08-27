@@ -1,0 +1,25 @@
+{
+  "item_id": "clarification-assumption-verification",
+  "preview": {
+    "file": "clarification-assumption-verification_preview.webp",
+    "format": "webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 132130,
+    "alt": "不足情報確認、仮定管理、事実検証、最終修復の4段階と、短縮版・標準版・最大品質版の使い分けを示す日本語インフォグラフィック"
+  },
+  "thumbnail": {
+    "file": "clarification-assumption-verification_thumb.webp",
+    "format": "webp",
+    "width": 640,
+    "height": 800,
+    "bytes": 50142,
+    "alt": "不足情報確認・推測防止・自己検証マスタープロンプトの概要サムネイル"
+  },
+  "source_sha256": "947edf8ca53811487e0cfca75c0f7a970689c488c7d6703c9527e4c2861a5d2d",
+  "preview_generated_from_source_sha256": "947edf8ca53811487e0cfca75c0f7a970689c488c7d6703c9527e4c2861a5d2d",
+  "thumbnail_generated_from_preview_sha256": "94d93eb3bbf5b71179f83e1c4a8f0cff86fb051e5db07a0702f1006888c40c7a",
+  "generator_prompt_id": "visual-preview-generator",
+  "generator_prompt_version": "2.2",
+  "generated_at": "2026-08-26T21:47:42+09:00"
+}
