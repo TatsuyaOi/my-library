@@ -1,0 +1,91 @@
+{
+  "schema_version": "2.0",
+  "id": "markdown-html-download-generator",
+  "slug": "markdown-html-download-generator",
+  "aliases": [],
+  "title": "Markdown・HTML ダウンロード生成用 汎用プロンプト",
+  "type": "prompt",
+  "category": "prompts",
+  "subcategory": "html-generation",
+  "summary": "曖昧な依頼や添付資料を整理し、編集・再利用向けMarkdownと、Androidスマートフォンで読みやすい自己完結型HTMLを実ファイルとして同時生成するための汎用プロンプト。11Bデザイン、視覚表現の自動選択、納品前検証まで規定する。",
+  "tags": [
+    "Markdown",
+    "HTML",
+    "ファイル生成",
+    "スマホ最適化",
+    "GitHub Pages",
+    "視覚化",
+    "Meiryo UI"
+  ],
+  "status": "draft",
+  "visibility": "private",
+  "publish": false,
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-08-26T20:33:48+09:00",
+    "updated": "2026-08-26T20:33:48+09:00"
+  },
+  "files": {
+    "source": "markdown-html-download-generator_prompt.md",
+    "guide": "markdown-html-download-generator_guide.html",
+    "preview": "markdown-html-download-generator_preview.webp",
+    "thumbnail": "markdown-html-download-generator_thumb.webp",
+    "additional": [
+      "markdown-html-download-generator_design-notes.md",
+      "visual-preview-manifest.json"
+    ]
+  },
+  "media": {
+    "preview": {
+      "alt": "Markdown入力を整理し、編集用Markdownとスマートフォン向けHTMLを実ファイルとして生成・検証・ダウンロードする流れを示した図解",
+      "width": 1200,
+      "height": 1500,
+      "bytes": 115700,
+      "format": "webp"
+    },
+    "thumbnail": {
+      "alt": "Markdown入力を整理し、編集用Markdownとスマートフォン向けHTMLを実ファイルとして生成・検証・ダウンロードする流れを示した図解",
+      "width": 640,
+      "height": 800,
+      "bytes": 48248,
+      "format": "webp"
+    }
+  },
+  "search": {
+    "keywords": [
+      "Markdown HTML 同時生成",
+      "ダウンロード可能ファイル",
+      "11B 一覧強調ミックス",
+      "Meiryo UI",
+      "自己完結型HTML",
+      "レスポンシブ",
+      "情報可視化",
+      "GitHub Pages",
+      "Androidスマートフォン",
+      "HTML生成プロンプト"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "integrity": {
+    "source_sha256": "faf5cec80b34dcd24b59bea77bb27bdc06cae63a3d576bb8aacdcf09b418959b",
+    "guide_sha256": "4945217320040c2acccb719cac28f9ca4d716e981f848eb080150e0eb1e7e33f",
+    "preview_sha256": "27b9171dd280ceed8ffd291184e8ce73c4d87b320f1a0c2871d7482618697711",
+    "thumbnail_sha256": "288e2acf77d4f93bdea6ae0961436cd9a070f7ea39874a7821d5c4cde5d60206",
+    "guide_generated_from_source_sha256": "faf5cec80b34dcd24b59bea77bb27bdc06cae63a3d576bb8aacdcf09b418959b",
+    "preview_generated_from_source_sha256": "faf5cec80b34dcd24b59bea77bb27bdc06cae63a3d576bb8aacdcf09b418959b",
+    "thumbnail_generated_from_preview_sha256": "27b9171dd280ceed8ffd291184e8ce73c4d87b320f1a0c2871d7482618697711"
+  },
+  "provenance": {
+    "source_origin": "260823_HTML生成プロンプト_視覚表現自動配分版_11B_MeiryoUI統合.md",
+    "guide_generator_prompt_id": "html-guide-generator",
+    "guide_generator_prompt_version": "2.0",
+    "guide_generated_at": "2026-08-26T20:24:17+09:00",
+    "preview_generator_prompt_id": "visual-preview-generator",
+    "preview_generator_prompt_version": "2.2",
+    "preview_generated_at": "2026-08-26T20:29:00+09:00"
+  }
+}

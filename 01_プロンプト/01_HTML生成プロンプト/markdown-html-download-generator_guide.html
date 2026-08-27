@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="MarkdownとHTMLの実ファイルを同時生成する汎用プロンプトの、Androidスマートフォン向け利用ガイド。">
+  <meta name="library:item-id" content="markdown-html-download-generator">
+  <meta name="library:source-file" content="markdown-html-download-generator_prompt.md">
+  <meta name="library:source-sha256" content="faf5cec80b34dcd24b59bea77bb27bdc06cae63a3d576bb8aacdcf09b418959b">
+  <meta name="library:generator-id" content="html-guide-generator">
+  <meta name="library:generator-version" content="2.0">
+  <meta name="library:generated-at" content="2026-08-26T20:24:17+09:00">
+  <title>Markdown・HTMLダウンロード生成用 汎用プロンプト｜利用ガイド</title>
+  <style>
+:root {
+  color-scheme: light;
+  --bg: #fff;
+  --ink: #1c1f23;
+  --muted: #5d6470;
+  --line: #d6dce3;
+  --accent: #234f76;
+  --soft: #edf4fa;
+  --soft2: #f7f9fb;
+  --mark: #fff1b3;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Meiryo UI", Meiryo, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: 17.6px;
+  line-height: 1.7;
+  letter-spacing: .005em;
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+main {
+  width: min(100% - 38px, 840px);
+  margin: auto;
+  padding: 20px 0 62px;
+}
+
+.title-area {
+  padding: 17px 4px 18px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.18rem, 8.1vw, 3.2rem);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: var(--accent);
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+h2 {
+  margin: 2.08em 0 .58em;
+  padding: .42em .78em;
+  background: var(--soft);
+  border-left: 6px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 1.31rem;
+  line-height: 1.34;
+  font-weight: 900;
+}
+
+h3 {
+  margin: 1.45em 0 .42em;
+  font-size: 1.11rem;
+  line-height: 1.42;
+  font-weight: 900;
+}
+
+h4 { font-size: 1.02rem; }
+
+p {
+  margin: .68em 0;
+  padding-inline: 4px;
+}
+
+strong {
+  font-weight: 900;
+  background: linear-gradient(transparent 74%, var(--mark) 0);
+}
+
+ul, ol {
+  padding-left: 1.58em;
+  margin: .7em 0 1em;
+}
+
+li {
+  margin: .24em 0;
+  padding-right: 2px;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: .82em 1.02em;
+  background: var(--soft2);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+}
+
+blockquote strong { background: none; }
+blockquote p { margin: .25em 0; padding-inline: 0; }
+
+hr {
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 2em 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1em 0;
+  border: 1px solid var(--line);
+  min-width: 0;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 670px;
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: .64em .68em;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--soft);
+  font-weight: 900;
+}
+
+/* 11Bを維持した補助UI */
+.utility-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 15px 0 0;
+}
+
+.button,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: .65em .92em;
+  border: 1px solid #000;
+  border-radius: 2px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button.primary,
+button.primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.button:hover,
+button:hover { background: var(--soft); }
+.button.primary:hover,
+button.primary:hover { filter: brightness(.94); }
+
+.button:focus-visible,
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.status-line {
+  min-height: 1.7em;
+  margin: .45em 0 0;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.badge {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: .2em .58em;
+  border: 1px solid var(--line);
+  background: var(--soft2);
+  font-size: .78rem;
+  font-weight: 900;
+}
+
+.lead {
+  margin: 1em 0;
+  padding: 1em 1.05em;
+  border: 2px solid #000;
+  background: #fff;
+  font-size: 1.04rem;
+}
+
+.summary-grid,
+.spec-grid,
+.level-grid,
+.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 1em 0;
+}
+
+.summary-card,
+.spec-card,
+.level-card,
+.layout-card {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  background: var(--soft2);
+  padding: .83em .9em;
+}
+
+.summary-card h3,
+.spec-card h3,
+.level-card h3,
+.layout-card h3 {
+  margin: 0 0 .32em;
+  font-size: 1rem;
+}
+
+.summary-card p,
+.spec-card p,
+.level-card p,
+.layout-card p {
+  margin: .3em 0;
+  padding: 0;
+  font-size: .92rem;
+}
+
+.flow-wrap {
+  margin: 1em 0;
+  min-width: 0;
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: var(--soft2);
+  overflow-x: auto;
+}
+
+.flow-wrap svg {
+  width: 100%;
+  min-width: 700px;
+  height: auto;
+  display: block;
+}
+
+.toc {
+  border: 1px solid var(--line);
+  background: var(--soft2);
+  padding: .85em 1em;
+  margin: 1em 0;
+}
+
+.toc h2 {
+  margin: 0 0 .55em;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 1.08rem;
+}
+
+.toc ol {
+  columns: 2;
+  column-gap: 2.2em;
+  margin: 0;
+}
+
+.toc a { color: var(--accent); font-weight: 900; }
+
+.callout {
+  margin: 1em 0;
+  padding: .9em 1em;
+  border: 1px solid #000;
+  border-left-width: 7px;
+  background: var(--soft2);
+}
+
+.callout-title {
+  margin: 0 0 .25em;
+  font-weight: 900;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: .8em 0;
+}
+
+.chip {
+  display: inline-block;
+  padding: .28em .58em;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  font-size: .83rem;
+  font-weight: 900;
+}
+
+details {
+  margin: .85em 0;
+  min-width: 0;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+summary {
+  min-height: 46px;
+  padding: .72em .9em;
+  background: var(--soft2);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+details > .details-body { padding: .8em .95em 1em; min-width: 0; max-width: 100%; }
+
+pre {
+  margin: .8em 0;
+  min-width: 0;
+  max-width: 100%;
+  padding: 1em;
+  overflow: auto;
+  background: #101317;
+  color: #f4f7fa;
+  border: 1px solid #000;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: .78rem;
+  line-height: 1.55;
+  white-space: pre;
+}
+
+code { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; }
+:not(pre) > code { overflow-wrap: anywhere; word-break: break-word; }
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 1.65em;
+  margin: .42em 0;
+}
+
+.checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: .15em;
+  top: 0;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.avoid-list li::marker { content: "×  "; font-weight: 900; }
+
+.file-pair {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
+  gap: 9px;
+  margin: 1em 0;
+}
+
+.file-box {
+  border: 2px solid #000;
+  padding: .85em .9em;
+  background: #fff;
+}
+
+.file-box .label {
+  display: block;
+  color: var(--accent);
+  font-weight: 900;
+  font-size: .82rem;
+}
+
+.file-box .name {
+  display: block;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.file-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+footer {
+  margin-top: 3em;
+  overflow-wrap: anywhere;
+  padding-top: 1.1em;
+  border-top: 2px solid #000;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+footer p { padding-inline: 0; }
+
+@media (max-width: 700px) {
+  .summary-grid,
+  .spec-grid,
+  .level-grid,
+  .layout-grid { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  .file-pair { grid-template-columns: 1fr; }
+  .file-arrow { transform: rotate(90deg); min-height: 24px; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 17.5px; }
+  main { width: min(100% - 30px, 840px); }
+  h1 { font-size: 2.28rem; }
+  h2 { font-size: 1.26rem; }
+  p { padding-inline: 3px; }
+  ul, ol { padding-left: 1.5em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@media print {
+  body { font-size: 11pt; }
+  main { width: 100%; padding: 0; }
+  .utility-row, .toc { display: none; }
+  details { break-inside: avoid; }
+  details > .details-body { display: block !important; }
+  a { color: inherit; text-decoration: none; }
+  h2 { break-after: avoid; }
+  table { min-width: 0; }
+}
+
+.preview-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+}
+.preview-figure figcaption {
+  margin-top: .45em;
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+</style>
+</head>
+<body>
+<main>
+  <header class="title-area">
+    <h1>Markdown・HTML<br>ダウンロード生成用</h1>
+    <p class="subtitle">Version 1.0｜汎用プロンプト利用ガイド｜11B 一覧強調ミックス・Meiryo UI</p>
+    <div class="meta-strip" aria-label="資料情報">
+      <span class="badge">type: prompt</span>
+      <span class="badge">Version 1.0</span>
+      <span class="badge">item ID: markdown-html-download-generator</span>
+      <span class="badge">source SHA-256: faf5cec80b34…</span>
+    </div>
+    <div class="utility-row">
+      <a class="button primary" href="./markdown-html-download-generator_prompt.md">原本MDを開く</a>
+      <button id="copy-source" type="button">原本をコピー</button>
+      <button id="expand-all" type="button">詳細をすべて開く</button>
+    </div>
+    <p id="copy-status" class="status-line" role="status" aria-live="polite"></p>
+  </header>
+
+
+
+  <section class="lead" aria-label="5秒要約">
+    <strong>雑な依頼や添付資料を整理し、編集用Markdownと閲覧用HTMLを、実在するダウンロード可能ファイルとして同時納品させるプロンプトです。</strong>
+    HTMLはAndroidスマートフォンを最優先に、11Bデザイン、視覚表現の自動選択、自己完結性、納品前検証まで一括で指定します。
+  </section>
+
+  <div class="summary-grid" aria-label="主要特徴">
+    <article class="summary-card"><h3>実ファイル必須</h3><p>コードブロック表示だけでは完了不可。0バイトでない実体と取得リンクを要求します。</p></article>
+    <article class="summary-card"><h3>MD＋HTMLの2形式</h3><p>Markdownは編集・再利用、HTMLは人間が読む完成資料として役割を分けます。</p></article>
+    <article class="summary-card"><h3>スマホ最優先</h3><p>十分な左右余白、大きめの文字、明確な見出し、高い一覧性を基調にします。</p></article>
+    <article class="summary-card"><h3>表現を自動配分</h3><p>文章、表、図、フロー、グラフ、折りたたみ等から理解に効く形式だけを選びます。</p></article>
+  </div>
+
+  <div class="flow-wrap" aria-label="生成フローの概念図">
+    <svg viewBox="0 0 1080 190" role="img" aria-labelledby="flow-title flow-desc">
+      <title id="flow-title">入力からダウンロード可能ファイルまでの流れ</title>
+      <desc id="flow-desc">依頼内容を整理し、MarkdownとHTMLを作成、検証してダウンロードリンクを納品する流れ。</desc>
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#234f76"></path>
+        </marker>
+      </defs>
+      <g font-family="Meiryo UI, Meiryo, sans-serif" fill="#1c1f23">
+        <g><rect x="10" y="48" width="160" height="90" fill="#fff" stroke="#000" stroke-width="2"/><text x="90" y="83" text-anchor="middle" font-size="20" font-weight="700">依頼・資料</text><text x="90" y="112" text-anchor="middle" font-size="14">雑な入力でも可</text></g>
+        <path d="M180 93 H230" stroke="#234f76" stroke-width="4" marker-end="url(#arrow)"/>
+        <g><rect x="240" y="48" width="180" height="90" fill="#edf4fa" stroke="#000" stroke-width="2"/><text x="330" y="83" text-anchor="middle" font-size="20" font-weight="700">整理・設計</text><text x="330" y="112" text-anchor="middle" font-size="14">分類・構造化・配分</text></g>
+        <path d="M430 93 H480" stroke="#234f76" stroke-width="4" marker-end="url(#arrow)"/>
+        <g><rect x="490" y="22" width="170" height="65" fill="#fff" stroke="#000" stroke-width="2"/><text x="575" y="51" text-anchor="middle" font-size="18" font-weight="700">Markdown</text><text x="575" y="73" text-anchor="middle" font-size="13">編集・保存・再利用</text></g>
+        <g><rect x="490" y="103" width="170" height="65" fill="#fff" stroke="#000" stroke-width="2"/><text x="575" y="132" text-anchor="middle" font-size="18" font-weight="700">HTML</text><text x="575" y="154" text-anchor="middle" font-size="13">完成資料・スマホ閲覧</text></g>
+        <path d="M670 54 H735 V92" stroke="#234f76" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+        <path d="M670 136 H735 V98" stroke="#234f76" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+        <g><rect x="745" y="48" width="150" height="90" fill="#f7f9fb" stroke="#000" stroke-width="2"/><text x="820" y="83" text-anchor="middle" font-size="20" font-weight="700">検証</text><text x="820" y="112" text-anchor="middle" font-size="14">構文・整合・0 byte</text></g>
+        <path d="M905 93 H955" stroke="#234f76" stroke-width="4" marker-end="url(#arrow)"/>
+        <g><rect x="965" y="48" width="105" height="90" fill="#fff1b3" stroke="#000" stroke-width="2"/><text x="1017" y="83" text-anchor="middle" font-size="18" font-weight="700">納品</text><text x="1017" y="112" text-anchor="middle" font-size="13">取得リンク</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <nav class="toc" aria-label="目次">
+    <h2>目次</h2>
+    <ol>
+      <li><a href="#purpose">目的と完了条件</a></li>
+      <li><a href="#deliverables">2つの成果物</a></li>
+      <li><a href="#markdown">Markdown仕様</a></li>
+      <li><a href="#html-spec">HTML仕様</a></li>
+      <li><a href="#design-system">11Bデザイン</a></li>
+      <li><a href="#visualization">視覚表現の自動選択</a></li>
+      <li><a href="#architecture">4階層の情報設計</a></li>
+      <li><a href="#implementation">図・画像・操作のルール</a></li>
+      <li><a href="#layouts">用途別レイアウト</a></li>
+      <li><a href="#consistency">MDとHTMLの整合</a></li>
+      <li><a href="#review">納品前チェック</a></li>
+      <li><a href="#usage">使い方</a></li>
+    </ol>
+  </nav>
+
+  <section id="purpose">
+    <h2>1. 目的と完了条件</h2>
+    <p>このプロンプトの中心は、情報をきれいに文章化することだけではありません。<strong>実際に保存できるMarkdownとHTMLを生成し、ユーザーがクリックして取得できる状態まで完了させる</strong>ことです。</p>
+    <div class="callout">
+      <p class="callout-title">完了扱いにならないもの</p>
+      <p>Markdownコードブロックだけ、HTMLソースだけ、作成していないファイルを「生成済み」と表現すること。</p>
+    </div>
+    <h3>ダウンロード可能とみなす条件</h3>
+    <ul class="checklist">
+      <li>実体のあるファイルとして保存されている</li>
+      <li>ファイルサイズが0バイトではない</li>
+      <li>拡張子が正しい</li>
+      <li>内容が正常に保存されている</li>
+      <li>取得できるリンクまたは添付がある</li>
+    </ul>
+    <details>
+      <summary>ファイル生成機能がない環境での例外処理</summary>
+      <div class="details-body">
+        <ol>
+          <li>実ファイルを生成できないことを明示する</li>
+          <li>Markdown版の完全な内容を提示する</li>
+          <li>HTML版の完全な内容を提示する</li>
+          <li>未生成のファイルを作成済みと表現しない</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <section id="deliverables">
+    <h2>2. 2つの成果物</h2>
+    <div class="file-pair" aria-label="MarkdownとHTMLの役割分担">
+      <div class="file-box"><span class="label">SOURCE / EDIT</span><span class="name">＜内容に適した名前＞.md</span><p>編集・保存・再利用・AI再入力に向く正本。</p></div>
+      <div class="file-arrow" aria-hidden="true">＋</div>
+      <div class="file-box"><span class="label">READ / PRESENT</span><span class="name">＜同じベース名＞.html</span><p>ブラウザで直接読める、視覚的に再構成した完成資料。</p></div>
+    </div>
+    <p>両形式は表現方法が違っても、<strong>情報量・意味・結論を実質的に一致</strong>させます。HTMLだけに重要事実を追加したり、Markdownにある重要情報を落としたりしません。</p>
+  </section>
+
+  <section id="markdown">
+    <h2>3. Markdown版の仕様</h2>
+    <div class="spec-grid">
+      <article class="spec-card"><h3>構造</h3><p>タイトルを冒頭に置き、<code># → ## → ### → ####</code> の見出し階層を守ります。</p></article>
+      <article class="spec-card"><h3>再利用性</h3><p>標準Markdown、UTF-8、過剰装飾なし。AIが再読込しても構造を理解しやすくします。</p></article>
+      <article class="spec-card"><h3>比較・データ</h3><p>比較情報は表、必要な技術情報はコードブロックを使い、粒度をそろえます。</p></article>
+      <article class="spec-card"><h3>情報の区別</h3><p>事実、入力情報、推論、提案を混同せず、不明点や推測を明示します。</p></article>
+    </div>
+    <h3>内容整理の基本方針</h3>
+    <ul>
+      <li>目的・条件・入力情報を漏れなく反映する</li>
+      <li>分類・構造化し、不要な重複を減らす</li>
+      <li>同じ階層の項目は粒度をそろえる</li>
+      <li>長文でも見出しから全体像を把握できる順番にする</li>
+      <li>重要情報を勝手に省略しない</li>
+    </ul>
+  </section>
+
+  <section id="html-spec">
+    <h2>4. HTML版の仕様</h2>
+    <div class="spec-grid">
+      <article class="spec-card"><h3>自己完結</h3><p><code>&lt;!DOCTYPE html&gt;</code>、UTF-8、viewportを備え、CSSと必要なJavaScriptを内部へ収めます。</p></article>
+      <article class="spec-card"><h3>レスポンシブ</h3><p>スマートフォンとPCで読みやすくし、狭い表は横スクロール可能にします。</p></article>
+      <article class="spec-card"><h3>視覚階層</h3><p>見出し、本文、表、注記、重要点を明確に区別し、最初の画面で概要を伝えます。</p></article>
+      <article class="spec-card"><h3>印刷耐性</h3><p>印刷・PDF化でも大きく崩れない構造にし、派手さより可読性を優先します。</p></article>
+    </div>
+    <p>外部CSS・外部JavaScript・CDNは原則として使いません。外部依存が本当に必要な場合だけ、自己完結性との利点を比較して採用します。</p>
+  </section>
+
+  <section id="design-system">
+    <h2>5. 11Bデザインシステム</h2>
+    <p>基調は<strong>「一覧強調ミックス・余白広め」</strong>です。スマートフォンで文字が画面端へ寄りすぎず、高コントラストとコンパクトな一覧性を両立します。</p>
+    <div class="summary-grid">
+      <article class="summary-card"><h3>文字</h3><p><code>Meiryo UI</code>を最優先。Meiryo → Hiragino Sans → Yu Gothic → sans-serifへフォールバック。</p></article>
+      <article class="summary-card"><h3>色</h3><p>白・黒・青・薄いグレーを基調にし、重要語は控えめな黄色マーカーで示します。</p></article>
+      <article class="summary-card"><h3>形</h3><p>角丸、影、グラデーションを多用せず、フラットで情報密度の高い表示にします。</p></article>
+      <article class="summary-card"><h3>余白</h3><p>本文幅は最大840px。スマホでは左右約15px以上を確保し、スクロール量を増やしすぎません。</p></article>
+    </div>
+    <h3>追加UIにも共通ルールを適用</h3>
+    <ul>
+      <li><code>--ink / --accent / --soft / --soft2 / --line</code>を再利用する</li>
+      <li>カード間隔、角丸、影を控えめにして一覧性を維持する</li>
+      <li>狭い画面では無理な多列をやめ、1列へ落とす</li>
+      <li>表は横スクロール、SVG・グラフは本文幅内へ収める</li>
+      <li>タップ対象を小さくしすぎず、長文本文を極端に小さくしない</li>
+    </ul>
+    <details>
+      <summary>原本に記載された標準CSSを確認</summary>
+      <div class="details-body"><pre><code>:root {
+  color-scheme: light;
+  --bg: #fff;
+  --ink: #1c1f23;
+  --muted: #5d6470;
+  --line: #d6dce3;
+  --accent: #234f76;
+  --soft: #edf4fa;
+  --soft2: #f7f9fb;
+  --mark: #fff1b3;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: &quot;Meiryo UI&quot;, Meiryo, &quot;Hiragino Sans&quot;, &quot;Yu Gothic&quot;, sans-serif;
+  font-size: 17.6px;
+  line-height: 1.7;
+  letter-spacing: .005em;
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+}
+
+main {
+  width: min(100% - 38px, 840px);
+  margin: auto;
+  padding: 20px 0 62px;
+}
+
+.title-area {
+  padding: 17px 4px 18px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.18rem, 8.1vw, 3.2rem);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: var(--accent);
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+h2 {
+  margin: 2.08em 0 .58em;
+  padding: .42em .78em;
+  background: var(--soft);
+  border-left: 6px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 1.31rem;
+  line-height: 1.34;
+  font-weight: 900;
+}
+
+h3 {
+  margin: 1.45em 0 .42em;
+  font-size: 1.11rem;
+  line-height: 1.42;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 1.02rem;
+}
+
+p {
+  margin: .68em 0;
+  padding-inline: 4px;
+}
+
+strong {
+  font-weight: 900;
+  background: linear-gradient(transparent 74%, var(--mark) 0);
+}
+
+ul, ol {
+  padding-left: 1.58em;
+  margin: .7em 0 1em;
+}
+
+li {
+  margin: .24em 0;
+  padding-right: 2px;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: .82em 1.02em;
+  background: var(--soft2);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+}
+
+blockquote strong {
+  background: none;
+}
+
+blockquote p {
+  margin: .25em 0;
+  padding-inline: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 2em 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 670px;
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: .64em .68em;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--soft);
+  font-weight: 900;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 17.5px;
+  }
+
+  main {
+    width: min(100% - 30px, 840px);
+  }
+
+  h1 {
+    font-size: 2.28rem;
+  }
+
+  h2 {
+    font-size: 1.26rem;
+  }
+
+  p {
+    padding-inline: 3px;
+  }
+
+  ul, ol {
+    padding-left: 1.5em;
+  }
+}</code></pre></div>
+    </details>
+    <details>
+      <summary>既存HTMLへ適用するときの保持ルール</summary>
+      <div class="details-body">
+        <ul>
+          <li>本文・見出し文言・数値・表データ・項目順・情報量を変更しない</li>
+          <li>追加・削除・要約・言い換えを行わない</li>
+          <li>CSS、余白、文字組み、見出し、表の見せ方を中心に変更する</li>
+          <li>既存リンク、アンカー、画像、表、JavaScriptの機能を可能な限り維持する</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section id="visualization">
+    <h2>6. 視覚表現の自動選択</h2>
+    <p>文章を縦に並べるだけにせず、<strong>理解速度・比較性・因果関係・構造把握・意思決定が改善する場合だけ</strong>視覚化します。機能の全部盛りは行いません。</p>
+    <div class="chips" aria-label="使用候補">
+      <span class="chip">通常文章</span><span class="chip">箇条書き</span><span class="chip">強調ボックス</span><span class="chip">要点カード</span>
+      <span class="chip">比較表</span><span class="chip">データ表</span><span class="chip">棒・折れ線・散布図</span><span class="chip">SVG模式図</span>
+      <span class="chip">フロー・因果図</span><span class="chip">層構成図</span><span class="chip">タイムライン</span><span class="chip">画像・アイコン</span>
+      <span class="chip">タブ</span><span class="chip">折りたたみ</span><span class="chip">検索・フィルター</span><span class="chip">簡易インタラクション</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>情報の種類</th><th>第一候補</th><th>補助候補</th></tr></thead>
+        <tbody>
+          <tr><td>結論・重要事項</td><td>強調カード / 要点ボックス</td><td>短い箇条書き</td></tr>
+          <tr><td>数値の比較</td><td>比較表 / 棒グラフ</td><td>注記</td></tr>
+          <tr><td>時系列変化</td><td>折れ線グラフ / タイムライン</td><td>要約</td></tr>
+          <tr><td>条件別の差</td><td>棒グラフ / 比較表</td><td>ヒートマップ的表現</td></tr>
+          <tr><td>相関・分布</td><td>散布図</td><td>統計値</td></tr>
+          <tr><td>原因 → 結果</td><td>フロー図 / 因果関係図</td><td>短い説明</td></tr>
+          <tr><td>材料・膜・装置の構造</td><td>SVG模式図 / 層構成図</td><td>ラベル説明</td></tr>
+          <tr><td>メカニズム</td><td>SVG模式図 / 段階フロー</td><td>根拠説明</td></tr>
+          <tr><td>手順・工程</td><td>番号付きフロー / タイムライン</td><td>注意点</td></tr>
+          <tr><td>複数案の意思決定</td><td>比較表 + 推奨表示</td><td>メリット・デメリット</td></tr>
+          <tr><td>多量の詳細説明</td><td>折りたたみ</td><td>目次</td></tr>
+          <tr><td>2〜5の独立カテゴリ</td><td>タブ</td><td>カード</td></tr>
+          <tr><td>用語の補足</td><td>ツールチップ / 補足ボックス</td><td>用語集</td></tr>
+          <tr><td>生データ</td><td>データ表</td><td>CSV相当の整形</td></tr>
+          <tr><td>旅行・移動</td><td>タイムライン / 地図</td><td>スポットカード</td></tr>
+          <tr><td>学習教材</td><td>要点カード / 図解 / 小テスト</td><td>折りたたみ解答</td></tr>
+          <tr><td>技術レポート</td><td>模式図 / 比較表 / グラフ</td><td>根拠・考察</td></tr>
+          <tr><td>市場・業績</td><td>KPIカード / 時系列グラフ</td><td>要因分析</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>HTML生成前の内部設計フロー</h3>
+    <ol>
+      <li>事実・推論・提案・参考情報へ分類</li>
+      <li>テーマ別に整理し、重複を統合</li>
+      <li>重要度を内部評価</li>
+      <li>文章で十分か、視覚化が有効かを判定</li>
+      <li>最適な表・グラフ・模式図・タイムライン等を割り当て</li>
+      <li>最初の画面に出す情報を決定</li>
+      <li>PC・スマホ双方で崩れにくいレイアウトを設計</li>
+      <li>詳細・生データ・補足の収納場所を決定</li>
+      <li>その後にHTMLを実装</li>
+    </ol>
+  </section>
+
+  <section id="architecture">
+    <h2>7. 4階層の情報設計</h2>
+    <p>長い資料は、読者が必要な深さまで段階的に読めるようにします。重要な結論は深い階層へ隠しません。</p>
+    <div class="level-grid">
+      <article class="level-card"><h3>LEVEL 1｜5秒</h3><p>タイトル、結論、最重要ポイント、代表図・カード・数値。</p></article>
+      <article class="level-card"><h3>LEVEL 2｜1分</h3><p>比較表、代表グラフ、模式図、タイムライン、判断材料の要約。</p></article>
+      <article class="level-card"><h3>LEVEL 3｜詳しく</h3><p>詳細説明、考察、根拠、条件差、メカニズム、代替案。</p></article>
+      <article class="level-card"><h3>LEVEL 4｜確認・再利用</h3><p>生データ、詳細表、補足、参考情報、前提、注記。</p></article>
+    </div>
+    <h3>視覚要素の標準量</h3>
+    <div class="table-wrap"><table><thead><tr><th>要素</th><th>目安</th><th>条件</th></tr></thead><tbody>
+      <tr><td>メインビジュアル</td><td>1〜2個</td><td>内容理解を改善する場合</td></tr>
+      <tr><td>グラフ</td><td>1テーマにつき原則1個</td><td>実データがある場合</td></tr>
+      <tr><td>比較表</td><td>1〜3個程度</td><td>比較軸が明確な場合</td></tr>
+      <tr><td>模式図</td><td>1〜3個程度</td><td>構造・因果・工程の把握に有効な場合</td></tr>
+      <tr><td>強調カード</td><td>3〜6個程度</td><td>独立した要点がある場合</td></tr>
+      <tr><td>タブ</td><td>必要時のみ</td><td>独立カテゴリの切替が理解を助ける場合</td></tr>
+      <tr><td>折りたたみ</td><td>詳細向け</td><td>補足・生データを収納する場合</td></tr>
+      <tr><td>アニメーション</td><td>原則なし</td><td>必要でも控えめ</td></tr>
+    </tbody></table></div>
+    <details>
+      <summary>避ける表現</summary>
+      <div class="details-body">
+        <ul class="avoid-list">
+          <li>同じ内容を表とグラフで無意味に重複表示</li>
+          <li>意味のないカード化や節ごとの過剰な色分け</li>
+          <li>過度なグラデーション、装飾アニメーション</li>
+          <li>小さすぎる文字、横幅を使いすぎるレイアウト</li>
+          <li>スマートフォンで扱いにくい複雑UI</li>
+          <li>実データなしの精密なデータ可視化</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section id="implementation">
+    <h2>8. 図・画像・操作の実装ルール</h2>
+    <h3>グラフ</h3>
+    <p>数値データがあり、比較・傾向・分布・関係性が見やすくなる場合だけ使用します。時系列は折れ線、カテゴリ比較は棒、相関は散布図を基本にし、架空データは作りません。</p>
+    <h3>SVG模式図</h3>
+    <p>層構成、装置、メカニズム、原因と結果、工程、システム構成、概念整理に積極的に使います。実測画像と誤認されないよう「模式図」「概念図」と明記します。</p>
+    <h3>画像</h3>
+    <p>実物写真、観光地、製品、実験画像等が理解を実質的に改善する場合に使用します。実画像がないのに、架空の実験写真・証拠画像・測定画像は作りません。</p>
+    <h3>インタラクション</h3>
+    <div class="table-wrap"><table><thead><tr><th>推奨</th><th>原則不要</th></tr></thead><tbody><tr>
+      <td>長い説明の折りたたみ、タブ、大きな表の検索、問題→解答表示、条件比較、簡易計算</td>
+      <td>結論を隠すUI、装飾アニメーション、自動再生、ホバー依存、複雑なスマホ操作</td>
+    </tr></tbody></table></div>
+    <h3>自己完結型HTMLの優先順位</h3>
+    <ol>
+      <li>CSSを<code>&lt;style&gt;</code>へ内包</li>
+      <li>JavaScriptを<code>&lt;script&gt;</code>へ内包</li>
+      <li>模式図はインラインSVG</li>
+      <li>小規模アイコンはSVGまたはCSS</li>
+      <li>必要な画像はData URI等も検討</li>
+      <li>外部ライブラリは本当に必要な場合だけ</li>
+      <li>CDN依存は可能な限り避ける</li>
+    </ol>
+  </section>
+
+  <section id="layouts">
+    <h2>9. 用途別の初期レイアウト</h2>
+    <div class="layout-grid">
+      <article class="layout-card"><h3>技術・研究レポート</h3><ol><li>結論</li><li>現象・観察</li><li>模式図</li><li>データ・比較</li><li>メカニズム</li><li>原因仮説</li><li>対策</li><li>根拠・詳細</li><li>生データ</li></ol></article>
+      <article class="layout-card"><h3>旅行・観光</h3><ol><li>全体像</li><li>日程カード</li><li>タイムライン</li><li>地図・移動</li><li>スポット</li><li>食事</li><li>ホテル</li><li>費用</li><li>雨天代替</li></ol></article>
+      <article class="layout-card"><h3>学習教材</h3><ol><li>今日覚えること</li><li>全体図</li><li>要点カード</li><li>図解</li><li>具体例</li><li>小テスト</li><li>解答・解説</li><li>詳細補足</li></ol></article>
+      <article class="layout-card"><h3>市場・業績レポート</h3><ol><li>温度感・結論</li><li>KPI</li><li>主要変化</li><li>グラフ</li><li>上昇・下落要因</li><li>リスク</li><li>次に見る項目</li><li>詳細データ</li></ol></article>
+    </div>
+  </section>
+
+  <section id="consistency">
+    <h2>10. MarkdownとHTMLの整合性</h2>
+    <div class="callout">
+      <p class="callout-title">役割は違う。意味はそろえる。</p>
+      <p>Markdownは編集・AI再利用向け、HTMLは人間向け完成資料です。HTMLではカードや図へ再構成できますが、重要情報の追加・欠落を発生させません。</p>
+    </div>
+    <ul class="checklist">
+      <li>情報量・意味・結論が実質的に一致する</li>
+      <li>HTMLだけに新しい重要事実を追加しない</li>
+      <li>Markdownの重要情報をHTMLで省略しない</li>
+      <li>不明点・推測を明示する</li>
+      <li>同じ情報を無意味に重複させない</li>
+    </ul>
+  </section>
+
+  <section id="review">
+    <h2>11. 納品前セルフレビュー</h2>
+    <p>成果物を渡す前に、次を内部確認し、不備があれば修正してから納品します。</p>
+    <ul class="checklist">
+      <li>依頼条件と重要項目をすべて反映</li>
+      <li>不要な重複がなく、見出し構造が適切</li>
+      <li>Markdown記法とHTML構造が壊れていない</li>
+      <li>HTMLを単体で開け、最初の画面で概要が分かる</li>
+      <li>表・グラフ・模式図の選択が情報特性に合う</li>
+      <li>視覚要素を装飾目的だけで使っていない</li>
+      <li>スマートフォンで読みやすい</li>
+      <li>架空データ・実験画像・根拠を作っていない</li>
+      <li>Markdown版とHTML版が整合している</li>
+      <li>ファイル名・拡張子が正しい</li>
+      <li>実ファイルとして保存され、0バイトではない</li>
+      <li>ユーザーが実際にダウンロードできる</li>
+    </ul>
+    <h3>最終回答</h3>
+    <p>チャット本文は簡潔にし、原則としてMarkdownとHTMLのダウンロードリンクを提示します。ファイル全文を再掲する必要はありません。</p>
+  </section>
+
+  <section id="usage">
+    <h2>12. 使い方</h2>
+    <ol>
+      <li>原本MDをChatGPT等の実行環境へ渡す</li>
+      <li>末尾の「今回の依頼内容」へ、作りたい資料・分析対象・文章を記入する</li>
+      <li>必要なら読者、用途、重視観点、必須項目、比較軸、詳細度を追加する</li>
+      <li>MarkdownとHTMLの実ファイル、および取得リンクが納品されているか確認する</li>
+    </ol>
+    <details open>
+      <summary>入力テンプレート</summary>
+      <div class="details-body"><pre><code># 今回の依頼内容
+
+【ここに今回の依頼内容を記入】
+
+例：
+- 添付資料を分析して整理する
+- 業務内容を体系化する
+- 調査結果をレポート化する
+- 会議内容をまとめる
+- プロジェクト情報を構造化する
+- 学習内容を教材化する
+
+## 追加条件
+
+- 読者：
+- 用途：
+- 重視する観点：
+- 必須で含める項目：
+- 必要な比較軸：
+- 詳細度：</code></pre></div>
+    </details>
+    <div class="callout">
+      <p class="callout-title">最後の確認</p>
+      <p><strong>MarkdownとHTMLの実ファイルを生成し、ダウンロード可能なリンクまたは添付として納品する。</strong> コードや本文の表示だけで終了しません。</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Library item:</strong> markdown-html-download-generator</p>
+    <p><strong>Source:</strong> markdown-html-download-generator_prompt.md ／ SHA-256: faf5cec80b34dcd24b59bea77bb27bdc06cae63a3d576bb8aacdcf09b418959b</p>
+    <p><strong>Generated by:</strong> html-guide-generator v2.0 ／ 2026-08-26T20:24:17+09:00</p>
+    <p>原本Markdownを正本として保持し、このHTMLは説明・閲覧用の派生物として生成されています。</p>
+  </footer>
+</main>
+<script>
+(() => {
+  const copyButton = document.getElementById('copy-source');
+  const status = document.getElementById('copy-status');
+  const expandButton = document.getElementById('expand-all');
+  let expanded = false;
+
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+    const area = document.createElement('textarea');
+    area.value = text;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    const ok = document.execCommand('copy');
+    area.remove();
+    if (!ok) throw new Error('copy failed');
+  }
+
+  copyButton.addEventListener('click', async () => {
+    status.textContent = '原本を取得しています…';
+    try {
+      if (location.protocol === 'file:') {
+        throw new Error('file-protocol');
+      }
+      const response = await fetch('./markdown-html-download-generator_prompt.md', { cache: 'no-store' });
+      if (!response.ok) throw new Error('fetch failed');
+      const text = await response.text();
+      await copyText(text);
+      status.textContent = '原本Markdownをコピーしました。';
+    } catch (error) {
+      status.textContent = location.protocol === 'file:'
+        ? 'ローカル直開きでは原本取得が制限される場合があります。「原本MDを開く」を使用してください。'
+        : 'コピーできませんでした。「原本MDを開く」から内容を取得してください。';
+    }
+  });
+
+  expandButton.addEventListener('click', () => {
+    expanded = !expanded;
+    document.querySelectorAll('details').forEach((detail) => { detail.open = expanded; });
+    expandButton.textContent = expanded ? '詳細をすべて閉じる' : '詳細をすべて開く';
+  });
+})();
+</script>
+</body>
+</html>

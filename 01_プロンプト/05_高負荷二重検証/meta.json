@@ -1,0 +1,102 @@
+{
+  "schema_version": "2.0",
+  "id": "information-preservation-guard",
+  "slug": "information-preservation-guard",
+  "aliases": [],
+  "title": "情報完全保持・非圧縮・高負荷二重検証プロトコル",
+  "type": "prompt",
+  "category": "prompts",
+  "subcategory": "quality-assurance",
+  "summary": "AIが入力資料や生成情報を無断で省略・要約することを防ぎ、長大な成果物をファイルへ段階的に組み立て、保存後の物理再読込、二重監査、Gap修復、最終完全性ゲートまで実行させる汎用プロトコル。",
+  "tags": [
+    "情報保持",
+    "非圧縮",
+    "二重検証",
+    "ファイル再読込",
+    "自動修復",
+    "プロンプト品質",
+    "Codex"
+  ],
+  "status": "draft",
+  "visibility": "private",
+  "publish": false,
+  "version": "1.1",
+  "language": "ja",
+  "dates": {
+    "created": "2026-08-26",
+    "updated": "2026-08-26"
+  },
+  "files": {
+    "source": "information-preservation-guard_prompt.md",
+    "guide": "information-preservation-guard_guide.html",
+    "preview": "information-preservation-guard_preview.webp",
+    "thumbnail": "information-preservation-guard_thumb.webp",
+    "additional": [
+      "information-preservation-guard_design-notes.md",
+      "information-preservation-guard_visual-manifest.json",
+      "support/情報完全保持・非圧縮ガード_MasterPrompt_v1.1.md",
+      "support/情報完全保持・非圧縮ガード_v1.1_CHANGELOG.md",
+      "support/情報完全保持・非圧縮ガード_v1.1_README.md",
+      "support/情報完全保持・非圧縮ガード_v1.1_manifest.json",
+      "support/情報完全保持・非圧縮ガード_v1.1_最終検証レポート.md",
+      "support/情報完全保持・非圧縮ガード_v1.1_第1検証レポート.md",
+      "support/情報完全保持・非圧縮ガード_v1.1_第2検証レポート.md",
+      "support/情報完全保持・非圧縮ガード_追加モジュール_v1.1.md",
+      "support/情報完全保持・高負荷二重検証ループ_単体モジュール_v1.1.md"
+    ]
+  },
+  "media": {
+    "preview": {
+      "alt": "情報完全保持・非圧縮ガードの二重検証ループを、中央の盾とLoop A・Loop B、保持・組立・再読込・修復の4工程で示した縦長インフォグラフィック",
+      "width": 1600,
+      "height": 2000,
+      "bytes": 172838,
+      "format": "webp"
+    },
+    "thumbnail": {
+      "alt": "情報完全保持・非圧縮ガードの盾と二重検証ループを示すサムネイル",
+      "width": 640,
+      "height": 800,
+      "bytes": 47676,
+      "format": "webp"
+    }
+  },
+  "search": {
+    "keywords": [
+      "情報完全保持",
+      "非圧縮ガード",
+      "高負荷二重検証",
+      "Source-to-Output Audit",
+      "Independent Re-Audit",
+      "Gap Report A",
+      "Gap Report B",
+      "原子情報台帳",
+      "要求トレーサビリティ",
+      "Coverage Check",
+      "物理的再読込",
+      "最大5修復サイクル"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "integrity": {
+    "source_sha256": "f7254df2726aef9f82415ab9bf36bba94a3d054635be659aa2ef09c6c5735a5b",
+    "guide_sha256": "e75cd47df11f57517309734155c0d024fc04380d7f68715e2ab07c4cc2742385",
+    "preview_sha256": "0afdd8e103275be50f1743492eb48fbc2b212b85c76f68a4f3a9a2cd6cf53a6e",
+    "thumbnail_sha256": "039004d3ebe6a8da46b7f134facb826eb6f6af875fddcecc5b4c78de53f3890b",
+    "guide_generated_from_source_sha256": "f7254df2726aef9f82415ab9bf36bba94a3d054635be659aa2ef09c6c5735a5b",
+    "preview_generated_from_source_sha256": "f7254df2726aef9f82415ab9bf36bba94a3d054635be659aa2ef09c6c5735a5b",
+    "thumbnail_generated_from_preview_sha256": "0afdd8e103275be50f1743492eb48fbc2b212b85c76f68a4f3a9a2cd6cf53a6e"
+  },
+  "provenance": {
+    "source_origin": "user-upload: 情報完全保持・非圧縮ガード_統合最終版_v1.1.md",
+    "guide_generator_prompt_id": "html-guide-generator",
+    "guide_generator_prompt_version": "2.0",
+    "guide_generated_at": "2026-08-26T12:28:54Z",
+    "preview_generator_prompt_id": "visual-preview-generator",
+    "preview_generator_prompt_version": "2.2",
+    "preview_generated_at": "2026-08-26T12:28:54Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "item_id": "markdown-html-download-generator",
+  "preview": {
+    "file": "markdown-html-download-generator_preview.webp",
+    "format": "webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 115700,
+    "sha256": "27b9171dd280ceed8ffd291184e8ce73c4d87b320f1a0c2871d7482618697711",
+    "alt": "Markdown入力を整理し、編集用Markdownとスマートフォン向けHTMLを実ファイルとして生成・検証・ダウンロードする流れを示した図解"
+  },
+  "thumbnail": {
+    "file": "markdown-html-download-generator_thumb.webp",
+    "format": "webp",
+    "width": 640,
+    "height": 800,
+    "bytes": 48248,
+    "sha256": "288e2acf77d4f93bdea6ae0961436cd9a070f7ea39874a7821d5c4cde5d60206",
+    "alt": "Markdown入力を整理し、編集用Markdownとスマートフォン向けHTMLを実ファイルとして生成・検証・ダウンロードする流れを示した図解"
+  },
+  "source_sha256": "faf5cec80b34dcd24b59bea77bb27bdc06cae63a3d576bb8aacdcf09b418959b",
+  "preview_generated_from_source_sha256": "faf5cec80b34dcd24b59bea77bb27bdc06cae63a3d576bb8aacdcf09b418959b",
+  "thumbnail_generated_from_preview_sha256": "27b9171dd280ceed8ffd291184e8ce73c4d87b320f1a0c2871d7482618697711",
+  "generator_prompt_id": "visual-preview-generator",
+  "generator_prompt_version": "2.2",
+  "generated_at": "2026-08-26T20:29:00+09:00",
+  "selection": {
+    "family": "D: 手順・構造 + F: 行動・学習",
+    "format": "フロー図を中心とした4ポイント図解",
+    "aspect_ratio": "4:5",
+    "reason": "この資料の価値は、入力からMD/HTMLの実ファイル納品までの工程と品質条件にあるため。写真や抽象イラストより、フローと役割分担が最短で伝わる。"
+  }
+}

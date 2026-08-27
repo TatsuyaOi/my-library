@@ -1,0 +1,30 @@
+{
+  "item_id": "okinawa-ishigaki-taketomi-3n4d-route",
+  "source": {
+    "file": "okinawa-ishigaki-taketomi-3n4d-route_source.md",
+    "sha256": "95e3331cdea384c5478011cf313fc93a0daa485efe8313eacfa0c70cc1441077"
+  },
+  "preview": {
+    "file": "okinawa-ishigaki-taketomi-3n4d-route_preview.webp",
+    "format": "webp",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 1643356,
+    "alt": "沖縄・石垣・竹富島の3泊4日旅行を、DAY1〜DAY4の日程、地図ルート、SSスポット、LINE反映ポイント、予約確認事項で整理した旅程図。"
+  },
+  "thumbnail": {
+    "file": "okinawa-ishigaki-taketomi-3n4d-route_thumb.webp",
+    "format": "webp",
+    "width": 640,
+    "height": 480,
+    "bytes": 383018,
+    "alt": "沖縄・石垣・竹富島の3泊4日旅行を、DAY1〜DAY4の日程、地図ルート、SSスポット、LINE反映ポイント、予約確認事項で整理した旅程図。"
+  },
+  "source_sha256": "95e3331cdea384c5478011cf313fc93a0daa485efe8313eacfa0c70cc1441077",
+  "preview_generated_from_source_sha256": "95e3331cdea384c5478011cf313fc93a0daa485efe8313eacfa0c70cc1441077",
+  "thumbnail_generated_from_preview_sha256": "83b572ef39aa45330bd64b528eaa725019b9a711f21e7b496aeb298ea91fff8b",
+  "generator_prompt_id": "visual-preview-generator",
+  "generator_prompt_version": "2.2",
+  "generated_at": "2026-08-26T20:36:00+09:00",
+  "note": "Preview is a lossless WebP packaging of the user-provided itinerary image; thumbnail is derived from that preview."
+}
