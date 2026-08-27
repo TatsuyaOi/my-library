@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-08-28T07:49:12+09:00",
+  "generated_at": "2026-08-27T22:54:03+00:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -16,7 +16,7 @@
       "icon": "🧩",
       "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
       "accent": "#59636f",
-      "count": 3
+      "count": 4
     },
     {
       "folder": "11_哲学",
@@ -119,6 +119,25 @@
       "category_title": "プロンプト",
       "category_icon": "🧩",
       "url": "./01_プロンプト/01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
+    },
+    {
+      "title": "外部知見・評価駆動型 プロンプト・ブラッシュアップ マスタープロンプト — Guide",
+      "description": "既存プロンプトを、外部調査・要件追跡・評価・Red Team・二重再読込で改善するためのマスタープロンプト説明書。",
+      "group": "未分類",
+      "tags": [],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-28",
+      "file": "05_外部知見を用いて実行/evidence-driven-prompt-refinement_guide.html",
+      "thumbnail_alt": "外部知見・評価駆動型プロンプト改善の6段階フローを示すサムネイル",
+      "thumbnail": "05_外部知見を用いて実行/evidence-driven-prompt-refinement_thumb.webp",
+      "preview": "05_外部知見を用いて実行/evidence-driven-prompt-refinement_preview.webp",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/05_外部知見を用いて実行/evidence-driven-prompt-refinement_guide.html",
+      "thumbnail_url": "./01_プロンプト/05_外部知見を用いて実行/evidence-driven-prompt-refinement_thumb.webp",
+      "preview_url": "./01_プロンプト/05_外部知見を用いて実行/evidence-driven-prompt-refinement_preview.webp"
     },
     {
       "title": "ChatGPT用 視覚表現自動選択・4案個別生成マスタープロンプト",
