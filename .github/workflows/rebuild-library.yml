@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - "**/*.html"
+      - "**/*.webp"
+      - "**/meta.json"
       - "library.config.json"
       - "assets/category-index.html"
       - "scripts/**"

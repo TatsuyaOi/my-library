@@ -30,6 +30,9 @@ h1{margin:0;font-size:clamp(2.4rem,10vw,4.2rem);line-height:1.05;letter-spacing:
 .arrow{color:#aaa;font-size:1.4rem;font-weight:700}
 .result-list{display:grid;gap:10px}
 .result{display:block;padding:16px 17px;background:#fff;border:1px solid var(--line);border-radius:18px;text-decoration:none;box-shadow:var(--shadow)}
+.result.has-thumb{display:grid;grid-template-columns:88px minmax(0,1fr);gap:13px;align-items:start}
+.result-thumb{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line);border-radius:13px;background:var(--soft)}
+.result-main{min-width:0}
 .result-top{display:flex;justify-content:space-between;gap:12px}
 .result h3{margin:0;font-size:1rem}
 .result p{margin:5px 0 0;color:var(--muted);font-size:.8rem}
@@ -40,6 +43,7 @@ h1{margin:0;font-size:clamp(2.4rem,10vw,4.2rem);line-height:1.05;letter-spacing:
 .hidden{display:none!important}
 footer{margin-top:30px;text-align:center;color:#999;font-size:.76rem}
 @media(min-width:650px){.wrap{padding-left:28px;padding-right:28px}.grid{grid-template-columns:1fr 1fr}.category{grid-template-columns:54px 1fr}.category>.arrow{display:none}}
+@media(max-width:380px){.result.has-thumb{grid-template-columns:76px minmax(0,1fr);gap:11px}}
 </style>
 </head>
 <body>
@@ -80,15 +84,18 @@ function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&l
 
 function itemHtml(item){
   return `
-    <a class="result" href="${encodeURI(item.url)}">
-      <div class="badges">
-        <span class="badge">${esc(item.category_title || "")}</span>
-        ${item.group ? `<span class="badge">${esc(item.group)}</span>` : ""}
-        ${item.pinned ? `<span class="badge">★ よく見る</span>` : ""}
+    <a class="result ${item.thumbnail_url ? 'has-thumb' : ''}" href="${encodeURI(item.url)}">
+      ${item.thumbnail_url ? `<img class="result-thumb" src="${encodeURI(item.thumbnail_url)}" alt="${esc(item.thumbnail_alt || item.title)}" width="640" height="800" loading="lazy" decoding="async">` : ''}
+      <div class="result-main">
+        <div class="badges">
+          <span class="badge">${esc(item.category_title || "")}</span>
+          ${item.group ? `<span class="badge">${esc(item.group)}</span>` : ""}
+          ${item.pinned ? `<span class="badge">★ よく見る</span>` : ""}
+        </div>
+        <div class="result-top"><h3>${esc(item.title)}</h3><span class="arrow">›</span></div>
+        ${item.description ? `<p>${esc(item.description)}</p>` : ""}
+        ${item.updated ? `<div class="meta">更新：${esc(item.updated)}</div>` : ""}
       </div>
-      <div class="result-top"><h3>${esc(item.title)}</h3><span class="arrow">›</span></div>
-      ${item.description ? `<p>${esc(item.description)}</p>` : ""}
-      ${item.updated ? `<div class="meta">更新：${esc(item.updated)}</div>` : ""}
     </a>`;
 }
 

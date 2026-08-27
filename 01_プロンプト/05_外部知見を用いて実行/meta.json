@@ -1,0 +1,90 @@
+{
+  "schema_version": "2.0",
+  "id": "evidence-driven-prompt-refinement",
+  "slug": "evidence-driven-prompt-refinement",
+  "aliases": [],
+  "title": "外部知見・評価駆動型 プロンプト・ブラッシュアップ マスタープロンプト",
+  "type": "prompt",
+  "category": "prompts",
+  "subcategory": "prompt-engineering",
+  "summary": "既存プロンプトの原意を保ちながら、外部調査、要件追跡、候補比較、境界・敵対テスト、Red Team、二重再読込を通じて、精度・再現性・安全性・実行可能性を高める汎用マスタープロンプト。",
+  "tags": [
+    "プロンプト設計",
+    "プロンプト改善",
+    "外部調査",
+    "要件追跡",
+    "評価",
+    "Red Team",
+    "自己検証"
+  ],
+  "status": "draft",
+  "visibility": "private",
+  "publish": false,
+  "version": "2.0",
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": "2026-08-27"
+  },
+  "files": {
+    "source": "evidence-driven-prompt-refinement_prompt.md",
+    "guide": "evidence-driven-prompt-refinement_guide.html",
+    "preview": "evidence-driven-prompt-refinement_preview.webp",
+    "thumbnail": "evidence-driven-prompt-refinement_thumb.webp",
+    "additional": [
+      "preview-manifest.json"
+    ]
+  },
+  "media": {
+    "preview": {
+      "alt": "既存プロンプトを完全読解、要件台帳、外部調査、候補比較、評価・Red Team、二重再読込の6段階で改善する流れを示した図解",
+      "width": 1600,
+      "height": 2000,
+      "bytes": 144174,
+      "format": "webp"
+    },
+    "thumbnail": {
+      "alt": "外部知見・評価駆動型プロンプト改善の6段階フローを示すサムネイル",
+      "width": 640,
+      "height": 800,
+      "bytes": 41946,
+      "format": "webp"
+    }
+  },
+  "search": {
+    "keywords": [
+      "プロンプトブラッシュアップ",
+      "prompt refinement",
+      "prompt audit",
+      "requirement ledger",
+      "Web調査",
+      "Red Team",
+      "評価テスト",
+      "プロンプトインジェクション",
+      "二重再読込",
+      "外部知見"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "integrity": {
+    "source_sha256": "783ac51d89d205c311152eaede47cef4b99e2f650e1a7d831d7d98b1afccf025",
+    "guide_sha256": "cfeb8a2d8028417e12657619c01fea7b85f21032fce58e9e6e84a571127bca8c",
+    "preview_sha256": "e5c2bdc45783f712fffe15c99762de481ad528a9a814f063787304b2731c9d45",
+    "thumbnail_sha256": "065c742b014b102590c6071369edd9415a6fc5aa7e5871a0a47ea2aaecfd10f5",
+    "guide_generated_from_source_sha256": "783ac51d89d205c311152eaede47cef4b99e2f650e1a7d831d7d98b1afccf025",
+    "preview_generated_from_source_sha256": "783ac51d89d205c311152eaede47cef4b99e2f650e1a7d831d7d98b1afccf025",
+    "thumbnail_generated_from_preview_sha256": "e5c2bdc45783f712fffe15c99762de481ad528a9a814f063787304b2731c9d45"
+  },
+  "provenance": {
+    "source_origin": "260827_外部知見・評価駆動型_プロンプトブラッシュアップ_マスタープロンプト_v2.0.md",
+    "guide_generator_prompt_id": "html-guide-generator",
+    "guide_generator_prompt_version": "2.0",
+    "guide_generated_at": "2026-08-28T07:34:08+09:00",
+    "preview_generator_prompt_id": "visual-preview-generator",
+    "preview_generator_prompt_version": "2.3",
+    "preview_generated_at": "2026-08-28T07:34:08+09:00"
+  }
+}

@@ -23,7 +23,7 @@
   "language": "ja",
   "dates": {
     "created": "2026-08-24",
-    "updated": "2026-08-24"
+    "updated": "2026-08-28"
   },
   "files": {
     "source": "five-stage-rapid-learning-chain_prompt.md",
@@ -69,7 +69,7 @@
   },
   "integrity": {
     "source_sha256": "a0b734db8a7696c0d70e3d9a47091080b6811a6c07ecd727cd19404a136848c4",
-    "guide_sha256": "5db3ebd041370e1c331244588ff1264ffe64603f918d69043982d88d509fc0ac",
+    "guide_sha256": "7308c4d56d27437cafb4835d0f704bfe6abee7e5202cff38118f18d752909d09",
     "preview_sha256": "92aaf06dff793a45d965a5c0ac6e0f46dcd79ce48dbbdcc9d1787ad36b4ac631",
     "thumbnail_sha256": "bb06081dc1b0b00e1f1c984933b7ec63f55828d3e17069f61c43b8b466ebf473",
     "guide_generated_from_source_sha256": "a0b734db8a7696c0d70e3d9a47091080b6811a6c07ecd727cd19404a136848c4",
