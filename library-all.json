@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-08-27T22:54:03+00:00",
+  "generated_at": "2026-08-28T00:42:41+00:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -16,7 +16,7 @@
       "icon": "🧩",
       "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
       "accent": "#59636f",
-      "count": 4
+      "count": 6
     },
     {
       "folder": "11_哲学",
@@ -121,6 +121,25 @@
       "url": "./01_プロンプト/01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
     },
     {
+      "title": "根拠・物語・視覚・検証駆動型 PowerPoint生成マスタープロンプト｜説明書",
+      "description": "",
+      "group": "未分類",
+      "tags": [],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-28",
+      "file": "06_パワーポイント生成/powerpoint-generation-master-prompt_guide.html",
+      "thumbnail_alt": "PowerPoint生成マスタープロンプトの5段階フローを示すサムネイル",
+      "thumbnail": "06_パワーポイント生成/powerpoint-generation-master-prompt_thumb.webp",
+      "preview": "06_パワーポイント生成/powerpoint-generation-master-prompt_preview.webp",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/06_パワーポイント生成/powerpoint-generation-master-prompt_guide.html",
+      "thumbnail_url": "./01_プロンプト/06_パワーポイント生成/powerpoint-generation-master-prompt_thumb.webp",
+      "preview_url": "./01_プロンプト/06_パワーポイント生成/powerpoint-generation-master-prompt_preview.webp"
+    },
+    {
       "title": "外部知見・評価駆動型 プロンプト・ブラッシュアップ マスタープロンプト — Guide",
       "description": "既存プロンプトを、外部調査・要件追跡・評価・Red Team・二重再読込で改善するためのマスタープロンプト説明書。",
       "group": "未分類",
@@ -138,6 +157,25 @@
       "url": "./01_プロンプト/05_外部知見を用いて実行/evidence-driven-prompt-refinement_guide.html",
       "thumbnail_url": "./01_プロンプト/05_外部知見を用いて実行/evidence-driven-prompt-refinement_thumb.webp",
       "preview_url": "./01_プロンプト/05_外部知見を用いて実行/evidence-driven-prompt-refinement_preview.webp"
+    },
+    {
+      "title": "Prompt Architect Master Prompt 完成版 — Guide",
+      "description": "",
+      "group": "未分類",
+      "tags": [],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-08-28",
+      "file": "07_ブラッシュアップ/prompt-architect_guide.html",
+      "thumbnail_alt": "Prompt Architectが雑な依頼を解析し、不足情報の選別、AI・検索・ツール判定、3案設計、比較統合、実運用納品まで進める6段階フロー図のサムネイル",
+      "thumbnail": "07_ブラッシュアップ/prompt-architect_thumb.webp",
+      "preview": "07_ブラッシュアップ/prompt-architect_preview.webp",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/07_ブラッシュアップ/prompt-architect_guide.html",
+      "thumbnail_url": "./01_プロンプト/07_ブラッシュアップ/prompt-architect_thumb.webp",
+      "preview_url": "./01_プロンプト/07_ブラッシュアップ/prompt-architect_preview.webp"
     },
     {
       "title": "ChatGPT用 視覚表現自動選択・4案個別生成マスタープロンプト",
