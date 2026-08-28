@@ -1,0 +1,90 @@
+{
+  "schema_version": "2.0",
+  "id": "powerpoint-generation-master-prompt",
+  "slug": "powerpoint-generation-master-prompt",
+  "aliases": [],
+  "title": "根拠・物語・視覚・検証駆動型 PowerPoint生成マスタープロンプト",
+  "type": "prompt",
+  "category": "prompts",
+  "subcategory": "presentation",
+  "summary": "PDF・Excel・既存PPTXなどから根拠を抽出し、ストーリーと図表を設計して編集可能なPowerPointを生成し、再読込・レンダリング検査と自動修復まで行うためのマスタープロンプト。",
+  "tags": [
+    "PowerPoint",
+    "プレゼンテーション",
+    "PPTX",
+    "根拠管理",
+    "ストーリー設計",
+    "図表設計",
+    "品質検証"
+  ],
+  "status": "draft",
+  "visibility": "private",
+  "publish": false,
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-08-28",
+    "updated": "2026-08-28"
+  },
+  "files": {
+    "source": "powerpoint-generation-master-prompt_prompt.md",
+    "guide": "powerpoint-generation-master-prompt_guide.html",
+    "preview": "powerpoint-generation-master-prompt_preview.webp",
+    "thumbnail": "powerpoint-generation-master-prompt_thumb.webp",
+    "additional": [
+      "preview-manifest.json"
+    ]
+  },
+  "media": {
+    "preview": {
+      "alt": "根拠収集、物語設計、視覚選択、編集可能PPTX生成、再読込修復の5段階を示すPowerPoint生成マスタープロンプトの図解",
+      "width": 1200,
+      "height": 1500,
+      "bytes": 97926,
+      "format": "webp"
+    },
+    "thumbnail": {
+      "alt": "PowerPoint生成マスタープロンプトの5段階フローを示すサムネイル",
+      "width": 640,
+      "height": 800,
+      "bytes": 40892,
+      "format": "webp"
+    }
+  },
+  "search": {
+    "keywords": [
+      "PowerPoint生成",
+      "スライド作成",
+      "プレゼン資料",
+      "証拠台帳",
+      "action title",
+      "Design Contract",
+      "Red Team",
+      "自動修復",
+      "編集可能PPTX",
+      "レンダリング検査"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "integrity": {
+    "source_sha256": "6d1902842a529460567b74a2b79dee8bbafa87d285e05a788fc0a18a46ae3fa2",
+    "guide_sha256": "ab63d99941aa5f9261d1c3efb520b8fa96c70576f091ddc8359460d694a9ca1c",
+    "preview_sha256": "7212fe3fc6c50233b2a4afa20d11e285354d787f840a25facffafaea671cda4c",
+    "thumbnail_sha256": "56ef40f130e3ef84206abd0179488ce9b19ac8df06838545eae70f9f0175a096",
+    "guide_generated_from_source_sha256": "6d1902842a529460567b74a2b79dee8bbafa87d285e05a788fc0a18a46ae3fa2",
+    "preview_generated_from_source_sha256": "6d1902842a529460567b74a2b79dee8bbafa87d285e05a788fc0a18a46ae3fa2",
+    "thumbnail_generated_from_preview_sha256": "7212fe3fc6c50233b2a4afa20d11e285354d787f840a25facffafaea671cda4c"
+  },
+  "provenance": {
+    "source_origin": "user-provided-markdown",
+    "guide_generator_prompt_id": "html-guide-generator",
+    "guide_generator_prompt_version": "2.0",
+    "guide_generated_at": "2026-08-28T08:58:46+09:00",
+    "preview_generator_prompt_id": "visual-preview-generator",
+    "preview_generator_prompt_version": "2.3",
+    "preview_generated_at": "2026-08-28T08:58:46+09:00"
+  }
+}

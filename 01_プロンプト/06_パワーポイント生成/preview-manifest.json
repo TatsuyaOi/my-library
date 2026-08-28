@@ -1,0 +1,28 @@
+{
+  "item_id": "powerpoint-generation-master-prompt",
+  "preview": {
+    "file": "powerpoint-generation-master-prompt_preview.webp",
+    "format": "webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 97926,
+    "alt": "根拠収集、物語設計、視覚選択、編集可能PPTX生成、再読込修復の5段階を示すPowerPoint生成マスタープロンプトの図解"
+  },
+  "thumbnail": {
+    "file": "powerpoint-generation-master-prompt_thumb.webp",
+    "format": "webp",
+    "width": 640,
+    "height": 800,
+    "bytes": 40892,
+    "alt": "PowerPoint生成マスタープロンプトの5段階フローを示すサムネイル"
+  },
+  "source_sha256": "6d1902842a529460567b74a2b79dee8bbafa87d285e05a788fc0a18a46ae3fa2",
+  "preview_generated_from_source_sha256": "6d1902842a529460567b74a2b79dee8bbafa87d285e05a788fc0a18a46ae3fa2",
+  "thumbnail_generated_from_preview_sha256": "7212fe3fc6c50233b2a4afa20d11e285354d787f840a25facffafaea671cda4c",
+  "generator_prompt_id": "visual-preview-generator",
+  "generator_prompt_version": "2.3",
+  "design_profile": "github_library_default_v1",
+  "series_id": "github-library-default",
+  "style_reference": null,
+  "generated_at": "2026-08-28T08:58:46+09:00"
+}

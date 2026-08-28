@@ -1,0 +1,92 @@
+{
+  "schema_version": "2.0",
+  "id": "prompt-architect",
+  "slug": "prompt-architect",
+  "aliases": [],
+  "title": "Prompt Architect Master Prompt 完成版",
+  "type": "prompt",
+  "category": "prompts",
+  "subcategory": "prompt-engineering",
+  "summary": "雑な依頼を目的・制約・対象AI・成功条件へ整理し、Lean／Precision／Adaptiveの3案を比較評価して、統合最終版・短縮版・実ファイルへ落とし込むための汎用プロンプト設計マスター。",
+  "tags": [
+    "プロンプト設計",
+    "Prompt Architect",
+    "ChatGPT",
+    "Codex",
+    "AI活用",
+    "自己検証",
+    "GitHub Library"
+  ],
+  "status": "draft",
+  "visibility": "private",
+  "publish": false,
+  "version": "1.2",
+  "language": "ja",
+  "dates": {
+    "created": "2026-08-24",
+    "updated": "2026-08-24"
+  },
+  "files": {
+    "source": "01_prompt-architect_master-prompt_v1.2.md",
+    "guide": "prompt-architect_guide.html",
+    "preview": "prompt-architect_preview.webp",
+    "thumbnail": "prompt-architect_thumb.webp",
+    "additional": [
+      "prompt-architect_design-notes.md",
+      "preview-manifest.json"
+    ]
+  },
+  "media": {
+    "preview": {
+      "alt": "Prompt Architectが雑な依頼を解析し、不足情報の選別、AI・検索・ツール判定、3案設計、比較統合、実運用納品まで進める6段階フロー図",
+      "width": 1280,
+      "height": 1600,
+      "bytes": 108696,
+      "format": "webp"
+    },
+    "thumbnail": {
+      "alt": "Prompt Architectが雑な依頼を解析し、不足情報の選別、AI・検索・ツール判定、3案設計、比較統合、実運用納品まで進める6段階フロー図のサムネイル",
+      "width": 640,
+      "height": 800,
+      "bytes": 38680,
+      "format": "webp"
+    }
+  },
+  "search": {
+    "keywords": [
+      "プロンプト設計",
+      "Prompt Architect",
+      "マスタープロンプト",
+      "ChatGPT",
+      "Codex",
+      "Claude",
+      "Gemini",
+      "Few-shot",
+      "Web検索",
+      "自己検証",
+      "GitHub Library"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "integrity": {
+    "source_sha256": "0dafb2e8f289969a8d8a95e1a16ccc4265534fc35cbd813aaad83df85bc82a97",
+    "guide_sha256": "94d419c5816cba07d4bb5bdc1b22cb0fd4dd4ed91d7475874b0c3d238ff72d37",
+    "preview_sha256": "c55febaf670aeaba5c7dfd8749c29c2e329661bee23cdc1b0e7107f9d3700c51",
+    "thumbnail_sha256": "9d82d21e33563c683dc0d277481d57bfb9095456b136d8b9e9bbc334ffb4dcd8",
+    "guide_generated_from_source_sha256": "0dafb2e8f289969a8d8a95e1a16ccc4265534fc35cbd813aaad83df85bc82a97",
+    "preview_generated_from_source_sha256": "0dafb2e8f289969a8d8a95e1a16ccc4265534fc35cbd813aaad83df85bc82a97",
+    "thumbnail_generated_from_preview_sha256": "c55febaf670aeaba5c7dfd8749c29c2e329661bee23cdc1b0e7107f9d3700c51"
+  },
+  "provenance": {
+    "source_origin": "user-uploaded attachment",
+    "guide_generator_prompt_id": "html-guide-generator",
+    "guide_generator_prompt_version": "2.0",
+    "guide_generated_at": "2026-08-28T08:33:01+09:00",
+    "preview_generator_prompt_id": "visual-preview-generator",
+    "preview_generator_prompt_version": "2.3",
+    "preview_generated_at": "2026-08-28T08:33:01+09:00"
+  }
+}
