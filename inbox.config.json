@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "directory": "★仮置き保管庫",
+  "max_file_mb": 30,
+  "max_batch_mb": 150,
+  "require_publication_review": true
+}

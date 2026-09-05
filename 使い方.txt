@@ -1,29 +1,24 @@
-My Library テンプレート導入方法
+My Library — ★仮置き保管庫を使う運用（2026-09-05）
 
-1. このZIPを展開します。
-2. 中のフォルダと index.html を、現在の my-library フォルダへコピーします。
-3. ルートの index.html は、現在の日本語フォルダ名に合わせた更新版です。
-4. GitHub Desktop を開きます。
-5. Summary に「カテゴリ用indexを追加」などと入力します。
-6. Commit to main → Push origin を押します。
-7. GitHub Pages の My Library を再読み込みします。
+1. my-library/★仮置き保管庫 にHTML・画像・Markdown・TXTを保存します。
+2. my-libraryを開いたCodexへ次のように伝えます。
 
-資料を追加する方法
-- 例：「12_簿記」フォルダへ「貸倒引当金.html」を保存
-- 同じフォルダの index.html をメモ帳やVS Code等で開く
-- 下部の LIBRARY_ITEMS に1件追加
+「★仮置き保管庫の未処理資料を、AGENTS.mdに従って整理してください。
+ 原本と既存デザインを維持し、必要な閲覧HTML・meta.json・索引を作成して、
+ 検証後にPRまで作成してください。機密・判断不能な資料は保留し、マージしないでください。」
 
-例：
-{
-  title: "貸倒引当金",
-  group: "決算",
-  description: "貸倒引当金の意味と仕訳を整理",
-  file: "貸倒引当金.html",
-  tags: ["簿記3級", "仕訳"],
-  updated: "2026-08-23",
-  pinned: true
-},
+3. PRの差分と検証結果を確認し、自分でマージします。
+4. GitHub Actionsのrebuild / deploy成功後にGitHub Pagesを確認します。
 
-注意：
-GitHub Pages はフォルダ内のHTMLを自動一覧化しません。
-新しい資料を追加したときは、カテゴリの index.html にも1件登録してください。
+初回: Settings → Pages → Source を GitHub Actions に設定します。
+詳細: docs/inbox-workflow.md と 導入手順.md を参照してください。
+
+重要:
+- このリポジトリは公開用途です。仕事の機密・住所・予約番号・認証情報は公開しないでください。
+- Inbox内容は既定で.gitignore対象。Cloud Codexは未pushのローカルファイルを読めません。
+- Cloud利用時は公開可能な原本だけを明示的に作業ブランチへ追加します。
+- 「ファイルを置くだけでAIが自動起動」ではありません。Codexへの整理指示が必要です。
+- 原本は削除しません。処理済みとして識別します。
+- 旧手順の「12_簿記」「LIBRARY_ITEMSを手編集」は使いません。簿記は22_簿記です。
+- library-all.json / 各カテゴリlibrary.json / 各カテゴリindex.htmlは自動生成物です。
+- PDF・Office・ZIP・SVG・動画はこの取り込みスクリプトでは変換しません。
