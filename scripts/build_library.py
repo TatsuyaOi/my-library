@@ -3,6 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from datetime import datetime
 import json, re, shutil, subprocess
+from inbox_index import managed_info
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "library.config.json"
@@ -201,13 +202,20 @@ def build():
         (category_dir / "index.html").write_text(template, encoding="utf-8")
 
         items = []
-        for path in sorted(category_dir.rglob("*.html")):
-            if path.name.lower() == "index.html":
+        for path in sorted(category_dir.rglob("*")):
+            if not path.is_file() or path.suffix.lower() not in {".html", ".htm"}:
+                continue
+            managed = managed_info(path, category_dir)
+            if managed is not None and managed.get("skip"):
+                continue
+            if path.name.lower() == "index.html" and managed is None:
                 continue
             if tracked_files is not None and path.relative_to(ROOT).as_posix() not in tracked_files:
                 continue
 
             info = read_html_info(path)
+            if managed is not None:
+                info.update(managed["info"])
             if info["hidden"]:
                 continue
 
@@ -222,7 +230,7 @@ def build():
                 "updated": git_updated(path),
                 "file": rel,
             }
-            item.update(read_item_media(path, category_dir, info["title"]))
+            item.update(managed["media"] if managed is not None else read_item_media(path, category_dir, info["title"]))
             items.append(item)
 
         # Pinned first, explicit order, recent date, title.

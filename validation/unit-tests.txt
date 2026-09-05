@@ -1,0 +1,52 @@
+test_base_tag_requires_manual_review (test_inbox.InboxTests.test_base_tag_requires_manual_review) ... ok
+test_case_insensitive_destination_collision (test_inbox.InboxTests.test_case_insensitive_destination_collision) ... ok
+test_changed_input_requires_new_review (test_inbox.InboxTests.test_changed_input_requires_new_review) ... ok
+test_css_relative_dependency_is_preserved (test_inbox.InboxTests.test_css_relative_dependency_is_preserved) ... ok
+test_dry_run_does_not_write (test_inbox.InboxTests.test_dry_run_does_not_write) ... ok
+test_duplicate_ids_across_categories_are_rejected (test_inbox.InboxTests.test_duplicate_ids_across_categories_are_rejected) ... ok
+test_duplicate_json_keys_are_rejected (test_inbox.InboxTests.test_duplicate_json_keys_are_rejected) ... ok
+test_entire_batch_is_preflighted_before_writing (test_inbox.InboxTests.test_entire_batch_is_preflighted_before_writing) ... ok
+test_existing_destination_is_never_overwritten (test_inbox.InboxTests.test_existing_destination_is_never_overwritten) ... ok
+test_hold_is_not_imported (test_inbox.InboxTests.test_hold_is_not_imported) ... ok
+test_htm_and_uppercase_html_are_supported (test_inbox.InboxTests.test_htm_and_uppercase_html_are_supported) ... ok
+test_html_hidden_flag_is_respected (test_inbox.InboxTests.test_html_hidden_flag_is_respected) ... ok
+test_html_original_is_byte_identical (test_inbox.InboxTests.test_html_original_is_byte_identical) ... ok
+test_image_only_viewer (test_inbox.InboxTests.test_image_only_viewer) ... ok
+test_incoming_agents_is_not_installed_as_instructions (test_inbox.InboxTests.test_incoming_agents_is_not_installed_as_instructions) ... ok
+test_legacy_html_metadata_still_works (test_inbox.InboxTests.test_legacy_html_metadata_still_works) ... ok
+test_local_absolute_url_is_rejected (test_inbox.InboxTests.test_local_absolute_url_is_rejected) ... ok
+test_managed_nested_index_is_indexed (test_inbox.InboxTests.test_managed_nested_index_is_indexed) ... ok
+test_missing_image_dependency_is_rejected (test_inbox.InboxTests.test_missing_image_dependency_is_rejected) ... ok
+test_modified_output_fails_publication_validation (test_inbox.InboxTests.test_modified_output_fails_publication_validation) ... ok
+test_nan_json_is_rejected (test_inbox.InboxTests.test_nan_json_is_rejected) ... ok
+test_only_git_staged_documents_are_indexed (test_inbox.InboxTests.test_only_git_staged_documents_are_indexed) ... ok
+test_pages_never_exports_inbox_or_root_scripts (test_inbox.InboxTests.test_pages_never_exports_inbox_or_root_scripts) ... ok
+test_path_traversal_is_rejected (test_inbox.InboxTests.test_path_traversal_is_rejected) ... ok
+test_publication_gate (test_inbox.InboxTests.test_publication_gate) ... ok
+test_scan_marks_processed (test_inbox.InboxTests.test_scan_marks_processed) ... ok
+test_second_run_is_idempotent (test_inbox.InboxTests.test_second_run_is_idempotent) ... ok
+test_separate_srcset_dependencies_are_checked (test_inbox.InboxTests.test_separate_srcset_dependencies_are_checked) ... ok
+test_supporting_html_is_not_double_indexed (test_inbox.InboxTests.test_supporting_html_is_not_double_indexed) ... ok
+test_symlink_source_is_rejected (test_inbox.InboxTests.test_symlink_source_is_rejected) ... ok
+test_text_viewer_escapes_html (test_inbox.InboxTests.test_text_viewer_escapes_html) ... ok
+test_unchanged_rebuild_is_byte_stable (test_inbox.InboxTests.test_unchanged_rebuild_is_byte_stable) ... ok
+test_unknown_category_is_rejected (test_inbox.InboxTests.test_unknown_category_is_rejected) ... ok
+test_unmanaged_site_directory_is_not_deleted (test_inbox.InboxTests.test_unmanaged_site_directory_is_not_deleted) ... ok
+test_unsupported_document_is_held_not_executed (test_inbox.InboxTests.test_unsupported_document_is_held_not_executed) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.089s
+
+OK
+Generated 2 categories / 1 items.
+Generated 2 categories / 0 items.
+Generated 2 categories / 1 items.
+Generated 2 categories / 1 items.
+Generated 2 categories / 1 items.
+Generated 2 categories / 0 items.
+Generated 2 categories / 1 items.
+Generated 2 categories / 1 items.
+Generated 2 categories / 1 items.
+Generated 2 categories / 1 items.
+Generated 2 categories / 1 items.
+Generated 2 categories / 1 items.

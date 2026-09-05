@@ -1,0 +1,15 @@
+{
+  "mode": "offline Chromium DOM/rendering with mocked fetch",
+  "fixture": "isolated synthetic data; original revised UI",
+  "widths": [
+    390,
+    1440
+  ],
+  "search": "PASS",
+  "local_link_paths": "PASS",
+  "newest_first": "PASS",
+  "javascript_URL_rejection": "PASS",
+  "page_errors": [],
+  "overflow": "NONE",
+  "live_HTTP_navigation": "not performed: browser administrator policy blocks localhost"
+}

@@ -2,54 +2,82 @@ name: Rebuild My Library indexes
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - "**/*.html"
-      - "**/*.webp"
-      - "**/meta.json"
-      - "library.config.json"
-      - "assets/category-index.html"
-      - "scripts/**"
-      - ".github/workflows/rebuild-library.yml"
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: my-library-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   rebuild:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          persist-credentials: ${{ github.event_name != 'pull_request' }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: '3.12'
+
+      - name: Test Inbox safeguards
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
 
       - name: Build library indexes
         run: python scripts/build_library.py
 
-      - name: Commit generated files
+      - name: Validate and prepare public site without Inbox
+        run: python scripts/prepare_pages.py
+
+      - name: Commit generated indexes only
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add library-all.json
-          git add -- '*/library.json'
-          git add -- '*/index.html'
-
-          if git diff --cached --quiet; then
-            echo "No generated changes."
-            exit 0
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import json, subprocess
+          config = json.load(open('library.config.json', encoding='utf-8'))
+          files = ['library-all.json']
+          files += [f'{folder}/{name}' for folder in config['categories'] for name in ('index.html', 'library.json')]
+          subprocess.run(['git', 'add', '--', *files], check=True)
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: rebuild My Library indexes'
+            git push origin HEAD:main
           fi
 
-          git commit -m "chore: rebuild My Library indexes [skip ci]"
-          git push
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: rebuild
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy generated site
+        id: deployment
+        uses: actions/deploy-pages@v4

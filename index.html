@@ -51,11 +51,11 @@ footer{margin-top:30px;text-align:center;color:#999;font-size:.76rem}
 <header class="hero">
 <p class="eyebrow">PERSONAL HTML LIBRARY</p>
 <h1>My Library</h1>
-<p class="lead">HTMLをフォルダへ追加してPushするだけ。カテゴリ一覧・検索・最近追加は自動更新されます。</p>
+<p class="lead">★仮置き保管庫へ保存 → Codexで整理 → PRを確認・マージ。カテゴリ一覧・検索は自動更新されます。</p>
 </header>
 
 <div class="search-area">
-<label class="search"><span>⌕</span><input id="search" type="search" placeholder="全資料を検索…" autocomplete="off"></label>
+<label class="search"><span>⌕</span><input id="search" type="search" aria-label="全資料を検索" placeholder="全資料を検索…" autocomplete="off"></label>
 </div>
 
 <section id="categoriesSection">
@@ -82,10 +82,16 @@ const $ = id => document.getElementById(id);
 
 function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]))}
 
+function fileUrl(value){
+  const path = String(value ?? "");
+  if (!path || /^[a-z][a-z0-9+.-]*:/i.test(path) || path.startsWith("/") || /[\\\x00-\x1f]/.test(path) || path.split("/").includes("..")) return "#";
+  return path.split("/").map(encodeURIComponent).join("/");
+}
+
 function itemHtml(item){
   return `
-    <a class="result ${item.thumbnail_url ? 'has-thumb' : ''}" href="${encodeURI(item.url)}">
-      ${item.thumbnail_url ? `<img class="result-thumb" src="${encodeURI(item.thumbnail_url)}" alt="${esc(item.thumbnail_alt || item.title)}" width="640" height="800" loading="lazy" decoding="async">` : ''}
+    <a class="result ${item.thumbnail_url ? 'has-thumb' : ''}" href="${esc(fileUrl(item.url))}">
+      ${item.thumbnail_url ? `<img class="result-thumb" src="${esc(fileUrl(item.thumbnail_url))}" alt="${esc(item.thumbnail_alt || item.title)}" width="640" height="800" loading="lazy" decoding="async">` : ''}
       <div class="result-main">
         <div class="badges">
           <span class="badge">${esc(item.category_title || "")}</span>
@@ -101,7 +107,7 @@ function itemHtml(item){
 
 function renderCategories(){
   $("categories").innerHTML = library.categories.map(c => `
-    <a class="category" href="${encodeURI("./"+c.folder+"/")}">
+    <a class="category" href="${esc(fileUrl("./"+c.folder+"/"))}">
       <div class="icon">${esc(c.icon || "📚")}</div>
       <div>
         <h2>${esc(c.title)}</h2>
@@ -113,7 +119,7 @@ function renderCategories(){
 }
 
 function renderRecent(){
-  const items = [...library.items].slice(0,12);
+  const items = [...library.items].sort((a,b) => String(b.updated || "").localeCompare(String(a.updated || "")) || String(a.title).localeCompare(String(b.title), "ja")).slice(0,12);
   $("recent").innerHTML = items.length ? items.map(itemHtml).join("") :
     `<div class="empty">まだ資料がありません。</div>`;
 }
@@ -145,6 +151,7 @@ async function init(){
     library = await r.json();
     renderCategories();
     renderRecent();
+    search();
   }catch(e){
     $("categories").innerHTML = `<div class="empty">library-all.json を読み込めません。GitHub Actionsの完了を確認してください。</div>`;
     console.error(e);

@@ -108,7 +108,7 @@ footer{padding:28px 4px 6px;text-align:center;color:#999;font-size:.75rem}
   <div class="search-wrap">
     <label class="search">
       <span aria-hidden="true">⌕</span>
-      <input id="searchInput" type="search" placeholder="資料を検索…" autocomplete="off">
+      <input id="searchInput" type="search" aria-label="資料を検索" placeholder="資料を検索…" autocomplete="off">
     </label>
   </div>
 
@@ -148,6 +148,12 @@ function escapeHtml(value) {
   })[m]);
 }
 
+function fileUrl(value){
+  const path = String(value ?? "");
+  if (!path || /^[a-z][a-z0-9+.-]*:/i.test(path) || path.startsWith("/") || /[\\\x00-\x1f]/.test(path) || path.split("/").includes("..")) return "#";
+  return path.split("/").map(encodeURIComponent).join("/");
+}
+
 function hexToSoft(hex) {
   const clean = String(hex || "").replace("#","");
   if (!/^[0-9a-fA-F]{6}$/.test(clean)) return "#edf3ff";
@@ -178,6 +184,7 @@ function renderFilters() {
 }
 
 function renderItems() {
+  if (!data) return;
   const q = els.input.value.trim().toLowerCase();
 
   const items = (data.items || [])
@@ -202,8 +209,8 @@ function renderItems() {
   }
 
   els.list.innerHTML = items.map(item => `
-    <a class="card ${item.thumbnail ? 'has-thumb' : ''}" href="${encodeURI(item.file)}">
-      ${item.thumbnail ? `<img class="card-thumb" src="${encodeURI(item.thumbnail)}" alt="${escapeHtml(item.thumbnail_alt || item.title)}" width="640" height="800" loading="lazy" decoding="async">` : ''}
+    <a class="card ${item.thumbnail ? 'has-thumb' : ''}" href="${escapeHtml(fileUrl(item.file))}">
+      ${item.thumbnail ? `<img class="card-thumb" src="${escapeHtml(fileUrl(item.thumbnail))}" alt="${escapeHtml(item.thumbnail_alt || item.title)}" width="640" height="800" loading="lazy" decoding="async">` : ''}
       <div class="card-top">
         <div class="card-main">
           <div class="badges">

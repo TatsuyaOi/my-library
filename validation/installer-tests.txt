@@ -1,0 +1,1 @@
+PASS: 5 installer checks (dry-run, main refusal, apply, idempotency, drift/no partial write).

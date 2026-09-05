@@ -1,0 +1,17 @@
+# Unreviewed input stays local. Public-safe cloud input needs an explicit git add -f.
+/★仮置き保管庫/*
+!/★仮置き保管庫/README.md
+/.inbox-plan.json
+/.inbox-scan.json
+/_site/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local update package is not a library document.
+/my-library-inbox-update/
+/my-library-inbox-update.zip
+
+/ライブラリ アップデート/
