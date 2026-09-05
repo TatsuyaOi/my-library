@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>哲学→行動原則コンパイラ｜使い方ガイド</title>
+  <style>
+    :root {
+      --navy: #17324d;
+      --blue: #2d668f;
+      --pale: #eef5f8;
+      --paper: #ffffff;
+      --ink: #1e2a33;
+      --muted: #60717d;
+      --line: #d7e1e7;
+      --gold: #b68a3a;
+      --green: #36745e;
+      --red: #9a4f49;
+      --shadow: 0 12px 32px rgba(23, 50, 77, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 92% 3%, rgba(182, 138, 58, 0.12), transparent 24rem),
+        linear-gradient(180deg, #f7fafb 0, #edf3f6 100%);
+      font-family: "Meiryo UI", Meiryo, "Yu Gothic UI", sans-serif;
+      line-height: 1.8;
+    }
+
+    a { color: var(--blue); }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 72px 0 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 7px 12px;
+      border: 1px solid rgba(45, 102, 143, 0.28);
+      border-radius: 999px;
+      color: var(--blue);
+      background: rgba(255,255,255,0.72);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    h1, h2, h3 { line-height: 1.35; color: var(--navy); }
+
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-size: clamp(34px, 6vw, 64px);
+      letter-spacing: -.035em;
+    }
+
+    .lead {
+      max-width: 820px;
+      margin: 24px 0 0;
+      color: #405461;
+      font-size: clamp(17px, 2vw, 21px);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 24px;
+      align-items: end;
+      margin-top: 42px;
+    }
+
+    .north-star {
+      padding: 28px;
+      border-radius: 22px;
+      color: white;
+      background: linear-gradient(135deg, var(--navy), #245b79);
+      box-shadow: var(--shadow);
+    }
+
+    .north-star small {
+      display: block;
+      margin-bottom: 8px;
+      color: #bcd4e2;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .north-star strong {
+      font-size: 21px;
+      line-height: 1.6;
+    }
+
+    .mini-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,.84);
+      box-shadow: var(--shadow);
+    }
+
+    .mini-card b { color: var(--navy); }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(247,250,251,.92);
+      backdrop-filter: blur(14px);
+    }
+
+    nav .wrap {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      scrollbar-width: thin;
+    }
+
+    nav a {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 9px;
+      color: #47606f;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover { background: var(--pale); color: var(--navy); }
+
+    main { padding: 18px 0 80px; }
+
+    section {
+      padding-top: 62px;
+      scroll-margin-top: 54px;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      font-size: clamp(26px, 4vw, 38px);
+      letter-spacing: -.02em;
+    }
+
+    .section-intro {
+      max-width: 780px;
+      margin: -10px 0 28px;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.9);
+      box-shadow: 0 8px 22px rgba(23,50,77,.06);
+    }
+
+    .card .num {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 16px;
+      place-items: center;
+      border-radius: 11px;
+      color: white;
+      background: var(--blue);
+      font-weight: 800;
+    }
+
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      counter-reset: flow;
+    }
+
+    .flow > div {
+      position: relative;
+      min-height: 150px;
+      padding: 22px;
+      border-radius: 16px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .flow > div::before {
+      counter-increment: flow;
+      content: counter(flow, decimal-leading-zero);
+      display: block;
+      margin-bottom: 14px;
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    .flow b { display: block; margin-bottom: 6px; color: var(--navy); }
+    .flow span { color: var(--muted); font-size: 14px; }
+
+    .mode-list { display: grid; gap: 12px; }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255,255,255,.9);
+      overflow: hidden;
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 20px;
+      cursor: pointer;
+      color: var(--navy);
+      font-weight: 800;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      margin-left: auto;
+      color: var(--blue);
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    details[open] summary::after { content: "−"; }
+
+    details .inside {
+      padding: 0 20px 20px;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 3px 8px;
+      border-radius: 999px;
+      color: white;
+      background: var(--green);
+      font-size: 11px;
+      letter-spacing: .04em;
+    }
+
+    .prompt-box {
+      position: relative;
+      margin: 14px 0;
+      padding: 22px 74px 22px 22px;
+      border-radius: 14px;
+      color: #eaf2f7;
+      background: #162a3b;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+      font-family: "Meiryo UI", Meiryo, sans-serif;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .copy {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 7px 10px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 8px;
+      color: white;
+      background: rgba(255,255,255,.09);
+      cursor: pointer;
+      font: inherit;
+      font-size: 12px;
+    }
+
+    .copy:hover { background: rgba(255,255,255,.16); }
+
+    .rule-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .rule-table th, .rule-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .rule-table th {
+      width: 190px;
+      color: var(--navy);
+      background: var(--pale);
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-left: 5px solid var(--gold);
+      border-radius: 10px;
+      background: #fffaf0;
+    }
+
+    .file-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .file {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: white;
+    }
+
+    .file b { display: block; margin-bottom: 5px; color: var(--navy); }
+    .file span { color: var(--muted); font-size: 14px; }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .status-row div {
+      padding: 14px 8px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      text-align: center;
+      background: white;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .status-row div:nth-child(4) { border-color: #89b49e; background: #f0f8f3; }
+    .status-row span { display: block; margin-top: 4px; color: var(--muted); font-weight: 400; }
+
+    footer {
+      padding: 34px 0 48px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, .cards, .file-grid { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr 1fr; }
+      .status-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 22px, 1120px); }
+      .hero { padding-top: 44px; }
+      .flow { grid-template-columns: 1fr; }
+      .rule-table, .rule-table tbody, .rule-table tr, .rule-table th, .rule-table td { display: block; width: 100%; }
+      .rule-table th { border-bottom: 0; padding-bottom: 5px; }
+      .rule-table td { padding-top: 5px; }
+      .prompt-box { padding-right: 20px; padding-top: 54px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">PERSONAL PHILOSOPHY OS · v1.0</div>
+      <h1>哲学を、今日の判断と行動へ。</h1>
+      <p class="lead">思想を理解して終わらず、自分用の原則に変換し、実際の選択で試し、結果から更新するためのコンパイラです。</p>
+
+      <div class="hero-grid">
+        <div class="north-star">
+          <small>目指す状態</small>
+          <strong>理想を語るだけでなく、判断原則を持ち、それを実行できる知性・仕組み・生活基盤を作る。</strong>
+        </div>
+        <div class="mini-card">
+          <b>中核</b><br>
+          ストア派＋スピノザ<br>
+          <b>形式</b><br>
+          原義 → 接続解釈 → 原則 → 行動 → 検証
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="ページ内ナビゲーション">
+    <div class="wrap">
+      <a href="#overview">概要</a>
+      <a href="#flow">変換工程</a>
+      <a href="#modes">モード</a>
+      <a href="#start">使い始める</a>
+      <a href="#ledger">台帳</a>
+      <a href="#roles">役割分担</a>
+      <a href="#files">ファイル</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <section id="overview">
+        <h2>これは「名言を返すAI」ではありません</h2>
+        <p class="section-intro">哲学上の意味と、自分用の行動命令を分けたまま接続します。AIの解釈を哲学者の言葉として扱わず、正式な採用権は本人に残します。</p>
+        <div class="cards">
+          <article class="card">
+            <div class="num">1</div>
+            <h3>意味を守る</h3>
+            <p>原義、複数解釈、出典確認状態を分離。正確な引用を作りません。</p>
+          </article>
+          <article class="card">
+            <div class="num">2</div>
+            <h3>行動へ落とす</h3>
+            <p>発動条件、基本行動、最小行動、例外、終了条件まで定義します。</p>
+          </article>
+          <article class="card">
+            <div class="num">3</div>
+            <h3>結果から直す</h3>
+            <p>Decision Caseで判断過程と結果を分け、原則の維持・修正・保留を判断します。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="flow">
+        <h2>8段階の変換工程</h2>
+        <p class="section-intro">短い入力では内部で圧縮されますが、原義から行動ルールへの重要な飛躍は隠しません。</p>
+        <div class="flow">
+          <div><b>入力を分類</b><span>思想・状況・葛藤・振り返り・既存原則を判定。</span></div>
+          <div><b>意味を復元</b><span>原義、解釈、誤読リスク、未確認事項を整理。</span></div>
+          <div><b>自分へ接続</b><span>価値、目的、状況を通じた橋渡しを明示。</span></div>
+          <div><b>候補を比較</b><span>意味の異なる原則を最大3案まで作成。</span></div>
+          <div><b>ルール化</b><span>IF–THEN、最小行動、例外、終了条件へ変換。</span></div>
+          <div><b>誤用を攻撃</b><span>逃避、自己正当化、感情抑圧、一般化を検査。</span></div>
+          <div><b>現実で試す</b><span>Decision Caseとして予測と結果を記録。</span></div>
+          <div><b>版を更新</b><span>維持、修正、統合、保留、廃止候補を整理。</span></div>
+        </div>
+      </section>
+
+      <section id="modes">
+        <h2>6つの実行モード</h2>
+        <p class="section-intro">普段はAUTOで構いません。目的が明確なときだけモードを指定します。</p>
+        <div class="mode-list">
+          <details open>
+            <summary><span class="tag">A</span>思想を原則へ変える</summary>
+            <div class="inside"><code>PHILOSOPHY_COMPILE</code>：文章、引用、概念を、原義と自分用解釈を分けて行動ルールへ変換します。</div>
+          </details>
+          <details>
+            <summary><span class="tag">B</span>現実の悩みに適用する</summary>
+            <div class="inside"><code>SITUATION_APPLY</code>：出来事、感情、意思決定へ既存原則または哲学的視点を適用します。</div>
+          </details>
+          <details>
+            <summary><span class="tag">C</span>理想と行動のズレを調べる</summary>
+            <div class="inside"><code>CONTRADICTION_DEBUG</code>：意志の弱さと決めつけず、原則・価値・環境・行動単位のどこに問題があるか切り分けます。</div>
+          </details>
+          <details>
+            <summary><span class="tag">D</span>意思決定を振り返る</summary>
+            <div class="inside"><code>DECISION_REVIEW</code>：結果を知った後の後知恵を警戒し、判断過程と結果を別々に評価します。</div>
+          </details>
+          <details>
+            <summary><span class="tag">E</span>原則を保守する</summary>
+            <div class="inside"><code>PRINCIPLE_MAINTENANCE</code>：表現、発動条件、例外、適用範囲、重複、矛盾を見直します。</div>
+          </details>
+          <details>
+            <summary><span class="tag">F</span>個人哲学をビルドする</summary>
+            <div class="inside"><code>PERSONAL_PHILOSOPHY_BUILD</code>：複数の原則を5〜10件程度の中核候補へ整理します。正式採用は本人だけが行います。</div>
+          </details>
+        </div>
+      </section>
+
+      <section id="start">
+        <h2>最初は、この3つだけで使えます</h2>
+
+        <h3>1．出来事から原則を作る</h3>
+        <div class="prompt-box" id="p1"><button class="copy" data-copy="p1">コピー</button>添付の「哲学→行動原則コンパイラ v1.0」に従ってください。
+この出来事から、今後も使える行動原則を1つ作ってください。
+
+【入力】
+ここに出来事や悩みを書く。</div>
+
+        <h3>2．理想と実行のズレを調べる</h3>
+        <div class="prompt-box" id="p2"><button class="copy" data-copy="p2">コピー</button>CONTRADICTION_DEBUGで実行してください。
+この原則と実際の行動がズレた原因を、人格の問題と決めつけず、原因候補と切り分け方法まで示してください。
+
+【原則】
+
+【実際の行動】</div>
+
+        <h3>3．月次で個人哲学を整理する</h3>
+        <div class="prompt-box" id="p3"><button class="copy" data-copy="p3">コピー</button>PERSONAL_PHILOSOPHY_BUILDで実行してください。
+今月の原則とDecision Caseを、維持・修正・統合・保留・廃止候補に整理してください。
+正式採用や既存原則の上書きは、私の確認後に行ってください。</div>
+
+        <div class="notice"><b>詳しく見たいとき：</b> 入力の最後に「DEEPで」「原典も確認」「反証して」「Decision Caseにして」と追加します。</div>
+      </section>
+
+      <section id="ledger">
+        <h2>原則は5段階で育てる</h2>
+        <p class="section-intro">AIが作った瞬間は、まだ自分の哲学ではありません。試し、振り返り、自分で引き受けられると判断したものだけを正式採用します。</p>
+        <div class="status-row">
+          <div>DRAFT<span>生成された候補</span></div>
+          <div>TRIAL<span>実生活で試す</span></div>
+          <div>PROVISIONAL<span>暫定的に有効</span></div>
+          <div>ADOPTED<span>本人が正式採用</span></div>
+          <div>RETIRED<span>理由を残して廃止</span></div>
+        </div>
+
+        <h3 style="margin-top:28px">原則カードの最小構成</h3>
+        <table class="rule-table">
+          <tr><th>一文原則</th><td>短く思い出せる、自分の言葉。</td></tr>
+          <tr><th>発動条件</th><td>どんな状況で使うか。</td></tr>
+          <tr><th>基本行動</th><td>そのとき何をするか。</td></tr>
+          <tr><th>最小行動</th><td>今日開始できる単位。</td></tr>
+          <tr><th>例外</th><td>適用しない条件、高リスク時の別ルート。</td></tr>
+          <tr><th>誤用警告</th><td>逃避や自己正当化に変わる条件。</td></tr>
+          <tr><th>検証</th><td>Decision Caseと、判断が逆転する証拠。</td></tr>
+        </table>
+      </section>
+
+      <section id="roles">
+        <h2>既存AIとの使い分け</h2>
+        <table class="rule-table">
+          <tr><th>哲学→行動原則</th><td>何を判断原則として持ち、どの条件でどう動くかを作る。</td></tr>
+          <tr><th>自分代理AI</th><td>過去・現在・理想の自分が何を選びそうか、そのズレを見る。</td></tr>
+          <tr><th>論理思考トレーナー</th><td>主張、根拠、前提、反証、代替仮説を検査する。</td></tr>
+          <tr><th>Decision Case</th><td>実際の選択と結果から、原則が有効だったかを学ぶ。</td></tr>
+        </table>
+        <div class="notice"><b>毎回すべてを使う必要はありません。</b> 普段はコンパイラ単独、重要な意思決定や月次レビューだけ連携させます。</div>
+      </section>
+
+      <section id="files">
+        <h2>このセットに含まれるもの</h2>
+        <div class="file-grid">
+          <div class="file"><b>01｜マスタープロンプト</b><span>ChatGPT・Copilot等へ添付して使う本体。</span></div>
+          <div class="file"><b>02｜個人哲学・行動原則台帳</b><span>原則、衝突、状態、変更履歴を管理。</span></div>
+          <div class="file"><b>03｜意思決定ケース記録</b><span>判断前後を分離し、原則を検証。</span></div>
+          <div class="file"><b>04｜使い方ガイド</b><span>このページ。日常運用を直感的に確認。</span></div>
+          <div class="file"><b>05｜設計・検証レポート</b><span>要件、レビュー、テスト、未実証範囲を記録。</span></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">哲学→行動原則コンパイラ v1.0 · 2026-09-05</div>
+  </footer>
+
+  <script>
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+      return new Promise(function (resolve, reject) {
+        var area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        try {
+          if (document.execCommand('copy')) resolve();
+          else reject(new Error('copy failed'));
+        } catch (error) {
+          reject(error);
+        } finally {
+          area.remove();
+        }
+      });
+    }
+
+    document.querySelectorAll('[data-copy]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var source = document.getElementById(button.dataset.copy);
+        var clone = source.cloneNode(true);
+        var copiedButton = clone.querySelector('button');
+        if (copiedButton) copiedButton.remove();
+        copyText(clone.textContent.trim()).then(function () {
+          var old = button.textContent;
+          button.textContent = 'コピー済み';
+          window.setTimeout(function () { button.textContent = old; }, 1400);
+        }).catch(function () {
+          button.textContent = '選択してコピー';
+          window.getSelection().selectAllChildren(source);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

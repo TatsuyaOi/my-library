@@ -21,7 +21,7 @@
   },
   "files": {
     "source": "厳格・具体的レビュー＆改善マスタープロンプト_v1.1.md",
-    "guide": "_library_view.html",
+    "guide": "strict-review-improvement_guide.html",
     "preview": null,
     "additional": []
   },
@@ -41,7 +41,7 @@
     },
     "output_sha256": {
       "厳格・具体的レビュー＆改善マスタープロンプト_v1.1.md": "ad8ba2ffb16acd00df0e8d2d65032f5cef02787d12380d48d091cc5e2623df9c",
-      "_library_view.html": "1637974587460aac27cd54123b0b8226f11f3cb91d83b6694e74f5183d73be55"
+      "strict-review-improvement_guide.html": "1637974587460aac27cd54123b0b8226f11f3cb91d83b6694e74f5183d73be55"
     }
   }
 }

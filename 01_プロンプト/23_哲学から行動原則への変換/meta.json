@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "id": "philosophy-to-action-principle-compiler",
+  "title": "哲学→行動原則コンパイラ v1.0",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "思考訓練",
+  "summary": "ストア派とスピノザを中核に、哲学の原義・接続解釈・候補原則・行動ルールを分けて整理するプロンプトセット。個人哲学・行動原則台帳、意思決定ケース記録、使い方ガイド、設計・検証レポートを収録する。",
+  "tags": [
+    "哲学",
+    "ストア派",
+    "スピノザ",
+    "行動原則",
+    "意思決定"
+  ],
+  "status": "specification-reviewed-not-performance-benchmarked",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "哲学から行動原則への変換_v1.0/01_哲学から行動原則への変換_マスタープロンプト_v1.0.md",
+    "guide": "哲学から行動原則への変換_v1.0/04_使い方ガイド.html",
+    "preview": null,
+    "additional": [
+      "哲学から行動原則への変換_v1.0/02_個人哲学・行動原則台帳テンプレート.md",
+      "哲学から行動原則への変換_v1.0/03_意思決定ケース記録テンプレート.md",
+      "哲学から行動原則への変換_v1.0/05_設計・検証レポート.md"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "logical-critical-thinking-trainer"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "a4ab48ebc6da750e45ef34a0d2cf49b6cc29f317551e532f04f1cbd76cd03b4d",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "哲学から行動原則への変換_v1.0/01_哲学から行動原則への変換_マスタープロンプト_v1.0.md": "8d32fa1c5745fdd54cbedfca22b405fd06cfea4fe1c581c8f7cf8ff9d8fc8f6a",
+      "哲学から行動原則への変換_v1.0/02_個人哲学・行動原則台帳テンプレート.md": "d3eff46ac7d9f842ce8e472a7974c7cd50df07c8ab7d5812afe358ddb28323aa",
+      "哲学から行動原則への変換_v1.0/03_意思決定ケース記録テンプレート.md": "09feb01ca3ec2bbb395a0e5a31ed89776d8f92b3bed19dcdd14fcac2461f4e76",
+      "哲学から行動原則への変換_v1.0/04_使い方ガイド.html": "abb38bfc74185df17bc224bdc35db26b9fab92edf1b12d25a2c7d64c47417b7a",
+      "哲学から行動原則への変換_v1.0/05_設計・検証レポート.md": "96ad573db49ee08db8cc2aab162665231c2fdb9c73fe388eeb51a04202073197"
+    },
+    "output_sha256": {
+      "哲学から行動原則への変換_v1.0/01_哲学から行動原則への変換_マスタープロンプト_v1.0.md": "8d32fa1c5745fdd54cbedfca22b405fd06cfea4fe1c581c8f7cf8ff9d8fc8f6a",
+      "哲学から行動原則への変換_v1.0/02_個人哲学・行動原則台帳テンプレート.md": "d3eff46ac7d9f842ce8e472a7974c7cd50df07c8ab7d5812afe358ddb28323aa",
+      "哲学から行動原則への変換_v1.0/03_意思決定ケース記録テンプレート.md": "09feb01ca3ec2bbb395a0e5a31ed89776d8f92b3bed19dcdd14fcac2461f4e76",
+      "哲学から行動原則への変換_v1.0/04_使い方ガイド.html": "abb38bfc74185df17bc224bdc35db26b9fab92edf1b12d25a2c7d64c47417b7a",
+      "哲学から行動原則への変換_v1.0/05_設計・検証レポート.md": "96ad573db49ee08db8cc2aab162665231c2fdb9c73fe388eeb51a04202073197"
+    }
+  }
+}

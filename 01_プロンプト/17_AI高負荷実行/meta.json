@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "id": "token-furnace-extreme-compute",
+  "title": "Token Furnace / Extreme Compute Master Prompt",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "レビュー・品質改善",
+  "summary": "候補探索、専門視点によるレビュー、根拠照合、反証、受入テストへ作業を配分する全分野対応プロンプト。作業計画の倍率と実際の計算量・性能を区別し、予算と停止条件を管理する。",
+  "tags": [
+    "候補探索",
+    "反証",
+    "品質検証",
+    "予算管理"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "AI高負荷実行_v1.0.md",
+    "guide": "AI高負荷実行_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "universal-expert-quality-loop"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "5b404bf94b2364df2f0e67080908f5cd20c8442f06128b5476d529033876cd7a",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "AI高負荷実行_v1.0.md": "b36405e8ffdbd1b9e27d4c30ddc7ae51172a660869d1acc25ffa553d32b0f82c"
+    },
+    "output_sha256": {
+      "AI高負荷実行_v1.0.md": "b36405e8ffdbd1b9e27d4c30ddc7ae51172a660869d1acc25ffa553d32b0f82c",
+      "AI高負荷実行_guide.html": "707f84965697797a36c987dea83b7bfbbb18248989eaf2d0222007b3dc076118"
+    }
+  }
+}

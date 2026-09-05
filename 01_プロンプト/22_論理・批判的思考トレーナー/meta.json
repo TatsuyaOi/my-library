@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "id": "logical-critical-thinking-trainer",
+  "title": "論理・批判的思考トレーナー ― 研究思考を人生全体へ拡張する反証対話AI ―",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "思考訓練",
+  "summary": "観察と解釈の分離、代替仮説、反証、切り分けを研究・仕事・学習・人生・哲学へ転用する汎用プロンプト。訓練・実務分析・反証・振り返りの4モード、一問ずつの段階支援、二段階レビュー、思考ログを備える。",
+  "tags": [
+    "論理的思考",
+    "批判的思考",
+    "反証",
+    "学習",
+    "思考ログ"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "論理・批判的思考トレーナー_マスタープロンプト_v1.0.md",
+    "guide": "論理・批判的思考トレーナー_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "211075c7a9fb6b148cfe67aa50357446313760da1e20e8a825c5c721feea0269",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "論理・批判的思考トレーナー_マスタープロンプト_v1.0.md": "077ee5fc49346ffc97863c643d2990f2d3cf9567d9e7da770bc2f1f235a63a99"
+    },
+    "output_sha256": {
+      "論理・批判的思考トレーナー_マスタープロンプト_v1.0.md": "077ee5fc49346ffc97863c643d2990f2d3cf9567d9e7da770bc2f1f235a63a99",
+      "論理・批判的思考トレーナー_guide.html": "2d5c07d4eb0bcdf114b4b56a72ab9221eb39a6f6315cf4e4abc1f86739de7632"
+    }
+  }
+}

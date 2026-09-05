@@ -21,7 +21,7 @@
   },
   "files": {
     "source": "adversarial-review-suite_design-notes.md",
-    "guide": "_library_view.html",
+    "guide": "adversarial-review-suite-design-notes_guide.html",
     "preview": null,
     "additional": []
   },
@@ -41,7 +41,7 @@
     },
     "output_sha256": {
       "adversarial-review-suite_design-notes.md": "6eef97aad8fcb4b2a0bff88206af7e0f3b31b56390363c0bf1f881f9e0a07aa7",
-      "_library_view.html": "9bc18a99dfb7845cb83152a421c3c80634e2de00dd8c6388da12a8ef62cb6ed1"
+      "adversarial-review-suite-design-notes_guide.html": "9bc18a99dfb7845cb83152a421c3c80634e2de00dd8c6388da12a8ef62cb6ed1"
     }
   }
 }

@@ -245,7 +245,10 @@ def prepare_item(root: Path, item: dict, config: dict, inbox: Path, categories: 
     slug = item['id']
     if len(relative_path(slug).parts) != 1 or len(slug) > 100:
         raise ValueError('id must be one portable folder name, at most 100 characters.')
-    destination = checked_path(root, f'{category}/{slug}')
+    folder = item.get('folder', slug)
+    if len(relative_path(folder).parts) != 1 or len(folder) > 100:
+        raise ValueError('folder must be one portable folder name, at most 100 characters.')
+    destination = checked_path(root, f'{category}/{folder}')
     if not isinstance(item.get('title'), str) or not item['title'].strip():
         raise ValueError('title is required.')
     names = item.get('files')
@@ -282,11 +285,23 @@ def prepare_item(root: Path, item: dict, config: dict, inbox: Path, categories: 
         if field in item and not isinstance(item[field], str):
             raise ValueError(f'{field} must be a string.')
     semantic = {k: item.get(k) for k in ('id', 'category', 'title', 'summary', 'group', 'type', 'tags', 'entry')}
+    for key in ('folder', 'guide'):
+        if key in item:
+            semantic[key] = item[key]
     semantic['sha256'] = {name: digest(data) for name, data in sorted(files.items())}
     fingerprint = digest(json.dumps(semantic, ensure_ascii=False, sort_keys=True).encode('utf-8'))
-    guide = entry if entry and PurePosixPath(entry).suffix.lower() in HTML else '_library_view.html'
+    original_html = entry and PurePosixPath(entry).suffix.lower() in HTML
+    guide = entry if original_html else item.get('guide', '_library_view.html')
+    if original_html and 'guide' in item and item['guide'] != entry:
+        raise ValueError('Original HTML entry must not be renamed by guide.')
+    if not original_html:
+        guide_path = relative_path(guide)
+        if len(guide_path.parts) != 1 or guide_path.suffix.lower() not in HTML:
+            raise ValueError('guide must be one portable HTML filename.')
+        if guide.casefold() in seen:
+            raise ValueError('Generated guide collides with an input file.')
     source_names = list(files)
-    if guide == '_library_view.html':
+    if not original_html:
         files[guide] = viewer(item['title'], files, entry)
     preview = next((n for n in source_names if PurePosixPath(n).suffix.lower() in IMAGES), None)
     meta = {
