@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "strict-review-improvement",
+  "title": "厳格・具体的レビュー＆改善マスタープロンプト",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "レビュー・品質改善",
+  "summary": "提出・公開前の文章、提案書、研究資料、HTMLなどを厳格に監査するプロンプト。10方向の監査、重大度と修正優先度、根拠区分、100点評価とハードゲートを用い、具体的な問題と改善方法を整理する。",
+  "tags": [
+    "レビュー",
+    "品質改善",
+    "Red Team",
+    "成果物監査"
+  ],
+  "status": "active",
+  "version": "1.1",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-04",
+    "updated": null
+  },
+  "files": {
+    "source": "厳格・具体的レビュー＆改善マスタープロンプト_v1.1.md",
+    "guide": "_library_view.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "ab0ca4bb7f4a92df1ecd6d5182ac2b7c8666869c8a7e7dc2728d408703bed2f8",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "厳格・具体的レビュー＆改善マスタープロンプト_v1.1.md": "ad8ba2ffb16acd00df0e8d2d65032f5cef02787d12380d48d091cc5e2623df9c"
+    },
+    "output_sha256": {
+      "厳格・具体的レビュー＆改善マスタープロンプト_v1.1.md": "ad8ba2ffb16acd00df0e8d2d65032f5cef02787d12380d48d091cc5e2623df9c",
+      "_library_view.html": "1637974587460aac27cd54123b0b8226f11f3cb91d83b6694e74f5183d73be55"
+    }
+  }
+}

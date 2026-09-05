@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "id": "adversarial-business-review",
+  "title": "多専門家・敵対的レビュー委員会｜仕事・経営判断版",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "レビュー・品質改善",
+  "summary": "仕事上の提案や事業・投資・業務改善を、技術、財務、戦略、組織などの専門視点から審査するプロンプト。現状維持や限定検証との比較、採算、実行条件、撤退条件を確認し、改善案と追加確認を示す。",
+  "tags": [
+    "敵対的レビュー",
+    "経営判断",
+    "業務改善",
+    "採算",
+    "撤退条件"
+  ],
+  "status": "active",
+  "version": "1.1",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "敵対レビュー ビジネス.md",
+    "guide": "_library_view.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "6fd3edb773b8a1ab8ca80a25451e2e6c40f33c5f759ca96655ab9d02b9ad45c7",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "敵対レビュー ビジネス.md": "82760222884b81d8b9781e22bd42fe228fe22920c48d6834efd80e910763cfc7"
+    },
+    "output_sha256": {
+      "敵対レビュー ビジネス.md": "82760222884b81d8b9781e22bd42fe228fe22920c48d6834efd80e910763cfc7",
+      "_library_view.html": "2347ce039522d593e86d00c9898cc7e9db3d73eeadc7f44705c1a7e88e8642b7"
+    }
+  }
+}
