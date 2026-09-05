@@ -1,0 +1,6 @@
+# Preserve reviewed Inbox bytes and SHA-256 across Git checkouts.
+"01_プロンプト/adversarial-review-suite-design-notes/**" -text
+"01_プロンプト/strict-review-improvement/**" -text
+"01_プロンプト/adversarial-business-review/**" -text
+"01_プロンプト/adversarial-universal-review/**" -text
+"01_プロンプト/adversarial-research-review/**" -text

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "id": "adversarial-universal-review",
+  "title": "多専門家・敵対的レビュー委員会｜汎用・自動編成版",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "レビュー・品質改善",
+  "summary": "文章・計画・コード・学習法・研究などに応じて専門視点と採点軸を選ぶレビュープロンプト。分野別の監査、反証、根拠と不確実性の区別、ハードゲートを通して、修正版と次の確認を整理する。",
+  "tags": [
+    "敵対的レビュー",
+    "多視点評価",
+    "分野別監査",
+    "反証",
+    "品質改善"
+  ],
+  "status": "active",
+  "version": "1.1",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "敵対レビュー 汎用.md",
+    "guide": "_library_view.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "885d82a64dc8af6e98db5c1f211f01f9fccb90673846184dcd6eb55d9823721d",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "敵対レビュー 汎用.md": "e694be21cafc988506983417aee950480ff5a15d969a4bb5a5b87db12b194fd2"
+    },
+    "output_sha256": {
+      "敵対レビュー 汎用.md": "e694be21cafc988506983417aee950480ff5a15d969a4bb5a5b87db12b194fd2",
+      "_library_view.html": "12cf178192b020231805fc5feaac5064a44a9ca877cd4e908e7bfd82a67b4a62"
+    }
+  }
+}

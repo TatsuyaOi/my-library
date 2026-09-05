@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "adversarial-review-suite-design-notes",
+  "title": "多専門家・敵対的レビュー委員会 — 使い方・設計・検証記録",
+  "type": "guide",
+  "category": "01_プロンプト",
+  "subcategory": "レビュー・品質改善",
+  "summary": "研究・経営・汎用の敵対的レビュープロンプトの使い分け、設定、設計方針と短縮版をまとめた補足資料。要件追跡、想定ケースの机上検査、ファイル・計算検査の記録と実利用検証の限界を記載する。",
+  "tags": [
+    "敵対的レビュー",
+    "使い方",
+    "プロンプト設計",
+    "検証記録"
+  ],
+  "status": "active",
+  "version": "1.1",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "adversarial-review-suite_design-notes.md",
+    "guide": "_library_view.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "85fe945d91969dfbcac657e16b0187c7eade71aa47fe3f51037c0c7ffbc0f83a",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "adversarial-review-suite_design-notes.md": "6eef97aad8fcb4b2a0bff88206af7e0f3b31b56390363c0bf1f881f9e0a07aa7"
+    },
+    "output_sha256": {
+      "adversarial-review-suite_design-notes.md": "6eef97aad8fcb4b2a0bff88206af7e0f3b31b56390363c0bf1f881f9e0a07aa7",
+      "_library_view.html": "9bc18a99dfb7845cb83152a421c3c80634e2de00dd8c6388da12a8ef62cb6ed1"
+    }
+  }
+}
