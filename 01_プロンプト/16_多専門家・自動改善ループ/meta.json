@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "id": "universal-expert-quality-loop",
+  "title": "全分野対応・多専門家敵対的レビュー＆自動改善ループ マスタープロンプト",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "レビュー・品質改善",
+  "summary": "依頼の実行や既存成果物の改善を、分野に応じた専門視点、反証、採点、修正、再検証で進めるプロンプト。品質契約とハードゲートを固定し、有限の改善回数内で完成版と検証結果を提示する。",
+  "tags": [
+    "自動改善",
+    "多専門家レビュー",
+    "品質検証"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "多専門家・自動改善ループ.md",
+    "guide": "多専門家・自動改善ループ_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "f3465d83c42ec942e24b2d1480a364338a61f266f87bc7c7b92b2fdcc411161a",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "多専門家・自動改善ループ.md": "ab4bb807ea6608ef6f9900915714528dd9c9dc0f87c989c391a489f47aea303c"
+    },
+    "output_sha256": {
+      "多専門家・自動改善ループ.md": "ab4bb807ea6608ef6f9900915714528dd9c9dc0f87c989c391a489f47aea303c",
+      "多専門家・自動改善ループ_guide.html": "80fb50a167b9c954b91f8579f724f7ef9cbc053a4176b341c3a957d3c81b57b2"
+    }
+  }
+}

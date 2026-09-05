@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "causal-hypothesis-researcher",
+  "title": "全実験データから因果仮説を掘るAI研究員",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "研究開発",
+  "summary": "研究開発データの品質・系譜・独立単位を監査し、因果仮説、識別判定、推定、反証、追加実験設計を段階的に支援するプロンプト。人間確認と統計上の条件を分け、識別不能な因果主張を制限する。",
+  "tags": [
+    "研究開発",
+    "因果推論",
+    "データ監査",
+    "実験計画"
+  ],
+  "status": "active",
+  "version": "1.3",
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": "2026-09-05"
+  },
+  "files": {
+    "source": "因果仮説を掘らせる探索AI_マスタープロンプト_v1.3.md",
+    "guide": "因果仮説探索AI_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "f828304d6e7a1801cfa52ced9d9b1284bd2374b4dbd50072eb4a509811020e7d",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "因果仮説を掘らせる探索AI_マスタープロンプト_v1.3.md": "926c73bf8d6dbef0af30747ca88b7fa89917358be03372b31ef76b198bfd0307"
+    },
+    "output_sha256": {
+      "因果仮説を掘らせる探索AI_マスタープロンプト_v1.3.md": "926c73bf8d6dbef0af30747ca88b7fa89917358be03372b31ef76b198bfd0307",
+      "因果仮説探索AI_guide.html": "53018c19352590ee06c593da7721d84b591eb3eb4a41a3f5fd286807c878aa59"
+    }
+  }
+}
