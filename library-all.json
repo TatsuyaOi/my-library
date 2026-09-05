@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-08-28T00:42:41+00:00",
+  "generated_at": "2026-09-05T00:59:03+00:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -24,7 +24,7 @@
       "icon": "🧠",
       "description": "哲学者・思想・名言・自分の考えを整理するライブラリ",
       "accent": "#6f56d9",
-      "count": 1
+      "count": 2
     },
     {
       "folder": "21_基本情報",
@@ -119,6 +119,34 @@
       "category_title": "プロンプト",
       "category_icon": "🧩",
       "url": "./01_プロンプト/01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
+    },
+    {
+      "title": "北極星の哲学｜シンプル版",
+      "description": "哲学を北極星として、自分の判断・時間・行動を統治するための個人思想ノート。",
+      "group": "未分類",
+      "tags": [],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-05",
+      "file": "01 北極星の哲学/北極星の哲学.html",
+      "category_folder": "11_哲学",
+      "category_title": "哲学",
+      "category_icon": "🧠",
+      "url": "./11_哲学/01 北極星の哲学/北極星の哲学.html"
+    },
+    {
+      "title": "北極星の哲学｜シンプル版",
+      "description": "哲学を北極星として、自分の判断・時間・行動を統治するための個人思想ノート。",
+      "group": "未分類",
+      "tags": [],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-05",
+      "file": "02 北極星の哲学/北極星の哲学_11B_MeiryoUI最終版.html",
+      "category_folder": "11_哲学",
+      "category_title": "哲学",
+      "category_icon": "🧠",
+      "url": "./11_哲学/02 北極星の哲学/北極星の哲学_11B_MeiryoUI最終版.html"
     },
     {
       "title": "根拠・物語・視覚・検証駆動型 PowerPoint生成マスタープロンプト｜説明書",
@@ -285,20 +313,6 @@
       "category_title": "基本情報",
       "category_icon": "💻",
       "url": "./21_基本情報/FE総合復習ノート.html"
-    },
-    {
-      "title": "北極星の哲学｜シンプル版",
-      "description": "哲学を北極星として、自分の判断・時間・行動を統治するための個人思想ノート。",
-      "group": "未分類",
-      "tags": [],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-08-23",
-      "file": "北極星の哲学.html",
-      "category_folder": "11_哲学",
-      "category_title": "哲学",
-      "category_icon": "🧠",
-      "url": "./11_哲学/北極星の哲学.html"
     }
   ]
 }
