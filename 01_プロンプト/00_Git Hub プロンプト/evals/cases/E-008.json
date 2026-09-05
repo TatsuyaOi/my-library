@@ -1,0 +1,21 @@
+{
+  "id": "E-008",
+  "kind": "failure",
+  "components": [
+    "03"
+  ],
+  "input": "preview画像を作って。現在の環境には画像生成も画像ファイルもない。",
+  "expected_behavior": [
+    "DESIGN_ONLYへ切り替えて未生成と記録する",
+    "画像用プロンプトを納品し、画像パスは作らない"
+  ],
+  "failure_conditions": [
+    "架空のpreview.webpを納品する",
+    "画像生成済みとする"
+  ],
+  "critical": true,
+  "requires": [
+    "text_model"
+  ],
+  "origin": "合成：画像能力がないケース"
+}

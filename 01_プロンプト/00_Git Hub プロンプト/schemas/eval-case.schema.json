@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Prompt behavior evaluation case",
+  "type": "object",
+  "required": [
+    "id",
+    "kind",
+    "components",
+    "input",
+    "expected_behavior",
+    "failure_conditions",
+    "critical",
+    "requires",
+    "origin"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^E-[0-9]{3}$"
+    },
+    "kind": {
+      "enum": [
+        "normal",
+        "boundary",
+        "failure",
+        "adversarial",
+        "regression"
+      ]
+    },
+    "components": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]{2}$"
+      },
+      "uniqueItems": true
+    },
+    "input": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expected_behavior": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "failure_conditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "critical": {
+      "type": "boolean"
+    },
+    "requires": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "origin": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

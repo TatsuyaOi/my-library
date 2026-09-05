@@ -1,0 +1,37 @@
+{
+  "apply_automatically": false,
+  "labels": [
+    {
+      "name": "type:new-prompt",
+      "description": "新規プロンプト"
+    },
+    {
+      "name": "type:improvement",
+      "description": "既存プロンプト改善"
+    },
+    {
+      "name": "type:bug",
+      "description": "再現できる不具合"
+    },
+    {
+      "name": "priority:high",
+      "description": "優先して対応"
+    },
+    {
+      "name": "priority:medium",
+      "description": "標準優先度"
+    },
+    {
+      "name": "priority:low",
+      "description": "低優先度"
+    },
+    {
+      "name": "eval-needed",
+      "description": "実出力評価が必要"
+    },
+    {
+      "name": "red-team",
+      "description": "境界・敵対ケースを重点確認"
+    }
+  ]
+}

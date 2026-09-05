@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Prompt evaluation run record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "suite_version",
+    "model",
+    "environment",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "suite_version": {
+      "type": "string",
+      "pattern": "^\\d+(?:\\.\\d+)+$"
+    },
+    "model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "environment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "execution",
+          "result",
+          "evidence_file",
+          "notes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^E-[0-9]{3}$"
+          },
+          "execution": {
+            "enum": [
+              "EXECUTED",
+              "SIMULATED",
+              "NOT_RUN"
+            ]
+          },
+          "result": {
+            "enum": [
+              "PASS",
+              "PARTIAL",
+              "FAIL",
+              "NOT_RUN"
+            ]
+          },
+          "evidence_file": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

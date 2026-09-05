@@ -1,0 +1,90 @@
+{
+  "contract_version": "2.0",
+  "library": {
+    "id": "my-library",
+    "title": "My Library",
+    "description": null,
+    "language": "ja"
+  },
+  "paths": {
+    "content_root": "content",
+    "site_root": "site",
+    "ui_root": "site-ui"
+  },
+  "naming": {
+    "id_pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+    "prompt_source": "{id}_prompt.md",
+    "general_source": "{id}_source.md",
+    "guide": "{id}_guide.html",
+    "preview": "{id}_preview.webp",
+    "thumbnail": "{id}_thumb.webp",
+    "metadata": "meta.json"
+  },
+  "categories": [
+    {
+      "id": "prompts",
+      "label": "プロンプト",
+      "order": 10
+    },
+    {
+      "id": "study",
+      "label": "学習",
+      "order": 20
+    },
+    {
+      "id": "work",
+      "label": "仕事・研究",
+      "order": 30
+    },
+    {
+      "id": "philosophy",
+      "label": "哲学",
+      "order": 40
+    },
+    {
+      "id": "travel",
+      "label": "旅行",
+      "order": 50
+    },
+    {
+      "id": "reference",
+      "label": "資料",
+      "order": 60
+    },
+    {
+      "id": "project",
+      "label": "プロジェクト",
+      "order": 70
+    },
+    {
+      "id": "personal",
+      "label": "個人",
+      "order": 80
+    },
+    {
+      "id": "other",
+      "label": "その他",
+      "order": 999
+    }
+  ],
+  "publishing": {
+    "required_status": "active",
+    "required_visibility": "public",
+    "require_publish_true": true,
+    "default_status": "draft",
+    "default_visibility": "private",
+    "default_publish": false
+  },
+  "build": {
+    "exclude_stale_metadata": true,
+    "omit_stale_guide": true,
+    "omit_stale_preview": true,
+    "fail_on_duplicate_id": true,
+    "fail_on_duplicate_slug": true,
+    "fail_on_alias_collision": true,
+    "fail_on_invalid_metadata": true
+  },
+  "site": {
+    "base_path": null
+  }
+}

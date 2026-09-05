@@ -1,0 +1,23 @@
+{
+  "id": "E-007",
+  "kind": "normal",
+  "components": [
+    "02"
+  ],
+  "input": "原本MDに禁止条件、例外、数値、コード例がある。HTML説明書だけ作って。",
+  "expected_behavior": [
+    "原本byteを保持する",
+    "意味・条件・数値・例外をHTMLへ対応させる",
+    "引用コードは表示用にescapeする"
+  ],
+  "failure_conditions": [
+    "原本を要約して上書きする",
+    "引用scriptを実行コードへ移植する"
+  ],
+  "critical": true,
+  "requires": [
+    "text_model",
+    "files"
+  ],
+  "origin": "合成：02の原本保持要件"
+}

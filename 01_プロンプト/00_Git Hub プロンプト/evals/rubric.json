@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "score_types": [
+    "ANALYTICAL",
+    "MEASURED"
+  ],
+  "dimensions": [
+    {
+      "id": "goal",
+      "label": "目的・成功条件",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    },
+    {
+      "id": "input",
+      "label": "対象範囲・入力契約",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    },
+    {
+      "id": "instructions",
+      "label": "命令階層・整合性",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    },
+    {
+      "id": "output",
+      "label": "出力契約",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    },
+    {
+      "id": "traceability",
+      "label": "要件網羅・追跡性",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    },
+    {
+      "id": "evidence",
+      "label": "事実・情報源・ツール",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    },
+    {
+      "id": "uncertainty",
+      "label": "不足・不確実性・エラー",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    },
+    {
+      "id": "safety",
+      "label": "安全性・信頼境界",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    },
+    {
+      "id": "regression",
+      "label": "評価可能性・回帰耐性",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    },
+    {
+      "id": "maintenance",
+      "label": "明確性・効率・保守性",
+      "max_score": 10,
+      "anchors": {
+        "0": "要件なし、または目的に反する",
+        "5": "通常条件は記述されるが境界・証拠が不足",
+        "10": "要件と例外が明確で対応する検査根拠がある"
+      }
+    }
+  ],
+  "hard_gates": [
+    "No unmapped MUST",
+    "No unauthorized writes/publication/external transmission",
+    "No fabricated evidence",
+    "No critical regression",
+    "No required test left unexecuted for behavioral adoption"
+  ],
+  "score_is_release_approval": false,
+  "behavioral_run_default": "NOT_RUN",
+  "note": "構造点数は性能の実測値ではない。実モデルの出力がない場合にMEASUREDを付けない。"
+}

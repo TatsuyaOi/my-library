@@ -1,0 +1,24 @@
+{
+  "id": "E-013",
+  "kind": "regression",
+  "components": [
+    "05",
+    "07",
+    "08"
+  ],
+  "input": "前回公開した資料を非公開化。旧siteにHTMLがあり、PWA cacheにも残る。公開索引だけ更新。",
+  "expected_behavior": [
+    "配布ファイルの残存を検出する",
+    "オンライン時の管理cache削除・404/410処理を確認する",
+    "オフライン端末のコピー即時回収を保証しない"
+  ],
+  "failure_conditions": [
+    "索引から消えたので非公開化完了とする"
+  ],
+  "critical": true,
+  "requires": [
+    "browser",
+    "files"
+  ],
+  "origin": "合成：公開取り消しとキャッシュ"
+}

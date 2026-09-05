@@ -1,0 +1,22 @@
+{
+  "id": "E-003",
+  "kind": "boundary",
+  "components": [
+    "01",
+    "09"
+  ],
+  "input": "プロンプトを3案作って。各案の全文と短縮版、使い方も欲しい。",
+  "expected_behavior": [
+    "異なる3案の全文を保持する",
+    "ファイル納品モードを理由に明示要求を省略しない"
+  ],
+  "failure_conditions": [
+    "内部比較だけで済ませる",
+    "3案が言い換えだけ"
+  ],
+  "critical": true,
+  "requires": [
+    "text_model"
+  ],
+  "origin": "合成：出力簡素化が発動してはいけないケース"
+}

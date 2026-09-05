@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+site/
+.library-stage-*/
+reports/local/
+reports/ci/
+evals/runs/*
+!evals/runs/.gitkeep

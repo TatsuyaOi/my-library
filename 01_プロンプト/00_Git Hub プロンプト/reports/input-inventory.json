@@ -1,0 +1,142 @@
+[
+  {
+    "file": "00_github-library-foundation-builder_master-prompt_v1.0(4).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 12568,
+    "sha256": "da694c19df183320d06e52988471db7c427c96761de258341f1080d424ef8612",
+    "lf_sha256": "a1aadf1dd9b7c6f25908b050f8ccacb32aee8939472b6295c061a50e2f302b7c",
+    "line_count": 472,
+    "crlf_count": 472,
+    "read_scope": "full"
+  },
+  {
+    "file": "01_prompt-architect_master-prompt_v1.2(7).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 50068,
+    "sha256": "0dafb2e8f289969a8d8a95e1a16ccc4265534fc35cbd813aaad83df85bc82a97",
+    "lf_sha256": "38923048764db49929ed213b9053e020af10f2570037a98e16bb99e090be15bc",
+    "line_count": 1308,
+    "crlf_count": 1308,
+    "read_scope": "full"
+  },
+  {
+    "file": "01_prompt-architect_master-prompt_v1.2(8).md",
+    "role": "TARGET_AND_DESIGN_REFERENCE",
+    "bytes": 50068,
+    "sha256": "0dafb2e8f289969a8d8a95e1a16ccc4265534fc35cbd813aaad83df85bc82a97",
+    "lf_sha256": "38923048764db49929ed213b9053e020af10f2570037a98e16bb99e090be15bc",
+    "line_count": 1308,
+    "crlf_count": 1308,
+    "read_scope": "full"
+  },
+  {
+    "file": "02_html-guide-generator_master-prompt_v2.0(4).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 22081,
+    "sha256": "4199b5d94fc9c73f355a0c79870a52c1f699c326e4afcdc4c437019d3abd90ef",
+    "lf_sha256": "e6ac7b82c79f26fccb5e473c25d9e39773ee16ae1461d546c4f06834dd8e4308",
+    "line_count": 631,
+    "crlf_count": 631,
+    "read_scope": "full"
+  },
+  {
+    "file": "03_visual-preview-generator_master-prompt_v2.3(2).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 54629,
+    "sha256": "1ac22ca0d08b0de96b401afd06be206fa0aa959aaad6ff029b19dcd55dd298f7",
+    "lf_sha256": "1ac22ca0d08b0de96b401afd06be206fa0aa959aaad6ff029b19dcd55dd298f7",
+    "line_count": 1278,
+    "crlf_count": 0,
+    "read_scope": "full"
+  },
+  {
+    "file": "04_meta-json-generator_master-prompt_v2.0(4).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 13809,
+    "sha256": "0d829c142af67af6e0f8fc1049edd7bb260b55f90b6ed83abbf11fe8b9429215",
+    "lf_sha256": "2654b442c17e81bac5fcbcd97542764cdd5a9c8b7b71fd7d96c49c8f344c9d8e",
+    "line_count": 578,
+    "crlf_count": 578,
+    "read_scope": "full"
+  },
+  {
+    "file": "05_library-json-builder_master-prompt_v2.0(4).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 11254,
+    "sha256": "54440ae7da3bda8d77b8096b8bf9a442e0dfff9e431c5726ad78ed66d793b14f",
+    "lf_sha256": "53c5360cdaa56b3a97af7a9766167cc3c1a59c3ac29a77201ca95eb14a14d822",
+    "line_count": 468,
+    "crlf_count": 468,
+    "read_scope": "full"
+  },
+  {
+    "file": "06_github-pages-index-generator_master-prompt_v2.0(4).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 11747,
+    "sha256": "53130c87d17db56b258260595a0bb1b4f402a2421f3ba2ad098ac99906ce4b93",
+    "lf_sha256": "4e2f5c7251e9c71201232ff47fa572d8cd5ff3ae14b009d2cac76b521fec3a13",
+    "line_count": 489,
+    "crlf_count": 489,
+    "read_scope": "full"
+  },
+  {
+    "file": "07_pwa-generator_master-prompt_v2.0(4).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 16946,
+    "sha256": "88ea67319c6e43a255c7e5ad487d0743422220eb889dc7916ff65e7141c7a572",
+    "lf_sha256": "80cc2ee294a01a31ffc3305852d72a2674c1c85cf1ffcab391f9a1ec1c41ed42",
+    "line_count": 656,
+    "crlf_count": 656,
+    "read_scope": "full"
+  },
+  {
+    "file": "08_github-release-auditor_master-prompt_v2.0(4).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 18282,
+    "sha256": "daeffd08f635a93eeab703540978de01688763d24104442473ec45b837fc5af1",
+    "lf_sha256": "0ed855c602a23ccc825a844c2c19d33a9123838392057f50d9bd78e64cc7bcdd",
+    "line_count": 722,
+    "crlf_count": 722,
+    "read_scope": "full"
+  },
+  {
+    "file": "CHANGELOG(4).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 1418,
+    "sha256": "584eebde012d86bc9de041807ff82e07fb9f01b7aa7906b282a13d631ab95114",
+    "lf_sha256": "cb4e93a6f31fcc707cf5f9274662c77ac038d4ac198a503c9360863cd807b0d6",
+    "line_count": 44,
+    "crlf_count": 44,
+    "read_scope": "full"
+  },
+  {
+    "file": "README(5).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 5463,
+    "sha256": "565044fb10624f841b8b13dc37df30deeccf71b91ac03e842277c308a85e2832",
+    "lf_sha256": "05520c4dbbcb3411893e0f73c363df5740387eb22a17748132690bf75edfed21",
+    "line_count": 149,
+    "crlf_count": 149,
+    "read_scope": "full"
+  },
+  {
+    "file": "VALIDATION_REPORT(5).md",
+    "role": "TARGET_OR_SUPPORTING_BASELINE",
+    "bytes": 1087,
+    "sha256": "828e6d79e759969bd47f79492b62a24fb251e23a316ac22a0f427d9adbb1fc73",
+    "lf_sha256": "2a8fab245b35bf065584691fb7d64f44e52902b98cea6d8cbc1633c49e2f2cb5",
+    "line_count": 22,
+    "crlf_count": 22,
+    "read_scope": "full"
+  },
+  {
+    "file": "evidence-driven-prompt-refinement_prompt(6).md",
+    "role": "GOVERNING_REFERENCE",
+    "bytes": 34566,
+    "sha256": "783ac51d89d205c311152eaede47cef4b99e2f650e1a7d831d7d98b1afccf025",
+    "lf_sha256": "783ac51d89d205c311152eaede47cef4b99e2f650e1a7d831d7d98b1afccf025",
+    "line_count": 967,
+    "crlf_count": 0,
+    "read_scope": "full"
+  }
+]

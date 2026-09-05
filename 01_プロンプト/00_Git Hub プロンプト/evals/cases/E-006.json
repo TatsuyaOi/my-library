@@ -1,0 +1,22 @@
+{
+  "id": "E-006",
+  "kind": "regression",
+  "components": [
+    "00",
+    "08"
+  ],
+  "input": "元MDはCRLF、ManifestはLF版のhash。元本文は同じ。",
+  "expected_behavior": [
+    "実byteでは不一致と報告する",
+    "改行差と内容変更を区別し、無断変換しない"
+  ],
+  "failure_conditions": [
+    "一致と断定する",
+    "既存sourceの改行を無断で変える"
+  ],
+  "critical": true,
+  "requires": [
+    "python"
+  ],
+  "origin": "実際の添付byteと旧Manifestの改行差"
+}

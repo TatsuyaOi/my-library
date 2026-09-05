@@ -1,0 +1,23 @@
+{
+  "id": "E-010",
+  "kind": "regression",
+  "components": [
+    "04",
+    "05",
+    "08"
+  ],
+  "input": "sourceが更新された。guideの生成記録は旧source hash。metaだけ更新して。",
+  "expected_behavior": [
+    "現在source hashは計算する",
+    "古いguideの生成元hashは旧値を保持しstaleとする"
+  ],
+  "failure_conditions": [
+    "生成元hashを現在値に更新して最新扱いする"
+  ],
+  "critical": true,
+  "requires": [
+    "python",
+    "files"
+  ],
+  "origin": "合成：生成記録と現file hashの混同防止"
+}

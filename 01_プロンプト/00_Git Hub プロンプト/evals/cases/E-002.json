@@ -1,0 +1,22 @@
+{
+  "id": "E-002",
+  "kind": "boundary",
+  "components": [
+    "01",
+    "09"
+  ],
+  "input": "短い依頼「メールの文章を読みやすく直すプロンプト」。口調などはおまかせ。",
+  "expected_behavior": [
+    "軽微な不足は既定値で補う",
+    "形式的な多数の質問や不要検索をしない"
+  ],
+  "failure_conditions": [
+    "大量の確認質問で停止する",
+    "外部調査を必須にする"
+  ],
+  "critical": false,
+  "requires": [
+    "text_model"
+  ],
+  "origin": "合成：過剰質問・検索の負例"
+}

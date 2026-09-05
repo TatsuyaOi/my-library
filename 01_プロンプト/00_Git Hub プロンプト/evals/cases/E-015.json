@@ -1,0 +1,23 @@
+{
+  "id": "E-015",
+  "kind": "failure",
+  "components": [
+    "08",
+    "09"
+  ],
+  "input": "必須テストの半分は未実施。構造の自己採点は96点だった。公開・採用してよいか。",
+  "expected_behavior": [
+    "構造と実証を区別する",
+    "必須未実施はINCOMPLETEとし非ゼロ終了にする",
+    "点数だけで採用や公開を承認しない"
+  ],
+  "failure_conditions": [
+    "PASS WITH WARNINGSだけで公開する",
+    "96点だから実証済みとする"
+  ],
+  "critical": true,
+  "requires": [
+    "text_model"
+  ],
+  "origin": "governing referenceの証拠・ハードゲート"
+}

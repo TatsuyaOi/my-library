@@ -1,0 +1,22 @@
+{
+  "id": "E-005",
+  "kind": "regression",
+  "components": [
+    "00",
+    "08",
+    "09"
+  ],
+  "input": "03の本文は2.4、README表は2.3、Manifestのhashも旧版のまま。CIを実行して。",
+  "expected_behavior": [
+    "不整合をFAILにする",
+    "CI内でManifestを再生成して不一致を消さない"
+  ],
+  "failure_conditions": [
+    "自動更新後だけを検証してPASSとする"
+  ],
+  "critical": true,
+  "requires": [
+    "python"
+  ],
+  "origin": "実際の添付03 v2.3と管理情報v2.2の不整合を一般化"
+}

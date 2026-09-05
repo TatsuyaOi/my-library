@@ -1,62 +1,462 @@
 {
-  "suite_version": "2.0",
+  "schema_version": "1.0",
+  "suite_version": "2.1.0",
   "contract_version": "2.0",
-  "generated": "2026-08-24",
+  "released_on": "2026-09-05",
+  "hash_policy": "raw-file-bytes; UTF-8-without-BOM and LF required for text",
+  "scope": "managed_paths only; excludes manifest, reports, model-run outputs and generated site",
+  "components": [
+    {
+      "order": 0,
+      "id": "github-library-foundation-builder",
+      "path": "プロンプト一覧/00_github-library-foundation-builder_master-prompt.md",
+      "description": "共通基盤を作成・更新・移行する",
+      "version": "1.1",
+      "bytes": 18313,
+      "sha256": "0c2a2ebcf7a74491ef580847e07f001045f89b968056f0813191517abdf357f5"
+    },
+    {
+      "order": 1,
+      "id": "prompt-architect",
+      "path": "プロンプト一覧/01_prompt-architect_master-prompt.md",
+      "description": "再利用するプロンプト原本を設計する",
+      "version": "1.3",
+      "bytes": 54447,
+      "sha256": "2af6ce29b39e9b00858267e19efb1015a6144984e9ed46758d2cc1ba4188954b"
+    },
+    {
+      "order": 2,
+      "id": "html-guide-generator",
+      "path": "プロンプト一覧/02_html-guide-generator_master-prompt.md",
+      "description": "原本を保持してHTML説明書を作る",
+      "version": "2.1",
+      "bytes": 25238,
+      "sha256": "236ea15e0afac85b7ff57dbc4af24a92fb7361af8ba7d70fe26b1c2565ad5420"
+    },
+    {
+      "order": 3,
+      "id": "visual-preview-generator",
+      "path": "プロンプト一覧/03_visual-preview-generator_master-prompt.md",
+      "description": "固定デザインでpreviewとthumbnailを作る",
+      "version": "2.4",
+      "bytes": 59351,
+      "sha256": "1ac5c8940c2b1100825eb854bbcb24d2f4f68208e14e08e2eeb8e07bae0224c2"
+    },
+    {
+      "order": 4,
+      "id": "meta-json-generator",
+      "path": "プロンプト一覧/04_meta-json-generator_master-prompt.md",
+      "description": "個別資料の管理情報と鮮度を管理する",
+      "version": "2.1",
+      "bytes": 17671,
+      "sha256": "a789665c97811483853a2931faa117a05ea3ae406f3b1b567384ca1e862e586c"
+    },
+    {
+      "order": 5,
+      "id": "library-json-builder",
+      "path": "プロンプト一覧/05_library-json-builder_master-prompt.md",
+      "description": "公開可能資料を決定的に集約する",
+      "version": "2.1",
+      "bytes": 15946,
+      "sha256": "860395a6b95c7e53585f37ebdc62d091f01aba6f0bb995ce49bd7952f8f15bf3"
+    },
+    {
+      "order": 6,
+      "id": "github-pages-index-generator",
+      "path": "プロンプト一覧/06_github-pages-index-generator_master-prompt.md",
+      "description": "安定したindex・404の表示機能を整える",
+      "version": "2.1",
+      "bytes": 14789,
+      "sha256": "3dc451aeecc4691e604af1ba1d15055d924a6373f9f2c7851d29c9cc09ebc48e"
+    },
+    {
+      "order": 7,
+      "id": "pwa-generator",
+      "path": "プロンプト一覧/07_pwa-generator_master-prompt.md",
+      "description": "非破壊でPWA・更新・オフライン機能を加える",
+      "version": "2.1",
+      "bytes": 20318,
+      "sha256": "ace3d09e2843f65907ecad5118add1290b95e6ec989ca369529d4a5cad9ed3f2"
+    },
+    {
+      "order": 8,
+      "id": "github-release-auditor",
+      "path": "プロンプト一覧/08_github-release-auditor_master-prompt.md",
+      "description": "公開前・CI・公開後の成果物を監査する",
+      "version": "2.1",
+      "bytes": 23329,
+      "sha256": "78d50e94e46f70b9152aebac155b9e76cd8d654d25e7e97345d4bd3dd7cacc81"
+    },
+    {
+      "order": 9,
+      "id": "prompt-quality-auditor",
+      "path": "プロンプト一覧/09_prompt-quality-auditor_master-prompt.md",
+      "description": "プロンプト要件・品質・回帰を監査する",
+      "version": "1.0",
+      "bytes": 15459,
+      "sha256": "01c03fd59c7cdb6c8c041ae4e5c4be12f1a2687cbbc44833c0baed802b647f8e"
+    }
+  ],
   "files": [
     {
-      "name": "00_github-library-foundation-builder_master-prompt_v1.0.md",
-      "bytes": 12096,
-      "sha256": "a1aadf1dd9b7c6f25908b050f8ccacb32aee8939472b6295c061a50e2f302b7c"
+      "path": ".editorconfig",
+      "bytes": 178,
+      "sha256": "5902a4ed9989f7372ab8a7e98630b34fc6939bcf33a218cca58b4dd84962cf30"
     },
     {
-      "name": "01_prompt-architect_master-prompt_v1.2.md",
-      "bytes": 48760,
-      "sha256": "38923048764db49929ed213b9053e020af10f2570037a98e16bb99e090be15bc"
+      "path": ".gitattributes",
+      "bytes": 280,
+      "sha256": "92129834db05c3d2b12fb31d86eb544c5e52e255f4974849137968a6a20b24b4"
     },
     {
-      "name": "02_html-guide-generator_master-prompt_v2.0.md",
-      "bytes": 21450,
-      "sha256": "e6ac7b82c79f26fccb5e473c25d9e39773ee16ae1461d546c4f06834dd8e4308"
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "bytes": 27,
+      "sha256": "13064e7bea658e01e718b414fbb7b3b244f36411fe25ee2055c151f7b534547a"
     },
     {
-      "name": "03_visual-preview-generator_master-prompt_v2.2.md",
-      "bytes": 35412,
-      "sha256": "32ec7fbb875b34dd6fec83f2eaa94f52fe237f9fc9580160125f317fb1772cc6"
+      "path": ".github/ISSUE_TEMPLATE/improve-prompt.yml",
+      "bytes": 1122,
+      "sha256": "02e7eed5a862c827cf0aa5659a042247417680821e8256f8befe70ecbf78a7b3"
     },
     {
-      "name": "04_meta-json-generator_master-prompt_v2.0.md",
-      "bytes": 13231,
-      "sha256": "2654b442c17e81bac5fcbcd97542764cdd5a9c8b7b71fd7d96c49c8f344c9d8e"
+      "path": ".github/ISSUE_TEMPLATE/new-prompt.yml",
+      "bytes": 1111,
+      "sha256": "ae832df1184d1a2c50dd65a20cd9163cb5193c03b9bdffdc6688a71030377fc4"
     },
     {
-      "name": "05_library-json-builder_master-prompt_v2.0.md",
-      "bytes": 10786,
-      "sha256": "53c5360cdaa56b3a97af7a9766167cc3c1a59c3ac29a77201ca95eb14a14d822"
+      "path": ".github/ISSUE_TEMPLATE/prompt-bug.yml",
+      "bytes": 1132,
+      "sha256": "34ac06ee90a8ff3a170bb1836c6cf422aeb050690ec4b240a216c6d4a6b78b68"
     },
     {
-      "name": "06_github-pages-index-generator_master-prompt_v2.0.md",
-      "bytes": 11258,
-      "sha256": "4e2f5c7251e9c71201232ff47fa572d8cd5ff3ae14b009d2cac76b521fec3a13"
+      "path": ".github/dependabot.yml",
+      "bytes": 262,
+      "sha256": "f070ade4f50a63a8492077d22df52416557d6383eac23092ba20851f4b00f8d0"
     },
     {
-      "name": "07_pwa-generator_master-prompt_v2.0.md",
-      "bytes": 16290,
-      "sha256": "80cc2ee294a01a31ffc3305852d72a2674c1c85cf1ffcab391f9a1ec1c41ed42"
+      "path": ".github/pull_request_template.md",
+      "bytes": 1287,
+      "sha256": "39aea6466154898ba87c3364ea9754710fb49306425497a74c697a9eafab8d7f"
     },
     {
-      "name": "08_github-release-auditor_master-prompt_v2.0.md",
-      "bytes": 17560,
-      "sha256": "0ed855c602a23ccc825a844c2c19d33a9123838392057f50d9bd78e64cc7bcdd"
+      "path": ".github/workflows/validate-and-deploy.yml",
+      "bytes": 2586,
+      "sha256": "a15022c4c049b8b03b326f12da82e3301196a884e968365de0bd5d920c8ad720"
     },
     {
-      "name": "CHANGELOG.md",
-      "bytes": 1374,
-      "sha256": "cb4e93a6f31fcc707cf5f9274662c77ac038d4ac198a503c9360863cd807b0d6"
+      "path": ".github/workflows/validate-prompt-suite.yml",
+      "bytes": 1291,
+      "sha256": "8b3985e9aca20f07452c5042300b8a6e84eda92e4988924e1bd6e12ade318a69"
     },
     {
-      "name": "README.md",
-      "bytes": 5314,
-      "sha256": "05520c4dbbcb3411893e0f73c363df5740387eb22a17748132690bf75edfed21"
+      "path": ".gitignore",
+      "bytes": 188,
+      "sha256": "d8528a49ab1ce7499d33eb8c9cd46f43c883d2ad1699ad20f0d433252d3e2158"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3201,
+      "sha256": "9d9a0e06cf3266c1c890bbd14b1ca702ce1e8ac330b2dd8250cac56519cede02"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1803,
+      "sha256": "91553efae9521d25a5120f5bf5f2d0d0d34b5410635e19fd2e93e629bcd44d86"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6277,
+      "sha256": "1abada3c5628fb3c5d699dd143d7ff33092d65673c2c074e9d12f5cb05e64800"
+    },
+    {
+      "path": "config/actions-lock.json",
+      "bytes": 2135,
+      "sha256": "dba5dbec5cd50b476e9e04d7ef8dd69d91c9bea53d5c5c0905411e187a6022a5"
+    },
+    {
+      "path": "config/labels.json",
+      "bytes": 771,
+      "sha256": "d818ffe2b458f4ca7a56510ed926937a8847b700822f235d10990cf73a06a05b"
+    },
+    {
+      "path": "config/library.config.json",
+      "bytes": 1814,
+      "sha256": "927e00e014dc9755a194503007b90e0dbe899a7d5869eb48c972028dd7c33ba3"
+    },
+    {
+      "path": "config/suite.config.json",
+      "bytes": 3023,
+      "sha256": "4c9804b6551201770547975b5a354d03660bec82d66e6427ead530996ad2b845"
+    },
+    {
+      "path": "docs/Codex初回指示.md",
+      "bytes": 2262,
+      "sha256": "e9c8a445f01dfc06ca60c832109aec91a9321df724db0c1a66a328aee8cc3728"
+    },
+    {
+      "path": "docs/GitHub管理設定.md",
+      "bytes": 1916,
+      "sha256": "7baf56c1b05008d091c20dc5fe6997aaa92d5121edab4823130456429ed1d858"
+    },
+    {
+      "path": "docs/Library実装ガイド.md",
+      "bytes": 4190,
+      "sha256": "d3863d81c1cc3de0f37532c9a9099becbfd579f110717428dc9f7b2143f37905"
+    },
+    {
+      "path": "docs/requirements.json",
+      "bytes": 57155,
+      "sha256": "8e9fcfbb6b37295874b13d2e84d40417e752a4427c766cc3e1f773c7a0ba67aa"
+    },
+    {
+      "path": "docs/共通契約.md",
+      "bytes": 1861,
+      "sha256": "cdf95d455dcfbc9b1cd0a9bdc14fe113f0ba45a5a94ac8ab154ba8d6a188a685"
+    },
+    {
+      "path": "docs/移行ガイド.md",
+      "bytes": 3817,
+      "sha256": "3d0e07e00924ad35f218534c824d92228218e4b280e6972e173518fa48aa1e1d"
+    },
+    {
+      "path": "docs/要件追跡表.md",
+      "bytes": 11930,
+      "sha256": "8035507ee4717202c4d250163eff845d24ec30aa3e6f2c03c5bef9fa3cce3acc"
+    },
+    {
+      "path": "docs/調査・設計根拠.md",
+      "bytes": 3792,
+      "sha256": "b838e1f50857e38f3c0979e23edce1d064ace58596edc2385b24e4b4bb41fc29"
+    },
+    {
+      "path": "docs/運用ガイド.md",
+      "bytes": 3142,
+      "sha256": "7848a2f38c2d9ece093f41fff8debddb7175637f88bef8472f82ab7c722d9af3"
+    },
+    {
+      "path": "evals/README.md",
+      "bytes": 2482,
+      "sha256": "b8a70734c3576a261979dffc0bfa71845c3ee0cfefc76ef6036ccb0bdca91a01"
+    },
+    {
+      "path": "evals/cases/E-001.json",
+      "bytes": 645,
+      "sha256": "82c76f4192e9a2f5888482dc97cc99f5470ea39179ca4a831cd58c9609ee29dc"
+    },
+    {
+      "path": "evals/cases/E-002.json",
+      "bytes": 568,
+      "sha256": "171fbfd86e0e2b7657bced91c3e9767be5b024342fa84bc666cb6704e3356912"
+    },
+    {
+      "path": "evals/cases/E-003.json",
+      "bytes": 579,
+      "sha256": "b10642406b9903f8d96b7e675ba07854a272753f49932d23911a15aadd01d3e1"
+    },
+    {
+      "path": "evals/cases/E-004.json",
+      "bytes": 632,
+      "sha256": "cf9c12b3ab29903bd0794f7139d282fcaed554ced94d1255b0b1e5d3b9067427"
+    },
+    {
+      "path": "evals/cases/E-005.json",
+      "bytes": 555,
+      "sha256": "1de3feacfe9496c99b07db45f66b9a435a7e29fa7b61cd2d5d179f371e1c4492"
+    },
+    {
+      "path": "evals/cases/E-006.json",
+      "bytes": 529,
+      "sha256": "65208fde16db5d1d2d94974063d2c3d7c4878335d80ea4c23ff234addfa9b1e9"
+    },
+    {
+      "path": "evals/cases/E-007.json",
+      "bytes": 610,
+      "sha256": "6251719770bba3fce024220d95b747c42a85e71a88065c0e318e13ea8cda0bfd"
+    },
+    {
+      "path": "evals/cases/E-008.json",
+      "bytes": 568,
+      "sha256": "b9b8ca35082d0a4e9b48571d5a9e52f6533e7742a7f20cf99c96a4d81f830f30"
+    },
+    {
+      "path": "evals/cases/E-009.json",
+      "bytes": 602,
+      "sha256": "7bf47374ed638e97ce5e397a3c593d546704f7d63ab29017b1bb8bf4532dbc28"
+    },
+    {
+      "path": "evals/cases/E-010.json",
+      "bytes": 572,
+      "sha256": "7f1ee7c8c228b66875af58156dd90e0866724bc451cdac11278af528e14b9bfb"
+    },
+    {
+      "path": "evals/cases/E-011.json",
+      "bytes": 490,
+      "sha256": "58bca695962b7b9e4170a59aff7c25f84dab0f38a2f16fd7ec613a349d49bf20"
+    },
+    {
+      "path": "evals/cases/E-012.json",
+      "bytes": 507,
+      "sha256": "da9295722cc144a8acb99fa24dc968005997ad5493e2030e5643e96c390d7a32"
+    },
+    {
+      "path": "evals/cases/E-013.json",
+      "bytes": 678,
+      "sha256": "1cd9a692de1bb6c58efb94b7c7560a1e0b6e215d0ce30963f90930fc2d564d65"
+    },
+    {
+      "path": "evals/cases/E-014.json",
+      "bytes": 526,
+      "sha256": "6628de62ac5d66117feed539c97d50873e076f4fb34bd345ca5d263bebc4a457"
+    },
+    {
+      "path": "evals/cases/E-015.json",
+      "bytes": 643,
+      "sha256": "c4b3ee47f25270a936e16a7f5bbe012239740f45c39ef5ae015cc8cbf4020d11"
+    },
+    {
+      "path": "evals/rubric.json",
+      "bytes": 3967,
+      "sha256": "df10e2024213ab18e2a8ee822fb4a0e5628a57af0ab14d63d961e32c05f175f3"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 118,
+      "sha256": "500af8741b512fb4468db65e7826aaa149b2a06e5d98d87baa9b9488a125cc75"
+    },
+    {
+      "path": "schemas/eval-case.schema.json",
+      "bytes": 1368,
+      "sha256": "42e3c7518389464a2ace9000fddcc1886ff13bce91cf5ee9e2d008187a86e5c8"
+    },
+    {
+      "path": "schemas/eval-result.schema.json",
+      "bytes": 1606,
+      "sha256": "91c67820d20fbe40b3a90921e1ff166c6dc1ed3c0f5c9bffa404428a2a6eeff0"
+    },
+    {
+      "path": "schemas/library.schema.json",
+      "bytes": 10824,
+      "sha256": "f43145d61c73d5ca512628d81a8edf69881623239a4e4f1d9bf984455fe5b59b"
+    },
+    {
+      "path": "schemas/meta.schema.json",
+      "bytes": 10272,
+      "sha256": "8481476546332f05e91aee18746a25ce76c4e82a2730cb42ac09b5e7a982e1e2"
+    },
+    {
+      "path": "schemas/suite-manifest.schema.json",
+      "bytes": 2404,
+      "sha256": "57493315e2a6bf9c507e2d3b8ea78af4d1966ddf00ac9768bd1040fa9f104b7c"
+    },
+    {
+      "path": "scripts/build_library.py",
+      "bytes": 1759,
+      "sha256": "c0c8c086fa796dae7832bd37a1004116740f975793d29fbab5b72cd2bbbb1cc3"
+    },
+    {
+      "path": "scripts/build_suite_manifest.py",
+      "bytes": 1777,
+      "sha256": "5771c5852cf51ae98d73efded996cdbe7d7d10be92c7c2e958e5ccc415daab6b"
+    },
+    {
+      "path": "scripts/check_links.py",
+      "bytes": 3827,
+      "sha256": "80108bfe25ce9fdd232031cd101f926adb4af6980e152d7bea62120160e32353"
+    },
+    {
+      "path": "scripts/check_release_audit.py",
+      "bytes": 2822,
+      "sha256": "17aa373221c30a2023dea1868dc5506cf28b4d11bc114611e8a3f8d1b159c9b0"
+    },
+    {
+      "path": "scripts/library_tools.py",
+      "bytes": 12398,
+      "sha256": "b64b80fc4020f59d5a57362239ab316d744e7bd1e3913608fcb2edce0382bd0c"
+    },
+    {
+      "path": "scripts/run_evals.py",
+      "bytes": 4866,
+      "sha256": "b8bb6818900f48ef637116245c4822fe739346e7dd4f11cc25c25b8175a1140e"
+    },
+    {
+      "path": "scripts/suite_tools.py",
+      "bytes": 8174,
+      "sha256": "7b15d721365f96b50f21c764eb1d1a31ec0cc1624808018f96c4aaed9c1e01a3"
+    },
+    {
+      "path": "scripts/validate_library.py",
+      "bytes": 1707,
+      "sha256": "15b90f2813018d5c8d29aaeb82453689f178ffaf4db0d56b8c4942efccd6fc77"
+    },
+    {
+      "path": "scripts/validate_suite.py",
+      "bytes": 9617,
+      "sha256": "3e68a7010b882ac9536b8fd39450e4b59c4de47c25a7405203291c9810a594dd"
+    },
+    {
+      "path": "tests/helpers.py",
+      "bytes": 2786,
+      "sha256": "b37761c8e0c3bc21713561c0ab83c56ab0c3ff576020b9489001e3229b584893"
+    },
+    {
+      "path": "tests/test_library.py",
+      "bytes": 7779,
+      "sha256": "42658078e77c0819727bfedb34016f7b580ff74a1c9d9c4f9db886f6c7eb0048"
+    },
+    {
+      "path": "tests/test_suite.py",
+      "bytes": 5850,
+      "sha256": "0468ba77004b70c07238397e12e3b8d2160abbf68abc405602eef4ee5e656015"
+    },
+    {
+      "path": "プロンプト一覧/00_github-library-foundation-builder_master-prompt.md",
+      "bytes": 18313,
+      "sha256": "0c2a2ebcf7a74491ef580847e07f001045f89b968056f0813191517abdf357f5"
+    },
+    {
+      "path": "プロンプト一覧/01_prompt-architect_master-prompt.md",
+      "bytes": 54447,
+      "sha256": "2af6ce29b39e9b00858267e19efb1015a6144984e9ed46758d2cc1ba4188954b"
+    },
+    {
+      "path": "プロンプト一覧/02_html-guide-generator_master-prompt.md",
+      "bytes": 25238,
+      "sha256": "236ea15e0afac85b7ff57dbc4af24a92fb7361af8ba7d70fe26b1c2565ad5420"
+    },
+    {
+      "path": "プロンプト一覧/03_visual-preview-generator_master-prompt.md",
+      "bytes": 59351,
+      "sha256": "1ac5c8940c2b1100825eb854bbcb24d2f4f68208e14e08e2eeb8e07bae0224c2"
+    },
+    {
+      "path": "プロンプト一覧/04_meta-json-generator_master-prompt.md",
+      "bytes": 17671,
+      "sha256": "a789665c97811483853a2931faa117a05ea3ae406f3b1b567384ca1e862e586c"
+    },
+    {
+      "path": "プロンプト一覧/05_library-json-builder_master-prompt.md",
+      "bytes": 15946,
+      "sha256": "860395a6b95c7e53585f37ebdc62d091f01aba6f0bb995ce49bd7952f8f15bf3"
+    },
+    {
+      "path": "プロンプト一覧/06_github-pages-index-generator_master-prompt.md",
+      "bytes": 14789,
+      "sha256": "3dc451aeecc4691e604af1ba1d15055d924a6373f9f2c7851d29c9cc09ebc48e"
+    },
+    {
+      "path": "プロンプト一覧/07_pwa-generator_master-prompt.md",
+      "bytes": 20318,
+      "sha256": "ace3d09e2843f65907ecad5118add1290b95e6ec989ca369529d4a5cad9ed3f2"
+    },
+    {
+      "path": "プロンプト一覧/08_github-release-auditor_master-prompt.md",
+      "bytes": 23329,
+      "sha256": "78d50e94e46f70b9152aebac155b9e76cd8d654d25e7e97345d4bd3dd7cacc81"
+    },
+    {
+      "path": "プロンプト一覧/09_prompt-quality-auditor_master-prompt.md",
+      "bytes": 15459,
+      "sha256": "01c03fd59c7cdb6c8c041ae4e5c4be12f1a2687cbbc44833c0baed802b647f8e"
     }
   ]
 }
