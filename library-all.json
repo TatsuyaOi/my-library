@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-09-05T19:08:51+09:00",
+  "generated_at": "2026-09-05T21:33:05+09:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -16,7 +16,7 @@
       "icon": "🧩",
       "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
       "accent": "#59636f",
-      "count": 21
+      "count": 22
     },
     {
       "folder": "11_哲学",
@@ -328,6 +328,26 @@
       "category_title": "プロンプト",
       "category_icon": "🧩",
       "url": "./01_プロンプト/12_敵対レビュー_使い方・設計/adversarial-review-suite-design-notes_guide.html"
+    },
+    {
+      "title": "哲学→行動原則コンパイラ v1.0",
+      "description": "ストア派とスピノザを中核に、哲学の原義・接続解釈・候補原則・行動ルールを分けて整理するプロンプトセット。個人哲学・行動原則台帳、意思決定ケース記録、使い方ガイド、設計・検証レポートを収録する。",
+      "group": "思考訓練",
+      "tags": [
+        "哲学",
+        "ストア派",
+        "スピノザ",
+        "行動原則",
+        "意思決定"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-05",
+      "file": "23_哲学から行動原則への変換/哲学から行動原則への変換_v1.0/04_使い方ガイド.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/23_哲学から行動原則への変換/哲学から行動原則への変換_v1.0/04_使い方ガイド.html"
     },
     {
       "title": "厳格・具体的レビュー＆改善マスタープロンプト",
