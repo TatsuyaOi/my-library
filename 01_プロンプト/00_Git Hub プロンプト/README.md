@@ -1,149 +1,100 @@
-# GitHub Library Prompt Suite v2
+# GitHub Library Prompt Suite 2.1.0
 
-**作成日：2026年8月24日**  
-**Library Contract Version：2.0**
+更新日：2026年9月5日／Library Contract：2.0／正規フォルダ：**プロンプト一覧/**
 
-このフォルダは、Markdown原本、HTML説明書、任意のプレビュー画像、`meta.json` を資料単位で管理し、`library.json`、`index.html`、PWAを介してAndroidスマートフォンから閲覧するためのマスタープロンプト一式です。
+00〜08の元の専門機能を保持して改訂し、09の品質監査と開発管理・検証基盤を追加したセットです。
+`プロンプト一覧/` は生成用の道具、`content/` は個別資料の正本、`site/` は公開用の派生物です。
+GitHubへpushしただけでプロンプトが実行されるわけではありません。Codexへ対象工程を指示してください。
 
-## 収録ファイル
+## まず読む
 
-| 順番 | ファイル | 役割 |
-|---:|---|---|
-| 0 | `00_github-library-foundation-builder_master-prompt_v1.0.md` | config、Schema、スクリプト、GitHub Actionsを一度作る |
-| 1 | `01_prompt-architect_master-prompt_v1.2.md` | 再利用するプロンプト原本を作る |
-| 2 | `02_html-guide-generator_master-prompt_v2.0.md` | Markdown原本を保持してHTML説明書を作る |
-| 3 | `03_visual-preview-generator_master-prompt_v2.2.md` | 任意のpreviewとthumbnailを作る |
-| 4 | `04_meta-json-generator_master-prompt_v2.0.md` | 個別資料のmetaを作る・移行する |
-| 5 | `05_library-json-builder_master-prompt_v2.0.md` | 公開可能資料だけをlibraryへ集約する |
-| 6 | `06_github-pages-index-generator_master-prompt_v2.0.md` | Android向けindexと404を作る |
-| 7 | `07_pwa-generator_master-prompt_v2.0.md` | ホーム画面起動・offline・更新を追加する |
-| 8 | `08_github-release-auditor_master-prompt_v2.0.md` | 公開前、CI、公開後を監査する |
+既存リポジトリへ入れる場合は `docs/移行ガイド.md` を先に読み、既存設定・UI・Workflowを差分統合します。
+初回のCodex依頼は `docs/Codex初回指示.md` にあります。実行手順は `docs/運用ガイド.md`。
 
-## 元ファイルからの対応
+## コンポーネント一覧（スクリプト管理）
 
-| 元ファイル | 修正版 |
+<!-- SUITE_COMPONENTS:BEGIN -->
+
+| 番号 | ファイル | Version | 役割 |
+|---:|---|---|---|
+| 00 | [00_github-library-foundation-builder_master-prompt.md](プロンプト一覧/00_github-library-foundation-builder_master-prompt.md) | 1.1 | 共通基盤を作成・更新・移行する |
+| 01 | [01_prompt-architect_master-prompt.md](プロンプト一覧/01_prompt-architect_master-prompt.md) | 1.3 | 再利用するプロンプト原本を設計する |
+| 02 | [02_html-guide-generator_master-prompt.md](プロンプト一覧/02_html-guide-generator_master-prompt.md) | 2.1 | 原本を保持してHTML説明書を作る |
+| 03 | [03_visual-preview-generator_master-prompt.md](プロンプト一覧/03_visual-preview-generator_master-prompt.md) | 2.4 | 固定デザインでpreviewとthumbnailを作る |
+| 04 | [04_meta-json-generator_master-prompt.md](プロンプト一覧/04_meta-json-generator_master-prompt.md) | 2.1 | 個別資料の管理情報と鮮度を管理する |
+| 05 | [05_library-json-builder_master-prompt.md](プロンプト一覧/05_library-json-builder_master-prompt.md) | 2.1 | 公開可能資料を決定的に集約する |
+| 06 | [06_github-pages-index-generator_master-prompt.md](プロンプト一覧/06_github-pages-index-generator_master-prompt.md) | 2.1 | 安定したindex・404の表示機能を整える |
+| 07 | [07_pwa-generator_master-prompt.md](プロンプト一覧/07_pwa-generator_master-prompt.md) | 2.1 | 非破壊でPWA・更新・オフライン機能を加える |
+| 08 | [08_github-release-auditor_master-prompt.md](プロンプト一覧/08_github-release-auditor_master-prompt.md) | 2.1 | 公開前・CI・公開後の成果物を監査する |
+| 09 | [09_prompt-quality-auditor_master-prompt.md](プロンプト一覧/09_prompt-quality-auditor_master-prompt.md) | 1.0 | プロンプト要件・品質・回帰を監査する |
+
+<!-- SUITE_COMPONENTS:END -->
+
+## 構成
+
+```text
+AGENTS.md
+プロンプト一覧/          00〜09の完全なMD
+config/                 SuiteとLibraryの設定
+schemas/                Suite・評価・LibraryのJSON Schema
+scripts/                同期・構造検証・評価記録・Libraryビルド
+.github/                Issue・PR・CI・任意のPages配布
+tests/                 検証器とビルド処理の回帰テスト
+evals/                  15件の評価ケースと評価規約
+docs/                   運用・移行・要件台帳・外部根拠
+reports/                今回の変更差分と検証結果
+```
+
+## 最初の確認
+
+Python 3.12以上を実行対象とします。同梱スクリプトは外部のLLM/APIを自動呼出ししません。
+
+```bash
+python -m pip install -r requirements-dev.txt
+python scripts/build_suite_manifest.py --check
+python scripts/validate_suite.py --report-dir reports/local
+python -m unittest discover -s tests -v
+```
+
+プロンプトや設定を変更した場合は、変更ブランチでCHANGELOGを編集し、以下の順で同期します。
+
+```bash
+python scripts/build_suite_manifest.py --write
+python scripts/build_suite_manifest.py --check
+python scripts/validate_suite.py --report-dir reports/local
+```
+
+CI内ではManifestを再生成しません。未同期の変更を失敗として検出します。
+
+## どの工程を使うか
+
+| やりたいこと | 実行する工程 |
 |---|---|
-| `Master Prompt_v1.1(4).md` | `01_prompt-architect_master-prompt_v1.2.md` |
-| `260823_HTML生成プロンプト_視覚表現自動配分版(6).md` | `02_html-guide-generator_master-prompt_v2.0.md` |
-| `まとめ画像 1個生成(3).md` | `03_visual-preview-generator_master-prompt_v2.2.md` |
-| `json生成(2).md` | `04_meta-json-generator_master-prompt_v2.0.md` |
-| `library-Json 生成(1).md` | `05_library-json-builder_master-prompt_v2.0.md` |
-| `Github index生成(1).md` | `06_github-pages-index-generator_master-prompt_v2.0.md` |
-| `PWA生成.md` | `07_pwa-generator_master-prompt_v2.0.md` |
-| `Github 公開前監査(1).md` | `08_github-release-auditor_master-prompt_v2.0.md` |
+| 初回基盤を導入 | 00。既存実装があれば監査して不足だけ補完 |
+| 新しい再利用プロンプト | 01 → 09 → 02 → 03任意 → 04 → 05 → 08 |
+| 既にある資料を登録 | 02 → 03任意 → 04 → 05 → 08。01は不要 |
+| マスタープロンプトの改訂 | 対象MD → 09 → Suite同期・検証 → PR |
+| 索引UIを変更 | 06 → 必要に応じ07 → 08 |
+| PWA設定を変更 | 07 → 08 |
+| 公開後に確認 | 08 POST_DEPLOY |
 
-## 初回の推奨順序
+09は公開後の最後の工程ではなく、プロンプト設計・変更時に使う品質ゲートです。
+00・06・07を資料追加のたびに再実行しないでください。
 
-```text
-0. Foundation Builderを実行
-   ↓
-library.config.json / JSON Schema / build scripts / GitHub Actions
-   ↓
-1. Prompt Architectで原本MDを作る
-   ↓
-2. HTML Guide Generatorで説明書を作る
-   ↓
-3. 必要な資料だけpreviewを作る
-   ↓
-4. meta.jsonを作る
-   ↓
-5. library.jsonを再構築
-   ↓
-6. index.html / 404.htmlを作る
-   ↓
-7. PWA化
-   ↓
-8. 公開前監査 → deploy → POST_DEPLOY監査
-```
+## 安全な初期状態
 
-## 資料を1件追加するとき
+新規資料は `draft / private / publish=false`。公開条件は `active / public / publish=true` と検証成功です。
+ただし、このメタデータはGitHubリポジトリのアクセス制御ではありません。公開repo内の資料はsite外でも閲覧され得ます。
+このセットはGitHubへのpush、Projects作成、branch保護設定、Pages有効化、公開を実行していません。
+Pages用Workflowは `LIBRARY_PIPELINE_ENABLED=true` でLibrary検証を、`LIBRARY_PAGES_DEPLOY_ENABLED=true` で配布を有効化する設計です。初期状態は配布されません。
 
-```text
-原本MD
-↓
-HTML説明書
-↓
-preview（任意）
-↓
-meta.json
-↓
-library.jsonを再ビルド
-```
+## 検証範囲
 
-`index.html` は `library.json` を読む固定テンプレートなので、資料を追加するたびに再生成する必要はありません。indexのデザイン、機能、data contractを変更するときだけ更新します。
+同梱の `VALIDATION_REPORT.md` と `reports/` は今回のローカル検証記録です。
+Suite構造・Pythonツールの実テストと、LLMの実出力比較は別です。独立した実モデルのA/B比較、既存リポジトリの本番動作、Android実機・PWA動作は未実施です。
+モデル評価の入力と記録手順は `evals/README.md` を使ってください。
 
-## 推奨フォルダ
+## 版の扱い
 
-```text
-content/
-└─ example-item/
-   ├─ example-item_prompt.md
-   ├─ example-item_guide.html
-   ├─ example-item_preview.webp
-   ├─ example-item_thumb.webp
-   └─ meta.json
-```
-
-previewとthumbnailは任意です。
-
-## 公開条件
-
-新規metaは安全側で始めます。
-
-```json
-{
-  "status": "draft",
-  "visibility": "private",
-  "publish": false
-}
-```
-
-通常の公開条件：
-
-```text
-status = active
-visibility = public
-publish = true
-```
-
-非公開にしたい資料を、indexから隠すだけで保護したことにしないでください。公開ディレクトリと `library.json` へコピーしないことが重要です。
-
-## 更新時の再生成範囲
-
-| 変更 | 再生成・更新 |
-|---|---|
-| 原本MD | HTML、preview、meta、library |
-| summary / tags | meta、library |
-| previewだけ | preview情報、meta、library |
-| 新資料追加 | その資料一式、library |
-| indexデザイン | index、PWA build ID、監査 |
-| PWA設定 | manifest、service worker、監査 |
-| category体系 | config、全meta監査、library、index |
-
-## stale判定
-
-原本が変わると、以前のHTMLや画像は古くなる可能性があります。
-
-```text
-current source SHA-256
-≠ guide generated-from source SHA-256
-→ guideはstale
-```
-
-staleなguideやpreviewは公開索引から一時的に省略し、再生成後に戻す設計です。
-
-## 旧版からの主な変更
-
-- 正しいHTML生成プロンプトを基礎に、原本保持モードを追加
-- `meta.json` / `library.json` をSchema 2.0へ更新
-- `publish` / `visibility` / `status` を明確化
-- sourceと派生物のSHA-256を追加
-- previewからthumbnailを派生
-- indexを固定テンプレート化し、404を追加
-- PWA manifestのid/lang/maskableと更新戦略を強化
-- CI / POST_DEPLOY / Git履歴監査を追加
-- config / Schema / scripts / GitHub Actionsを作るFoundation Builderを追加
-
-## 注意
-
-各プロンプトは、利用できないツール、未実施のhash、未生成ファイル、未確認の公開設定を「実施済み」と書かないように設計されています。実行環境に応じて未確認事項が残る場合は、公開前監査で明示してください。
+Component Versionは各MD冒頭、Suite Versionは `config/suite.config.json`、Library Contractはデータ互換の版です。
+旧ファイル名との対応は移行ガイドにあります。履歴はGitとCHANGELOGで管理し、現行フォルダに複数の最新版を並べません。

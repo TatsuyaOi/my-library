@@ -1,0 +1,282 @@
+[
+  {
+    "component": "00",
+    "status": "CLARIFY",
+    "before": "my-library/\n├─ content/",
+    "after": "my-library/\n├─ AGENTS.md\n├─ プロンプト一覧/                  # 00〜09の設計・監査プロンプト\n├─ evals/                         # 回帰ケースと評価規約\n├─ docs/                          # 運用・移行・共通契約\n├─ content/",
+    "rationale": "ユーザーの正規フォルダとSuite管理を追加"
+  },
+  {
+    "component": "00",
+    "status": "CLARIFY",
+    "before": "`build_id` は、利用可能ならGit commit SHA、なければ正規化した公開itemsのSHA-256から作成してください。",
+    "after": "`build_id` は、公開入力・設定・テンプレート・生成コードを正規化した内容のSHA-256から作成してください。Git commit SHAは確認できる場合に来歴として別記できます。",
+    "rationale": "未commit変更・UI変更も検出"
+  },
+  {
+    "component": "00",
+    "status": "ADD",
+    "before": null,
+    "after": "## 14. Codex・Suite管理基盤（1.1追加）",
+    "rationale": "開発管理・証拠・安全性の不足を補完。元の専門機能を維持。"
+  },
+  {
+    "component": "01",
+    "status": "CLARIFY",
+    "before": "- `PROMPT_VARIANTS = 3`",
+    "after": "- `PROMPT_VARIANTS = 3`\n- `OUTPUT_PACKAGE = auto`\n- `SHOW_VARIANTS = on_request_for_repository_work`\n- `EVALUATION_KIND = analytical_unless_executed`\n- `MAX_REFINEMENT_ROUNDS = 3`",
+    "rationale": "比較と画面表示を分離"
+  },
+  {
+    "component": "01",
+    "status": "CLARIFY",
+    "before": "- 質問数は固定しません。",
+    "after": "- 質問数は原則1〜3問、重大で複雑な場合のみ最大5問とします。",
+    "rationale": "今回governingの質問上限へ整合"
+  },
+  {
+    "component": "01",
+    "status": "CLARIFY",
+    "before": "- 一般的なタスクでは、必要なら1〜5問程度を目安にしてください。",
+    "after": "- 一般的なタスクでは、調査・ファイル確認でも解決できず、回答で成果物が大きく変わる事項だけ質問してください。",
+    "rationale": "不要な質問削減"
+  },
+  {
+    "component": "01",
+    "status": "CLARIFY",
+    "before": "- 複雑、高額、高リスク、長期運用のタスクでは、必要に応じて質問数を増やしてください。",
+    "after": "- 複雑、高額、高リスク、長期運用でも最大5問に絞り、残りは仮定・未確認として扱ってください。",
+    "rationale": "無制限質問の解消"
+  },
+  {
+    "component": "01",
+    "status": "CLARIFY",
+    "before": "情報が十分な場合は、原則として次の順番で出力してください。",
+    "after": "情報が十分で、候補比較の詳細表示を求められた場合は、次の順番で出力してください。リポジトリ改訂・ファイル納品では27節の出力契約を優先し、完成プロンプトと監査説明を分離してください。",
+    "rationale": "詳細表示が強制される競合を解消"
+  },
+  {
+    "component": "01",
+    "status": "CLARIFY",
+    "before": "再利用プロンプトとして保存する場合、通常の画面出力に加えて次を実施してください。",
+    "after": "再利用プロンプトとして保存する場合、次を実施してください。画面への全文重複表示はユーザー指定がある場合だけにしてください。",
+    "rationale": "主MDとチャットの重複抑制"
+  },
+  {
+    "component": "01",
+    "status": "CLARIFY",
+    "before": "質問数はタスクの複雑さに応じて決め、一度にまとめてください。",
+    "after": "質問は原則1〜3問、重大で複雑な場合のみ最大5問に絞り、一度にまとめてください。",
+    "rationale": "短縮版も同期"
+  },
+  {
+    "component": "01",
+    "status": "CLARIFY",
+    "before": "出力順は次の通りです。",
+    "after": "詳細な候補比較が必要な場合の出力順は次の通りです。リポジトリ改訂・ファイル納品では、統合最終版を主MDとし、候補・比較・短縮版・使い方は指定に応じて別の設計メモへ分離してください。",
+    "rationale": "短縮版出力契約も同期"
+  },
+  {
+    "component": "01",
+    "status": "CLARIFY",
+    "before": "| 質問数 | 複雑さに応じて自動 | 最大3問、最大10問 |",
+    "after": "| 質問数 | 原則1〜3問、重大時のみ最大5問 | 質問なし、最大3問 |",
+    "rationale": "上限矛盾除去"
+  },
+  {
+    "component": "01",
+    "status": "ADD",
+    "before": null,
+    "after": "## 27．要件追跡・評価・09への引継ぎ（1.3追加）",
+    "rationale": "開発管理・証拠・安全性の不足を補完。元の専門機能を維持。"
+  },
+  {
+    "component": "02",
+    "status": "ADD",
+    "before": null,
+    "after": "# 21. 内容一致の証拠と生成記録（2.1追加）",
+    "rationale": "開発管理・証拠・安全性の不足を補完。元の専門機能を維持。"
+  },
+  {
+    "component": "03",
+    "status": "CLARIFY",
+    "before": "```text\n# VISUAL DIRECTOR MASTER PROMPT",
+    "after": "````text\n# VISUAL DIRECTOR MASTER PROMPT",
+    "rationale": "内部コード例を壊さない4連外側フェンス"
+  },
+  {
+    "component": "03",
+    "status": "CLARIFY",
+    "before": "その他の条件：\n```\n\n---\n\n# 3．日常利用向け短縮版",
+    "after": "その他の条件：\n````\n\n---\n\n# 3．日常利用向け短縮版",
+    "rationale": "外側フェンス閉じを同期"
+  },
+  {
+    "component": "03",
+    "status": "CLARIFY",
+    "before": "ARTIFACT_MANIFEST = required",
+    "after": "ARTIFACT_MANIFEST = required_when_packaging\nGENERATION_CAPABILITY = verify_before_execution",
+    "rationale": "画像のみの依頼とmanifest強制の競合解消"
+  },
+  {
+    "component": "03",
+    "status": "CLARIFY",
+    "before": "## 0. デフォルト設定\n\nTARGET_AI = auto",
+    "after": "## 0. デフォルト設定\n\nこの工程の実行を依頼された場合だけ適用する。上位ツール仕様を優先し、生成・編集対象の実在と能力を確認する。生成不能はDESIGN_ONLYとして報告する。\n\nTARGET_AI = auto",
+    "rationale": "単体コピー時にも能力境界を保持"
+  },
+  {
+    "component": "03",
+    "status": "ADD",
+    "before": null,
+    "after": "## 16-A．生成能力・成果物・依存関係の検証（2.4追加）",
+    "rationale": "開発管理・証拠・安全性の不足を補完。元の専門機能を維持。単体コピーの取りこぼしを防ぐため統合最終版の内側へ移動。"
+  },
+  {
+    "component": "04",
+    "status": "CLARIFY",
+    "before": "構文、Schema、原本、派生物、hash、公開状態、参照ファイルを監査し、修正版まで作る。",
+    "after": "構文、Schema、原本、派生物、hash、公開状態、参照ファイルを監査し、レポートを作る。対象ファイルは変更しない。\n\n## FIX_SAFE\n修正依頼が明示された場合だけ、意味を変えない修正を行い再検証する。",
+    "rationale": "AUDITをread-only化"
+  },
+  {
+    "component": "04",
+    "status": "CLARIFY",
+    "before": "問題がある場合は、診断だけで終わらず修正版を作成してください。ただしユーザー所有フィールドの意味を勝手に変更しないでください。",
+    "after": "問題がある場合は根拠と修正案を報告してください。修正が明示されたFIX_SAFEの場合だけ実修正し、ユーザー所有フィールドの意味を勝手に変更しないでください。",
+    "rationale": "監査の意図しない書込みを防ぐ"
+  },
+  {
+    "component": "04",
+    "status": "ADD",
+    "before": null,
+    "after": "# 22. 非破壊更新・Schema・鮮度の補強（2.1追加）",
+    "rationale": "開発管理・証拠・安全性の不足を補完。元の専門機能を維持。"
+  },
+  {
+    "component": "05",
+    "status": "CLARIFY",
+    "before": "1. 利用可能ならGit commit SHA\n2. なければ正規化した公開itemレコードのSHA-256",
+    "after": "1. 公開入力・設定・テンプレート・生成コードの正規化内容のSHA-256\n2. Git commit SHAは確認できる場合、内容hashとは別の来歴として記録",
+    "rationale": "ビルドIDの入力範囲修正"
+  },
+  {
+    "component": "05",
+    "status": "CLARIFY",
+    "before": "`generated_at` は実生成日時として設定できます。",
+    "after": "`generated_at` は固定された入力時点または `null` とします。変動する実生成日時は非公開の実行ログへ分離してください。",
+    "rationale": "byte決定性を妨げる可変時刻を分離"
+  },
+  {
+    "component": "05",
+    "status": "CLARIFY",
+    "before": "問題がある場合は、生成可能なら修正版libraryを作成してください。source metaを勝手に書き換えないでください。",
+    "after": "AUDITでは問題と修正案を報告し、libraryもsource metaも書き換えないでください。実修正は明示されたREBUILD／UPDATEで行ってください。",
+    "rationale": "監査モード統一"
+  },
+  {
+    "component": "05",
+    "status": "CLARIFY",
+    "before": "- relations\n",
+    "after": "- relations（公開許可済みIDに限定して射影する）\n",
+    "rationale": "非公開IDの漏えい防止"
+  },
+  {
+    "component": "05",
+    "status": "CLARIFY",
+    "before": "preview hashと `thumbnail_generated_from_preview_sha256` が一致し、実ファイルがある場合のみ掲載します。",
+    "after": "preview自体が現行sourceに対して公開適格であり、その実hashと `thumbnail_generated_from_preview_sha256` が一致し、thumbnailの実ファイルも整合する場合のみ掲載します。",
+    "rationale": "stale依存を連鎖させる"
+  },
+  {
+    "component": "05",
+    "status": "ADD",
+    "before": null,
+    "after": "# 18. 派生物の連鎖・漏えい・再現ビルド（2.1追加）",
+    "rationale": "開発管理・証拠・安全性の不足を補完。元の専門機能を維持。"
+  },
+  {
+    "component": "06",
+    "status": "ADD",
+    "before": null,
+    "after": "# 22. 安定UI・サブパス・公開防御の補強（2.1追加）",
+    "rationale": "開発管理・証拠・安全性の不足を補完。元の専門機能を維持。"
+  },
+  {
+    "component": "07",
+    "status": "ADD",
+    "before": null,
+    "after": "# 26. 公開取り消し・cache更新・実行証拠（2.1追加）",
+    "rationale": "開発管理・証拠・安全性の不足を補完。元の専門機能を維持。"
+  },
+  {
+    "component": "08",
+    "status": "CLARIFY",
+    "before": "- 公開判定：PASS / PASS WITH WARNINGS / FAIL",
+    "after": "- 公開判定：PASS / PASS WITH WARNINGS / FAIL / INCOMPLETE",
+    "rationale": "必須未実施の判定を追加"
+  },
+  {
+    "component": "08",
+    "status": "CLARIFY",
+    "before": "公開可能だがMEDIUM/LOWまたは未確認事項あり。",
+    "after": "必須検査は成功し、任意のMEDIUM/LOWまたは任意検査の未確認事項だけがある。",
+    "rationale": "必須未確認での合格を防止"
+  },
+  {
+    "component": "08",
+    "status": "CLARIFY",
+    "before": "未確認が多い場合は無理にPASSを出さないでください。",
+    "after": "## INCOMPLETE\n必須検査が未実施、または対象・証拠にアクセスできず判定不能。推奨終了コードは2。\n\n必須の未確認が1件でもある場合は無理にPASSを出さないでください。",
+    "rationale": "必須未確認の停止を具体化"
+  },
+  {
+    "component": "08",
+    "status": "CLARIFY",
+    "before": "- `2`：監査自体を完了できない実行エラー",
+    "after": "- `2`：必須検査未実施のINCOMPLETE、または監査自体を完了できない実行エラー",
+    "rationale": "exit codeの整合"
+  },
+  {
+    "component": "08",
+    "status": "ADD",
+    "before": null,
+    "after": "# 26. 判定の厳密化と09との境界（2.1追加）",
+    "rationale": "開発管理・証拠・安全性の不足を補完。元の専門機能を維持。"
+  },
+  {
+    "component": "09",
+    "status": "ADD_OR_CLARIFY",
+    "before": null,
+    "after": "品質監査プロンプト新設",
+    "rationale": "今回の明示された不足補完。公開監査から独立。"
+  },
+  {
+    "component": "ALL",
+    "status": "ADD_OR_CLARIFY",
+    "before": null,
+    "after": "固定ファイル名・UTF-8 LF・版ヘッダー同期",
+    "rationale": "旧版の実体v2.3対管理v2.2およびCRLF差を別々に解消。"
+  },
+  {
+    "component": "05",
+    "status": "ADD_OR_CLARIFY",
+    "before": null,
+    "after": "追加ファイル経由の鮮度検査迂回を拒否",
+    "rationale": "reserved派生物をadditionalへ重複指定できない実装と負例テスト。"
+  },
+  {
+    "component": "08",
+    "status": "ADD_OR_CLARIFY",
+    "before": null,
+    "after": "現在buildに紐づく監査証拠ゲート",
+    "rationale": "必須実検証と実ファイル証拠がない場合は配布停止。"
+  },
+  {
+    "component": "05",
+    "status": "ADD_OR_CLARIFY",
+    "before": null,
+    "after": "管理集計は内部レポート、公開統計の範囲を明示",
+    "rationale": "private関連IDや内部除外詳細を公開索引に複製しない。"
+  }
+]

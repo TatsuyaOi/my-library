@@ -1,0 +1,22 @@
+{
+  "id": "E-009",
+  "kind": "boundary",
+  "components": [
+    "03"
+  ],
+  "input": "同じSeries ID、明示style参照で別内容のpreviewを作る。周囲に別シリーズの画像がある。",
+  "expected_behavior": [
+    "明示Style Lockを優先する",
+    "内容に応じた構造変更は許容する"
+  ],
+  "failure_conditions": [
+    "偶然の過去画像で外観を変える",
+    "全ての内容を同じ構図へ固定する"
+  ],
+  "critical": false,
+  "requires": [
+    "text_model",
+    "image_tool"
+  ],
+  "origin": "添付03 v2.3のスタイル統一テストを継承"
+}

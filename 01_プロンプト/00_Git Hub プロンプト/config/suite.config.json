@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "suite_version": "2.1.0",
+  "contract_version": "2.0",
+  "released_on": "2026-09-05",
+  "prompt_directory": "プロンプト一覧",
+  "text_encoding": "utf-8",
+  "line_endings": "LF",
+  "components": [
+    {
+      "order": 0,
+      "id": "github-library-foundation-builder",
+      "path": "プロンプト一覧/00_github-library-foundation-builder_master-prompt.md",
+      "description": "共通基盤を作成・更新・移行する"
+    },
+    {
+      "order": 1,
+      "id": "prompt-architect",
+      "path": "プロンプト一覧/01_prompt-architect_master-prompt.md",
+      "description": "再利用するプロンプト原本を設計する"
+    },
+    {
+      "order": 2,
+      "id": "html-guide-generator",
+      "path": "プロンプト一覧/02_html-guide-generator_master-prompt.md",
+      "description": "原本を保持してHTML説明書を作る"
+    },
+    {
+      "order": 3,
+      "id": "visual-preview-generator",
+      "path": "プロンプト一覧/03_visual-preview-generator_master-prompt.md",
+      "description": "固定デザインでpreviewとthumbnailを作る"
+    },
+    {
+      "order": 4,
+      "id": "meta-json-generator",
+      "path": "プロンプト一覧/04_meta-json-generator_master-prompt.md",
+      "description": "個別資料の管理情報と鮮度を管理する"
+    },
+    {
+      "order": 5,
+      "id": "library-json-builder",
+      "path": "プロンプト一覧/05_library-json-builder_master-prompt.md",
+      "description": "公開可能資料を決定的に集約する"
+    },
+    {
+      "order": 6,
+      "id": "github-pages-index-generator",
+      "path": "プロンプト一覧/06_github-pages-index-generator_master-prompt.md",
+      "description": "安定したindex・404の表示機能を整える"
+    },
+    {
+      "order": 7,
+      "id": "pwa-generator",
+      "path": "プロンプト一覧/07_pwa-generator_master-prompt.md",
+      "description": "非破壊でPWA・更新・オフライン機能を加える"
+    },
+    {
+      "order": 8,
+      "id": "github-release-auditor",
+      "path": "プロンプト一覧/08_github-release-auditor_master-prompt.md",
+      "description": "公開前・CI・公開後の成果物を監査する"
+    },
+    {
+      "order": 9,
+      "id": "prompt-quality-auditor",
+      "path": "プロンプト一覧/09_prompt-quality-auditor_master-prompt.md",
+      "description": "プロンプト要件・品質・回帰を監査する"
+    }
+  ],
+  "managed_paths": [
+    "AGENTS.md",
+    "README.md",
+    "CHANGELOG.md",
+    "config",
+    "schemas",
+    "scripts",
+    "tests",
+    "evals/cases",
+    "evals/rubric.json",
+    "evals/README.md",
+    "docs",
+    ".github",
+    "プロンプト一覧",
+    "requirements-dev.txt",
+    ".gitattributes",
+    ".gitignore",
+    ".editorconfig"
+  ],
+  "manifest_exclusions": [
+    "SUITE_MANIFEST.json",
+    "VALIDATION_REPORT.md",
+    "reports",
+    "evals/runs"
+  ],
+  "report_scope": "suite_structure_and_local_tools_not_model_behavior"
+}

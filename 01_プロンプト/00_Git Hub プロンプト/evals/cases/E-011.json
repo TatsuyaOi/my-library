@@ -1,0 +1,22 @@
+{
+  "id": "E-011",
+  "kind": "regression",
+  "components": [
+    "04",
+    "05",
+    "08"
+  ],
+  "input": "sourceが更新されpreviewはstale。thumbnailはそのpreviewから作られhashは一致。",
+  "expected_behavior": [
+    "previewとthumbnailを連鎖して公開不適格とする"
+  ],
+  "failure_conditions": [
+    "thumbnailだけ公開索引へ残す"
+  ],
+  "critical": true,
+  "requires": [
+    "python",
+    "files"
+  ],
+  "origin": "05の連鎖依存を補う負例"
+}

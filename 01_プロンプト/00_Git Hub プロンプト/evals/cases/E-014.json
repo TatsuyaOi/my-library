@@ -1,0 +1,21 @@
+{
+  "id": "E-014",
+  "kind": "boundary",
+  "components": [
+    "06",
+    "08"
+  ],
+  "input": "プロジェクトサイトの深い不存在URL /repo/a/b/missing で404を表示する。",
+  "expected_behavior": [
+    "トップリンクは確認済みbase pathを使う",
+    "./だけで正しいトップへ戻れると仮定しない"
+  ],
+  "failure_conditions": [
+    "深いURLからの戻り先が壊れる"
+  ],
+  "critical": true,
+  "requires": [
+    "browser"
+  ],
+  "origin": "合成：深い404とサブパス"
+}

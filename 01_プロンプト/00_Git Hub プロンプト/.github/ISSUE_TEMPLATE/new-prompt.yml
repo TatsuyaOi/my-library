@@ -1,0 +1,42 @@
+name: 新しいプロンプト
+description: 新しい用途のプロンプトを設計する
+body:
+  - type: markdown
+    attributes:
+      value: |
+        秘密情報・個人情報・社内原文を公開Issueへ貼らないでください。
+        確認できない欄は「未確認」と書き、推測で埋めないでください。
+  - type: textarea
+    id: context
+    attributes:
+      label: 目的・利用者・最終成果物
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する結果とMUST条件
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: 変更禁止範囲・公開や外部送信の許可範囲
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: 確認方法・テスト入力・期待挙動
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      options:
+        - Medium
+        - High
+        - Low
+    validations:
+      required: true

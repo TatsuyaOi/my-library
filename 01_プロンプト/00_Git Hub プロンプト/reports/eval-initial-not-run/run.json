@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "run_id": "initial-not-run",
+  "suite_version": "2.1.0",
+  "model": null,
+  "environment": null,
+  "cases": [
+    {
+      "id": "E-001",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-002",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-003",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-004",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-005",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-006",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-007",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-008",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-009",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-010",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-011",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-012",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-013",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-014",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    },
+    {
+      "id": "E-015",
+      "execution": "NOT_RUN",
+      "result": "NOT_RUN",
+      "evidence_file": null,
+      "notes": "Prepared only; no external call has been made."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "execution": "EXECUTED",
+  "scope": "full ZIP extraction, file-byte roundtrip, manifest validation, suite structural checks and 44 unit tests",
+  "result": "PASS",
+  "commands": [
+    {
+      "command": "python scripts/build_suite_manifest.py --check",
+      "exit_code": 0,
+      "stdout": "PASS: manifest and README are current (read-only check)\n",
+      "stderr": ""
+    },
+    {
+      "command": "python scripts/validate_suite.py",
+      "exit_code": 0,
+      "stdout": "PASS: suite structure; model behavior NOT_RUN\n",
+      "stderr": ""
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "stdout": "PREPARED: /tmp/tmpt4k6em0m/repo/evals/runs/unit-run; all 15 cases remain NOT_RUN\n",
+      "stderr": "test_additional_cannot_bypass_stale_preview (test_library.LibraryTests.test_additional_cannot_bypass_stale_preview) ... ok\ntest_audit_from_wrong_build_rejected (test_library.LibraryTests.test_audit_from_wrong_build_rejected) ... ok\ntest_confirmed_base_path_allowed (test_library.LibraryTests.test_confirmed_base_path_allowed) ... ok\ntest_current_thumbnail_kept (test_library.LibraryTests.test_current_thumbnail_kept) ... ok\ntest_deterministic_rebuild (test_library.LibraryTests.test_deterministic_rebuild) ... ok\ntest_dry_plan_does_not_write_site (test_library.LibraryTests.test_dry_plan_does_not_write_site) ... ok\ntest_duplicate_alias_rejected (test_library.LibraryTests.test_duplicate_alias_rejected) ... ok\ntest_empty_build_requires_override (test_library.LibraryTests.test_empty_build_requires_override) ... ok\ntest_link_anchor_success (test_library.LibraryTests.test_link_anchor_success) ... ok\ntest_link_javascript_rejected (test_library.LibraryTests.test_link_javascript_rejected) ... ok\ntest_link_missing_detected (test_library.LibraryTests.test_link_missing_detected) ... ok\ntest_missing_release_audit_is_incomplete (test_library.LibraryTests.test_missing_release_audit_is_incomplete) ... ok\ntest_other_base_path_rejected (test_library.LibraryTests.test_other_base_path_rejected) ... ok\ntest_private_report_rejected_before_write (test_library.LibraryTests.test_private_report_rejected_before_write) ... FAIL: report path must be outside site/\nok\ntest_public_private_projection (test_library.LibraryTests.test_public_private_projection) ... ok\ntest_publication_requires_three_conditions (test_library.LibraryTests.test_publication_requires_three_conditions) ... ok\ntest_removal_requires_explicit_override (test_library.LibraryTests.test_removal_requires_explicit_override) ... ok\ntest_schema_rejects_empty_title (test_library.LibraryTests.test_schema_rejects_empty_title) ... ok\ntest_source_path_escape_rejected (test_library.LibraryTests.test_source_path_escape_rejected) ... ok\ntest_source_symlink_rejected (test_library.LibraryTests.test_source_symlink_rejected) ... ok\ntest_stale_source_excluded (test_library.LibraryTests.test_stale_source_excluded) ... ok\ntest_tampered_preview_removed (test_library.LibraryTests.test_tampered_preview_removed) ... ok\ntest_thumbnail_staleness_is_transitive (test_library.LibraryTests.test_thumbnail_staleness_is_transitive) ... ok\ntest_unknown_source_hash_excluded (test_library.LibraryTests.test_unknown_source_hash_excluded) ... ok\ntest_unlisted_file_detected_and_cleaned_on_rebuild (test_library.LibraryTests.test_unlisted_file_detected_and_cleaned_on_rebuild) ... ok\ntest_unowned_site_not_deleted (test_library.LibraryTests.test_unowned_site_not_deleted) ... ok\ntest_evidence_escape_rejected (test_suite.EvalTests.test_evidence_escape_rejected) ... ok\ntest_not_run_cannot_pass (test_suite.EvalTests.test_not_run_cannot_pass) ... ok\ntest_prepare_is_not_execution (test_suite.EvalTests.test_prepare_is_not_execution) ... ok\ntest_duplicate_json_rejected (test_suite.ParserTests.test_duplicate_json_rejected) ... ok\ntest_nested_fence_valid (test_suite.ParserTests.test_nested_fence_valid) ... ok\ntest_nonstandard_numbers_rejected (test_suite.ParserTests.test_nonstandard_numbers_rejected) ... ok\ntest_symlink_rejected (test_suite.ParserTests.test_symlink_rejected) ... ok\ntest_unclosed_fence_rejected (test_suite.ParserTests.test_unclosed_fence_rejected) ... ok\ntest_unsafe_paths_rejected (test_suite.ParserTests.test_unsafe_paths_rejected) ... ok\ntest_valid_json (test_suite.ParserTests.test_valid_json) ... ok\ntest_yaml_duplicate_rejected (test_suite.ParserTests.test_yaml_duplicate_rejected) ... ok\ntest_changed_prompt_fails_readonly (test_suite.SuiteTests.test_changed_prompt_fails_readonly) ... ok\ntest_crlf_rejected_even_with_synced_hash (test_suite.SuiteTests.test_crlf_rejected_even_with_synced_hash) ... ok\ntest_current_suite_valid (test_suite.SuiteTests.test_current_suite_valid) ... ok\ntest_extra_old_prompt_rejected (test_suite.SuiteTests.test_extra_old_prompt_rejected) ... ok\ntest_manifest_deterministic (test_suite.SuiteTests.test_manifest_deterministic) ... ok\ntest_missing_09_rejected (test_suite.SuiteTests.test_missing_09_rejected) ... ok\ntest_readme_drift_fails (test_suite.SuiteTests.test_readme_drift_fails) ... ok\n\n----------------------------------------------------------------------\nRan 44 tests in 2.884s\n\nOK\n"
+    }
+  ],
+  "zip_crc": "PASS",
+  "model_execution": "NOT_RUN",
+  "live_GitHub": "NOT_RUN",
+  "note": "Report added after verified extraction; operational files covered by SUITE_MANIFEST are unchanged."
+}
