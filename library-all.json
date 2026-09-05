@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-09-05T14:43:33+09:00",
+  "generated_at": "2026-09-05T14:59:10+09:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -134,11 +134,11 @@
       "pinned": false,
       "order": 999999,
       "updated": "2026-09-05",
-      "file": "adversarial-research-review/_library_view.html",
+      "file": "09_敵対レビュー_研究・実験/adversarial-research-review_guide.html",
       "category_folder": "01_プロンプト",
       "category_title": "プロンプト",
       "category_icon": "🧩",
-      "url": "./01_プロンプト/adversarial-research-review/_library_view.html"
+      "url": "./01_プロンプト/09_敵対レビュー_研究・実験/adversarial-research-review_guide.html"
     },
     {
       "title": "多専門家・敵対的レビュー委員会｜汎用・自動編成版",
@@ -154,11 +154,11 @@
       "pinned": false,
       "order": 999999,
       "updated": "2026-09-05",
-      "file": "adversarial-universal-review/_library_view.html",
+      "file": "11_敵対レビュー_汎用/adversarial-universal-review_guide.html",
       "category_folder": "01_プロンプト",
       "category_title": "プロンプト",
       "category_icon": "🧩",
-      "url": "./01_プロンプト/adversarial-universal-review/_library_view.html"
+      "url": "./01_プロンプト/11_敵対レビュー_汎用/adversarial-universal-review_guide.html"
     },
     {
       "title": "多専門家・敵対的レビュー委員会｜仕事・経営判断版",
@@ -174,11 +174,11 @@
       "pinned": false,
       "order": 999999,
       "updated": "2026-09-05",
-      "file": "adversarial-business-review/_library_view.html",
+      "file": "10_敵対レビュー_仕事・経営/adversarial-business-review_guide.html",
       "category_folder": "01_プロンプト",
       "category_title": "プロンプト",
       "category_icon": "🧩",
-      "url": "./01_プロンプト/adversarial-business-review/_library_view.html"
+      "url": "./01_プロンプト/10_敵対レビュー_仕事・経営/adversarial-business-review_guide.html"
     },
     {
       "title": "多専門家・敵対的レビュー委員会 — 使い方・設計・検証記録",
@@ -193,11 +193,11 @@
       "pinned": false,
       "order": 999999,
       "updated": "2026-09-05",
-      "file": "adversarial-review-suite-design-notes/_library_view.html",
+      "file": "12_敵対レビュー_使い方・設計/adversarial-review-suite-design-notes_guide.html",
       "category_folder": "01_プロンプト",
       "category_title": "プロンプト",
       "category_icon": "🧩",
-      "url": "./01_プロンプト/adversarial-review-suite-design-notes/_library_view.html"
+      "url": "./01_プロンプト/12_敵対レビュー_使い方・設計/adversarial-review-suite-design-notes_guide.html"
     },
     {
       "title": "厳格・具体的レビュー＆改善マスタープロンプト",
@@ -212,11 +212,11 @@
       "pinned": false,
       "order": 999999,
       "updated": "2026-09-05",
-      "file": "strict-review-improvement/_library_view.html",
+      "file": "08_厳格レビュー・改善/strict-review-improvement_guide.html",
       "category_folder": "01_プロンプト",
       "category_title": "プロンプト",
       "category_icon": "🧩",
-      "url": "./01_プロンプト/strict-review-improvement/_library_view.html"
+      "url": "./01_プロンプト/08_厳格レビュー・改善/strict-review-improvement_guide.html"
     },
     {
       "title": "北極星の哲学｜シンプル版",

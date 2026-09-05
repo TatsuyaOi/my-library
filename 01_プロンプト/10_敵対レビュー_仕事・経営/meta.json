@@ -22,7 +22,7 @@
   },
   "files": {
     "source": "敵対レビュー ビジネス.md",
-    "guide": "_library_view.html",
+    "guide": "adversarial-business-review_guide.html",
     "preview": null,
     "additional": []
   },
@@ -42,7 +42,7 @@
     },
     "output_sha256": {
       "敵対レビュー ビジネス.md": "82760222884b81d8b9781e22bd42fe228fe22920c48d6834efd80e910763cfc7",
-      "_library_view.html": "2347ce039522d593e86d00c9898cc7e9db3d73eeadc7f44705c1a7e88e8642b7"
+      "adversarial-business-review_guide.html": "2347ce039522d593e86d00c9898cc7e9db3d73eeadc7f44705c1a7e88e8642b7"
     }
   }
 }

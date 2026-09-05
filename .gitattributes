@@ -4,3 +4,8 @@
 "01_プロンプト/adversarial-business-review/**" -text
 "01_プロンプト/adversarial-universal-review/**" -text
 "01_プロンプト/adversarial-research-review/**" -text
+"01_プロンプト/08_厳格レビュー・改善/**" -text
+"01_プロンプト/09_敵対レビュー_研究・実験/**" -text
+"01_プロンプト/10_敵対レビュー_仕事・経営/**" -text
+"01_プロンプト/11_敵対レビュー_汎用/**" -text
+"01_プロンプト/12_敵対レビュー_使い方・設計/**" -text

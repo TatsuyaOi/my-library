@@ -148,6 +148,39 @@ class InboxTests(unittest.TestCase):
         self.assertEqual(data['items'][0]['title'], 'テスト資料')
         self.assertTrue(data['items'][0]['file'].endswith('folder/index.html'))
 
+    def test_named_folder_and_guide_preserve_identity_and_original(self):
+        original = '# 原本\n<script>not executed</script>\n'.encode('utf-8')
+        self.write('★仮置き保管庫/prompt.md', original)
+        plan = self.plan(files=['prompt.md'], entry='prompt.md',
+                         folder='08_レビュー', guide='test-note_guide.html')
+        inbox.apply_plan(self.root, plan, True)
+        destination = self.root / '22_簿記/08_レビュー'
+        meta = inbox.strict_json(destination / 'meta.json')
+        self.assertEqual(meta['id'], 'test-note')
+        self.assertEqual(meta['files']['guide'], 'test-note_guide.html')
+        self.assertEqual((destination / 'prompt.md').read_bytes(), original)
+        self.assertEqual(inbox.apply_plan(self.root, plan, True)['documents'][0]['state'], 'already_processed')
+        self.assertEqual(next(x for x in inbox.scan(self.root)['files'] if x['path'] == 'prompt.md')['state'], 'processed')
+        data = self.build()
+        self.assertEqual(len(data['items']), 1)
+        self.assertTrue(data['items'][0]['url'].endswith('/08_レビュー/test-note_guide.html'))
+        prepare_pages.prepare(self.root)
+
+    def test_custom_names_reject_traversal_and_input_collision(self):
+        self.write('★仮置き保管庫/prompt.md', 'original')
+        self.write('★仮置き保管庫/Guide.html', '<title>Original support</title>')
+        for override in ({'folder': '../outside'}, {'folder': 'nested/folder'},
+                         {'guide': '../outside.html'}, {'guide': 'nested/page.html'},
+                         {'guide': 'meta.json'}, {'guide': 'guide.HTML'}):
+            with self.subTest(override=override), self.assertRaises(ValueError):
+                inbox.apply_plan(self.root, self.plan(files=['prompt.md', 'Guide.html'],
+                                 entry='prompt.md', **override), True)
+        self.assertEqual((self.inbox / 'Guide.html').read_text(), '<title>Original support</title>')
+
+    def test_original_html_cannot_be_renamed_with_guide(self):
+        with self.assertRaisesRegex(ValueError, 'Original HTML'):
+            inbox.apply_plan(self.root, self.plan(guide='renamed.html'), True)
+
     def test_supporting_html_is_not_double_indexed(self):
         self.write('★仮置き保管庫/report.html', '<a href="other.html">Other</a>')
         self.write('★仮置き保管庫/other.html', '<title>Subpage</title>')

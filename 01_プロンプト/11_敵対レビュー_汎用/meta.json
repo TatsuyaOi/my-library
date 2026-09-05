@@ -22,7 +22,7 @@
   },
   "files": {
     "source": "敵対レビュー 汎用.md",
-    "guide": "_library_view.html",
+    "guide": "adversarial-universal-review_guide.html",
     "preview": null,
     "additional": []
   },
@@ -42,7 +42,7 @@
     },
     "output_sha256": {
       "敵対レビュー 汎用.md": "e694be21cafc988506983417aee950480ff5a15d969a4bb5a5b87db12b194fd2",
-      "_library_view.html": "12cf178192b020231805fc5feaac5064a44a9ca877cd4e908e7bfd82a67b4a62"
+      "adversarial-universal-review_guide.html": "12cf178192b020231805fc5feaac5064a44a9ca877cd4e908e7bfd82a67b4a62"
     }
   }
 }

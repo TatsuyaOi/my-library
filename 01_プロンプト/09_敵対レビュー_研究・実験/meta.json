@@ -22,7 +22,7 @@
   },
   "files": {
     "source": "敵対レビュー 研究.md",
-    "guide": "_library_view.html",
+    "guide": "adversarial-research-review_guide.html",
     "preview": null,
     "additional": []
   },
@@ -42,7 +42,7 @@
     },
     "output_sha256": {
       "敵対レビュー 研究.md": "d467b014e94f30fc209270423abbb83e424a9eb2028f2e07732b110de85282ed",
-      "_library_view.html": "6d5739e04efe6182c153b617903f8aa3d2d6c049dcef368ff48f3810da16ce5c"
+      "adversarial-research-review_guide.html": "6d5739e04efe6182c153b617903f8aa3d2d6c049dcef368ff48f3810da16ce5c"
     }
   }
 }
