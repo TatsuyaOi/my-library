@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "id": "visual-expression-library-html-integration",
+  "title": "視覚表現ライブラリ・HTML組み込みプロンプト v1.0",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "HTML生成",
+  "summary": "汎用HTML生成プロンプトへの追記モジュールと、内容に応じて選ぶ64種類の視覚表現の正式仕様。採用・禁止条件、PC・スマホ表示、情報保持、縮退・検証の規則を収録する。",
+  "tags": [
+    "HTML生成",
+    "視覚表現",
+    "情報設計",
+    "PC版",
+    "スマホ版"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-06",
+    "updated": null
+  },
+  "files": {
+    "source": "汎用HTMLへの組み込みプロンプト_v1.0.md",
+    "guide": "視覚表現ライブラリ・HTML組み込み_guide.html",
+    "preview": null,
+    "additional": [
+      "視覚表現ライブラリ_v1.0.md"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "d5ddd7aae5562418065f35beb26a5d00d0b9e1bcc3454636b974a91d01ce8fff",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "汎用HTMLへの組み込みプロンプト_v1.0.md": "5c888de7e2aee5efdee824fb559d94bc9c9f45f7718b04b577c6b3da3ff4e01d",
+      "視覚表現ライブラリ_v1.0.md": "4069d02fe9333c446db8ff648eb42ee4ce7071f8902b11dabd6d897a44c946c3"
+    },
+    "output_sha256": {
+      "汎用HTMLへの組み込みプロンプト_v1.0.md": "5c888de7e2aee5efdee824fb559d94bc9c9f45f7718b04b577c6b3da3ff4e01d",
+      "視覚表現ライブラリ_v1.0.md": "4069d02fe9333c446db8ff648eb42ee4ce7071f8902b11dabd6d897a44c946c3",
+      "視覚表現ライブラリ・HTML組み込み_guide.html": "28644864c4662acc70230e51130677279048512c094102861e6f0b20e67c8196"
+    }
+  }
+}
