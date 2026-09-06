@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "id": "lyrics-companion-handoff",
+  "title": "Lyrics Companion 仮運用引継ぎ",
+  "type": "guide",
+  "category": "99_その他",
+  "subcategory": "アプリ運用",
+  "summary": "Android Auto向けLyrics Companionのシステム構成、仮運用手順、RC確認項目と今後の計画をまとめた資料。Release署名版の最終導入と長期耐久試験は未確認として記録されている。",
+  "tags": [
+    "Android Auto",
+    "Lyrics Companion",
+    "YouTube Music",
+    "運用引継ぎ"
+  ],
+  "status": "release-candidate",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-06",
+    "updated": null
+  },
+  "files": {
+    "source": "LyricsCompanion_仮運用引継ぎ_スマホ.html",
+    "guide": "LyricsCompanion_仮運用引継ぎ_スマホ.html",
+    "preview": null,
+    "additional": [
+      "LyricsCompanion_仮運用引継ぎ_PC.html"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "88b8fd8141bcb427d46a9843e59e786d6964ca7f5807c4bff5b5fa0273e46271",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "LyricsCompanion_仮運用引継ぎ_PC.html": "ab9286cdb78626693ac9768ebbdb440ade2b47be57b563aeafaac86f17db98b8",
+      "LyricsCompanion_仮運用引継ぎ_スマホ.html": "6d8b35b3828c01a405c144ab9e1390f0de58903e005a94b76166f31d20a6d2de"
+    },
+    "output_sha256": {
+      "LyricsCompanion_仮運用引継ぎ_PC.html": "ab9286cdb78626693ac9768ebbdb440ade2b47be57b563aeafaac86f17db98b8",
+      "LyricsCompanion_仮運用引継ぎ_スマホ.html": "6d8b35b3828c01a405c144ab9e1390f0de58903e005a94b76166f31d20a6d2de"
+    }
+  }
+}

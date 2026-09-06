@@ -6,6 +6,22 @@
     "description": "分類前の資料や、ほかのカテゴリに入らない情報をまとめるライブラリ",
     "accent": "#666666"
   },
-  "generated_at": "2026-08-25T13:01:37+00:00",
-  "items": []
+  "generated_at": "2026-09-06T21:37:45+09:00",
+  "items": [
+    {
+      "title": "Lyrics Companion 仮運用引継ぎ",
+      "description": "Android Auto向けLyrics Companionのシステム構成、仮運用手順、RC確認項目と今後の計画をまとめた資料。Release署名版の最終導入と長期耐久試験は未確認として記録されている。",
+      "group": "アプリ運用",
+      "tags": [
+        "Android Auto",
+        "Lyrics Companion",
+        "YouTube Music",
+        "運用引継ぎ"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-06",
+      "file": "01_LyricsCompanion仮運用引継ぎ/LyricsCompanion_仮運用引継ぎ_スマホ.html"
+    }
+  ]
 }
