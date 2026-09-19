@@ -76,6 +76,14 @@ class LearningTests(unittest.TestCase):
         self.build()
         self.assertFalse((site / 'content').exists())
 
+    def test_registered_heading_anchors_survive_insertion(self):
+        source = self.folder / 'content.md'
+        before = learning.render(self.root, self.folder, self.meta)
+        source.write_text('## 新しい導入\n\n導入本文。\n\n' + source.read_text(encoding='utf-8'), encoding='utf-8')
+        after = learning.render(self.root, self.folder, self.meta)
+        self.assertIn('<h2 id="section-1">1. 問いと到達目標</h2>', before)
+        self.assertIn('<h2 id="section-1">1. 問いと到達目標</h2>', after)
+
     def test_invalid_publication_flags_fail_closed(self):
         for value in ('false', 1, None):
             with self.subTest(value=value):

@@ -1,5 +1,6 @@
 """Opt-in article generation; legacy and Inbox metadata retain their own schemas."""
 from datetime import date
+from hashlib import sha256
 from html import escape
 from html.parser import HTMLParser
 import json
@@ -78,13 +79,20 @@ def render(root, folder, meta):
     from markdown_it import MarkdownIt
     parser = MarkdownIt('commonmark', {'html': False}).enable('table')
     tokens = parser.parse((folder / 'content.md').read_text(encoding='utf-8'))
+    anchors_path = folder / 'anchors.json'
+    anchors = strict_json(anchors_path) if anchors_path.exists() else None
+    used_anchors = set()
     toc, headings = [], 0
     for i, token in enumerate(tokens):
         if token.type == 'heading_open':
             if token.tag == 'h1':
                 raise ValueError(f'{folder.name}: use H2 or deeper; title comes from meta.json')
             headings += 1
-            anchor = f'section-{headings}'
+            title = tokens[i + 1].content
+            anchor = (anchors.get(title) or 'section-' + sha256(title.encode()).hexdigest()[:12]) if anchors is not None else f'section-{headings}'
+            if not isinstance(anchor, str) or not re.fullmatch(r'[A-Za-z][A-Za-z0-9_-]*', anchor) or anchor in used_anchors:
+                raise ValueError(f'{folder.name}: duplicate or invalid heading anchor')
+            used_anchors.add(anchor)
             token.attrSet('id', anchor)
             if token.tag == 'h2':
                 toc.append(f'<li><a href="#{anchor}">{escape(tokens[i + 1].content)}</a></li>')

@@ -116,6 +116,8 @@ def prepare(root: Path, preview=False):
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(path, target)
         export(root, stage, preview)
+        from review import export as export_review
+        export_review(root, stage)
         if preview:
             add_preview_items(root, stage)
         count = validate_index(stage)

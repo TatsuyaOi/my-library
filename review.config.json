@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "lessons": [
+    {
+      "lesson_id": "philosophy-simple",
+      "source_path": "11_哲学/01 北極星の哲学/北極星の哲学.html",
+      "title": "北極星の哲学｜シンプル版",
+      "categories": [
+        "11_哲学"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "philosophy-meiryo",
+      "source_path": "11_哲学/02 北極星の哲学/北極星の哲学_11B_MeiryoUI最終版.html",
+      "title": "北極星の哲学｜シンプル版",
+      "categories": [
+        "11_哲学"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "philosophy-11b",
+      "source_path": "11_哲学/03_北極星の哲学11B/北極星の哲学_11B_MeiryoUI最終版.html",
+      "title": "北極星の哲学｜11B Meiryo UI最終版",
+      "categories": [
+        "11_哲学"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "fe-general",
+      "source_path": "21_基本情報/FE総合復習ノート.html",
+      "title": "基本情報 総合復習ノート",
+      "categories": [
+        "21_基本情報"
+      ],
+      "important": true
+    },
+    {
+      "lesson_id": "boki-boost-reader",
+      "source_path": "22_簿記/01_簿記3級BoostReader/boki3_reading_interactive_v1.html",
+      "title": "簿記3級 Boost Reader",
+      "categories": [
+        "22_簿記"
+      ],
+      "important": false,
+      "generation_hold": "本文がJavaScriptで生成されるため、問題化は保留中です。"
+    },
+    {
+      "lesson_id": "boki-eight-elements",
+      "source_path": "22_簿記/取引の8要素.html",
+      "title": "簿記3級 取引の8要素 早見表",
+      "categories": [
+        "22_簿記"
+      ],
+      "important": false,
+      "generation_hold": "画像が中心の教材のため、本文の文字起こし待ちです。"
+    },
+    {
+      "lesson_id": "ai-business-plans",
+      "source_path": "41_AI/01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html",
+      "title": "AI事業計画｜36案比較と90日検証計画",
+      "categories": [
+        "41_AI"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "ai-news-radar-20260914",
+      "source_path": "41_AI/03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html",
+      "title": "Recent News Radar｜2026-09-14",
+      "categories": [
+        "41_AI"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "sputtering-learning-plan",
+      "source_path": "51_仕事/05_スパッタリング学習設計/05_スパッタリング学習設計_guide.html",
+      "title": "スパッタリング実務｜学習項目・引継ぎ設計",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "ceramics-engineering",
+      "source_path": "51_仕事/06_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+      "title": "セラミックス材料工学｜全54章・設計書",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "antireflection-11b",
+      "source_path": "51_仕事/07_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+      "title": "反射防止膜の光学入門｜11Bスタイル版",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "antireflection-introduction",
+      "source_path": "51_仕事/08_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+      "title": "反射防止膜の光学入門｜大学生向け",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "expired-patent-mining",
+      "source_path": "51_仕事/09_期限切れ特許マイニング/期限切れ特許マイニング_初回実行レポート.html",
+      "title": "期限切れ特許マイニング｜初回実行レポート・引継ぎ",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "sputtering-pressure",
+      "source_path": "content/reactive-sputtering-pressure/index.html",
+      "title": "スパッタ圧力と膜質",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false
+    }
+  ],
+  "ai": {
+    "timeout_seconds": 120,
+    "max_input_chars": 100000,
+    "max_calls_per_run": 12,
+    "max_attempts_per_lesson": 3
+  }
+}
