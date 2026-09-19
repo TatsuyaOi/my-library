@@ -3,15 +3,36 @@
 from pathlib import Path
 import argparse
 import json
+import os
 import shutil
+import stat
 import subprocess
 import tempfile
 from inbox import checked_path, settings, strict_json, digest
+from learning import export, add_preview_items
 
 ROOT = Path(__file__).resolve().parents[1]
 MARKER = '.my-library-output'
 ROOT_FILES = ('index.html', 'library-all.json', '.nojekyll', 'CNAME',
               'robots.txt', 'favicon.ico', 'manifest.webmanifest', 'sw.js')
+
+
+def remove_output(path):
+    """Remove only validated generated output, including OneDrive read-only dirs."""
+    base = path.resolve()
+    for entry in (path, *path.rglob('*')):
+        if entry.is_symlink() or not entry.resolve().is_relative_to(base):
+            raise ValueError(f'Linked generated output is not removable: {entry}')
+
+    def retry_readonly(function, name, error):
+        target = Path(name)
+        target.resolve().relative_to(base)
+        if not isinstance(error[1], PermissionError) or target.is_symlink():
+            raise error[1]
+        os.chmod(target, stat.S_IWRITE | stat.S_IREAD | stat.S_IEXEC)
+        function(name)
+
+    shutil.rmtree(path, onerror=retry_readonly)
 
 
 def validate_managed(root, categories):
@@ -56,7 +77,7 @@ def validate_index(site: Path):
     return len(index['items'])
 
 
-def prepare(root: Path):
+def prepare(root: Path, preview=False):
     config, inbox, categories = settings(root)
     validate_managed(root, categories)
     roots = [checked_path(root, 'assets')] + [checked_path(root, n) for n in categories]
@@ -94,17 +115,20 @@ def prepare(root: Path):
                 target = stage / name
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(path, target)
+        export(root, stage, preview)
+        if preview:
+            add_preview_items(root, stage)
         count = validate_index(stage)
         (stage / MARKER).write_text('my-library-pages-v1\n', encoding='utf-8')
-        destination = root / '_site'
+        destination = root / ('_preview' if preview else '_site')
         if destination.is_symlink():
             raise ValueError('_site must not be a symlink.')
         if destination.exists():
             if not (destination / MARKER).is_file():
                 raise ValueError('Existing _site is not managed by this script; leave it untouched.')
-            shutil.rmtree(destination)
+            remove_output(destination)
         stage.rename(destination)
-    return {'items': count, 'output': '_site', 'inbox_exported': False}
+    return {'items': count, 'output': destination.name, 'inbox_exported': False}
 
 
 if __name__ == '__main__':

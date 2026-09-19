@@ -4,6 +4,7 @@
 /.inbox-plan.json
 /.inbox-scan.json
 /_site/
+/_preview/
 __pycache__/
 *.pyc
 .DS_Store

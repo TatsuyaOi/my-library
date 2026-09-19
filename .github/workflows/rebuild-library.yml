@@ -31,14 +31,14 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Test Inbox safeguards
+      - name: Install build dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Test Inbox and learning safeguards
         run: python -m unittest discover -s tests -p 'test_*.py' -v
 
-      - name: Build library indexes
-        run: python scripts/build_library.py
-
-      - name: Validate and prepare public site without Inbox
-        run: python scripts/prepare_pages.py
+      - name: Build and validate public site without drafts or Inbox
+        run: python scripts/build.py --preview
 
       - name: Commit generated indexes only
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-09-06T21:37:45+09:00",
+  "generated_at": "2026-09-19T14:29:56+09:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -64,7 +64,7 @@
       "icon": "🔬",
       "description": "仕事・研究開発・技術資料・業務知識を整理するライブラリ",
       "accent": "#2f6b59",
-      "count": 0
+      "count": 1
     },
     {
       "folder": "99_その他",
@@ -119,6 +119,26 @@
       "category_title": "プロンプト",
       "category_icon": "🧩",
       "url": "./01_プロンプト/01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
+    },
+    {
+      "title": "スパッタ圧力と膜質",
+      "description": "圧力による衝突・粒子輸送の変化を起点に、成膜速度と膜質を分けて考える。圧力だけで結論を出さず、比較実験で仮説を確かめるための入門教材。",
+      "group": "学習教材",
+      "tags": [
+        "スパッタリング",
+        "薄膜",
+        "圧力",
+        "実験設計"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "../content/reactive-sputtering-pressure/index.html",
+      "learning_slug": "reactive-sputtering-pressure",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "🔬",
+      "url": "./content/reactive-sputtering-pressure/index.html"
     },
     {
       "title": "視覚表現ライブラリ・HTML組み込みプロンプト v1.0",

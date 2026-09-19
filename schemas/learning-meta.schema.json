@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "My Library learning article v1 (MVP)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "slug", "type", "learning_mode", "title", "summary", "category", "tags", "level", "learning_time_minutes", "status", "publish", "visibility", "created", "updated"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "slug": {"type": "string", "pattern": "[a-z0-9]+(?:-[a-z0-9]+)*"},
+    "type": {"type": "string", "const": "article"},
+    "learning_mode": {"type": "string", "enum": ["general", "terminology", "technical"]},
+    "title": {"type": "string", "minLength": 1},
+    "summary": {"type": "string", "minLength": 1},
+    "category": {"type": "string", "minLength": 1},
+    "tags": {"type": "array", "minItems": 3, "maxItems": 8, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "level": {"type": "string", "enum": ["beginner", "intermediate", "advanced"]},
+    "learning_time_minutes": {"type": "integer", "minimum": 1},
+    "status": {"type": "string", "enum": ["draft", "active", "archived"]},
+    "publish": {"type": "boolean"},
+    "visibility": {"type": "string", "const": "public"},
+    "created": {"type": "string", "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}", "format": "date"},
+    "updated": {"type": "string", "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}", "format": "date"}
+  }
+}

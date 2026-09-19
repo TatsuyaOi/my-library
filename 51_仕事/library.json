@@ -6,6 +6,23 @@
     "description": "仕事・研究開発・技術資料・業務知識を整理するライブラリ",
     "accent": "#2f6b59"
   },
-  "generated_at": "2026-08-25T13:01:37+00:00",
-  "items": []
+  "generated_at": "2026-09-19T14:29:56+09:00",
+  "items": [
+    {
+      "title": "スパッタ圧力と膜質",
+      "description": "圧力による衝突・粒子輸送の変化を起点に、成膜速度と膜質を分けて考える。圧力だけで結論を出さず、比較実験で仮説を確かめるための入門教材。",
+      "group": "学習教材",
+      "tags": [
+        "スパッタリング",
+        "薄膜",
+        "圧力",
+        "実験設計"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "../content/reactive-sputtering-pressure/index.html",
+      "learning_slug": "reactive-sputtering-pressure"
+    }
+  ]
 }

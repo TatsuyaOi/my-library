@@ -154,6 +154,11 @@ function fileUrl(value){
   return path.split("/").map(encodeURIComponent).join("/");
 }
 
+function itemUrl(item){
+  return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.learning_slug || "")
+    ? "../content/" + item.learning_slug + "/index.html" : fileUrl(item.file);
+}
+
 function hexToSoft(hex) {
   const clean = String(hex || "").replace("#","");
   if (!/^[0-9a-fA-F]{6}$/.test(clean)) return "#edf3ff";
@@ -209,7 +214,7 @@ function renderItems() {
   }
 
   els.list.innerHTML = items.map(item => `
-    <a class="card ${item.thumbnail ? 'has-thumb' : ''}" href="${escapeHtml(fileUrl(item.file))}">
+    <a class="card ${item.thumbnail ? 'has-thumb' : ''}" href="${escapeHtml(itemUrl(item))}">
       ${item.thumbnail ? `<img class="card-thumb" src="${escapeHtml(fileUrl(item.thumbnail))}" alt="${escapeHtml(item.thumbnail_alt || item.title)}" width="640" height="800" loading="lazy" decoding="async">` : ''}
       <div class="card-top">
         <div class="card-main">
