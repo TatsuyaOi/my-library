@@ -71,4 +71,3 @@ class ReviewedImportTests(unittest.TestCase):
             elif modification == 'duplicate': quality['results'] *= 2
             else: quality['method'] = 'unreviewed'
             with self.assertRaises(ValueError): review.import_reviewed(self.root, self.site, package)
-
