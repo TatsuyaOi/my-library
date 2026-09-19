@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "astra-learning-html",
+  "title": "学習HTML作成プロンプト｜Astra構成",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "プロンプト設計",
+  "summary": "日本語の学習HTMLを作成・改訂するためのプロンプト。章構成、問題、図表、動く図解、素材の扱い、表示と操作の検証条件をAstra構成に整理している。",
+  "tags": [
+    "HTML生成",
+    "学習教材",
+    "図解",
+    "Astra"
+  ],
+  "status": "active",
+  "version": "4.2",
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260919_HTML作成プロンプト_Astra.md",
+    "guide": "学習HTML作成_Astra_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "6b14f8051cde279d3d68a94a10943a341e2b443dcba4f8b8aa733c215390d6ea",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260919_HTML作成プロンプト_Astra.md": "5cb6860ed648dca3b2ae452b395258ebc69f620010719fd0d26a060822d35cd0"
+    },
+    "output_sha256": {
+      "260919_HTML作成プロンプト_Astra.md": "5cb6860ed648dca3b2ae452b395258ebc69f620010719fd0d26a060822d35cd0",
+      "学習HTML作成_Astra_guide.html": "e828f6f179e29e92be60598f474cb4a6b84d5313f4e3f0a8cd97112a4ac437b8"
+    }
+  }
+}

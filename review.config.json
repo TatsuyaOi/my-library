@@ -128,6 +128,51 @@
         "51_仕事"
       ],
       "important": false
+    },
+    {
+      "lesson_id": "astra-learning-html",
+      "source_path": "01_プロンプト/32_学習HTML作成Astra/学習HTML作成_Astra_guide.html",
+      "title": "学習HTML作成プロンプト｜Astra構成",
+      "categories": [
+        "01_プロンプト"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "astra-prompt-conversion",
+      "source_path": "01_プロンプト/33_プロンプト変換Astra/プロンプト変換_Astra_guide.html",
+      "title": "プロンプト変換｜Astra構成",
+      "categories": [
+        "01_プロンプト"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "pet-tac-comparison",
+      "source_path": "51_仕事/10_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+      "title": "PETとTACの比較｜学習版",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "hardcoat-ar-design",
+      "source_path": "51_仕事/11_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
+      "title": "ハードコートとAR積層設計｜学習版",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false
+    },
+    {
+      "lesson_id": "relationship-communication",
+      "source_path": "99_その他/04_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
+      "title": "恋愛・コミュニケーション心理学｜学習版",
+      "categories": [
+        "99_その他"
+      ],
+      "important": false
     }
   ],
   "ai": {

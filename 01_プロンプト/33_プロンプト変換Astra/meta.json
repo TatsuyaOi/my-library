@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "id": "astra-prompt-conversion",
+  "title": "プロンプト変換｜Astra構成",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "プロンプト設計",
+  "summary": "既存プロンプトの目的・数値・制約を保持し、GoalからStop Conditionまでの8項目へ再構成するためのプロンプト。変換対象のタスク自体は実行しない。",
+  "tags": [
+    "プロンプト変換",
+    "要件保持",
+    "Astra"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260919_プロンプト変換_Astra.md",
+    "guide": "プロンプト変換_Astra_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "dcc5d510faf02f61c48b16c70e25e518fd109f9fd09621dac38e2a311601c0f9",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260919_プロンプト変換_Astra.md": "51a2a073cae09fb5fc39a2bad1f76b16e4fcdcacf20761ae82d0db9bc4ae15cd"
+    },
+    "output_sha256": {
+      "260919_プロンプト変換_Astra.md": "51a2a073cae09fb5fc39a2bad1f76b16e4fcdcacf20761ae82d0db9bc4ae15cd",
+      "プロンプト変換_Astra_guide.html": "56c786d42d94adf1d30cbbc2e4eb8c3dc906a7ac26b24af63aa58c58136c7deb"
+    }
+  }
+}

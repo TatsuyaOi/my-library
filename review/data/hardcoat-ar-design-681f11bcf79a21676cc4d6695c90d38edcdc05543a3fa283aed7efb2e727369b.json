@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "lesson_id": "hardcoat-ar-design",
+  "content_hash": "c494cf4106607168545776b03e8e0dff590bb8337ce48351994ae971da85f42a",
+  "generated_at": "2026-09-19T11:56:06.122476+00:00",
+  "questions": [
+    {
+      "question_id": "hardcoat-ar-design:uv-exposure:free_response:1",
+      "concept_key": "uv-exposure",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "照度が一定の100 mW/cm²で2秒照射すると積算光量はいくらですか？また、この値だけで硬化状態は決まりますか？",
+      "answer": "200 mJ/cm²。積算光量だけでは硬化状態は決まらない。",
+      "explanation": "照度×時間で積算光量を求める。同じ積算光量でも波長、酸素濃度、膜厚、温度などにより転化率は変わる。",
+      "source": {
+        "path": "51_仕事/11_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
+        "anchor": "#uv-dose",
+        "evidence": "間積分で、例えば mJ/cm²。一定照度なら 積算光量＝照度×照射時間 となる。100 mW/cm²で2秒は200 mJ/cm²である。 同じ積算光量でも、波長、照度の時間分布、酸素濃度、膜厚、光の吸収、温度により転化率は変わる。転化率は反応基のうち反応した割合であり、架橋密度そのものではない。官能基数が多くても、全反応基が有効な網目を作るとは限らない。 酸素はラジカル反応を妨げ、空気側にべたつきや未反応成分が残る原因になる。窒素雰囲気や光源・開始剤の調整は対策候補だが、これは全てのUV硬化機構に同じように当てはまる説明ではない。過度な照射・加熱は黄変、劣化、基材変形を招く場合がある。"
+      },
+      "tags": [
+        "ハードコートとAR積層設計｜学習版"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "hardcoat-ar-design:silica-surface:free_response:1",
+      "concept_key": "silica-surface",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "球形・同じ密度・凝集なし・シリカ総体積一定なら、20 nm粒子の総表面積は50 nm粒子の何倍ですか？",
+      "answer": "2.5倍。",
+      "explanation": "総表面積は粒径に反比例する。この値は硬さや粘度の倍率ではない。",
+      "source": {
+        "path": "51_仕事/11_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
+        "anchor": "#silica-size",
+        "evidence": "意味 粒子数比 (50/20)³＝15.625 同じ体積のシリカを細かく分ける 総表面積比 50/20＝2.5 樹脂と接する面積が増える 比表面積の例 20 nm：約136、50 nm：約55 m²/g 密度2.2 g/cm³の非多孔質球と仮定。BET実測値ではない この2.5倍は硬さや粘度の倍率ではない。希薄で相互作用のない理想的な硬球分散液の粘度は、基本的に粒径より体積分率で整理される。実際には吸着層、表面処理、粒子間相互作用、凝集があるため、小粒径化に伴う増粘や分散難度の上昇が現れ得る。 「20 nm」は一次粒子径なのか、分散液中の動的光散乱による粒径なのかを確認する。動的光散乱は溶媒和や凝集を含む流体力学的な大きさを見るので、電子顕微鏡の一次粒子径と同列に比較しない。平均径に加えて分布や粗大粒子の裾も確認する。"
+      },
+      "tags": [
+        "ハードコートとAR積層設計｜学習版"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "hardcoat-ar-design:hardness-scales:free_response:1",
+      "concept_key": "hardness-scales",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "鉛筆硬度9Hをモース硬度9と読み替えられない理由は？",
+      "answer": "試験原理も尺度も異なるため。",
+      "explanation": "鉛筆による表面損傷の判定を、鉱物の硬度尺度に換算しない。試験条件も併記する。",
+      "source": {
+        "path": "51_仕事/11_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
+        "anchor": "#tests",
+        "evidence": "界 鉛筆硬度 特定の鉛筆による表面損傷への抵抗 鉛筆、荷重、角度、判定法、基材。「9H」はモース硬度9ではない スチールウール・摺動試験 繰返し接触で生じる外観変化や摩耗 番手、荷重、接触面積、速度、往復の定義、回数、交換頻度 ナノインデンテーション 局所硬さ・弾性応答 押込み深さ、圧子、速度、保持、粘弾性、基材の影響 クロスカット 切込みと剥離操作後の残存状態 膜厚、刃、テープ、操作条件。接着強度の直接測定ではない 屈曲試験 曲げによる亀裂や剥離 半径、表裏、方向、回数、速度、温湿度、観察倍率 分光・ヘイズ・顕微鏡 光学変化と損傷形態 波長、角度、照明、視野、基準試料、測定位置 ナノインデンテーションでは、浅い押込みでも表面粗さ、深い押込みでは基材が効く。一定の「膜厚に対する押込み深さの比」を守るだけで、あらゆる膜と基材の影響を除けるわけではない。粘弾性が強い樹脂では測定時間も結果を変える。 高温高湿、温度サイクル、耐薬品、耐候の前後で同じ試験を行うと、初期特性だけでは見えない弱点が分かる。試験条件を省いた「傷が付かなかった」は比較データにならない。 この章の要点"
+      },
+      "tags": [
+        "ハードコートとAR積層設計｜学習版"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "hardcoat-ar-design:soft-hc-limit:free_response:1",
+      "concept_key": "soft-hc-limit",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "よく密着した薄い積層膜で、HCを柔らかくすればARの曲げによる伸びは自動的になくなりますか？",
+      "answer": "なくならない。各層は共通の曲率に追従し、ARのひずみは中立面からの距離と曲率半径に依存する。",
+      "explanation": "小ひずみではε＝(zAR−z₀)/R。柔らかさだけで幾何学的な伸びや亀裂を防げるとはいえない。",
+      "source": {
+        "path": "51_仕事/11_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
+        "anchor": "#bend-strain",
+        "evidence": "げから守られるか よく密着した薄い積層膜を曲げると、各層は共通の曲率に追従する。HCを柔らかくしても、ARに生じる幾何学的な伸びが自動的に消えるわけではない。曲げの中心側は縮み、外側は伸び、その間に伸縮がゼロになる 中立面 がある。 図5 曲げひずみは中立面からの距離で決まる 外側：引張（伸びる） 破線：中立面 内側：圧縮（縮む） 茶線 AR 緑層 HC 灰色 基材 図5 曲げひずみは中立面からの距離で決まる — 定性的な断面模式図。曲率と厚さを強調している。破線は長さが変わらない面。ARが外側にある場合を示し、内曲げでは応力の向きが逆になる。 小ひずみの曲げでは、AR位置のひずみは ε＝(z AR −z₀)/R と近似できる。zは厚み方向の位置、z₀は中立面、Rは中立面の曲率半径で、長さの単位を揃える。外側引張を正とする。ひずみεは無次元で、100倍すると%になる。 塗膜が十分薄く、均一な基材が曲げを支配すると、中立面は基材の厚み中央に近い。このとき表面ひずみの絶対値は |ε|≒t/(2R) 。厚さ50 µm＝0.050 mm、R＝2 mmなら0.050/(2×2"
+      },
+      "tags": [
+        "ハードコートとAR積層設計｜学習版"
+      ],
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（原文との編集照合）",
+    "limitations": "同じ作成者による原文照合。独立AI評価・第三者レビューではない。教材全章を網羅せず、外部出典の独立検証も行っていない。",
+    "validated_at": "2026-09-19T11:56:48.616931+00:00",
+    "results": [
+      {
+        "question_id": "hardcoat-ar-design:uv-exposure:free_response:1",
+        "pass": true,
+        "reason": "一定照度と時間の積を確認。200 mJ/cm²と、同じ積算光量でも転化率が変わる条件が2.2節と一致。",
+        "question_hash": "98b2bc90a3c035a99165ca2978a6f00e1c22d71358d7c2d29685211971f22dcb"
+      },
+      {
+        "question_id": "hardcoat-ar-design:silica-surface:free_response:1",
+        "pass": true,
+        "reason": "4.2節の同体積・同密度・球形・凝集なしの前提を保持。表面積比2.5を硬さ・粘度比に拡張していない。",
+        "question_hash": "129f5bfa7544e10f4f93e891901b9584a7f44cdc30a497fd423d7cefebbc2ab3"
+      },
+      {
+        "question_id": "hardcoat-ar-design:hardness-scales:free_response:1",
+        "pass": true,
+        "reason": "試験一覧と同節章末解答で、鉛筆硬度とモース硬度は試験原理・尺度が異なることを確認。",
+        "question_hash": "483bd851772405617f1b8963fa5ee48e759c79d32c8aa564a6a4bf02f6472a55"
+      },
+      {
+        "question_id": "hardcoat-ar-design:soft-hc-limit:free_response:1",
+        "pass": true,
+        "reason": "6.2節の共通曲率と中立面からの距離に基づく説明に一致。柔らかさだけでARの伸びを消せるとはしていない。",
+        "question_hash": "d08c30382f7da53c344d94befff0f24fd85f765a99230f13071f9a0e44df54fe"
+      }
+    ]
+  }
+}

@@ -497,6 +497,187 @@
         "section-10": "d6da515f2535d5ea998c3dda053350b2b7b5844182af8f74f1a207aa5a4a5292"
       },
       "review_content_hash": "4533d2b159ebeb46b3662872ebbda6517874b6a44f45fa94b24df13618455b64"
+    },
+    {
+      "lesson_id": "astra-learning-html",
+      "source_path": "01_プロンプト/32_学習HTML作成Astra/学習HTML作成_Astra_guide.html",
+      "title": "学習HTML作成プロンプト｜Astra構成",
+      "categories": [
+        "01_プロンプト"
+      ],
+      "important": false,
+      "status": "active",
+      "generation_status": "success",
+      "question_count": 4,
+      "content_hash": "453747510ce84a6a9175a7d406310436b6274cdf3a18b3dbcd538b040e8ce7bb",
+      "review_content_hash": "453747510ce84a6a9175a7d406310436b6274cdf3a18b3dbcd538b040e8ce7bb",
+      "anchor_hash": "338ac9085f3c85346be080da8464aebcd60856cb7e940504538fa9a6a78db21f",
+      "section_hashes": {
+        "source-text": "a3ab8a4834cc8b3ef5a3faf966bb6dd7397e9830bc976fc2e17f77ecbba65eca"
+      },
+      "review_path": "review/astra-learning-html.json",
+      "quality_method": "source-reviewed"
+    },
+    {
+      "lesson_id": "astra-prompt-conversion",
+      "source_path": "01_プロンプト/33_プロンプト変換Astra/プロンプト変換_Astra_guide.html",
+      "title": "プロンプト変換｜Astra構成",
+      "categories": [
+        "01_プロンプト"
+      ],
+      "important": false,
+      "status": "active",
+      "generation_status": "success",
+      "question_count": 4,
+      "content_hash": "1d78fa6c56ea1ffa84ad62c2a6fa40a567e82dc15a40a46cc1e1182415e06cbb",
+      "review_content_hash": "1d78fa6c56ea1ffa84ad62c2a6fa40a567e82dc15a40a46cc1e1182415e06cbb",
+      "anchor_hash": "338ac9085f3c85346be080da8464aebcd60856cb7e940504538fa9a6a78db21f",
+      "section_hashes": {
+        "source-text": "009ae4d763d0b539c7454b6f8231ebed93bcce6703784b7a846a6c03ca36824d"
+      },
+      "review_path": "review/astra-prompt-conversion.json",
+      "quality_method": "source-reviewed"
+    },
+    {
+      "lesson_id": "pet-tac-comparison",
+      "source_path": "51_仕事/10_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+      "title": "PETとTACの比較｜学習版",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false,
+      "status": "active",
+      "generation_status": "success",
+      "question_count": 4,
+      "content_hash": "4a367e907021b58880927e7c05425308180118270519fa588413c1085bd53b1c",
+      "review_content_hash": "4a367e907021b58880927e7c05425308180118270519fa588413c1085bd53b1c",
+      "anchor_hash": "3f11fb4167af96f960c4bc817bb45a8e7379d79478fd1d06759694a53883edbb",
+      "section_hashes": {
+        "ch1": "268d61ee83ca239b55a053dd7fe952e9391ee163fbdde39f53ef96fb8c0d1965",
+        "manufacture": "5880f02a6b808737505a3771c8778a1e74db74be8a6fd2519f8c5cdfd386dad0",
+        "ch2": "c4ff0a69bb2019a88c22c1148e5d2634342290123ccd70c7478a9127acba7029",
+        "bending": "e02e90b3124010fd2359b936cc541662394038d00e9458e2ae282dfdd5f48742",
+        "ch3": "a1ac207a3a30b3db700db9439becb51c66ae88a23803d58c231d3e314821bfcf",
+        "humidity": "8885146c3ea526cc0ac5f2f712df0646c0de2c1dc85fc041cdc5ac9911eaabab",
+        "ch4": "029ffed596be2cd2d52c32e60f8353d1d93509aa8730c608cdd796831d304a7f",
+        "reflection": "890f4ea1e43b30788c8b3300f3addf815ec59c5f0d7c66a93ebd0438eaf193e6",
+        "retardation": "ce1b0a58946dd24c66dd2ae70b3fabdc2e693ad2512c7c7a039d35c494824ff3",
+        "ch5": "340cc57d92ce384bc508d7ba7306f9be1786e633d9bea3c98b45ed4b30f971ab",
+        "cost": "0604ab5982641457ebaeec38da1849a8af476b18c544bb6547f9460ba5c430e4",
+        "ch6": "71d741a39b91a28eb9c40d85af98a274c18cdc64887b2004a51b8cea491c4111",
+        "experiment": "d76bf359384ab90c1fe14e16163b7aaa428992b281167525fe79f513b0060e1f",
+        "integrated": "c35a9b0ddcd75d7b523cb8777e217b64904eb3da302b419d0d453c4ce4783391",
+        "glossary": "4b1c68d1d88d61e7ddd829eedd8da1ba2f01e25645a134634d11d7ab22d4184a",
+        "sources": "03e0d6643a317154e6a9541f5935cd384b8e81353617b25f644302e23c338f21"
+      },
+      "review_path": "review/pet-tac-comparison.json",
+      "quality_method": "source-reviewed"
+    },
+    {
+      "lesson_id": "hardcoat-ar-design",
+      "source_path": "51_仕事/11_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
+      "title": "ハードコートとAR積層設計｜学習版",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false,
+      "status": "active",
+      "generation_status": "success",
+      "question_count": 4,
+      "content_hash": "c494cf4106607168545776b03e8e0dff590bb8337ce48351994ae971da85f42a",
+      "review_content_hash": "c494cf4106607168545776b03e8e0dff590bb8337ce48351994ae971da85f42a",
+      "anchor_hash": "88a7ffd5743f482d36e5abfa0ab44636c08150f007ee2688532128970618514b",
+      "section_hashes": {
+        "how": "7928bf65b0f028bb7c69c096a96d6b2486cabadd0dc2c0f48f3f21bd1a083b11",
+        "ch1": "fada3524966d03b918e5c802e8c73ae1d2c264ce5f6bc8ac66aa4f5f42c4ddbf",
+        "hc-role": "34bb925da5aa3d6de6413a9c3e294b5c620958da195f3c546ffb25cb8cb5f22b",
+        "hc-material": "caf4f1d2f584df92c18cbf95931adef03dded5e6d5d4c8aecd6183d19526f5c3",
+        "hc-recipe": "c11dbabf3a8bb51391e717f929eca22b7828fc6c1f84caf8ff27033c0469117f",
+        "ch2": "d639e55f9af0b5cbdb6a22e6025e47bf8b0b9696216cbb8ec45ec35b50e3ecc2",
+        "cure": "3c52fa1e0f31a8ddaafdec22c10f5f191100de7cac34453738d6a7878f002c48",
+        "uv-dose": "6a04d8ac985236c51c6aeb26ae7d88d8a89d7790b25fd364ab50f13e7480966a",
+        "process": "138a7a1015f01e787049aa75cd39116331c2d509f697bd4505e5d5a67340889b",
+        "ch3": "caf8a77b79717e35a6c519ec51f19c1d4f9a3d0d9d338a4c028ad152a83d5c0c",
+        "mechanics": "46b2c2aaad5a5b1b105856d21637a53cc244c6daf0eafdba529f29176daf12fb",
+        "damage": "e93ebc96fba818cb8d3cac047c4141be0ffa1699029ea99486db1bbca5b2edd5",
+        "tests": "c46d23177f4c31c9963c6f9efb405a33fcb573e394cd8d15cb0bb98cacf718f5",
+        "ch4": "de3b033b575895c3931da47d343b0fbbfaa6c830b512641c83bd672b069a7197",
+        "silica-composite": "832e6e5bfdec3ad060f9592771eae0f29834212c62b9ab519cdcde3a24375264",
+        "silica-size": "09721b18384a8c3f08e9724df61f2421c5aff57ec14627a776dc27a938ca2a9e",
+        "silica-interface": "20cdcb4e21f5ceb0b9f81444a28322068dd5ec902b62e61e2edcdd139ba28dd8",
+        "silica-mix": "8a7bc978cc481b675eea74c52f37cab24c9402a846e5560b3bbee60e4b08c513",
+        "ch5": "1a1f3e8f0320e60de6045dfff7a2a6fab3efc091fe1bda24a50ad2ea21498402",
+        "patent-scope": "133a4a85a6aa57ad9a255a0dc906a355fe640a7ebf150239c6a832def2f25ef9",
+        "patent-aica": "e5c5d15046674baa83e623c10f0a1f609585b78f0d91dea47149446fd7e459f8",
+        "patent-transfer": "29629684260ba4753a8cd9f09295585392f186421eccfe0e1450ec190d215da1",
+        "ch6": "26138c726cdde731db9028a9698780abf8b03bcea9c63736cbf78348d1308981",
+        "ar-optics": "82fac2c3a470f9e22f4b487ed52bd3b556acfd2b077995aff6c8b1f13a52c0bc",
+        "bend-strain": "5ce8588d6368ba9e4f505062bb647abe0b97f7529ab97f3cfe788f78d4a181a5",
+        "bend-action": "fdf0369327431f6cb70e5135ec4a0132095ec2c2bc1f0d52ff686b5d27939e4e",
+        "ch7": "657f3f2114232cef9c9fedd36c402d6ae094ca9d26bb9d6ef90a5deeb4e97142",
+        "sliding": "134f80adee36957fcd6af97294c7f191b505823998f4c85970238a4118147947",
+        "interface": "b92edd7fc88bb103a693745bb8c074849fb3e6067bcb014fea8909d869aa6598",
+        "deposition": "c20ac1568029358dfc27f9387f0e6e5c98fde44b25ba3fa8b12bb7b53575e40e",
+        "other-properties": "28a694a29c8fe8f3796acfc0823ce851090a5c064fc284b3a6e089284e578b25",
+        "ch8": "61a5a7fcd6a41e128696133f7e0951c92d683a12ba61ad4e6f320dcd27b0fb5f",
+        "isolate": "cf800a6b1c7ccba81cd47d8e37a6611c0f0a2db9b3bdd202dd4d3cdb524c4d79",
+        "doe": "759ded09679eba2e38747d22e7044b6db048e4db8d9a3b33b62688b9cdb34d90",
+        "troubleshoot": "7cc23376d594d5e61a6265eccf82d3c96f472b8efcee82a446156654700f4e6e",
+        "integrated": "b743f0cc0be78485b543487709b14112aafbc724f58b6465db6d28c67d545e09",
+        "glossary": "7c9ac9175420eac7f2eba5b42426e06227cbc244ecacb3da599ea61e6b19f6aa",
+        "sources": "fe3d7c67f200d9e58ba1ef2050aaea3df0f155848dd7cdf1fe28675e2284354d"
+      },
+      "review_path": "review/hardcoat-ar-design.json",
+      "quality_method": "source-reviewed"
+    },
+    {
+      "lesson_id": "relationship-communication",
+      "source_path": "99_その他/04_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
+      "title": "恋愛・コミュニケーション心理学｜学習版",
+      "categories": [
+        "99_その他"
+      ],
+      "important": false,
+      "status": "active",
+      "generation_status": "success",
+      "question_count": 4,
+      "content_hash": "4e2cea4142c9851522348be5fe768feb37933b6635edc41b46089fbbeb0e4c74",
+      "review_content_hash": "4e2cea4142c9851522348be5fe768feb37933b6635edc41b46089fbbeb0e4c74",
+      "anchor_hash": "7c8b1281285eea72e184f71c3142dae9fd6cc92f49c67ac278177cace2e1dbee",
+      "section_hashes": {
+        "guide": "21e257d3a7a76d393302351c123a02fc2bb9dc1606a759c655aa5ee4d6d0225c",
+        "ch1": "9b4ccb750cf37e4fadad6a27e2d6811bb9636a27ef98057c1e384377ae009af4",
+        "attachment": "c2e41d4e4137a0906d9ca2f348652077268b5f6121741172b2dd2e14129ba9d5",
+        "bias": "cbece4601e2d54ee12e9ff8d2dab0c7685e61c491aea025ea817d637d65ff497",
+        "exchange": "6bb242df732dd4c58db0b8c59f157363079000452dc45cd125fff3be4ccaf978",
+        "evt": "399574fb384d6e175f7f4124d520c0d667008b5d1f1b6e5c3e036bec9c510b01",
+        "reactance": "dda4bee29adeaa25d6520550545b6a2ed0993ab21bf05b0d64c29bb592e2477c",
+        "selfexpand": "2f939726060518e9bf0c968ec35635adf38dd52c4632d73a8b6ba7868b85a283",
+        "ch2": "ee3432fdbabd4f7336a05c90303909dd42fb8e497bff564c2afded6df8299926",
+        "disclosure": "bdbbbbd816e8677c2c5b646baac4f5ed5d699c778e6f7296e8d53135cffcbc5e",
+        "followup": "159f532c9b183ae35fdbefe98e1f0b54d2c4b28a2bf446ee07b5b7d8cb3dcbef",
+        "validation": "8cc1994f87ba6b039a7512a694a0106b59910669743685a0e7733984a47395c7",
+        "mi": "b1909281dc9b0e9b25b1f326e174b27c61bf6f9c208744d809ecf0be1d2dfe36",
+        "assertion": "bc02725a4badb457166c61076ed5df39c37c3d13df89769c14b8b9f9326d4e55",
+        "ch3": "1f1b6540ce8c7a147b7a7171e024a7fd8cd7d1c4f68ceef924995e3ecb38331b",
+        "mere": "08c3ceb18405a77702d46c847f9dffb3cee594a0ee9ac4e402542de18f2fc4b6",
+        "similarity": "434d45088376e5366998b65e33fddeda8e01aca71b2433da3454a271fbfb6ea2",
+        "reciprocity": "5fea1aeb064a44741b067e2e60cca1cb0980f1d9f5ffba75f1d8d113cdc9fc3d",
+        "expand2": "9cc102bf5731f07e9b4863ba0e089d90967d5d4735865459d97e437e368c0184",
+        "peakend": "32e02fa327882700716ff52dc6422dc810d107e2b826bad3a4b08622a00995ef",
+        "ch4": "7f44e59e58cbf712135dbbc100ba3f35572a5f49e3075c01705530fdf6062f63",
+        "gottman": "a4fd4b279f13ccc6ac41c95c5607f88acddc38c4475c6bf718bb0290c841d419",
+        "repair": "d4eba9e31573b3694f982cb7135a7f224c8d56e6ab42b74ebe23b625f09b4e34",
+        "nvc": "f5f99d5160c5fb19818a265fcb01029de0534708883e9904e73e79577c9e55be",
+        "integrate": "d0c0632f387cef0cac86c7fb49d26c605475098876bd50ede749ee22071c3cce",
+        "practice": "cda9c0c8c3471194ef262b8819c805a975db3cf8dcc34e90ab0d9177c6792698",
+        "final": "9f7f1c81090b3c3b5e2934e07e70f078c4f1dc4e386c2e9fe2c2f04273a181d1",
+        "index": "969a0f6334b7c4c03833208d0da2a401291ff02eac99962c4907a033ff4e4d34",
+        "answer-key": "f228b8e60fee379a8f00a0c171b5f53cc61d99884ef497d00639046238b74797",
+        "sources": "7ad1408d3863118e497fa8b98bf831ef8284a4a98d07ff340466299860fa6c0d"
+      },
+      "review_path": "review/relationship-communication.json",
+      "quality_method": "source-reviewed"
     }
   ],
   "ledger": {
@@ -877,6 +1058,146 @@
       "revision": 1,
       "lesson_id": "expired-patent-mining",
       "answer_hash": "0357bcbf6c9f94cda1850e98e2095861d98b812dd6049bf40726b4eee299a58f"
+    },
+    "astra-learning-html:task-scope:free_response:1": {
+      "concept_key": "task-scope",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "astra-learning-html",
+      "answer_hash": "cc6cab6aab3ac8c80c700df58096f36d975d36257cf6c6c9cc7a2904d1922d7f"
+    },
+    "astra-learning-html:question-count:free_response:1": {
+      "concept_key": "question-count",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "astra-learning-html",
+      "answer_hash": "04a89cc78233cd21a36a5166d2a198c9b52fc29bb6c57b555a9898fcc7faf3ba"
+    },
+    "astra-learning-html:offline-delivery:free_response:1": {
+      "concept_key": "offline-delivery",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "astra-learning-html",
+      "answer_hash": "c7704bb81aa008a800a453e37efd6b3e351878baaef1d71b9429c0875a365d91"
+    },
+    "astra-learning-html:verification-honesty:free_response:1": {
+      "concept_key": "verification-honesty",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "astra-learning-html",
+      "answer_hash": "b7e2a928e667b31b0a7e808bf357235af20bdf8cb4c8f3732a5b3189c642302e"
+    },
+    "astra-prompt-conversion:conversion-only:free_response:1": {
+      "concept_key": "conversion-only",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "astra-prompt-conversion",
+      "answer_hash": "00bf1a7e8912203e7b5c52bc4b7561e603c3a3c5fcccbf22c64548620fd92bb9"
+    },
+    "astra-prompt-conversion:preserve-requirements:free_response:1": {
+      "concept_key": "preserve-requirements",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "astra-prompt-conversion",
+      "answer_hash": "073ebda21b5a8dccd6a8fbad06b5d332d0788d049fa3d981a56ae65bc7295b06"
+    },
+    "astra-prompt-conversion:unresolved-conflict:free_response:1": {
+      "concept_key": "unresolved-conflict",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "astra-prompt-conversion",
+      "answer_hash": "fc3bb0b2bf83bddee1fc226798123279d76166f6f346b3845f874bb81e06fb01"
+    },
+    "astra-prompt-conversion:final-output:free_response:1": {
+      "concept_key": "final-output",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "astra-prompt-conversion",
+      "answer_hash": "87655d9060120e1e24e821b5486ae39c6fedca042b6990d4ff1b63ba750e5c17"
+    },
+    "pet-tac-comparison:thickness-cubed:free_response:1": {
+      "concept_key": "thickness-cubed",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "pet-tac-comparison",
+      "answer_hash": "5dbae13b6abdde7fbb31da65210f03bf7d3b78ab2b5973360a0e886086db15c7"
+    },
+    "pet-tac-comparison:surface-strain:free_response:1": {
+      "concept_key": "surface-strain",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "pet-tac-comparison",
+      "answer_hash": "7ca7d7d49177c07a8162ac4eaf98b8e7c8c262c04bbecbae94c897c6ce1ffe22"
+    },
+    "pet-tac-comparison:retardation-units:free_response:1": {
+      "concept_key": "retardation-units",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "pet-tac-comparison",
+      "answer_hash": "9c980b16049dd5beb393e1fa548172439c4f2329776cbc63926210949e4b774c"
+    },
+    "pet-tac-comparison:yield-cost:free_response:1": {
+      "concept_key": "yield-cost",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "pet-tac-comparison",
+      "answer_hash": "af956cc35ccc1e3cbc1eb7d1b776bec9c5a50b707624922cbf418526c7163177"
+    },
+    "hardcoat-ar-design:uv-exposure:free_response:1": {
+      "concept_key": "uv-exposure",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "hardcoat-ar-design",
+      "answer_hash": "72ca9a3f12aa145c6de96dcfcd214385a2f660fed411e20cb43839ff92c70157"
+    },
+    "hardcoat-ar-design:silica-surface:free_response:1": {
+      "concept_key": "silica-surface",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "hardcoat-ar-design",
+      "answer_hash": "9c49c2ee8af965cd31cc287320b7a1bc0682c95b0cb2ad666fd234082cd3bdd5"
+    },
+    "hardcoat-ar-design:hardness-scales:free_response:1": {
+      "concept_key": "hardness-scales",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "hardcoat-ar-design",
+      "answer_hash": "82ed8cc33b863eb0e0065031de854740926dd042a86cb0179364a442eb2da395"
+    },
+    "hardcoat-ar-design:soft-hc-limit:free_response:1": {
+      "concept_key": "soft-hc-limit",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "hardcoat-ar-design",
+      "answer_hash": "a1d4fa07616273fafd1bb0e76b773741369335960ef94a3084f861a5c687371c"
+    },
+    "relationship-communication:validation-meaning:free_response:1": {
+      "concept_key": "validation-meaning",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "relationship-communication",
+      "answer_hash": "cd7e343487e95507997a4f505fc8b15c00e6705568d33503f763a453a2d2863b"
+    },
+    "relationship-communication:oars-elements:free_response:1": {
+      "concept_key": "oars-elements",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "relationship-communication",
+      "answer_hash": "df449de5155432cc568f164bc46c33df56eb488d1483b02a28c3b326ce24e131"
+    },
+    "relationship-communication:nvc-request:free_response:1": {
+      "concept_key": "nvc-request",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "relationship-communication",
+      "answer_hash": "855221e6b25bd0bc18d0b2a9c35b24332dd1e08a33d18d2ac21c37216322246f"
+    },
+    "relationship-communication:attachment-limits:free_response:1": {
+      "concept_key": "attachment-limits",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "relationship-communication",
+      "answer_hash": "5ad4f1f5afeed7b03d227ea874ddb8dd96baf73898868ccc402f3c3c45d14d55"
     }
   },
   "reviews": {
@@ -887,6 +1208,11 @@
     "antireflection-11b": "data/antireflection-11b-fb540c8b4ee14eeb85431462a60aca494f2b6a05b3e12d42a6042863152f7c7e.json",
     "ai-business-plans": "data/ai-business-plans-50b701891b8cd60404ffc8ece28b95a463709a4b65f2abc5159b50211f8619ff.json",
     "ai-news-radar-20260914": "data/ai-news-radar-20260914-8282236a3d18b608e9979b52eab967587d3bc2f03e0708cc245f0ed912688b4b.json",
-    "expired-patent-mining": "data/expired-patent-mining-1f6aeabb6a2e208f20436ff67423610f932951ba7d069dfa9ee75e5259447e68.json"
+    "expired-patent-mining": "data/expired-patent-mining-1f6aeabb6a2e208f20436ff67423610f932951ba7d069dfa9ee75e5259447e68.json",
+    "astra-learning-html": "data/astra-learning-html-177d57b1bd69f6ffe8220928d1444e50506e57fbe0011de0c95f17bc1a93f898.json",
+    "astra-prompt-conversion": "data/astra-prompt-conversion-fb0a9fdbf645f54348912e6601c23306c400bceb6e5b6f2090cf194381b71a95.json",
+    "pet-tac-comparison": "data/pet-tac-comparison-cc0028b7eb2bdb19b972bd099afcbca55fc4a150d8dab34ffa68189ada052d7c.json",
+    "hardcoat-ar-design": "data/hardcoat-ar-design-681f11bcf79a21676cc4d6695c90d38edcdc05543a3fa283aed7efb2e727369b.json",
+    "relationship-communication": "data/relationship-communication-94b13bc07a89a2d477448f44daf746425a1b2c73f5409323b4ae01d588521e7b.json"
   }
 }

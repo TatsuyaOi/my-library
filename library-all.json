@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-09-19T17:01:44+09:00",
+  "generated_at": "2026-09-19T20:57:56+09:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -16,7 +16,7 @@
       "icon": "🧩",
       "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
       "accent": "#59636f",
-      "count": 30
+      "count": 32
     },
     {
       "folder": "11_哲学",
@@ -64,7 +64,7 @@
       "icon": "🔬",
       "description": "仕事・研究開発・技術資料・業務知識を整理するライブラリ",
       "accent": "#2f6b59",
-      "count": 6
+      "count": 8
     },
     {
       "folder": "99_その他",
@@ -217,6 +217,25 @@
       "url": "./01_プロンプト/29_学習HTML新規作成/29_学習HTML新規作成_guide.html"
     },
     {
+      "title": "学習HTML作成プロンプト｜Astra構成",
+      "description": "日本語の学習HTMLを作成・改訂するためのプロンプト。章構成、問題、図表、動く図解、素材の扱い、表示と操作の検証条件をAstra構成に整理している。",
+      "group": "プロンプト設計",
+      "tags": [
+        "HTML生成",
+        "学習教材",
+        "図解",
+        "Astra"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "32_学習HTML作成Astra/学習HTML作成_Astra_guide.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/32_学習HTML作成Astra/学習HTML作成_Astra_guide.html"
+    },
+    {
       "title": "反射防止膜の光学入門｜大学生向け",
       "description": "光学薄膜の原理から材料・成膜・評価までを学ぶノート。",
       "group": "反射防止膜の光学入門",
@@ -295,6 +314,44 @@
       "category_title": "その他",
       "category_icon": "🗂️",
       "url": "./99_その他/06_マーケット温度感_2026-09-14/market_temperature_report_2026-09-14.html"
+    },
+    {
+      "title": "プロンプト変換｜Astra構成",
+      "description": "既存プロンプトの目的・数値・制約を保持し、GoalからStop Conditionまでの8項目へ再構成するためのプロンプト。変換対象のタスク自体は実行しない。",
+      "group": "プロンプト設計",
+      "tags": [
+        "プロンプト変換",
+        "要件保持",
+        "Astra"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "33_プロンプト変換Astra/プロンプト変換_Astra_guide.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/33_プロンプト変換Astra/プロンプト変換_Astra_guide.html"
+    },
+    {
+      "title": "ハードコートとAR積層設計｜学習版",
+      "description": "ハードコートの材料・硬化・評価、20 nmと50 nmのナノシリカ、関連特許、AR積層の屈曲・摺動設計を8章で学ぶ教材。外部写真の内包などに未達事項を残す暫定版。",
+      "group": "材料・表面技術",
+      "tags": [
+        "ハードコート",
+        "AR",
+        "ナノシリカ",
+        "屈曲",
+        "摺動"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "11_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "🔬",
+      "url": "./51_仕事/11_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html"
     },
     {
       "title": "デュアルHTML生成マスタープロンプト v2.0",
@@ -395,6 +452,25 @@
       "category_title": "AI",
       "category_icon": "✨",
       "url": "./41_AI/03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html"
+    },
+    {
+      "title": "PETとTACの比較｜学習版",
+      "description": "PETとTACの製法、機械特性、熱・水分、光学特性、費用を6章で比較する教材。HC・AR基材の選定に向け、保証値・比較例・計算上の仮定を区別して学ぶ。",
+      "group": "材料・表面技術",
+      "tags": [
+        "PET",
+        "TAC",
+        "光学フィルム",
+        "材料比較"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "10_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "🔬",
+      "url": "./51_仕事/10_PETとTACの比較/260919_PETとTACの比較_学習版.html"
     },
     {
       "title": "Hakken型 材料R&D 汎用発見アルゴリズム",
