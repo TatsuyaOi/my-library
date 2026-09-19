@@ -288,6 +288,27 @@ def write_json(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 
+def validate_quality(review):
+    """Automatic AI assessment and explicit editorial review have distinct provenance."""
+    quality = review.get('quality', {})
+    results = quality.get('results', [])
+    active = {q['question_id']: q for q in review['questions'] if q['status'] == 'active'}
+    if quality.get('method') not in {'independent-ai', 'source-reviewed'}:
+        raise ValueError('Unrecognized quality method')
+    result_ids = [r['question_id'] for r in results]
+    all_ids = {q['question_id'] for q in review['questions']}
+    if len(result_ids) != len(set(result_ids)) or not set(active) <= set(result_ids) or not set(result_ids) <= all_ids:
+        raise ValueError('Quality results must cover each active question exactly once')
+    for result in results:
+        if result.get('pass') is not True or not nonempty(result.get('reason')):
+            raise ValueError('Quality check failed')
+        if quality['method'] == 'source-reviewed' and result['question_id'] in active:
+            if not nonempty(quality.get('reviewer')) or not nonempty(quality.get('limitations')):
+                raise ValueError('Editorial review provenance required')
+            if result.get('question_hash') != digest(active[result['question_id']]):
+                raise ValueError('Question changed after source review')
+
+
 def load_bundle(root):
     path = root / 'review/bundle.json'
     if not path.exists():
@@ -312,12 +333,7 @@ def load_bundle(root):
             if ids & qids:
                 raise ValueError('Global question ID collision')
             ids |= qids
-            active = {q['question_id'] for q in review['questions'] if q['status'] == 'active'}
-            quality = review.get('quality', {})
-            results = quality.get('results', [])
-            passed = {r['question_id'] for r in results if r.get('pass') is True and nonempty(r.get('reason'))}
-            if active and (quality.get('method') != 'independent-ai' or not active <= passed):
-                raise ValueError('Quality results missing for active questions')
+            validate_quality(review)
     if set(bundle['reviews']) - seen:
         raise ValueError('Orphan review')
     for qid, value in bundle['ledger'].items():
@@ -420,6 +436,11 @@ def run(root, site, generate=False, only=None, force=False, ai=None):
             for q in bundle['reviews'].get(lid, {}).get('questions', []):
                 q['status'] = 'inactive'
     bundle['lessons'] = lessons
+    save_bundle(root, bundle)
+    return logs
+
+
+def save_bundle(root, bundle):
     # Validate the whole candidate before one atomic manifest replacement.
     with tempfile.TemporaryDirectory(prefix='.review-stage-', dir=root) as temporary:
         stage = Path(temporary)
@@ -440,7 +461,60 @@ def run(root, site, generate=False, only=None, force=False, ai=None):
             else:
                 os.replace(stage / 'review' / name, destination)
         os.replace(stage / 'review/bundle.json', root / 'review/bundle.json')
-    return logs
+
+
+def import_reviewed(root, site, package):
+    """Explicit offline import; never represents editorial work as independent AI."""
+    bundle = load_bundle(root)
+    configured = {l['lesson_id']: l for l in config(root)['lessons']}
+    public = {i['url'].removeprefix('./') for i in strict_json(site / 'library-all.json')['items']}
+    lessons = {l['lesson_id']: l for l in bundle['lessons']}
+    seen = set()
+    if not isinstance(package.get('reviews'), list) or not package['reviews']:
+        raise ValueError('Nonempty reviewed package required')
+    for data in package['reviews']:
+        lid = data['lesson_id']
+        if lid in seen or lid not in configured:
+            raise ValueError('Unknown or duplicate reviewed lesson')
+        seen.add(lid)
+        lesson = dict(configured[lid])
+        if lesson.get('generation_hold') or lesson['source_path'] not in public:
+            raise ValueError('Reviewed lesson is held or unpublished')
+        source = extract(checked_path(site, lesson['source_path']))
+        if data.get('quality', {}).get('method') != 'source-reviewed':
+            raise ValueError('Explicit source review required')
+        validate_review(data, lesson, source)
+        validate_quality(data)
+        active = [q for q in data['questions'] if q['status'] == 'active']
+        if not active:
+            raise ValueError('No reviewed questions')
+        old = bundle['reviews'].get(lid, {})
+        incoming = {q['question_id']: q for q in data['questions']}
+        for q in old.get('questions', []):
+            if q.get('manual_override') and incoming.get(q['question_id']) != q:
+                raise ValueError('Manual override changed or removed')
+            if q['question_id'] not in incoming:
+                raise ValueError('Previous question must be retained or deprecated')
+        for q in data['questions']:
+            qid = q['question_id']
+            known = bundle['ledger'].get(qid)
+            if known and known['answer_hash'] != digest(q['answer']):
+                raise ValueError('Answer changed without revision')
+            revisions = [v['revision'] for v in bundle['ledger'].values()
+                         if (v['lesson_id'], v['concept_key'], v['type']) == (lid, q['concept_key'], q['type'])]
+            if not known and q['revision'] != max(revisions, default=0) + 1:
+                raise ValueError('Nonsequential revision')
+            bundle['ledger'][qid] = {key: q[key] for key in ('concept_key', 'type', 'revision')}
+            bundle['ledger'][qid].update(lesson_id=lid, answer_hash=digest(q['answer']))
+        bundle['reviews'][lid] = data
+        lesson.update(status='active', generation_status='success', question_count=len(active),
+                      content_hash=source['content_hash'], review_content_hash=source['content_hash'],
+                      anchor_hash=source['anchor_hash'], section_hashes=source['section_hashes'],
+                      review_path=f'review/{lid}.json', quality_method='source-reviewed')
+        lessons[lid] = lesson
+    bundle['lessons'] = list(lessons.values())
+    save_bundle(root, bundle)
+    return {'lessons': len(seen), 'questions': sum(len(bundle['reviews'][lid]['questions']) for lid in seen)}
 
 
 def export(root, site):
@@ -460,13 +534,15 @@ def export(root, site):
             continue
         path = checked_path(site, lesson['source_path'])
         if lesson['generation_status'] == 'success' and lesson['status'] == 'active':
-            if not review or review.get('quality', {}).get('method') != 'independent-ai':
-                raise ValueError('Missing independent quality validation')
+            if not review:
+                raise ValueError('Missing quality validation')
+            validate_quality(review)
             try:
                 validate_review(review, lesson, extract(path))
             except (ValueError, KeyError):
                 lesson['generation_status'] = 'stale'
         if review:
+            lesson['quality_method'] = review['quality']['method']
             write_json(site / 'review' / f'{lid}.json', review)
             lesson['review_hash'] = digest(review)
         lesson = {k: v for k, v in lesson.items() if k not in {'target_commit', 'section_hashes'}}
@@ -482,8 +558,12 @@ if __name__ == '__main__':
     parser.add_argument('--generate', action='store_true')
     parser.add_argument('--all', action='store_true', help='Force revalidation/regeneration')
     parser.add_argument('--lesson', action='append')
+    parser.add_argument('--import-reviewed', type=Path, help='Explicitly import a source-reviewed JSON package')
     args = parser.parse_args()
     try:
-        print(json.dumps(run(ROOT, ROOT / '_site', args.generate, args.lesson, args.all), ensure_ascii=False, indent=2))
+        if args.import_reviewed and (args.generate or args.lesson or args.all):
+            raise ValueError('Import cannot be combined with generation options')
+        result = import_reviewed(ROOT, ROOT / '_site', strict_json(args.import_reviewed)) if args.import_reviewed else run(ROOT, ROOT / '_site', args.generate, args.lesson, args.all)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
     except (ValueError, KeyError, OSError) as exc:
         parser.exit(1, f'Review pipeline stopped: {exc}\n')

@@ -67,11 +67,10 @@
       ],
       "important": true,
       "status": "active",
-      "generation_status": "blocked",
-      "question_count": 0,
-      "review_path": "review/fe-general.json",
-      "target_commit": "1338ace057038ef2bfc16a9ffc64f0697597185e",
+      "generation_status": "success",
+      "question_count": 12,
       "content_hash": "22136ffb7fc5d17233b019e50cd8c76a213d955391ffd9f8f8f2730836eb62fe",
+      "review_content_hash": "22136ffb7fc5d17233b019e50cd8c76a213d955391ffd9f8f8f2730836eb62fe",
       "anchor_hash": "54c42ac97968fd150bcd548618861db9edb0ae4aca5cf4b13e1ab2eed6b38b2c",
       "section_hashes": {
         "exam": "58208987c0d765f4c8d7c88939c2a0e8be2fddcd69f16298663524319428f354",
@@ -91,8 +90,8 @@
         "quiz": "4952561ea6baa409f7ef7b6af6a20fd674c495de784e3d7dc189a903c4ef2f03",
         "index": "b660b41af368fdfdbc0ae3f4bf763e4991381c9e9ee8b6de98001bbb0986ce08"
       },
-      "review_content_hash": null,
-      "reason": "AI command is not configured"
+      "review_path": "review/fe-general.json",
+      "quality_method": "source-reviewed"
     },
     {
       "lesson_id": "boki-boost-reader",
@@ -143,11 +142,10 @@
       ],
       "important": false,
       "status": "active",
-      "generation_status": "blocked",
-      "question_count": 0,
-      "review_path": "review/ai-business-plans.json",
-      "target_commit": "1338ace057038ef2bfc16a9ffc64f0697597185e",
+      "generation_status": "success",
+      "question_count": 6,
       "content_hash": "dd72c72f7bc10f03208597782577bbd21b7171f07f4fe04de191c6b1bbcf39a7",
+      "review_content_hash": "dd72c72f7bc10f03208597782577bbd21b7171f07f4fe04de191c6b1bbcf39a7",
       "anchor_hash": "bc5249e6a70faa02e8f1e93e51c85cf15d8457013e18f6f33531e6671014c718",
       "section_hashes": {
         "section-0": "a7264a14114e8559dfff7f2529fc3da1ac2ba515dcb4c92b3cc7fbd753a73eff",
@@ -219,8 +217,8 @@
         "section-66": "04959955cd537a661140ec0563763e04a863b8c414687ab036046bc94f3292b8",
         "section-67": "7b79c36c55a6f635d54bdb64de67d1b19ec2930031513d7917024c01d993e310"
       },
-      "review_content_hash": null,
-      "reason": "AI command is not configured"
+      "review_path": "review/ai-business-plans.json",
+      "quality_method": "source-reviewed"
     },
     {
       "lesson_id": "ai-news-radar-20260914",
@@ -231,11 +229,10 @@
       ],
       "important": false,
       "status": "active",
-      "generation_status": "blocked",
-      "question_count": 0,
-      "review_path": "review/ai-news-radar-20260914.json",
-      "target_commit": "1338ace057038ef2bfc16a9ffc64f0697597185e",
+      "generation_status": "success",
+      "question_count": 4,
       "content_hash": "26e16f18eed3bbac93d04c1073caffb1ce774924f52de594f810db09252bae59",
+      "review_content_hash": "26e16f18eed3bbac93d04c1073caffb1ce774924f52de594f810db09252bae59",
       "anchor_hash": "3eec31be722ca6421875258279692f557ee357d8a792d43ab85a185575b21c1e",
       "section_hashes": {
         "overview": "411da15600793b12fb2a97c819cced34dbcbb9a7ff3cb0858e5c1a4565fb9287",
@@ -247,8 +244,8 @@
         "actions": "4f9c2dec68a731d370493dc96b615d7e04671b3ebaeb9dee82f6d3d49c3f5fdd",
         "sources": "8832ff085b5bd7f3d829522547600af9ab88238565166c2f099f7e2f23f56596"
       },
-      "review_content_hash": null,
-      "reason": "AI command is not configured"
+      "review_path": "review/ai-news-radar-20260914.json",
+      "quality_method": "source-reviewed"
     },
     {
       "lesson_id": "sputtering-learning-plan",
@@ -278,11 +275,10 @@
       ],
       "important": false,
       "status": "active",
-      "generation_status": "blocked",
-      "question_count": 0,
-      "review_path": "review/ceramics-engineering.json",
-      "target_commit": "1338ace057038ef2bfc16a9ffc64f0697597185e",
+      "generation_status": "success",
+      "question_count": 6,
       "content_hash": "6c4344351a9042d7c685d1fee318110841bc934426af059abce187670fc2035b",
+      "review_content_hash": "6c4344351a9042d7c685d1fee318110841bc934426af059abce187670fc2035b",
       "anchor_hash": "cbc0f36c554491bff867662670896f7c067af5ad03e70a526d8cefd126de2e2a",
       "section_hashes": {
         "vol1": "610b7000b5aef3631d3472da3160966a5ecea6ffcbb971b9dda20525f1e2b5da",
@@ -349,8 +345,8 @@
         "glossary": "26cad7637498882bfdc86515ca517a09648e239c7de4cdd54905632ade3e3877",
         "symbols": "30d40e9d1ce4d0a9ff184485e6c3c97a3acd0f457e48c213ef083d0a2a800939"
       },
-      "review_content_hash": null,
-      "reason": "AI command is not configured"
+      "review_path": "review/ceramics-engineering.json",
+      "quality_method": "source-reviewed"
     },
     {
       "lesson_id": "antireflection-11b",
@@ -361,11 +357,10 @@
       ],
       "important": false,
       "status": "active",
-      "generation_status": "blocked",
-      "question_count": 0,
-      "review_path": "review/antireflection-11b.json",
-      "target_commit": "1338ace057038ef2bfc16a9ffc64f0697597185e",
+      "generation_status": "success",
+      "question_count": 6,
       "content_hash": "75bfc0375a443ddbd6748fa2dee7e2c0d4370253b7a2e25d275bc6e83f24cdae",
+      "review_content_hash": "75bfc0375a443ddbd6748fa2dee7e2c0d4370253b7a2e25d275bc6e83f24cdae",
       "anchor_hash": "ba90abf3d8848083f7b5f3bda59ae2e14fa6ce50e3c07959b44b2f46700f5610",
       "section_hashes": {
         "map": "3559d39cf4fc6010f777461b17081ad43d570375648f1078eda547293fb6265f",
@@ -384,8 +379,8 @@
         "sheet": "fe4739eb5b7aec271ce73f0fad312b01d979e8aeae1c3e040b9751a7c6ca7d9c",
         "plan": "fb2b0554207cd1bafed6e20978d77b5e78b12f441dcde67227f3b485baf98af7"
       },
-      "review_content_hash": null,
-      "reason": "AI command is not configured"
+      "review_path": "review/antireflection-11b.json",
+      "quality_method": "source-reviewed"
     },
     {
       "lesson_id": "antireflection-introduction",
@@ -396,11 +391,10 @@
       ],
       "important": false,
       "status": "active",
-      "generation_status": "blocked",
-      "question_count": 0,
-      "review_path": "review/antireflection-introduction.json",
-      "target_commit": "1338ace057038ef2bfc16a9ffc64f0697597185e",
+      "generation_status": "success",
+      "question_count": 6,
       "content_hash": "fb275dd0805c9f99d499e992a99487ceb570a48ce5db1ad35b07425451858f7a",
+      "review_content_hash": "fb275dd0805c9f99d499e992a99487ceb570a48ce5db1ad35b07425451858f7a",
       "anchor_hash": "4961d807a89d7a3718989fa07f84dae3485f957296d6e2ac9674b2d1d73ac409",
       "section_hashes": {
         "map": "5c91c46460e99caa0160f975cea13ff6c427f8b638b2cc469d9c4ffb35052de2",
@@ -419,8 +413,8 @@
         "sheet": "8ee5c7ef3ad5e15af99476821faac4ff72ff9c60f50661f6b1c4e69cc19e221d",
         "plan": "31657286a207fcd25fd09b072d5126e49302ab7a3defa755cd68e7fc90411916"
       },
-      "review_content_hash": null,
-      "reason": "AI command is not configured"
+      "review_path": "review/antireflection-introduction.json",
+      "quality_method": "source-reviewed"
     },
     {
       "lesson_id": "expired-patent-mining",
@@ -431,11 +425,10 @@
       ],
       "important": false,
       "status": "active",
-      "generation_status": "blocked",
-      "question_count": 0,
-      "review_path": "review/expired-patent-mining.json",
-      "target_commit": "1338ace057038ef2bfc16a9ffc64f0697597185e",
+      "generation_status": "success",
+      "question_count": 6,
       "content_hash": "aab11a31015b381c2bcb5259202ce2185cc5b874888c01e53f57df1b6300375a",
+      "review_content_hash": "aab11a31015b381c2bcb5259202ce2185cc5b874888c01e53f57df1b6300375a",
       "anchor_hash": "a3b6628ef13765d720775f66f5c2ecc5800b38b4b4fad16924834a2354e6814f",
       "section_hashes": {
         "section-1": "1a7275cc939e2e999ed9842f92a56d8455b91c8552f446dceae893cf6db703c2",
@@ -473,8 +466,8 @@
         "section-33": "8744a5588d48efcfee52a45dc3415f9f9bf04ee22aac053c448bd03281366d6d",
         "section-34": "775f31af20062b04bbdc9863d1949c195863a0461a2f25db0ccff1631774fa3e"
       },
-      "review_content_hash": null,
-      "reason": "AI command is not configured"
+      "review_path": "review/expired-patent-mining.json",
+      "quality_method": "source-reviewed"
     },
     {
       "lesson_id": "sputtering-pressure",
@@ -485,11 +478,10 @@
       ],
       "important": false,
       "status": "active",
-      "generation_status": "blocked",
-      "question_count": 0,
-      "review_path": "review/sputtering-pressure.json",
-      "target_commit": "1338ace057038ef2bfc16a9ffc64f0697597185e",
+      "generation_status": "success",
+      "question_count": 8,
       "content_hash": "4533d2b159ebeb46b3662872ebbda6517874b6a44f45fa94b24df13618455b64",
+      "review_content_hash": "4533d2b159ebeb46b3662872ebbda6517874b6a44f45fa94b24df13618455b64",
       "anchor_hash": "202d27c480e60d6e66f5af29b0ad8bbebb8a88c1df54dd0e2f6e8dce71a1955d",
       "section_hashes": {
         "section-1": "271e03b1728a09a4d0b403f94e483336be6dda277fd1f01711488f56636b1faa",
@@ -503,10 +495,398 @@
         "section-9": "61a2a5b4dc2f58bc89f3a5a92a3c3cd3cd0a147e1a752a6b0eb78f1fa2a1d8a3",
         "section-10": "d6da515f2535d5ea998c3dda053350b2b7b5844182af8f74f1a207aa5a4a5292"
       },
-      "review_content_hash": null,
-      "reason": "AI command is not configured"
+      "review_path": "review/sputtering-pressure.json",
+      "quality_method": "source-reviewed"
     }
   ],
-  "ledger": {},
-  "reviews": {}
+  "ledger": {
+    "fe-general:byte-bits:fill_blank:1": {
+      "concept_key": "byte-bits",
+      "type": "fill_blank",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "ade1a1c2a61af0f279a4978dfddcdb6acd33f5a8b61e62c5fd881e8a88a387bc"
+    },
+    "fe-general:binary-22:choice:1": {
+      "concept_key": "binary-22",
+      "type": "choice",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "879923da020d1533f4d8e921ea7bac61e8ba41d3c89d17a4d14e3a89c6780d5d"
+    },
+    "fe-general:xor-condition:true_false:1": {
+      "concept_key": "xor-condition",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+    },
+    "fe-general:dfs-storage:reveal:1": {
+      "concept_key": "dfs-storage",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "ce3b529db7463d05a74e6a66ebcca6376e12d76648d0a39f9ec7b02c330dedc8"
+    },
+    "fe-general:binary-search-condition:fill_blank:1": {
+      "concept_key": "binary-search-condition",
+      "type": "fill_blank",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "d37043f7978fbe10ce3116c1dd8d1e4096e4315dd275ed0ad7aa5bff33f3cbb3"
+    },
+    "fe-general:array-origin:reveal:1": {
+      "concept_key": "array-origin",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "ec7866910621de3f2c19eea1bf3da832ed02b98fd2d3196cb693ba57b5190307"
+    },
+    "fe-general:recursion-stop:fill_blank:1": {
+      "concept_key": "recursion-stop",
+      "type": "fill_blank",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "cd6e367ecc2f2ea4daa9ef0ab9090f05f668683873adb7982f0f93f73ab1cbf8"
+    },
+    "fe-general:register-pc:choice:1": {
+      "concept_key": "register-pc",
+      "type": "choice",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "c100f95c1913f9c72fc1f4ef0847e1e723ffe0bde0b36e5f36c13f81fe8c26ed"
+    },
+    "fe-general:preemptive:true_false:1": {
+      "concept_key": "preemptive",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "fe-general:deadlock:reveal:1": {
+      "concept_key": "deadlock",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "5d7dbc69c26e5d06886ef0c261fa31ad4d584f5c7e12994cae890480765695e3"
+    },
+    "fe-general:sql-having:choice:1": {
+      "concept_key": "sql-having",
+      "type": "choice",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "3fa5834dc920d385ca9b099c9fe55dcca163a6b256a261f8f147291b0e7cf633"
+    },
+    "fe-general:recovery-direction:free_response:1": {
+      "concept_key": "recovery-direction",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "fe-general",
+      "answer_hash": "f629b42816f673b84f6d7e1bb68b216216b72d8db99db5c06f5c548fdcf58939"
+    },
+    "sputtering-pressure:base-pressure-timing:reveal:1": {
+      "concept_key": "base-pressure-timing",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "sputtering-pressure",
+      "answer_hash": "c9ba677d8ec5c55b744412422d61dc3a8a39bdd61f0f3ca4f4dd4365db08dcfb"
+    },
+    "sputtering-pressure:mean-free-path:fill_blank:1": {
+      "concept_key": "mean-free-path",
+      "type": "fill_blank",
+      "revision": 1,
+      "lesson_id": "sputtering-pressure",
+      "answer_hash": "fee938855048706dec94caddc6b30a14766bf12b20df81db366054c10dcb9fbe"
+    },
+    "sputtering-pressure:pressure-double:choice:1": {
+      "concept_key": "pressure-double",
+      "type": "choice",
+      "revision": 1,
+      "lesson_id": "sputtering-pressure",
+      "answer_hash": "c100f95c1913f9c72fc1f4ef0847e1e723ffe0bde0b36e5f36c13f81fe8c26ed"
+    },
+    "sputtering-pressure:rate-not-adhesion:true_false:1": {
+      "concept_key": "rate-not-adhesion",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "sputtering-pressure",
+      "answer_hash": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+    },
+    "sputtering-pressure:actual-temperature:reveal:1": {
+      "concept_key": "actual-temperature",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "sputtering-pressure",
+      "answer_hash": "278f1d297d709a09cb32f8c42fbce22e8a6fe2789019d49f13f619878eedcc70"
+    },
+    "sputtering-pressure:thickness-confound:free_response:1": {
+      "concept_key": "thickness-confound",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "sputtering-pressure",
+      "answer_hash": "3cd55ecd9f7c38bb54d5b787ba87faf69b3b9842ae11fcd29b297bc508669a85"
+    },
+    "sputtering-pressure:uniformity-locations:reveal:1": {
+      "concept_key": "uniformity-locations",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "sputtering-pressure",
+      "answer_hash": "09f151a02043e772ae3952a9204ca1797675622062475035230e89e5b780849a"
+    },
+    "sputtering-pressure:low-pressure-limit:true_false:1": {
+      "concept_key": "low-pressure-limit",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "sputtering-pressure",
+      "answer_hash": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "ceramics-engineering:hardness-toughness:true_false:1": {
+      "concept_key": "hardness-toughness",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "ceramics-engineering",
+      "answer_hash": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "ceramics-engineering:valence-electrons:fill_blank:1": {
+      "concept_key": "valence-electrons",
+      "type": "fill_blank",
+      "revision": 1,
+      "lesson_id": "ceramics-engineering",
+      "answer_hash": "fa1c5427e5779870ef9d41cbbe9b23875ab465adf7d1ca52e79b9c151f1e324c"
+    },
+    "ceramics-engineering:oxidation-formal:true_false:1": {
+      "concept_key": "oxidation-formal",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "ceramics-engineering",
+      "answer_hash": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+    },
+    "ceramics-engineering:polymorphism:reveal:1": {
+      "concept_key": "polymorphism",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "ceramics-engineering",
+      "answer_hash": "396bfd12325b786e0f52042027a205b2a5b2a4c7c06ca1757077b4ab67375329"
+    },
+    "ceramics-engineering:frenkel-pair:choice:1": {
+      "concept_key": "frenkel-pair",
+      "type": "choice",
+      "revision": 1,
+      "lesson_id": "ceramics-engineering",
+      "answer_hash": "879923da020d1533f4d8e921ea7bac61e8ba41d3c89d17a4d14e3a89c6780d5d"
+    },
+    "ceramics-engineering:vacancy-mobility:free_response:1": {
+      "concept_key": "vacancy-mobility",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "ceramics-engineering",
+      "answer_hash": "e93731f0201dc85cc4837cf34c5397e8e9327f5f252f99d3a99154d831902e99"
+    },
+    "antireflection-introduction:ar-principle:reveal:1": {
+      "concept_key": "ar-principle",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "antireflection-introduction",
+      "answer_hash": "db0ce7c896f1232a8cb9d4587be97bcc2c54300baaf71a2be4db6caa38d87479"
+    },
+    "antireflection-introduction:amplitude-intensity:choice:1": {
+      "concept_key": "amplitude-intensity",
+      "type": "choice",
+      "revision": 1,
+      "lesson_id": "antireflection-introduction",
+      "answer_hash": "3fa5834dc920d385ca9b099c9fe55dcca163a6b256a261f8f147291b0e7cf633"
+    },
+    "antireflection-introduction:frequency-boundary:true_false:1": {
+      "concept_key": "frequency-boundary",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "antireflection-introduction",
+      "answer_hash": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "antireflection-introduction:negative-reflection:reveal:1": {
+      "concept_key": "negative-reflection",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "antireflection-introduction",
+      "answer_hash": "784bdf10298f5a90ebeb38079d2961fb6631c6c6ce7cfb8e2484f824e732946f"
+    },
+    "antireflection-introduction:quarter-wave:fill_blank:1": {
+      "concept_key": "quarter-wave",
+      "type": "fill_blank",
+      "revision": 1,
+      "lesson_id": "antireflection-introduction",
+      "answer_hash": "6480c69d14ce396edbc6e0983a327704514f96cf47c9b7c8919461b0e8bd571e"
+    },
+    "antireflection-introduction:mgf2-residual:free_response:1": {
+      "concept_key": "mgf2-residual",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "antireflection-introduction",
+      "answer_hash": "0ee39836114a8c036ecdc016b0d29f9d8bc10e436849b72d43831fe27deeacfc"
+    },
+    "antireflection-11b:design-variables:reveal:1": {
+      "concept_key": "design-variables",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "antireflection-11b",
+      "answer_hash": "fdcf6bd922958e3e30a01395c7127dd4cbcc4b86a6a9707dcfb9c910e9215459"
+    },
+    "antireflection-11b:matrix-order:fill_blank:1": {
+      "concept_key": "matrix-order",
+      "type": "fill_blank",
+      "revision": 1,
+      "lesson_id": "antireflection-11b",
+      "answer_hash": "0f2fd7dbdffe944cc0c308de33843517626c82cd3c1f39ad36857a72b1206b9b"
+    },
+    "antireflection-11b:stack-universal:true_false:1": {
+      "concept_key": "stack-universal",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "antireflection-11b",
+      "answer_hash": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "antireflection-11b:absorbing-ar:true_false:1": {
+      "concept_key": "absorbing-ar",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "antireflection-11b",
+      "answer_hash": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+    },
+    "antireflection-11b:manufacturing-tolerance:free_response:1": {
+      "concept_key": "manufacturing-tolerance",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "antireflection-11b",
+      "answer_hash": "3898d49d613d79a44338159d2e154f2ca7dbd88926d4805afa75a5ce1c10c667"
+    },
+    "antireflection-11b:layer-burdens:reveal:1": {
+      "concept_key": "layer-burdens",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "antireflection-11b",
+      "answer_hash": "c24089f62dcd7b1f6c544b697a34c2dfa753f2d3499ac69ffdb31ba61e8473da"
+    },
+    "ai-business-plans:hypothesis-not-results:true_false:1": {
+      "concept_key": "hypothesis-not-results",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "ai-business-plans",
+      "answer_hash": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+    },
+    "ai-business-plans:start-service:reveal:1": {
+      "concept_key": "start-service",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "ai-business-plans",
+      "answer_hash": "f123e8b2406cbdc5957f3dfc7597b0bdc33cfe988c34aaa4e743fbb89b518bd9"
+    },
+    "ai-business-plans:focus-one:choice:1": {
+      "concept_key": "focus-one",
+      "type": "choice",
+      "revision": 1,
+      "lesson_id": "ai-business-plans",
+      "answer_hash": "ac8d8342bbb2362d13f0a559a3621bb407011368895164b628a54f7fc33fc43c"
+    },
+    "ai-business-plans:value-types:reveal:1": {
+      "concept_key": "value-types",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "ai-business-plans",
+      "answer_hash": "577f7976d9dc3ba38bb5091fe4bc936c0357a3eb58535fc4a4e52f026e3d4d2b"
+    },
+    "ai-business-plans:validation-stage:true_false:1": {
+      "concept_key": "validation-stage",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "ai-business-plans",
+      "answer_hash": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "ai-business-plans:assets-assumption:free_response:1": {
+      "concept_key": "assets-assumption",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "ai-business-plans",
+      "answer_hash": "351d2bdb4af043e41fb7fac9681b0519410b388b57d1e0eaa4a5e440c5a3a4c5"
+    },
+    "ai-news-radar-20260914:concept-diagram:true_false:1": {
+      "concept_key": "concept-diagram",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "ai-news-radar-20260914",
+      "answer_hash": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+    },
+    "ai-news-radar-20260914:fact-interpretation:free_response:1": {
+      "concept_key": "fact-interpretation",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "ai-news-radar-20260914",
+      "answer_hash": "b6a441dc6b0adc383e708b9a3d3ab95aa4347e4da6e646d188112980c4a5305e"
+    },
+    "ai-news-radar-20260914:ranking-relative:true_false:1": {
+      "concept_key": "ranking-relative",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "ai-news-radar-20260914",
+      "answer_hash": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "ai-news-radar-20260914:research-reproducibility:reveal:1": {
+      "concept_key": "research-reproducibility",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "ai-news-radar-20260914",
+      "answer_hash": "ae0c19838a29c62d1588cea1f116a6f52f1d7a6fbfb80a878b058532bc7b13d3"
+    },
+    "expired-patent-mining:report-status:reveal:1": {
+      "concept_key": "report-status",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "expired-patent-mining",
+      "answer_hash": "5d89e25ab2c9d0904d9b6c7211467cfcaaf4bb0af5badef6a1c2f6732716efa6"
+    },
+    "expired-patent-mining:s-grade-zero:fill_blank:1": {
+      "concept_key": "s-grade-zero",
+      "type": "fill_blank",
+      "revision": 1,
+      "lesson_id": "expired-patent-mining",
+      "answer_hash": "08cb08b891d329e5bed2067ed8e642c9b92c270f8558a7e5ad317438ceb8a513"
+    },
+    "expired-patent-mining:method-meyer:choice:1": {
+      "concept_key": "method-meyer",
+      "type": "choice",
+      "revision": 1,
+      "lesson_id": "expired-patent-mining",
+      "answer_hash": "c100f95c1913f9c72fc1f4ef0847e1e723ffe0bde0b36e5f36c13f81fe8c26ed"
+    },
+    "expired-patent-mining:antifog-durability:reveal:1": {
+      "concept_key": "antifog-durability",
+      "type": "reveal",
+      "revision": 1,
+      "lesson_id": "expired-patent-mining",
+      "answer_hash": "792d011537fcfb315de5b45ef783aacb00623751afc459ec88a4cb54db5e23f1"
+    },
+    "expired-patent-mining:adoption-evidence:true_false:1": {
+      "concept_key": "adoption-evidence",
+      "type": "true_false",
+      "revision": 1,
+      "lesson_id": "expired-patent-mining",
+      "answer_hash": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "expired-patent-mining:unknown-history:free_response:1": {
+      "concept_key": "unknown-history",
+      "type": "free_response",
+      "revision": 1,
+      "lesson_id": "expired-patent-mining",
+      "answer_hash": "0357bcbf6c9f94cda1850e98e2095861d98b812dd6049bf40726b4eee299a58f"
+    }
+  },
+  "reviews": {
+    "fe-general": "data/fe-general-ec62258b9b73fd2a977237c93f0e1b6d92cb4b774f54bbf007ad07b3158c581a.json",
+    "sputtering-pressure": "data/sputtering-pressure-44011886dc91769aa2d5ddcef73864295e6d513d3047b20c916a005258e94b27.json",
+    "ceramics-engineering": "data/ceramics-engineering-287a4fbdcc835de15f171bd0ff1c315951b4eba32ba7c7efacea78cd69ce412b.json",
+    "antireflection-introduction": "data/antireflection-introduction-674f7526e5196f6225df1996b50838ad62175dfc8d9b1855d1d1a23cd147d585.json",
+    "antireflection-11b": "data/antireflection-11b-fb540c8b4ee14eeb85431462a60aca494f2b6a05b3e12d42a6042863152f7c7e.json",
+    "ai-business-plans": "data/ai-business-plans-50b701891b8cd60404ffc8ece28b95a463709a4b65f2abc5159b50211f8619ff.json",
+    "ai-news-radar-20260914": "data/ai-news-radar-20260914-8282236a3d18b608e9979b52eab967587d3bc2f03e0708cc245f0ed912688b4b.json",
+    "expired-patent-mining": "data/expired-patent-mining-1f6aeabb6a2e208f20436ff67423610f932951ba7d069dfa9ee75e5259447e68.json"
+  }
 }

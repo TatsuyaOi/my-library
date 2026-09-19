@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "lesson_id": "fe-general",
+  "content_hash": "22136ffb7fc5d17233b019e50cd8c76a213d955391ffd9f8f8f2730836eb62fe",
+  "generated_at": "2026-09-19T11:18:22.037200+00:00",
+  "questions": [
+    {
+      "question_id": "fe-general:byte-bits:fill_blank:1",
+      "concept_key": "byte-bits",
+      "revision": 1,
+      "type": "fill_blank",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "1 byte は何 bit？",
+      "answer": "8",
+      "explanation": "1 byteは8 bitです。bitとbyteを区別して容量を計算します。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#math",
+        "evidence": "8bit = 1byte。"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "fe-general:binary-22:choice:1",
+      "concept_key": "binary-22",
+      "revision": 1,
+      "type": "choice",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "2進数 10110₂ を10進数で表すと？",
+      "answer": "c",
+      "explanation": "1の桁の重みを足し、16＋4＋2＝22です。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#math",
+        "evidence": "10110₂ = 16 + 4 + 2 = 22₁₀"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true,
+      "choices": [
+        {
+          "id": "a",
+          "text": "18"
+        },
+        {
+          "id": "b",
+          "text": "20"
+        },
+        {
+          "id": "c",
+          "text": "22"
+        },
+        {
+          "id": "d",
+          "text": "26"
+        }
+      ]
+    },
+    {
+      "question_id": "fe-general:xor-condition:true_false:1",
+      "concept_key": "xor-condition",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "XORは、両方の入力ビットが1のときも1になる。",
+      "answer": false,
+      "explanation": "XORは入力が異なるときだけ1です。両方1なら0になります。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#math",
+        "evidence": "XORは「どちらか一方だけ1」。ORの「少なくとも一方が1」と混同しない。"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "fe-general:dfs-storage:reveal:1",
+      "concept_key": "dfs-storage",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "深さ優先探索（DFS）の実装に自然な仕組みを2つ挙げてください。",
+      "answer": "再帰、スタック",
+      "explanation": "一方向へ進んで行き止まりで戻るため、再帰やスタックで戻り先を管理します。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#math",
+        "evidence": "実装では 再帰 または スタック が自然です。"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "fe-general:binary-search-condition:fill_blank:1",
+      "concept_key": "binary-search-condition",
+      "revision": 1,
+      "type": "fill_blank",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "二分探索を使うため、データはどのような順序の状態である必要がありますか？",
+      "answer": "整列済み",
+      "explanation": "中央と比較して探索範囲を半分にするには、データが整列済みである必要があります。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#algo",
+        "evidence": "探索：線形探索と二分探索 線形探索 二分探索 考え方 先頭から順番に探す 中央と比較し範囲を半分に絞る 前提 ほぼ不要 整列済み であること 計算量 O(n) O(log n)"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "fe-general:array-origin:reveal:1",
+      "concept_key": "array-origin",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "配列をトレースする前に、添字について最初に確認する点は？",
+      "answer": "0始まりか1始まりか",
+      "explanation": "開始番号を取り違えると参照位置や反復回数がずれます。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#algo",
+        "evidence": "添字が0始まりか1始まりか"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "fe-general:recursion-stop:fill_blank:1",
+      "concept_key": "recursion-stop",
+      "revision": 1,
+      "type": "fill_blank",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "再帰で無限に呼び出し続けないために必要なのは何条件？",
+      "answer": "終了条件",
+      "explanation": "再帰では呼び出しを止める終了条件を確認し、戻りの処理も追います。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#algo",
+        "evidence": "必ず 終了条件（base case） が必要です。"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "fe-general:register-pc:choice:1",
+      "concept_key": "register-pc",
+      "revision": 1,
+      "type": "choice",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "次に実行する命令の位置を保持するレジスタは？",
+      "answer": "b",
+      "explanation": "命令レジスタが現在の命令を保持するのに対し、プログラムカウンタは次の命令位置を保持します。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#hardware",
+        "evidence": "プログラムカウンタ：次に実行する命令の位置"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true,
+      "choices": [
+        {
+          "id": "a",
+          "text": "命令レジスタ"
+        },
+        {
+          "id": "b",
+          "text": "プログラムカウンタ"
+        },
+        {
+          "id": "c",
+          "text": "汎用レジスタ"
+        },
+        {
+          "id": "d",
+          "text": "TLB"
+        }
+      ]
+    },
+    {
+      "question_id": "fe-general:preemptive:true_false:1",
+      "concept_key": "preemptive",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "プリエンプティブ方式では、OSが実行中タスクからCPUを強制的に取り上げられる。",
+      "answer": true,
+      "explanation": "自発的にCPUを手放すまで待つノンプリエンプティブ方式と区別します。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#os",
+        "evidence": "プリエンプティブ ：OSが実行中タスクからCPUを強制的に取り上げられる。"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "fe-general:deadlock:reveal:1",
+      "concept_key": "deadlock",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "複数の処理がお互いの資源解放を待ち、永久に進めなくなる状態は？",
+      "answer": "デッドロック",
+      "explanation": "保持中の資源と待っている資源の循環を確認します。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#os",
+        "evidence": "デッドロック 複数処理がお互いの資源解放を待ち、永久に進めなくなる状態。"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "fe-general:sql-having:choice:1",
+      "concept_key": "sql-having",
+      "revision": 1,
+      "type": "choice",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "SQLで、集約後のグループを絞る句は？",
+      "answer": "d",
+      "explanation": "WHEREは行、HAVINGは集約後のグループを絞ります。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#db",
+        "evidence": "HAVING は集約後のグループを絞ります。WHEREは集約前の個々の行を絞る"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true,
+      "choices": [
+        {
+          "id": "a",
+          "text": "WHERE"
+        },
+        {
+          "id": "b",
+          "text": "JOIN"
+        },
+        {
+          "id": "c",
+          "text": "FROM"
+        },
+        {
+          "id": "d",
+          "text": "HAVING"
+        }
+      ]
+    },
+    {
+      "question_id": "fe-general:recovery-direction:free_response:1",
+      "concept_key": "recovery-direction",
+      "revision": 1,
+      "type": "free_response",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "ロールバックとロールフォワードは、復旧の方向がどう違いますか？",
+      "answer": "ロールバックは未完了の変更を取り消す。ロールフォワードはバックアップ後のログを適用し、障害直前へ進める。",
+      "explanation": "自己採点では「取り消す」と「ログを適用して進める」を区別できれば正解です。",
+      "source": {
+        "path": "21_基本情報/FE総合復習ノート.html",
+        "anchor": "#db",
+        "evidence": "ロールバック は未完了トランザクションの変更を取り消す方向。 ロールフォワード はバックアップ後にログを適用し、障害直前へ進める方向です。"
+      },
+      "tags": [
+        "21_基本情報"
+      ],
+      "status": "active",
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（作成者による原文再照合）",
+    "validated_at": "2026-09-19T11:21:07.912659+00:00",
+    "limitations": "同じ作成者による照合であり、独立したAI・第三者レビューではありません。教材全体の網羅問題ではなく初期問題です。時点依存の資料は当該資料の読解として扱い、外部情報の最新性は保証しません。",
+    "results": [
+      {
+        "question_id": "fe-general:byte-bits:fill_blank:1",
+        "question_hash": "c8575aa762cfbd10736f2553ffcef69dedac1762325341692f61d64d6eef9874",
+        "reason": "1 byteは8 bitです。bitとbyteを区別して容量を計算します。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:binary-22:choice:1",
+        "question_hash": "6d58c66ae212ed4dabb5248e985f417c359ad1d1504953e48ac8ab33e7f089fe",
+        "reason": "1の桁の重みを足し、16＋4＋2＝22です。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:xor-condition:true_false:1",
+        "question_hash": "9c01cc861605f880bb2a11b46c5fe9043e96a9938e2943c4b0e7fecea113291d",
+        "reason": "XORは入力が異なるときだけ1です。両方1なら0になります。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:dfs-storage:reveal:1",
+        "question_hash": "8839239d4dbd8d997bbfb6cb3e570b5e288df4fb0054b29d51ea23c7d8de3a94",
+        "reason": "一方向へ進んで行き止まりで戻るため、再帰やスタックで戻り先を管理します。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:binary-search-condition:fill_blank:1",
+        "question_hash": "3a0f4c8dd5b6aaa50d064520488392fb1f1b901c4236d86a7b26490cb5ad6a79",
+        "reason": "中央と比較して探索範囲を半分にするには、データが整列済みである必要があります。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:array-origin:reveal:1",
+        "question_hash": "191ebb0147606e26b49655bb994b0881e3ee50c628dafcd60115fa2bab4a6369",
+        "reason": "開始番号を取り違えると参照位置や反復回数がずれます。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:recursion-stop:fill_blank:1",
+        "question_hash": "77326595964f7c19d13178e7fa4d9c7e4c1fb6b5fdbd17a1594d19603d1af175",
+        "reason": "再帰では呼び出しを止める終了条件を確認し、戻りの処理も追います。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:register-pc:choice:1",
+        "question_hash": "fc44e9de3d037d238fff93c7b9776dce98b027589ef9df2a0a8733bf81c4b20e",
+        "reason": "命令レジスタが現在の命令を保持するのに対し、プログラムカウンタは次の命令位置を保持します。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:preemptive:true_false:1",
+        "question_hash": "852ac5ac12cae608fd3bdef8428c895f6fd7c7651302fb6e35e782b4fab4bd9e",
+        "reason": "自発的にCPUを手放すまで待つノンプリエンプティブ方式と区別します。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:deadlock:reveal:1",
+        "question_hash": "53083ef4d7205c3f0574e96d8643a18972822396c652b718b9c4987778eb6503",
+        "reason": "保持中の資源と待っている資源の循環を確認します。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:sql-having:choice:1",
+        "question_hash": "d80afb6f7c3362e439b3c46a5e698ff66add66df1d44fa0fc0c8e3dfba66e6a0",
+        "reason": "WHEREは行、HAVINGは集約後のグループを絞ります。",
+        "pass": true
+      },
+      {
+        "question_id": "fe-general:recovery-direction:free_response:1",
+        "question_hash": "7fca2f2b509402d980e33cd1dfc2bce4f89099789f4e4415324a31df3224bd51",
+        "reason": "自己採点では「取り消す」と「ログを適用して進める」を区別できれば正解です。",
+        "pass": true
+      }
+    ]
+  }
+}
