@@ -23,6 +23,16 @@ try{
   // First test the real blocked state before applying test-only routes.
   await page.goto(url);await page.getByRole('heading',{name:'今日も、少しずつ。'}).waitFor();
   await page.getByRole('heading',{name:'問題を準備しています'}).waitFor();
+  await page.getByRole('heading',{name:'教材の範囲',exact:true}).waitFor();
+  const liveManifest=await (await page.request.get(new URL('../review/library.json',url).href)).json();
+  assert.equal(liveManifest.lessons.length,14);
+  assert.equal(await page.locator('.scope-list a').count(),14);
+  for(const lesson of liveManifest.lessons){
+    await page.getByText(lesson.source_path,{exact:true}).waitFor();
+    assert.equal(await page.locator('.scope-list a').evaluateAll(links=>links.map(a=>decodeURI(new URL(a.href).pathname))).then(paths=>paths.includes('/'+lesson.source_path)),true);
+  }
+  for(const [category,count] of [['11 哲学',3],['21 基本情報',1],['22 簿記',2],['41 AI',2],['51 仕事',6]])
+    await page.getByRole('heading',{name:`${category}（${count}ファイル）`,exact:true}).waitFor();
   for(const width of [360,390,412])for(const colorScheme of ['light','dark']){
     await page.setViewportSize({width,height:844});await page.emulateMedia({colorScheme});
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));

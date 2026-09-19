@@ -59,6 +59,21 @@ class ReviewTests(unittest.TestCase):
         self.assertEqual(logs[0]['status'], 'blocked')
         self.assertEqual(review.load_bundle(self.root)['reviews'], {})
 
+    def test_generation_hold_prevents_even_forced_ai_calls(self):
+        self.config['lessons'] = [dict(LESSON, generation_hold='本文の確認待ち')]
+        review.write_json(self.root / 'review.config.json', self.config)
+        fake = FakeAI()
+        logs = self.run_pipeline(generate=True, force=True, ai=fake)
+        self.assertEqual(fake.calls, [])
+        self.assertEqual(logs[0]['status'], 'blocked')
+        self.assertEqual(logs[0]['reason'], '本文の確認待ち')
+        (self.root / 'app').mkdir()
+        for name in ('index.html','app.mjs','core.mjs','db.mjs','style.css','manifest.webmanifest','icon.svg'):
+            (self.root / 'app' / name).write_text('fixture', encoding='utf-8')
+        review.export(self.root, self.site)
+        published = review.strict_json(self.site / 'review/library.json')['lessons']
+        self.assertEqual(published[0]['reason'], '本文の確認待ち')
+
     def test_generation_independent_validation_and_noop(self):
         fake = FakeAI()
         self.assertEqual(self.run_pipeline(generate=True, ai=fake)[0]['status'], 'success')

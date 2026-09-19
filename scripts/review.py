@@ -101,6 +101,8 @@ def config(root):
         checked_path(root, path)
         if not path.endswith(('.html', '.htm')) or not lesson['categories']:
             raise ValueError('Invalid lesson source')
+        if 'generation_hold' in lesson and not nonempty(lesson['generation_hold']):
+            raise ValueError('Invalid generation hold reason')
         seen.add(key)
         paths.add(path)
     for key, maximum in [('timeout_seconds', 300), ('max_input_chars', 500000),
@@ -374,7 +376,10 @@ def run(root, site, generate=False, only=None, force=False, ai=None):
         lesson['generation_status'] = 'success' if same else ('stale' if old else 'pending')
         attempts, reason = 0, None
         should_generate = generate and (only is None or lid in only) and (force or not same)
-        if not same and not source['sections']:
+        if lesson.get('generation_hold'):
+            reason = lesson['generation_hold']
+            lesson['generation_status'] = 'stale' if old else 'blocked'
+        elif not same and not source['sections']:
             reason = '根拠用の静的アンカーがありません。教材を実行せず保留しました'
             lesson['generation_status'] = 'stale' if old else 'blocked'
         elif should_generate:

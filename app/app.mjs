@@ -85,6 +85,7 @@ function home(){
   if(weak.length)main.append(block(el('h2','もう一度確認したい分野'),el('p',[...new Set(weak.map(q=>q.lesson_title))].join('・'))));
   const days=new Set(data.events.map(e=>e.study_date));
   if(days.size)main.append(el('p',`これまで ${days.size} 日、学習しました。`,{class:'muted'}));
+  main.append(scopeList());
   if(loadError)main.append(block(el('p',loadError),button('データを再読み込み',async()=>{await load();await render();})));
 }
 async function begin(mode,exclude=[]){
@@ -94,14 +95,28 @@ async function begin(mode,exclude=[]){
   if(!items.length){notice.textContent=mode==='all'?'今日の復習はありません。5分・10分モードから新しい問題を学べます。':'今、出題できる問題はありません。教材の準備状況をご確認ください。';return;}
   await db.start(items,mode);await render('question');
 }
+function scopeList(){
+  const section=block(el('h2','教材の範囲'),el('p',`登録済み ${library.length} ファイル。問題の準備状況にかかわらず、元の教材を開けます。`,{class:'muted'}));
+  const groups=new Map();
+  for(const l of library){const category=l.categories?.[0]||'その他';if(!groups.has(category))groups.set(category,[]);groups.get(category).push(l);}
+  for(const [category,items] of [...groups].sort(([a],[b])=>a.localeCompare(b))){
+    section.append(el('h3',`${category.replace('_',' ')}（${items.length}ファイル）`));
+    const list=el('ul',null,{class:'scope-list'});
+    for(const l of items){
+      const item=el('li');
+      item.append(el('a',l.title,{href:safeURL(l.source_path,base)}),el('p',l.source_path,{class:'source-path muted'}),
+        el('span',statusLabels[l.generation_status]||'対象外',{class:'tag'}),
+        el('p',l.generation_status==='success'?`${l.question_count} 問`:l.client_error||l.reason||'問題が準備できるまで、元の教材を読むことができます。',{class:'muted'}));
+      list.append(item);
+    }
+    section.append(list);
+  }
+  if(!library.length)section.append(el('p',loadError||'教材はまだ登録されていません。'));
+  return section;
+}
 function lessons(){
   main.append(el('h1','教材'));
-  if(!library.length)main.append(el('p',loadError||'教材はまだ登録されていません。'));
-  for(const l of library){
-    const a=el('a','教材を開く',{href:safeURL(l.source_path,base),class:'button'});
-    main.append(block(el('span',statusLabels[l.generation_status]||'対象外',{class:'tag'}),el('h2',l.title),
-      el('p',l.generation_status==='success'?`${l.question_count} 問`:l.client_error||'問題が準備できるまで、元の教材を読むことができます。'),a));
-  }
+  main.append(scopeList());
   main.append(button('再読み込み',async()=>{await load();await render();}));
 }
 function question(){
