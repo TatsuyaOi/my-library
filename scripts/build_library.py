@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 from datetime import datetime
 import json, re, shutil, subprocess
 from inbox_index import managed_info
+from learning import category_items
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "library.config.json"
@@ -233,6 +234,7 @@ def build():
             item.update(managed["media"] if managed is not None else read_item_media(path, category_dir, info["title"]))
             items.append(item)
 
+        items.extend(category_items(ROOT, folder))
         # Pinned first, explicit order, recent date, title.
         items.sort(key=lambda x: (
             0 if x["pinned"] else 1,
@@ -268,7 +270,8 @@ def build():
             global_item["category_folder"] = folder
             global_item["category_title"] = category.get("title", folder)
             global_item["category_icon"] = category.get("icon", "📚")
-            global_item["url"] = f"./{folder}/{item['file']}"
+            global_item["url"] = (f"./content/{item['learning_slug']}/index.html"
+                                  if 'learning_slug' in item else f"./{folder}/{item['file']}")
             if item.get("thumbnail"):
                 global_item["thumbnail_url"] = f"./{folder}/{item['thumbnail']}"
             if item.get("preview"):

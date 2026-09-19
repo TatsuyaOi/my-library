@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+<title id="title">圧力から評価までの因果関係</title>
+<desc id="desc">成膜圧力が衝突と粒子輸送に関わり、基板温度などの条件とともに成長へ影響する。速度、均一性、目的特性を測定して判断する。</desc>
+<rect width="720" height="430" fill="#f5f9fc"/>
+<g fill="#fff" stroke="#17212a" stroke-width="2"><rect x="50" y="20" width="620" height="65"/><rect x="50" y="125" width="620" height="65"/><rect x="50" y="230" width="620" height="65"/><rect x="50" y="335" width="620" height="65"/></g>
+<g font-family="Meiryo,sans-serif" font-size="24" text-anchor="middle" fill="#17212a"><text x="360" y="61">成膜圧力</text><text x="360" y="166">衝突・基板へ届く粒子の量と方向</text><text x="360" y="271">膜の成長（温度なども関与）</text><text x="360" y="376">速度・均一性・目的特性を測定</text></g>
+<g stroke="#164d85" stroke-width="3" fill="none"><path d="M360 85v32m-8-10 8 10 8-10"/><path d="M360 190v32m-8-10 8 10 8-10"/><path d="M360 295v32m-8-10 8 10 8-10"/></g>
+</svg>

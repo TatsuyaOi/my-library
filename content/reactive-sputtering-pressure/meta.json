@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "slug": "reactive-sputtering-pressure",
+  "type": "article",
+  "learning_mode": "technical",
+  "title": "スパッタ圧力と膜質",
+  "summary": "圧力による衝突・粒子輸送の変化を起点に、成膜速度と膜質を分けて考える。圧力だけで結論を出さず、比較実験で仮説を確かめるための入門教材。",
+  "category": "51_仕事",
+  "tags": ["スパッタリング", "薄膜", "圧力", "実験設計"],
+  "level": "intermediate",
+  "learning_time_minutes": 15,
+  "status": "draft",
+  "publish": false,
+  "visibility": "public",
+  "created": "2026-09-19",
+  "updated": "2026-09-19"
+}
