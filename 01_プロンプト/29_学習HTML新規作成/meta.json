@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "id": "study-html-master-v2",
+  "title": "学習HTML新規作成・11Bスタイル統合プロンプト v2.0",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "学習HTML新規作成・11Bスタイル統合プロンプト v2.0",
+  "summary": "構成・執筆・数式・図解・検証を含む学習HTML作成指示文。",
+  "tags": [
+    "プロンプト"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "学習HTML新規作成_11Bスタイル統合プロンプト_v2.0.md",
+    "guide": "29_学習HTML新規作成_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "fd361c48984a13bda6589a8caab73ce2e1c7cdf20e1f1d0f076a6c6d508d3f64",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "学習HTML新規作成_11Bスタイル統合プロンプト_v2.0.md": "fd8991a21f8ecb6017c4216401ed73540c7a42fa824464cdc1ee8b460f77659f"
+    },
+    "output_sha256": {
+      "学習HTML新規作成_11Bスタイル統合プロンプト_v2.0.md": "fd8991a21f8ecb6017c4216401ed73540c7a42fa824464cdc1ee8b460f77659f",
+      "29_学習HTML新規作成_guide.html": "72939816ed2a5910a99ecd07007a21151def5fc82d8522c47e8c14dface75f0d"
+    }
+  }
+}

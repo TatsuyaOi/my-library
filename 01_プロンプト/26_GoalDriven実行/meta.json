@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "id": "goal-driven-master-v2",
+  "title": "Goal-Driven Maximum Output Master Prompt v2.0",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "Goal-Driven Maximum Output Master Prompt v2.0",
+  "summary": "目的達成・根拠・成果物の充足を優先する汎用実行プロンプト。",
+  "tags": [
+    "プロンプト"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "Goal_Driven_Master_Prompt_v2.0.md",
+    "guide": "26_GoalDriven実行_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "f9a6ab8c100f3be4ff33d25f4eb761b54aae68352adf453c093ae0b43831bad0",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "Goal_Driven_Master_Prompt_v2.0.md": "e9325b224f6f6fd0ce61496ea20f5dff09de2cbe988ad0e778fab86dd2339135"
+    },
+    "output_sha256": {
+      "Goal_Driven_Master_Prompt_v2.0.md": "e9325b224f6f6fd0ce61496ea20f5dff09de2cbe988ad0e778fab86dd2339135",
+      "26_GoalDriven実行_guide.html": "d4d4c9757a6a0ede973e2f248afd59ba2133cb25d5f529e39beebfe606a057e2"
+    }
+  }
+}

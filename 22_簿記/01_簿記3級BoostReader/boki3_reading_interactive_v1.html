@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>簿記3級 Boost Reader</title>
+<style>
+:root{
+  --bg:#0f1220;--card:#171b2e;--card2:#202642;--text:#f6f7fb;--muted:#aab2cc;
+  --accent:#7c9cff;--accent2:#6ef0c2;--warn:#ffcc66;--bad:#ff7a90;--good:#7ff0a7;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Meiryo UI","Noto Sans JP",system-ui,sans-serif;background:radial-gradient(circle at top,#1b2250 0,#0f1220 38%,#0b0e18 100%);color:var(--text);min-height:100vh}
+.wrap{max-width:860px;margin:auto;padding:18px 14px 80px}
+.hero{padding:24px 18px 18px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(135deg,rgba(124,156,255,.18),rgba(110,240,194,.08));border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.25);overflow:hidden;position:relative}
+.hero:after{content:"¥";position:absolute;right:-12px;top:-38px;font-size:170px;font-weight:900;color:rgba(255,255,255,.035);transform:rotate(10deg)}
+.kicker{font-size:12px;color:var(--accent2);font-weight:700;letter-spacing:.15em}.hero h1{font-size:30px;line-height:1.15;margin:7px 0 8px}.hero p{color:var(--muted);margin:0;font-size:14px;line-height:1.8}
+.progress-wrap{margin-top:16px}.progress-text{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:7px}.bar{height:10px;background:#0b0e18;border-radius:999px;overflow:hidden}.bar>div{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.35s}
+.tabs{display:flex;gap:8px;overflow:auto;padding:16px 2px 8px;scrollbar-width:none}.tabs button{white-space:nowrap;border:0;border-radius:999px;background:#1a1f36;color:#c6cde2;padding:10px 14px;font-weight:700}.tabs button.active{background:var(--accent);color:#081028}
+.card{display:none;margin-top:10px;padding:22px 18px;border-radius:22px;background:linear-gradient(180deg,var(--card),#121628);border:1px solid rgba(255,255,255,.08);box-shadow:0 14px 36px rgba(0,0,0,.2);animation:pop .28s ease}.card.active{display:block}@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
+.badge{display:inline-flex;gap:7px;align-items:center;font-size:12px;font-weight:800;padding:6px 10px;border-radius:999px;background:rgba(124,156,255,.14);color:#bac8ff}.card h2{font-size:24px;margin:10px 0}.lead{font-size:17px;line-height:1.85;color:#eef1ff}.mini{font-size:13px;line-height:1.7;color:var(--muted)}
+.rule{margin:16px 0;padding:16px;border-radius:18px;background:var(--card2);border-left:4px solid var(--accent2)}
+.rule strong{color:var(--accent2)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.tile{padding:14px;border-radius:16px;background:#11162a;border:1px solid rgba(255,255,255,.07)}.tile b{display:block;margin-bottom:5px}.left{color:#9fb6ff}.right{color:#85f4c9}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:15px 0}.flow span{background:#10152a;border:1px solid rgba(255,255,255,.08);padding:9px 11px;border-radius:12px}.arrow{color:var(--accent2)}
+.quiz{margin-top:18px;padding-top:16px;border-top:1px dashed rgba(255,255,255,.15)}.quiz h3{font-size:16px}.answers{display:grid;gap:9px}.answers button{border:1px solid rgba(255,255,255,.09);background:#11162a;color:white;border-radius:14px;padding:13px;text-align:left;font-size:15px}.answers button:hover{transform:translateY(-1px);background:#171e39}.answers button.good{background:rgba(127,240,167,.14);border-color:var(--good)}.answers button.bad{background:rgba(255,122,144,.14);border-color:var(--bad)}.feedback{min-height:24px;font-weight:700;margin-top:10px}
+.nav{display:flex;gap:10px;margin-top:18px}.nav button{flex:1;border:0;border-radius:16px;padding:14px;font-weight:900}.prev{background:#242943;color:#d9def0}.next{background:linear-gradient(90deg,var(--accent),#9c7cff);color:white}
+.cheat{margin-top:18px;padding:18px;border-radius:20px;background:linear-gradient(135deg,#1c2c2a,#151a2a);border:1px solid rgba(110,240,194,.18)}.cheat h3{margin:0 0 10px}.cheat-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.chip{padding:12px;border-radius:14px;background:rgba(255,255,255,.045);font-size:13px;line-height:1.6}
+.footer-note{margin-top:16px;color:var(--muted);font-size:12px;line-height:1.7}
+@media(max-width:560px){.hero h1{font-size:26px}.grid,.cheat-row{grid-template-columns:1fr}.card h2{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="kicker">BOKI 3 BOOST READER</div>
+    <h1>暗記じゃなく、<br>仕訳の“判断回路”を作る。</h1>
+    <p>あなたの現状に合わせた、10〜15分の読む＋触る教材。<br>前払・前受・未収・未払・決算振替を中心に、借貸判断を固めます。</p>
+    <div class="progress-wrap">
+      <div class="progress-text"><span id="progressLabel">0 / 6 セクション</span><span id="scoreLabel">Score 0</span></div>
+      <div class="bar"><div id="bar"></div></div>
+    </div>
+  </section>
+
+  <div class="tabs" id="tabs"></div>
+  <main id="cards"></main>
+
+  <section class="cheat">
+    <h3>⚡ 1分チートシート</h3>
+    <div class="cheat-row">
+      <div class="chip"><b>資産・費用</b><br>増える → 借方 ／ 減る → 貸方</div>
+      <div class="chip"><b>負債・純資産・収益</b><br>増える → 貸方 ／ 減る → 借方</div>
+      <div class="chip"><b>権利</b><br>あとでもらえる・受けられる → 資産</div>
+      <div class="chip"><b>義務</b><br>あとで払う・提供する → 負債</div>
+    </div>
+  </section>
+  <div class="footer-note">おすすめの使い方：①読む → ②答えを押す → ③間違えたカードだけ翌日に再読。全部を一気に暗記するより効率的です。</div>
+</div>
+<script>
+const data=[
+{t:'借貸の土台',tag:'LEVEL 1',lead:'仕訳は「借方・貸方」を直接当てにいかない。まず、何が増減したかを判定する。',body:`<div class="flow"><span>何が動いた？</span><b class="arrow">→</b><span>5分類は？</span><b class="arrow">→</b><span>増えた？減った？</span><b class="arrow">→</b><span>借方/貸方</span></div><div class="grid"><div class="tile"><b class="left">資産・費用</b>増加＝借方<br>減少＝貸方</div><div class="tile"><b class="right">負債・純資産・収益</b>増加＝貸方<br>減少＝借方</div></div><div class="rule"><strong>合言葉：</strong> 資産・費用は「増えたら左」。それ以外は「増えたら右」。</div>`,q:'電気代5,000円を現金で払った。借方は？',a:['現金','水道光熱費','売上'],correct:1,why:'水道光熱費は費用。費用の増加なので借方。現金は資産の減少なので貸方。'},
+{t:'お金が入っても収益とは限らない',tag:'LEVEL 2',lead:'「現金が増えた」だけでは相手科目は決まらない。理由を見る。',body:`<div class="rule">現金が増えた → 資産増加なので借方。<br>では貸方は？ <strong>“なぜ入ってきたか”</strong> で決まる。</div><div class="grid"><div class="tile"><b>商品を売った</b>→ 売上（収益）</div><div class="tile"><b>銀行から借りた</b>→ 借入金（負債）</div></div>`,q:'銀行から10,000円借りて現金を受け取った。貸方は？',a:['売上','借入金','現金'],correct:1,why:'借りたお金は収益ではなく、返済義務＝負債。したがって借入金が貸方。'},
+{t:'前払・前受',tag:'LEVEL 3',lead:'名前暗記より「権利か義務か」で判断すると崩れない。',body:`<div class="grid"><div class="tile"><b>前払金</b>先に払った → あとで商品等を受け取る<strong class="left">権利</strong> → 資産</div><div class="tile"><b>前受金</b>先にもらった → あとで商品等を渡す<strong class="right">義務</strong> → 負債</div></div><div class="rule"><strong>前払＝資産 / 前受＝負債</strong><br>「誰が先に払ったか」を見る。</div>`,q:'商品を後日受け取る予定で10,000円を先に支払った。借方は？',a:['前払金','前受金','仕入'],correct:0,why:'まだ商品を受け取っていないので仕入ではない。将来受け取る権利＝前払金（資産）。'},
+{t:'未収・未払',tag:'LEVEL 4',lead:'「未」は、お金がまだ動いていない。そこに残っている権利・義務を見る。',body:`<div class="grid"><div class="tile"><b>未収入金</b>あとでもらえる → <strong class="left">資産</strong></div><div class="tile"><b>未払金</b>あとで払う → <strong class="right">負債</strong></div></div><div class="rule">備品など、商品売買以外の後払い・後受けでよく登場。</div>`,q:'備品10,000円を購入し、代金は翌月払い。貸方は？',a:['買掛金','未払金','未収入金'],correct:1,why:'備品は商品仕入ではないので買掛金ではなく未払金。将来支払う義務＝負債。'},
+{t:'決算整理4兄弟',tag:'LEVEL 5',lead:'決算整理は「今年の分だけ今年にする」作業。未来分や未計上分を修正する。',body:`<div class="grid"><div class="tile"><b>前払費用</b>払ったが未来分 → 資産</div><div class="tile"><b>未払費用</b>使ったが未払い → 負債</div><div class="tile"><b>未収収益</b>稼いだが未回収 → 資産</div><div class="tile"><b>前受収益</b>もらったが未来分 → 負債</div></div><div class="rule"><strong>時間軸で考える：</strong> 今年の費用・収益だけを残す。</div>`,q:'1年分の保険料を先払いし、決算時に翌期分3万円が残っていた。借方は？',a:['保険料','前払保険料','未払保険料'],correct:1,why:'翌期分は今年の費用ではない。未来にサービスを受ける権利なので前払保険料＝資産。'},
+{t:'決算振替',tag:'LEVEL 6',lead:'売上が借方に来ても混乱しない。「増やす」のではなく「ゼロにして締める」。',body:`<div class="rule">通常：売上は収益なので貸方。<br>決算：売上勘定をゼロにするため、反対側の<strong>借方</strong>へ振替。</div><div class="flow"><span>売上100万円</span><b class="arrow">→</b><span>借：売上100万</span><b class="arrow">→</b><span>貸：損益100万</span></div><p class="mini">費用は普段借方残高なので、締めるときは貸方に振り替える。</p>`,q:'決算で給料60万円を損益勘定へ振り替える。貸方は？',a:['損益','給料','現金'],correct:1,why:'給料は費用で通常借方残高。ゼロにするため反対側の貸方に給料を記入する。'}
+];
+let idx=0,score=0,done=new Set();
+const tabs=document.getElementById('tabs'),cards=document.getElementById('cards');
+data.forEach((d,i)=>{
+  const tb=document.createElement('button');tb.textContent=`${i+1}. ${d.t}`;tb.onclick=()=>show(i);tabs.appendChild(tb);
+  const c=document.createElement('section');c.className='card';c.innerHTML=`<span class="badge">${d.tag}</span><h2>${d.t}</h2><p class="lead">${d.lead}</p>${d.body}<div class="quiz"><h3>🎯 10秒チェック</h3><p>${d.q}</p><div class="answers">${d.a.map((x,j)=>`<button onclick="answer(${i},${j},this)">${x}</button>`).join('')}</div><div class="feedback" id="fb${i}"></div></div><div class="nav"><button class="prev" onclick="show(${Math.max(0,i-1)})">← 前へ</button><button class="next" onclick="show(${Math.min(data.length-1,i+1)})">次へ →</button></div>`;cards.appendChild(c);
+});
+function show(i){idx=i;[...tabs.children].forEach((x,j)=>x.classList.toggle('active',j===i));[...cards.children].forEach((x,j)=>x.classList.toggle('active',j===i));tabs.children[i].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});update();}
+function answer(i,j,el){const box=el.parentElement;[...box.children].forEach(b=>b.disabled=true);const ok=j===data[i].correct;el.classList.add(ok?'good':'bad');if(!ok)box.children[data[i].correct].classList.add('good');document.getElementById('fb'+i).innerHTML=(ok?'✅ 正解！ ':'❌ 惜しい。 ')+data[i].why;if(!done.has(i)){done.add(i);if(ok)score++;}update();}
+function update(){document.getElementById('progressLabel').textContent=`${done.size} / ${data.length} セクション`;document.getElementById('scoreLabel').textContent=`Score ${score}`;document.getElementById('bar').style.width=(done.size/data.length*100)+'%';}
+show(0);
+</script>
+</body>
+</html>

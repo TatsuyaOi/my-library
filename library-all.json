@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-09-19T14:29:56+09:00",
+  "generated_at": "2026-09-19T17:01:44+09:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -16,7 +16,7 @@
       "icon": "🧩",
       "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
       "accent": "#59636f",
-      "count": 23
+      "count": 30
     },
     {
       "folder": "11_哲学",
@@ -24,7 +24,7 @@
       "icon": "🧠",
       "description": "哲学者・思想・名言・自分の考えを整理するライブラリ",
       "accent": "#6f56d9",
-      "count": 2
+      "count": 3
     },
     {
       "folder": "21_基本情報",
@@ -40,7 +40,7 @@
       "icon": "📘",
       "description": "簿記・仕訳・勘定科目・決算を整理する学習ライブラリ",
       "accent": "#2366c8",
-      "count": 1
+      "count": 2
     },
     {
       "folder": "31_旅行",
@@ -56,7 +56,7 @@
       "icon": "✨",
       "description": "ChatGPT・Codex・AI活用・AI関連資料を整理するライブラリ",
       "accent": "#8b5a2b",
-      "count": 0
+      "count": 2
     },
     {
       "folder": "51_仕事",
@@ -64,7 +64,7 @@
       "icon": "🔬",
       "description": "仕事・研究開発・技術資料・業務知識を整理するライブラリ",
       "accent": "#2f6b59",
-      "count": 1
+      "count": 6
     },
     {
       "folder": "99_その他",
@@ -72,7 +72,7 @@
       "icon": "🗂️",
       "description": "分類前の資料や、ほかのカテゴリに入らない情報をまとめるライブラリ",
       "accent": "#666666",
-      "count": 1
+      "count": 6
     }
   ],
   "items": [
@@ -121,6 +121,214 @@
       "url": "./01_プロンプト/01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
     },
     {
+      "title": "簿記3級 Boost Reader",
+      "description": "前払・前受・未収・未払・決算振替を復習する対話型教材。",
+      "group": "簿記3級 Boost Reader",
+      "tags": [
+        "簿記"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "01_簿記3級BoostReader/boki3_reading_interactive_v1.html",
+      "category_folder": "22_簿記",
+      "category_title": "簿記",
+      "category_icon": "📘",
+      "url": "./22_簿記/01_簿記3級BoostReader/boki3_reading_interactive_v1.html"
+    },
+    {
+      "title": "理解優先・曼荼羅型資料作成マスタープロンプト v2.0",
+      "description": "網羅性・可読性・関係の理解を優先して図解資料を作る指示文。",
+      "group": "理解優先・曼荼羅型資料作成マスタープロンプト v2.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "31_理解優先の図解資料作成/31_理解優先の図解資料作成_guide.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/31_理解優先の図解資料作成/31_理解優先の図解資料作成_guide.html"
+    },
+    {
+      "title": "期限切れ特許マイニング｜初回実行レポート・引継ぎ",
+      "description": "公開特許の候補10件の予備評価と事業・実証計画、プロジェクト引継ぎ。",
+      "group": "期限切れ特許マイニング",
+      "tags": [
+        "仕事"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "09_期限切れ特許マイニング/期限切れ特許マイニング_初回実行レポート.html",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "🔬",
+      "url": "./51_仕事/09_期限切れ特許マイニング/期限切れ特許マイニング_初回実行レポート.html"
+    },
+    {
+      "title": "既存内容整理・11B参照HTML作成プロンプト",
+      "description": "会話・メモ・資料を忠実に整理して参照HTMLを作る指示文。",
+      "group": "既存内容整理・11B参照HTML作成プロンプト",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "30_既存内容整理HTML/既存内容整理_11B参照用プロンプト.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/30_既存内容整理HTML/既存内容整理_11B参照用プロンプト.html"
+    },
+    {
+      "title": "恋愛・コミュニケーション心理学｜学習版",
+      "description": "傾聴・自己開示・境界線・衝突修復を学ぶ一般向け教材。",
+      "group": "恋愛・コミュニケーション心理学",
+      "tags": [
+        "その他"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "04_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
+      "category_folder": "99_その他",
+      "category_title": "その他",
+      "category_icon": "🗂️",
+      "url": "./99_その他/04_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html"
+    },
+    {
+      "title": "学習HTML新規作成・11Bスタイル統合プロンプト v2.0",
+      "description": "構成・執筆・数式・図解・検証を含む学習HTML作成指示文。",
+      "group": "学習HTML新規作成・11Bスタイル統合プロンプト v2.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "29_学習HTML新規作成/29_学習HTML新規作成_guide.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/29_学習HTML新規作成/29_学習HTML新規作成_guide.html"
+    },
+    {
+      "title": "反射防止膜の光学入門｜大学生向け",
+      "description": "光学薄膜の原理から材料・成膜・評価までを学ぶノート。",
+      "group": "反射防止膜の光学入門",
+      "tags": [
+        "仕事"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "08_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "🔬",
+      "url": "./51_仕事/08_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html"
+    },
+    {
+      "title": "反射防止膜の光学入門｜11Bスタイル版",
+      "description": "電磁波・界面反射・薄膜干渉・多層膜設計を学ぶ教材。",
+      "group": "反射防止膜の光学入門",
+      "tags": [
+        "仕事"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "07_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "🔬",
+      "url": "./51_仕事/07_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html"
+    },
+    {
+      "title": "北極星の哲学｜11B Meiryo UI最終版",
+      "description": "北極星となる哲学を見返すための簡潔な参照HTML。",
+      "group": "北極星の哲学",
+      "tags": [
+        "哲学"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "03_北極星の哲学11B/北極星の哲学_11B_MeiryoUI最終版.html",
+      "category_folder": "11_哲学",
+      "category_title": "哲学",
+      "category_icon": "🧠",
+      "url": "./11_哲学/03_北極星の哲学11B/北極星の哲学_11B_MeiryoUI最終版.html"
+    },
+    {
+      "title": "マーケット温度感｜2026-09-18",
+      "description": "市場・金利・為替・ニュースを仕事や業界研究の観点で整理した時点資料。",
+      "group": "マーケット温度感",
+      "tags": [
+        "その他"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "06_マーケット温度感_2026-09-18/market_temperature_review_2026-09-18.html",
+      "category_folder": "99_その他",
+      "category_title": "その他",
+      "category_icon": "🗂️",
+      "url": "./99_その他/06_マーケット温度感_2026-09-18/market_temperature_review_2026-09-18.html"
+    },
+    {
+      "title": "マーケット温度感｜2026-09-14",
+      "description": "市場・金利・為替・ニュースを仕事や業界研究の観点で整理した時点資料。",
+      "group": "マーケット温度感",
+      "tags": [
+        "その他"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "06_マーケット温度感_2026-09-14/market_temperature_report_2026-09-14.html",
+      "category_folder": "99_その他",
+      "category_title": "その他",
+      "category_icon": "🗂️",
+      "url": "./99_その他/06_マーケット温度感_2026-09-14/market_temperature_report_2026-09-14.html"
+    },
+    {
+      "title": "デュアルHTML生成マスタープロンプト v2.0",
+      "description": "同一情報からスマホ版・PC版のHTMLを別設計で生成する指示文。",
+      "group": "デュアルHTML生成マスタープロンプト v2.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "28_デュアルHTML生成/デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/28_デュアルHTML生成/デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.html"
+    },
+    {
+      "title": "セラミックス材料工学｜全54章・設計書",
+      "description": "構造・物性・プロセスを学ぶ54章の教材と構成設計書。",
+      "group": "セラミックス材料工学",
+      "tags": [
+        "仕事"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "06_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "🔬",
+      "url": "./51_仕事/06_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html"
+    },
+    {
       "title": "スパッタ圧力と膜質",
       "description": "圧力による衝突・粒子輸送の変化を起点に、成膜速度と膜質を分けて考える。圧力だけで結論を出さず、比較実験で仮説を確かめるための入門教材。",
       "group": "学習教材",
@@ -139,6 +347,139 @@
       "category_title": "仕事",
       "category_icon": "🔬",
       "url": "./content/reactive-sputtering-pressure/index.html"
+    },
+    {
+      "title": "スパッタリング実務｜学習項目・引継ぎ設計",
+      "description": "12分野・36章・216項目の学習カリキュラムと引継ぎ設計。",
+      "group": "スパッタリング実務",
+      "tags": [
+        "仕事"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "05_スパッタリング学習設計/05_スパッタリング学習設計_guide.html",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "🔬",
+      "url": "./51_仕事/05_スパッタリング学習設計/05_スパッタリング学習設計_guide.html"
+    },
+    {
+      "title": "ガソリンとは何か｜写真と動く図解で学ぶ v4.2",
+      "description": "分子・精製・蒸発・燃焼・オクタン価・安全を学ぶ入門教材。",
+      "group": "ガソリンとは何か",
+      "tags": [
+        "その他"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "03_ガソリンの基礎/260919_ガソリン学習_v4.2.html",
+      "category_folder": "99_その他",
+      "category_title": "その他",
+      "category_icon": "🗂️",
+      "url": "./99_その他/03_ガソリンの基礎/260919_ガソリン学習_v4.2.html"
+    },
+    {
+      "title": "Recent News Radar｜2026-09-14",
+      "description": "AI・研究開発・薄膜・塗工・市場のニュースと論文を整理した時点資料。",
+      "group": "Recent News Radar",
+      "tags": [
+        "AI"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html",
+      "category_folder": "41_AI",
+      "category_title": "AI",
+      "category_icon": "✨",
+      "url": "./41_AI/03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html"
+    },
+    {
+      "title": "Hakken型 材料R&D 汎用発見アルゴリズム",
+      "description": "未知の関係・反証可能な仮説・次の実験を探索する指示文。",
+      "group": "Hakken型 材料R&D 汎用発見アルゴリズム",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "27_Hakken型材料R&D/27_Hakken型材料R&D_guide.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/27_Hakken型材料R&D/27_Hakken型材料R&D_guide.html"
+    },
+    {
+      "title": "Goal-Driven Maximum Output Master Prompt v2.0",
+      "description": "目的達成・根拠・成果物の充足を優先する汎用実行プロンプト。",
+      "group": "Goal-Driven Maximum Output Master Prompt v2.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "26_GoalDriven実行/26_GoalDriven実行_guide.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/26_GoalDriven実行/26_GoalDriven実行_guide.html"
+    },
+    {
+      "title": "AI事業計画｜36案比較と90日検証計画",
+      "description": "36事業案を比較し、上位案と90日間の検証計画を整理する。",
+      "group": "AI事業計画",
+      "tags": [
+        "AI"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html",
+      "category_folder": "41_AI",
+      "category_title": "AI",
+      "category_icon": "✨",
+      "url": "./41_AI/01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html"
+    },
+    {
+      "title": "AI事業立案・評価マスタープロンプト v1.0",
+      "description": "事業機会の探索・比較評価・仮説検証を設計する指示文。",
+      "group": "AI事業立案・評価マスタープロンプト v1.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "25_AI事業立案・評価/25_AI事業立案・評価_guide.html",
+      "category_folder": "01_プロンプト",
+      "category_title": "プロンプト",
+      "category_icon": "🧩",
+      "url": "./01_プロンプト/25_AI事業立案・評価/25_AI事業立案・評価_guide.html"
+    },
+    {
+      "title": "3資格の応募・受験・勉強開始スケジュール",
+      "description": "2026年8月17日時点の簿記3級・危険物甲種・統計検定2級の比較図。",
+      "group": "3資格の応募・受験・勉強開始スケジュール",
+      "tags": [
+        "その他"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "05_3資格の学習スケジュール/05_3資格の学習スケジュール_guide.html",
+      "preview": "05_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png",
+      "thumbnail": "05_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png",
+      "thumbnail_alt": "3資格の応募・受験・勉強開始スケジュール",
+      "category_folder": "99_その他",
+      "category_title": "その他",
+      "category_icon": "🗂️",
+      "url": "./99_その他/05_3資格の学習スケジュール/05_3資格の学習スケジュール_guide.html",
+      "thumbnail_url": "./99_その他/05_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png",
+      "preview_url": "./99_その他/05_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png"
     },
     {
       "title": "視覚表現ライブラリ・HTML組み込みプロンプト v1.0",

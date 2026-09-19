@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "id": "qualification-schedule-20260817",
+  "title": "3資格の応募・受験・勉強開始スケジュール",
+  "type": "reference",
+  "category": "99_その他",
+  "subcategory": "3資格の応募・受験・勉強開始スケジュール",
+  "summary": "2026年8月17日時点の簿記3級・危険物甲種・統計検定2級の比較図。",
+  "tags": [
+    "その他"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "file_00000000a8ac8206824404d9c5b92b1c.png",
+    "guide": "05_3資格の学習スケジュール_guide.html",
+    "preview": "file_00000000a8ac8206824404d9c5b92b1c.png",
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "67d799360341ba96f042418b7dd36fcc6d813b267766a2a1e5b29a80af886555",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "file_00000000a8ac8206824404d9c5b92b1c.png": "29c94606908a015bc07b1ce8b4d761e314126257359e14aa20692b79a9bef8b8"
+    },
+    "output_sha256": {
+      "file_00000000a8ac8206824404d9c5b92b1c.png": "29c94606908a015bc07b1ce8b4d761e314126257359e14aa20692b79a9bef8b8",
+      "05_3資格の学習スケジュール_guide.html": "e09fa7de69fb8ac352db5f2b30a587416c790e971903c7b8c86e58f33ff04fcf"
+    }
+  }
+}

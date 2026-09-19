@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "id": "ai-business-master-v1",
+  "title": "AI事業立案・評価マスタープロンプト v1.0",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "AI事業立案・評価マスタープロンプト v1.0",
+  "summary": "事業機会の探索・比較評価・仮説検証を設計する指示文。",
+  "tags": [
+    "プロンプト"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "AI事業立案・評価マスタープロンプト_v1.0.md",
+    "guide": "25_AI事業立案・評価_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "09f7d4e2e15903c835c80b02d10ec79188748de180f26541d77cc5f90d347048",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "AI事業立案・評価マスタープロンプト_v1.0.md": "e2d5655d7af309271cfc21bde934ff61bb3ed6808f81de5b33cf31905ca25228"
+    },
+    "output_sha256": {
+      "AI事業立案・評価マスタープロンプト_v1.0.md": "e2d5655d7af309271cfc21bde934ff61bb3ed6808f81de5b33cf31905ca25228",
+      "25_AI事業立案・評価_guide.html": "bbdfe3c835532d7f4d4f87e904c5d50b793f995e8727daab6567ed5229efc814"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "id": "mandala-document-master-v2",
+  "title": "理解優先・曼荼羅型資料作成マスタープロンプト v2.0",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "理解優先・曼荼羅型資料作成マスタープロンプト v2.0",
+  "summary": "網羅性・可読性・関係の理解を優先して図解資料を作る指示文。",
+  "tags": [
+    "プロンプト"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "理解優先_曼荼羅型資料作成マスタープロンプト_v2.0-1.md",
+    "guide": "31_理解優先の図解資料作成_guide.html",
+    "preview": null,
+    "additional": [
+      "理解優先_曼荼羅型資料作成マスタープロンプト_v2.0.md"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "966398a2cda4f644dfb35c042982759c937b893756915b5e73bdf6f50d5c0817",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "理解優先_曼荼羅型資料作成マスタープロンプト_v2.0-1.md": "c077ce2fcab886acab605bfc182e31adcd47f062d390c71170e1e1fe0981e7e5",
+      "理解優先_曼荼羅型資料作成マスタープロンプト_v2.0.md": "c077ce2fcab886acab605bfc182e31adcd47f062d390c71170e1e1fe0981e7e5"
+    },
+    "output_sha256": {
+      "理解優先_曼荼羅型資料作成マスタープロンプト_v2.0-1.md": "c077ce2fcab886acab605bfc182e31adcd47f062d390c71170e1e1fe0981e7e5",
+      "理解優先_曼荼羅型資料作成マスタープロンプト_v2.0.md": "c077ce2fcab886acab605bfc182e31adcd47f062d390c71170e1e1fe0981e7e5",
+      "31_理解優先の図解資料作成_guide.html": "628b2df05b85f87a0f5a6a1650d47a0f88a661375811a0bc1966c2014e13adf2"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "ar-optics-study",
+  "title": "反射防止膜の光学入門｜大学生向け",
+  "type": "reference",
+  "category": "51_仕事",
+  "subcategory": "反射防止膜の光学入門",
+  "summary": "光学薄膜の原理から材料・成膜・評価までを学ぶノート。",
+  "tags": [
+    "仕事"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "反射防止膜_光学入門_大学生向け-1.html",
+    "guide": "反射防止膜_光学入門_大学生向け-1.html",
+    "preview": null,
+    "additional": [
+      "反射防止膜_光学入門_大学生向け.html"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "57d33ef24597d11dd2e5599c604141e61b2e6676228ed734ecc21a02864d5a4e",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "反射防止膜_光学入門_大学生向け-1.html": "e0f385a9928e36eb46f6c57c15dd3d8fac3d59c40b3e994f210cc8364187a6cd",
+      "反射防止膜_光学入門_大学生向け.html": "e0f385a9928e36eb46f6c57c15dd3d8fac3d59c40b3e994f210cc8364187a6cd"
+    },
+    "output_sha256": {
+      "反射防止膜_光学入門_大学生向け-1.html": "e0f385a9928e36eb46f6c57c15dd3d8fac3d59c40b3e994f210cc8364187a6cd",
+      "反射防止膜_光学入門_大学生向け.html": "e0f385a9928e36eb46f6c57c15dd3d8fac3d59c40b3e994f210cc8364187a6cd"
+    }
+  }
+}

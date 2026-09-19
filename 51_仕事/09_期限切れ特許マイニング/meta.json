@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "id": "expired-patent-mining",
+  "title": "期限切れ特許マイニング｜初回実行レポート・引継ぎ",
+  "type": "reference",
+  "category": "51_仕事",
+  "subcategory": "期限切れ特許マイニング",
+  "summary": "公開特許の候補10件の予備評価と事業・実証計画、プロジェクト引継ぎ。",
+  "tags": [
+    "仕事"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "期限切れ特許マイニング_初回実行レポート.html",
+    "guide": "期限切れ特許マイニング_初回実行レポート.html",
+    "preview": null,
+    "additional": [
+      "期限切れ特許マイニング_初回実行レポート.md",
+      "期限切れ特許マイニング_プロジェクト引継ぎ.md"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "ab6b8b4712463e021ca68d2b25cda19b087c069ee5188a471026de7c7a17a853",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "期限切れ特許マイニング_プロジェクト引継ぎ.md": "a8275bc1c21cc13f706eb843b322746fa55dddbc5c523aab5a6438055c7a75b7",
+      "期限切れ特許マイニング_初回実行レポート.html": "66f8a3ceedbbe12100fea3acdebdb8a7112ae84c5604cfeb4b8be4f49e7024b8",
+      "期限切れ特許マイニング_初回実行レポート.md": "9ae1002a8a3ac807a58398c6f54e7ac91711ad4daeaaddd1f94dce2dbc27ad9f"
+    },
+    "output_sha256": {
+      "期限切れ特許マイニング_初回実行レポート.html": "66f8a3ceedbbe12100fea3acdebdb8a7112ae84c5604cfeb4b8be4f49e7024b8",
+      "期限切れ特許マイニング_初回実行レポート.md": "9ae1002a8a3ac807a58398c6f54e7ac91711ad4daeaaddd1f94dce2dbc27ad9f",
+      "期限切れ特許マイニング_プロジェクト引継ぎ.md": "a8275bc1c21cc13f706eb843b322746fa55dddbc5c523aab5a6438055c7a75b7"
+    }
+  }
+}

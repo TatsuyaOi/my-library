@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "news-radar-20260914",
+  "title": "Recent News Radar｜2026-09-14",
+  "type": "reference",
+  "category": "41_AI",
+  "subcategory": "Recent News Radar",
+  "summary": "AI・研究開発・薄膜・塗工・市場のニュースと論文を整理した時点資料。",
+  "tags": [
+    "AI"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "あなた向け_Recent_News_Radar_2026-09-14_11B.html",
+    "guide": "あなた向け_Recent_News_Radar_2026-09-14_11B.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "955e25b260f2baab3c82925d48863d7ab5a998cbdd95bfb391ca7edd3b6fd9dd",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "あなた向け_Recent_News_Radar_2026-09-14_11B.html": "644975d636f99df14a3f5802212174300390a24163d64fc63fb000caca3f71ed"
+    },
+    "output_sha256": {
+      "あなた向け_Recent_News_Radar_2026-09-14_11B.html": "644975d636f99df14a3f5802212174300390a24163d64fc63fb000caca3f71ed"
+    }
+  }
+}

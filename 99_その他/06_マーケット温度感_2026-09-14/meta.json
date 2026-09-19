@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "market-temperature-2026-09-14",
+  "title": "マーケット温度感｜2026-09-14",
+  "type": "reference",
+  "category": "99_その他",
+  "subcategory": "マーケット温度感",
+  "summary": "市場・金利・為替・ニュースを仕事や業界研究の観点で整理した時点資料。",
+  "tags": [
+    "その他"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "market_temperature_report_2026-09-14.html",
+    "guide": "market_temperature_report_2026-09-14.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "a1e8933a9d493e4a05d40485db71db1db660dedaf2508a3dcb15824c99a14868",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "market_temperature_report_2026-09-14.html": "49d8e5d68e01d77b2744d6baf4b324aee98f5159872454a5588923b9dacaec74"
+    },
+    "output_sha256": {
+      "market_temperature_report_2026-09-14.html": "49d8e5d68e01d77b2744d6baf4b324aee98f5159872454a5588923b9dacaec74"
+    }
+  }
+}

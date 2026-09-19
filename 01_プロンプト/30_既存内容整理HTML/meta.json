@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "reference-html-master",
+  "title": "既存内容整理・11B参照HTML作成プロンプト",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "既存内容整理・11B参照HTML作成プロンプト",
+  "summary": "会話・メモ・資料を忠実に整理して参照HTMLを作る指示文。",
+  "tags": [
+    "プロンプト"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "既存内容整理_11B参照用プロンプト.html",
+    "guide": "既存内容整理_11B参照用プロンプト.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "9044770625e680f572765298589bb3454c9cf82067591e4a7ad242fad0823667",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "既存内容整理_11B参照用プロンプト.html": "4952691934cf4ae5cdd752ae2c12c4d0f9c095a8f7e645f25e2d55aedd15d7f8"
+    },
+    "output_sha256": {
+      "既存内容整理_11B参照用プロンプト.html": "4952691934cf4ae5cdd752ae2c12c4d0f9c095a8f7e645f25e2d55aedd15d7f8"
+    }
+  }
+}

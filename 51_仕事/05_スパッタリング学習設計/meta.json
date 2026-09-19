@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "id": "sputtering-curriculum-v1",
+  "title": "スパッタリング実務｜学習項目・引継ぎ設計",
+  "type": "reference",
+  "category": "51_仕事",
+  "subcategory": "スパッタリング実務",
+  "summary": "12分野・36章・216項目の学習カリキュラムと引継ぎ設計。",
+  "tags": [
+    "仕事"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "スパッタリング実務_学習項目一覧_プロジェクト引継ぎ_v1.0.md",
+    "guide": "05_スパッタリング学習設計_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "32188ef4cca54698db78aa236af2f26f29c16aa4659f3c2b6b6b2a9bb4ebad55",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "スパッタリング実務_学習項目一覧_プロジェクト引継ぎ_v1.0.md": "c9a937e697e689021373d62532121da229a2c1572b5073737ce769f91c2b7db9"
+    },
+    "output_sha256": {
+      "スパッタリング実務_学習項目一覧_プロジェクト引継ぎ_v1.0.md": "c9a937e697e689021373d62532121da229a2c1572b5073737ce769f91c2b7db9",
+      "05_スパッタリング学習設計_guide.html": "457f6f20d35e465b77c23edc52e528a95c39131e07c01e99447ebd0b73ecda66"
+    }
+  }
+}

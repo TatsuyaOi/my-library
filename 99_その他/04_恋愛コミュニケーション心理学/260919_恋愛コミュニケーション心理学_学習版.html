@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>恋愛・コミュニケーション心理学｜学習版</title>
+<style>
+:root{
+  --bg:#f4f6f7; --paper:#fff; --text:#18232d; --muted:#53616d;
+  --navy:#18324a; --teal:#2f6f73; --line:#c7d1d8; --mark:#f3e6b3;
+  --soft:#eef4f5; --warn:#fff6e7; --bad:#8a3a3a; --good:#24634d;
+  --max:800px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:system-ui,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo UI",Meiryo,sans-serif;
+  font-size:17.5px;line-height:1.82;
+}
+a{color:#245f83;text-underline-offset:.18em}
+a:focus,button:focus,input:focus,summary:focus{outline:3px solid #9fc3d0;outline-offset:3px}
+header,.sheet{width:min(calc(100% - 30px),var(--max));margin-inline:auto;background:var(--paper)}
+header{
+  margin-top:22px;padding:44px 42px 34px;border-top:6px solid var(--navy);
+  border-bottom:1px solid var(--line)
+}
+.sheet{padding:34px 42px 50px;margin-bottom:26px}
+.kicker{font-size:.86rem;letter-spacing:.09em;color:var(--teal);font-weight:700}
+h1{font-size:clamp(2rem,7vw,2.6rem);line-height:1.25;color:var(--navy);margin:.3rem 0 .7rem}
+h2{font-size:1.48rem;line-height:1.4;color:var(--navy);margin:2.2rem 0 .9rem;padding-bottom:.3rem;border-bottom:2px solid var(--line)}
+h3{font-size:1.19rem;color:var(--navy);margin:1.75rem 0 .55rem}
+h4{font-size:1.03rem;color:var(--teal);margin:1.35rem 0 .4rem}
+p{margin:.62rem 0}
+.small{font-size:.9rem;color:var(--muted)}
+.lead{font-size:1.07rem}
+mark{background:var(--mark);padding:.03em .2em}
+.meta{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;
+  margin:22px 0 8px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
+.meta strong{display:block;color:var(--navy);font-size:.92rem}
+.goal-list{margin:.7rem 0 0;padding-left:1.25rem}
+.callout{border-left:4px solid var(--teal);background:var(--soft);padding:13px 16px;margin:18px 0}
+.warning{border-left-color:#b67425;background:var(--warn)}
+.rule{border-top:1px solid var(--line);margin:30px 0}
+.toc{columns:2;column-gap:36px;padding-left:1.2rem}
+.toc li{break-inside:avoid;margin:.28rem 0}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.95rem}
+caption{text-align:left;font-weight:700;color:var(--navy);padding-bottom:6px}
+th,td{border:1px solid var(--line);padding:10px 11px;vertical-align:top}
+th{background:#eef2f4;color:var(--navy);text-align:left}
+.table-wrap{overflow-x:auto}
+.badge{display:inline-block;font-size:.79rem;border:1px solid var(--line);padding:.05rem .48rem;border-radius:999px;color:var(--muted);margin-right:.25rem}
+.term{border-top:1px solid var(--line);padding-top:14px;margin-top:18px}
+.use-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.use-grid>div{border:1px solid var(--line);padding:12px 14px}
+.use-grid strong{display:block;color:var(--navy)}
+.script{margin:12px 0;padding:12px 15px;border:1px solid var(--line);background:#fbfcfc}
+.script b{color:var(--teal)}
+.figure{border:1px solid var(--line);margin:20px 0 26px;background:#fff}
+.figure-head{padding:11px 14px;border-bottom:1px solid var(--line);font-weight:700;color:var(--navy)}
+.figure-body{padding:16px}
+.figcap{font-size:.91rem;color:var(--muted);padding:0 14px 13px}
+.quad{
+  position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;
+  min-height:390px;border:1px solid var(--line);margin:18px 8px 28px;
+}
+.quad>div{padding:28px 20px;border:.5px solid var(--line)}
+.quad h4{margin-top:0}
+.axis-x,.axis-y{position:absolute;font-size:.84rem;color:var(--muted);font-weight:700;background:#fff;padding:0 5px}
+.axis-x{bottom:-31px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.axis-y{left:-58px;top:50%;transform:rotate(-90deg) translateY(-50%);transform-origin:center;white-space:nowrap}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:12px 0}
+.flow .node{border:1px solid var(--line);padding:10px 7px;text-align:center;font-size:.91rem;background:#fbfcfc}
+.flow .node.active{border:2px solid var(--teal);background:#eef7f7;font-weight:700}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+button{
+  font:inherit;border:1px solid #8598a5;background:#fff;color:var(--navy);
+  padding:7px 12px;border-radius:4px;cursor:pointer
+}
+button:hover{background:#f2f6f7}
+.stage-note{min-height:5.1em;border-left:4px solid var(--teal);padding:10px 14px;background:var(--soft)}
+.dategraph{display:grid;grid-template-columns:repeat(5,1fr);align-items:end;height:245px;gap:8px;border-left:2px solid #8799a5;border-bottom:2px solid #8799a5;padding:16px 12px 0;margin:12px 0 36px}
+.datebar{background:#dfe8ec;border:1px solid #aebbc3;position:relative;min-height:35px}
+.datebar span{position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);font-size:.79rem;white-space:nowrap}
+.datebar.peak{background:#d9ecea;border-color:#5f9893}
+.datebar.end{background:#f2e9c5;border-color:#b8a267}
+.horsemen{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hm{border:1px solid var(--line);padding:11px 13px}
+.hm .x{color:var(--bad);font-weight:700}.hm .o{color:var(--good);font-weight:700}
+details{border-top:1px solid var(--line);padding:10px 0}
+summary{cursor:pointer;font-weight:700;color:var(--navy)}
+.diagnostic{background:#fbfcfc;border:1px solid var(--line);padding:13px 16px;margin:16px 0 23px}
+.diagnostic ol{margin:.4rem 0}
+.quiz{border:1px solid var(--line);margin:14px 0;padding:14px}
+.quiz fieldset{border:0;padding:0;margin:0}
+.quiz legend{font-weight:700;color:var(--navy);margin-bottom:8px}
+.quiz label{display:block;padding:5px 3px}
+.feedback{margin-top:9px;padding:9px 11px;background:#f3f6f7;min-height:2.6em}
+.feedback.ok{border-left:4px solid var(--good)}.feedback.ng{border-left:4px solid var(--bad)}
+.quiz-actions{display:flex;gap:8px;margin-top:10px}
+.checklist li{margin:.4rem 0}
+.source-list li{margin:.6rem 0}
+.index{display:grid;grid-template-columns:repeat(2,1fr);gap:5px 18px}
+footer{width:min(calc(100% - 30px),var(--max));margin:0 auto 40px;color:var(--muted);font-size:.88rem}
+@media(max-width:680px){
+  body{font-size:17px}
+  header,.sheet{width:100%;margin-top:0;padding-left:16px;padding-right:16px}
+  header{padding-top:31px}
+  .meta,.use-grid,.horsemen{grid-template-columns:1fr}
+  .toc{columns:1}
+  .flow{grid-template-columns:1fr}
+  .quad{min-height:520px;margin-left:0;margin-right:0}
+  .quad>div{padding:20px 13px}
+  .axis-x,.axis-y{display:none}
+  .dategraph{grid-template-columns:1fr;height:auto;align-items:stretch;border:0;padding:0;gap:8px;margin-bottom:18px}
+  .datebar{height:auto!important;min-height:48px;padding:8px 10px}
+  .datebar span{position:static;transform:none;display:block;font-size:.86rem;white-space:normal}
+  table{font-size:.9rem}
+  .index{grid-template-columns:1fr}
+}
+@media print{
+  body{background:#fff;font-size:11pt;line-height:1.55}
+  header,.sheet,footer{width:100%;margin:0;padding:15mm 12mm;background:#fff}
+  header{border-top:0}
+  .controls,.quiz-actions,.no-print{display:none!important}
+  details:not([open])>*:not(summary){display:block!important}
+  a{color:#000;text-decoration:none}
+  h2{break-after:avoid}
+  .figure,.quiz,table{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">個人独習用・心理学とコミュニケーション技法</div>
+  <h1>恋愛・コミュニケーション心理学</h1>
+  <p class="lead">「相手を操作するテクニック」ではなく、<mark>距離感を読み、よく聴き、関係を深め、衝突を修復する</mark>ための実践体系として整理する。</p>
+  <div class="meta">
+    <div><strong>対象</strong>心理学の初学者／恋愛・対人コミュニケーションを実践的に学びたい人</div>
+    <div><strong>想定学習時間</strong>70〜100分＋復習</div>
+    <div><strong>学習モード</strong>混合：概念理解＋用語＋場面適用</div>
+    <div><strong>作成日</strong>2026-09-19</div>
+  </div>
+  <h3>この教材の到達目標</h3>
+  <ol class="goal-list">
+    <li>主要な理論・技法を、自分の言葉で区別して説明できる。</li>
+    <li>LINE・デート・相談・交際後の衝突で、どの考え方を使うか判断できる。</li>
+    <li>「共感」と「問題解決」、「アサーション」と「攻撃」、「NVCの要望」と「要求」を区別できる。</li>
+    <li>愛着や認知バイアスを、相手を決めつける診断ラベルとして使わない理由を説明できる。</li>
+    <li>心理学を“効かせる技”ではなく、相互理解と自由を守るための補助線として使える。</li>
+  </ol>
+</header>
+
+<main>
+<section class="sheet" id="guide">
+  <h2>使い方と全体像</h2>
+  <div class="callout">
+    <strong>最初に押さえる一本線：</strong>
+    恋愛初期は「興味・安心・楽しさ」、関係深化は「自己開示・共有体験・価値観」、交際後は「境界線・相互理解・修復能力」が中心になる。
+  </div>
+  <nav aria-label="目次">
+    <details open>
+      <summary>目次</summary>
+      <ol class="toc">
+        <li><a href="#ch1">第1章 距離感と判断を読む</a></li>
+        <li><a href="#ch2">第2章 会話を深める</a></li>
+        <li><a href="#ch3">第3章 好意とデートを設計する</a></li>
+        <li><a href="#ch4">第4章 衝突を修復する</a></li>
+        <li><a href="#practice">場面別・実践早見表</a></li>
+        <li><a href="#final">総合確認</a></li>
+        <li><a href="#index">用語索引</a></li>
+        <li><a href="#answer-key">解答一覧</a></li>
+        <li><a href="#sources">参考資料・制作メモ</a></li>
+      </ol>
+    </details>
+  </nav>
+
+  <div class="figure">
+    <div class="figure-head">図0　恋愛コミュニケーションの4層モデル</div>
+    <div class="figure-body">
+      <div class="flow" aria-label="4層モデル">
+        <div class="node active">① 読む<br><span class="small">距離感・状況</span></div>
+        <div class="node">② 聴く<br><span class="small">関心・共感</span></div>
+        <div class="node">③ 広げる<br><span class="small">自己開示・体験</span></div>
+        <div class="node">④ 伝える<br><span class="small">希望・境界線</span></div>
+        <div class="node">⑤ 修復する<br><span class="small">対立後の回復</span></div>
+      </div>
+    </div>
+    <div class="figcap">見るポイント：どのテクニックも単独で使うより、「読む→聴く→広げる→伝える→修復」の流れの中で役割を持つ。</div>
+  </div>
+
+  <div class="warning callout">
+    <strong>重要：</strong>心理学の知見は「この行動をすれば必ず好かれる」という因果レシピではない。個人差、文化、関係段階、文脈が大きい。とくに愛着は診断名ではなく、成人研究では「不安」「回避」の連続的な次元として扱われることが多い。
+  </div>
+</section>
+
+<section class="sheet" id="ch1">
+  <div class="kicker">CHAPTER 1</div>
+  <h2>距離感と判断を読む</h2>
+  <p>最初に学ぶのは「相手をどう動かすか」ではなく、<strong>自分の思い込みを減らし、相手の距離感を文脈ごと読む</strong>こと。</p>
+
+  <div class="diagnostic">
+    <strong>章頭診断：本文を読む前に考える</strong>
+    <ol>
+      <li>返信が遅いとき、「脈なし」と即断しない方がよいのはなぜか。</li>
+      <li>愛着の「不安」と「回避」は何が違うか。</li>
+      <li>押しの強い誘いが逆効果になるのは、どんな心理で説明できるか。</li>
+      <li>「意外な一面」は、なぜ良くも悪くも働くのか。</li>
+    </ol>
+    <details><summary>考え方を見る</summary><p>単発の行動ではなく傾向と状況を見ること、自由を脅かさないこと、期待からのズレは“ズレの評価”次第で正負どちらにもなることが鍵。</p></details>
+    <p><a href="#attachment">本文へ進む ↓</a></p>
+  </div>
+
+  <h3 id="attachment">1. 愛着理論：距離の取り方を理解する</h3>
+  <p>成人の恋愛愛着は、実践上は<strong>「愛着不安」</strong>と<strong>「愛着回避」</strong>の2次元で考えると扱いやすい。不安が高い人は相手の応答性や拒絶に敏感になりやすく、回避が高い人は依存や親密さから距離を取りやすい傾向がある。タイプ名は理解の補助であって、人を固定分類する診断ではない。</p>
+
+  <div class="figure">
+    <div class="figure-head">図1　成人愛着を2次元でみる模式図</div>
+    <div class="figure-body">
+      <div class="quad" role="img" aria-label="横軸が愛着不安、縦軸が愛着回避の4象限">
+        <div><h4>低不安 × 低回避</h4><p><strong>安定に近い</strong></p><p class="small">親密さを受け入れやすく、相手の反応を過度に脅威化しにくい。</p></div>
+        <div><h4>高不安 × 低回避</h4><p><strong>不安が前面に出やすい</strong></p><p class="small">返信や拒絶の手掛かりに注意が向きやすい。</p></div>
+        <div><h4>低不安 × 高回避</h4><p><strong>回避が前面に出やすい</strong></p><p class="small">自立を重視し、依存・親密さを抑えやすい。</p></div>
+        <div><h4>高不安 × 高回避</h4><p><strong>近づきたい／怖いが併存しやすい</strong></p><p class="small">接近と回避が文脈で揺れやすい。</p></div>
+        <span class="axis-x">← 低い　愛着不安　高い →</span>
+        <span class="axis-y">← 低い　愛着回避　高い →</span>
+      </div>
+    </div>
+    <div class="figcap">模式図。実際の測定は連続尺度で行われることが多く、4象限は理解補助。人を一度の行動で分類しない。</div>
+  </div>
+
+  <div class="use-grid">
+    <div><strong>具体的な用法</strong>「返信は遅いが、会うとよく話す」なら、LINE頻度だけを好意の指標にせず、対面時の行動や予定調整を含めて見る。</div>
+    <div><strong>避ける使い方</strong>「回避型だから追えば逃げる。だから○日無視する」のような操作ルールに変換しない。</div>
+  </div>
+
+  <h3 id="bias">2. 認知バイアス：脈あり／脈なしの暴走を止める</h3>
+  <div class="table-wrap"><table>
+    <caption>恋愛で起こりやすい認知の偏り</caption>
+    <thead><tr><th scope="col">バイアス</th><th scope="col">起こり方</th><th scope="col">実践上の対策</th></tr></thead>
+    <tbody>
+      <tr><td>確証バイアス</td><td>「脈あり」と思うと好意的手掛かりばかり集める。</td><td>反証になる行動も同じ期間で見る。</td></tr>
+      <tr><td>ネガティビティ・バイアス</td><td>多数の好意的反応より一度の冷たい反応が残る。</td><td>1回の出来事でなく、数週間の傾向で判断。</td></tr>
+      <tr><td>基本的帰属の誤り</td><td>返信が遅い→「冷たい性格」と性格原因に寄せすぎる。</td><td>忙しさ、体調、連絡習慣など状況要因を候補に残す。</td></tr>
+      <tr><td>ハロー効果</td><td>外見・話し方など一つの好印象が全体評価へ波及。</td><td>価値観・誠実さ・相互性を別軸で観察する。</td></tr>
+    </tbody>
+  </table></div>
+  <p><mark>単発イベントではなく傾向を見る</mark>。これは恋愛初期の判断精度を上げる、かなり実用的な原則。</p>
+
+  <h3 id="exchange">3. 社会的交換・相互依存：関係の“居心地”を考える</h3>
+  <p>「利益−コスト」とだけ覚えると打算的に見えるが、関係研究では満足、代替選択肢、投資、相互依存などを区別して考える。利益には安心、楽しさ、理解、新しい経験などが含まれ、コストには気疲れ、束縛、時間負担、不安などが含まれる。</p>
+  <div class="script"><b>デート後の問い：</b>「自分がうまく話せたか？」だけでなく、「相手は自然体でいられたか？」「予定や会話の負担が片側に寄っていなかったか？」を振り返る。</div>
+
+  <h3 id="evt">4. 期待違反理論：ギャップは“評価”で決まる</h3>
+  <p>人は相手の言動に予想を持つ。予想からのズレは注意を引くが、ズレ自体が好印象とは限らない。<strong>正の違反</strong>にも<strong>負の違反</strong>にもなり得る。</p>
+  <div class="use-grid">
+    <div><strong>良い使い方</strong>普段落ち着いている人が、本当に好きな趣味を楽しそうに話すなど「本来ある別の側面」を見せる。</div>
+    <div><strong>悪い使い方</strong>わざと冷たくしてから急に優しくするなど、不安を作って印象を操作する。</div>
+  </div>
+
+  <h3 id="reactance">5. 心理的リアクタンス：自由を奪わない</h3>
+  <p>選択の自由を脅かされたと感じると、その自由を取り戻そうとする反応が起こり得る。恋愛では「絶対来て」「なんで返事しないの？」のような圧力が、内容以上に負荷になることがある。</p>
+  <div class="script"><b>×</b>「土曜絶対空けて」<br><b>○</b>「土日どっちか空いてたら、○○行かない？難しければまた今度で大丈夫」</div>
+  <p class="small">ここでの目的は“余裕のある人を演じる”ことではなく、相手に本当に断る自由を残すこと。</p>
+
+  <h3 id="selfexpand">6. 自己拡張理論：関係を通じて世界が広がる</h3>
+  <p>自己拡張モデルでは、人は能力・視点・資源を広げようとし、親密な関係を通じて相手の視点や経験を自己に取り込むことがある。恋愛では「一緒に新しい体験をする」ことの理論的背景になる。</p>
+
+  <h3>章末確認</h3>
+  <div class="quiz" data-answer="b"><fieldset><legend>Q1. 返信が遅い一回だけで「脈なし」と決める問題を最もよく説明するのは？</legend>
+    <label><input type="radio" name="c1q1" value="a"> 自己拡張</label>
+    <label><input type="radio" name="c1q1" value="b"> 認知バイアスと状況要因の見落とし</label>
+    <label><input type="radio" name="c1q1" value="c"> NVC</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div>
+  <div class="feedback" aria-live="polite" data-ok="正解。単発の行動を全体評価へ拡張せず、傾向・状況を併せて見る。" data-ng="もう一度。『一回の返信速度』から性格や好意を即断する部分に注目。"></div></div>
+
+  <div class="quiz" data-answer="a"><fieldset><legend>Q2. 心理的リアクタンスを避ける誘い方は？</legend>
+    <label><input type="radio" name="c1q2" value="a"> 選択肢と断る余地を残す</label>
+    <label><input type="radio" name="c1q2" value="b"> 断れない理由を先に作る</label>
+    <label><input type="radio" name="c1q2" value="c"> 返信期限を短くする</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div>
+  <div class="feedback" aria-live="polite" data-ok="正解。自由の脅威を小さくすることが中心。" data-ng="相手の選択の自由を守る方向を選ぶ。"></div></div>
+
+  <div class="quiz" data-answer="c"><fieldset><legend>Q3. 愛着理論の実用上の扱いとして最も適切なのは？</legend>
+    <label><input type="radio" name="c1q3" value="a"> 一度のLINEでタイプを確定する</label>
+    <label><input type="radio" name="c1q3" value="b"> 相手のタイプ別に駆け引きを変える</label>
+    <label><input type="radio" name="c1q3" value="c"> 不安・回避の傾向を距離感理解の補助線として使う</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div>
+  <div class="feedback" aria-live="polite" data-ok="正解。固定診断ではなく、関係文脈での傾向を考える。" data-ng="愛着は『相手を攻略する分類』ではない。"></div></div>
+
+  <div class="quiz" data-answer="b"><fieldset><legend>Q4. 期待違反理論で重要なのは？</legend>
+    <label><input type="radio" name="c1q4" value="a"> 予想外なら何でも好印象になる</label>
+    <label><input type="radio" name="c1q4" value="b"> 予想からのズレがどう解釈・評価されるか</label>
+    <label><input type="radio" name="c1q4" value="c"> 予想通りに振る舞うほど常に魅力が上がる</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div>
+  <div class="feedback" aria-live="polite" data-ok="正解。違反には正負があり、文脈と評価が重要。" data-ng="『予想外＝良い』ではない点を確認。"></div></div>
+
+  <div class="quiz" data-answer="a"><fieldset><legend>Q5. 社会的交換・相互依存の見方に最も近い振り返りは？</legend>
+    <label><input type="radio" name="c1q5" value="a"> 二人にとって安心・楽しさ・負担のバランスはどうだったか</label>
+    <label><input type="radio" name="c1q5" value="b"> 相手にどれだけ高価なものを与えたか</label>
+    <label><input type="radio" name="c1q5" value="c"> 自分が会話量で勝ったか</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div>
+  <div class="feedback" aria-live="polite" data-ok="正解。『価値』は金銭だけでなく、心理的な利益・負担を含む。" data-ng="金銭的な損得だけの理論ではない。"></div></div>
+</section>
+
+<section class="sheet" id="ch2">
+  <div class="kicker">CHAPTER 2</div>
+  <h2>会話を深める</h2>
+  <p>会話の強さは質問数ではなく、<strong>「理解された」と感じてもらえる応答</strong>と、互いに少しずつ開示が深くなる流れで決まる。</p>
+
+  <div class="diagnostic">
+    <strong>章頭診断</strong>
+    <ol>
+      <li>質問をたくさんすると「面接っぽく」なるのはなぜか。</li>
+      <li>共感と問題解決は、どちらを先に置くとよいか。</li>
+      <li>動機づけ面接のOARSは何の略か。</li>
+      <li>アサーティブな断り方は、受け身・攻撃と何が違うか。</li>
+    </ol>
+    <details><summary>考え方を見る</summary><p>相手の発言を拾い、自分も適量を返す。まず理解・感情の受け止め、その後に希望や解決へ進む。</p></details>
+    <p><a href="#disclosure">本文へ進む ↓</a></p>
+  </div>
+
+  <h3 id="disclosure">1. 自己開示と自己開示の返報性</h3>
+  <p>親密さ研究では、自己開示だけでなく、相手の開示と「相手が自分を理解・受容・配慮してくれた」という<strong>知覚された応答性</strong>が重要とされる。事実情報より感情の開示が親密さと強く関連した研究もある。</p>
+  <div class="table-wrap"><table>
+    <caption>自己開示を段階的に深める</caption>
+    <thead><tr><th>段階</th><th>例</th><th>目的</th></tr></thead>
+    <tbody>
+      <tr><td>1 事実</td><td>「京都出身なんよ」</td><td>安全な入口</td></tr>
+      <tr><td>2 好み</td><td>「人が多い所より自然が好き」</td><td>共通点・違いを見つける</td></tr>
+      <tr><td>3 経験</td><td>「一人で遠くまでドライブする」</td><td>人物像が立つ</td></tr>
+      <tr><td>4 価値観</td><td>「一人の時間も大事にしたい」</td><td>関係の相性を知る</td></tr>
+      <tr><td>5 感情</td><td>「静かな所に行くと落ち着く」</td><td>内面への接続</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="script"><b>面接型：</b>「北海道どこ行った？」「誰と？」「何日？」<br>
+  <b>往復型：</b>「北海道いいな。俺も景色いい所好きなんよ。特によかった場所どこ？」</div>
+  <p><strong>質問 → 相手 → 自分の少量開示 → 相手</strong>の往復にすると自然。</p>
+
+  <h3 id="followup">2. フォローアップ質問：話題を飛ばさず拾う</h3>
+  <p>相手の回答の中にある語を一つ拾って、理由・具体例・感情・未来のいずれかに伸ばす。</p>
+  <div class="table-wrap"><table>
+    <caption>4方向のフォローアップ</caption>
+    <thead><tr><th>方向</th><th>例</th></tr></thead>
+    <tbody>
+      <tr><td>理由</td><td>「どういうところが好き？」</td></tr>
+      <tr><td>具体</td><td>「最近だとどこ行った？」</td></tr>
+      <tr><td>感情</td><td>「それ、結構嬉しかった？」</td></tr>
+      <tr><td>未来</td><td>「次行くならどこ行ってみたい？」</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="validation">3. バリデーションと応答性：まず理解を返す</h3>
+  <p>「同意する」と「理解を示す」は別。バリデーションは、相手の感情や経験がその人の文脈では理解可能だと伝えること。</p>
+  <div class="script"><b>相手：</b>「最近仕事しんどくて」<br>
+  <b>すぐ解決：</b>「転職したら？」<br>
+  <b>理解から：</b>「それ毎日続くと結構しんどそうやな。何が一番負担？」</div>
+
+  <h3 id="mi">4. 動機づけ面接 OARS：相手自身の考えを引き出す</h3>
+  <p>動機づけ面接は本来、行動変容支援のための専門的アプローチ。恋愛ではその“技法を盗用して誘導する”のではなく、<strong>相談場面で相手の主体性を守る聴き方</strong>としてOARSを参考にする。</p>
+  <div class="table-wrap"><table>
+    <caption>OARS</caption>
+    <thead><tr><th>要素</th><th>意味</th><th>会話例</th></tr></thead>
+    <tbody>
+      <tr><td>O</td><td>Open Questions 開かれた質問</td><td>「どういうところが一番しんどい？」</td></tr>
+      <tr><td>A</td><td>Affirmations 強み・努力の承認</td><td>「それでも続けて対応してるんやな」</td></tr>
+      <tr><td>R</td><td>Reflections 反射</td><td>「仕事そのものより働き方がしんどいんやな」</td></tr>
+      <tr><td>S</td><td>Summaries 要約</td><td>「仕事内容は好き。でも忙しさと人間関係が負担、って感じか」</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="assertion">5. アサーション：自分も相手も尊重して伝える</h3>
+  <p>アサーティブな伝え方は、感情・ニーズ・意見を直接伝えつつ、相手の権利も尊重する。結果として相手が必ず同意するわけではない。</p>
+  <div class="table-wrap"><table>
+    <caption>3つの伝え方</caption>
+    <thead><tr><th>型</th><th>例：「今日会おう」と言われたが疲れている</th></tr></thead>
+    <tbody>
+      <tr><td>受け身</td><td>「いいよ……」</td></tr>
+      <tr><td>攻撃的</td><td>「無理に決まってるやろ」</td></tr>
+      <tr><td><strong>アサーティブ</strong></td><td>「会いたいけど今日はかなり疲れてる。日曜にしたい」</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="figure" id="conversation-stepper">
+    <div class="figure-head">図2　相談会話を深める段階図（操作型）</div>
+    <div class="figure-body">
+      <div class="flow" id="stageNodes">
+        <div class="node active">1 拾う</div><div class="node">2 聞く</div><div class="node">3 映す</div><div class="node">4 共感</div><div class="node">5 広げる</div>
+      </div>
+      <div class="stage-note" id="stageNote">1 拾う：相手が出した言葉を捨てずに拾う。「仕事しんどい」の中から“仕事”や“しんどい”を次の問いにつなぐ。</div>
+      <div class="controls no-print">
+        <button type="button" id="prevStage">前の段階</button>
+        <button type="button" id="nextStage">次の段階</button>
+        <button type="button" id="resetStage">最初に戻す</button>
+      </div>
+    </div>
+    <div class="figcap">静止開始・段階送り。ここでは“会話の順序”を理解することが目的で、自動再生はしない。</div>
+  </div>
+
+  <h3>章末確認</h3>
+  <div class="quiz" data-answer="c"><fieldset><legend>Q1. 質問攻めを避けやすい基本形は？</legend>
+    <label><input type="radio" name="c2q1" value="a"> 質問→質問→質問</label>
+    <label><input type="radio" name="c2q1" value="b"> 自分の話だけ続ける</label>
+    <label><input type="radio" name="c2q1" value="c"> 質問→相手→自分の少量開示→相手</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。開示が相互になると面接感を減らしやすい。" data-ng="一方向でなく往復を作る。"></div></div>
+
+  <div class="quiz" data-answer="b"><fieldset><legend>Q2. バリデーションに最も近い返しは？</legend>
+    <label><input type="radio" name="c2q2" value="a"> 「それは考えすぎ」</label>
+    <label><input type="radio" name="c2q2" value="b"> 「それが毎日だと結構しんどそうやな」</label>
+    <label><input type="radio" name="c2q2" value="c"> 「じゃあ辞めたら？」</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。解決より前に経験・感情を理解可能なものとして受け止める。" data-ng="まず『理解された』感覚を作る返しを選ぶ。"></div></div>
+
+  <div class="quiz" data-answer="a"><fieldset><legend>Q3. OARSのRは？</legend>
+    <label><input type="radio" name="c2q3" value="a"> Reflection（反射）</label>
+    <label><input type="radio" name="c2q3" value="b"> Reward（報酬）</label>
+    <label><input type="radio" name="c2q3" value="c"> Reactance（リアクタンス）</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。相手の意味・感情を言い換えて返す。" data-ng="OARS = Open questions, Affirmations, Reflections, Summaries。"></div></div>
+
+  <div class="quiz" data-answer="c"><fieldset><legend>Q4. アサーティブな表現は？</legend>
+    <label><input type="radio" name="c2q4" value="a"> 「何でもいいよ」</label>
+    <label><input type="radio" name="c2q4" value="b"> 「普通それくらい分かるでしょ」</label>
+    <label><input type="radio" name="c2q4" value="c"> 「今日は休みたい。日曜なら会いたい」</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。自分の希望を明確にしつつ、相手を攻撃していない。" data-ng="受け身でも攻撃でもない選択肢を探す。"></div></div>
+
+  <div class="quiz" data-answer="b"><fieldset><legend>Q5. 親密さを考える上で、自己開示と併せて重要なものは？</legend>
+    <label><input type="radio" name="c2q5" value="a"> 相手より長く話すこと</label>
+    <label><input type="radio" name="c2q5" value="b"> 相手から理解・受容・配慮されたと感じること</label>
+    <label><input type="radio" name="c2q5" value="c"> 深い話を初対面ですべて話すこと</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。開示量だけでなく、応答性が重要。" data-ng="自己開示だけを増やせば親密になるわけではない。"></div></div>
+</section>
+
+<section class="sheet" id="ch3">
+  <div class="kicker">CHAPTER 3</div>
+  <h2>好意とデートを設計する</h2>
+  <p>ここでは「好かせる技」ではなく、<strong>好意が育ちやすい条件と、共有経験を心地よくする設計</strong>を扱う。</p>
+
+  <div class="diagnostic">
+    <strong>章頭診断</strong>
+    <ol>
+      <li>単純接触効果は「連絡回数を増やせば増やすほど良い」という意味か。</li>
+      <li>「似ていること」と「似ていると感じること」は同じか。</li>
+      <li>自己拡張をデートに落とすと何をすることになるか。</li>
+      <li>ピーク・エンドをデートへ使うとき、研究からの外挿に注意が必要なのはなぜか。</li>
+    </ol>
+    <details><summary>考え方を見る</summary><p>接触は文脈と量に依存し、類似性は実際と知覚を分ける。新奇な共有体験は自己拡張の候補。ピーク・エンドの古典研究は恋愛デートそのものではないため、設計ヒューリスティックとして慎重に使う。</p></details>
+    <p><a href="#mere">本文へ進む ↓</a></p>
+  </div>
+
+  <h3 id="mere">1. 単純接触効果：接触は“適度”が前提</h3>
+  <p>繰り返し接触が好意・親近感と関係する現象。ただしメタ分析では単純な右肩上がりではなく、条件によって逆U字的な形も示される。したがって「毎日たくさん送るほど良い」とは言えない。</p>
+  <div class="script"><b>実践：</b>無理に接触を増やすより、「以前話した内容を覚えている」自然な再接触を作る。<br>
+  例：「この前言ってた○○、行ってきた？」</div>
+
+  <h3 id="similarity">2. 類似性：共通点は“発見”する</h3>
+  <p>類似性と対人魅力には関連があるが、研究では<strong>実際の類似</strong>と<strong>知覚された類似</strong>が区別される。既存関係では「似ていると感じること」がより重要だったというメタ分析もある。</p>
+  <p>だから会話では「俺も俺も」と無理に合わせるのではなく、共通点と違いの両方を自然に出す。</p>
+
+  <h3 id="reciprocity">3. 相互好意：好意は完全に隠さない</h3>
+  <p>相手から好意を示されたと認知すると、その相手への好意が高まりやすいという「好意の返報性」が研究されている。ただし、相手の境界線を越える強い好意表明とは別。</p>
+  <div class="script"><b>低圧な好意表明：</b>「今日普通に楽しかった」「そういう考え方いいな」「一緒にいると話しやすいわ」</div>
+
+  <h3 id="expand2">4. 自己拡張：二人で“初めて”を増やす</h3>
+  <p>初めての店、美術館、季節イベント、景色の良い場所、体験系など、互いに新しい経験を共有する。片方が先生役になるより、<strong>「二人とも初めて」</strong>だと共同探索になりやすい。</p>
+  <div class="table-wrap"><table>
+    <caption>デート案を自己拡張で考える</caption>
+    <thead><tr><th>弱い設計</th><th>自己拡張を入れた設計</th></tr></thead>
+    <tbody>
+      <tr><td>毎回同じ店で食事だけ</td><td>食事＋初めての展示、景色、体験</td></tr>
+      <tr><td>片方の趣味に一方的に付き合う</td><td>二人とも少し未知のテーマを試す</td></tr>
+      <tr><td>「盛り上げなきゃ」とイベント過密</td><td>新奇性1つ＋落ち着いて話せる時間</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="peakend">5. ピーク・エンド：ピークと終わりを意識する</h3>
+  <p>古典的研究では、経験の回顧評価が最も強い瞬間と終わりの影響を受けることが示された。ただし元研究は冷水による不快経験などであり、<strong>「デートはピークと終わりだけで決まる」と直接実証した研究ではない</strong>。ここでは、長時間すべてを完璧にするより、印象的な瞬間と気持ちの良い終わりを大切にする“設計上のヒント”として使う。</p>
+
+  <div class="figure">
+    <div class="figure-head">図3　デート経験を振り返るための模式グラフ</div>
+    <div class="figure-body">
+      <div class="dategraph" aria-label="デート中の楽しさの模式変化">
+        <div class="datebar" style="height:38%"><span>ランチ</span></div>
+        <div class="datebar" style="height:55%"><span>移動・会話</span></div>
+        <div class="datebar peak" style="height:92%"><span>印象的体験</span></div>
+        <div class="datebar" style="height:64%"><span>カフェ</span></div>
+        <div class="datebar end" style="height:73%"><span>気持ちよく解散</span></div>
+      </div>
+      <p class="small">縦軸は模式的な「主観的楽しさ」。実測データではない。ピークを人工的に作る必要はなく、二人が楽しめる出来事が自然に生じる余地を作る。</p>
+    </div>
+    <div class="figcap">見るポイント：長さを引き延ばすより、疲れ切る前に良い終わりを作る考え方。</div>
+  </div>
+
+  <h3>章末確認</h3>
+  <div class="quiz" data-answer="b"><fieldset><legend>Q1. 単純接触効果の実践として適切なのは？</legend>
+    <label><input type="radio" name="c3q1" value="a"> 回数は多いほど必ず良い</label>
+    <label><input type="radio" name="c3q1" value="b"> 心地よい範囲で自然な再接触を作る</label>
+    <label><input type="radio" name="c3q1" value="c"> 相手が嫌がっても継続する</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。接触量と文脈に注意し、迷惑な接触を正当化しない。" data-ng="『多ければ多いほど良い』ではない。"></div></div>
+
+  <div class="quiz" data-answer="c"><fieldset><legend>Q2. 類似性研究から言えることに最も近いのは？</legend>
+    <label><input type="radio" name="c3q2" value="a"> 何もかも同じ相手だけが魅力的</label>
+    <label><input type="radio" name="c3q2" value="b"> 違いがあると関係は成立しない</label>
+    <label><input type="radio" name="c3q2" value="c"> 実際の類似と知覚された類似を分けて考える</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。『似ている』には客観・主観の別がある。" data-ng="類似性を0/1で扱わない。"></div></div>
+
+  <div class="quiz" data-answer="a"><fieldset><legend>Q3. 自己拡張をデートに応用した例は？</legend>
+    <label><input type="radio" name="c3q3" value="a"> 二人とも初めての展示や体験へ行く</label>
+    <label><input type="radio" name="c3q3" value="b"> 毎回同じ会話をする</label>
+    <label><input type="radio" name="c3q3" value="c"> 相手に予定をすべて任せる</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。新しい視点・経験を共有する。" data-ng="『世界が広がる』方向を探す。"></div></div>
+
+  <div class="quiz" data-answer="b"><fieldset><legend>Q4. ピーク・エンドのデート応用で最も大事な注意点は？</legend>
+    <label><input type="radio" name="c3q4" value="a"> 必ず最高の演出を用意する</label>
+    <label><input type="radio" name="c3q4" value="b"> 恋愛デートへの直接証拠と、一般経験研究からの応用を区別する</label>
+    <label><input type="radio" name="c3q4" value="c"> 長いデートほど不利と断定する</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。研究の対象と、実践への外挿を混同しない。" data-ng="元研究の対象を確認する。"></div></div>
+
+  <div class="quiz" data-answer="c"><fieldset><legend>Q5. 低圧な好意表明として適切なのは？</legend>
+    <label><input type="radio" name="c3q5" value="a"> 「俺のこと好きでしょ？」</label>
+    <label><input type="radio" name="c3q5" value="b"> 他の異性を匂わせて嫉妬させる</label>
+    <label><input type="radio" name="c3q5" value="c"> 「今日楽しかった。また話したい」</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。好意を伝えつつ、返答や感情を強制していない。" data-ng="圧力や不安を作らずに好意を伝える。"></div></div>
+</section>
+
+<section class="sheet" id="ch4">
+  <div class="kicker">CHAPTER 4</div>
+  <h2>衝突を修復する</h2>
+  <p>長期関係では「喧嘩しない」ことより、<strong>不満を人格攻撃にせず伝え、悪化したら戻れること</strong>が重要になる。</p>
+
+  <div class="diagnostic">
+    <strong>章頭診断</strong>
+    <ol>
+      <li>「あなたって本当にだらしない」は、行動への苦情と何が違うか。</li>
+      <li>Stonewalling（石壁化）への代替は何か。</li>
+      <li>NVCの4要素を順番に言えるか。</li>
+      <li>修復の試み（repair attempt）は、いつ使うものか。</li>
+    </ol>
+    <details><summary>考え方を見る</summary><p>人格全体を攻撃せず具体行動へ絞る。感情が高まりすぎたら無言で消えるのでなく、再開意思を伝えて休憩する。NVCは観察→感情→ニーズ→お願い。</p></details>
+    <p><a href="#gottman">本文へ進む ↓</a></p>
+  </div>
+
+  <h3 id="gottman">1. ゴットマンの「4つの騎士」：悪化パターンを見つける</h3>
+  <p>Gottman Instituteでは、関係を損ないやすいコミュニケーションパターンとして、批判・軽蔑・防御・石壁化を「Four Horsemen」と呼ぶ。これは相手を裁く診断票ではなく、<strong>会話のパターンを修正するための実務的な枠組み</strong>として使う。</p>
+  <div class="horsemen">
+    <div class="hm"><span class="x">批判</span><br>×「ほんま時間にルーズ」<br><span class="o">→具体的な苦情</span><br>「遅れそうなら先に連絡くれると助かる」</div>
+    <div class="hm"><span class="x">軽蔑</span><br>×「そんなことも分からんの？」<br><span class="o">→敬意を保つ</span><br>皮肉・見下しを会話の武器にしない</div>
+    <div class="hm"><span class="x">防御</span><br>×「俺は悪くない」<br><span class="o">→一部を引き受ける</span><br>「最近任せること多かったな」</div>
+    <div class="hm"><span class="x">石壁化</span><br>×無視・遮断<br><span class="o">→休憩を宣言</span><br>「今は熱くなってる。30分後に話したい」</div>
+  </div>
+
+  <h3 id="repair">2. Repair Attempt：会話を軌道へ戻す</h3>
+  <p>修復の試みは、悪化している会話を減速・修正して軌道に戻す言葉や行動。謝罪、言い直し、休憩、相手の感情の承認などが含まれる。</p>
+  <div class="script">
+    「今の言い方きつかった。言い直していい？」<br>
+    「あなたが言いたいことを先にちゃんと聞きたい」<br>
+    「これ以上は悪化しそう。少し休んで戻ろう」
+  </div>
+
+  <h3 id="nvc">3. NVC：観察→感情→ニーズ→お願い</h3>
+  <p>非暴力コミュニケーション（NVC）の基本は、評価を混ぜない観察、感情、ニーズ、具体的なお願い。ポイントは「お願い」が<strong>要求（Noを許さない圧力）</strong>にならないこと。</p>
+  <div class="figure">
+    <div class="figure-head">図4　NVCの4要素</div>
+    <div class="figure-body">
+      <div class="flow" style="grid-template-columns:repeat(4,1fr)">
+        <div class="node active"><strong>1 観察</strong><br><span class="small">何が起きたか</span></div>
+        <div class="node"><strong>2 感情</strong><br><span class="small">私はどう感じるか</span></div>
+        <div class="node"><strong>3 ニーズ</strong><br><span class="small">何を大事にしているか</span></div>
+        <div class="node"><strong>4 お願い</strong><br><span class="small">具体的に何を頼むか</span></div>
+      </div>
+      <div class="script"><b>×</b>「最近LINE冷たいよね」<br>
+      <b>○</b>「最近、連絡が一日一回くらいの日が増えてて（観察）、少し寂しい（感情）。もう少しつながりを感じたい（ニーズ）。忙しくない日は夜に少し話すのはどう？（お願い）」</div>
+    </div>
+    <div class="figcap">NVCは定型句を言えば成功する魔法ではない。観察と評価、お願いと要求を分ける意識が中心。</div>
+  </div>
+
+  <h3 id="integrate">4. 愛着・NVC・アサーションを統合する</h3>
+  <p>衝突時に不安が強くなると追及が増え、回避が強くなると遮断が増えることがある。そこで、愛着理論は<strong>何が起きているかを理解する</strong>ために、NVCとアサーションは<strong>どう伝えるか</strong>のために使う。</p>
+  <div class="script">
+    <b>例：</b>「返事がないと不安になる自分」を“相手が悪い”に変換せず、<br>
+    「昨日から返事がなくて少し不安だった。急ぎじゃないけど、忙しいときは一言あると安心する。難しいかな？」と伝える。
+  </div>
+
+  <h3>章末確認</h3>
+  <div class="quiz" data-answer="a"><fieldset><legend>Q1. 「あなたはだらしない」は何に近い？</legend>
+    <label><input type="radio" name="c4q1" value="a"> 人格への批判</label>
+    <label><input type="radio" name="c4q1" value="b"> NVCの観察</label>
+    <label><input type="radio" name="c4q1" value="c"> アサーション</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。人格ラベルではなく、具体的行動と希望へ分解する。" data-ng="行動の指摘と人格評価を区別する。"></div></div>
+
+  <div class="quiz" data-answer="c"><fieldset><legend>Q2. Stonewallingへのより良い代替は？</legend>
+    <label><input type="radio" name="c4q2" value="a"> 既読無視を続ける</label>
+    <label><input type="radio" name="c4q2" value="b"> 相手が謝るまで話さない</label>
+    <label><input type="radio" name="c4q2" value="c"> 再開する意思と時間を伝えて休む</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。離れること自体でなく、遮断・放置にならないことが大切。" data-ng="休憩と無視は同じではない。"></div></div>
+
+  <div class="quiz" data-answer="b"><fieldset><legend>Q3. NVCの正しい順序は？</legend>
+    <label><input type="radio" name="c4q3" value="a"> 感情→評価→命令→謝罪</label>
+    <label><input type="radio" name="c4q3" value="b"> 観察→感情→ニーズ→お願い</label>
+    <label><input type="radio" name="c4q3" value="c"> 批判→理由→要求→結論</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。観察と評価、お願いと要求を分ける。" data-ng="4要素を確認。"></div></div>
+
+  <div class="quiz" data-answer="a"><fieldset><legend>Q4. Repair Attemptの目的は？</legend>
+    <label><input type="radio" name="c4q4" value="a"> 悪化しているやり取りを減速・修復する</label>
+    <label><input type="radio" name="c4q4" value="b"> 議論で勝つ</label>
+    <label><input type="radio" name="c4q4" value="c"> 相手に責任を全部認めさせる</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。会話を軌道へ戻すことが目的。" data-ng="勝敗ではなく修復。"></div></div>
+
+  <div class="quiz" data-answer="c"><fieldset><legend>Q5. NVCの「お願い」と「要求」の違いで重要なのは？</legend>
+    <label><input type="radio" name="c4q5" value="a"> お願いは必ず丁寧語</label>
+    <label><input type="radio" name="c4q5" value="b"> 要求は短文、おねがいは長文</label>
+    <label><input type="radio" name="c4q5" value="c"> 相手がNoと言える余地があるか</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。Noが実質許されないなら、形が丁寧でも要求になり得る。" data-ng="表現の丁寧さより、自由の有無。"></div></div>
+</section>
+
+<section class="sheet" id="practice">
+  <h2>場面別・実践早見表</h2>
+  <div class="table-wrap"><table>
+    <caption>「どの理論を、いつ使うか」</caption>
+    <thead><tr><th>場面</th><th>まず使う考え方</th><th>具体的な行動</th><th>避けたいこと</th></tr></thead>
+    <tbody>
+      <tr><td>返信が遅い</td><td>認知バイアス＋愛着</td><td>単発で判断せず、対面・予定調整・質問など複数の行動を見る</td><td>脈なし確定、追及、駆け引き</td></tr>
+      <tr><td>LINEを続けたい</td><td>フォローアップ＋自己開示</td><td>前に聞いた話を拾い、自分も少し返す</td><td>質問連打</td></tr>
+      <tr><td>デートへ誘う</td><td>リアクタンス＋アサーション</td><td>希望を明確にし、断る余地を残す</td><td>「絶対来て」</td></tr>
+      <tr><td>デート中の会話</td><td>応答性＋自己開示</td><td>質問→反射→自分の少量開示→次の問い</td><td>面接化、自慢大会</td></tr>
+      <tr><td>2回目以降のデート</td><td>自己拡張＋類似性</td><td>共通の好みを土台に、二人とも少し新しい体験</td><td>毎回完全に同じ流れ</td></tr>
+      <tr><td>相談を受ける</td><td>OARS＋バリデーション</td><td>理解→要約→本人の希望を聞く</td><td>即アドバイス</td></tr>
+      <tr><td>好意を伝える</td><td>相互好意＋リアクタンス回避</td><td>「楽しかった」「また会いたい」</td><td>返答を迫る、嫉妬誘発</td></tr>
+      <tr><td>不満を伝える</td><td>NVC＋アサーション</td><td>事実→感情→ニーズ→具体的お願い</td><td>人格批判</td></tr>
+      <tr><td>喧嘩が過熱</td><td>Repair Attempt</td><td>言い直し、休憩、再開時刻を伝える</td><td>石壁化、見下し</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>統合例1：相談</h3>
+  <div class="script">
+    相手「最近仕事辞めたいんよね」<br>
+    ① <b>フォローアップ</b>：「何が一番しんどい？」<br>
+    ② <b>Reflection</b>：「仕事自体より、人間関係がしんどいんやな」<br>
+    ③ <b>Validation</b>：「それ毎日だと疲れるよな」<br>
+    ④ <b>自己開示</b>：「自分も似た時期あったわ」<br>
+    ⑤ <b>Open Question</b>：「もし自由に選べるなら、どんな働き方したい？」
+  </div>
+
+  <h3>統合例2：誘い</h3>
+  <div class="script">
+    <b>希望を明確にする：</b>「来週また会いたい」<br>
+    <b>具体案：</b>「土曜なら、○○の展示＋近くでご飯どう？」<br>
+    <b>自由を残す：</b>「難しければ別の週でも大丈夫」
+  </div>
+
+  <h3>統合例3：不満</h3>
+  <div class="script">
+    <b>観察：</b>「この2週間、予定を決めるのが自分側に偏ってた」<br>
+    <b>感情：</b>「少し疲れてきた」<br>
+    <b>ニーズ：</b>「二人で決めてる感じがほしい」<br>
+    <b>お願い：</b>「次の予定、候補を2つくらい考えてもらえる？」
+  </div>
+
+  <h3>実践ルール 8</h3>
+  <ol class="checklist">
+    <li>一回の行動で人を診断しない。</li>
+    <li>質問の数より「前の話を覚えて拾う」。</li>
+    <li>解決策より前に理解を返す。</li>
+    <li>自己開示は相手の深さに合わせて一段ずつ。</li>
+    <li>好意は隠し切らず、返答を強制しない。</li>
+    <li>新しい体験は“刺激量”ではなく“二人で探索できるか”を見る。</li>
+    <li>不満は人格ではなく具体行動へ向ける。</li>
+    <li>悪化した会話は勝つより戻す。</li>
+  </ol>
+</section>
+
+<section class="sheet" id="final">
+  <h2>総合確認</h2>
+  <p>章を横断して、どの理論を使うか判断する。</p>
+
+  <div class="quiz" data-answer="b"><fieldset><legend>Q1. 相手が「仕事がしんどい」と言った。最初の一手として最も適切なのは？</legend>
+    <label><input type="radio" name="fq1" value="a"> 転職サイトを送る</label>
+    <label><input type="radio" name="fq1" value="b"> 「何が一番しんどい？」と聞き、理解を返す</label>
+    <label><input type="radio" name="fq1" value="c"> 自分の仕事の大変さを説明する</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。OARS・バリデーションを先に使う。" data-ng="問題解決より前に相手の経験を理解する。"></div></div>
+
+  <div class="quiz" data-answer="c"><fieldset><legend>Q2. デートの誘いで、好意も主体性も伝えたい。最も良いのは？</legend>
+    <label><input type="radio" name="fq2" value="a"> 「いつでもいいよ」</label>
+    <label><input type="radio" name="fq2" value="b"> 「土曜絶対空けて」</label>
+    <label><input type="radio" name="fq2" value="c"> 「土曜○○行きたい。都合悪ければ別日でも」</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。アサーション＋リアクタンス回避。" data-ng="自分の希望と相手の自由を両立する。"></div></div>
+
+  <div class="quiz" data-answer="a"><fieldset><legend>Q3. 「回避型だからLINEは3日空ける」という発想の問題は？</legend>
+    <label><input type="radio" name="fq3" value="a"> 愛着を固定診断と操作ルールにしている</label>
+    <label><input type="radio" name="fq3" value="b"> 自己開示が深すぎる</label>
+    <label><input type="radio" name="fq3" value="c"> NVCの順番が違う</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。愛着は距離感理解の補助線で、攻略分類ではない。" data-ng="『分類→駆け引き』への変換を疑う。"></div></div>
+
+  <div class="quiz" data-answer="b"><fieldset><legend>Q4. 「一緒にいると世界が広がる」に最も近い理論は？</legend>
+    <label><input type="radio" name="fq4" value="a"> 認知バイアス</label>
+    <label><input type="radio" name="fq4" value="b"> 自己拡張理論</label>
+    <label><input type="radio" name="fq4" value="c"> 石壁化</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。" data-ng="新しい資源・視点・経験を取り込む理論を選ぶ。"></div></div>
+
+  <div class="quiz" data-answer="a"><fieldset><legend>Q5. 「昨日返信がなくて不安だった。忙しい日は一言あると安心する。難しいかな？」は主に何の組み合わせ？</legend>
+    <label><input type="radio" name="fq5" value="a"> 愛着理解＋アサーション＋NVC</label>
+    <label><input type="radio" name="fq5" value="b"> 単純接触＋希少性</label>
+    <label><input type="radio" name="fq5" value="c"> ハロー効果＋期待違反</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。自分の不安を理解し、責めずにニーズと希望を伝えている。" data-ng="『理解する理論』と『伝える技法』を組み合わせる。"></div></div>
+
+  <div class="quiz" data-answer="c"><fieldset><legend>Q6. デートの全時間を完璧にしようとして疲れ切った。見直しのヒントは？</legend>
+    <label><input type="radio" name="fq6" value="a"> さらに予定を詰める</label>
+    <label><input type="radio" name="fq6" value="b"> 連絡を減らして希少性を作る</label>
+    <label><input type="radio" name="fq6" value="c"> 印象的な体験と気持ちよい終わりを意識しつつ、余白を作る</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。ただしピーク・エンドは恋愛デートへの直接証拠ではなく設計ヒントとして使う。" data-ng="長時間の完璧さより、経験の質と終わり方。"></div></div>
+
+  <div class="quiz" data-answer="b"><fieldset><legend>Q7. 「そんなことも分からんの？」から最も遠ざけたいパターンは？</legend>
+    <label><input type="radio" name="fq7" value="a"> 自己開示</label>
+    <label><input type="radio" name="fq7" value="b"> 軽蔑</label>
+    <label><input type="radio" name="fq7" value="c"> 要約</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。見下し・皮肉・侮辱に近い表現は対立を強める。" data-ng="Gottmanの4パターンを思い出す。"></div></div>
+
+  <div class="quiz" data-answer="a"><fieldset><legend>Q8. この教材全体を一文でまとめるなら？</legend>
+    <label><input type="radio" name="fq8" value="a"> よく読み、よく聴き、自分も適切に伝え、相手の自由を守り、壊れたら修復する</label>
+    <label><input type="radio" name="fq8" value="b"> 相手の心理を読んで最適な駆け引きをする</label>
+    <label><input type="radio" name="fq8" value="c"> テクニックの数が多いほど恋愛は成功する</label>
+  </fieldset><div class="quiz-actions"><button type="button" class="check">確認</button><button type="reset">再挑戦（リセット）</button></div><div class="feedback" aria-live="polite" data-ok="正解。心理学は相互理解と選択の補助線として使う。" data-ng="操作ではなく、相互理解・自由・修復が中心。"></div></div>
+
+  <h3>1分説明課題</h3>
+  <div class="callout">
+    友人に1分で説明するつもりで、次を自分の言葉で話す：<br>
+    <strong>「恋愛初期・関係深化・交際後で、それぞれ何を大切にするか」</strong>
+  </div>
+  <ul class="checklist">
+    <li>初期：「興味・安心・楽しさ」が入った</li>
+    <li>深化：「自己開示・共有体験・価値観」が入った</li>
+    <li>交際後：「境界線・相互理解・修復」が入った</li>
+    <li>愛着を固定診断として扱わないと説明できた</li>
+    <li>心理学は操作技法ではないと説明できた</li>
+  </ul>
+</section>
+
+<section class="sheet" id="index">
+  <h2>用語索引</h2>
+  <div class="index">
+    <a href="#attachment">愛着理論</a>
+    <a href="#bias">認知バイアス</a>
+    <a href="#exchange">社会的交換・相互依存</a>
+    <a href="#evt">期待違反理論</a>
+    <a href="#reactance">心理的リアクタンス</a>
+    <a href="#selfexpand">自己拡張理論</a>
+    <a href="#disclosure">自己開示</a>
+    <a href="#followup">フォローアップ質問</a>
+    <a href="#validation">バリデーション／応答性</a>
+    <a href="#mi">動機づけ面接 OARS</a>
+    <a href="#assertion">アサーション</a>
+    <a href="#mere">単純接触効果</a>
+    <a href="#similarity">類似性</a>
+    <a href="#reciprocity">相互好意</a>
+    <a href="#peakend">ピーク・エンド</a>
+    <a href="#gottman">4つの騎士</a>
+    <a href="#repair">Repair Attempt</a>
+    <a href="#nvc">非暴力コミュニケーション NVC</a>
+  </div>
+</section>
+
+
+<section class="sheet" id="answer-key">
+  <h2>解答一覧</h2>
+  <p class="small">印刷時・JavaScript無効時にも確認できる静的な解答キー。詳しい理由は各問題の「確認」フィードバックと本文を参照。</p>
+  <details>
+    <summary>第1章</summary>
+    <ol>
+      <li>認知バイアスと状況要因の見落とし</li>
+      <li>選択肢と断る余地を残す</li>
+      <li>不安・回避の傾向を距離感理解の補助線として使う</li>
+      <li>予想からのズレがどう解釈・評価されるか</li>
+      <li>二人にとって安心・楽しさ・負担のバランスを見る</li>
+    </ol>
+  </details>
+  <details>
+    <summary>第2章</summary>
+    <ol>
+      <li>質問→相手→自分の少量開示→相手</li>
+      <li>「それが毎日だと結構しんどそうやな」</li>
+      <li>Reflection（反射）</li>
+      <li>「今日は休みたい。日曜なら会いたい」</li>
+      <li>相手から理解・受容・配慮されたと感じること</li>
+    </ol>
+  </details>
+  <details>
+    <summary>第3章</summary>
+    <ol>
+      <li>心地よい範囲で自然な再接触を作る</li>
+      <li>実際の類似と知覚された類似を分けて考える</li>
+      <li>二人とも初めての展示や体験へ行く</li>
+      <li>恋愛デートへの直接証拠と一般経験研究からの応用を区別する</li>
+      <li>「今日楽しかった。また会いたい」</li>
+    </ol>
+  </details>
+  <details>
+    <summary>第4章</summary>
+    <ol>
+      <li>人格への批判</li>
+      <li>再開する意思と時間を伝えて休む</li>
+      <li>観察→感情→ニーズ→お願い</li>
+      <li>悪化しているやり取りを減速・修復する</li>
+      <li>相手がNoと言える余地があるか</li>
+    </ol>
+  </details>
+  <details>
+    <summary>総合確認</summary>
+    <ol>
+      <li>「何が一番しんどい？」と聞き、理解を返す</li>
+      <li>「土曜○○行きたい。都合悪ければ別日でも」</li>
+      <li>愛着を固定診断と操作ルールにしている</li>
+      <li>自己拡張理論</li>
+      <li>愛着理解＋アサーション＋NVC</li>
+      <li>印象的な体験と気持ちよい終わりを意識しつつ、余白を作る</li>
+      <li>軽蔑</li>
+      <li>よく読み、よく聴き、自分も適切に伝え、相手の自由を守り、壊れたら修復する</li>
+    </ol>
+  </details>
+</section>
+
+<section class="sheet" id="sources">
+  <h2>参考資料・根拠</h2>
+  <p class="small">本文は、前段の会話内容を実践学習向けに再編し、下記の研究・公式資料で主要概念を確認した。リンクは参考閲覧用で、教材本文・図・問題はオフラインで動作する。</p>
+  <ol class="source-list">
+    <li>Hazan, C., & Shaver, P. (1987). <a href="https://pubmed.ncbi.nlm.nih.gov/3572722/">Romantic love conceptualized as an attachment process</a>.</li>
+    <li>Fraley, R. C. (2019). <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-102813">Attachment in Adulthood: Recent Developments, Emerging Debates, and Future Directions</a>.</li>
+    <li>Li, T., & Chan, D. K.-S. (2012). <a href="https://onlinelibrary.wiley.com/doi/10.1002/ejsp.1842">How anxious and avoidant attachment affect romantic relationship quality differently</a>.</li>
+    <li>Rusbult, C. E. (1980). <a href="https://www.sciencedirect.com/science/article/pii/0022103180900074">Commitment and satisfaction in romantic associations: A test of the investment model</a>.</li>
+    <li>Rusbult, C. E., & Buunk, B. P. (1993). <a href="https://journals.sagepub.com/doi/10.1177/026540759301000202">Commitment Processes in Close Relationships</a>.</li>
+    <li>Burgoon, J. K. (2015). <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/9781118540190.wbeic102">Expectancy Violations Theory</a>.</li>
+    <li>Miron, A. M., & Brehm, J. W. <a href="https://doi.org/10.1024/0044-3514.37.1.9">Reactance Theory — 40 Years Later</a>.</li>
+    <li>Aron, A. et al. <a href="https://academic.oup.com/edited-volume/38162/chapter-abstract/332980404">The Self-Expansion Model of Motivation and Cognition in Close Relationships</a>.</li>
+    <li>Laurenceau, J.-P., Barrett, L. F., & Pietromonaco, P. R. (1998). <a href="https://pubmed.ncbi.nlm.nih.gov/9599440/">Intimacy as an interpersonal process</a>.</li>
+    <li>Arican-Dinc, B., & Gable, S. L. (2023). <a href="https://pubmed.ncbi.nlm.nih.gov/37515977/">Responsiveness in romantic partners' interactions</a>.</li>
+    <li>Motivational Interviewing Network of Trainers. <a href="https://motivationalinterviewing.org/sites/default/files/mitripv1n3.pdf">OARS: open questions, affirmations, reflections, summaries</a>.</li>
+    <li>APA Dictionary of Psychology. <a href="https://dictionary.apa.org/assertiveness">Assertiveness</a>.</li>
+    <li>Center for Nonviolent Communication / Rosenberg, M. <a href="https://www.nonviolentcommunication.com/pdf_files/nvc2-chapter-one.html">The NVC Process</a>.</li>
+    <li>The Gottman Institute. <a href="https://www.gottman.com/blog/category/the-four-horsemen/">The Four Horsemen</a> / <a href="https://www.gottman.com/blog/manage-conflict-repair-and-de-escalate/">Repair and De-Escalate</a>.</li>
+    <li>Montoya, R. M. et al. (2017). <a href="https://pubmed.ncbi.nlm.nih.gov/28263645/">A re-examination of the mere exposure effect</a>.</li>
+    <li>Montoya, R. M., Horton, R. S., & Kirchner, J. (2008). <a href="https://journals.sagepub.com/doi/10.1177/0265407508096700">Is actual similarity necessary for attraction?</a></li>
+    <li>Montoya, R. M. (2008). <a href="https://onlinelibrary.wiley.com/doi/10.1002/ejsp.431">Toward a more complete understanding of the reciprocity of liking effect</a>.</li>
+    <li>Kahneman, D. et al. (1993). <a href="https://www.psychologicalscience.org/journals/psychological-science/j.1467-9280.1993.tb00589.x/">When More Pain Is Preferred to Less: Adding a Better End</a>.</li>
+  </ol>
+
+  <h3>素材クレジット・視覚計画</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>素材ID</th><th>区分</th><th>目的</th><th>根拠・状態</th></tr></thead>
+    <tbody>
+      <tr><td>F0</td><td>自作HTML図</td><td>教材全体の流れ</td><td>会話内容の統合モデル。模式表現。</td></tr>
+      <tr><td>F1</td><td>自作HTML図</td><td>愛着の不安・回避2次元</td><td>Fraley等の2次元モデルを根拠に独自構図。転載なし。</td></tr>
+      <tr><td>F2</td><td>操作型自作図</td><td>相談会話の順序</td><td>自己開示・応答性・OARSを統合した教育用模式図。</td></tr>
+      <tr><td>F3</td><td>自作模式グラフ</td><td>ピーク・エンドの応用注意</td><td>実測値ではないことを図内明記。Kahneman et al.を背景理論として参照。</td></tr>
+      <tr><td>F4</td><td>自作HTML図</td><td>NVC 4要素</td><td>Rosenberg/CNVCの4要素を独自レイアウト。転載なし。</td></tr>
+    </tbody>
+  </table></div>
+
+  <details>
+    <summary>外部画像を埋め込まなかった理由</summary>
+    <p>愛着2次元図、NVC図、Gottman Four Horsemen図の既成例を比較したが、権利条件が不明瞭な二次転載画像や、商用・出版物由来の図が多かった。今回の学習目的では、論文・公式資料を根拠に自作図へ置き換える方が、権利・日本語可読性・単一HTMLのオフライン要件を同時に満たすため採用した。</p>
+  </details>
+
+  <h3>制作・検証メモ</h3>
+  <ul>
+    <li>主要内容：会話で挙がった理論・技法を「読む／聴く／広げる／伝える／修復」の流れへ再構成。</li>
+    <li>補正：成人愛着はタイプ固定ではなく、不安・回避の連続次元としての扱いを明確化。</li>
+    <li>注意：ピーク・エンドは恋愛デートの直接研究とせず、一般的経験評価研究からの実践ヒューリスティックと明記。</li>
+    <li>外部依存：なし。CSS・JS・図はHTML内包。参考リンクを開くときだけ通信が発生。</li>
+    <li>静的検証：重複IDなし、内部リンク切れなし、JavaScript構文正常、外部画像・CDN依存なしを確認。</li>
+    <li>実表示検証：実行環境の管理制約によりローカルHTMLのブラウザ表示がブロックされ、360／390／768／1280pxでの実ブラウザ目視は未実施。このため95/100以上の検証済み合格表示は付けていない。</li>
+    <li>JavaScript無効時：本文・図・問題・回答選択肢・静的解答一覧は表示される。自動採点と段階図操作のみ無効。</li>
+    <li>個人学習用。診断・治療・カップルセラピーの代替ではない。</li>
+  </ul>
+</section>
+</main>
+
+<footer>恋愛・コミュニケーション心理学 学習版 / 2026-09-19</footer>
+
+<script>
+(function(){
+  // Quiz enhancement
+  document.querySelectorAll('.quiz').forEach(function(q){
+    var check = q.querySelector('.check');
+    if(!check) return;
+    check.addEventListener('click', function(){
+      var chosen = q.querySelector('input[type="radio"]:checked');
+      var fb = q.querySelector('.feedback');
+      fb.classList.remove('ok','ng');
+      if(!chosen){
+        fb.textContent = '未回答です。選択してから確認してください。';
+        fb.classList.add('ng');
+        return;
+      }
+      if(chosen.value === q.dataset.answer){
+        fb.textContent = fb.dataset.ok;
+        fb.classList.add('ok');
+      }else{
+        fb.textContent = fb.dataset.ng;
+        fb.classList.add('ng');
+      }
+    });
+    var resetBtn = q.querySelector('button[type="reset"]');
+    if(resetBtn){
+      resetBtn.addEventListener('click', function(){
+        q.querySelectorAll('input[type="radio"]').forEach(function(r){ r.checked=false; });
+        var fb=q.querySelector('.feedback');
+        fb.textContent='';
+        fb.classList.remove('ok','ng');
+      });
+    }
+  });
+
+  // Stepper
+  var notes = [
+    '1 拾う：相手が出した言葉を捨てずに拾う。「仕事しんどい」の中から“仕事”や“しんどい”を次の問いにつなぐ。',
+    '2 聞く：開かれた質問で具体化する。「何が一番しんどい？」「最近特にそう感じたのはいつ？」',
+    '3 映す：Reflection。意味や感情を短く言い換える。「仕事そのものより、人間関係がしんどいんやな」。',
+    '4 共感：Validation。賛否ではなく、相手の文脈で理解できると返す。「それ毎日なら疲れるよな」。',
+    '5 広げる：本人の価値観や希望へ。「もし自由に選べるなら、どう働きたい？」。必要なら自分の経験も少量だけ開示する。'
+  ];
+  var idx=0, nodes=[].slice.call(document.querySelectorAll('#stageNodes .node'));
+  var note=document.getElementById('stageNote');
+  function renderStage(){
+    nodes.forEach(function(n,i){n.classList.toggle('active',i===idx)});
+    if(note) note.textContent=notes[idx];
+  }
+  var next=document.getElementById('nextStage'), prev=document.getElementById('prevStage'), reset=document.getElementById('resetStage');
+  if(next) next.addEventListener('click',function(){idx=Math.min(notes.length-1,idx+1);renderStage()});
+  if(prev) prev.addEventListener('click',function(){idx=Math.max(0,idx-1);renderStage()});
+  if(reset) reset.addEventListener('click',function(){idx=0;renderStage()});
+
+  // Respect printing: expand details temporarily
+  var opened=[];
+  window.addEventListener('beforeprint',function(){
+    opened=[];
+    document.querySelectorAll('details:not([open])').forEach(function(d){opened.push(d);d.open=true});
+  });
+  window.addEventListener('afterprint',function(){
+    opened.forEach(function(d){d.open=false});
+    opened=[];
+  });
+})();
+</script>
+</body>
+</html>

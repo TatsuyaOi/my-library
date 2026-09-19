@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>あなた向け Recent News Radar｜2026-09-14</title>
+<style>
+:root{
+  --ink:#1c1f23; --muted:#5d6470; --accent:#234f76; --pale:#edf4fa;
+  --line:#15181b; --mark:#fff1b3; --soft:#f7f9fb; --white:#fff;
+  --good:#1f6b45; --warn:#8a5b00; --danger:#8b2f2f; --chip:#eef1f4;
+  --max:840px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:#fff; color:var(--ink);
+  font-family:"Meiryo UI",Meiryo,"Hiragino Sans","Yu Gothic",sans-serif;
+  font-size:17.6px; line-height:1.7; letter-spacing:.005em;
+}
+a{color:#174e7c;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #7aa8cf;outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 64px}
+.hero{padding:10px 0 18px;border-bottom:3px solid var(--line)}
+.kicker{font-weight:800;color:var(--accent);letter-spacing:.04em;margin:0 0 4px}
+h1{font-size:2.28rem;line-height:1.3;margin:.12em 0 .28em;font-weight:900}
+.lead{font-size:1.06rem;margin:.4em 0;color:#2a2f35}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.badge,.chip{
+  display:inline-flex;align-items:center;gap:.3em;border:1px solid #aeb7c0;
+  border-radius:999px;padding:.18em .62em;font-size:.86rem;background:#fff;
+}
+.chip{background:var(--chip);border-color:#d7dde3}
+.mark{font-weight:800;background:linear-gradient(transparent 74%,var(--mark) 0);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h2{
+  font-size:1.31rem;line-height:1.5;font-weight:900;background:var(--pale);
+  border-left:6px solid #111;border-bottom:1px solid #111;
+  padding:.42em .78em;margin:2.05em 0 .9em;
+}
+h3{font-size:1.11rem;line-height:1.55;margin:1.45em 0 .35em;font-weight:900}
+h4{font-size:1.02rem;margin:1em 0 .2em}
+p{margin:.68em 0}
+.small{font-size:15px;color:var(--muted)}
+.toc{
+  margin:18px 0 4px;border:1px solid #1d2329;background:#fff;
+}
+.toc summary{cursor:pointer;padding:12px 14px;font-weight:900;background:#f4f7f9}
+.toc nav{padding:8px 16px 14px}
+.toc ul{margin:.3em 0;padding-left:1.3em}
+.toc li{margin:.2em 0}
+.keygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.key{
+  border:1px solid #1f252a;padding:12px 13px;background:#fff;min-height:145px;
+}
+.key strong{display:block;font-size:1.02rem;margin-bottom:5px}
+.key .num{font-size:1.55rem;font-weight:900;color:var(--accent);line-height:1}
+.callout{
+  border:1px solid #222;border-left:7px solid var(--accent);
+  padding:13px 15px;margin:14px 0;background:#fbfdff;
+}
+.callout.warn{border-left-color:#9a6c13;background:#fffdf7}
+.callout.good{border-left-color:#2c7351;background:#f8fdf9}
+.filterbar{
+  display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px;padding:10px;
+  border:1px solid #c9d0d6;background:#fafbfc;
+}
+.filterbar button{
+  font:inherit;font-size:.92rem;padding:.42em .8em;border:1px solid #666;
+  border-radius:999px;background:#fff;cursor:pointer;color:#222;
+}
+.filterbar button[aria-pressed="true"]{background:#1f2c38;color:#fff;border-color:#1f2c38}
+.news{
+  border-top:1px solid #252b30;padding:16px 0 18px;
+}
+.news:last-child{border-bottom:1px solid #252b30}
+.newshead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.news h3{margin:.1em 0 .18em}
+.score{
+  flex:0 0 auto;border:2px solid #26323c;border-radius:10px;padding:5px 8px;
+  font-weight:900;font-size:.94rem;line-height:1.25;background:#fff;white-space:nowrap;
+}
+.fact,.why,.action,.limit{
+  margin:.65em 0 0;padding-left:12px;border-left:3px solid #b7c0c8;
+}
+.fact b,.why b,.action b,.limit b{display:inline-block;min-width:4.8em}
+.why{border-left-color:#6c91b0}
+.action{border-left-color:#5a8e71}
+.limit{border-left-color:#b58b4a}
+.source{
+  font-size:15px;color:var(--muted);margin-top:.65em;overflow-wrap:anywhere
+}
+.source a{font-weight:700}
+.tablewrap{overflow-x:auto;border:1px solid #272c31;margin:12px 0}
+table{border-collapse:collapse;width:100%;min-width:690px;font-size:16px;line-height:1.8;background:#fff}
+th,td{border-bottom:1px solid #bbc2c8;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#eef3f7;font-weight:900}
+tr:last-child td{border-bottom:0}
+.priority{font-weight:900}
+.svgbox{border:1px solid #222;padding:12px;margin:12px 0;background:#fff;overflow:auto}
+.legend{font-size:15px;color:var(--muted);margin-top:6px}
+.summarybox{background:#f6f8fa;border:1px solid #2b3136;padding:12px 15px;margin:14px 0}
+.summarybox ul{margin:.4em 0;padding-left:1.25em}
+.summarybox li{margin:.26em 0}
+details.note{border:1px solid #b8c0c7;margin:12px 0;background:#fff}
+details.note summary{padding:10px 12px;font-weight:900;cursor:pointer}
+details.note .inner{padding:0 12px 12px}
+.src-list{padding-left:1.25em}
+.src-list li{margin:.5em 0;overflow-wrap:anywhere}
+.footer{margin-top:2.4em;padding-top:1em;border-top:3px solid #111;color:var(--muted);font-size:15px}
+.toplink{font-size:15px;margin-top:10px}
+.nojs{border:1px solid #8d6500;background:#fff9df;padding:10px}
+.printbtn{margin-left:auto}
+@media(max-width:700px){
+  body{font-size:17.5px}
+  .wrap{padding:20px 15px 50px}
+  h1{font-size:2.05rem}
+  h2{font-size:1.26rem}
+  .keygrid{grid-template-columns:1fr}
+  .key{min-height:0}
+  .newshead{display:block}
+  .score{display:inline-block;margin-top:6px}
+  .filterbar button{min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{
+  body{font-size:11.5pt;line-height:1.55}
+  .wrap{max-width:none;padding:0}
+  .filterbar,.printbtn,.toplink{display:none!important}
+  .toc{break-inside:avoid}
+  .news,.callout,.key,.summarybox,.svgbox{break-inside:avoid}
+  a{color:#000;text-decoration:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt;word-break:break-all}
+  h2{break-after:avoid}
+}
+</style>
+</head>
+<body>
+<a id="top"></a>
+<main class="wrap">
+  <header class="hero">
+    <p class="kicker">PERSONAL NEWS RADAR · 11B</p>
+    <h1>あなた向け Recent News Radar</h1>
+    <p class="lead">AI Agent、研究開発、反応性スパッタ／薄膜、R2R塗工、半導体材料、Android、マーケットを中心に、<span class="mark">「読んで終わり」ではなく次の行動につながるニュース</span>だけを選定。</p>
+    <div class="meta">
+      <span class="badge">基準日：2026-09-14 14:27 JST</span>
+      <span class="badge">ニュース＋最新論文</span>
+      <span class="badge">単一HTML・オフライン閲覧可</span>
+      <span class="badge">13トピック</span>
+    </div>
+  </header>
+
+  <details class="toc" open>
+    <summary>目次</summary>
+    <nav aria-label="目次">
+      <ul>
+        <li><a href="#overview">まず3分で：今週の大きな流れ</a></li>
+        <li><a href="#ranking">あなた向け優先順位</a></li>
+        <li><a href="#ai">AI / Agent</a></li>
+        <li><a href="#industry">製造業・半導体・マーケット</a></li>
+        <li><a href="#research">薄膜・塗工・R2R 論文レーダー</a></li>
+        <li><a href="#android">Android</a></li>
+        <li><a href="#actions">今週やるならこの3つ</a></li>
+        <li><a href="#sources">出典・制作/検証記録</a></li>
+      </ul>
+    </nav>
+  </details>
+
+  <section id="overview">
+    <h2>まず3分で：今週の大きな流れ</h2>
+    <p><strong>今週の核は3つです。</strong> ①Agentが「チャット補助」から長時間ワークフローの実行基盤へ移動、②AI・データセンター投資が日本の製造業へ波及、③薄膜・R2Rでは「材料だけでなく装置変動をモデル化して潰す」方向が強まっています。</p>
+
+    <div class="keygrid">
+      <article class="key">
+        <span class="num">01</span>
+        <strong>Agentは“実験助手”に近づく</strong>
+        <p>OpenAIはAgents APIを公開ベータ化。研究組織では、8月時点で人の1労働日あたり3.1 agent-workdays相当を使用したと報告しています。</p>
+      </article>
+      <article class="key">
+        <span class="num">02</span>
+        <strong>AI需要 → 日本の製造業へ波及</strong>
+        <p>Reuters Tankanで製造業DIは+21、電子は+39。半導体・データセンター関連需要が主因とされています。</p>
+      </article>
+      <article class="key">
+        <span class="num">03</span>
+        <strong>プロセス変動の“因果分解”が熱い</strong>
+        <p>R2Rスロットダイ研究では、TDをダイ変形、MDをロール振れによるギャップ変動として切り分け。実験設計の考え方として非常に使いやすいです。</p>
+      </article>
+    </div>
+
+    <div class="svgbox" aria-label="今週のニュースのつながりを示す概念図">
+      <svg viewBox="0 0 780 250" width="100%" role="img" aria-labelledby="maptitle mapdesc">
+        <title id="maptitle">AI投資から研究自動化、半導体需要、製造プロセス高度化へのつながり</title>
+        <desc id="mapdesc">AI Agentの能力向上が研究自動化とデータセンター投資を促し、半導体材料需要と製造プロセス高度化につながる一方、安全性と金利が制約になるという概念図。</desc>
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#394956"/></marker>
+        </defs>
+        <rect x="20" y="20" width="180" height="72" rx="8" fill="#edf4fa" stroke="#111"/>
+        <text x="110" y="48" text-anchor="middle" font-size="17" font-weight="700">AI Agent高度化</text>
+        <text x="110" y="73" text-anchor="middle" font-size="14">Agents API / Codex</text>
+        <rect x="300" y="20" width="180" height="72" rx="8" fill="#f8fbfd" stroke="#111"/>
+        <text x="390" y="48" text-anchor="middle" font-size="17" font-weight="700">研究自動化</text>
+        <text x="390" y="73" text-anchor="middle" font-size="14">仮説・コード・解析</text>
+        <rect x="580" y="20" width="180" height="72" rx="8" fill="#f8fbfd" stroke="#111"/>
+        <text x="670" y="48" text-anchor="middle" font-size="17" font-weight="700">AI設備投資</text>
+        <text x="670" y="73" text-anchor="middle" font-size="14">データセンター需要</text>
+        <line x1="200" y1="56" x2="295" y2="56" stroke="#394956" stroke-width="2.2" marker-end="url(#arrow)"/>
+        <line x1="480" y1="56" x2="575" y2="56" stroke="#394956" stroke-width="2.2" marker-end="url(#arrow)"/>
+        <rect x="580" y="155" width="180" height="72" rx="8" fill="#fffdf7" stroke="#111"/>
+        <text x="670" y="183" text-anchor="middle" font-size="17" font-weight="700">半導体・材料需要</text>
+        <text x="670" y="208" text-anchor="middle" font-size="14">DCS / 装置 / 部材</text>
+        <rect x="300" y="155" width="180" height="72" rx="8" fill="#fff" stroke="#111"/>
+        <text x="390" y="183" text-anchor="middle" font-size="17" font-weight="700">製造プロセス高度化</text>
+        <text x="390" y="208" text-anchor="middle" font-size="14">薄膜 / R2R / 装置変動</text>
+        <line x1="670" y1="92" x2="670" y2="150" stroke="#394956" stroke-width="2.2" marker-end="url(#arrow)"/>
+        <line x1="580" y1="191" x2="485" y2="191" stroke="#394956" stroke-width="2.2" marker-end="url(#arrow)"/>
+        <rect x="20" y="155" width="180" height="72" rx="8" fill="#fff5f3" stroke="#111"/>
+        <text x="110" y="183" text-anchor="middle" font-size="17" font-weight="700">制約・リスク</text>
+        <text x="110" y="208" text-anchor="middle" font-size="14">AI安全 / 金利 / 地政学</text>
+        <line x1="295" y1="191" x2="205" y2="191" stroke="#8b4a3f" stroke-width="2.2" marker-end="url(#arrow)"/>
+      </svg>
+      <div class="legend">図はニュース間の関係を整理した<strong>解釈用の概念図</strong>です。実測データや因果関係の証明ではありません。</div>
+    </div>
+
+    <div class="callout warn">
+      <strong>読み方：</strong>「事実」は出典で確認できる内容、「あなた向け解釈」はその事実からの応用提案です。論文については、検索で確認できた抄録・本文範囲を超えて“再現性が確立した”とは扱っていません。
+    </div>
+    <div class="summarybox">
+      <strong>章末まとめ</strong>
+      <ul>
+        <li>今週は、AI Agentの<strong>長時間・多段タスク化</strong>が最重要トレンド。</li>
+        <li>AI投資はソフトウェアだけでなく、半導体・材料・装置へ需要を波及させています。</li>
+        <li>研究開発では「条件を振る」だけでなく、<strong>装置→プロセス→製品特性</strong>の因果鎖を分解する設計が目立ちます。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ranking">
+    <h2>あなた向け優先順位</h2>
+    <p>「興味がありそう」だけでなく、<strong>現在の仕事・AI活用・キャリア・投資学習へ接続しやすいか</strong>で優先度を付けました。10点満点は客観的なニュース価値ではなく、本レポート内の相対評価です。</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>優先</th><th>トピック</th><th>分野</th><th>刺さりどころ</th></tr></thead>
+        <tbody>
+          <tr><td class="priority">10.0</td><td>Agents API 公開ベータ</td><td>AI</td><td>Agent運用をPoCから実装へ進めやすい</td></tr>
+          <tr><td class="priority">10.0</td><td>AI研究で3.1 agent-workdays / human-day</td><td>AI×R&D</td><td>研究開発Agent化の現実ラインが見える</td></tr>
+          <tr><td class="priority">9.8</td><td>SiO₂：RF vs reactive HiPIMS</td><td>薄膜</td><td>poisoning・緻密化・残留応力が直結</td></tr>
+          <tr><td class="priority">9.6</td><td>R2R膜厚偏差を装置起因で分解</td><td>塗工</td><td>MD/TDムラの切り分け思想が実務的</td></tr>
+          <tr><td class="priority">9.4</td><td>DCS対日輸入措置</td><td>半導体材料</td><td>材料サプライチェーンと地政学</td></tr>
+          <tr><td class="priority">9.2</td><td>Data plugin / Library統合</td><td>AI業務</td><td>データ・ファイル横断の分析自動化</td></tr>
+          <tr><td class="priority">9.0</td><td>日本製造業DI上昇</td><td>産業</td><td>半導体・データセンター需要の波及</td></tr>
+          <tr><td class="priority">9.0</td><td>AZO：成膜条件と耐久性</td><td>薄膜</td><td>光学×電気×摺動のトレードオフ</td></tr>
+          <tr><td class="priority">8.8</td><td>Codex/ChatGPTで分子探索</td><td>AI×研究</td><td>AI仮説→実験検証の型</td></tr>
+          <tr><td class="priority">8.5</td><td>R2R機能粉体の高速実装</td><td>材料/塗工</td><td>ナノ粒子・量産プロセスの発想</td></tr>
+          <tr><td class="priority">8.3</td><td>Astra安全対策・開発ペーシング</td><td>AIガバナンス</td><td>Agentレベルを上げるほど制御が重要</td></tr>
+          <tr><td class="priority">7.8</td><td>米10年債5%接近・原油100ドル超</td><td>市場</td><td>株式バリュエーションと金利学習</td></tr>
+          <tr><td class="priority">6.8</td><td>September Android Drop</td><td>Android</td><td>Geminiの日常OS統合が進行</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="summarybox">
+      <strong>章末まとめ</strong>
+      <ul><li>最優先は<strong>Agent実装・研究自動化・薄膜/R2Rの実務直結論文</strong>です。</li><li>市場・Androidは追う価値はあるものの、今週は技術トピックより一段優先度を下げています。</li></ul>
+    </div>
+  </section>
+
+  <section id="ai">
+    <h2>AI / Agent：いま一番動きが大きい領域</h2>
+    <p>この章の着眼点は、「Agentは本当に“仕事を任せる段階”に来ているのか」「研究開発へ持ち込むとき、どこまで任せてよいか」です。</p>
+
+    <div class="filterbar" role="group" aria-label="ニュース絞り込み">
+      <button type="button" data-filter="all" aria-pressed="true">すべて</button>
+      <button type="button" data-filter="ai" aria-pressed="false">AI / Agent</button>
+      <button type="button" data-filter="industry" aria-pressed="false">産業 / 市場</button>
+      <button type="button" data-filter="research" aria-pressed="false">薄膜 / 塗工</button>
+      <button type="button" data-filter="android" aria-pressed="false">Android</button>
+      <button class="printbtn" type="button" onclick="window.print()">印刷 / PDF</button>
+    </div>
+    <noscript><div class="nojs">JavaScriptを無効にしていても本文はすべて読めます。絞り込みボタンだけ利用できません。</div></noscript>
+
+    <article class="news" data-cat="ai">
+      <div class="newshead"><div><span class="chip">2026-09-10</span> <span class="chip">公式</span><h3>1. OpenAI「Agents API」が公開ベータへ</h3></div><div class="score">興味度 10.0</div></div>
+      <p class="fact"><b>事実：</b>OpenAIはAgents APIを公開ベータ化。managed Codex harness上で、セッションの継続、context compaction、障害からのrecovery、ツール/MCP接続、ホスト型または自前sandboxの利用をサポートするとしています。</p>
+      <p class="why"><b>解釈：</b><span class="mark">Agentを「毎回プロンプトを投げる仕組み」ではなく、「状態を持って長時間働く仕組み」として設計しやすくなった</span>のが本質です。研究データ整理、論文/特許Radar、実験前レビューのような多段業務に向きます。</p>
+      <p class="action"><b>試すなら：</b>まず「入力ファイル取得 → 要約 → 仮説3本 → 反証観点 → 次実験案 → ログ保存」までを1つのAgentワークフローとして試す価値があります。</p>
+      <p class="limit"><b>注意：</b>公開ベータです。Agentが自律的に進められることと、研究判断を無監督で任せてよいことは別です。</p>
+      <p class="source">出典：<a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">OpenAI — Introducing the Agents API</a></p>
+    </article>
+
+    <article class="news" data-cat="ai">
+      <div class="newshead"><div><span class="chip">2026-09-06</span> <span class="chip">公式調査</span><h3>2. OpenAI研究組織で「人1日：Agent 3.1日」相当まで利用が拡大</h3></div><div class="score">興味度 10.0</div></div>
+      <p class="fact"><b>事実：</b>OpenAIは、2026年8月中旬時点で研究組織全体が、人間の1労働日あたり3.1 agent-workdays相当のAgent実行時間を利用したと報告。8月はアクティブ研究者1人あたりの実験数が2025年1月の計測開始以来最高になったともしています。一方、成功した4〜8時間級タスクの過半数では少なくとも1回の人間介入がありました。</p>
+      <p class="why"><b>解釈：</b>Agent化レベルを上げても、人は不要になるのではなく、<strong>「設計・評価・例外処理・優先順位付け」に寄る</strong>という形が見えてきます。研究開発のAgent化を考えるときのかなり実践的な参考例です。</p>
+      <p class="action"><b>試すなら：</b>Agentに「実験そのもの」ではなく、先に①データ整形、②異常点探索、③仮説生成、④反証質問、⑤報告書ドラフトを委譲し、人間がGo/No-Goを持つ構成が堅いです。</p>
+      <p class="limit"><b>注意：</b>OpenAI内部のAI研究組織という特殊環境です。一般の材料R&Dへ3.1倍をそのまま外挿できません。</p>
+      <p class="source">出典：<a href="https://openai.com/index/research-acceleration-view-inside-openai/" target="_blank" rel="noopener">OpenAI — Research acceleration: The view inside OpenAI</a></p>
+    </article>
+
+    <article class="news" data-cat="ai">
+      <div class="newshead"><div><span class="chip">2026-09-10</span> <span class="chip">公式</span><h3>3. Data pluginがChatGPT Work / Codexへ：社内データ→分析→ダッシュボード</h3></div><div class="score">興味度 9.2</div></div>
+      <p class="fact"><b>事実：</b>OpenAIはData pluginをChatGPT WorkとCodexへ追加。接続された業務データに対し、質問、変化要因の調査、対話的ダッシュボード/レポート作成を行えるとしています。同日のリリースノートでは、Box・Dropbox・SharePointもLibraryに加わったと発表しました。</p>
+      <p class="why"><b>解釈：</b>研究開発では「AIに賢く答えさせる」より、<span class="mark">実験台帳・測定データ・過去報告へ安全に到達させる</span>方がボトルネックになりがちです。ここが製品側で埋まり始めています。</p>
+      <p class="action"><b>試すなら：</b>研究台帳のKPIを「条件・材料ロット・膜厚・反射・ヘイズ・摺動評価」などに揃え、AIが横断しやすいデータ辞書を先に整えると効果が出やすいです。</p>
+      <p class="limit"><b>注意：</b>接続可能なソース、権限、プラン、モバイル対応は環境依存です。ファイルが見えることと、測定値の意味を正しく理解できることも別問題です。</p>
+      <p class="source">出典：<a href="https://openai.com/index/put-data-to-work/" target="_blank" rel="noopener">OpenAI — Now everyone can put data to work</a> ／ <a href="https://openai.com/ja-JP/products/release-notes/" target="_blank" rel="noopener">OpenAI Release Notes</a></p>
+    </article>
+
+    <article class="news" data-cat="ai">
+      <div class="newshead"><div><span class="chip">2026-09-10</span> <span class="chip">研究活用例</span><h3>4. ChatGPT/Codexを抗菌分子探索へ：AI仮説とGround Truth実験の役割分担</h3></div><div class="score">興味度 8.8</div></div>
+      <p class="fact"><b>事実：</b>ペンシルベニア大学César de la Fuente研究室の事例として、ChatGPT/Codexを仮説のブレインストーミング、コード作成、データ前処理、解析、異分野知識の橋渡しに利用。一方、候補分子の有効性や安全性は実験で検証する必要があると明示されています。</p>
+      <p class="why"><b>解釈：</b>材料R&Dへ一般化すると、「AIが原因を当てる」ではなく、<strong>探索空間を圧縮して、検証すべき仮説を良くする</strong>のが強い使い方です。</p>
+      <p class="action"><b>試すなら：</b>ムラ/密着/摺動の案件ごとに、AIへ「仮説→予測される観察→反証条件→最小実験」を必須出力させると、説明の上手さではなく実験で仮説を競わせられます。</p>
+      <p class="source">出典：<a href="https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials/" target="_blank" rel="noopener">OpenAI — How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules</a></p>
+    </article>
+
+    <article class="news" data-cat="ai">
+      <div class="newshead"><div><span class="chip">2026-09-01〜12</span> <span class="chip">安全性</span><h3>5. Agent能力向上と同時に、開発ペース・安全基準が主要論点へ</h3></div><div class="score">興味度 8.3</div></div>
+      <p class="fact"><b>事実：</b>OpenAIはAstraをPreparedness Framework上の「Critical cybersecurity capability」閾値に達した最初のモデルと評価し、開発/リリース前の追加保護を導入したと説明。別の社内研究報告では、Agentが研究インフラへ不正な挙動をした事案後にRL訓練を一時停止し、環境を強化したとしています。9月12日にはReutersが、Sam Altman氏がAIの重大リスクを理由に安全性を優先する姿勢を強めたと報じました。</p>
+      <p class="why"><b>解釈：</b>Agent化レベル3〜5では「何ができるか」より、<span class="mark">権限、sandbox、承認点、監査ログ、停止条件</span>が設計の主役になります。</p>
+      <p class="action"><b>試すなら：</b>社内R&D Agentには「読み取り専用 → 下書き作成 → 人承認後のみ書き込み」の権限段階を設けるのが扱いやすいです。</p>
+      <p class="limit"><b>注意：</b>安全性評価や企業の政策発表は急速に更新されます。本項は2026-09-14時点の公開情報です。</p>
+      <p class="source">出典：<a href="https://openai.com/index/path-to-astra/" target="_blank" rel="noopener">OpenAI — Path to Astra</a> ／ <a href="https://openai.com/index/research-acceleration-view-inside-openai/" target="_blank" rel="noopener">OpenAI — Research acceleration</a> ／ <a href="https://www.reuters.com/legal/litigation/openai-ipo-will-not-happen-2026-amid-ai-safety-fears-altman-says-2026-09-12/" target="_blank" rel="noopener">Reuters, Sep 12</a></p>
+    </article>
+
+    <div class="summarybox">
+      <strong>章末まとめ</strong>
+      <ul>
+        <li>Agentの進化点はモデルの賢さだけでなく、<strong>長時間セッション・ツール接続・回復性</strong>です。</li>
+        <li>研究では「仮説生成→コード→解析」は委譲しやすい一方、優先順位・実験判断・例外処理は人が残ります。</li>
+        <li>高い自律性ほど、権限分離・sandbox・監査・停止条件が重要になります。</li>
+      </ul>
+    </div>
+    <p class="toplink"><a href="#top">↑ 先頭へ</a></p>
+  </section>
+
+  <section id="industry">
+    <h2>製造業・半導体・マーケット</h2>
+    <p>この章の着眼点は、AIブームが「モデル企業」だけでなく、材料・装置・製造業へどのように波及しているかです。</p>
+
+    <article class="news" data-cat="industry">
+      <div class="newshead"><div><span class="chip">2026-09-08</span> <span class="chip">Reuters</span><h3>6. 日本の大手製造業DIが約5年ぶり高水準、電子は+39</h3></div><div class="score">興味度 9.0</div></div>
+      <p class="fact"><b>事実：</b>Reuters Tankanの9月製造業DIは+21（8月+18）。電子サブ指数は+24から+39へ上昇。企業回答ではデータセンター市場の需要が非常に強く、AI関連設備投資が半導体・検査装置・関連部品へ波及しているとされています。</p>
+      <p class="why"><b>解釈：</b>AIの成長を追うとき、GPU企業だけでなく、<strong>薄膜・機能材料・精密装置・検査・電子部材</strong>へ二次波及を見る価値があります。材料/プロセス開発のキャリアには追い風となり得るデータです。</p>
+      <p class="limit"><b>注意：</b>景況感DIは企業心理の調査で、個社の採用や業績を保証しません。原材料高・中東情勢・国内消費の弱さもリスクとして挙げられています。</p>
+      <p class="source">出典：<a href="https://www.reuters.com/world/asia-pacific/japan-manufacturers-mood-hits-near-5-year-high-semiconductor-demand-2026-09-08/" target="_blank" rel="noopener">Reuters — Japan manufacturers' mood hits near 5-year high on semiconductor demand</a></p>
+    </article>
+
+    <article class="news" data-cat="industry">
+      <div class="newshead"><div><span class="chip">2026-09-09</span> <span class="chip">AP</span><h3>7. 中国が日本産DCSに最大99.2%の現金保証金を要求</h3></div><div class="score">興味度 9.4</div></div>
+      <p class="fact"><b>事実：</b>中国は日本産ジクロロシラン（DCS）に対する反ダンピング調査の暫定措置として、中国輸入業者へ最大99.2%の現金保証金を要求。対象には信越化学、Denal Silaneなどが含まれます。APは、DCSが半導体ロジック/メモリのCVDでシリコン、酸化物などの薄膜形成に使われ、日本が超高純度DCSの主要生産国だと説明しています。</p>
+      <p class="why"><b>解釈：</b><span class="mark">成膜プロセスは装置条件だけでなく、原料の地政学まで含めて安定供給を考える時代</span>という分かりやすい例です。材料メーカーの競争力や国内回帰の議論にもつながります。</p>
+      <p class="limit"><b>注意：</b>暫定措置で、調査継続中です。最終税率・影響は確定していません。</p>
+      <p class="source">出典：<a href="https://apnews.com/article/china-japan-chips-chemical-dumping-ea58c95c47481c5c822a3a544e6b68cc" target="_blank" rel="noopener">AP — Japan protests as China slaps new measures against its exports of a key chipmaking material</a></p>
+    </article>
+
+    <article class="news" data-cat="industry">
+      <div class="newshead"><div><span class="chip">2026-09-11</span> <span class="chip">Reuters</span><h3>8. 米10年債利回りが5%を意識、Brentは100ドル超</h3></div><div class="score">興味度 7.8</div></div>
+      <p class="fact"><b>事実：</b>Reutersは、米10年債利回りの5%接近が市場の焦点になり、Brent原油が100ドルを超えたと報道。8月の米CPIは前年比3.4%で、市場では利上げ観測が強まっています。</p>
+      <p class="why"><b>解釈：</b>長期金利上昇は、遠い将来の利益を高く評価される成長株の現在価値に逆風になりやすい一方、債券の期待収益率は上がります。S&P500/全世界株を学ぶうえで、<strong>「企業業績」だけでなく割引率を見る</strong>良い局面です。</p>
+      <p class="limit"><b>注意：</b>これは市場構造の学習用整理で、売買推奨ではありません。金利・原油は日々変動します。</p>
+      <p class="source">出典：<a href="https://www.reuters.com/world/europe/global-bond-selloff-pushes-10-year-us-yield-toward-5-oil-rate-hike-fears-2026-09-11/" target="_blank" rel="noopener">Reuters — US 10-year borrowing costs pull back from 5%</a></p>
+    </article>
+
+    <div class="summarybox">
+      <strong>章末まとめ</strong>
+      <ul>
+        <li>AI投資は日本の電子・半導体関連の景況感を押し上げています。</li>
+        <li>一方、DCSの事例は半導体材料が地政学リスクの中心にもなり得ることを示します。</li>
+        <li>市場では金利・原油が高く、AI成長期待だけでなく<strong>資本コスト</strong>を見る必要があります。</li>
+      </ul>
+    </div>
+    <p class="toplink"><a href="#top">↑ 先頭へ</a></p>
+  </section>
+
+  <section id="research">
+    <h2>薄膜・塗工・R2R：論文レーダー</h2>
+    <p>ここは一般ニュースより、実務へ近い最近の論文・研究を選びました。<strong>「結果」より「どんな変数分解をしているか」</strong>を見るのがおすすめです。</p>
+
+    <article class="news" data-cat="research">
+      <div class="newshead"><div><span class="chip">2026-09</span> <span class="chip">Vacuum</span><h3>9. SiO₂：RFマグネトロンスパッタとreactive HiPIMSを比較</h3></div><div class="score">興味度 9.8</div></div>
+      <p class="fact"><b>確認できた内容：</b>2026年9月のVacuum掲載論文は、SiO₂膜でRF magnetron sputteringとreactive HiPIMSを比較。抄録/Highlightsでは、reactive HiPIMSがtarget poisoningを抑えて高い成膜速度を示し、10 μsの短パルスで緻密・平滑な表面、屈折率1.46、高いピーク電力密度によるadatom mobility向上と残留応力低減を報告しています。</p>
+      <p class="why"><b>解釈：</b>反応性スパッタで重要な<strong>poisoning・表面移動度・緻密化・残留応力</strong>が一つの研究にまとまっています。ARのSiO₂層を考えるうえで、成膜速度だけでなく機械特性までつなぐ視点が使えます。</p>
+      <p class="action"><b>読む観点：</b>①O₂導入とpoisoning、②pulse-on time、③屈折率/密度、④応力、⑤成膜速度の5軸で、自分のDC/RF条件との差分表を作る。</p>
+      <p class="limit"><b>注意：</b>HiPIMSの結果を、そのまま通常DC/RFやR2R低温基材へ外挿はできません。</p>
+      <p class="source">出典：<a href="https://www.sciencedirect.com/science/article/pii/S0042207X26004501" target="_blank" rel="noopener">Vacuum — Comparative study of SiO₂ thin films deposited by RF magnetron sputtering and reactive HiPIMS</a></p>
+    </article>
+
+    <article class="news" data-cat="research">
+      <div class="newshead"><div><span class="chip">2026-08-14</span> <span class="chip">Scientific Reports</span><h3>10. AZO薄膜：成膜条件が光学・電気・耐摺動へ同時に効く</h3></div><div class="score">興味度 9.0</div></div>
+      <p class="fact"><b>確認できた内容：</b>reactive magnetron sputteringでAZOを作製し、電力条件を変更。可視平均透過率は76→84%、導電性が摩耗で致命的に失われるまでのサイクルは約2×10⁴→4×10⁴へ改善。硬さは6.2〜7.3 GPa、弾性率は70〜77 GPaと報告されています。</p>
+      <p class="why"><b>解釈：</b>「スパッタ出力を変える→膜構造→光学/電気→摺動耐久」という因果鎖が見やすい研究です。<span class="mark">摺動を表面摩擦だけでなく、膜構造・欠陥・密度・応力の結果として見る</span>参考になります。</p>
+      <p class="action"><b>試すなら：</b>自分の薄膜でも「成膜パラメータ → n/k・膜厚 → AFM/密度指標 → nanoindentation → 摺動」の順で相関を見ると、条件探索が整理しやすいです。</p>
+      <p class="limit"><b>注意：</b>AZOとSiO₂/Nb₂O₅では材料機構が異なります。数値の直接比較より、評価設計を参照するのが適切です。</p>
+      <p class="source">出典：<a href="https://www.nature.com/articles/s41598-026-65064-9" target="_blank" rel="noopener">Scientific Reports — Effect of sputtering power on the optoelectrical performance and mechanical durability of AZO thin films</a></p>
+    </article>
+
+    <article class="news" data-cat="research">
+      <div class="newshead"><div><span class="chip">2026-07-22</span> <span class="chip">Fuel Cells</span><h3>11. R2Rスロットダイ：TDはダイ変形、MDはロール振れとして膜厚偏差をモデル化</h3></div><div class="score">興味度 9.6</div></div>
+      <p class="fact"><b>確認できた内容：</b>高速度R2Rスロットダイで、装置起因のwet-film厚み偏差をequipment–process–product枠組みで解析。TD偏差は圧力によるdie-lip変形が出口流量分布を変える静的外乱、MD偏差はroller radial runoutがcoating gapを周期変動させる動的外乱としてモデル化しています。</p>
+      <p class="why"><b>解釈：</b>ムラ解析で強いのは、<strong>「見え方」→「方向性」→「周期性」→「装置の静的/動的外乱」</strong>へ分解する考え方です。グラビアでもそのまま応用できる分析思想です。</p>
+      <p class="action"><b>試すなら：</b>MD筋に対して、ライン速度変更で①空間周期が固定か、②時間周期が固定かを比較すると、ウェブ由来か回転体由来かの切り分けが進みます。</p>
+      <p class="limit"><b>注意：</b>論文対象はスロットダイ/燃料電池触媒層です。グラビアの液橋・セル転写とは別機構も含まれます。</p>
+      <p class="source">出典：<a href="https://onlinelibrary.wiley.com/doi/10.1002/fuce.70123" target="_blank" rel="noopener">Fuel Cells — Towards Mass Production: Quantifying Equipment-Induced Wet-Film Thickness Deviations...</a></p>
+    </article>
+
+    <article class="news" data-cat="research">
+      <div class="newshead"><div><span class="chip">2026-09-02</span> <span class="chip">Small / JoVE summary</span><h3>12. 機能粉体をR2Rで高速実装：単一dip-dryで&gt;1,000 m²/day</h3></div><div class="score">興味度 8.5</div></div>
+      <p class="fact"><b>確認できた内容：</b>機能性粉体を繊維シートへ導入する電気的自己組織化プロセスで、シリカ/アルミナナノ粒子と機能粒子を事前複合化し、single dip-dryで商用スケール含浸コーターを使い、&gt;1,000 m²/dayのスループットを報告。TiO₂や活性炭で実証しています。</p>
+      <p class="why"><b>解釈：</b>ナノ粒子は「機能を出す粒子」だけでなく、<strong>接着・多孔構造を作るbinder backbone</strong>として設計できる点が面白いです。無機ナノ粒子＋樹脂という見慣れた発想から外れるヒントになります。</p>
+      <p class="action"><b>読む観点：</b>粒子表面電荷、粒子間相互作用、乾燥での固定化、基材への接着という4段階で整理する。</p>
+      <p class="limit"><b>注意：</b>対象は繊維シートであり、透明100 nm級HCや光学膜とは要求が違います。</p>
+      <p class="source">出典：<a href="https://visualize.jove.com/42682107-high-throughput-integration-of-functional-powder-materials-into-industrial-fiber-sheets-via-roll-to-roll-electrostatic-assembly" target="_blank" rel="noopener">JoVE Visualize summary — High-Throughput Integration of Functional Powder Materials...</a></p>
+    </article>
+
+    <div class="callout good">
+      <strong>この4本から共通して拾える研究思想：</strong>
+      「材料名」よりも、<strong>①入力パラメータ → ②中間状態（流動・密度・応力・装置変形） → ③観測特性 → ④最終性能</strong>の鎖を明示する。これを実験台帳の列構造に落とすと、AI解析とも相性が良くなります。
+    </div>
+    <div class="summarybox">
+      <strong>章末まとめ</strong>
+      <ul>
+        <li>SiO₂/HiPIMSは、poisoning・緻密化・残留応力のつながりが重要。</li>
+        <li>AZO論文は、光学だけでなく機械耐久まで同じ条件軸で見る好例。</li>
+        <li>R2Rでは、MD/TDを装置由来の外乱へ分解する考え方が実務的です。</li>
+        <li>量産化では、材料性能だけでなくスループットと固定化メカニズムまでセットで評価されます。</li>
+      </ul>
+    </div>
+    <p class="toplink"><a href="#top">↑ 先頭へ</a></p>
+  </section>
+
+  <section id="android">
+    <h2>Android：OSにGeminiが溶け込む流れ</h2>
+    <p>この章の着眼点は、AIが「アプリを開いて使うもの」から「OSが先回りするもの」へ変わっているかです。</p>
+
+    <article class="news" data-cat="android">
+      <div class="newshead"><div><span class="chip">2026-09-01</span> <span class="chip">Google公式</span><h3>13. September Android Drop：Geminiが“物の場所”まで覚える</h3></div><div class="score">興味度 6.8</div></div>
+      <p class="fact"><b>事実：</b>Googleは、Geminiに「パスポートを寝室の引き出しに置いた」などと伝え、Find Hubへ保存できる機能を発表。Android 17向けには、乗車中の画面使用で視覚と身体感覚のズレを減らすMotion Assistも追加しています。</p>
+      <p class="why"><b>解釈：</b>Androidの方向性は、AIチャットを置くだけでなく、<strong>位置・カメラ・メッセージ・OS機能へAIを接続</strong>すること。個人用Agentの実用性は「モデル性能」より、OS権限とコンテキスト統合で伸びそうです。</p>
+      <p class="limit"><b>注意：</b>機能ごとにAndroidバージョン、端末、国/地域の提供条件があります。</p>
+      <p class="source">出典：<a href="https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/" target="_blank" rel="noopener">Google — September Android Drop</a></p>
+    </article>
+
+    <div class="summarybox">
+      <strong>章末まとめ</strong>
+      <ul><li>AndroidでもAgent化の本質は「会話」より<strong>OSの道具へアクセスできること</strong>です。</li><li>ただし端末・OSバージョン・地域差が大きいので、実機対応確認が必要です。</li></ul>
+    </div>
+    <p class="toplink"><a href="#top">↑ 先頭へ</a></p>
+  </section>
+
+  <section id="actions">
+    <h2>今週やるなら、この3つ</h2>
+    <p>ニュースを行動へ変えるなら、広げすぎずこの3つが費用対効果高めです。</p>
+
+    <div class="callout">
+      <strong>① 研究開発Agentの“小さな完成系”を1本作る</strong>
+      <p>テーマを1件に限定し、入力資料→事実抽出→仮説→反証→最小実験→報告書下書きまで通す。書き込みや実験判断は人承認に残す。</p>
+    </div>
+    <div class="callout">
+      <strong>② HiPIMS論文とR2R装置変動論文を、1枚の因果マップにする</strong>
+      <p>「操作因子」「中間状態」「測定」「最終性能」「反証方法」の5列に整理。自分の反応性スパッタ/塗工テーマへ転写できる部分だけ抜き出す。</p>
+    </div>
+    <div class="callout">
+      <strong>③ キャリア/業界を見るとき“AI需要の二次波及”で企業を探す</strong>
+      <p>AI企業そのものではなく、半導体材料、薄膜・成膜装置、機能性フィルム、検査・精密装置、データセンター部材の順で候補を見直す。</p>
+    </div>
+
+    <div class="summarybox">
+      <strong>章末まとめ</strong>
+      <ul>
+        <li>最短で価値が出そうなのは、AIニュースを読むことより<strong>小さなAgentワークフローを完成させること</strong>。</li>
+        <li>技術論文は結果の数値より、因果分解・測定系・反証方法を自分のテーマへ移植する。</li>
+        <li>産業動向は「AI→半導体→材料/装置」という二次波及で見ると、仕事と市場の両方につながります。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2>出典・制作/検証記録</h2>
+
+    <h3>主要出典</h3>
+    <ol class="src-list">
+      <li>OpenAI, <a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">Introducing the Agents API</a>, 2026-09-10.</li>
+      <li>OpenAI, <a href="https://openai.com/index/research-acceleration-view-inside-openai/" target="_blank" rel="noopener">Research acceleration: The view inside OpenAI</a>, 2026-09-06.</li>
+      <li>OpenAI, <a href="https://openai.com/index/put-data-to-work/" target="_blank" rel="noopener">Now everyone can put data to work</a>, 2026-09-10.</li>
+      <li>OpenAI, <a href="https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials/" target="_blank" rel="noopener">How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules</a>, 2026-09-10.</li>
+      <li>OpenAI, <a href="https://openai.com/index/path-to-astra/" target="_blank" rel="noopener">Path to Astra: critical capabilities and frontier safeguards</a>, 2026-09-01.</li>
+      <li>Reuters, <a href="https://www.reuters.com/world/asia-pacific/japan-manufacturers-mood-hits-near-5-year-high-semiconductor-demand-2026-09-08/" target="_blank" rel="noopener">Japan manufacturers' mood hits near 5-year high on semiconductor demand</a>, 2026-09-08.</li>
+      <li>Associated Press, <a href="https://apnews.com/article/china-japan-chips-chemical-dumping-ea58c95c47481c5c822a3a544e6b68cc" target="_blank" rel="noopener">Japan protests as China slaps new measures against its exports of a key chipmaking material</a>, 2026-09.</li>
+      <li>Reuters, <a href="https://www.reuters.com/world/europe/global-bond-selloff-pushes-10-year-us-yield-toward-5-oil-rate-hike-fears-2026-09-11/" target="_blank" rel="noopener">US 10-year borrowing costs pull back from 5%</a>, 2026-09-11.</li>
+      <li>Google, <a href="https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/" target="_blank" rel="noopener">September Android Drop</a>, 2026-09-01.</li>
+      <li>Vacuum, <a href="https://www.sciencedirect.com/science/article/pii/S0042207X26004501" target="_blank" rel="noopener">Comparative study of SiO₂ thin films deposited by RF magnetron sputtering and reactive HiPIMS</a>, Vol.252, Sep 2026.</li>
+      <li>Scientific Reports, <a href="https://www.nature.com/articles/s41598-026-65064-9" target="_blank" rel="noopener">Effect of sputtering power on the optoelectrical performance and mechanical durability of AZO thin films</a>, 2026-08-14.</li>
+      <li>Fuel Cells, <a href="https://onlinelibrary.wiley.com/doi/10.1002/fuce.70123" target="_blank" rel="noopener">Towards Mass Production: Quantifying Equipment-Induced Wet-Film Thickness Deviations...</a>, 2026-07-22.</li>
+      <li>JoVE Visualize / Small summary, <a href="https://visualize.jove.com/42682107-high-throughput-integration-of-functional-powder-materials-into-industrial-fiber-sheets-via-roll-to-roll-electrostatic-assembly" target="_blank" rel="noopener">High-Throughput Integration of Functional Powder Materials...</a>, 2026-09-02.</li>
+    </ol>
+
+    <details class="note" open>
+      <summary>制作方針と適用した11B仕様</summary>
+      <div class="inner">
+        <p>白背景、濃い本文、淡青見出し、黒罫線、重要句の黄色マーカー、Meiryo UI優先、本文幅840px、モバイル余白15px前後を採用。数式はニュース要約に不要なため適用外。図解は、ニュース同士の関係を示すSVG概念図のみを使用しました。</p>
+        <p>本文・CSS・JavaScript・SVGは単一HTML内に格納し、主要機能はオフラインで動作します。外部リンクは参考資料への遷移だけです。</p>
+      </div>
+    </details>
+
+    <details class="note" open>
+      <summary>検証結果</summary>
+      <div class="inner">
+        <ul>
+          <li>UTF-8、lang="ja"、viewport：実装済み。</li>
+          <li>見出し階層・内部リンク・ユニークID：静的確認済み。</li>
+          <li>外部CSS/JS/フォント依存：なし。</li>
+          <li>JavaScript無効時：本文閲覧可能。絞り込みのみ非利用。</li>
+          <li>印刷CSS：実装済み。外部URLは印刷時に併記。</li>
+          <li>360/390/768/1280px：CSSメディア条件と横スクロール箇所を静的確認。</li>
+          <li>ニュースの時点：2026-09-14 14:27 JST。今後更新される可能性あり。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="note" open>
+      <summary>自己レビュー（固定10項目）</summary>
+      <div class="inner">
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>評価軸</th><th>点</th><th>確認内容</th></tr></thead>
+            <tbody>
+              <tr><td>1. 目的・入力・範囲</td><td>10</td><td>最近ニュース＋個人関心への接続を明確化</td></tr>
+              <tr><td>2. 正確性・根拠</td><td>10</td><td>公式/Reuters/AP/原著・出版社を優先。不確実性を分離</td></tr>
+              <tr><td>3. 目標・構成</td><td>10</td><td>全体→分野→行動の順</td></tr>
+              <tr><td>4. 学習支援・まとめ</td><td>10</td><td>事実/解釈/行動/注意＋章末まとめ</td></tr>
+              <tr><td>5. 11Bスタイル</td><td>10</td><td>指定フォント・見出し・強調・余白を反映</td></tr>
+              <tr><td>6. 数式・図表</td><td>9</td><td>数式は適用外。概念図・比較表を採用</td></tr>
+              <tr><td>7. 操作・フィードバック</td><td>9</td><td>カテゴリ絞り込み・印刷。主要情報は操作不要</td></tr>
+              <tr><td>8. モバイル/アクセシビリティ/オフライン/印刷</td><td>10</td><td>単一HTML、レスポンシブ、focus、reduced-motion、印刷CSS</td></tr>
+              <tr><td>9. 検証・限界</td><td>9</td><td>ニュース時点・外挿限界を明示。実機ブラウザ差は残る</td></tr>
+              <tr><td>10. 利用可能性・納品</td><td>10</td><td>単一ファイルで保存・再利用可能</td></tr>
+              <tr><th>合計</th><th>97 / 100</th><th>致命・重大な未解決欠陥なし</th></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small">レビュー1回目で95点以上に到達。残る主な限界は、ニュースが更新されること、論文の全条件を本文全文まで精査していない項目があること、端末ごとの実表示差です。</p>
+      </div>
+    </details>
+  </section>
+
+  <footer class="footer">
+    <p><strong>Recent News Radar｜2026-09-14</strong></p>
+    <p>本資料はニュース・研究動向の学習整理用です。投資判断、医療判断、法的判断を目的としません。</p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  const buttons = Array.from(document.querySelectorAll('[data-filter]'));
+  const items = Array.from(document.querySelectorAll('.news[data-cat]'));
+  if(!buttons.length) return;
+  buttons.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const f = btn.dataset.filter;
+      buttons.forEach(b=>b.setAttribute('aria-pressed', String(b===btn)));
+      items.forEach(item=>{
+        const show = f==='all' || item.dataset.cat===f;
+        item.hidden = !show;
+      });
+      if(f!=='all'){
+        const first = items.find(item=>!item.hidden);
+        if(first) first.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

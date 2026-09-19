@@ -16,3 +16,9 @@ desktop.ini
 /my-library-inbox-update.zip
 
 /ライブラリ アップデート/
+
+# Local-only classified originals and ingestion audit.
+/.local-library/
+/.inbox-*-20260919.json
+/.inbox-local-plan.json
+/.inbox-filing-report.md

@@ -1,0 +1,247 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>期限切れ特許マイニング｜初回実行レポート</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:#f3f5f8;color:#202d3d;font-family:"Meiryo UI",Meiryo,"Noto Sans JP",sans-serif;font-size:16px;line-height:1.95;overflow-wrap:anywhere}.shell{max-width:1060px;margin:auto;padding:36px 26px 80px}header{border-top:6px solid #225a78;background:#163b52;color:white;padding:26px 30px;border-radius:14px;margin-bottom:22px}header p{margin:0}header .label{font-size:12px;letter-spacing:.12em;color:#c2dce9}header .title{font-size:25px;font-weight:700;margin-top:5px}.intro{font-size:14px;margin-top:10px;color:#e0edf5}nav{background:white;border:1px solid #dce3ea;padding:20px 24px;border-radius:12px;margin-bottom:26px}nav summary{font-weight:bold;cursor:pointer}nav .links{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-top:14px}nav a{font-size:14px;text-decoration:none}article{background:white;padding:28px 36px 44px;border-radius:12px;border:1px solid #dce3ea}h1{font-size:25px;line-height:1.5;margin:5px 0 22px}h2{font-size:22px;line-height:1.6;margin:54px 0 24px;border-left:5px solid #22627e;padding:12px 18px;background:#edf4f8}h3{font-size:19px;line-height:1.7;margin:34px 0 16px;padding-bottom:9px;border-bottom:2px solid #dce8ed}p{margin:16px 0 23px}strong{font-weight:700;color:#163f59}a{color:#155f86;text-underline-offset:3px}a:hover{color:#0b394d}ul,ol{padding-left:1.55em;margin:20px 0 28px}li{padding-left:.25em;margin:12px 0}li::marker{color:#26647b;font-weight:bold}.table-wrap{overflow-x:auto;border:1px solid #d8e2e9;border-radius:8px;margin:22px 0 30px;background:linear-gradient(to right,#fff,#fff);overscroll-behavior-x:contain}table{border-collapse:collapse;width:100%;min-width:680px;font-size:14px;line-height:1.75}th,td{text-align:left;vertical-align:top;padding:13px 15px;border-bottom:1px solid #dce4e9;min-width:100px}th{color:#fff;background:#244e65;font-weight:700}th a{color:#fff}tr:nth-child(even){background:#f5f8fa}tr:last-child td{border-bottom:0}td:first-child{font-weight:600}footer{font-size:13px;text-align:center;color:#566676;margin-top:24px}.top{display:inline-block;background:#e7eff5;padding:8px 18px;border-radius:8px;text-decoration:none}@media(max-width:640px){body{font-size:16px;line-height:1.95}.shell{padding:14px 12px 45px}header{padding:21px 20px}.title{font-size:22px!important}article{padding:21px 18px 30px}nav{padding:17px 18px}nav .links{grid-template-columns:1fr}h1{font-size:23px}h2{font-size:20px;padding:10px 12px;margin-top:43px}h3{font-size:18px}.table-wrap{margin-left:-3px;margin-right:-3px}table{font-size:14px}th,td{padding:11px 12px}li{margin:15px 0}}@media print{body{background:white;font-size:10pt}.shell{max-width:none;padding:0}header,nav,.top{display:none}article{border:0;padding:0}h2{break-after:avoid;font-size:15pt}h3{break-after:avoid;font-size:12pt}.table-wrap{overflow:visible;border:0}table{min-width:0;font-size:8pt}td,th{min-width:0;padding:5px}a{color:inherit}tr{break-inside:avoid}}</style></head><body id="top"><main class="shell"><header><p class="label">EXPIRED PATENT MINING</p><p class="title">旧特許から、次の技術開発を探す</p><p class="intro">初回調査：10件の予備評価と、上位3テーマの事業・実証計画</p></header><nav aria-label="目次"><details open><summary>目次</summary><div class="links"><a href="#section-2">1. 今回の結論</a><a href="#section-3">2. 実行範囲と未完了事項</a><a href="#section-4">3. 引継ぎ資料に加える重要な補正</a><a href="#section-9">4. 特許台帳：書誌・権利表示</a><a href="#section-11">5. 全10件の技術評価</a><a href="#section-22">6. 後続特許：見つかった具体的な確認対象</a><a href="#section-23">7. 評価モデルと暫定順位</a><a href="#section-26">8. 上位3テーマの事業案とPoC</a><a href="#section-30">9. 100〜1000件へ拡張する収集仕様</a><a href="#section-34">10. 次の意思決定</a></div></details></nav><article><h1 id="section-1">期限切れ特許マイニング：初回実行レポート</h1>
+<p>調査日：2026年9月14日<br>対象：光学膜・ハードコート・塗工・表面処理を中心とする材料R&amp;D<br>想定実施国：日本。海外の権利状態は、記載した国に限定して扱う。<br>位置付け：実在する候補10件の予備調査、技術ランキング、上位3テーマの事業・PoC案。</p>
+<h2 id="section-2">1. 今回の結論</h2>
+<p><strong>最初に取り組む候補は「シリカ複合HCの調製・硬化工程」「塗工支持体による膜厚均一化」「反応固定型の耐久防曇コート」の3つ。</strong></p>
+<p>ただし、今回「埋もれた発明である」「2026年なら競争優位がある」「日本で自由に事業化できる」の3条件を立証できた案件はない。S判定は0件とする。旧特許に記載された技術と、こちらが提案する改良・市場仮説は分けた。</p>
+<p>特に実務に役立つ発見は以下。</p>
+<ul>
+<li>HCの旧特許には、単なる粒子配合ではなく、<strong>溶剤を留去する工程を省く調製方法</strong>がある。工程時間・濃度変動・硬化条件を再評価する出発点になる。</li>
+<li>塗工均一化には、液の配合だけでなく、<strong>基材を支える層の圧縮特性</strong>を使う旧特許がある。ただし今回見つかった基本候補はMeyerロッド方式で、スロットダイ特許ではない。</li>
+<li>防曇コートには、<strong>界面活性剤を反応によって固定する</strong>旧特許がある。初期の曇りにくさより、洗浄・浸水後の機能維持が検証軸になる。</li>
+<li>上記の塗工・防曇領域には、存続中と表示される後続特許がある。古い発明を現代化した時点で別の権利に接近する可能性がある。</li>
+</ul>
+<p>根拠：<a href="https://patents.google.com/patent/EP0565310B1/en" target="_blank" rel="noopener noreferrer">HC公報</a>、<a href="https://patents.google.com/patent/DE69925370T2/en" target="_blank" rel="noopener noreferrer">塗工公報</a>、<a href="https://patents.google.com/patent/US5877254A/en" target="_blank" rel="noopener noreferrer">防曇公報</a>。</p>
+<h2 id="section-3">2. 実行範囲と未完了事項</h2>
+<p>添付資料のPhase 1〜6を、小規模な初回探索として実行した。大量取得を完了したことにはしない。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる比較表"><table><thead><tr><th scope="col">作業</th><th scope="col">今回の到達点</th></tr></thead><tbody><tr><td>対象領域決定</td><td>光学・塗工関連に設定</td></tr><tr><td>候補探索</td><td>公報ページを確認できた10件を採用。100〜1000件の取得は未実施</td></tr><tr><td>AI一次評価</td><td>全10件に技術・改良・実装上の予備評価</td></tr><tr><td>ランキング</td><td>暫定100点評価、PRS、S/A/B/C分類</td></tr><tr><td>詳細確認</td><td>複数候補の独立請求項、上位候補の代表ファミリー、関連する後続公報を部分確認</td></tr><tr><td>事業案</td><td>上位3テーマについて顧客仮説、設備、予算枠、実験、中止条件を作成</td></tr><tr><td>権利の最終確認</td><td>未実施。J-PlatPat・各国公式登録簿による全件照合、分割・継続の網羅、FTOは未完了</td></tr><tr><td>商業検証</td><td>顧客面談・競合製品の現物比較・購入見積もり・市場規模の検証は未実施</td></tr></tbody></table></div>
+<p>Google Patents上の公報本文は技術情報の根拠にするが、同サイトのLegal Statusは公式な法的結論ではない。検索結果と個別ページで表示が異なる例もあり、今回は個別ページの表示を記録した。</p>
+<h2 id="section-4">3. 引継ぎ資料に加える重要な補正</h2>
+<h3 id="section-5">3.1 「2006年以前」は満了の判定条件にしない</h3>
+<p>年だけで切らず、少なくとも年月日・対象国・出願関係・期間調整等を確認する。最古優先日と存続期間の起算日も同一とは限らない。</p>
+<p>実例として、CN100494057Cは2006年10月9日出願で、予定満了日は2026年10月9日と表示されている。調査日にはまだその日に達しておらず、表示は「Expired - Fee Related」。期間満了と年金関連失効を混同しない。<a href="https://patents.google.com/patent/CN100494057C/en" target="_blank" rel="noopener noreferrer">公報・日付</a></p>
+<p>US8557877B2も「Expired - Fee Related」であり、調整後満了予定は2031年11月23日と表示される。米国には未納による失効からの権利回復申請制度があるため、失効表示だけを製造許可とみなさない。<a href="https://patents.google.com/patent/US8557877B2/en" target="_blank" rel="noopener noreferrer">公報</a>、<a href="https://www.uspto.gov/patents/maintain" target="_blank" rel="noopener noreferrer">USPTO：権利維持・回復</a></p>
+<h3 id="section-6">3.2 「未普及だった理由」を創作しない</h3>
+<p>公報が説明する従来技術の問題は、その発明が市場で普及しなかった証拠ではない。販売履歴、実施許諾、製品採用、後続論文等の別資料が必要。</p>
+<p>本レポートでは全10件について、<strong>未普及そのものと未普及理由は未確認</strong>とする。「工程負担」「耐水性」「低温成膜」等は再検証する技術課題であって、歴史的な失敗原因を断定していない。</p>
+<h3 id="section-7">3.3 引用・ファミリー数は順位の補助指標</h3>
+<p>被引用数は分野、年齢、審査官引用、自己引用、継続出願の影響を受ける。大量取得時にはファミリー単位で重複を除き、出願年代・分野で比較する。今回、比較可能な被引用数を全件取得していないため、数値ランキングには使っていない。</p>
+<h3 id="section-8">3.4 「新しい材料・AIを使う」だけでは差別化の説明にならない</h3>
+<p>改良の価値は、従来条件では同時達成できなかった性能、工程窓、歩留まり、耐久性等で実証する。新規IP欄は発明候補であり、特許性を認定したものではない。</p>
+<h2 id="section-9">4. 特許台帳：書誌・権利表示</h2>
+<p>名称は読みやすさのための日本語要約。原題・詳細は各番号のリンク先。出願人は公報上のOriginal Assigneeを基本とし、現権利者の確認とは区別する。L＝Expired - Lifetime、F＝Expired - Fee Related。いずれもGoogle Patents表示。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる比較表"><table><thead><tr><th scope="col">ID</th><th scope="col">代表公報・発明概要</th><th scope="col">原出願人表示</th><th scope="col">最古優先日</th><th scope="col">当該出願日</th><th scope="col">表示</th></tr></thead><tbody><tr><td>P01</td><td><a href="https://patents.google.com/patent/EP0565310B1/en" target="_blank" rel="noopener noreferrer">EP0565310B1：UV硬化HC調製</a></td><td>General Electric</td><td>1992-04-06</td><td>1993-04-01</td><td>EP：L</td></tr><tr><td>P02</td><td><a href="https://patents.google.com/patent/DE69925370T2/en" target="_blank" rel="noopener noreferrer">DE69925370T2：支持体を用いる均一塗工</a></td><td>DuPont</td><td>1998-05-08</td><td>1999-03-19</td><td>DE：F</td></tr><tr><td>P03</td><td><a href="https://patents.google.com/patent/US5877254A/en" target="_blank" rel="noopener noreferrer">US5877254A：耐擦傷・防曇コート</a></td><td>Film Specialties</td><td>1996-07-22</td><td>1996-07-22</td><td>US：L</td></tr><tr><td>P04</td><td><a href="https://patents.google.com/patent/US6040053A/en" target="_blank" rel="noopener noreferrer">US6040053A：反射防止・防曇コート</a></td><td>Minnesota Mining and Manufacturing（3M）</td><td>1996-07-19</td><td>1998-03-02</td><td>US：L</td></tr><tr><td>P05</td><td><a href="https://patents.google.com/patent/US6197397B1/en" target="_blank" rel="noopener noreferrer">US6197397B1：微細凹凸粘着面</a></td><td>3M Innovative Properties</td><td>1996-12-31</td><td>1996-12-31</td><td>US：L</td></tr><tr><td>P06</td><td><a href="https://patents.google.com/patent/US6743488B2/en" target="_blank" rel="noopener noreferrer">US6743488B2：組成の異なるITO積層</a></td><td>CPFilms</td><td>2001-05-09</td><td>2001-05-09</td><td>US：L</td></tr><tr><td>P07</td><td><a href="https://patents.google.com/patent/US7544276B2/en" target="_blank" rel="noopener noreferrer">US7544276B2：バイアス付きパルスDC成膜装置</a></td><td>SpringWorks</td><td>2002-03-16</td><td>2005-09-16</td><td>US：L</td></tr><tr><td>P08</td><td><a href="https://patents.google.com/patent/US4058430A/en" target="_blank" rel="noopener noreferrer">US4058430A：元素蒸気の交互供給による薄膜成長</a></td><td>Individual</td><td>1974-11-29</td><td>1975-11-25</td><td>US：L</td></tr><tr><td>P09</td><td><a href="https://patents.google.com/patent/CN100494057C/en" target="_blank" rel="noopener noreferrer">CN100494057C：中空シリカ球製法</a></td><td>中国科学技術大学</td><td>2006-10-09</td><td>2006-10-09</td><td>CN：F</td></tr><tr><td>P10</td><td><a href="https://patents.google.com/patent/US8557877B2/en" target="_blank" rel="noopener noreferrer">US8557877B2：透明基材用ARコート</a></td><td>Honeywell</td><td>2009-06-10</td><td>2010-06-08</td><td>US：F</td></tr></tbody></table></div>
+<p>P01・P08は主要探索年代より古い基盤技術、P10は年代範囲外の失効比較候補として採用。10件は無作為標本でも市場全体のTop 10でもない。</p>
+<h3 id="section-10">ファミリー・後続特許の確認台帳</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる比較表"><table><thead><tr><th scope="col">ID</th><th scope="col">確認した代表的関連番号</th><th scope="col">到達点・残る課題</th></tr></thead><tbody><tr><td>P01</td><td>US5242719A、JP3535188B2</td><td>JP個別ページもL表示。各国請求項は同一とみなさない。後続のUS10583639B2等は引用一覧で識別、権利・抵触未判定</td></tr><tr><td>P02</td><td>US6079352A、EP1095314B1、JP2002514506A、WO1999059031A1</td><td>DEの国別一覧で識別。JP公開公報の登録・分割は未確認。JP7253561B2とEP4126391B1を後続調査対象として確認</td></tr><tr><td>P03</td><td>JP3852955B2、EP0914364B1、WO1998003575A1、CA2260778C</td><td>JP個別ページもL表示。US8758894B2はActive表示で独立請求項を確認</td></tr><tr><td>P04</td><td>US5723175A</td><td>優先権関係を確認。日本ファミリーと生存する周辺権利は未確認</td></tr><tr><td>P05</td><td>US20030124293A1、US20060228509A1、JP2001507732A、WO1998029516A1</td><td>継続・海外関係を識別。全分岐の権利確認は未完了</td></tr><tr><td>P06</td><td>EP1397244B1、CN100430217C、TWI253388B、WO2002090107A1</td><td>国別関係を識別。日本対応・後続の権利は未確認</td></tr><tr><td>P07</td><td>US7378356B2、US7381657B2、US7413998B2、US8105466B2</td><td>ファミリー表に期間満了表示と年金関連失効表示が混在。海外・後続・審判結果の精査未完了</td></tr><tr><td>P08</td><td>未抽出</td><td>代表公報の独立請求項を確認。現代ALD装置・前駆体・空間分離構造の権利は別調査が必要</td></tr><tr><td>P09</td><td>CN1931718A</td><td>同一出願の公開版。国外ファミリーの不存在までは立証していない</td></tr><tr><td>P10</td><td>US8784985B2、JP2012529679A、CN102405533B、EP2412035A4、WO2010144527A2</td><td>関連出願を識別。US親案件の失効を全ファミリーに転用しない</td></tr></tbody></table></div>
+<p>代表出典：<a href="https://patents.google.com/patent/JP3535188B2/ja" target="_blank" rel="noopener noreferrer">P01のJP</a>、<a href="https://patents.google.com/patent/DE69925370T2/en" target="_blank" rel="noopener noreferrer">P02の国別一覧</a>、<a href="https://patents.google.com/patent/JP3852955B2/ja" target="_blank" rel="noopener noreferrer">P03のJP</a>、<a href="https://patents.google.com/patent/US20060228509A1/en" target="_blank" rel="noopener noreferrer">P05の継続関係</a>、<a href="https://patents.google.com/patent/US7544276B2/en" target="_blank" rel="noopener noreferrer">P07のファミリー</a>、<a href="https://patents.google.com/patent/US8557877B2/en" target="_blank" rel="noopener noreferrer">P10の関連出願</a>。</p>
+<h2 id="section-11">5. 全10件の技術評価</h2>
+<p>以下の「事実」は公報に記載された技術内容。「提案」は本調査で組み立てた未検証の案であり、公報の効果実証や現在の市販性能を意味しない。市場規模・販売価格・実装原価は全件未確定。</p>
+<h3 id="section-12">P01：シリカ複合HCの調製と硬化工程</h3>
+<p><strong>事実・請求項：</strong> 水混和性アルコール、コロイダルシリカ、シリルアクリレートを混合し、アクリルモノマーと特定の開始剤methylbenzoylformateを添加する。独立請求項は実質的に溶剤留去工程を含まない調製方法。単なる「ナノシリカ＋UV硬化」全体を権利範囲と解釈しない。明細書は従来工程の時間・エネルギー・反応器利用効率を課題に挙げる。<a href="https://patents.google.com/patent/EP0565310B1/en" target="_blank" rel="noopener noreferrer">P01</a></p>
+<p><strong>提案：</strong> 現代の材料候補として表面修飾シリカやLED適合開始剤を比較し、調製中の濃度変動、残留水分、塗膜の硬化率を一体管理する。LEDは元配合への単純置換で成立するとは限らない。</p>
+<ul>
+<li>現在の価値仮説：小ロット光学HCの調製再現性と耐擦傷性の両立。</li>
+<li>顧客仮説：機能性フィルムメーカー、少量受託塗工会社。</li>
+<li>製造可能性：試験塗工は比較的着手しやすい。量産ではポットライフ、残留溶媒、下地侵食が課題。</li>
+<li>新規IP仮説：混合順序・水分範囲・乾燥・硬化を結び付けた工程窓。単なる開始剤変更は弱い。</li>
+<li>棄却条件：市販HC対照に対する優位がない、あるいは基材別調整費で利益が消える。</li>
+</ul>
+<h3 id="section-13">P02：圧縮性支持体による塗工均一化</h3>
+<p><strong>事実・請求項：</strong> 圧縮可能な支持層を伴うフィルムをMeyerロッドで計量し、乾燥して感光性要素を作る方法が独立請求項に記載される。ロッドへの荷重や支持層の圧縮特性が関わる。スロットダイ一般を請求するものではない。<a href="https://patents.google.com/patent/DE69925370T2/en" target="_blank" rel="noopener noreferrer">P02</a></p>
+<p><strong>提案：</strong> 低コストな試験塗工治具で支持材・荷重・速度を管理し、幅方向膜厚マップと結び付ける。AIは原因候補の順位付けや次の実験選択に使い、初期段階は自動制御を必須にしない。</p>
+<ul>
+<li>現在の価値仮説：材料開発段階の手塗りばらつき・再試作を減らす。</li>
+<li>顧客仮説：材料メーカーの評価・試作部門。</li>
+<li>製造可能性：治具PoCは比較的低負担。100 nm乾燥膜では粗さ・異物・弾性回復が支配的になる可能性。</li>
+<li>新規IP仮説：支持特性・荷重・膜厚分布の校正方法。ただし計測や制御にも既存特許調査が必要。</li>
+<li>スロットダイへの横展開：別テーマとして扱う。後続のEP4126391B1を調べずに凹形リップ＋変形ロールを採用しない。</li>
+<li>棄却条件：欠陥源が凝集・濡れ・乾燥にあり、支持条件を変えても改善しない。</li>
+</ul>
+<h3 id="section-14">P03：反応固定型の耐久防曇コート</h3>
+<p><strong>事実・請求項：</strong> イソシアネートプレポリマー、親水性ポリオール、イソシアネート反応性基を持つ界面活性剤を含む組成。独立請求項ごとに炭素鎖やイオン部位等の条件が異なる。比較例には浸水による従来処理の防曇性低下が示される。<a href="https://patents.google.com/patent/US5877254A/en" target="_blank" rel="noopener noreferrer">P03</a></p>
+<p><strong>提案：</strong> 防曇成分を固定する設計を出発点に、洗浄後の耐久性と光学性を評価する。親水化を強めれば硬さ・耐水性が必ず良くなるわけではない。</p>
+<ul>
+<li>現在の価値仮説：繰り返し清掃する観察窓の曇り対策。</li>
+<li>顧客仮説：検査装置・冷蔵設備等の透明部材メーカー。まず要求認証の少ない用途を選ぶ。</li>
+<li>製造可能性：反応当量・水分・ポットライフの管理が必要。</li>
+<li>新規IP仮説：耐洗剤性を保つ親水基固定と硬化条件。ただし構成・数値・効果の差を示す必要。</li>
+<li>後続注意：US8758894B2は半硬化層への界面活性剤追加、再硬化、特定濃度勾配等を含む。似た改良を提案すると接近する。</li>
+<li>棄却条件：初期防曇だけ良く、洗浄後に消失する、又はヘイズ・密着が悪化する。</li>
+</ul>
+<h3 id="section-15">P04：低反射と防曇の兼用</h3>
+<p><strong>事実・請求項：</strong> 多孔質無機酸化物網目と、特定の親水性アニオン基を持つシラン又はシロキサンオリゴマーに関する被覆物品。<a href="https://patents.google.com/patent/US6040053A/en" target="_blank" rel="noopener noreferrer">P04</a></p>
+<p><strong>提案：</strong> 屋内センサー窓に絞り、反射・曇り・清掃後の光学変化を同時評価。精密塗工と分光測定を利用する。</p>
+<ul>
+<li>現在の価値：一つの表面に二機能を持たせる設計余地。</li>
+<li>製造課題：多孔性が吸水・汚れ・強度に不利になる可能性。</li>
+<li>新規IP仮説：湿潤時にも反射変動が小さい構造。ただし未実証。</li>
+<li>初手：同じ基材で乾燥時／高湿度時／洗浄後の反射・ヘイズを比較。</li>
+<li>判断：P03より評価軸が増えるため、次順位。</li>
+</ul>
+<h3 id="section-16">P05：気泡を抜く微細凹凸粘着面</h3>
+<p><strong>事実・請求項：</strong> 微細転写形状の反転面を粘着面に形成し、接着界面から流体を排出する方法。請求項には凹凸寸法、接触面積等の条件がある。<a href="https://patents.google.com/patent/US6197397B1/en" target="_blank" rel="noopener noreferrer">P05</a></p>
+<p><strong>提案：</strong> 透明フィルム貼付の気泡不良低減。ただし光学用途では凹凸の見え、散乱、経時での消失、粘着力の両立を先に確認。</p>
+<ul>
+<li>Modern Enabler候補：精密転写加工、面形状計測、貼合画像の自動検査。</li>
+<li>顧客仮説：フィルム加工・貼付工程事業者。</li>
+<li>製造課題：金型・離型ライナー・粘着剤レオロジー。</li>
+<li>新規IP仮説：特定の光学要求に対する流路消失設計。既存類似技術が多い可能性があり要調査。</li>
+<li>判断：基盤技術として有用だが、未普及技術としての証拠はない。</li>
+</ul>
+<h3 id="section-17">P06：組成の異なるITO積層</h3>
+<p><strong>事実・請求項：</strong> 厚さ方向にIn/Sn比の異なるITO層を配置し、各層内の組成は実質的に一定。連続組成勾配を前提とする発明ではない。<a href="https://patents.google.com/patent/US6743488B2/en" target="_blank" rel="noopener noreferrer">P06</a></p>
+<p><strong>提案：</strong> 低温基材上で透過率・抵抗・屈曲後変化の多目的最適化。組成切替と光学設計を組み合わせる。</p>
+<ul>
+<li>Modern Enabler候補：成膜履歴・分光・抵抗測定の統合と実験最適化。</li>
+<li>顧客仮説：透明電極・センサーフィルムメーカー。</li>
+<li>製造課題：ターゲット切替、界面、熱履歴、材料コスト。</li>
+<li>新規IP仮説：特定基材・用途での抵抗維持と光学性の両立条件。</li>
+<li>棄却条件：単層ITOや既存購入品を総コストで上回れない。</li>
+</ul>
+<h3 id="section-18">P07：基板バイアスとパルスDC成膜</h3>
+<p><strong>事実・請求項：</strong> パルスDC電源、基板側RFバイアス電源、電源とターゲットの間の帯域阻止フィルターを組み合わせる装置。単にバイアスを掛けるだけの発明ではない。関連出願・訴訟／審判の記載もある。<a href="https://patents.google.com/patent/US7544276B2/en" target="_blank" rel="noopener noreferrer">P07</a></p>
+<p><strong>提案：</strong> 低温での緻密化を狙い、硬さ・応力・屈曲耐性・基材温度の関係を探索。</p>
+<ul>
+<li>Modern Enabler候補：高速電力計測、アーク記録、温度・成膜履歴統合。</li>
+<li>顧客仮説：真空装置メーカー、受託成膜企業。</li>
+<li>製造課題：絶縁フィルムへの結合、ロール・ドラム構造、帯電、熱負荷。通常のR2R装置にそのまま追加できるとは限らない。</li>
+<li>新規IP仮説：低熱予算での特性制御。ただし装置改造費・後続権利の調査負担が大きい。</li>
+<li>判断：技術適合性は高いが、初回事業PoCとしては重い。</li>
+</ul>
+<h3 id="section-19">P08：交互供給による原子層的な膜成長</h3>
+<p><strong>事実・請求項：</strong> 元素蒸気を交互に供給し、表面反応と温度条件で薄膜を成長させる。独立請求項は元素・反応条件の具体性を持ち、現代のALD全般を一括して意味しない。<a href="https://patents.google.com/patent/US4058430A/en" target="_blank" rel="noopener noreferrer">P08</a></p>
+<p><strong>提案：</strong> コート界面の密着補助や薄いバリア層に活用する発想。現代の空間分離ALD、低温前駆体、プラズマ化は別の技術・権利調査が必要。</p>
+<ul>
+<li>顧客仮説：高付加価値のセンサー・光学部材企業。</li>
+<li>製造課題：処理速度、設備、前駆体、面積当たりコスト。</li>
+<li>新規IP仮説：特定界面の接着・バリア性能。ただし基盤が古いこと自体は差別化にならない。</li>
+<li>判断：参考基盤。現在も使われる概念を「誰も注目していない技術」とは呼ばない。</li>
+</ul>
+<h3 id="section-20">P09：中空シリカ球</h3>
+<p><strong>事実・請求項：</strong> 高分子電解質、アンモニア水、アルコール、シリコン源の滴下を用いる方法で、温度・濃度・速度等の条件を含む。実施例3は内径約20 nm、壁厚42 nmと記載される。<a href="https://patents.google.com/patent/CN100494057C/en" target="_blank" rel="noopener noreferrer">P09</a></p>
+<p><strong>こちらの計算・評価：</strong> 同心球と仮定すると外径約104 nm、空洞体積比は(20/104)^3≒0.71%。この例を「中空だから大幅に低屈折率」と評価するのは不適切。これは実施例3のみの評価で、他例や全権利範囲の評価ではない。</p>
+<ul>
+<li>Modern Enabler候補：滴下・混合の精密制御、TEM画像解析、膜評価との連携。</li>
+<li>顧客仮説：低屈折率コート材料メーカー。</li>
+<li>製造課題：殻厚、洗浄、乾燥凝集、溶媒置換。市販粒子を対照にする。</li>
+<li>新規IP仮説：空洞率と耐圧壊性の両立。ただし別の粒子製法・表面処理特許を調べる必要。</li>
+<li>判断：この実施例をそのままAR材料にする案はC。粒子技術の情報源としては保持。</li>
+</ul>
+<h3 id="section-21">P10：透明基材用AR組成物・年金失効比較候補</h3>
+<p><strong>事実：</strong> シラン系組成物とポリマー粒子に関わるAR技術。2009年優先、米国は年金関連失効表示。複数国・関連米国出願がある。今回は独立請求項の完全な要件分解を完了していない。<a href="https://patents.google.com/patent/US8557877B2/en" target="_blank" rel="noopener noreferrer">P10</a></p>
+<p><strong>提案：</strong> 粒子を利用した空隙形成の工程負担を比較する参考候補。</p>
+<ul>
+<li>現在の価値仮説：ガラス上の低反射用途。</li>
+<li>Modern Enabler候補：粒径管理、乾燥・熱処理の精密化。</li>
+<li>製造課題：空隙形成条件と樹脂基材の耐熱性、耐擦傷性。</li>
+<li>新規IP仮説：低温化・耐久性改善。ただし具体性不足。</li>
+<li>判断：権利・請求項・性能が不足しているためB。優先投資しない。</li>
+</ul>
+<h2 id="section-22">6. 後続特許：見つかった具体的な確認対象</h2>
+<p>「Blocking Patent確定」ではなく、提案構造と照合すべき候補。引用されているだけでは抵触の証明にならない。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる比較表"><table><thead><tr><th scope="col">公報</th><th scope="col">表示・対象国</th><th scope="col">今回確認した内容</th><th scope="col">判断に必要な追加作業</th></tr></thead><tbody><tr><td><a href="https://patents.google.com/patent/JP7253561B2/ja" target="_blank" rel="noopener noreferrer">JP7253561B2</a></td><td>日本、Active</td><td>緩いウェブの塗工。ロッド・バックアップロールの機械条件等</td><td>P02改良治具の構成・数値を独立請求項と対比。公式経過確認</td></tr><tr><td><a href="https://patents.google.com/patent/EP4126391B1/en" target="_blank" rel="noopener noreferrer">EP4126391B1</a></td><td>EP、Active</td><td>凹形ダイリップと変形可能バックアップロールによるスロットダイ塗工</td><td>欧州各国の有効化・維持状態、日本対応、請求項全要件</td></tr><tr><td><a href="https://patents.google.com/patent/US8758894B2/en" target="_blank" rel="noopener noreferrer">US8758894B2</a></td><td>米国、Active</td><td>ナノ粒子を含むUVコート、半硬化後の親水剤追加と再硬化、特定の表面濃度勾配</td><td>P03で同様の工程を採る場合に照合。日本・その他のファミリー</td></tr></tbody></table></div>
+<p>P03の初期PoCは「半硬化後に親水剤を添加して再硬化」を標準案とせず、反応固定型の単層処方を比較する。ただし、これだけで非侵害とは判断しない。</p>
+<h2 id="section-23">7. 評価モデルと暫定順位</h2>
+<h3 id="section-24">7.1 100点モデル</h3>
+<p>添付の配点を維持。ただし法的項目は「自由利用の確率」ではなく、<strong>確認の到達度を反映する便宜的スコア</strong>とする。</p>
+<ul>
+<li>法20：今回は公式登録簿・全ファミリー・FTOが未完了なので最大6点。</li>
+<li>課15：想定課題の明確さ。</li>
+<li>技15：公報の技術と想定用途の適合性。</li>
+<li>現10：現代の計測・材料・工程で改善する具体性。</li>
+<li>製10：初期PoCの実装容易度。</li>
+<li>費10：設備・工程の負担。見積価格に基づくものではない。</li>
+<li>市10：用途仮説の明確さ。市場規模の実測値ではないため最大5点。</li>
+<li>IP10：新しい発明の切り口。特許性未調査なので最大5点。</li>
+</ul>
+<p>S：80以上かつ日本等の対象国の権利検討、顧客需要、比較PoCの裏付けあり。A：60以上の詳細調査候補。B：40〜59の参考候補。C：40未満又は具体案に重大な不適合。点数は投資収益率や成功確率ではない。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる比較表"><table><thead><tr><th scope="col">順位</th><th scope="col">ID</th><th scope="col">法20</th><th scope="col">課15</th><th scope="col">技15</th><th scope="col">現10</th><th scope="col">製10</th><th scope="col">費10</th><th scope="col">市10</th><th scope="col">IP10</th><th scope="col">合計</th><th scope="col">判定</th></tr></thead><tbody><tr><td>1</td><td>P01</td><td>6</td><td>13</td><td>12</td><td>8</td><td>9</td><td>8</td><td>5</td><td>4</td><td>65</td><td>A</td></tr><tr><td>2</td><td>P02</td><td>4</td><td>14</td><td>11</td><td>8</td><td>9</td><td>9</td><td>5</td><td>4</td><td>64</td><td>A</td></tr><tr><td>3</td><td>P03</td><td>6</td><td>13</td><td>12</td><td>8</td><td>8</td><td>7</td><td>5</td><td>4</td><td>63</td><td>A</td></tr><tr><td>4</td><td>P04</td><td>4</td><td>12</td><td>11</td><td>7</td><td>7</td><td>7</td><td>5</td><td>4</td><td>57</td><td>B</td></tr><tr><td>5</td><td>P05</td><td>4</td><td>12</td><td>12</td><td>6</td><td>7</td><td>6</td><td>5</td><td>3</td><td>55</td><td>B</td></tr><tr><td>6</td><td>P06</td><td>4</td><td>12</td><td>12</td><td>7</td><td>6</td><td>4</td><td>5</td><td>4</td><td>54</td><td>B</td></tr><tr><td>7</td><td>P07</td><td>4</td><td>12</td><td>12</td><td>8</td><td>4</td><td>3</td><td>5</td><td>5</td><td>53</td><td>B</td></tr><tr><td>8</td><td>P08</td><td>4</td><td>11</td><td>12</td><td>6</td><td>3</td><td>3</td><td>4</td><td>3</td><td>46</td><td>B</td></tr><tr><td>9</td><td>P10</td><td>2</td><td>10</td><td>8</td><td>5</td><td>5</td><td>5</td><td>4</td><td>2</td><td>41</td><td>B</td></tr><tr><td>10</td><td>P09</td><td>2</td><td>10</td><td>5</td><td>6</td><td>4</td><td>3</td><td>4</td><td>3</td><td>37</td><td>C※</td></tr></tbody></table></div>
+<p>※P09は実施例3をそのまま低屈折率ARに転用する案の判定。発明全体を無価値・陳腐化と断定するものではない。上位3件の1〜2点差は有意な差ではなく、同じ優先調査群と扱う。</p>
+<h3 id="section-25">7.2 PRSの試算</h3>
+<p>添付の積算式は、1項目の未確認値が全体を大きく動かす。そこで「法的自由度」を現段階では未確認のUとし、正式PRSは未算定。比較用に<strong>法的自由度を仮に0.3と置いた感度試算</strong>だけを示す。この0.3は確率でも権利評価でもない。</p>
+<p>PRS仮＝100×技術重要度×市場価値×現代改善度×法的自由度×実装容易度。各項0〜1。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる比較表"><table><thead><tr><th scope="col">ID</th><th scope="col">技術</th><th scope="col">市場仮説</th><th scope="col">現代改善</th><th scope="col">実装</th><th scope="col">法的自由度</th><th scope="col">PRS仮（L=0.3）</th></tr></thead><tbody><tr><td>P01</td><td>0.8</td><td>0.5</td><td>0.8</td><td>0.9</td><td>U</td><td>8.64</td></tr><tr><td>P02</td><td>0.7</td><td>0.5</td><td>0.8</td><td>0.9</td><td>U</td><td>7.56</td></tr><tr><td>P03</td><td>0.8</td><td>0.5</td><td>0.8</td><td>0.8</td><td>U</td><td>7.68</td></tr><tr><td>P04</td><td>0.7</td><td>0.5</td><td>0.7</td><td>0.7</td><td>U</td><td>5.15</td></tr><tr><td>P05</td><td>0.8</td><td>0.5</td><td>0.6</td><td>0.7</td><td>U</td><td>5.04</td></tr><tr><td>P06</td><td>0.8</td><td>0.5</td><td>0.7</td><td>0.6</td><td>U</td><td>5.04</td></tr><tr><td>P07</td><td>0.8</td><td>0.5</td><td>0.8</td><td>0.4</td><td>U</td><td>3.84</td></tr><tr><td>P08</td><td>0.8</td><td>0.4</td><td>0.6</td><td>0.3</td><td>U</td><td>1.73</td></tr><tr><td>P09</td><td>0.3</td><td>0.4</td><td>0.6</td><td>0.4</td><td>U</td><td>0.86</td></tr><tr><td>P10</td><td>0.5</td><td>0.4</td><td>0.5</td><td>0.5</td><td>U</td><td>1.50</td></tr></tbody></table></div>
+<p>これは手法の挙動確認で、ランキングの主指標には使わない。正式版は権利確認をゲートとし、技術・市場・実装を別軸で見せる方が判断しやすい。</p>
+<h2 id="section-26">8. 上位3テーマの事業案とPoC</h2>
+<p>以下はすべてこちらの設計案。金額は市場価格や見積もりではなく、<strong>初回検証に使う予算上限の提案</strong>。既存設備への正当なアクセスを前提とし、設備購入費・人件費・権利調査費は別途。</p>
+<h3 id="section-27">事業案1：光学HCの調製・硬化条件最適化サービス</h3>
+<p><strong>売るもの：</strong> 既存処方の再現性・耐擦傷性・光学性を改善する受託検討。旧特許の紹介だけではなく、材料と工程を結び付けた比較データを納品する。</p>
+<p><strong>顧客：</strong> 小ロットの機能性フィルム開発部門。最初の面談で「配合ばらつき」「塗工ムラ」「硬化不足」のどれが費用を生んでいるか確認する。</p>
+<p><strong>必要設備：</strong> 混合・乾燥・UV照射・試験塗工、分光／ヘイズ、FTIR、膜厚計、擦傷試験。ナノ粒子状態や残留水分の分析は必要に応じ外注。</p>
+<p><strong>初回PoC：</strong></p>
+<ol>
+<li>基材・乾燥膜厚・評価法を固定。まず数µm級HCを対象とし、100 nm層は別テーマにする。</li>
+<li>配合側の1因子（シリカ配合率等）、乾燥側の1因子、硬化側の1因子を各2水準で8条件。</li>
+<li>中心条件3回、現行又は市販対照3回を加えて計14回の独立塗工。硬化因子を光量にするなら開始剤は固定する。</li>
+<li>表面修飾や開始剤種まで同時に変えない。照射量だけでなくFTIRによる転化率も比較する。</li>
+<li>主指標は規定擦傷後のヘイズ増分。副指標は初期光学性、密着、カール、屈曲、工程時間。</li>
+</ol>
+<p><strong>仮の合格条件：</strong> 対照比で擦傷後ヘイズ増分を20%以上低減し、初期光学性と密着が事前許容範囲内。異なる日に再現する。20%は公報の性能ではなく今回の開発目標。</p>
+<p><strong>予算上限案：</strong> 材料・消耗品・限定外注で20〜50万円。設備アクセスがなければ受託先の見積もりを先に取る。</p>
+<p><strong>収益化：</strong> まず小規模診断、次に条件探索、最後に移管支援。処方販売より先に顧客が改善データへ払うかを確認する。</p>
+<p><strong>原価式：</strong> 分析・試験外注＋材料＋試作機使用＋技術者工数＋再試験引当。売価はこの原価と顧客の不良削減価値の両方から決める。</p>
+<p><strong>中止条件：</strong> 材料メーカーの既存推奨条件で同等に改善する、再現性が悪い、顧客ごとの調整工数が大きすぎる。</p>
+<h3 id="section-28">事業案2：試験塗工の均一化治具・評価パッケージ</h3>
+<p><strong>売るもの：</strong> バー塗工の支持材・荷重・速度を規定する治具と、膜厚分布の評価方法。初期は手塗り評価の信頼性向上に用途を限定する。</p>
+<p><strong>顧客：</strong> HC・接着剤・光学材料の試作部門。顧客便益は「塗り直し回数」「誤った配合判定」「評価日数」の削減。</p>
+<p><strong>必要設備：</strong> 荷重調整可能な試験塗工機、交換可能な支持層、荷重計、速度管理、膜厚測定又は校正済み光学測定。</p>
+<p><strong>初回PoC：</strong> 支持層3条件×荷重2条件×塗工速度2条件＝12条件。標準条件を独立に3回追加して計15回。液・バー・基材ロットは固定。各試料を幅方向9点×流れ方向3位置で評価する。測定点を独立試作の反復数として数えない。</p>
+<p><strong>測定上の注意：</strong> 反射率や色を膜厚に換算するときは基材・下地・屈折率の影響を校正。目視のムラだけで支持体効果を判定しない。</p>
+<p><strong>仮の合格条件：</strong> 端部除外範囲を固定した膜厚CVが対照比30%以上低下し、平均膜厚は目標の±5%以内。スジ・異物欠陥数を増やさない。別日・別オペレーターで再確認。</p>
+<p><strong>予算上限案：</strong> 試験機を既に使えるなら治具・消耗品で10〜30万円。</p>
+<p><strong>権利の関門：</strong> P02が古くても、治具の具体化時にJP7253561B2等の独立請求項と比較する。スロットダイ版はロッド版の検証後、独立に設計する。</p>
+<p><strong>収益化：</strong> 有償診断＋治具＋校正サービス。AIは測定結果の整理・実験提案に用いる。専用AI開発を初期費用の前提にしない。</p>
+<p><strong>中止条件：</strong> 支持体を変えても膜厚分布が改善しない、又は改善が液温・濡れ・乾燥条件の変動で説明される。</p>
+<h3 id="section-29">事業案3：洗浄後も機能を維持する防曇透明コート</h3>
+<p><strong>売るもの：</strong> 特定の清掃手順・使用環境に適合した防曇コート試作品と耐久評価データ。</p>
+<p><strong>顧客：</strong> 観察窓・透明カバーの部材メーカー。初期用途を屋内の非安全重要部材に絞り、要求環境を具体化する。</p>
+<p><strong>必要設備：</strong> 反応・塗工・硬化設備、温湿度管理、分光／ヘイズ、接触角、洗浄・浸水・擦傷評価。イソシアネートを扱える設備・作業手順を前提にする。</p>
+<p><strong>初回PoC：</strong></p>
+<ul>
+<li>比較群：無添加、非反応性親水剤、反応固定型の3群。</li>
+<li>各群に架橋条件2水準、各条件3回独立調製・塗工で計18試料。</li>
+<li>各試料から試験片を分け、初期・浸水後・洗浄後の性能を測る。</li>
+<li>反応性の比較では、硬化状態や膜厚の差で効果が説明されないようにする。</li>
+</ul>
+<p><strong>仮の合格条件：</strong> 規定の結露条件で透過率の低下を抑え、洗浄100回後にも対照より良好。ヘイズ・密着・外観が顧客許容範囲内。100回は現時点の開発目標で、耐用年数とは換算しない。</p>
+<p><strong>予算上限案：</strong> 材料・消耗品・限定外注で20〜60万円。</p>
+<p><strong>原価式：</strong> 塗液使用量×塗液単価＋塗工硬化費＋歩留まり損＋評価＋包装。面積当たり塗液使用量は、乾燥膜の質量を固形分率と実効利用率で割って算出する。洗浄液・廃液費も加える。</p>
+<p><strong>新規IPの狙い：</strong> 特定洗剤・温湿度下での耐久性と透明性を両立する構成。広い「耐久防曇」だけでは差別化が不足する。</p>
+<p><strong>中止条件：</strong> 親水剤固定を確認できない、浸水で白化する、市販対照を超えない、又は顧客が防曇以外の方法で安く解決できる。</p>
+<h2 id="section-30">9. 100〜1000件へ拡張する収集仕様</h2>
+<p>今回未実施の大量探索を、次回そのまま開始できる仕様として残す。件数を達成するために無関係な公報やファミリー重複を水増ししない。</p>
+<h3 id="section-31">9.1 検索テーマと語群</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる比較表"><table><thead><tr><th scope="col">テーマ</th><th scope="col">日本語</th><th scope="col">英語</th></tr></thead><tbody><tr><td>HC調製</td><td>ハードコート、シリカ、調製、留去、硬化</td><td>hardcoat, colloidal silica, solvent stripping, radiation curable</td></tr><tr><td>薄膜塗工</td><td>均一塗工、支持体、ロッド、低張力</td><td>uniform coating, compressible support, Meyer rod, baggy web</td></tr><tr><td>AR</td><td>反射防止、多孔質、中空、低屈折率</td><td>antireflective, porous, hollow silica, low refractive index</td></tr><tr><td>防曇</td><td>防曇、反応性界面活性剤、耐水</td><td>antifog, reactive surfactant, water resistance</td></tr><tr><td>スパッタ</td><td>反応性、パルス、バイアス、制御</td><td>reactive sputtering, pulsed DC, substrate bias, feedback</td></tr><tr><td>透明導電</td><td>ITO、積層、低温、耐屈曲</td><td>indium tin oxide, multilayer, low temperature, flexible</td></tr></tbody></table></div>
+<p>検索UIの書式に合わせ、語群内OR・語群間ANDを設定する。古い候補を探す日付条件と、生存する後続権利を探す条件を分ける。後続権利検索には古い出願日の制限を掛けない。</p>
+<p>技術分類は採用した公報のIPC/CPCを実際に転記して展開する。今回、分類コードの全件確認はしていないため、未確認コードを固定条件として提示しない。</p>
+<h3 id="section-32">9.2 収集と除外</h3>
+<ol>
+<li>6テーマから合計100ファミリーを目標に抽出。原則1995〜2006年を中心とし、古い基盤と新しい失効は別枠にする。</li>
+<li>公開・登録の重複を統合し、単純／拡張ファミリーの区別を保存。</li>
+<li>課題・独立請求項・実施例の有無を抽出。曖昧なLLM要約には元の段落位置を付ける。</li>
+<li>生存特許の後方引用から旧特許をたどる検索も追加する。</li>
+<li>期限満了候補、年金失効候補、放棄出願、生存案件に分ける。生存案件は技術参考・周辺権利台帳に回す。</li>
+<li>上位20ファミリーに具体的用途と比較PoCを付け、上位10で各国権利と後続を精査する。</li>
+<li>顧客面談と比較試験を経た3案件だけを事業評価に進める。</li>
+</ol>
+<h3 id="section-33">9.3 保存する追加項目</h3>
+<p>添付の台帳項目に、次を追加する。</p>
+<ul>
+<li>対象国、製造国、販売国、輸入国</li>
+<li>公報番号と出願番号、優先権・分割・継続の関係</li>
+<li>調査日、状態の情報源、公式確認の有無</li>
+<li>独立請求項の要件、比較する自社構成、充足／非充足／不明</li>
+<li>未普及の証拠、当時制約の証拠、制約解消の証拠</li>
+<li>現代改良は事実か仮説か、比較対象、実験合格条件</li>
+<li>顧客面談件数、支払意思、競合の現物比較</li>
+<li>欠測値、信頼度、次に確認する最小の作業</li>
+</ul>
+<p>不明を0や「なし」で代用しない。ファミリー未発見と不存在を区別する。</p>
+<h2 id="section-34">10. 次の意思決定</h2>
+<p>最初の実務判断は「製品を作るか」より、<strong>どの候補に追加調査・試作費を使うか</strong>。</p>
+<ul>
+<li>HC配合・照射・評価設備が使える場合：P01を先に検証。</li>
+<li>配合を変えにくく、塗工ばらつきが主問題の場合：P02の原因切り分けから開始。</li>
+<li>新用途の透明コート事業を狙う場合：P03の顧客要求と耐洗浄性から検証。</li>
+</ul>
+<p>今回の成果は、実在する10候補と、次に試すべき3テーマを具体化したこと。大量マイニング、公式権利確認、商業的成立の証明は残る。S案件に昇格させるには、対象国の権利検討・顧客需要・比較PoCの3つを揃える。</p></article><footer><a class="top" href="#top">先頭へ戻る</a><p>比較表は横にスクロールできます。出典は各リンクから確認できます。</p></footer></main></body></html>

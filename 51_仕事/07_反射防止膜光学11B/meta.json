@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "ar-optics-11b",
+  "title": "反射防止膜の光学入門｜11Bスタイル版",
+  "type": "reference",
+  "category": "51_仕事",
+  "subcategory": "反射防止膜の光学入門",
+  "summary": "電磁波・界面反射・薄膜干渉・多層膜設計を学ぶ教材。",
+  "tags": [
+    "仕事"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "反射防止膜_光学入門_11Bスタイル版.html",
+    "guide": "反射防止膜_光学入門_11Bスタイル版.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "7f89d71b0043aab2f75ccd0f82b99a968fa836257bfc200a1cf810e44a0bfb12",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "反射防止膜_光学入門_11Bスタイル版.html": "1cef03f5fdfbd66f2b6d6e6d0ac4022af8b0f2745af584668e81dc1323bd2926"
+    },
+    "output_sha256": {
+      "反射防止膜_光学入門_11Bスタイル版.html": "1cef03f5fdfbd66f2b6d6e6d0ac4022af8b0f2745af584668e81dc1323bd2926"
+    }
+  }
+}
