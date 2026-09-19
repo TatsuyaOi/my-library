@@ -106,7 +106,7 @@ function scopeList(){
       const item=el('li');
       item.append(el('a',l.title,{href:safeURL(l.source_path,base)}),el('p',l.source_path,{class:'source-path muted'}),
         el('span',statusLabels[l.generation_status]||'対象外',{class:'tag'}),
-        el('p',l.generation_status==='success'?`${l.question_count} 問`:l.client_error||l.reason||'問題が準備できるまで、元の教材を読むことができます。',{class:'muted'}));
+        el('p',l.generation_status==='success'?`${l.question_count} 問${l.quality_method==='source-reviewed'?' · 原文照合済みの初期問題':''}`:l.client_error||l.reason||'問題が準備できるまで、元の教材を読むことができます。',{class:'muted'}));
       list.append(item);
     }
     section.append(list);

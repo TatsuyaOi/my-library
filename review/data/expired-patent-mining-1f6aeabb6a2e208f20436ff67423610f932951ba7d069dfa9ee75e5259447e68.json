@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "lesson_id": "expired-patent-mining",
+  "content_hash": "aab11a31015b381c2bcb5259202ce2185cc5b874888c01e53f57df1b6300375a",
+  "generated_at": "2026-09-19T11:18:22.967796+00:00",
+  "questions": [
+    {
+      "question_id": "expired-patent-mining:report-status:reveal:1",
+      "concept_key": "report-status",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "この初回レポートの候補調査は何件で、どの段階と位置付けられていますか？",
+      "answer": "実在する候補10件の予備調査",
+      "explanation": "2026年9月14日の資料の到達点を問います。網羅調査や事業化判断の完了ではありません。",
+      "source": {
+        "path": "51_仕事/09_期限切れ特許マイニング/期限切れ特許マイニング_初回実行レポート.html",
+        "anchor": "#section-1",
+        "evidence": "実在する候補10件の予備調査"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "expired-patent-mining:s-grade-zero:fill_blank:1",
+      "concept_key": "s-grade-zero",
+      "revision": 1,
+      "type": "fill_blank",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "本レポートで「埋もれた発明・競争優位・日本で自由に事業化」の3条件を立証したS判定は何件？",
+      "answer": "0件",
+      "explanation": "このレポートの調査結果の確認です。現在の個別特許の権利状態を判断する問題ではありません。",
+      "source": {
+        "path": "51_仕事/09_期限切れ特許マイニング/期限切れ特許マイニング_初回実行レポート.html",
+        "anchor": "#section-2",
+        "evidence": "3条件を立証できた案件はない。S判定は0件とする。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "expired-patent-mining:method-meyer:choice:1",
+      "concept_key": "method-meyer",
+      "revision": 1,
+      "type": "choice",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "本レポートで見つかった塗工均一化の基本候補は、どの方式ですか？",
+      "answer": "b",
+      "explanation": "資料はMeyerロッド方式とスロットダイを区別しています。",
+      "source": {
+        "path": "51_仕事/09_期限切れ特許マイニング/期限切れ特許マイニング_初回実行レポート.html",
+        "anchor": "#section-2",
+        "evidence": "今回見つかった基本候補はMeyerロッド方式で、スロットダイ特許ではない。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true,
+      "choices": [
+        {
+          "id": "a",
+          "text": "スロットダイ方式"
+        },
+        {
+          "id": "b",
+          "text": "Meyerロッド方式"
+        },
+        {
+          "id": "c",
+          "text": "スプレー方式"
+        },
+        {
+          "id": "d",
+          "text": "インクジェット方式"
+        }
+      ]
+    },
+    {
+      "question_id": "expired-patent-mining:antifog-durability:reveal:1",
+      "concept_key": "antifog-durability",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "本レポートの防曇コート案では、初期の曇りにくさより何の後の機能維持を検証軸にしますか？",
+      "answer": "洗浄・浸水後",
+      "explanation": "提案された検証軸を問います。実験で耐久性が確認済みという意味ではありません。",
+      "source": {
+        "path": "51_仕事/09_期限切れ特許マイニング/期限切れ特許マイニング_初回実行レポート.html",
+        "anchor": "#section-2",
+        "evidence": "初期の曇りにくさより、洗浄・浸水後の機能維持が検証軸になる。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "expired-patent-mining:adoption-evidence:true_false:1",
+      "concept_key": "adoption-evidence",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "公報に従来技術の問題が書かれていることだけでは、その発明が市場で普及しなかった証拠にはならない。",
+      "answer": true,
+      "explanation": "本資料は販売履歴や製品採用などの別資料を必要としています。",
+      "source": {
+        "path": "51_仕事/09_期限切れ特許マイニング/期限切れ特許マイニング_初回実行レポート.html",
+        "anchor": "#section-6",
+        "evidence": "公報が説明する従来技術の問題は、その発明が市場で普及しなかった証拠ではない。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "expired-patent-mining:unknown-history:free_response:1",
+      "concept_key": "unknown-history",
+      "revision": 1,
+      "type": "free_response",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "このレポートで「工程負担」「耐水性」等の課題を、歴史的な失敗原因と断定しないのはなぜ？",
+      "answer": "全10件について未普及そのものと理由が未確認であり、それらは再検証する技術課題だから。",
+      "explanation": "課題の提案と、過去の普及状況の立証を区別します。",
+      "source": {
+        "path": "51_仕事/09_期限切れ特許マイニング/期限切れ特許マイニング_初回実行レポート.html",
+        "anchor": "#section-6",
+        "evidence": "本レポートでは全10件について、 未普及そのものと未普及理由は未確認 とする。「工程負担」「耐水性」「低温成膜」等は再検証する技術課題であって、歴史的な失敗原因を断定していない。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（作成者による原文再照合）",
+    "validated_at": "2026-09-19T11:21:08.030811+00:00",
+    "limitations": "同じ作成者による照合であり、独立したAI・第三者レビューではありません。教材全体の網羅問題ではなく初期問題です。時点依存の資料は当該資料の読解として扱い、外部情報の最新性は保証しません。",
+    "results": [
+      {
+        "question_id": "expired-patent-mining:report-status:reveal:1",
+        "question_hash": "1c663bdffdaae38b52c035d16788ce7e4d7f8b4766b4a79406cc914629850e60",
+        "reason": "2026年9月14日の資料の到達点を問います。網羅調査や事業化判断の完了ではありません。",
+        "pass": true
+      },
+      {
+        "question_id": "expired-patent-mining:s-grade-zero:fill_blank:1",
+        "question_hash": "7d5e6572c88593df7e1fdd18bda9c71aef60c5883010f0c7cbd4870d9b60cb5f",
+        "reason": "このレポートの調査結果の確認です。現在の個別特許の権利状態を判断する問題ではありません。",
+        "pass": true
+      },
+      {
+        "question_id": "expired-patent-mining:method-meyer:choice:1",
+        "question_hash": "ad78fe251b499dfae84b7ff6d84d5782065efd7d1ab90f8c0b71f2da0352e059",
+        "reason": "資料はMeyerロッド方式とスロットダイを区別しています。",
+        "pass": true
+      },
+      {
+        "question_id": "expired-patent-mining:antifog-durability:reveal:1",
+        "question_hash": "5f5e5b9a0b0e874886f3f45edd0640033695c4e6d90f69c7895890080a18fbb1",
+        "reason": "提案された検証軸を問います。実験で耐久性が確認済みという意味ではありません。",
+        "pass": true
+      },
+      {
+        "question_id": "expired-patent-mining:adoption-evidence:true_false:1",
+        "question_hash": "80542b9cff7ca88793a44575ddb61fd3cd099e28d93b6ce8884c9630d456cb0f",
+        "reason": "本資料は販売履歴や製品採用などの別資料を必要としています。",
+        "pass": true
+      },
+      {
+        "question_id": "expired-patent-mining:unknown-history:free_response:1",
+        "question_hash": "b5bff6f0dea74bab139a3fc39aa4133b9d07c55b17b3ee1cc6c38c2bf8dc2c6c",
+        "reason": "課題の提案と、過去の普及状況の立証を区別します。",
+        "pass": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "lesson_id": "sputtering-pressure",
+  "content_hash": "4533d2b159ebeb46b3662872ebbda6517874b6a44f45fa94b24df13618455b64",
+  "generated_at": "2026-09-19T11:18:22.131947+00:00",
+  "questions": [
+    {
+      "question_id": "sputtering-pressure:base-pressure-timing:reveal:1",
+      "concept_key": "base-pressure-timing",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "ベース圧力は、プロセスガス導入の前と後のどちらで確認する圧力ですか？",
+      "answer": "プロセスガス導入前",
+      "explanation": "ベース圧力は残留ガスや排気状態を見る指標で、成膜中の圧力とは区別します。",
+      "source": {
+        "path": "content/reactive-sputtering-pressure/index.html",
+        "anchor": "#section-2",
+        "evidence": "用語 いつの圧力か 確認したいこと 到達圧力・ベース圧力 プロセスガス導入前 残留ガスや排気状態 成膜圧力・プロセス圧力 ガス導入・放電中 粒子輸送と放電の条件"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "sputtering-pressure:mean-free-path:fill_blank:1",
+      "concept_key": "mean-free-path",
+      "revision": 1,
+      "type": "fill_blank",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "粒子が衝突するまでに進む距離の平均を何と呼びますか？",
+      "answer": "平均自由行程",
+      "explanation": "衝突までの平均距離であり、成膜速度そのものではありません。",
+      "source": {
+        "path": "content/reactive-sputtering-pressure/index.html",
+        "anchor": "#section-3",
+        "evidence": "平均自由行程 とは、粒子が衝突するまでに進む距離の平均である。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "sputtering-pressure:pressure-double:choice:1",
+      "concept_key": "pressure-double",
+      "revision": 1,
+      "type": "choice",
+      "level": "application",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "温度・衝突断面積を一定とする教材の例で、0.5 Paで40 mmの平均自由行程は、1.0 Paでは約何mm？",
+      "answer": "b",
+      "explanation": "圧力が2倍なので平均自由行程は約半分。実装置の推奨条件ではなく、教材の概算です。",
+      "source": {
+        "path": "content/reactive-sputtering-pressure/index.html",
+        "anchor": "#section-3",
+        "evidence": "条件2で p₂ = 1.0 Pa にすると、同じ近似のもとでは λ₂ = 40 × 0.5 / 1.0 = 20 mm"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true,
+      "choices": [
+        {
+          "id": "a",
+          "text": "10 mm"
+        },
+        {
+          "id": "b",
+          "text": "20 mm"
+        },
+        {
+          "id": "c",
+          "text": "40 mm"
+        },
+        {
+          "id": "d",
+          "text": "80 mm"
+        }
+      ]
+    },
+    {
+      "question_id": "sputtering-pressure:rate-not-adhesion:true_false:1",
+      "concept_key": "rate-not-adhesion",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "同じ時間で膜が厚くなったことだけで、密着性も改善したと結論できる。",
+      "answer": false,
+      "explanation": "分かったのは平均堆積速度の増加です。表では密着性や耐久性の改善は「それだけでは言えないこと」です。",
+      "source": {
+        "path": "content/reactive-sputtering-pressure/index.html",
+        "anchor": "#section-4",
+        "evidence": "観察 言えること それだけでは言えないこと 同じ時間で膜が厚くなった 平均的な堆積速度が増えた 密着性や耐久性が改善した"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "sputtering-pressure:actual-temperature:reveal:1",
+      "concept_key": "actual-temperature",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "設定を固定した比較実験でも、電圧・電流に加えて実測・記録すべき温度は？",
+      "answer": "実際の基板温度",
+      "explanation": "設定値が同じでも、実際の温度や放電状態が同じとは限りません。",
+      "source": {
+        "path": "content/reactive-sputtering-pressure/index.html",
+        "anchor": "#section-5",
+        "evidence": "電圧・電流、実際の基板温度、ガス流量、成膜時間も記録する。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "sputtering-pressure:thickness-confound:free_response:1",
+      "concept_key": "thickness-confound",
+      "revision": 1,
+      "type": "free_response",
+      "level": "application",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "成膜圧力を変えると膜厚も変わりました。目的特性の比較では、この膜厚差をどう扱いますか？",
+      "answer": "膜厚差を交絡要因として扱い、必要なら膜厚を揃えた別の比較を行う。",
+      "explanation": "膜厚の影響と圧力変更の影響を分ける比較が必要です。",
+      "source": {
+        "path": "content/reactive-sputtering-pressure/index.html",
+        "anchor": "#section-5",
+        "evidence": "目的特性の比較では膜厚の違いを交絡要因として扱い、必要なら膜厚を揃えた別の比較を行う。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "sputtering-pressure:uniformity-locations:reveal:1",
+      "concept_key": "uniformity-locations",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "膜厚の面内均一性を比べるとき、測定位置と繰返しについて何を揃えますか？",
+      "answer": "中央・端など同じ位置で測定し、繰返し測定でばらつきを確認する。",
+      "explanation": "対応する位置の膜厚を比較し、測定のばらつきも確認します。",
+      "source": {
+        "path": "content/reactive-sputtering-pressure/index.html",
+        "anchor": "#section-5",
+        "evidence": "中央と端など同じ位置で膜厚を測り、繰返し測定でばらつきを確認する。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "sputtering-pressure:low-pressure-limit:true_false:1",
+      "concept_key": "low-pressure-limit",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "この教材では、放電を維持できる範囲は装置ごとに異なるため、低圧化を無条件に進める根拠にしないとしている。",
+      "answer": true,
+      "explanation": "概算の輸送関係と、装置の運転条件は別です。",
+      "source": {
+        "path": "content/reactive-sputtering-pressure/index.html",
+        "anchor": "#section-6",
+        "evidence": "放電を維持できる範囲や安全な運転条件は装置ごとに異なる。低圧化を無条件に進める根拠にはしない。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（作成者による原文再照合）",
+    "validated_at": "2026-09-19T11:21:07.914656+00:00",
+    "limitations": "同じ作成者による照合であり、独立したAI・第三者レビューではありません。教材全体の網羅問題ではなく初期問題です。時点依存の資料は当該資料の読解として扱い、外部情報の最新性は保証しません。",
+    "results": [
+      {
+        "question_id": "sputtering-pressure:base-pressure-timing:reveal:1",
+        "question_hash": "0628a25aa5b919ebb9ea8f76ad64a4b64d3737137ccc5ff9ab638650f8707bd7",
+        "reason": "ベース圧力は残留ガスや排気状態を見る指標で、成膜中の圧力とは区別します。",
+        "pass": true
+      },
+      {
+        "question_id": "sputtering-pressure:mean-free-path:fill_blank:1",
+        "question_hash": "285b15cb574c62a4b675060b1e9c6ac53d1f5507b73d31f2f181014865f5f306",
+        "reason": "衝突までの平均距離であり、成膜速度そのものではありません。",
+        "pass": true
+      },
+      {
+        "question_id": "sputtering-pressure:pressure-double:choice:1",
+        "question_hash": "40ed125f19890535f886c09693d5757340159d6837b3d7ad4227e0630c745797",
+        "reason": "圧力が2倍なので平均自由行程は約半分。実装置の推奨条件ではなく、教材の概算です。",
+        "pass": true
+      },
+      {
+        "question_id": "sputtering-pressure:rate-not-adhesion:true_false:1",
+        "question_hash": "23c77bf80cf7c70c7d1d69d63c6ed39bf0ecd1cdd780d72174f2d54de15e8864",
+        "reason": "分かったのは平均堆積速度の増加です。表では密着性や耐久性の改善は「それだけでは言えないこと」です。",
+        "pass": true
+      },
+      {
+        "question_id": "sputtering-pressure:actual-temperature:reveal:1",
+        "question_hash": "0f3b6869e7bfbd150eacbefb2d5ea5b8bd7a0f52271f2f7f2453decff1fb06c7",
+        "reason": "設定値が同じでも、実際の温度や放電状態が同じとは限りません。",
+        "pass": true
+      },
+      {
+        "question_id": "sputtering-pressure:thickness-confound:free_response:1",
+        "question_hash": "53f6e42cf9117543684800402db57e02727a31e9d5eb6e546cb78f955b6e3ebd",
+        "reason": "膜厚の影響と圧力変更の影響を分ける比較が必要です。",
+        "pass": true
+      },
+      {
+        "question_id": "sputtering-pressure:uniformity-locations:reveal:1",
+        "question_hash": "154e7e9033e2a3060164f1073cf6974ba779982fcb1d53603c43fc68461191b5",
+        "reason": "対応する位置の膜厚を比較し、測定のばらつきも確認します。",
+        "pass": true
+      },
+      {
+        "question_id": "sputtering-pressure:low-pressure-limit:true_false:1",
+        "question_hash": "18630beb0ff72328a68889eab1d59851fd22b43347980c69d5901f15dff4b5c0",
+        "reason": "概算の輸送関係と、装置の運転条件は別です。",
+        "pass": true
+      }
+    ]
+  }
+}

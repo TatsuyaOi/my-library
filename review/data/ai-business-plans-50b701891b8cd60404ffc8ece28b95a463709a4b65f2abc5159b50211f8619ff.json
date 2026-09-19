@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "lesson_id": "ai-business-plans",
+  "content_hash": "dd72c72f7bc10f03208597782577bbd21b7171f07f4fe04de191c6b1bbcf39a7",
+  "generated_at": "2026-09-19T11:18:22.809707+00:00",
+  "questions": [
+    {
+      "question_id": "ai-business-plans:hypothesis-not-results:true_false:1",
+      "concept_key": "hypothesis-not-results",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "この36案の事業計画に記載された売上・利益・転換率は、実績や市場相場として扱える。",
+      "answer": false,
+      "explanation": "本計画内の数値の位置付けを問う問題です。実績と検証用の仮定を区別します。",
+      "source": {
+        "path": "41_AI/01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html",
+        "anchor": "#section-0",
+        "evidence": "売上・利益・転換率は実績や市場相場ではなく、検証するための仮置きです。"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ai-business-plans:start-service:reveal:1",
+      "concept_key": "start-service",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "この計画では、最初にソフトを全面開発する代わりに、どの提供形態から検証しますか？",
+      "answer": "受託型で1テーマを売り、反復して使われる部分だけをソフト化する。",
+      "explanation": "資料の提案は、顧客の業務を確認しながら反復部分を見極める進め方です。",
+      "source": {
+        "path": "41_AI/01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html",
+        "anchor": "#section-1",
+        "evidence": "最初は受託型で1テーマを売り、反復して使われる部分だけをソフト化する。"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ai-business-plans:focus-one:choice:1",
+      "concept_key": "focus-one",
+      "revision": 1,
+      "type": "choice",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "本計画で、最初の14日に上位3案を比較した後は何へ集中しますか？",
+      "answer": "a",
+      "explanation": "36案を同時に進める計画ではありません。",
+      "source": {
+        "path": "41_AI/01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html",
+        "anchor": "#section-1",
+        "evidence": "最初の14日で上位3案の接点と課題を比較し、その後は有料試用1案へ集中する。"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true,
+      "choices": [
+        {
+          "id": "a",
+          "text": "有料試用1案"
+        },
+        {
+          "id": "b",
+          "text": "36案の同時開発"
+        },
+        {
+          "id": "c",
+          "text": "装置の大量購入"
+        },
+        {
+          "id": "d",
+          "text": "全案の法人化"
+        }
+      ]
+    },
+    {
+      "question_id": "ai-business-plans:value-types:reveal:1",
+      "concept_key": "value-types",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "本計画が明確にするよう提案する、顧客が買う価値を4つのうち2つ挙げてください。",
+      "answer": "売上を生む、工数を減らす、ミスを減らす、判断を早める、のうち2つ",
+      "explanation": "AIを使うこと自体ではなく、顧客のどの成果に結びつくかを整理します。",
+      "source": {
+        "path": "41_AI/01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html",
+        "anchor": "#section-1",
+        "evidence": "「売上を生む」「工数を減らす」「ミスを減らす」「判断を早める」"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ai-business-plans:validation-stage:true_false:1",
+      "concept_key": "validation-stage",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "この36案の計画の完成と、顧客検証の完了は別である。",
+      "answer": true,
+      "explanation": "計画の完成と、顧客の課題・支払意思を確かめた状態を区別します。",
+      "source": {
+        "path": "41_AI/01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html",
+        "anchor": "#section-1",
+        "evidence": "今回の結論は事業計画の完成であり、顧客検証の完了ではない。"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ai-business-plans:assets-assumption:free_response:1",
+      "concept_key": "assets-assumption",
+      "revision": 1,
+      "type": "free_response",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "本計画で利用可能と仮定する資料と、利用できるとは仮定しない勤務先の資料を区別してください。",
+      "answer": "利用可能なのは一般知識・公開資料・自作デモ・顧客の許諾資料。勤務先のデータ・配合・試作記録・顧客名簿は利用できるとは仮定しない。",
+      "explanation": "これは本計画の前提の確認です。使える資料の範囲を勝手に広げません。",
+      "source": {
+        "path": "41_AI/01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html",
+        "anchor": "#section-2",
+        "evidence": "項目 今回の仮定 結論への影響 地域 日本を初期市場、遠隔で全国対応 国内の営業・運用コストを重視 実行体制 会社員が1人で開始、週8時間、月32時間 初期は月額顧客2～3社程度を容量上限として検証 予算 90日で現金10万円まで、生活費は別 装置投資・買収は探索対象に残すが初手にはしない 収益目標 第1段階は3か月で有料試用1件、第2段階は継続的な月10万円相当の経済的利益 目標であり達成予測ではない 利用者の強み 材料、塗工、薄膜、評価、工程改善の経験を持つという提供情報 専門レビューの適合性を加点。ただし営業力・実装力の実績は未確認 利用可能資産 一般知識・公開資料・自作デモ・顧客の許諾資料 勤務先のデータ、配合、試作記録、顧客名簿を使えるとは仮定しない"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（作成者による原文再照合）",
+    "validated_at": "2026-09-19T11:21:08.020790+00:00",
+    "limitations": "同じ作成者による照合であり、独立したAI・第三者レビューではありません。教材全体の網羅問題ではなく初期問題です。時点依存の資料は当該資料の読解として扱い、外部情報の最新性は保証しません。",
+    "results": [
+      {
+        "question_id": "ai-business-plans:hypothesis-not-results:true_false:1",
+        "question_hash": "54da77c79db91ff53dc057b5c4389d00eb59942f4a8d83a83cfe33764110fe40",
+        "reason": "本計画内の数値の位置付けを問う問題です。実績と検証用の仮定を区別します。",
+        "pass": true
+      },
+      {
+        "question_id": "ai-business-plans:start-service:reveal:1",
+        "question_hash": "772adcc107733fea4a0aa5b2f3303d2803d09d49141832e626131724d755dfe6",
+        "reason": "資料の提案は、顧客の業務を確認しながら反復部分を見極める進め方です。",
+        "pass": true
+      },
+      {
+        "question_id": "ai-business-plans:focus-one:choice:1",
+        "question_hash": "146b67c59b5587c9932b8d22c94c515e4cce0f1e9fa0b21e6d75e6a0d91e7870",
+        "reason": "36案を同時に進める計画ではありません。",
+        "pass": true
+      },
+      {
+        "question_id": "ai-business-plans:value-types:reveal:1",
+        "question_hash": "eb596697e3a88a4afe338c1668907aafdd2f7d628d712e476e5239355f82a5a1",
+        "reason": "AIを使うこと自体ではなく、顧客のどの成果に結びつくかを整理します。",
+        "pass": true
+      },
+      {
+        "question_id": "ai-business-plans:validation-stage:true_false:1",
+        "question_hash": "3905d132217e76bd5dae229faab42f2e67e167782da18d2476498d80c894d3b0",
+        "reason": "計画の完成と、顧客の課題・支払意思を確かめた状態を区別します。",
+        "pass": true
+      },
+      {
+        "question_id": "ai-business-plans:assets-assumption:free_response:1",
+        "question_hash": "b53722ebc9600f5556565db77d8ef1af11e040abf8dbc4897f10456740303eeb",
+        "reason": "これは本計画の前提の確認です。使える資料の範囲を勝手に広げません。",
+        "pass": true
+      }
+    ]
+  }
+}

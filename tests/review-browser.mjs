@@ -20,11 +20,38 @@ const manifest={schema_version:1,lessons:[{lesson_id:'fixture',title:'テスト�
   status:'active',generation_status:'success',question_count:5,content_hash:review.content_hash,review_content_hash:review.content_hash,
   review_hash:createHash('sha256').update(stable(review)).digest('hex')}]};
 try{
-  // First test the real blocked state before applying test-only routes.
+  // Check the real manifest and source links before applying test-only routes.
   await page.goto(url);await page.getByRole('heading',{name:'今日も、少しずつ。'}).waitFor();
-  await page.getByRole('heading',{name:'問題を準備しています'}).waitFor();
   await page.getByRole('heading',{name:'教材の範囲',exact:true}).waitFor();
   const liveManifest=await (await page.request.get(new URL('../review/library.json',url).href)).json();
+  const liveLessons=liveManifest.lessons.filter(l=>l.generation_status==='success');
+  if(!liveLessons.length)await page.getByRole('heading',{name:'問題を準備しています'}).waitFor();
+  else {
+    // A separate fresh context exercises actual committed questions and persistence.
+    const liveContext=await browser.newContext({viewport:{width:390,height:844}});
+    const livePage=await liveContext.newPage();
+    livePage.on('pageerror',e=>errors.push(e.message));
+    await livePage.goto(url);
+    await livePage.getByRole('button',{name:/5分だけ復習/}).click();
+    await livePage.getByRole('button',{name:'中断してホームへ'}).waitFor();
+    const liveSession=await livePage.evaluate(async()=>{const d=await import('./db.mjs');return(await d.snapshot()).session;});
+    assert.ok(liveSession.items.length>0);
+    const first=liveSession.items[0];
+    assert.ok(liveLessons.some(l=>l.lesson_id===first.lesson_id));
+    if(first.type==='choice')await livePage.getByRole('button',{name:first.choices.find(c=>c.id===first.answer).text,exact:true}).click();
+    else if(first.type==='true_false')await livePage.getByRole('button',{name:first.answer?'○ 正しい':'× 誤り',exact:true}).click();
+    else await livePage.getByRole('button',{name:'答えを見る',exact:true}).click();
+    await livePage.getByRole('button',{name:'教材で確認する'}).click();
+    await livePage.waitForURL(u=>u.hash===first.source.anchor);
+    assert.equal(new URL(livePage.url()).hash,first.source.anchor);
+    await livePage.goBack();
+    await livePage.getByRole('button',{name:'覚えていた',exact:true}).click();
+    await livePage.reload();
+    const saved=await livePage.evaluate(async()=>{const d=await import('./db.mjs');return await d.snapshot();});
+    assert.equal(saved.events.length,1);
+    assert.equal(saved.events[0].question_id,first.question_id);
+    await liveContext.close();
+  }
   assert.equal(liveManifest.lessons.length,14);
   assert.equal(await page.locator('.scope-list a').count(),14);
   for(const lesson of liveManifest.lessons){

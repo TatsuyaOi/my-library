@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "lesson_id": "ai-news-radar-20260914",
+  "content_hash": "26e16f18eed3bbac93d04c1073caffb1ce774924f52de594f810db09252bae59",
+  "generated_at": "2026-09-19T11:18:22.939273+00:00",
+  "questions": [
+    {
+      "question_id": "ai-news-radar-20260914:concept-diagram:true_false:1",
+      "concept_key": "concept-diagram",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "2026年9月14日のニュースレポートの概念図は、ニュース間の因果関係を実測で証明した図である。",
+      "answer": false,
+      "explanation": "本レポートの図の位置付けを確認します。関係の整理と因果関係の証明を区別します。",
+      "source": {
+        "path": "41_AI/03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html",
+        "anchor": "#overview",
+        "evidence": "図はニュース間の関係を整理した 解釈用の概念図 です。実測データや因果関係の証明ではありません。"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ai-news-radar-20260914:fact-interpretation:free_response:1",
+      "concept_key": "fact-interpretation",
+      "revision": 1,
+      "type": "free_response",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "このレポートで「事実」と「あなた向け解釈」はどう区別されていますか？",
+      "answer": "事実は出典で確認できる内容、あなた向け解釈はその事実からの応用提案。",
+      "explanation": "資料の読み方を問う問題です。応用提案を確認済みの事実として扱いません。",
+      "source": {
+        "path": "41_AI/03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html",
+        "anchor": "#overview",
+        "evidence": "「事実」は出典で確認できる内容、「あなた向け解釈」はその事実からの応用提案です。"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ai-news-radar-20260914:ranking-relative:true_false:1",
+      "concept_key": "ranking-relative",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "このレポートの10点満点評価は、本レポート内の相対評価である。",
+      "answer": true,
+      "explanation": "仕事やAI活用などへの接続しやすさを考えた、このレポート内での優先順位です。",
+      "source": {
+        "path": "41_AI/03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html",
+        "anchor": "#ranking",
+        "evidence": "10点満点は客観的なニュース価値ではなく、本レポート内の相対評価です。"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ai-news-radar-20260914:research-reproducibility:reveal:1",
+      "concept_key": "research-reproducibility",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "このレポートは、論文の検索で確認できた抄録・本文範囲を超えて、何が確立したとは扱わない方針ですか？",
+      "answer": "再現性",
+      "explanation": "論文情報の確認範囲と、再現性を確認した範囲を区別します。",
+      "source": {
+        "path": "41_AI/03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html",
+        "anchor": "#overview",
+        "evidence": "検索で確認できた抄録・本文範囲を超えて“再現性が確立した”とは扱っていません。"
+      },
+      "tags": [
+        "41_AI"
+      ],
+      "status": "active",
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（作成者による原文再照合）",
+    "validated_at": "2026-09-19T11:21:08.025302+00:00",
+    "limitations": "同じ作成者による照合であり、独立したAI・第三者レビューではありません。教材全体の網羅問題ではなく初期問題です。時点依存の資料は当該資料の読解として扱い、外部情報の最新性は保証しません。",
+    "results": [
+      {
+        "question_id": "ai-news-radar-20260914:concept-diagram:true_false:1",
+        "question_hash": "edc40c36e3f7e317ead6ba6ba320c829ef7601b03cf73c01c54d1b79430cb114",
+        "reason": "本レポートの図の位置付けを確認します。関係の整理と因果関係の証明を区別します。",
+        "pass": true
+      },
+      {
+        "question_id": "ai-news-radar-20260914:fact-interpretation:free_response:1",
+        "question_hash": "e6c379ab9b28ff54d70a07c43585a5ec8296db189418982ca45f7e81f8a44cfb",
+        "reason": "資料の読み方を問う問題です。応用提案を確認済みの事実として扱いません。",
+        "pass": true
+      },
+      {
+        "question_id": "ai-news-radar-20260914:ranking-relative:true_false:1",
+        "question_hash": "ee6aa7004ce08b33b41b8e963c62ac766b123af5ea6865f88445a20f76499af0",
+        "reason": "仕事やAI活用などへの接続しやすさを考えた、このレポート内での優先順位です。",
+        "pass": true
+      },
+      {
+        "question_id": "ai-news-radar-20260914:research-reproducibility:reveal:1",
+        "question_hash": "81a5ec3850ad22919d8df4d7667755044d1b2063e2ead4e84c308f540ad41b57",
+        "reason": "論文情報の確認範囲と、再現性を確認した範囲を区別します。",
+        "pass": true
+      }
+    ]
+  }
+}
