@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "lessons": [
+    {
+      "lesson_id": "fe-general",
+      "source_path": "21_基本情報/FE総合復習ノート.html",
+      "title": "基本情報 総合復習ノート",
+      "categories": [
+        "21_基本情報"
+      ],
+      "important": true,
+      "status": "active",
+      "generation_status": "blocked",
+      "question_count": 0,
+      "review_path": "review/fe-general.json",
+      "target_commit": "0894f8c2e611357a4ee9e86bb97f2ff744fe50a2",
+      "content_hash": "22136ffb7fc5d17233b019e50cd8c76a213d955391ffd9f8f8f2730836eb62fe",
+      "anchor_hash": "54c42ac97968fd150bcd548618861db9edb0ae4aca5cf4b13e1ab2eed6b38b2c",
+      "section_hashes": {
+        "exam": "58208987c0d765f4c8d7c88939c2a0e8be2fddcd69f16298663524319428f354",
+        "math": "a19e92e14a5ff86044162e3c2754f43a3dd6d69b1d13d5a750822e22851e2977",
+        "algo": "e900510273931d45a132a035e9a3df20892a08e7faa3a3b56bcd49b5aa65013b",
+        "hardware": "46852ee45aaeed1fea62d26d8694ccaadb08949446fcce866b00c51780eef6ba",
+        "os": "1d42105dedcbfe9e95feb91f3c6a463b5c011cdea9f5ac896ae5bc881bfa06a7",
+        "db": "424518d7c4f9665b3fe1d45e222743ec43673163287a582d5b6ef0491390ff4b",
+        "network": "7084f10c8feb113a4e9277a212b981cd12955e6e9e90b04fb953824394ee58df",
+        "security": "db5db2987aee779f082979d04bef47e0f85a097d1f86c2862cd5d057d7885f3f",
+        "dev": "4ca63854e356776fafe2a4859159c846c40f15e5f0743e258a4b773c48cc05e3",
+        "test": "0b7a91c7609083fabf97dd69feb1e88b787a83362fc3b9ab43e00dee795e650f",
+        "management": "c642ec7ca26b360da7b7d75baac5de3c7c05dd6074e63ba264c2af6d02a0742e",
+        "strategy": "dce99964ebaca63ea0c5df1a636e0ca8e1470f61be18b53a3d6a7975dd942641",
+        "b": "a101252764e439ab71d58b00fc68603319e69935729439df056adc60ca918d8c",
+        "weak": "61f873b520cbf51ab01a21af392e782412ce44d3da391273646103f159e9851e",
+        "quiz": "4952561ea6baa409f7ef7b6af6a20fd674c495de784e3d7dc189a903c4ef2f03",
+        "index": "b660b41af368fdfdbc0ae3f4bf763e4991381c9e9ee8b6de98001bbb0986ce08"
+      },
+      "review_content_hash": null,
+      "reason": "AI command is not configured"
+    },
+    {
+      "lesson_id": "sputtering-pressure",
+      "source_path": "content/reactive-sputtering-pressure/index.html",
+      "title": "スパッタ圧力と膜質",
+      "categories": [
+        "51_仕事"
+      ],
+      "important": false,
+      "status": "active",
+      "generation_status": "blocked",
+      "question_count": 0,
+      "review_path": "review/sputtering-pressure.json",
+      "target_commit": "0894f8c2e611357a4ee9e86bb97f2ff744fe50a2",
+      "content_hash": "4533d2b159ebeb46b3662872ebbda6517874b6a44f45fa94b24df13618455b64",
+      "anchor_hash": "202d27c480e60d6e66f5af29b0ad8bbebb8a88c1df54dd0e2f6e8dce71a1955d",
+      "section_hashes": {
+        "section-1": "271e03b1728a09a4d0b403f94e483336be6dda277fd1f01711488f56636b1faa",
+        "section-2": "d7a8890a0bafcafb582cdcdd8af3b09413e68797b8e3d366eee25c79a1ac8d5a",
+        "section-3": "7e82c8e873e5ad12d49793bb4b708251336b515c02d729465afe52cd13853fa2",
+        "section-4": "ae0769c08bd89800f3c00565991cd01e3722064c1b3dcc2ea8aeed7ba608bf93",
+        "section-5": "6026b5ca3132ff30610fdd999611e3f93da54eea99378acc6de76a56688db402",
+        "section-6": "519b206d1c4e928941319d63bf714c8eea09aca1d6d7abc71579c6e5a2a47fdf",
+        "section-7": "f8926660b1af4490f4c38153b88f7ca136129ad6d3af76a00babd63ff8d542f8",
+        "section-8": "7330a29011dd9cc361dc35abed7c50f2abe6be5206facb8ec9b5a23d235b71e6",
+        "section-9": "61a2a5b4dc2f58bc89f3a5a92a3c3cd3cd0a147e1a752a6b0eb78f1fa2a1d8a3",
+        "section-10": "d6da515f2535d5ea998c3dda053350b2b7b5844182af8f74f1a207aa5a4a5292"
+      },
+      "review_content_hash": null,
+      "reason": "AI command is not configured"
+    }
+  ],
+  "ledger": {},
+  "reviews": {}
+}

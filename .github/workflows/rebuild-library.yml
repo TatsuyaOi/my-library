@@ -6,6 +6,15 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      review_lesson:
+        description: '復習の再生成対象 lesson_id（空欄は差分のみ）'
+        type: string
+        default: ''
+      review_all:
+        description: '全対象教材を再生成・再検証'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -34,22 +43,52 @@ jobs:
       - name: Install build dependencies
         run: python -m pip install -r requirements.txt
 
+      - name: Set up Node for review tests
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Test review scheduling and backup contracts
+        run: node tests/review-core.test.mjs
+
       - name: Test Inbox and learning safeguards
         run: python -m unittest discover -s tests -p 'test_*.py' -v
 
       - name: Build and validate public site without drafts or Inbox
         run: python scripts/build.py --preview
 
-      - name: Commit generated indexes only
+      - name: Update review data on main only
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          REVIEW_AI_COMMAND: ${{ vars.REVIEW_AI_COMMAND }}
+          REVIEW_AI_API_KEY: ${{ secrets.REVIEW_AI_API_KEY }}
+          REVIEW_AI_ENDPOINT: ${{ vars.REVIEW_AI_ENDPOINT }}
+          REVIEW_AI_MODEL: ${{ vars.REVIEW_AI_MODEL }}
+          REVIEW_LESSON: ${{ inputs.review_lesson }}
+          REVIEW_ALL: ${{ inputs.review_all }}
+          REVIEW_EVENT: ${{ github.event_name }}
+          REVIEW_BEFORE: ${{ github.event.before }}
+        run: python scripts/review_ci.py
+
+      - name: Rebuild with validated review data
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: python scripts/prepare_pages.py
+
+      - name: Commit generated indexes and review artifacts only
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || { echo 'Newer main exists; do not publish stale output'; exit 1; }
           python - <<'PY'
           import json, subprocess
           config = json.load(open('library.config.json', encoding='utf-8'))
           files = ['library-all.json']
+          files += ['review/bundle.json']
+          from pathlib import Path
+          files += [str(p) for p in Path('review/data').glob('*.json')]
           files += [f'{folder}/{name}' for folder in config['categories'] for name in ('index.html', 'library.json')]
           subprocess.run(['git', 'add', '--', *files], check=True)
           PY

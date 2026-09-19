@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "lessons": [
+    {
+      "lesson_id": "fe-general",
+      "source_path": "21_基本情報/FE総合復習ノート.html",
+      "title": "基本情報 総合復習ノート",
+      "categories": ["21_基本情報"],
+      "important": true
+    },
+    {
+      "lesson_id": "sputtering-pressure",
+      "source_path": "content/reactive-sputtering-pressure/index.html",
+      "title": "スパッタ圧力と膜質",
+      "categories": ["51_仕事"],
+      "important": false
+    }
+  ],
+  "ai": {
+    "timeout_seconds": 120,
+    "max_input_chars": 100000,
+    "max_calls_per_run": 12,
+    "max_attempts_per_lesson": 3
+  }
+}
