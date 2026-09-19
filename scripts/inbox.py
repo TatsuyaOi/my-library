@@ -191,7 +191,7 @@ def scan(root: Path) -> dict:
         return {'directory': config['directory'], 'files': [], 'note': 'Inbox does not exist yet.'}
     for path in sorted(inbox.rglob('*')):
         name = path.relative_to(inbox).as_posix()
-        if name == 'README.md' or any(x.startswith('.') or x == '_processed' for x in PurePosixPath(name).parts):
+        if name == 'README.md' or any(x.startswith('.') or x in {'_processed', '★移動済み'} for x in PurePosixPath(name).parts):
             continue
         try:
             checked_path(inbox, name)

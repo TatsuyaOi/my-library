@@ -72,6 +72,20 @@ class InboxTests(unittest.TestCase):
         inbox.apply_plan(self.root, self.plan(), True)
         self.assertEqual(inbox.scan(self.root)['files'][0]['state'], 'processed')
 
+    def test_scan_excludes_archived_originals(self):
+        inbox.apply_plan(self.root, self.plan(), True)
+        archive = self.inbox / '★移動済み' / 'bundle'
+        archive.mkdir(parents=True)
+        (self.inbox / 'report.html').rename(archive / 'report.html')
+        self.write('★仮置き保管庫/★移動済み/renamed.md', '# Already filed')
+        self.write('★仮置き保管庫/new.md', '# Pending')
+        self.write('★仮置き保管庫/保留資料/held.md', '# Held')
+        records = inbox.scan(self.root)['files']
+        self.assertEqual({r['path'] for r in records}, {'new.md', '保留資料/held.md'})
+        self.assertTrue(all(r['state'] == 'pending' for r in records))
+        self.assertEqual((archive / 'report.html').read_bytes(),
+                         (self.root / '22_簿記/test-note/report.html').read_bytes())
+
     def test_changed_input_requires_new_review(self):
         plan = self.plan()
         self.write('★仮置き保管庫/report.html', '<title>Changed</title>')
