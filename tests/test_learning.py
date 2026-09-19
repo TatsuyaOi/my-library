@@ -33,6 +33,9 @@ class LearningTests(unittest.TestCase):
         self.write('library.config.json', json.dumps({'categories': {'51_仕事': {'title': '仕事'}}}))
         self.folder = self.root / 'content/reactive-sputtering-pressure'
         self.meta = json.loads((self.folder / 'meta.json').read_text(encoding='utf-8'))
+        # Fixtures start unpublished independently of the real article's release state.
+        self.meta.update(status='draft', publish=False)
+        self.save()
 
     def write(self, name, content):
         path = self.root / name

@@ -9,8 +9,8 @@
   "tags": ["スパッタリング", "薄膜", "圧力", "実験設計"],
   "level": "intermediate",
   "learning_time_minutes": 15,
-  "status": "draft",
-  "publish": false,
+  "status": "active",
+  "publish": true,
   "visibility": "public",
   "created": "2026-09-19",
   "updated": "2026-09-19"
