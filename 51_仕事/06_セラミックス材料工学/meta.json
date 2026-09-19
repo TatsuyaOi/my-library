@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "ceramics-study-54chapters",
+  "title": "セラミックス材料工学｜全54章・設計書",
+  "type": "reference",
+  "category": "51_仕事",
+  "subcategory": "セラミックス材料工学",
+  "summary": "構造・物性・プロセスを学ぶ54章の教材と構成設計書。",
+  "tags": [
+    "仕事"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "セラミックス材料工学_全54章_11B学習版.html",
+    "guide": "セラミックス材料工学_全54章_11B学習版.html",
+    "preview": null,
+    "additional": [
+      "セラミックス材料工学_中級者向け教科書_Work設計書_v1.0.md"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "9324501c1fb858afe73a6d49c95f8f3b28a138f68b6a019d22a2c2d04173168f",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "セラミックス材料工学_中級者向け教科書_Work設計書_v1.0.md": "3e290952b62c4602ea1087e9474e38a00144518ea93f2e738a5c55e593735f4f",
+      "セラミックス材料工学_全54章_11B学習版.html": "f20ebdf3a889f54b72613e56640a2a9d0d87adafa555bc58a908f5da7c077c57"
+    },
+    "output_sha256": {
+      "セラミックス材料工学_全54章_11B学習版.html": "f20ebdf3a889f54b72613e56640a2a9d0d87adafa555bc58a908f5da7c077c57",
+      "セラミックス材料工学_中級者向け教科書_Work設計書_v1.0.md": "3e290952b62c4602ea1087e9474e38a00144518ea93f2e738a5c55e593735f4f"
+    }
+  }
+}

@@ -51,6 +51,17 @@ class InboxTests(unittest.TestCase):
             build_library.build()
         return json.loads((self.root / 'library-all.json').read_text(encoding='utf-8'))
 
+    def test_https_and_documentation_path_examples_are_allowed(self):
+        content = r'<a href="https://example.com/guide">Guide</a><pre>`file:///` and `C:\...`</pre>'
+        inbox.check_links({'guide.html': content.encode()})
+
+    def test_real_local_paths_remain_blocked(self):
+        for content in (r'<img src="C:\private.png">', '<img src="file:///">',
+                        r'<p>C:\Users\person\private.png</p>',
+                        '<p>file:///tmp/private.png</p>'):
+            with self.subTest(content=content), self.assertRaises(ValueError):
+                inbox.check_links({'guide.html': content.encode()})
+
     def test_dry_run_does_not_write(self):
         result = inbox.apply_plan(self.root, self.plan())
         self.assertEqual(result['mode'], 'dry-run')

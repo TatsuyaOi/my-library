@@ -156,7 +156,10 @@ def check_links(files: dict[str, bytes]):
             parser = PageInfo()
             parser.feed(text)
             refs = parser.references + css_references(text)
-            if re.search(r'''(?:[A-Za-z]:[\\/]|file:///|sandbox:/mnt/)''', text):
+            # Ignore only explicit documentation examples, never URL attributes.
+            # local_reference below still validates every real reference.
+            prose = re.sub(r'`(?:file:///|[A-Za-z]:\\+\.\.\.)`', '', text)
+            if re.search(r'''(?<![A-Za-z])(?:[A-Za-z]:[\\/]|file:///|sandbox:/mnt/)''', prose):
                 raise ValueError(f'Local-only reference found in {name}')
         elif ext == '.css':
             refs = css_references(content.decode('utf-8-sig'))

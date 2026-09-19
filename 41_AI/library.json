@@ -6,6 +6,31 @@
     "description": "ChatGPT・Codex・AI活用・AI関連資料を整理するライブラリ",
     "accent": "#8b5a2b"
   },
-  "generated_at": "2026-08-25T13:01:37+00:00",
-  "items": []
+  "generated_at": "2026-09-19T17:01:44+09:00",
+  "items": [
+    {
+      "title": "AI事業計画｜36案比較と90日検証計画",
+      "description": "36事業案を比較し、上位案と90日間の検証計画を整理する。",
+      "group": "AI事業計画",
+      "tags": [
+        "AI"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "01_AI事業計画36案/AI事業計画_36案比較と90日検証計画.html"
+    },
+    {
+      "title": "Recent News Radar｜2026-09-14",
+      "description": "AI・研究開発・薄膜・塗工・市場のニュースと論文を整理した時点資料。",
+      "group": "Recent News Radar",
+      "tags": [
+        "AI"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html"
+    }
+  ]
 }

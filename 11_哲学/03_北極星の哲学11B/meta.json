@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "northstar-philosophy-11b",
+  "title": "北極星の哲学｜11B Meiryo UI最終版",
+  "type": "reference",
+  "category": "11_哲学",
+  "subcategory": "北極星の哲学",
+  "summary": "北極星となる哲学を見返すための簡潔な参照HTML。",
+  "tags": [
+    "哲学"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "北極星の哲学_11B_MeiryoUI最終版.html",
+    "guide": "北極星の哲学_11B_MeiryoUI最終版.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "644e5a5b5ead181831cfc4bfeaa5febfbf0f8cede77dd5de9adbd0b81a71f032",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "北極星の哲学_11B_MeiryoUI最終版.html": "84f5e74241be22fbed8dfddad7065aff3fd3bda5fb827c0c654b1c47021e92ce"
+    },
+    "output_sha256": {
+      "北極星の哲学_11B_MeiryoUI最終版.html": "84f5e74241be22fbed8dfddad7065aff3fd3bda5fb827c0c654b1c47021e92ce"
+    }
+  }
+}

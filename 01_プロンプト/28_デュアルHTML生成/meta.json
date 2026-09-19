@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "dual-html-generator-v2",
+  "title": "デュアルHTML生成マスタープロンプト v2.0",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "デュアルHTML生成マスタープロンプト v2.0",
+  "summary": "同一情報からスマホ版・PC版のHTMLを別設計で生成する指示文。",
+  "tags": [
+    "プロンプト"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.html",
+    "guide": "デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.html",
+    "preview": null,
+    "additional": [
+      "デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.md"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "e3bb6a5f3fcc6398baf734ff45ca434e55104a964b8c8d27c7336a1b1a804530",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.html": "d693987fe62cb1b2356eb2f301133c99b4eb86a8f768ab0d6680f231045191ac",
+      "デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.md": "b65fe457b3e7ce7438a5859fb3b5e03fd8a4a5d99d405ab66e960893cbb0a037"
+    },
+    "output_sha256": {
+      "デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.html": "d693987fe62cb1b2356eb2f301133c99b4eb86a8f768ab0d6680f231045191ac",
+      "デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.md": "b65fe457b3e7ce7438a5859fb3b5e03fd8a4a5d99d405ab66e960893cbb0a037"
+    }
+  }
+}

@@ -6,8 +6,20 @@
     "description": "簿記・仕訳・勘定科目・決算を整理する学習ライブラリ",
     "accent": "#2366c8"
   },
-  "generated_at": "2026-08-25T13:01:37+00:00",
+  "generated_at": "2026-09-19T17:01:43+09:00",
   "items": [
+    {
+      "title": "簿記3級 Boost Reader",
+      "description": "前払・前受・未収・未払・決算振替を復習する対話型教材。",
+      "group": "簿記3級 Boost Reader",
+      "tags": [
+        "簿記"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "01_簿記3級BoostReader/boki3_reading_interactive_v1.html"
+    },
     {
       "title": "簿記3級 取引の8要素 早見表",
       "description": "簿記3級の取引要素について、増減時の借方・貸方と具体例を一覧で確認できる早見表の画像資料。",

@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "romance-communication-study",
+  "title": "恋愛・コミュニケーション心理学｜学習版",
+  "type": "reference",
+  "category": "99_その他",
+  "subcategory": "恋愛・コミュニケーション心理学",
+  "summary": "傾聴・自己開示・境界線・衝突修復を学ぶ一般向け教材。",
+  "tags": [
+    "その他"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260919_恋愛コミュニケーション心理学_学習版.html",
+    "guide": "260919_恋愛コミュニケーション心理学_学習版.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "f3dc0007615d60e15d9286c1e3d405e4a23340e82642555e207e914e489b1838",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260919_恋愛コミュニケーション心理学_学習版.html": "ccb2a866f4e948e17477d3e45c2737123eb21de01e9a7d146e77d4d0f5b07d2e"
+    },
+    "output_sha256": {
+      "260919_恋愛コミュニケーション心理学_学習版.html": "ccb2a866f4e948e17477d3e45c2737123eb21de01e9a7d146e77d4d0f5b07d2e"
+    }
+  }
+}

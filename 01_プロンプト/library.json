@@ -6,7 +6,7 @@
     "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
     "accent": "#59636f"
   },
-  "generated_at": "2026-09-06T12:44:23+09:00",
+  "generated_at": "2026-09-19T17:01:43+09:00",
   "items": [
     {
       "title": "My Library対応HTML生成プロンプト 使い方ガイド",
@@ -25,6 +25,90 @@
       "order": 2,
       "updated": "2026-08-23",
       "file": "01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
+    },
+    {
+      "title": "AI事業立案・評価マスタープロンプト v1.0",
+      "description": "事業機会の探索・比較評価・仮説検証を設計する指示文。",
+      "group": "AI事業立案・評価マスタープロンプト v1.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "25_AI事業立案・評価/25_AI事業立案・評価_guide.html"
+    },
+    {
+      "title": "Goal-Driven Maximum Output Master Prompt v2.0",
+      "description": "目的達成・根拠・成果物の充足を優先する汎用実行プロンプト。",
+      "group": "Goal-Driven Maximum Output Master Prompt v2.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "26_GoalDriven実行/26_GoalDriven実行_guide.html"
+    },
+    {
+      "title": "Hakken型 材料R&D 汎用発見アルゴリズム",
+      "description": "未知の関係・反証可能な仮説・次の実験を探索する指示文。",
+      "group": "Hakken型 材料R&D 汎用発見アルゴリズム",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "27_Hakken型材料R&D/27_Hakken型材料R&D_guide.html"
+    },
+    {
+      "title": "デュアルHTML生成マスタープロンプト v2.0",
+      "description": "同一情報からスマホ版・PC版のHTMLを別設計で生成する指示文。",
+      "group": "デュアルHTML生成マスタープロンプト v2.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "28_デュアルHTML生成/デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.html"
+    },
+    {
+      "title": "学習HTML新規作成・11Bスタイル統合プロンプト v2.0",
+      "description": "構成・執筆・数式・図解・検証を含む学習HTML作成指示文。",
+      "group": "学習HTML新規作成・11Bスタイル統合プロンプト v2.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "29_学習HTML新規作成/29_学習HTML新規作成_guide.html"
+    },
+    {
+      "title": "既存内容整理・11B参照HTML作成プロンプト",
+      "description": "会話・メモ・資料を忠実に整理して参照HTMLを作る指示文。",
+      "group": "既存内容整理・11B参照HTML作成プロンプト",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "30_既存内容整理HTML/既存内容整理_11B参照用プロンプト.html"
+    },
+    {
+      "title": "理解優先・曼荼羅型資料作成マスタープロンプト v2.0",
+      "description": "網羅性・可読性・関係の理解を優先して図解資料を作る指示文。",
+      "group": "理解優先・曼荼羅型資料作成マスタープロンプト v2.0",
+      "tags": [
+        "プロンプト"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "31_理解優先の図解資料作成/31_理解優先の図解資料作成_guide.html"
     },
     {
       "title": "視覚表現ライブラリ・HTML組み込みプロンプト v1.0",

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "ai-business-36plans",
+  "title": "AI事業計画｜36案比較と90日検証計画",
+  "type": "reference",
+  "category": "41_AI",
+  "subcategory": "AI事業計画",
+  "summary": "36事業案を比較し、上位案と90日間の検証計画を整理する。",
+  "tags": [
+    "AI"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "AI事業計画_36案比較と90日検証計画.html",
+    "guide": "AI事業計画_36案比較と90日検証計画.html",
+    "preview": null,
+    "additional": [
+      "AI事業計画_36案比較と90日検証計画.md"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "1a7de91fde44bdb1020c9103d7c5e8d471843d4a7f5a93106c6b10148b3813c4",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "AI事業計画_36案比較と90日検証計画.html": "cd06be46c85ef8acae0eb1d675c27e5529db83a56d383129d1c5e6b4d6bbf7cf",
+      "AI事業計画_36案比較と90日検証計画.md": "b31687f44e9c67b221ee3ec82d0cf9387b447dcb9cfc3c50d13bb42409e19898"
+    },
+    "output_sha256": {
+      "AI事業計画_36案比較と90日検証計画.html": "cd06be46c85ef8acae0eb1d675c27e5529db83a56d383129d1c5e6b4d6bbf7cf",
+      "AI事業計画_36案比較と90日検証計画.md": "b31687f44e9c67b221ee3ec82d0cf9387b447dcb9cfc3c50d13bb42409e19898"
+    }
+  }
+}

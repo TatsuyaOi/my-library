@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="反射防止膜の光学を、電磁波・フレネル反射・薄膜干渉・多層膜・角度偏光・材料成膜評価まで学ぶ大学生向け教材">
+  <title>反射防止膜の光学入門｜大学生向け学習ノート</title>
+  <style>
+    :root {
+      --ink: #162434;
+      --muted: #5c6b79;
+      --paper: #fbfcfe;
+      --surface: #ffffff;
+      --line: #dce5ec;
+      --navy: #173e66;
+      --blue: #176b87;
+      --cyan: #25a6a1;
+      --cyan-soft: #e5f7f5;
+      --gold: #c98a2b;
+      --gold-soft: #fff6e4;
+      --red: #bf4a4a;
+      --red-soft: #fff0ef;
+      --violet: #6857ad;
+      --violet-soft: #f1effb;
+      --shadow: 0 12px 32px rgba(20, 48, 72, .08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 90% 0%, rgba(37,166,161,.09), transparent 28rem),
+        linear-gradient(180deg, #f7fafc 0%, var(--paper) 36rem);
+      font-family: "Meiryo UI", Meiryo, "Noto Sans JP", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.82;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    button, input { font: inherit; }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .progress {
+      position: fixed; z-index: 50; inset: 0 0 auto 0; height: 4px;
+      background: rgba(255,255,255,.7);
+    }
+    .progress > div { width: 0; height: 100%; background: linear-gradient(90deg, var(--cyan), var(--violet)); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 74px 24px 64px;
+      color: white;
+      background: linear-gradient(125deg, #112e4d 0%, #15506c 58%, #17867f 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute; width: 520px; height: 520px; right: -170px; top: -220px;
+      border: 1px solid rgba(255,255,255,.22); border-radius: 50%;
+      box-shadow: 0 0 0 52px rgba(255,255,255,.045), 0 0 0 112px rgba(255,255,255,.035);
+    }
+    .hero-inner { max-width: 1120px; margin: auto; position: relative; z-index: 1; }
+    .eyebrow { letter-spacing: .16em; font-weight: 700; font-size: .78rem; opacity: .78; }
+    h1 { font-size: clamp(2.05rem, 5.2vw, 4.4rem); line-height: 1.16; margin: 14px 0 20px; letter-spacing: -.035em; }
+    .hero p { max-width: 760px; margin: 0; font-size: clamp(1rem, 1.6vw, 1.18rem); color: rgba(255,255,255,.86); }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+    .chip { border: 1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.08); padding: 5px 11px; border-radius: 999px; font-size: .82rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .btn {
+      border: 0; border-radius: 11px; padding: 10px 15px; font-weight: 700; cursor: pointer;
+      color: var(--navy); background: white; box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    }
+    .btn.secondary { color: white; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.34); box-shadow: none; }
+
+    .layout { max-width: 1220px; margin: 0 auto; padding: 38px 24px 96px; display: grid; grid-template-columns: 245px minmax(0, 1fr); gap: 38px; }
+    .toc { position: sticky; top: 24px; align-self: start; max-height: calc(100vh - 48px); overflow: auto; padding: 18px 16px; background: rgba(255,255,255,.8); backdrop-filter: blur(12px); border: 1px solid var(--line); border-radius: 15px; box-shadow: var(--shadow); }
+    .toc strong { display: block; margin: 0 0 8px; font-size: .82rem; letter-spacing: .1em; color: var(--muted); }
+    .toc a { display: block; color: #33495d; text-decoration: none; font-size: .87rem; line-height: 1.4; padding: 7px 9px; border-radius: 8px; }
+    .toc a:hover, .toc a.active { color: var(--blue); background: var(--cyan-soft); }
+    article { min-width: 0; }
+    section { scroll-margin-top: 24px; margin-bottom: 72px; }
+    h2 { color: var(--navy); font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.32; margin: 0 0 22px; letter-spacing: -.02em; }
+    h2 .num { color: var(--cyan); font-size: .68em; margin-right: 8px; }
+    h3 { color: #254c68; font-size: 1.2rem; margin: 30px 0 12px; }
+    h4 { margin: 20px 0 8px; color: #354f64; }
+    p { margin: 0 0 14px; }
+    .lead { font-size: 1.08rem; color: #405568; }
+    .muted { color: var(--muted); }
+    .small { font-size: .86rem; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; border-bottom: 1px solid var(--line); padding-bottom: 13px; margin-bottom: 23px; }
+    .section-head h2 { margin: 0; }
+    .level { flex: 0 0 auto; color: var(--muted); font-size: .78rem; background: #edf3f7; border-radius: 999px; padding: 4px 9px; }
+
+    .card, .formula, .callout, .diagram, .lab {
+      border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .card { padding: 22px; }
+    .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+    .card h3, .card h4 { margin-top: 0; }
+    .kicker { display: inline-block; color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .11em; margin-bottom: 6px; }
+    .formula { margin: 18px 0; padding: 18px 20px; border-left: 5px solid var(--cyan); overflow-x: auto; }
+    .formula .eq { font-family: Georgia, "Times New Roman", serif; font-size: 1.16rem; letter-spacing: .02em; white-space: nowrap; }
+    .formula .meaning { margin-top: 7px; font-size: .88rem; color: var(--muted); }
+    .callout { padding: 17px 20px; margin: 18px 0; }
+    .callout strong:first-child { display: block; margin-bottom: 3px; }
+    .callout.key { background: var(--cyan-soft); border-color: #b9e9e4; }
+    .callout.warn { background: var(--gold-soft); border-color: #f0d59e; }
+    .callout.pitfall { background: var(--red-soft); border-color: #f0c4c0; }
+    .callout.link { background: var(--violet-soft); border-color: #d9d2f3; }
+    .diagram { padding: 18px; margin: 20px 0; overflow: hidden; }
+    .diagram svg { display: block; width: 100%; height: auto; }
+    .caption { color: var(--muted); font-size: .82rem; line-height: 1.55; margin: 10px 2px 0; }
+
+    .step-list { list-style: none; padding: 0; counter-reset: step; }
+    .step-list li { position: relative; padding: 4px 0 19px 44px; counter-increment: step; }
+    .step-list li::before { content: counter(step); position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 29px; height: 29px; border-radius: 50%; background: var(--navy); color: white; font-weight: 800; font-size: .83rem; }
+    ul, ol { padding-left: 1.4em; }
+    li { margin: 5px 0; }
+
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; margin: 18px 0; background: white; }
+    table { width: 100%; border-collapse: collapse; font-size: .88rem; line-height: 1.55; }
+    th, td { text-align: left; vertical-align: top; padding: 11px 12px; border-bottom: 1px solid var(--line); }
+    th { color: #29485f; background: #edf4f7; white-space: nowrap; }
+    tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: #f8fbfc; }
+
+    .layer-stack { display: flex; align-items: stretch; min-height: 125px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin: 18px 0; }
+    .layer-stack > div { display: grid; place-items: center; text-align: center; padding: 12px 7px; font-weight: 700; font-size: .82rem; }
+    .air { flex: 1.6; background: #eaf7fb; color: #326778; }
+    .low { flex: .8; background: #d6eaf4; color: #245373; }
+    .high { flex: .45; background: #7d75b9; color: white; }
+    .hc { flex: .65; background: #e9d6a9; color: #6b5424; }
+    .sub { flex: 1.3; background: #cbd6de; color: #354b5b; }
+
+    .lab { padding: 24px; margin: 22px 0; background: linear-gradient(145deg, #fff, #f4fafb); }
+    .lab-grid { display: grid; grid-template-columns: repeat(4, minmax(100px,1fr)); gap: 12px; }
+    label { display: block; color: #3a5266; font-size: .8rem; font-weight: 700; }
+    input[type="number"] { width: 100%; margin-top: 5px; padding: 9px 10px; color: var(--ink); background: white; border: 1px solid #bdcbd5; border-radius: 9px; }
+    .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 18px 0; }
+    .metric { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 13px; }
+    .metric span { display: block; color: var(--muted); font-size: .74rem; }
+    .metric strong { display: block; color: var(--navy); font-size: 1.35rem; margin-top: 1px; }
+    #spectrum { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+
+    .compare { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin: 20px 0; }
+    .compare .versus { color: var(--muted); font-weight: 800; }
+    .mini-card { height: 100%; padding: 17px; border-radius: 13px; border: 1px solid var(--line); background: white; }
+    .mini-card h4 { margin: 0 0 8px; }
+
+    details { border: 1px solid var(--line); background: white; border-radius: 12px; margin: 9px 0; padding: 0 16px; }
+    summary { cursor: pointer; font-weight: 700; color: #294c66; padding: 13px 0; }
+    details > div { padding: 0 0 15px; }
+    .quiz-q { margin: 18px 0; padding: 16px; background: #f8fafc; border: 1px solid var(--line); border-radius: 12px; }
+    .quiz-q p { font-weight: 700; }
+    .quiz-q label { display: block; padding: 4px 0; font-weight: 400; font-size: .92rem; cursor: pointer; }
+    .quiz-result { margin-top: 14px; font-weight: 800; color: var(--blue); }
+
+    .roadmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; margin: 20px 0; }
+    .roadmap div { position: relative; min-height: 112px; padding: 14px; background: white; border: 1px solid var(--line); border-radius: 13px; }
+    .roadmap b { display: block; color: var(--cyan); font-size: .78rem; margin-bottom: 5px; }
+    .roadmap span { display: block; font-size: .88rem; line-height: 1.5; }
+    .roadmap div:not(:last-child)::after { content: "→"; position: absolute; right: -10px; top: 40%; z-index: 2; color: var(--blue); font-weight: 900; }
+
+    .checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .checklist label { display: flex; align-items: flex-start; gap: 9px; padding: 12px 13px; border: 1px solid var(--line); border-radius: 11px; background: white; font-size: .88rem; font-weight: 400; }
+    input[type="checkbox"] { margin-top: 5px; accent-color: var(--cyan); }
+    footer { padding: 32px 24px 44px; text-align: center; color: var(--muted); background: #eef4f7; font-size: .83rem; }
+    .top-link { display: inline-block; margin-top: 9px; }
+
+    @media (max-width: 920px) {
+      .layout { grid-template-columns: 1fr; padding: 28px 16px 70px; }
+      .toc { position: relative; top: 0; max-height: none; }
+      .toc nav { columns: 2; }
+      .grid3 { grid-template-columns: 1fr; }
+      .roadmap { grid-template-columns: repeat(2, 1fr); }
+      .roadmap div::after { display: none; }
+      .lab-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 600px) {
+      body { font-size: 15px; }
+      .hero { padding: 58px 18px 48px; }
+      .grid2, .result-grid, .checklist, .compare { grid-template-columns: 1fr; }
+      .compare .versus { text-align: center; }
+      .roadmap { grid-template-columns: 1fr; }
+      .toc nav { columns: 1; }
+      .section-head { display: block; }
+      .level { display: inline-block; margin-top: 6px; }
+      .layer-stack { min-height: 104px; }
+      .layer-stack > div { font-size: .72rem; padding: 8px 3px; }
+    }
+    @media print {
+      body { background: white; font-size: 10.5pt; }
+      .progress, .toc, .hero-actions { display: none !important; }
+      .hero { padding: 30px 24px; background: #173e66 !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .layout { display: block; max-width: none; padding: 24px; }
+      section { break-inside: auto; margin-bottom: 38px; }
+      .card, .formula, .callout, .diagram, .lab, details { box-shadow: none; break-inside: avoid; }
+      details > div { display: block !important; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="progress" aria-hidden="true"><div id="readProgress"></div></div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">OPTICAL THIN FILMS · STUDY NOTE</div>
+      <h1>反射防止膜の光学入門</h1>
+      <p>なぜ表面で光が反射し、薄い膜を置くとなぜ消せるのか。電磁波から多層設計、材料・成膜・評価までを、大学生向けに一本の因果関係として学ぶ教材です。</p>
+      <div class="chips" aria-label="学習トピック">
+        <span class="chip">電磁波</span><span class="chip">複素電場</span><span class="chip">フレネル反射</span>
+        <span class="chip">薄膜干渉</span><span class="chip">多層膜</span><span class="chip">偏光・角度</span>
+        <span class="chip">材料・成膜</span><span class="chip">分光評価</span>
+      </div>
+      <div class="hero-actions">
+        <button class="btn" onclick="document.getElementById('map').scrollIntoView()">学習を始める</button>
+        <button class="btn secondary" onclick="window.print()">PDF保存・印刷</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="toc" aria-label="目次">
+      <strong>CONTENTS</strong>
+      <nav id="tocNav">
+        <a href="#map">0. 全体像</a>
+        <a href="#wave">1. 光は電磁波</a>
+        <a href="#fresnel">2. 界面反射</a>
+        <a href="#interference">3. 薄膜干渉</a>
+        <a href="#single">4. 単層AR設計</a>
+        <a href="#multilayer">5. 多層膜設計</a>
+        <a href="#angle">6. 角度・偏光・色</a>
+        <a href="#loss">7. 吸収・散乱</a>
+        <a href="#materials">8. 材料と成膜</a>
+        <a href="#application">9. 応用</a>
+        <a href="#measurement">10. 評価と原因診断</a>
+        <a href="#workflow">11. 設計の進め方</a>
+        <a href="#exercise">12. 演習・確認テスト</a>
+        <a href="#sheet">13. 公式・用語集</a>
+        <a href="#plan">14. 学習プラン</a>
+      </nav>
+    </aside>
+
+    <article>
+      <section id="map">
+        <div class="section-head"><h2><span class="num">00</span>最初に掴む全体像</h2><span class="level">所要 8分</span></div>
+        <p class="lead">反射防止膜（AR膜）の本質は、<strong>界面で生まれる複数の反射波を、振幅が等しく・位相が逆になるように重ねる</strong>ことです。光を吸収して消すのではなく、主に「戻ってくる波どうし」を干渉で弱めます。</p>
+
+        <div class="roadmap" aria-label="原理から応用への流れ">
+          <div><b>STEP 1</b><span>屈折率差がある界面では、電場の境界条件により反射が生じる</span></div>
+          <div><b>STEP 2</b><span>膜の上面・下面から戻る波に、光路差と反射位相差が生じる</span></div>
+          <div><b>STEP 3</b><span>膜厚と屈折率を選び、対象波長で逆位相・等振幅に近づける</span></div>
+          <div><b>STEP 4</b><span>多層化して波長帯・角度・偏光・色・製造誤差まで最適化する</span></div>
+        </div>
+
+        <div class="grid3">
+          <div class="card"><span class="kicker">PHYSICS</span><h3>原理</h3><p>電磁波、複素振幅、フレネル係数、位相、干渉、エネルギー保存。</p></div>
+          <div class="card"><span class="kicker">DESIGN</span><h3>設計</h3><p>光学膜厚、特性行列、屈折率分散、角度・偏光、目的関数と感度。</p></div>
+          <div class="card"><span class="kicker">ENGINEERING</span><h3>実装</h3><p>材料、成膜、膜厚・屈折率制御、応力、密着、分光・外観評価。</p></div>
+        </div>
+
+        <div class="callout key"><strong>この教材のゴール</strong>「550 nmの反射を下げる」と聞いたときに、必要屈折率・膜厚を概算し、多層化が必要な理由、斜めで色が変わる理由、実膜が計算とずれる原因を説明できる状態を目指します。</div>
+      </section>
+
+      <section id="wave">
+        <div class="section-head"><h2><span class="num">01</span>光は電場と磁場の波</h2><span class="level">基礎</span></div>
+        <p>光は時間と空間の中を進む電磁波です。光学薄膜では、磁場を毎回追う代わりに主に<strong>電場 E の振幅と位相</strong>を追跡します。観測器が測る明るさは電場そのものではなく、時間平均された強度です。</p>
+
+        <div class="formula">
+          <div class="eq">E(z,t) = Re{ E₀ exp[i(kz − ωt + φ)] }</div>
+          <div class="meaning">E₀：振幅、k = 2π/λ：波数、ω = 2πf：角周波数、φ：初期位相。複素数は「大きさ＋位相」を一つにまとめる計算道具です。</div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>振幅と強度は別物</h3>
+            <p>干渉で足すのは<strong>電場振幅</strong>です。最後に絶対値の二乗を取り、強度に変換します。</p>
+            <div class="formula"><div class="eq">I ∝ |E|²</div><div class="meaning">振幅が2倍なら、強度は4倍。</div></div>
+          </div>
+          <div class="card">
+            <h3>屈折率とは</h3>
+            <p>透明媒質中では位相速度が遅くなり、波長が短くなります。周波数は界面を越えても同じです。</p>
+            <div class="formula"><div class="eq">n = c / v　,　λmedium = λvac / n</div><div class="meaning">n：屈折率、c：真空中の光速、v：媒質中の位相速度。</div></div>
+          </div>
+        </div>
+
+        <div class="diagram">
+          <svg viewBox="0 0 820 245" role="img" aria-label="波の振幅、波長、位相を示す図">
+            <defs><marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#176b87"/></marker></defs>
+            <rect width="820" height="245" rx="14" fill="#f7fbfc"/>
+            <line x1="55" y1="122" x2="785" y2="122" stroke="#9eb1bf"/>
+            <line x1="55" y1="35" x2="55" y2="210" stroke="#9eb1bf"/>
+            <path d="M55 122 C90 30,125 30,160 122 S230 214,265 122 S335 30,370 122 S440 214,475 122 S545 30,580 122 S650 214,685 122 S755 30,790 122" fill="none" stroke="#25a6a1" stroke-width="4"/>
+            <line x1="160" y1="72" x2="370" y2="72" stroke="#176b87" stroke-width="2" marker-end="url(#arrowBlue)"/>
+            <line x1="370" y1="72" x2="160" y2="72" stroke="#176b87" stroke-width="2" marker-end="url(#arrowBlue)"/>
+            <text x="253" y="58" fill="#173e66" font-size="17" font-weight="700">波長 λ</text>
+            <line x1="92" y1="122" x2="92" y2="43" stroke="#c98a2b" stroke-width="2" marker-end="url(#arrowBlue)"/>
+            <text x="103" y="87" fill="#8a5d1b" font-size="16" font-weight="700">振幅</text>
+            <text x="690" y="231" fill="#5c6b79" font-size="14">位置 z →</text>
+          </svg>
+          <p class="caption">同じ波長でも山・谷の位置がずれていれば位相が違います。山と山は強め合い、山と谷は弱め合います。</p>
+        </div>
+
+        <div class="callout link"><strong>複素電場が便利な理由</strong>実数の正弦波を毎回展開せず、反射・伝搬による「振幅倍率」と「位相回転」を掛け算で扱えます。薄膜計算の特性行列法もこの考え方の延長です。</div>
+      </section>
+
+      <section id="fresnel">
+        <div class="section-head"><h2><span class="num">02</span>なぜ透明なガラスでも反射するのか</h2><span class="level">最重要</span></div>
+        <p>界面の両側で屈折率が違うと、電場と磁場が満たすべき境界条件が変わります。入射波だけでは条件を同時に満たせないため、<strong>一部が反射波、残りが透過波</strong>になります。これがフレネル反射です。</p>
+
+        <div class="formula">
+          <div class="eq">r = (n₀ − nₛ) / (n₀ + nₛ)　,　R = |r|²</div>
+          <div class="meaning">垂直入射・非吸収媒質の電場反射係数 r と反射率 R。r の符号は位相、|r|² は反射エネルギー比を表します。</div>
+        </div>
+
+        <div class="card">
+          <span class="kicker">EXAMPLE</span>
+          <h3>空気 → ガラス（n = 1.52）</h3>
+          <p><span class="mono">R = {(1.00 − 1.52)/(1.00 + 1.52)}² = 0.0426</span>。したがって<strong>片面で約4.26%</strong>反射します。平板の両面を考えると反射・多重反射が増えるため、測定値は「どの面を含めたか」に注意が必要です。</p>
+        </div>
+
+        <h3>反射係数の「マイナス」は暗いという意味ではない</h3>
+        <p>低屈折率側から高屈折率側へ反射すると r は負です。これは電場の山が谷へ反転する、すなわち<strong>π rad（180°）の位相反転</strong>を表します。検出器が単独の反射光だけを見ると符号は見えませんが、別の波と重ねると干渉結果を左右します。</p>
+
+        <div class="grid2">
+          <div class="callout key"><strong>低 n → 高 n で反射</strong>電場は位相が π 反転します。</div>
+          <div class="callout warn"><strong>高 n → 低 n で反射</strong>電場は位相反転しません。</div>
+        </div>
+
+        <h3>斜め入射では s と p に分かれる</h3>
+        <p>入射面に対して電場が垂直な成分が <strong>s偏光</strong>、平行な成分が <strong>p偏光</strong>です。斜入射では両者のフレネル係数が異なり、p偏光はブリュースター角で界面反射が0になります（理想的な非吸収・単一界面）。</p>
+        <div class="formula"><div class="eq">n₀ sin θ₀ = n₁ sin θ₁　,　tan θB = n₁/n₀</div><div class="meaning">前者はスネルの法則、後者はブリュースター角。多層膜では各層内角と s/p の光学アドミタンスを別々に扱います。</div></div>
+      </section>
+
+      <section id="interference">
+        <div class="section-head"><h2><span class="num">03</span>薄膜干渉で反射を打ち消す</h2><span class="level">最重要</span></div>
+        <p>膜を1層置くと、主に「膜の上面で反射した波」と「膜内を往復して下面で反射した波」が空気側へ戻ります。両者の<strong>位相差がπ</strong>、かつ<strong>振幅が等しい</strong>なら、電場の和は0になります。</p>
+
+        <div class="diagram">
+          <svg viewBox="0 0 850 390" role="img" aria-label="単層反射防止膜における二つの反射波">
+            <defs>
+              <marker id="arrN" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#173e66"/></marker>
+              <marker id="arrC" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 z" fill="#25a6a1"/></marker>
+            </defs>
+            <rect width="850" height="390" rx="14" fill="#f8fbfc"/>
+            <rect x="0" y="0" width="850" height="130" fill="#eaf7fb"/>
+            <rect x="0" y="130" width="850" height="115" fill="#d8edf3"/>
+            <rect x="0" y="245" width="850" height="145" fill="#ccd7df"/>
+            <text x="28" y="36" fill="#34677a" font-size="18" font-weight="700">空気 n₀</text>
+            <text x="28" y="166" fill="#245373" font-size="18" font-weight="700">低屈折率膜 n₁・厚さ d</text>
+            <text x="28" y="283" fill="#3a4f5f" font-size="18" font-weight="700">基材 nₛ</text>
+            <line x1="390" y1="30" x2="440" y2="127" stroke="#173e66" stroke-width="4" marker-end="url(#arrN)"/>
+            <text x="320" y="45" fill="#173e66" font-size="15">入射波</text>
+            <line x1="440" y1="127" x2="350" y2="38" stroke="#bf4a4a" stroke-width="4" marker-end="url(#arrN)"/>
+            <text x="230" y="72" fill="#9d3e3e" font-size="15" font-weight="700">反射波 A</text>
+            <line x1="440" y1="134" x2="500" y2="241" stroke="#25a6a1" stroke-width="4" marker-end="url(#arrC)"/>
+            <line x1="500" y1="241" x2="565" y2="134" stroke="#25a6a1" stroke-width="4" marker-end="url(#arrC)"/>
+            <line x1="565" y1="127" x2="630" y2="36" stroke="#25a6a1" stroke-width="4" marker-end="url(#arrC)"/>
+            <text x="604" y="79" fill="#167d79" font-size="15" font-weight="700">反射波 B</text>
+            <line x1="735" y1="133" x2="735" y2="242" stroke="#c98a2b" stroke-width="2"/>
+            <line x1="722" y1="133" x2="748" y2="133" stroke="#c98a2b" stroke-width="2"/>
+            <line x1="722" y1="242" x2="748" y2="242" stroke="#c98a2b" stroke-width="2"/>
+            <text x="754" y="193" fill="#8a5d1b" font-size="18" font-weight="700">d</text>
+            <text x="240" y="337" fill="#4b6172" font-size="16">B は膜内を往復 → A に対する伝搬位相が加わる</text>
+          </svg>
+          <p class="caption">図は経路を見やすくずらしています。実際の垂直入射では同じ軸上を進みます。</p>
+        </div>
+
+        <h3>位相条件：光学膜厚を λ/4 にする</h3>
+        <p>垂直入射で膜内を往復する光路長は <span class="mono">2n₁d</span>。これが真空波長の半分なら、伝搬だけで位相差πがつきます。</p>
+        <div class="formula"><div class="eq">2n₁d = λ₀/2　→　n₁d = λ₀/4　→　d = λ₀/(4n₁)</div><div class="meaning">n₁d を光学膜厚（optical thickness）と呼びます。d は物理膜厚です。</div></div>
+
+        <h3>振幅条件：屈折率を幾何平均にする</h3>
+        <p>位相だけ逆でも、一方が強ければ反射は残ります。垂直入射・非吸収・λ/4膜では、理想的な振幅一致条件は次式です。</p>
+        <div class="formula"><div class="eq">n₁ = √(n₀nₛ)</div><div class="meaning">空気 n₀ = 1、ガラス nₛ = 1.52 なら理想膜は n₁ ≈ 1.233。緻密な均一膜として使える材料が少ないため、単層には限界があります。</div></div>
+
+        <div class="callout pitfall"><strong>よくある誤解：「光路差がλ/2なら必ず消える」</strong>正しくは、伝搬位相に加えて各界面での反射位相も数え、さらに電場振幅も揃える必要があります。たとえば両界面とも低 n → 高 n なら双方がπ反転するため、反射位相差は相殺され、膜内伝搬のπが打消し条件を作ります。</div>
+      </section>
+
+      <section id="single">
+        <div class="section-head"><h2><span class="num">04</span>単層ARを自分で計算する</h2><span class="level">計算演習</span></div>
+        <p>単層膜は、AR設計の原理を最も明確に学べるモデルです。以下の計算機は、入力値から理想屈折率、λ/4物理膜厚、設計波長での前面反射率を計算し、可視域の反射スペクトルを描きます。</p>
+
+        <div class="lab" aria-label="単層反射防止膜計算機">
+          <span class="kicker">INTERACTIVE LAB</span>
+          <h3 style="margin-top:0">単層AR計算機（垂直入射・非吸収・半無限基材）</h3>
+          <div class="lab-grid">
+            <label>入射媒質 n₀<input id="n0" type="number" min="1" max="4" step="0.01" value="1.00"></label>
+            <label>膜の屈折率 n₁<input id="nf" type="number" min="1" max="4" step="0.01" value="1.38"></label>
+            <label>基材 nₛ<input id="ns" type="number" min="1" max="4" step="0.01" value="1.52"></label>
+            <label>設計波長 λ₀ [nm]<input id="lambda0" type="number" min="200" max="2500" step="10" value="550"></label>
+          </div>
+          <div class="result-grid" aria-live="polite">
+            <div class="metric"><span>理想膜屈折率 √(n₀nₛ)</span><strong id="idealN">1.233</strong></div>
+            <div class="metric"><span>λ/4 物理膜厚</span><strong id="thickness">99.6 nm</strong></div>
+            <div class="metric"><span>設計波長での前面反射率</span><strong id="designR">1.26%</strong></div>
+          </div>
+          <svg id="spectrum" viewBox="0 0 760 330" role="img" aria-label="単層AR膜の反射率スペクトル"></svg>
+          <p class="caption">青：コート面、灰破線：未コート界面。膜厚は入力した膜屈折率に対する λ₀/4 で自動設定。分散・吸収・裏面反射は含みません。</p>
+        </div>
+
+        <div class="card">
+          <span class="kicker">WORKED EXAMPLE</span><h3>MgF₂をガラスに成膜する</h3>
+          <ol>
+            <li>条件：空気 1.00、MgF₂ 1.38、ガラス 1.52、設計波長 550 nm。</li>
+            <li>膜厚：<span class="mono">d = 550/(4×1.38) = 99.6 nm</span>。</li>
+            <li>未コート片面：<span class="mono">R ≈ 4.26%</span>。</li>
+            <li>コート片面・550 nm：<span class="mono">R ≈ 1.26%</span>。</li>
+          </ol>
+          <p class="muted small">理想屈折率1.233よりMgF₂の1.38が高いため、位相条件は満たしても振幅条件が完全ではなく、0%にはなりません。</p>
+        </div>
+      </section>
+
+      <section id="multilayer">
+        <div class="section-head"><h2><span class="num">05</span>多層膜は何を増やしているのか</h2><span class="level">設計</span></div>
+        <p>単層の自由度は実質「材料の n」と「膜厚 d」だけです。多層化すると各層の n・d が設計変数となり、<strong>複数波長・広帯域・斜入射・色・製造誤差</strong>を同時に整えられます。一方で、界面数、応力、吸収、膜厚誤差も増えます。</p>
+
+        <div class="layer-stack" aria-label="空気、低屈折率層、高屈折率層、ハードコート、基材から成る多層膜">
+          <div class="air">空気<br>n₀</div><div class="low">L<br>SiO₂等</div><div class="high">H<br>Nb₂O₅等</div><div class="low">L</div><div class="high">H</div><div class="hc">HC</div><div class="sub">PET / TAC / Glass</div>
+        </div>
+        <p class="caption">これは「層の役割」を示す概念図であり、万能な並び順ではありません。最適順序と膜厚は、基材・波長帯・入射側・目標色によって変わります。</p>
+
+        <h3>特性行列法：各層の変化を順番に掛ける</h3>
+        <p>各層を通るとき、電場と磁場の関係は位相膜厚 δ と光学アドミタンス η で変わります。各層の2×2行列を入射順に掛ければ、全積層を一つの等価な界面として扱えます。</p>
+        <div class="formula">
+          <div class="eq">δⱼ = (2π/λ) nⱼdⱼ cosθⱼ</div>
+          <div class="eq" style="margin-top:8px">Mⱼ = [ cosδⱼ　 i sinδⱼ/ηⱼ ; iηⱼ sinδⱼ　 cosδⱼ ]</div>
+          <div class="meaning">垂直入射では η ≈ n。斜入射では s と p で η の形が異なるため、別々に計算します。全体行列 M = M₁M₂…Mₙ から反射係数を求めます。</div>
+        </div>
+
+        <div class="grid2">
+          <div class="card"><h3>直感：アドミタンス整合</h3><p>光から見た「伝わりやすさ」を空気側から基材側へ滑らかにつなぐと反射が減ります。低 n と高 n の層は、実効的なアドミタンスを波長ごとに回転・変換する部品として働きます。</p></div>
+          <div class="card"><h3>直感：複数の反射波のベクトル和</h3><p>各界面から戻る複素電場を、複素平面上の矢印として足します。対象波長で合計ベクトルが原点近くに来るよう各層厚を選びます。</p></div>
+        </div>
+
+        <h3>代表的なAR構造</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>構造</th><th>強み</th><th>弱み・用途</th></tr></thead>
+          <tbody>
+            <tr><td>単層 λ/4</td><td>簡単、低コスト、原理が明瞭</td><td>狭帯域・角度依存。眼鏡、センサー窓などの基本設計。</td></tr>
+            <tr><td>離散多層膜</td><td>広帯域化、色・角度の最適化が可能</td><td>膜厚誤差、応力、界面増加。カメラ、ディスプレイ、レーザー光学。</td></tr>
+            <tr><td>屈折率傾斜膜</td><td>急な n ジャンプを抑え、広帯域・広角化しやすい</td><td>連続組成・空隙率制御が難しい。共蒸着、反応性制御、ナノ多孔質。</td></tr>
+            <tr><td>モスアイ構造</td><td>波長より十分小さい凹凸で実効 n を連続変化</td><td>汚れ、機械耐久、金型・加工性。ディスプレイ、太陽電池。</td></tr>
+            <tr><td>吸収性AR</td><td>金属・半導体を含め、特定条件で低反射</td><td>透過率は必ずしも高くない。センサー、熱制御、特殊フィルター。</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="callout key"><strong>多層膜設計の重要な視点</strong>「最低反射率」だけでなく、波長平均・視感度重み・角度・s/p差・色相・膜厚公差・材料制約を目的関数に含めます。最小値が深くても、少し膜厚がずれるだけで崩れる設計は量産に弱い設計です。</div>
+      </section>
+
+      <section id="angle">
+        <div class="section-head"><h2><span class="num">06</span>角度・偏光・反射色が変わる理由</h2><span class="level">重要</span></div>
+        <p>斜めから見ると、層内の進行方向と界面法線の関係が変わります。位相膜厚に <span class="mono">cosθⱼ</span> が入るため、同じ物理膜厚でも干渉条件が短波長側へ移動します。一般にARの反射谷は<strong>ブルーシフト</strong>します。</p>
+        <div class="formula"><div class="eq">λmin(θ₀) ≈ λmin(0) √{1 − (n₀ sinθ₀ / n₁)²}</div><div class="meaning">単層の概算。θ₀は外部入射角、θ₁はスネルの法則で決まる膜内角。多層膜では各層が異なる角度を持つため行列計算が必要です。</div></div>
+
+        <div class="lab">
+          <span class="kicker">ANGLE ESTIMATOR</span>
+          <h3 style="margin-top:0">単層ARの反射谷シフト（概算）</h3>
+          <div class="lab-grid" style="grid-template-columns:repeat(3,minmax(100px,1fr))">
+            <label>垂直時の谷 λ [nm]<input id="baseLambda" type="number" value="550" min="200" max="2500"></label>
+            <label>膜屈折率 n₁<input id="angleN" type="number" value="1.46" min="1" max="4" step="0.01"></label>
+            <label>外部角 θ₀ [°]<input id="angleDeg" type="number" value="45" min="0" max="85" step="1"></label>
+          </div>
+          <div class="metric" style="margin-top:16px"><span>概算した反射谷</span><strong id="shiftedLambda">—</strong></div>
+        </div>
+
+        <div class="compare">
+          <div class="mini-card"><h4>s偏光</h4><p>電場が入射面に垂直。角度増加とともに界面反射が一般に強まりやすい。</p></div>
+          <div class="versus">VS</div>
+          <div class="mini-card"><h4>p偏光</h4><p>電場が入射面に平行。単一界面ではブリュースター角付近で反射が小さくなる。</p></div>
+        </div>
+
+        <h3>反射色が生まれる仕組み</h3>
+        <p>可視域の全波長を均等に反射すれば無彩色ですが、AR膜は波長ごとに反射率が違います。ある帯域だけ反射が残れば、そのスペクトルが照明の分光分布と人の等色関数で重み付けされ、色として知覚されます。</p>
+        <div class="formula"><div class="eq">反射色 = R(λ, θ, pol) × 光源 S(λ) × 人の色感度</div><div class="meaning">同じ膜でも、照明・観察角・偏光・背景が変わると色は変わります。色設計では L*a*b* や色差 ΔE、角度ごとの軌跡を評価します。</div></div>
+
+        <div class="callout warn"><strong>角度色を抑えるとは</strong>単に垂直入射の反射率を下げることではありません。複数角度でスペクトル形状が大きく変わらない、s/pの分離が小さい、残留反射色の色度移動が小さい設計を探します。屈折率コントラスト、各層の位相膜厚、終端層、基材/HCの n が効きます。</div>
+      </section>
+
+      <section id="loss">
+        <div class="section-head"><h2><span class="num">07</span>実際の膜：吸収・散乱・粗さ</h2><span class="level">現実系</span></div>
+        <p>理想計算は「平坦・均一・非吸収」の膜を仮定しがちですが、実膜では吸収と散乱が加わります。透過率が下がったとき、すべてを反射増加と解釈してはいけません。</p>
+        <div class="formula"><div class="eq">ñ = n + ik　,　R + T + A = 1</div><div class="meaning">ここでは exp[i(kz−ωt)] の時間規約を使用。ñ：複素屈折率、n：位相を決める実部、k：消衰係数。Aは吸収。散乱を分離する場合は R + T + A + S = 1 と考えると診断しやすい。</div></div>
+
+        <div class="grid3">
+          <div class="card"><h3>吸収</h3><p>酸素欠損、金属残留、有機のUV吸収など。透過率低下、色付き、k増加として現れます。</p></div>
+          <div class="card"><h3>散乱</h3><p>粒子凝集、結晶粒、ボイド、表面凹凸。ヘイズ、角度分布の広がり、白っぽさにつながります。</p></div>
+          <div class="card"><h3>不均一</h3><p>膜厚・nの面内/深さ方向変動。分光谷の幅広化、位置ばらつき、筋・色ムラになります。</p></div>
+        </div>
+
+        <h3>粗さが小さければ無視できるか</h3>
+        <p>粗さ振幅が波長より十分小さければ散乱は弱くなりますが、界面粗さは「実効的な遷移層」として干渉位相にも影響します。また、周期性のある筋はRMS粗さが小さくても回折・方向性散乱を生むことがあります。AFM値ひとつで外観を決めつけず、空間周波数と観察条件を合わせて考えます。</p>
+      </section>
+
+      <section id="materials">
+        <div class="section-head"><h2><span class="num">08</span>材料と成膜法を光学へ結びつける</h2><span class="level">実装</span></div>
+        <p>設計ソフトに入力する n・k・d は、材料名だけでは決まりません。密度、結晶性、空隙、組成、含水、波長、成膜条件で変わります。したがって<strong>実際のプロセスで作った膜の光学定数</strong>を使うことが重要です。</p>
+
+        <div class="table-wrap"><table>
+          <thead><tr><th>材料</th><th>可視域 n の目安</th><th>役割・特徴</th><th>注意点</th></tr></thead>
+          <tbody>
+            <tr><td>MgF₂</td><td>約1.38</td><td>代表的な低 n、単層AR</td><td>機械特性・成膜法・密着性を要確認</td></tr>
+            <tr><td>SiO₂</td><td>約1.45–1.47</td><td>低 n 層、耐候・バリア</td><td>密度や含水で n・応力が変化</td></tr>
+            <tr><td>Al₂O₃</td><td>約1.60–1.70</td><td>中間 n、バリア、ALD適性</td><td>結晶性・プロセス温度依存</td></tr>
+            <tr><td>HfO₂</td><td>約1.9–2.1</td><td>高 n、UV～可視</td><td>吸収端、結晶化、応力</td></tr>
+            <tr><td>Ta₂O₅</td><td>約2.05–2.2</td><td>高 n、低吸収設計</td><td>酸素量・密度・コスト</td></tr>
+            <tr><td>Nb₂O₅</td><td>約2.2–2.4</td><td>高 n、多層AR</td><td>反応性スパッタの化学量論、k、応力</td></tr>
+            <tr><td>TiO₂</td><td>約2.3–2.6</td><td>非常に高い n、薄層化</td><td>相・光触媒性・吸収端・散乱</td></tr>
+            <tr><td>ITO</td><td>約1.7–2.1</td><td>透明導電＋光学機能</td><td>キャリア吸収、酸素量、近赤外応答</td></tr>
+            <tr><td>アクリレートHC</td><td>約1.49–1.76</td><td>基材保護、光学下地、屈折率調整</td><td>硬化収縮、粒子分散、複屈折、溶剤影響</td></tr>
+          </tbody>
+        </table></div>
+        <p class="caption">値は概略範囲で、波長550 nm付近の代表イメージです。設計値には自社条件・実膜で測った分散 n(λ), k(λ) を使用してください。</p>
+
+        <h3>成膜法の使い分け</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>方法</th><th>長所</th><th>光学上の課題</th><th>代表用途</th></tr></thead>
+          <tbody>
+            <tr><td>真空蒸着</td><td>高速、光学膜の実績、広面積</td><td>密度・水分・入射角分布、温度</td><td>レンズ、フィルター</td></tr>
+            <tr><td>スパッタ</td><td>緻密、密着、組成制御、多材料</td><td>反応性ヒステリシス、基板ダメージ、応力</td><td>ディスプレイ、機能性フィルム</td></tr>
+            <tr><td>ALD</td><td>原子層レベル、段差被覆、再現性</td><td>速度、前駆体、温度制約</td><td>微細光学、センサー</td></tr>
+            <tr><td>ウェット塗工 / sol-gel</td><td>大面積・R2R・低コスト、粒子設計</td><td>乾燥ムラ、空隙、粗さ、硬化収縮</td><td>フィルム、太陽電池</td></tr>
+            <tr><td>ナノインプリント</td><td>モスアイ形状を複製可能</td><td>離型、欠陥、耐摩耗、汚染</td><td>広帯域低反射表面</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3>反応性スパッタ条件が光学へ届く因果鎖</h3>
+        <div class="callout link"><strong>O₂分圧・電力・圧力・搬送速度</strong> → ターゲット状態／粒子エネルギー／成長速度 → 組成・密度・欠陥・応力 → n(λ), k(λ), d, 粗さ → R/T/色/耐久性。光学異常を「膜厚だけ」で補正すると、nやkの変化を見逃す場合があります。</div>
+
+        <div class="callout warn"><strong>ポリマー基材では追加制約</strong>低耐熱、HCの屈折率・吸湿、PET/TACの複屈折、巻取り張力、プラズマダメージ、カール、屈曲時の中立軸を考えます。光学的に同じ設計でも、ガラス上とフィルム上で製造成立性は大きく異なります。</div>
+      </section>
+
+      <section id="application">
+        <div class="section-head"><h2><span class="num">09</span>反射防止膜は何に応用されるか</h2><span class="level">応用</span></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>用途</th><th>ARが生む価値</th><th>主な設計条件</th></tr></thead>
+          <tbody>
+            <tr><td>眼鏡・カメラレンズ</td><td>透過率、コントラスト、ゴースト・フレア低減</td><td>可視広帯域、斜入射、色味、耐擦傷、防汚</td></tr>
+            <tr><td>スマホ・車載ディスプレイ</td><td>外光反射を抑え黒を締める、視認性向上</td><td>広角、偏光板との整合、タッチ・防汚、低反射色</td></tr>
+            <tr><td>太陽電池</td><td>入射光を増やし発電量を上げる</td><td>太陽スペクトル、季節・入射角、屋外耐候、汚れ</td></tr>
+            <tr><td>レーザー光学</td><td>特定波長の損失・戻り光を極小化</td><td>波長、角度、s/p、レーザー損傷閾値、超低吸収</td></tr>
+            <tr><td>センサー・LiDAR</td><td>S/N向上、迷光低減、送受信効率</td><td>狭帯域/複数帯域、温度、角度、環境耐久</td></tr>
+            <tr><td>建築・赤外光学</td><td>採光、熱制御、特定波長選択</td><td>可視透過とIR反射/放射、面積、寿命、コスト</td></tr>
+            <tr><td>美術館・ショーケース</td><td>映り込みを抑え展示物を見やすくする</td><td>両面AR、無彩色、広角、大面積均一性</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="grid2">
+          <div class="card"><span class="kicker">OPTICAL VALUE</span><h3>「透過が増える」以上の価値</h3><p>迷光が減るため、画像の黒レベルとコントラストが改善します。多枚数レンズでは各面の数%反射が累積するため、ARの効果は大きくなります。</p></div>
+          <div class="card"><span class="kicker">SYSTEM VIEW</span><h3>部材単体ではなく系で設計</h3><p>カバー、粘着層、偏光板、空気層、センサーまで含むと新しい反射界面が現れます。最終積層状態の屈折率と厚みで評価します。</p></div>
+        </div>
+      </section>
+
+      <section id="measurement">
+        <div class="section-head"><h2><span class="num">10</span>何を測れば、ずれの原因がわかるか</h2><span class="level">評価</span></div>
+        <p>光学特性の異常は結果であり、原因変数は d、n、k、粗さ、散乱、面内分布などに分かれます。測定を組み合わせて切り分けます。</p>
+
+        <div class="table-wrap"><table>
+          <thead><tr><th>観測現象</th><th>第一候補</th><th>有効な確認</th></tr></thead>
+          <tbody>
+            <tr><td>反射谷が全体に長波長側へ移動</td><td>光学膜厚 nd が大きい</td><td>物理膜厚、エリプソ n、成膜速度、組成</td></tr>
+            <tr><td>谷位置は合うが、谷が浅い</td><td>屈折率不整合、吸収、界面混合、膜厚誤差の累積</td><td>n/k同定、単層校正、断面、モデル比較</td></tr>
+            <tr><td>透過率低下、反射は増えていない</td><td>吸収または散乱</td><td>積分球、ヘイズ、k、吸収スペクトル</td></tr>
+            <tr><td>幅方向で色が変わる</td><td>d または n のTD分布</td><td>分光マッピング、膜厚/QCM分布、ガス分圧分布</td></tr>
+            <tr><td>斜めで急に色が変わる</td><td>角度分散、s/p分離、設計感度</td><td>角度分光、偏光測定、角度別シミュレーション</td></tr>
+            <tr><td>筋状に見えるが平均分光は正常</td><td>局所膜厚、方向性粗さ・散乱、周期構造</td><td>狭スポット分光、反射像、AFM/白色干渉、散乱角分布</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3>主要な測定</h3>
+        <div class="grid2">
+          <div class="card"><h3>分光反射・透過</h3><p>R(λ), T(λ)を直接確認。正反射のみか、積分球で拡散成分も含むかを明記します。視感反射率は光源と視感度の重み付き積分です。</p></div>
+          <div class="card"><h3>分光エリプソメトリー</h3><p>p/s反射の振幅比 Ψ と位相差 Δ を測り、モデルから d・n・kを推定。結果はモデル依存で、dとnの相関に注意します。</p></div>
+          <div class="card"><h3>角度・偏光測定</h3><p>用途角度でs/pを測定。無偏光は通常両者の平均ですが、表示系では偏光状態が限定されることがあります。</p></div>
+          <div class="card"><h3>形状・構造評価</h3><p>段差計、XRR、断面SEM/TEM、AFM、白色干渉計。測る長さスケールにより見える粗さ・うねりが違います。</p></div>
+        </div>
+
+        <div class="callout pitfall"><strong>測定で最初に確認すること</strong>入射面、入射角、偏光、測定径、裏面反射の有無、正反射/全反射、基材だけの基準、光源・受光開口を揃えます。ここが違うデータを直接比較すると、設計差と測定差を混同します。</div>
+      </section>
+
+      <section id="workflow">
+        <div class="section-head"><h2><span class="num">11</span>実務的な設計・開発フロー</h2><span class="level">統合</span></div>
+        <ol class="step-list">
+          <li><strong>要求を数値化する</strong><br>波長域、平均/最大反射率、透過率、入射角、偏光、反射色、基材、耐久、コスト、タクトを定義。</li>
+          <li><strong>実積層をモデル化する</strong><br>空気/機能層/HC/基材/粘着/他部材を並べ、各層の n(λ), k(λ), d を入れる。コヒーレント/インコヒーレント層を区別。</li>
+          <li><strong>単層計算でスケール感を得る</strong><br>λ/4膜厚、理想 n、角度シフトを手計算し、シミュレーション結果の妥当性を監視。</li>
+          <li><strong>多層最適化する</strong><br>材料と膜厚範囲を制約し、波長・角度・偏光の目的関数を最小化。複数初期値で局所解を比較。</li>
+          <li><strong>ロバスト性を入れる</strong><br>各層 d±誤差、n±誤差、相関誤差、面内分布をモンテカルロまたは感度解析。量産中央値と不良率を予測。</li>
+          <li><strong>単層校正を作る</strong><br>各材料を単層で成膜し、分光・エリプソで実プロセスの n/k/レートを取得。設計DBを更新。</li>
+          <li><strong>試作→残差解析</strong><br>実測と計算の差を「波長シフト・谷深さ・吸収・散乱・面内分布」に分解して次の実験へつなぐ。</li>
+        </ol>
+
+        <h3>目的関数の例</h3>
+        <div class="formula"><div class="eq">F = w₁⟨Rvis⟩ + w₂Rmax + w₃ΔEangle + w₄|Rs−Rp| + w₅Sensitivity</div><div class="meaning">重み w は用途の優先順位。平均値だけでなく最大値、色、偏光差、誤差感度を同時に評価します。</div></div>
+
+        <h3>量産で効くロバスト性</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>変動</th><th>主な影響</th><th>設計・工程側の対策</th></tr></thead>
+          <tbody>
+            <tr><td>全層の倍率ずれ</td><td>スペクトル全体の波長シフト</td><td>成膜レート校正、終点監視、搬送速度補正</td></tr>
+            <tr><td>特定層だけの膜厚ずれ</td><td>谷形状・色の非対称変化</td><td>層別感度を下げる、監視波長を選ぶ</td></tr>
+            <tr><td>n変動</td><td>位相と界面振幅が同時に変化</td><td>反応状態・密度を安定化、実膜nを管理</td></tr>
+            <tr><td>TD分布</td><td>幅方向の反射・色ムラ</td><td>ガス、磁場、ターゲット侵食、膜厚分布を分離評価</td></tr>
+            <tr><td>温湿度変化</td><td>多孔膜・HCのn/d変化、密着低下</td><td>環境後の分光と構造評価、バリア・硬化最適化</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section id="exercise">
+        <div class="section-head"><h2><span class="num">12</span>演習問題と確認テスト</h2><span class="level">定着</span></div>
+        <h3>計算・説明問題</h3>
+        <details><summary>問1｜空気から n = 1.60 の透明基材へ垂直入射したとき、片面反射率は？</summary><div><span class="mono">R = {(1−1.60)/(1+1.60)}² = (−0.60/2.60)² ≈ 0.0533</span>。したがって約5.33%。</div></details>
+        <details><summary>問2｜n = 1.46 のSiO₂で550 nmのλ/4膜を作る。物理膜厚は？</summary><div><span class="mono">d = 550/(4×1.46) ≈ 94.2 nm</span>。</div></details>
+        <details><summary>問3｜位相が逆なら、なぜ反射率が必ず0にならないのか？</summary><div>打ち消しには位相差πに加えて、二つの反射波の電場振幅が等しいことが必要です。振幅が違えば差分が残り、その絶対値二乗が残留反射率になります。</div></details>
+        <details><summary>問4｜膜厚が設計より5%厚いと、反射谷はどちらへ動く？</summary><div>光学膜厚 nd が5%増えるため、同じ位相条件を満たす波長もおおむね5%長くなり、長波長側へ移動します。nの分散がある実膜では厳密には完全比例ではありません。</div></details>
+        <details><summary>問5｜透過率だけが低下したとき、膜厚ずれと断定できない理由は？</summary><div>吸収 k の増加や散乱でも透過率は低下します。反射・透過・ヘイズ/散乱を合わせ、エネルギー収支で切り分ける必要があります。</div></details>
+
+        <h3>5問クイックチェック</h3>
+        <div id="quiz">
+          <div class="quiz-q"><p>1. 干渉で最初に足し合わせる量は？</p><label><input type="radio" name="q1" value="0"> 反射率</label><label><input type="radio" name="q1" value="1"> 複素電場振幅</label><label><input type="radio" name="q1" value="0"> 色差</label></div>
+          <div class="quiz-q"><p>2. 垂直入射のλ/4膜で重要な量は？</p><label><input type="radio" name="q2" value="1"> nd</label><label><input type="radio" name="q2" value="0"> n/d</label><label><input type="radio" name="q2" value="0"> d²</label></div>
+          <div class="quiz-q"><p>3. 低n側から高n側で反射した電場の位相は？</p><label><input type="radio" name="q3" value="0"> 変化しない</label><label><input type="radio" name="q3" value="1"> π反転する</label><label><input type="radio" name="q3" value="0"> π/4進む</label></div>
+          <div class="quiz-q"><p>4. 一般に斜入射でARの反射谷は？</p><label><input type="radio" name="q4" value="1"> 短波長側へ移る</label><label><input type="radio" name="q4" value="0"> 長波長側へ移る</label><label><input type="radio" name="q4" value="0"> 必ず不変</label></div>
+          <div class="quiz-q"><p>5. 実膜の n が設計値と違う主因として不適切なものは？</p><label><input type="radio" name="q5" value="0"> 密度・組成</label><label><input type="radio" name="q5" value="0"> 空隙・含水</label><label><input type="radio" name="q5" value="1"> ファイル名</label></div>
+          <button class="btn" style="background:var(--navy);color:white" onclick="gradeQuiz()">採点する</button>
+          <div class="quiz-result" id="quizResult" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="sheet">
+        <div class="section-head"><h2><span class="num">13</span>1ページ公式・用語集</h2><span class="level">復習</span></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>項目</th><th>式・定義</th><th>読むポイント</th></tr></thead>
+          <tbody>
+            <tr><td>波数</td><td class="mono">k = 2π/λ</td><td>距離あたりの位相変化</td></tr>
+            <tr><td>屈折率</td><td class="mono">n = c/v</td><td>媒質内の位相速度を表す</td></tr>
+            <tr><td>複素屈折率</td><td class="mono">ñ = n + ik</td><td>exp[i(kz−ωt)] の規約では、nは位相、kは吸収</td></tr>
+            <tr><td>スネルの法則</td><td class="mono">n₀sinθ₀ = n₁sinθ₁</td><td>各層内の角度を決める</td></tr>
+            <tr><td>垂直界面反射</td><td class="mono">R = |(n₀−n₁)/(n₀+n₁)|²</td><td>屈折率差が大きいほど反射増</td></tr>
+            <tr><td>光学膜厚</td><td class="mono">OT = nd</td><td>位相を決める基本量</td></tr>
+            <tr><td>位相膜厚</td><td class="mono">δ = 2πnd cosθ / λ</td><td>多層膜計算の中心</td></tr>
+            <tr><td>λ/4膜</td><td class="mono">d = λ₀/(4n)</td><td>膜内往復で位相差π</td></tr>
+            <tr><td>単層理想n</td><td class="mono">n₁ = √(n₀nₛ)</td><td>反射振幅を一致させる</td></tr>
+            <tr><td>エネルギー</td><td class="mono">R + T + A (+S) = 1</td><td>低透過の原因切り分け</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="grid2">
+          <div class="card"><h3>コヒーレント</h3><p>波どうしの位相関係が保たれ、干渉項を計算できる状態。薄い光学膜は通常こちらで扱います。</p></div>
+          <div class="card"><h3>インコヒーレント</h3><p>厚い基材、広帯域光源、有限分解能などで位相が平均化される状態。強度ベースで多重反射を扱います。</p></div>
+          <div class="card"><h3>分散</h3><p>nとkが波長で変わること。一定nの設計は概算には便利ですが、広帯域設計には不十分です。</p></div>
+          <div class="card"><h3>光学アドミタンス</h3><p>電場に対する磁場の比に相当。界面整合と多層膜の特性行列を直感的に理解する軸です。</p></div>
+        </div>
+      </section>
+
+      <section id="plan">
+        <div class="section-head"><h2><span class="num">14</span>4週間の学習プラン</h2><span class="level">1日30–45分</span></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>週</th><th>学ぶ内容</th><th>到達課題</th></tr></thead>
+          <tbody>
+            <tr><td>Week 1</td><td>波、複素数、振幅・位相、屈折率、フレネル反射</td><td>空気/基材の片面反射率を手計算し、rの符号を説明する</td></tr>
+            <tr><td>Week 2</td><td>薄膜干渉、光学膜厚、単層λ/4、分散</td><td>任意材料のλ/4膜厚と残留反射を計算する</td></tr>
+            <tr><td>Week 3</td><td>特性行列、多層化、斜入射、s/p、色</td><td>2～4層モデルで波長・角度スペクトルを比較する</td></tr>
+            <tr><td>Week 4</td><td>材料、成膜、測定、誤差感度、原因診断</td><td>実測差をd/n/k/散乱に分け、次の確認実験を提案する</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3>理解できたかのチェックリスト</h3>
+        <div class="checklist">
+          <label><input type="checkbox"> 電場の振幅と光強度の違いを言える</label>
+          <label><input type="checkbox"> フレネル反射を屈折率差から計算できる</label>
+          <label><input type="checkbox"> 反射時のπ位相反転を説明できる</label>
+          <label><input type="checkbox"> λ/4膜の膜厚を計算できる</label>
+          <label><input type="checkbox"> 位相条件と振幅条件を区別できる</label>
+          <label><input type="checkbox"> 多層化の利点と代償を言える</label>
+          <label><input type="checkbox"> 斜入射のブルーシフトを説明できる</label>
+          <label><input type="checkbox"> s偏光とp偏光を区別できる</label>
+          <label><input type="checkbox"> n・k・dとR/T/A/Sを結びつけられる</label>
+          <label><input type="checkbox"> 実測差の切り分け案を作れる</label>
+        </div>
+
+        <h3>次に読む標準的な教科書</h3>
+        <ul>
+          <li>Eugene Hecht, <em>Optics</em>：波動光学・偏光・干渉の土台。</li>
+          <li>H. A. Macleod, <em>Thin-Film Optical Filters</em>：光学薄膜設計の標準的専門書。</li>
+          <li>M. Born and E. Wolf, <em>Principles of Optics</em>：より理論的に深く学ぶ辞書的文献。</li>
+        </ul>
+        <div class="callout key"><strong>おすすめの学び方</strong>式を暗記するより、「どの反射波が」「どこで位相を得て」「どの程度の振幅で戻るか」を毎回図にします。その後に行列計算へ進むと、ソフトの出力がブラックボックスになりません。</div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div>反射防止膜の光学入門｜大学生向け学習ノート</div>
+    <div>数値は教育用の代表値です。実設計では実膜の分散 n(λ), k(λ)、入射角、偏光、基材裏面、製造公差を含めてください。</div>
+    <a class="top-link" href="#top">ページ上部へ戻る ↑</a>
+  </footer>
+
+  <script>
+    (() => {
+      const $ = (id) => document.getElementById(id);
+      const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
+
+      function cMul(a, b) { return { re: a.re*b.re - a.im*b.im, im: a.re*b.im + a.im*b.re }; }
+      function cAdd(a, b) { return { re: a.re+b.re, im: a.im+b.im }; }
+      function cDiv(a, b) {
+        const q = b.re*b.re + b.im*b.im;
+        return { re: (a.re*b.re + a.im*b.im)/q, im: (a.im*b.re - a.re*b.im)/q };
+      }
+      function reflectanceSingle(n0, nf, ns, d, lambda) {
+        const r01 = (n0-nf)/(n0+nf);
+        const r12 = (nf-ns)/(nf+ns);
+        const phase = 4*Math.PI*nf*d/lambda;
+        const e = { re: Math.cos(phase), im: Math.sin(phase) };
+        const num = cAdd({re:r01,im:0}, cMul({re:r12,im:0},e));
+        const den = cAdd({re:1,im:0}, cMul({re:r01*r12,im:0},e));
+        const r = cDiv(num,den);
+        return r.re*r.re + r.im*r.im;
+      }
+
+      function updateSpectrum() {
+        const n0 = clamp(parseFloat($('n0').value)||1, 1, 4);
+        const nf = clamp(parseFloat($('nf').value)||1.38, 1.001, 4);
+        const ns = clamp(parseFloat($('ns').value)||1.52, 1.001, 4);
+        const l0 = clamp(parseFloat($('lambda0').value)||550, 200, 2500);
+        const d = l0/(4*nf);
+        const idealN = Math.sqrt(n0*ns);
+        const rDesign = reflectanceSingle(n0,nf,ns,d,l0);
+        $('idealN').textContent = idealN.toFixed(3);
+        $('thickness').textContent = d.toFixed(1)+' nm';
+        $('designR').textContent = (100*rDesign).toFixed(2)+'%';
+
+        const svg = $('spectrum');
+        const W=760,H=330,L=62,R=20,T=24,B=48, pw=W-L-R, ph=H-T-B;
+        const xMin=380,xMax=780;
+        const bare = Math.pow((n0-ns)/(n0+ns),2);
+        let maxR = Math.max(.06, bare*1.35);
+        const data=[];
+        for(let l=xMin;l<=xMax;l+=4){ const rr=reflectanceSingle(n0,nf,ns,d,l); data.push([l,rr]); maxR=Math.max(maxR,rr*1.12); }
+        maxR=Math.min(Math.max(maxR,.05),1);
+        const x=l=>L+(l-xMin)/(xMax-xMin)*pw;
+        const y=r=>T+ph-(r/maxR)*ph;
+        const path=data.map((p,i)=>(i?'L':'M')+x(p[0]).toFixed(1)+' '+y(p[1]).toFixed(1)).join(' ');
+        const ticksX=[400,500,600,700];
+        const ticksY=[0,.25,.5,.75,1].map(v=>v*maxR);
+        let out='<rect width="760" height="330" rx="12" fill="#fff"/>';
+        out+='<rect x="'+x(380)+'" y="'+T+'" width="'+(x(450)-x(380))+'" height="'+ph+'" fill="#7868b5" opacity=".045"/>';
+        out+='<rect x="'+x(450)+'" y="'+T+'" width="'+(x(570)-x(450))+'" height="'+ph+'" fill="#29a68e" opacity=".045"/>';
+        out+='<rect x="'+x(570)+'" y="'+T+'" width="'+(x(780)-x(570))+'" height="'+ph+'" fill="#d99a35" opacity=".045"/>';
+        ticksY.forEach(v=>{out+='<line x1="'+L+'" y1="'+y(v)+'" x2="'+(W-R)+'" y2="'+y(v)+'" stroke="#dce5ec"/><text x="'+(L-9)+'" y="'+(y(v)+4)+'" text-anchor="end" fill="#5c6b79" font-size="12">'+(v*100).toFixed(1)+'</text>';});
+        ticksX.forEach(v=>{out+='<line x1="'+x(v)+'" y1="'+T+'" x2="'+x(v)+'" y2="'+(T+ph)+'" stroke="#edf2f5"/><text x="'+x(v)+'" y="'+(H-21)+'" text-anchor="middle" fill="#5c6b79" font-size="12">'+v+'</text>';});
+        out+='<line x1="'+L+'" y1="'+y(bare)+'" x2="'+(W-R)+'" y2="'+y(bare)+'" stroke="#7e8c96" stroke-width="2" stroke-dasharray="7 6"/>';
+        out+='<path d="'+path+'" fill="none" stroke="#176b87" stroke-width="3"/>';
+        if(l0>=xMin&&l0<=xMax){out+='<circle cx="'+x(l0)+'" cy="'+y(rDesign)+'" r="5" fill="#c98a2b"/><line x1="'+x(l0)+'" y1="'+T+'" x2="'+x(l0)+'" y2="'+(T+ph)+'" stroke="#c98a2b" stroke-dasharray="3 5" opacity=".65"/>';}
+        out+='<text x="18" y="18" fill="#43596b" font-size="12">反射率 [%]</text><text x="'+(W/2)+'" y="'+(H-4)+'" text-anchor="middle" fill="#43596b" font-size="12">波長 [nm]</text>';
+        out+='<line x1="'+(W-196)+'" y1="38" x2="'+(W-162)+'" y2="38" stroke="#176b87" stroke-width="3"/><text x="'+(W-154)+'" y="42" fill="#43596b" font-size="12">コート面</text>';
+        out+='<line x1="'+(W-196)+'" y1="58" x2="'+(W-162)+'" y2="58" stroke="#7e8c96" stroke-width="2" stroke-dasharray="7 6"/><text x="'+(W-154)+'" y="62" fill="#43596b" font-size="12">未コート</text>';
+        svg.innerHTML=out;
+      }
+
+      function updateAngle() {
+        const base=clamp(parseFloat($('baseLambda').value)||550,200,2500);
+        const n=clamp(parseFloat($('angleN').value)||1.46,1.001,4);
+        const deg=clamp(parseFloat($('angleDeg').value)||0,0,89);
+        const rad=deg*Math.PI/180;
+        const factor=Math.sqrt(Math.max(0,1-Math.pow(Math.sin(rad)/n,2)));
+        $('shiftedLambda').textContent=(base*factor).toFixed(0)+' nm（'+((factor-1)*100).toFixed(1)+'%）';
+      }
+
+      window.gradeQuiz = function() {
+        let score=0, answered=0;
+        for(let i=1;i<=5;i++){
+          const a=document.querySelector('input[name="q'+i+'"]:checked');
+          if(a){answered++; score+=Number(a.value);}
+        }
+        $('quizResult').textContent = answered<5 ? '未回答があります（'+answered+'/5問回答）。現在 '+score+' 点です。' : score+'/5点：'+(score===5?'基礎はしっかり掴めています。':score>=3?'あと一歩。間違えた章を読み直しましょう。':'第2～4章を図と一緒に復習しましょう。');
+      };
+
+      ['n0','nf','ns','lambda0'].forEach(id=>$(id).addEventListener('input',updateSpectrum));
+      ['baseLambda','angleN','angleDeg'].forEach(id=>$(id).addEventListener('input',updateAngle));
+      updateSpectrum(); updateAngle();
+
+      const progress=$('readProgress');
+      const sections=[...document.querySelectorAll('article section')];
+      const tocLinks=[...document.querySelectorAll('#tocNav a')];
+      function onScroll(){
+        const doc=document.documentElement;
+        const ratio=(doc.scrollTop)/(doc.scrollHeight-doc.clientHeight);
+        progress.style.width=(Math.max(0,Math.min(1,ratio))*100)+'%';
+        let current=sections[0].id;
+        sections.forEach(s=>{if(s.getBoundingClientRect().top<150) current=s.id;});
+        tocLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));
+      }
+      document.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+    })();
+  </script>
+</body>
+</html>

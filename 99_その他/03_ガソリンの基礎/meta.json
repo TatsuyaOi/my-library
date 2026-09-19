@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "gasoline-study-v42",
+  "title": "ガソリンとは何か｜写真と動く図解で学ぶ v4.2",
+  "type": "reference",
+  "category": "99_その他",
+  "subcategory": "ガソリンとは何か",
+  "summary": "分子・精製・蒸発・燃焼・オクタン価・安全を学ぶ入門教材。",
+  "tags": [
+    "その他"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260919_ガソリン学習_v4.2.html",
+    "guide": "260919_ガソリン学習_v4.2.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "f60e1ed33a8d5a32c2fc1b7ae933569d89cc0f59a0cf44372da07492a18fb335",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260919_ガソリン学習_v4.2.html": "ba7d37819f34d2eea5ab921f38b12f2d7b62a8e7c3ddbeb04527e90c10d884ec"
+    },
+    "output_sha256": {
+      "260919_ガソリン学習_v4.2.html": "ba7d37819f34d2eea5ab921f38b12f2d7b62a8e7c3ddbeb04527e90c10d884ec"
+    }
+  }
+}

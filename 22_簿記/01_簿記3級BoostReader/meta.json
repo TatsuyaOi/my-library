@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "id": "boki3-boost-reader",
+  "title": "簿記3級 Boost Reader",
+  "type": "reference",
+  "category": "22_簿記",
+  "subcategory": "簿記3級 Boost Reader",
+  "summary": "前払・前受・未収・未払・決算振替を復習する対話型教材。",
+  "tags": [
+    "簿記"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "boki3_reading_interactive_v1.html",
+    "guide": "boki3_reading_interactive_v1.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "c821bfab087914f03e91c8f1acfe32044c3f9eb775bf6b47ec540604a40a3714",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "boki3_reading_interactive_v1.html": "4078726ace6cf0b40945d761c68b1dacfe998eaa2fa501138171c27b93a953c1"
+    },
+    "output_sha256": {
+      "boki3_reading_interactive_v1.html": "4078726ace6cf0b40945d761c68b1dacfe998eaa2fa501138171c27b93a953c1"
+    }
+  }
+}
