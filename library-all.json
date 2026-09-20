@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-09-20T09:19:03+09:00",
+  "generated_at": "2026-09-20T00:24:26+00:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -129,6 +129,217 @@
       "url": "./01_プロンプト/01_HTML生成プロンプト/HTML生成プロンプト_使い方ガイド.html"
     },
     {
+      "title": "恋愛・コミュニケーション心理学｜学習版",
+      "description": "傾聴・自己開示・境界線・衝突修復を学ぶ一般向け教材。",
+      "group": "心理学・コミュニケーション",
+      "tags": [
+        "心理学",
+        "コミュニケーション",
+        "傾聴",
+        "境界線"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "08_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
+      "category_folder": "71_勉強",
+      "category_title": "勉強",
+      "category_icon": "📚",
+      "url": "./71_勉強/08_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html"
+    },
+    {
+      "title": "反射防止膜の光学入門｜大学生向け",
+      "description": "光学薄膜の原理から材料・成膜・評価までを学ぶノート。",
+      "group": "光学・薄膜",
+      "tags": [
+        "光学",
+        "反射防止膜",
+        "成膜・評価"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+      "category_folder": "71_勉強",
+      "category_title": "勉強",
+      "category_icon": "📚",
+      "url": "./71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html"
+    },
+    {
+      "title": "反射防止膜の光学入門｜11Bスタイル版",
+      "description": "電磁波・界面反射・薄膜干渉・多層膜設計を学ぶ教材。",
+      "group": "光学・薄膜",
+      "tags": [
+        "光学",
+        "反射防止膜",
+        "薄膜干渉"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+      "category_folder": "71_勉強",
+      "category_title": "勉強",
+      "category_icon": "📚",
+      "url": "./71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html"
+    },
+    {
+      "title": "マーケット温度感｜2026-09-18",
+      "description": "市場・金利・為替・ニュースを仕事や業界研究の観点で整理した時点資料。",
+      "group": "業界分析・市場動向",
+      "tags": [
+        "市場動向",
+        "業界分析",
+        "週次レビュー",
+        "為替"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "11_マーケット温度感_2026-09-18/market_temperature_review_2026-09-18.html",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "💼",
+      "url": "./51_仕事/11_マーケット温度感_2026-09-18/market_temperature_review_2026-09-18.html"
+    },
+    {
+      "title": "マーケット温度感｜2026-09-14",
+      "description": "市場・金利・為替・ニュースを仕事や業界研究の観点で整理した時点資料。",
+      "group": "業界分析・市場動向",
+      "tags": [
+        "市場動向",
+        "業界分析",
+        "金利",
+        "為替"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "10_マーケット温度感_2026-09-14/market_temperature_report_2026-09-14.html",
+      "category_folder": "51_仕事",
+      "category_title": "仕事",
+      "category_icon": "💼",
+      "url": "./51_仕事/10_マーケット温度感_2026-09-14/market_temperature_report_2026-09-14.html"
+    },
+    {
+      "title": "ハードコートとAR積層設計｜学習版",
+      "description": "ハードコートの材料・硬化・評価、20 nmと50 nmのナノシリカ、関連特許、AR積層の屈曲・摺動設計を8章で学ぶ教材。外部写真の内包などに未達事項を残す暫定版。",
+      "group": "材料・表面技術",
+      "tags": [
+        "ハードコート",
+        "AR",
+        "ナノシリカ",
+        "屈曲",
+        "摺動"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "06_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
+      "category_folder": "71_勉強",
+      "category_title": "勉強",
+      "category_icon": "📚",
+      "url": "./71_勉強/06_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html"
+    },
+    {
+      "title": "セラミックス材料工学｜全54章・設計書",
+      "description": "構造・物性・プロセスを学ぶ54章の教材と構成設計書。",
+      "group": "材料工学",
+      "tags": [
+        "セラミックス",
+        "材料工学",
+        "焼結"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+      "category_folder": "71_勉強",
+      "category_title": "勉強",
+      "category_icon": "📚",
+      "url": "./71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html"
+    },
+    {
+      "title": "スパッタリング実務｜学習項目・引継ぎ設計",
+      "description": "12分野・36章・216項目の学習カリキュラムと引継ぎ設計。",
+      "group": "スパッタリング実務",
+      "tags": [
+        "スパッタリング",
+        "学習計画",
+        "薄膜"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "01_スパッタリング学習設計/05_スパッタリング学習設計_guide.html",
+      "category_folder": "71_勉強",
+      "category_title": "勉強",
+      "category_icon": "📚",
+      "url": "./71_勉強/01_スパッタリング学習設計/05_スパッタリング学習設計_guide.html"
+    },
+    {
+      "title": "ガソリンとは何か｜写真と動く図解で学ぶ v4.2",
+      "description": "分子・精製・蒸発・燃焼・オクタン価・安全を学ぶ入門教材。",
+      "group": "化学・燃料",
+      "tags": [
+        "ガソリン",
+        "炭化水素",
+        "燃焼",
+        "オクタン価"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "07_ガソリンの基礎/260919_ガソリン学習_v4.2.html",
+      "category_folder": "71_勉強",
+      "category_title": "勉強",
+      "category_icon": "📚",
+      "url": "./71_勉強/07_ガソリンの基礎/260919_ガソリン学習_v4.2.html"
+    },
+    {
+      "title": "PETとTACの比較｜学習版",
+      "description": "PETとTACの製法、機械特性、熱・水分、光学特性、費用を6章で比較する教材。HC・AR基材の選定に向け、保証値・比較例・計算上の仮定を区別して学ぶ。",
+      "group": "材料・表面技術",
+      "tags": [
+        "PET",
+        "TAC",
+        "光学フィルム",
+        "材料比較"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "05_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+      "category_folder": "71_勉強",
+      "category_title": "勉強",
+      "category_icon": "📚",
+      "url": "./71_勉強/05_PETとTACの比較/260919_PETとTACの比較_学習版.html"
+    },
+    {
+      "title": "3資格の応募・受験・勉強開始スケジュール",
+      "description": "2026年8月17日時点の簿記3級・危険物甲種・統計検定2級の比較図。",
+      "group": "資格・学習計画",
+      "tags": [
+        "学習計画",
+        "簿記3級",
+        "危険物甲種",
+        "統計検定2級"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-20",
+      "file": "09_3資格の学習スケジュール/05_3資格の学習スケジュール_guide.html",
+      "preview": "09_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png",
+      "thumbnail": "09_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png",
+      "thumbnail_alt": "3資格の応募・受験・勉強開始スケジュール",
+      "category_folder": "71_勉強",
+      "category_title": "勉強",
+      "category_icon": "📚",
+      "url": "./71_勉強/09_3資格の学習スケジュール/05_3資格の学習スケジュール_guide.html",
+      "thumbnail_url": "./71_勉強/09_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png",
+      "preview_url": "./71_勉強/09_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png"
+    },
+    {
       "title": "簿記3級 Boost Reader",
       "description": "前払・前受・未収・未払・決算振替を復習する対話型教材。",
       "group": "簿記3級 Boost Reader",
@@ -193,25 +404,6 @@
       "url": "./01_プロンプト/30_既存内容整理HTML/既存内容整理_11B参照用プロンプト.html"
     },
     {
-      "title": "恋愛・コミュニケーション心理学｜学習版",
-      "description": "傾聴・自己開示・境界線・衝突修復を学ぶ一般向け教材。",
-      "group": "心理学・コミュニケーション",
-      "tags": [
-        "心理学",
-        "コミュニケーション",
-        "傾聴",
-        "境界線"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "08_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
-      "category_folder": "71_勉強",
-      "category_title": "勉強",
-      "category_icon": "📚",
-      "url": "./71_勉強/08_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html"
-    },
-    {
       "title": "学習HTML新規作成・11Bスタイル統合プロンプト v2.0",
       "description": "構成・執筆・数式・図解・検証を含む学習HTML作成指示文。",
       "group": "学習HTML新規作成・11Bスタイル統合プロンプト v2.0",
@@ -247,42 +439,6 @@
       "url": "./01_プロンプト/32_学習HTML作成Astra/学習HTML作成_Astra_guide.html"
     },
     {
-      "title": "反射防止膜の光学入門｜大学生向け",
-      "description": "光学薄膜の原理から材料・成膜・評価までを学ぶノート。",
-      "group": "光学・薄膜",
-      "tags": [
-        "光学",
-        "反射防止膜",
-        "成膜・評価"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
-      "category_folder": "71_勉強",
-      "category_title": "勉強",
-      "category_icon": "📚",
-      "url": "./71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html"
-    },
-    {
-      "title": "反射防止膜の光学入門｜11Bスタイル版",
-      "description": "電磁波・界面反射・薄膜干渉・多層膜設計を学ぶ教材。",
-      "group": "光学・薄膜",
-      "tags": [
-        "光学",
-        "反射防止膜",
-        "薄膜干渉"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
-      "category_folder": "71_勉強",
-      "category_title": "勉強",
-      "category_icon": "📚",
-      "url": "./71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html"
-    },
-    {
       "title": "北極星の哲学｜11B Meiryo UI最終版",
       "description": "北極星となる哲学を見返すための簡潔な参照HTML。",
       "group": "北極星の哲学",
@@ -297,44 +453,6 @@
       "category_title": "哲学",
       "category_icon": "🧠",
       "url": "./11_哲学/03_北極星の哲学11B/北極星の哲学_11B_MeiryoUI最終版.html"
-    },
-    {
-      "title": "マーケット温度感｜2026-09-18",
-      "description": "市場・金利・為替・ニュースを仕事や業界研究の観点で整理した時点資料。",
-      "group": "業界分析・市場動向",
-      "tags": [
-        "市場動向",
-        "業界分析",
-        "週次レビュー",
-        "為替"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "11_マーケット温度感_2026-09-18/market_temperature_review_2026-09-18.html",
-      "category_folder": "51_仕事",
-      "category_title": "仕事",
-      "category_icon": "💼",
-      "url": "./51_仕事/11_マーケット温度感_2026-09-18/market_temperature_review_2026-09-18.html"
-    },
-    {
-      "title": "マーケット温度感｜2026-09-14",
-      "description": "市場・金利・為替・ニュースを仕事や業界研究の観点で整理した時点資料。",
-      "group": "業界分析・市場動向",
-      "tags": [
-        "市場動向",
-        "業界分析",
-        "金利",
-        "為替"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "10_マーケット温度感_2026-09-14/market_temperature_report_2026-09-14.html",
-      "category_folder": "51_仕事",
-      "category_title": "仕事",
-      "category_icon": "💼",
-      "url": "./51_仕事/10_マーケット温度感_2026-09-14/market_temperature_report_2026-09-14.html"
     },
     {
       "title": "プロンプト変換｜Astra構成",
@@ -355,26 +473,6 @@
       "url": "./01_プロンプト/33_プロンプト変換Astra/プロンプト変換_Astra_guide.html"
     },
     {
-      "title": "ハードコートとAR積層設計｜学習版",
-      "description": "ハードコートの材料・硬化・評価、20 nmと50 nmのナノシリカ、関連特許、AR積層の屈曲・摺動設計を8章で学ぶ教材。外部写真の内包などに未達事項を残す暫定版。",
-      "group": "材料・表面技術",
-      "tags": [
-        "ハードコート",
-        "AR",
-        "ナノシリカ",
-        "屈曲",
-        "摺動"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "06_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
-      "category_folder": "71_勉強",
-      "category_title": "勉強",
-      "category_icon": "📚",
-      "url": "./71_勉強/06_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html"
-    },
-    {
       "title": "デュアルHTML生成マスタープロンプト v2.0",
       "description": "同一情報からスマホ版・PC版のHTMLを別設計で生成する指示文。",
       "group": "デュアルHTML生成マスタープロンプト v2.0",
@@ -389,24 +487,6 @@
       "category_title": "プロンプト",
       "category_icon": "🧩",
       "url": "./01_プロンプト/28_デュアルHTML生成/デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.html"
-    },
-    {
-      "title": "セラミックス材料工学｜全54章・設計書",
-      "description": "構造・物性・プロセスを学ぶ54章の教材と構成設計書。",
-      "group": "材料工学",
-      "tags": [
-        "セラミックス",
-        "材料工学",
-        "焼結"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
-      "category_folder": "71_勉強",
-      "category_title": "勉強",
-      "category_icon": "📚",
-      "url": "./71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html"
     },
     {
       "title": "スパッタ圧力と膜質",
@@ -429,43 +509,6 @@
       "url": "./content/reactive-sputtering-pressure/index.html"
     },
     {
-      "title": "スパッタリング実務｜学習項目・引継ぎ設計",
-      "description": "12分野・36章・216項目の学習カリキュラムと引継ぎ設計。",
-      "group": "スパッタリング実務",
-      "tags": [
-        "スパッタリング",
-        "学習計画",
-        "薄膜"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "01_スパッタリング学習設計/05_スパッタリング学習設計_guide.html",
-      "category_folder": "71_勉強",
-      "category_title": "勉強",
-      "category_icon": "📚",
-      "url": "./71_勉強/01_スパッタリング学習設計/05_スパッタリング学習設計_guide.html"
-    },
-    {
-      "title": "ガソリンとは何か｜写真と動く図解で学ぶ v4.2",
-      "description": "分子・精製・蒸発・燃焼・オクタン価・安全を学ぶ入門教材。",
-      "group": "化学・燃料",
-      "tags": [
-        "ガソリン",
-        "炭化水素",
-        "燃焼",
-        "オクタン価"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "07_ガソリンの基礎/260919_ガソリン学習_v4.2.html",
-      "category_folder": "71_勉強",
-      "category_title": "勉強",
-      "category_icon": "📚",
-      "url": "./71_勉強/07_ガソリンの基礎/260919_ガソリン学習_v4.2.html"
-    },
-    {
       "title": "Recent News Radar｜2026-09-14",
       "description": "AI・研究開発・薄膜・塗工・市場のニュースと論文を整理した時点資料。",
       "group": "Recent News Radar",
@@ -480,25 +523,6 @@
       "category_title": "AI",
       "category_icon": "✨",
       "url": "./41_AI/03_ニュースレーダー20260914/あなた向け_Recent_News_Radar_2026-09-14_11B.html"
-    },
-    {
-      "title": "PETとTACの比較｜学習版",
-      "description": "PETとTACの製法、機械特性、熱・水分、光学特性、費用を6章で比較する教材。HC・AR基材の選定に向け、保証値・比較例・計算上の仮定を区別して学ぶ。",
-      "group": "材料・表面技術",
-      "tags": [
-        "PET",
-        "TAC",
-        "光学フィルム",
-        "材料比較"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "05_PETとTACの比較/260919_PETとTACの比較_学習版.html",
-      "category_folder": "71_勉強",
-      "category_title": "勉強",
-      "category_icon": "📚",
-      "url": "./71_勉強/05_PETとTACの比較/260919_PETとTACの比較_学習版.html"
     },
     {
       "title": "Hakken型 材料R&D 汎用発見アルゴリズム",
@@ -563,30 +587,6 @@
       "category_title": "プロンプト",
       "category_icon": "🧩",
       "url": "./01_プロンプト/25_AI事業立案・評価/25_AI事業立案・評価_guide.html"
-    },
-    {
-      "title": "3資格の応募・受験・勉強開始スケジュール",
-      "description": "2026年8月17日時点の簿記3級・危険物甲種・統計検定2級の比較図。",
-      "group": "資格・学習計画",
-      "tags": [
-        "学習計画",
-        "簿記3級",
-        "危険物甲種",
-        "統計検定2級"
-      ],
-      "pinned": false,
-      "order": 999999,
-      "updated": "2026-09-19",
-      "file": "09_3資格の学習スケジュール/05_3資格の学習スケジュール_guide.html",
-      "preview": "09_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png",
-      "thumbnail": "09_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png",
-      "thumbnail_alt": "3資格の応募・受験・勉強開始スケジュール",
-      "category_folder": "71_勉強",
-      "category_title": "勉強",
-      "category_icon": "📚",
-      "url": "./71_勉強/09_3資格の学習スケジュール/05_3資格の学習スケジュール_guide.html",
-      "thumbnail_url": "./71_勉強/09_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png",
-      "preview_url": "./71_勉強/09_3資格の学習スケジュール/file_00000000a8ac8206824404d9c5b92b1c.png"
     },
     {
       "title": "視覚表現ライブラリ・HTML組み込みプロンプト v1.0",
