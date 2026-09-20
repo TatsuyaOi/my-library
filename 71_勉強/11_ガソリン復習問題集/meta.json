@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "id": "gasoline-study-cards-20260920",
+  "title": "ガソリンを理解する72問｜復習カード",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "理工学・基礎",
+  "summary": "ガソリンの分子・物性、精製、燃焼と仕事、性能・安全・環境を復習する4択60問と記述12問。学習記録JSONとAnki用TSVの書き出しに対応。",
+  "tags": [
+    "ガソリン",
+    "化学",
+    "燃焼",
+    "学習問題集"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260920_ガソリン復習問題集.html",
+    "guide": "260920_ガソリン復習問題集.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "gasoline-study-v42"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "fd821204a385d1fc89b6a013e3bcb062206ab688f8fc95d2f4e47234ecebbdb7",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260920_ガソリン復習問題集.html": "d1c71c48a9574cacd270f657fd18c4c19b903a3bf548ea131f824de703e14eb7"
+    },
+    "output_sha256": {
+      "260920_ガソリン復習問題集.html": "d1c71c48a9574cacd270f657fd18c4c19b903a3bf548ea131f824de703e14eb7"
+    }
+  }
+}

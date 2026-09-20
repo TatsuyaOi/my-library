@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "id": "study-20260920-cer",
+  "title": "セラミックス材料工学・全54章｜学習問題集",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "材料・表面技術",
+  "summary": "セラミックス材料工学54章を、各章4択3問と記述1問の計216問で復習する問題集。構造・製造・物性・評価・不良解析・実験計画を扱う。",
+  "tags": [
+    "セラミックス",
+    "材料工学",
+    "実験計画",
+    "学習問題集"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-20",
+    "updated": null
+  },
+  "files": {
+    "source": "260920_セラミックス材料工学_全54章_学習問題集.html",
+    "guide": "260920_セラミックス材料工学_全54章_学習問題集.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "ceramics-study-54chapters"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "55630897f9c0def73df16bc2c3a6b4fb2e32f0d3bae858d8eddac37d3bd7661d",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260920_セラミックス材料工学_全54章_学習問題集.html": "f06f0422d7b7b4573b7b0963a52cfd5db97bc8a5495a1baee2982d531724f49c"
+    },
+    "output_sha256": {
+      "260920_セラミックス材料工学_全54章_学習問題集.html": "f06f0422d7b7b4573b7b0963a52cfd5db97bc8a5495a1baee2982d531724f49c"
+    }
+  }
+}

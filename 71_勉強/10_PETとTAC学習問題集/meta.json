@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "id": "study-20260920-pet",
+  "title": "PETとTACの比較｜学習問題集",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "材料・表面技術",
+  "summary": "PETとTACの製法、機械・熱・光学特性、費用、HC・AR基材選定を復習する全60問。4択と記述、解説、学習記録保存を備える。",
+  "tags": [
+    "PET",
+    "TAC",
+    "材料比較",
+    "学習問題集"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-20",
+    "updated": null
+  },
+  "files": {
+    "source": "260920_PETとTAC_学習問題集.html",
+    "guide": "260920_PETとTAC_学習問題集.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "pet-tac-comparison"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "84aebc110433fa5077db8667b08ffaf25928569a457e0fca0ef011a0ab4d7263",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260920_PETとTAC_学習問題集.html": "37bfeaa8b5187b5d054c11740e8dd3625c7fa0fbfad9bc39bc733f0ef017f447"
+    },
+    "output_sha256": {
+      "260920_PETとTAC_学習問題集.html": "37bfeaa8b5187b5d054c11740e8dd3625c7fa0fbfad9bc39bc733f0ef017f447"
+    }
+  }
+}

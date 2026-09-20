@@ -86,11 +86,14 @@ class PageInfo(HTMLParser):
         self.meta = {}
         self.title = []
         self.in_title = False
+        self.in_style = False
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == 'title':
             self.in_title = True
+        if tag == 'style':
+            self.in_style = True
         if tag == 'base':
             raise ValueError('<base> requires manual review; automatic import is stopped.')
         if tag == 'meta' and attrs.get('name'):
@@ -109,10 +112,14 @@ class PageInfo(HTMLParser):
     def handle_endtag(self, tag):
         if tag == 'title':
             self.in_title = False
+        if tag == 'style':
+            self.in_style = False
 
     def handle_data(self, data):
         if self.in_title:
             self.title.append(data)
+        if self.in_style:
+            self.references.extend(css_references(data))
 
 
 def css_references(text: str) -> list[str]:
@@ -155,7 +162,7 @@ def check_links(files: dict[str, bytes]):
             text = content.decode('utf-8-sig')
             parser = PageInfo()
             parser.feed(text)
-            refs = parser.references + css_references(text)
+            refs = parser.references
             # Ignore only explicit documentation examples, never URL attributes.
             # local_reference below still validates every real reference.
             prose = re.sub(r'`(?:file:///|[A-Za-z]:\\+\.\.\.)`', '', text)
