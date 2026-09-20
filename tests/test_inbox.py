@@ -62,6 +62,21 @@ class InboxTests(unittest.TestCase):
             with self.subTest(content=content), self.assertRaises(ValueError):
                 inbox.check_links({'guide.html': content.encode()})
 
+    def test_javascript_blob_url_is_not_a_css_dependency(self):
+        original = b'<title>Download</title><script>URL.revokeObjectURL(url);</script><pre>url(example.png)</pre>'
+        self.write('★仮置き保管庫/report.html', original)
+        inbox.apply_plan(self.root, self.plan(), True)
+        self.assertEqual((self.root / '22_簿記/test-note/report.html').read_bytes(), original)
+
+    def test_embedded_and_inline_css_dependencies_are_checked(self):
+        for content in ('<style>body{background:url(missing.png)}</style>',
+                        '<style>@import "missing.css";</style>',
+                        '<div style="background:url(missing.png)"></div>'):
+            with self.subTest(content=content), self.assertRaisesRegex(ValueError, 'Missing bundled dependency'):
+                inbox.check_links({'guide.html': content.encode()})
+        inbox.check_links({'guide.html': b'<style>body{background:url(picture.png)}</style>',
+                           'picture.png': b'image fixture'})
+
     def test_dry_run_does_not_write(self):
         result = inbox.apply_plan(self.root, self.plan())
         self.assertEqual(result['mode'], 'dry-run')

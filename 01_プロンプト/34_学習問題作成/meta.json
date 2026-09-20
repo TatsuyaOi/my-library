@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "id": "study-question-authoring-v1",
+  "title": "学習問題作成プロンプト・マニュアル",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "学習・問題作成",
+  "summary": "HTML・画像・Webページなどから、4択と重要記述を含む学習問題集を作る汎用プロンプトv1.0。資料の渡し方、依頼例、設定・コピー、品質確認のマニュアルを同梱。",
+  "tags": [
+    "学習",
+    "問題作成",
+    "HTML",
+    "復習"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-20",
+    "updated": null
+  },
+  "files": {
+    "source": "260920_学習問題作成プロンプト.md",
+    "guide": "260920_学習問題作成マニュアル.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "242c35d55aaa13cb45586c74688eb500576702a80cfc2f97eb6c8b36f2e927af",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260920_学習問題作成プロンプト.md": "64e8c2e8c70c812ae1206ef4db0afa9f007821b96efbce62b8f7cc4ff966f6b6",
+      "260920_学習問題作成マニュアル.html": "415592a53d38cdd4488b70733a1c834303c24021a860c98ed79673e44336d0d0"
+    },
+    "output_sha256": {
+      "260920_学習問題作成マニュアル.html": "415592a53d38cdd4488b70733a1c834303c24021a860c98ed79673e44336d0d0",
+      "260920_学習問題作成プロンプト.md": "64e8c2e8c70c812ae1206ef4db0afa9f007821b96efbce62b8f7cc4ff966f6b6"
+    }
+  }
+}

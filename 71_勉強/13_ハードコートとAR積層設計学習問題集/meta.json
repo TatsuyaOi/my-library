@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "id": "study-20260920-hc",
+  "title": "ハードコートとAR積層設計｜学習問題集",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "材料・表面技術",
+  "summary": "ハードコートの配合・乾燥・硬化・評価、シリカ粒子、特許の読み方、AR積層と応力、実験計画を8章64問で復習する。",
+  "tags": [
+    "ハードコート",
+    "AR",
+    "薄膜",
+    "学習問題集"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-20",
+    "updated": null
+  },
+  "files": {
+    "source": "260920_ハードコートとAR積層設計_学習問題集.html",
+    "guide": "260920_ハードコートとAR積層設計_学習問題集.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "hardcoat-ar-design"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "bb448470b4bb5ca056a839c0949411d4b183ab0e0d32a8830d2ec4f81a4e2ce8",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260920_ハードコートとAR積層設計_学習問題集.html": "679b59ef511a74c1da3a08c12053f09660eb1af73630683d758d814ae22de8c1"
+    },
+    "output_sha256": {
+      "260920_ハードコートとAR積層設計_学習問題集.html": "679b59ef511a74c1da3a08c12053f09660eb1af73630683d758d814ae22de8c1"
+    }
+  }
+}
