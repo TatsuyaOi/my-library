@@ -2,12 +2,15 @@
   "schema_version": "1.0",
   "id": "market-temperature-2026-09-18",
   "title": "マーケット温度感｜2026-09-18",
-  "type": "reference",
-  "category": "99_その他",
-  "subcategory": "マーケット温度感",
+  "type": "report",
+  "category": "51_仕事",
+  "subcategory": "業界分析・市場動向",
   "summary": "市場・金利・為替・ニュースを仕事や業界研究の観点で整理した時点資料。",
   "tags": [
-    "その他"
+    "市場動向",
+    "業界分析",
+    "週次レビュー",
+    "為替"
   ],
   "status": "active",
   "version": null,

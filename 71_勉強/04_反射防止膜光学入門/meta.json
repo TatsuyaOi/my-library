@@ -2,12 +2,14 @@
   "schema_version": "1.0",
   "id": "ar-optics-study",
   "title": "反射防止膜の光学入門｜大学生向け",
-  "type": "reference",
-  "category": "51_仕事",
-  "subcategory": "反射防止膜の光学入門",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "光学・薄膜",
   "summary": "光学薄膜の原理から材料・成膜・評価までを学ぶノート。",
   "tags": [
-    "仕事"
+    "光学",
+    "反射防止膜",
+    "成膜・評価"
   ],
   "status": "active",
   "version": null,

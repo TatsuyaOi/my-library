@@ -2,12 +2,14 @@
   "schema_version": "1.0",
   "id": "ceramics-study-54chapters",
   "title": "セラミックス材料工学｜全54章・設計書",
-  "type": "reference",
-  "category": "51_仕事",
-  "subcategory": "セラミックス材料工学",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "材料工学",
   "summary": "構造・物性・プロセスを学ぶ54章の教材と構成設計書。",
   "tags": [
-    "仕事"
+    "セラミックス",
+    "材料工学",
+    "焼結"
   ],
   "status": "active",
   "version": null,

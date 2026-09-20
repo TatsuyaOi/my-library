@@ -2,12 +2,15 @@
   "schema_version": "1.0",
   "id": "gasoline-study-v42",
   "title": "ガソリンとは何か｜写真と動く図解で学ぶ v4.2",
-  "type": "reference",
-  "category": "99_その他",
-  "subcategory": "ガソリンとは何か",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "化学・燃料",
   "summary": "分子・精製・蒸発・燃焼・オクタン価・安全を学ぶ入門教材。",
   "tags": [
-    "その他"
+    "ガソリン",
+    "炭化水素",
+    "燃焼",
+    "オクタン価"
   ],
   "status": "active",
   "version": null,

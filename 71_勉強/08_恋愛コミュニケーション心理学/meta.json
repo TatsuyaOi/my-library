@@ -2,12 +2,15 @@
   "schema_version": "1.0",
   "id": "romance-communication-study",
   "title": "恋愛・コミュニケーション心理学｜学習版",
-  "type": "reference",
-  "category": "99_その他",
-  "subcategory": "恋愛・コミュニケーション心理学",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "心理学・コミュニケーション",
   "summary": "傾聴・自己開示・境界線・衝突修復を学ぶ一般向け教材。",
   "tags": [
-    "その他"
+    "心理学",
+    "コミュニケーション",
+    "傾聴",
+    "境界線"
   ],
   "status": "active",
   "version": null,

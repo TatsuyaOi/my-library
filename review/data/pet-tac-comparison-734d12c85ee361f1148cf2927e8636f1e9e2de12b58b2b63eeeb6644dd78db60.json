@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "lesson_id": "pet-tac-comparison",
+  "content_hash": "4a367e907021b58880927e7c05425308180118270519fa588413c1085bd53b1c",
+  "generated_at": "2026-09-19T11:56:06.103475+00:00",
+  "questions": [
+    {
+      "question_id": "pet-tac-comparison:thickness-cubed:free_response:1",
+      "concept_key": "thickness-cubed",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "同じ材料・幅・ポアソン比の等方・均質薄板で、厚みを50 µmから100 µmへ増やすと曲げ剛性は何倍ですか？",
+      "answer": "8倍。",
+      "explanation": "曲げ剛性は厚みの3乗に比例するので、(100/50)³＝8。異方性や多層断面は別途扱う。",
+      "source": {
+        "path": "71_勉強/05_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+        "anchor": "#bending",
+        "evidence": "Eと厚みtの3乗に比例します。材料のEが低くても、厚ければ曲げにくくなります。 D = Et³ / [12(1 − ν²)] D：単位幅の板曲げ剛性［N·m］、t：厚み［m］、ν：ポアソン比［無次元］。等方・均質薄板の近似。延伸フィルムの異方性や多層断面は別途扱います。 計算例：PET 50 µm と TAC 80 µm νが同じと仮定すると、D TAC /D PET = (2.94/3.92) × (80/50)³ = 約3.07 。この条件では厚いTACのほうが曲げにくくなります。 操作：厚みを替えて確かめる PET厚み［µm］ 50 TAC厚み［µm］ 80 Eは上の比較例に固定、νは共通。曲げ剛性の比だけを計算します。 図5 曲げると、外側ほど伸びる 外側の膜：引張側 基材 破線：中立面の模式位置 内側は圧縮、外側は引張 見る点：外側の経路が長くなるため、引張ひずみが生じます。自作模式図。厚み・曲率・層厚は実寸比ではありません。中立面は単層の中央を仮定し、多層では各層の弾性率と厚みで移動します。 同じ半径rへ曲げる場合、均一単層の表面ひずみは ε ≈ t/("
+      },
+      "tags": [
+        "PETとTACの比較｜学習版"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "pet-tac-comparison:surface-strain:free_response:1",
+      "concept_key": "surface-strain",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "均一単層で中立面を厚み中央とする近似では、厚み50 µmを半径2 mmへ曲げた表面ひずみは何％ですか？",
+      "answer": "約1.25％。",
+      "explanation": "ε≈t/(2r)＝0.050/(2×2)＝0.0125。無次元値を100倍して％にする。多層では中立面の補正が必要。",
+      "source": {
+        "path": "71_勉強/05_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+        "anchor": "#bending",
+        "evidence": "半径2 mmに曲げた表面ひずみは？ 自分の答え・考えた理由 模範解答・自己確認 ε ≈ 50×10⁻⁶/(2×2×10⁻³) = 0.0125、約1.25％。多層では中立面位置の補正が必要。 自己確認： µmとmmの換算、百分率への換算ができたか。 別の結論になった場合は、太字の条件・定義と照合してください。記述の完全一致による自動採点は行いません。 本文へ戻る 解説と照合： 05. PET 50 µmとTAC 50 µmなら、比較例の曲げ剛性比TAC/PETは？ 自分の答え・考えた理由 模範解答・自己確認 νが等しい仮定で約0.75。80 µmのTACとの比較とは逆転し得る。 自己確認： 厚みを揃えた比較か確認したか。 別の結論になった場合は、太字の条件・定義と照合してください。記述の完全一致による自動採点は行いません。 本文へ戻る 解説と照合： 06. スチールウールの傷を減らすため、Eだけを最大化する方針の問題は？ 自分の答え・考えた理由 模範解答・自己確認 HCの硬度・回復性、摩擦、表面膜の割れ、界面密着、光学的な傷の見え方が残る。Eだけでは損傷様式を判別で"
+      },
+      "tags": [
+        "PETとTACの比較｜学習版"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "pet-tac-comparison:retardation-units:free_response:1",
+      "concept_key": "retardation-units",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "屈折率差Δn＝0.002、厚みd＝50 µmの面内レターデーションReは何nmですか？",
+      "answer": "100 nm。",
+      "explanation": "Re＝Δn d。50 µm＝50,000 nmへ換算してから0.002を掛ける。材料の実測値を示す問題ではない。",
+      "source": {
+        "path": "71_勉強/05_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+        "anchor": "#retardation",
+        "evidence": ".002、d=50 µmのReは？ 自分の答え・考えた理由 模範解答・自己確認 0.002×50,000 nm = 100 nm。屈折率差は無次元で、Reは長さ。 自己確認： µmからnmへ換算したか。 別の結論になった場合は、太字の条件・定義と照合してください。記述の完全一致による自動採点は行いません。 本文へ戻る 解説と照合： 05. TACならnx=ny=nzとしてよいですか？ 自分の答え・考えた理由 模範解答・自己確認 一律にはいえない。低面内位相差でも厚み方向との差が残る場合がある。対象製品のRe/Rthと定義を確認する。 自己確認： 面内等方と三次元等方を区別したか。 別の結論になった場合は、太字の条件・定義と照合してください。記述の完全一致による自動採点は行いません。 本文へ戻る 解説と照合： 06. 厚い基材は非干渉、薄いAR層は干渉として扱う理由は？ 自分の答え・考えた理由 模範解答・自己確認 測定の波長帯域・光路差などにより、厚い基材内の干渉が平均化される一方、薄膜の位相差は反射に寄与する場合があるため。厚みだけで常に決まるわけではない。 自己確"
+      },
+      "tags": [
+        "PETとTACの比較｜学習版"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "pet-tac-comparison:yield-cost:free_response:1",
+      "concept_key": "yield-cost",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "資料の単純な面積歩留まりモデルで、投入費120円/m²、良品率80％なら良品1 m²当たりの費用は？",
+      "answer": "150円/m²。",
+      "explanation": "投入費を良品率0.80で割る。固定費・再加工・端材回収などを省いた仮定計算であり、相場ではない。",
+      "source": {
+        "path": "71_勉強/05_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+        "anchor": "#cost",
+        "evidence": "/m²、良品率80％の良品費用は？ 自分の答え・考えた理由 模範解答・自己確認 120/0.80 = 150円/m²。単純な面積歩留まりモデル。 自己確認： 良品率を掛けずに割ったか。 別の結論になった場合は、太字の条件・定義と照合してください。記述の完全一致による自動採点は行いません。 本文へ戻る 解説と照合： 05. TACはPETの何倍の価格か、と聞かれたら何を確認する？ 自分の答え・考えた理由 模範解答・自己確認 対象グレード、厚み、幅、表面処理、光学品質、発注量、取引条件を合わせた見積もり。公開根拠がなければ倍率は未確認とする。 自己確認： 比較可能な条件を列挙できたか。 別の結論になった場合は、太字の条件・定義と照合してください。記述の完全一致による自動採点は行いません。 本文へ戻る 解説と照合： 06. 低価格PETへの変更で剥離が増えた場合、次に計算すべき費用は？ 自分の答え・考えた理由 模範解答・自己確認 基材差額だけでなく、良品率、加工済み不良の損失、再加工・検査・停止など。見積もりと工程データを結びつける。 自己確認： 最終良品の総費用を考えた"
+      },
+      "tags": [
+        "PETとTACの比較｜学習版"
+      ],
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（原文との編集照合）",
+    "limitations": "同じ作成者による原文照合。独立AI評価・第三者レビューではない。教材全章を網羅せず、外部出典の独立検証も行っていない。",
+    "validated_at": "2026-09-19T11:56:48.616931+00:00",
+    "results": [
+      {
+        "question_id": "pet-tac-comparison:thickness-cubed:free_response:1",
+        "pass": true,
+        "reason": "D式の等方・均質薄板と共通材料・νの条件を保持。厚み比2の3乗を計算し8倍を確認。",
+        "question_hash": "00f116a5e56a60d702820ebc6647538813851c627a139f1896f8a527df1634b4"
+      },
+      {
+        "question_id": "pet-tac-comparison:surface-strain:free_response:1",
+        "pass": true,
+        "reason": "50 µmを0.050 mmへ換算し半径2 mmの2倍で割ると0.0125。百分率1.25％と多層補正の注意が原文に一致。",
+        "question_hash": "409d0051965ff3c5d12bfcd60c5f30f4424e026a8129f48b8cbab18422d170ac"
+      },
+      {
+        "question_id": "pet-tac-comparison:retardation-units:free_response:1",
+        "pass": true,
+        "reason": "原文の同数値の計算例と照合。50,000 nmに0.002を掛け100 nm。実測値の断定なし。",
+        "question_hash": "c3fd0a72e79b5cd2ff02bdbc8f5bf0e866041b96ac9a4848e40d83d5277652af"
+      },
+      {
+        "question_id": "pet-tac-comparison:yield-cost:free_response:1",
+        "pass": true,
+        "reason": "原文の120/0.80を再計算し150円/m²を確認。相場や全費用の見積もりと誤認しない限定がある。",
+        "question_hash": "f7b630e3d75085efb12d94615700c86943e2e3e0fea6d1209cac8c6bdf37d398"
+      }
+    ],
+    "path_migration": {
+      "from": "51_仕事/10_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+      "to": "71_勉強/05_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+      "verified_at": "2026-09-20T00:16:30.120540+00:00",
+      "verification": "移動前後の原文バイト・抽出本文ハッシュ・根拠アンカーが一致。問題文・解答・根拠引用・ID・revisionは変更せず、参照パスのみ更新。"
+    }
+  }
+}

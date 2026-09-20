@@ -249,10 +249,10 @@
     },
     {
       "lesson_id": "sputtering-learning-plan",
-      "source_path": "51_仕事/05_スパッタリング学習設計/05_スパッタリング学習設計_guide.html",
+      "source_path": "71_勉強/01_スパッタリング学習設計/05_スパッタリング学習設計_guide.html",
       "title": "スパッタリング実務｜学習項目・引継ぎ設計",
       "categories": [
-        "51_仕事"
+        "71_勉強"
       ],
       "important": false,
       "status": "active",
@@ -268,10 +268,10 @@
     },
     {
       "lesson_id": "ceramics-engineering",
-      "source_path": "51_仕事/06_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+      "source_path": "71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
       "title": "セラミックス材料工学｜全54章・設計書",
       "categories": [
-        "51_仕事"
+        "71_勉強"
       ],
       "important": false,
       "status": "active",
@@ -350,10 +350,10 @@
     },
     {
       "lesson_id": "antireflection-11b",
-      "source_path": "51_仕事/07_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+      "source_path": "71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
       "title": "反射防止膜の光学入門｜11Bスタイル版",
       "categories": [
-        "51_仕事"
+        "71_勉強"
       ],
       "important": false,
       "status": "active",
@@ -384,10 +384,10 @@
     },
     {
       "lesson_id": "antireflection-introduction",
-      "source_path": "51_仕事/08_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+      "source_path": "71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
       "title": "反射防止膜の光学入門｜大学生向け",
       "categories": [
-        "51_仕事"
+        "71_勉強"
       ],
       "important": false,
       "status": "active",
@@ -474,7 +474,7 @@
       "source_path": "content/reactive-sputtering-pressure/index.html",
       "title": "スパッタ圧力と膜質",
       "categories": [
-        "51_仕事"
+        "71_勉強"
       ],
       "important": false,
       "status": "active",
@@ -540,10 +540,10 @@
     },
     {
       "lesson_id": "pet-tac-comparison",
-      "source_path": "51_仕事/10_PETとTACの比較/260919_PETとTACの比較_学習版.html",
+      "source_path": "71_勉強/05_PETとTACの比較/260919_PETとTACの比較_学習版.html",
       "title": "PETとTACの比較｜学習版",
       "categories": [
-        "51_仕事"
+        "71_勉強"
       ],
       "important": false,
       "status": "active",
@@ -575,10 +575,10 @@
     },
     {
       "lesson_id": "hardcoat-ar-design",
-      "source_path": "51_仕事/11_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
+      "source_path": "71_勉強/06_ハードコートとAR積層設計/260919_ハードコートとAR積層設計_学習版.html",
       "title": "ハードコートとAR積層設計｜学習版",
       "categories": [
-        "51_仕事"
+        "71_勉強"
       ],
       "important": false,
       "status": "active",
@@ -632,10 +632,10 @@
     },
     {
       "lesson_id": "relationship-communication",
-      "source_path": "99_その他/04_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
+      "source_path": "71_勉強/08_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
       "title": "恋愛・コミュニケーション心理学｜学習版",
       "categories": [
-        "99_その他"
+        "71_勉強"
       ],
       "important": false,
       "status": "active",
@@ -1203,16 +1203,16 @@
   "reviews": {
     "fe-general": "data/fe-general-ec62258b9b73fd2a977237c93f0e1b6d92cb4b774f54bbf007ad07b3158c581a.json",
     "sputtering-pressure": "data/sputtering-pressure-44011886dc91769aa2d5ddcef73864295e6d513d3047b20c916a005258e94b27.json",
-    "ceramics-engineering": "data/ceramics-engineering-287a4fbdcc835de15f171bd0ff1c315951b4eba32ba7c7efacea78cd69ce412b.json",
-    "antireflection-introduction": "data/antireflection-introduction-674f7526e5196f6225df1996b50838ad62175dfc8d9b1855d1d1a23cd147d585.json",
-    "antireflection-11b": "data/antireflection-11b-fb540c8b4ee14eeb85431462a60aca494f2b6a05b3e12d42a6042863152f7c7e.json",
+    "ceramics-engineering": "data/ceramics-engineering-5faa063b89fcc2207a524cea3ef52b4031fe138203d3c17e463c4ada5fc7e81d.json",
+    "antireflection-introduction": "data/antireflection-introduction-b7509d8bf0e5b554f36ca28aeb3cc6c2900974fc87221cd1912029fa2f6a600f.json",
+    "antireflection-11b": "data/antireflection-11b-e2dc34e18675b2cc1144a20526f0137b3e1ac6ff8e8d9e388e37fdd789e56afd.json",
     "ai-business-plans": "data/ai-business-plans-50b701891b8cd60404ffc8ece28b95a463709a4b65f2abc5159b50211f8619ff.json",
     "ai-news-radar-20260914": "data/ai-news-radar-20260914-8282236a3d18b608e9979b52eab967587d3bc2f03e0708cc245f0ed912688b4b.json",
     "expired-patent-mining": "data/expired-patent-mining-1f6aeabb6a2e208f20436ff67423610f932951ba7d069dfa9ee75e5259447e68.json",
     "astra-learning-html": "data/astra-learning-html-177d57b1bd69f6ffe8220928d1444e50506e57fbe0011de0c95f17bc1a93f898.json",
     "astra-prompt-conversion": "data/astra-prompt-conversion-fb0a9fdbf645f54348912e6601c23306c400bceb6e5b6f2090cf194381b71a95.json",
-    "pet-tac-comparison": "data/pet-tac-comparison-cc0028b7eb2bdb19b972bd099afcbca55fc4a150d8dab34ffa68189ada052d7c.json",
-    "hardcoat-ar-design": "data/hardcoat-ar-design-681f11bcf79a21676cc4d6695c90d38edcdc05543a3fa283aed7efb2e727369b.json",
-    "relationship-communication": "data/relationship-communication-94b13bc07a89a2d477448f44daf746425a1b2c73f5409323b4ae01d588521e7b.json"
+    "pet-tac-comparison": "data/pet-tac-comparison-734d12c85ee361f1148cf2927e8636f1e9e2de12b58b2b63eeeb6644dd78db60.json",
+    "hardcoat-ar-design": "data/hardcoat-ar-design-12a2131870f9339556683f0064cac91465df6b8f0c5c616dc41c9274b955b663.json",
+    "relationship-communication": "data/relationship-communication-1e83d2353ac489f0a6b1c85c70af5b908eb89b3c56defac5bb0960d3e6a3d7b3.json"
   }
 }

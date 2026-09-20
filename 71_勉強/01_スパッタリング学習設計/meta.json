@@ -2,12 +2,14 @@
   "schema_version": "1.0",
   "id": "sputtering-curriculum-v1",
   "title": "スパッタリング実務｜学習項目・引継ぎ設計",
-  "type": "reference",
-  "category": "51_仕事",
+  "type": "plan",
+  "category": "71_勉強",
   "subcategory": "スパッタリング実務",
   "summary": "12分野・36章・216項目の学習カリキュラムと引継ぎ設計。",
   "tags": [
-    "仕事"
+    "スパッタリング",
+    "学習計画",
+    "薄膜"
   ],
   "status": "active",
   "version": null,
