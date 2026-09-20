@@ -34,7 +34,7 @@ class LearningTests(unittest.TestCase):
         self.folder = self.root / 'content/reactive-sputtering-pressure'
         self.meta = json.loads((self.folder / 'meta.json').read_text(encoding='utf-8'))
         # Fixtures start unpublished independently of the real article's release state.
-        self.meta.update(status='draft', publish=False)
+        self.meta.update(status='draft', publish=False, category='51_仕事')
         self.save()
 
     def write(self, name, content):

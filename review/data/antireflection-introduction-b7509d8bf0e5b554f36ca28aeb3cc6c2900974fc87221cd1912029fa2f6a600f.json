@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "lesson_id": "antireflection-introduction",
+  "content_hash": "fb275dd0805c9f99d499e992a99487ceb570a48ce5db1ad35b07425451858f7a",
+  "generated_at": "2026-09-19T11:18:22.411447+00:00",
+  "questions": [
+    {
+      "question_id": "antireflection-introduction:ar-principle:reveal:1",
+      "concept_key": "ar-principle",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "AR膜で複数の反射波を弱め合せるために揃える、振幅と位相の条件は？",
+      "answer": "振幅を等しくし、位相を逆にする。",
+      "explanation": "反射波の電場を干渉させて弱めます。",
+      "source": {
+        "path": "71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+        "anchor": "#map",
+        "evidence": "振幅が等しく・位相が逆になるように重ねる"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "antireflection-introduction:amplitude-intensity:choice:1",
+      "concept_key": "amplitude-intensity",
+      "revision": 1,
+      "type": "choice",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "同じ条件で電場振幅が2倍になると、光の強度は何倍？",
+      "answer": "d",
+      "explanation": "強度は電場振幅の絶対値の二乗に比例します。",
+      "source": {
+        "path": "71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+        "anchor": "#wave",
+        "evidence": "振幅が2倍なら、強度は4倍。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true,
+      "choices": [
+        {
+          "id": "a",
+          "text": "1倍"
+        },
+        {
+          "id": "b",
+          "text": "2倍"
+        },
+        {
+          "id": "c",
+          "text": "3倍"
+        },
+        {
+          "id": "d",
+          "text": "4倍"
+        }
+      ]
+    },
+    {
+      "question_id": "antireflection-introduction:frequency-boundary:true_false:1",
+      "concept_key": "frequency-boundary",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "透明媒質の界面を越えても、光の周波数は同じである。",
+      "answer": true,
+      "explanation": "屈折率に応じて位相速度・波長は変わりますが、周波数は同じです。",
+      "source": {
+        "path": "71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+        "anchor": "#wave",
+        "evidence": "周波数は界面を越えても同じです。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "antireflection-introduction:negative-reflection:reveal:1",
+      "concept_key": "negative-reflection",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "電場反射係数rの負号は、何を意味しますか？",
+      "answer": "電場のπ rad（180°）の位相反転",
+      "explanation": "負号は位相を表します。反射率が負になるという意味ではありません。",
+      "source": {
+        "path": "71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+        "anchor": "#fresnel",
+        "evidence": "これは電場の山が谷へ反転する、すなわち π rad（180°）の位相反転 を表します。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "antireflection-introduction:quarter-wave:fill_blank:1",
+      "concept_key": "quarter-wave",
+      "revision": 1,
+      "type": "fill_blank",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "垂直入射のλ/4膜で、物理膜厚dを真空波長λ₀と屈折率n₁で表す式は？",
+      "answer": "d = λ₀/(4n₁)",
+      "explanation": "光学膜厚n₁dをλ₀/4にする条件です。",
+      "source": {
+        "path": "71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+        "anchor": "#interference",
+        "evidence": "d = λ₀/(4n₁)"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "antireflection-introduction:mgf2-residual:free_response:1",
+      "concept_key": "mgf2-residual",
+      "revision": 1,
+      "type": "free_response",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "教材のMgF₂単層膜の例で、位相条件を満たしても反射率が0%にならないのはなぜ？",
+      "answer": "理想屈折率1.233に対してMgF₂は1.38なので、振幅条件が完全には一致しないため。",
+      "explanation": "位相条件と振幅条件の両方が必要であることを確認します。",
+      "source": {
+        "path": "71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+        "anchor": "#single",
+        "evidence": "理想屈折率1.233よりMgF₂の1.38が高いため、位相条件は満たしても振幅条件が完全ではなく、0%にはなりません。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（作成者による原文再照合）",
+    "validated_at": "2026-09-19T11:21:07.963235+00:00",
+    "limitations": "同じ作成者による照合であり、独立したAI・第三者レビューではありません。教材全体の網羅問題ではなく初期問題です。時点依存の資料は当該資料の読解として扱い、外部情報の最新性は保証しません。",
+    "results": [
+      {
+        "question_id": "antireflection-introduction:ar-principle:reveal:1",
+        "question_hash": "0b375240e31eddd5dcbe501c2cfc1ea5864f3389152bb0060b2ef05cad459759",
+        "reason": "反射波の電場を干渉させて弱めます。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-introduction:amplitude-intensity:choice:1",
+        "question_hash": "a17ab11387ea6a4609063b43b88ecb218335e876d0657cc1060522b76f655cc0",
+        "reason": "強度は電場振幅の絶対値の二乗に比例します。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-introduction:frequency-boundary:true_false:1",
+        "question_hash": "0018a9c342f13047237a04e3533b5a454355289f95e163fc4bdcde8f677d1cd3",
+        "reason": "屈折率に応じて位相速度・波長は変わりますが、周波数は同じです。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-introduction:negative-reflection:reveal:1",
+        "question_hash": "ec283b4286b1cdcc3889d49a47185894e70c8665cb1932d01dadb3b2123c9983",
+        "reason": "負号は位相を表します。反射率が負になるという意味ではありません。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-introduction:quarter-wave:fill_blank:1",
+        "question_hash": "ea443bdd72003c29b69d5519b8f486365c1b9877a003829fcdcc4c709f692e26",
+        "reason": "光学膜厚n₁dをλ₀/4にする条件です。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-introduction:mgf2-residual:free_response:1",
+        "question_hash": "e1b296432c351903e3f95a44497306417dbc625bfd9af93ad2db46ad2054d33f",
+        "reason": "位相条件と振幅条件の両方が必要であることを確認します。",
+        "pass": true
+      }
+    ],
+    "path_migration": {
+      "from": "51_仕事/08_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+      "to": "71_勉強/04_反射防止膜光学入門/反射防止膜_光学入門_大学生向け-1.html",
+      "verified_at": "2026-09-20T00:16:30.099930+00:00",
+      "verification": "移動前後の原文バイト・抽出本文ハッシュ・根拠アンカーが一致。問題文・解答・根拠引用・ID・revisionは変更せず、参照パスのみ更新。"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "id": "pet-tac-comparison",
+  "title": "PETとTACの比較｜学習版",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "材料・表面技術",
+  "summary": "PETとTACの製法、機械特性、熱・水分、光学特性、費用を6章で比較する教材。HC・AR基材の選定に向け、保証値・比較例・計算上の仮定を区別して学ぶ。",
+  "tags": [
+    "PET",
+    "TAC",
+    "光学フィルム",
+    "材料比較"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-19",
+    "updated": null
+  },
+  "files": {
+    "source": "260919_PETとTACの比較_学習版.html",
+    "guide": "260919_PETとTACの比較_学習版.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "15f5659bb5939721cafd4a73f4e0011921775ba24c14f1036daa71bb2d6e8f98",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260919_PETとTACの比較_学習版.html": "47f47fe08f9f1e4127361e03c2e08416f1cb80d16ee9706c7632806a4a5e9f9d"
+    },
+    "output_sha256": {
+      "260919_PETとTACの比較_学習版.html": "47f47fe08f9f1e4127361e03c2e08416f1cb80d16ee9706c7632806a4a5e9f9d"
+    }
+  }
+}

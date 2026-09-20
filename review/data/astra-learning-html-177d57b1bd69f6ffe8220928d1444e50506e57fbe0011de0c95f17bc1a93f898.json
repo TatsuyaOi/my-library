@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "lesson_id": "astra-learning-html",
+  "content_hash": "453747510ce84a6a9175a7d406310436b6274cdf3a18b3dbcd538b040e8ce7bb",
+  "generated_at": "2026-09-19T11:56:06.084475+00:00",
+  "questions": [
+    {
+      "question_id": "astra-learning-html:task-scope:free_response:1",
+      "concept_key": "task-scope",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "この教材では、プロンプト自体の改善を依頼された場合、学習HTMLも作成することになっていますか？",
+      "answer": "学習HTMLは作らず、実行指示のMDを完成させる。",
+      "explanation": "依頼された作業種別を区別し、プロンプト改善を教材作成へ拡大しない。",
+      "source": {
+        "path": "01_プロンプト/32_学習HTML作成Astra/学習HTML作成_Astra_guide.html",
+        "anchor": "#source-text",
+        "evidence": " - 既存HTMLへの適用を依頼された場合は、そのファイルを基に改訂する。 - プロンプトそのものの改訂を依頼された場合は、制作指示のMDだけを改訂し、教材HTMLを作らない。 - 旧版の「全図を独自SVG」「写真0点」「図解アニメーションも一律禁止」などの設定を自動的に引き継がない。 - ファイルの存在、内容、利用権限、調査結果を推測で補わない。提示されていない参考資料への依存を作らない。 - 本文内の「7.6節」等は、各英語見出しの下に残した番号付き要件を指す。 ## 2. 入力と既定値 | 入力 | 既定値・扱い | |---|---| | テーマ・目的 | 必須。会話・添付から特定できれば再質問しない | | 作業種別 | 新規作成／既存改訂／プロンプト改訂を依頼から判定 | | 学習モード | 自動判定／一般／用語学習／混合 | | 対象読者 | 大学生程度の独習者。対象分野は初学者 | | 到達目標 | 未指定なら、説明・比較・適用など3〜5項目 | | 指定用語・範囲 | 指定語の漏れと対象外項目を管理 | | 参考資料 | 内容根拠／デザイン参考／両"
+      },
+      "tags": [
+        "学習HTML作成プロンプト｜Astra構成"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "astra-learning-html:question-count:free_response:1",
+      "concept_key": "question-count",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "この教材の既定値では、章頭と章末の問題数はそれぞれ何問ですか？",
+      "answer": "章頭3〜5問、章末5〜8問。",
+      "explanation": "章頭の確認と章末の復習で、指定された問題数が異なる。",
+      "source": {
+        "path": "01_プロンプト/32_学習HTML作成Astra/学習HTML作成_Astra_guide.html",
+        "anchor": "#source-text",
+        "evidence": "量・学習時間 | 到達目標に必要な量。無断で要約版にしない | | 問題量 | 各章頭3〜5問、章末5〜8問 | | 閲覧環境 | スマートフォン縦画面、次いでPC | | 納品形式 | UTF-8の単一HTML、主要内容・操作はオフライン | | 利用目的 | 個人の独習用。Web画像の探索・取得・組み込みを希望。公開・再配布用とは区別する | | 公開 | 公開・配備・外部送信は明示依頼がある場合だけ | | 図の方向性 | 図鑑・メーカー技術解説に相当する、形状が明瞭で完成度の高い図。実物写真＋技術図＋日本語解説を基本とする | | 外部素材 | 探索・比較を標準工程とし、個別の利用条件を確認できる良質な素材を優先採用 | | 写真 | 実物の外観・質感・規模が理解を助ける箇所で採用を検討。理由なく写真0点に固定しない | | 生成イラスト | 外観・導入・概念の補助に使用可。精密図や実物写真の代用にはしない | | 動く図解 | 機構の動作・流れ・時間変化の理解が改善する箇所で採用。無音、初期停止、再生・一時停止・段階送り・リセットを基本とする | | 操作"
+      },
+      "tags": [
+        "学習HTML作成プロンプト｜Astra構成"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "astra-learning-html:offline-delivery:free_response:1",
+      "concept_key": "offline-delivery",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "この教材が指定する納品形式と、主要内容・操作の利用環境は？",
+      "answer": "UTF-8の単一HTML。主要内容・操作はオフラインで利用する。",
+      "explanation": "単にHTMLへのリンクを渡すだけでなく、単一ファイルで主要な学習内容を使えることが目標。",
+      "source": {
+        "path": "01_プロンプト/32_学習HTML作成Astra/学習HTML作成_Astra_guide.html",
+        "anchor": "#source-text",
+        "evidence": " | | 閲覧環境 | スマートフォン縦画面、次いでPC | | 納品形式 | UTF-8の単一HTML、主要内容・操作はオフライン | | 利用目的 | 個人の独習用。Web画像の探索・取得・組み込みを希望。公開・再配布用とは区別する | | 公開 | 公開・配備・外部送信は明示依頼がある場合だけ | | 図の方向性 | 図鑑・メーカー技術解説に相当する、形状が明瞭で完成度の高い図。実物写真＋技術図＋日本語解説を基本とする | | 外部素材 | 探索・比較を標準工程とし、個別の利用条件を確認できる良質な素材を優先採用 | | 写真 | 実物の外観・質感・規模が理解を助ける箇所で採用を検討。理由なく写真0点に固定しない | | 生成イラスト | 外観・導入・概念の補助に使用可。精密図や実物写真の代用にはしない | | 動く図解 | 機構の動作・流れ・時間変化の理解が改善する箇所で採用。無音、初期停止、再生・一時停止・段階送り・リセットを基本とする | | 操作型教材・3D | 学習効果が明確な箇所だけ。図解アニメーションと数理シミュレーションを区別する | | 実写"
+      },
+      "tags": [
+        "学習HTML作成プロンプト｜Astra構成"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "astra-learning-html:verification-honesty:free_response:1",
+      "concept_key": "verification-honesty",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "この教材では、利用できない機能や未検証の表示について、どのように報告すべきですか？",
+      "answer": "利用できない機能や権限不足を隠さず、未検証のものを完成検証済みと呼ばない。",
+      "explanation": "成果物の完成度と、実施できた検証の範囲を区別する。",
+      "source": {
+        "path": "01_プロンプト/32_学習HTML作成Astra/学習HTML作成_Astra_guide.html",
+        "anchor": "#source-text",
+        "evidence": "、欠陥修正、保存まで実施してください。ただし利用不能な機能や権限の不足を隠さず、未検証のものを完成検証済みと呼ばないでください。 成功とは、指定範囲を学べる本文・問題・図表が揃い、実物写真や専門図解が明瞭に読め、動きが有効な箇所を操作して理解でき、単一HTMLを保存してオフラインで利用できる状態です。図の品質は素材の出所や自作かどうかではなく、後述する正確性・造形・実表示の可読性で判断してください。 # Context 利用目的は個人の独習です。テーマ・資料・既存HTML・今回の追加指示を会話や添付から読み取ってください。本指示はガソリン専用ではなく、材料、装置、科学、その他の学習テーマにも適用できます。 - テーマと資料から新規HTMLを作る場合は、新規制作として実行する。 - 既存HTMLへの適用を依頼された場合は、そのファイルを基に改訂する。 - プロンプトそのものの改訂を依頼された場合は、制作指示のMDだけを改訂し、教材HTMLを作らない。 - 旧版の「全図を独自SVG」「写真0点」「図解アニメーションも一律禁止」などの設定を自動的に引き継がない。 - ファ"
+      },
+      "tags": [
+        "学習HTML作成プロンプト｜Astra構成"
+      ],
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（原文との編集照合）",
+    "limitations": "同じ作成者による原文照合。独立AI評価・第三者レビューではない。教材全章を網羅せず、外部出典の独立検証も行っていない。",
+    "validated_at": "2026-09-19T11:56:48.616931+00:00",
+    "results": [
+      {
+        "question_id": "astra-learning-html:task-scope:free_response:1",
+        "pass": true,
+        "reason": "ContextのMDだけを改訂し教材HTMLを作らないという分岐と一致。編集対象の命令を実行する問題ではない。",
+        "question_hash": "07296f720fe84a09840cd04a4180409b5140e6e5fdb0d852caf69f9f08c6e762"
+      },
+      {
+        "question_id": "astra-learning-html:question-count:free_response:1",
+        "pass": true,
+        "reason": "原文は章内ではなく章頭。候補を章頭3〜5問・章末5〜8問へ修正して再照合した。",
+        "question_hash": "e308c429df75f9803235717c7e0dd4a934bac5e99412c84ce40c5f2b37c71ba9"
+      },
+      {
+        "question_id": "astra-learning-html:offline-delivery:free_response:1",
+        "pass": true,
+        "reason": "既定値表のUTF-8単一HTML・主要内容と操作のオフラインという範囲に一致。全外部リンクのオフライン利用を要求していない。",
+        "question_hash": "cc483a00508c4de18002bba305dfd837dadc113e3d312c7fa630215c24ead869"
+      },
+      {
+        "question_id": "astra-learning-html:verification-honesty:free_response:1",
+        "pass": true,
+        "reason": "完成目標の利用不能・権限不足・未検証の扱いを確認。実施済み検証を捏造しない解答に一致。",
+        "question_hash": "06adb0b5d9abf020841755a6d7a647077de80f5a7e0ff0e0c23e5ce30cdc1d1e"
+      }
+    ]
+  }
+}

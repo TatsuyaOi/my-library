@@ -6,7 +6,7 @@
     "description": "ChatGPT・Codex・HTML生成などで使用するプロンプトと使い方ガイド",
     "accent": "#59636f"
   },
-  "generated_at": "2026-09-19T17:01:43+09:00",
+  "generated_at": "2026-09-19T20:51:00+09:00",
   "items": [
     {
       "title": "My Library対応HTML生成プロンプト 使い方ガイド",
@@ -73,6 +73,35 @@
       "order": 999999,
       "updated": "2026-09-19",
       "file": "28_デュアルHTML生成/デュアルHTML生成マスタープロンプト_11B_MeiryoUI_v2.0.html"
+    },
+    {
+      "title": "プロンプト変換｜Astra構成",
+      "description": "既存プロンプトの目的・数値・制約を保持し、GoalからStop Conditionまでの8項目へ再構成するためのプロンプト。変換対象のタスク自体は実行しない。",
+      "group": "プロンプト設計",
+      "tags": [
+        "プロンプト変換",
+        "要件保持",
+        "Astra"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "33_プロンプト変換Astra/プロンプト変換_Astra_guide.html"
+    },
+    {
+      "title": "学習HTML作成プロンプト｜Astra構成",
+      "description": "日本語の学習HTMLを作成・改訂するためのプロンプト。章構成、問題、図表、動く図解、素材の扱い、表示と操作の検証条件をAstra構成に整理している。",
+      "group": "プロンプト設計",
+      "tags": [
+        "HTML生成",
+        "学習教材",
+        "図解",
+        "Astra"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-19",
+      "file": "32_学習HTML作成Astra/学習HTML作成_Astra_guide.html"
     },
     {
       "title": "学習HTML新規作成・11Bスタイル統合プロンプト v2.0",

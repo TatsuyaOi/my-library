@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "lesson_id": "relationship-communication",
+  "content_hash": "4e2cea4142c9851522348be5fe768feb37933b6635edc41b46089fbbeb0e4c74",
+  "generated_at": "2026-09-19T11:56:06.130477+00:00",
+  "questions": [
+    {
+      "question_id": "relationship-communication:validation-meaning:free_response:1",
+      "concept_key": "validation-meaning",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "バリデーションは、相手の意見にすべて同意することですか？",
+      "answer": "同意とは別。相手の感情や経験が、その人の文脈では理解可能だと伝えること。",
+      "explanation": "すぐに解決策を示す前に、理解を返すという説明が根拠。",
+      "source": {
+        "path": "99_その他/04_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
+        "anchor": "#validation",
+        "evidence": "3. バリデーションと応答性：まず理解を返す 「同意する」と「理解を示す」は別。バリデーションは、相手の感情や経験がその人の文脈では理解可能だと伝えること。 相手： 「最近仕事しんどくて」 すぐ解決： 「転職したら？」 理解から： 「それ毎日続くと結構しんどそうやな。何が一番負担？」"
+      },
+      "tags": [
+        "恋愛・コミュニケーション心理学｜学習版"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "relationship-communication:oars-elements:free_response:1",
+      "concept_key": "oars-elements",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "相談場面で相手の主体性を守る聴き方として、OARSの4要素は何ですか？",
+      "answer": "開かれた質問、強み・努力の承認、反射、要約。",
+      "explanation": "Open Questions、Affirmations、Reflections、Summaries。相手を誘導するための技法として使わない。",
+      "source": {
+        "path": "99_その他/04_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
+        "anchor": "#mi",
+        "evidence": "のではなく、 相談場面で相手の主体性を守る聴き方 としてOARSを参考にする。 OARS 要素 意味 会話例 O Open Questions 開かれた質問 「どういうところが一番しんどい？」 A Affirmations 強み・努力の承認 「それでも続けて対応してるんやな」 R Reflections 反射 「仕事そのものより働き方がしんどいんやな」 S Summaries 要約 「仕事内容は好き。でも忙しさと人間関係が負担、って感じか」"
+      },
+      "tags": [
+        "恋愛・コミュニケーション心理学｜学習版"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "relationship-communication:nvc-request:free_response:1",
+      "concept_key": "nvc-request",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "NVCの4要素と、「お願い」を「要求」にしないための注意点を説明してください。",
+      "answer": "観察→感情→ニーズ→具体的なお願い。相手のNoを許さない圧力にしない。",
+      "explanation": "観察と評価、お願いと要求を分ける。定型句だけで成功する方法とはされていない。",
+      "source": {
+        "path": "99_その他/04_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
+        "anchor": "#nvc",
+        "evidence": "NVC：観察→感情→ニーズ→お願い 非暴力コミュニケーション（NVC）の基本は、評価を混ぜない観察、感情、ニーズ、具体的なお願い。ポイントは「お願い」が 要求（Noを許さない圧力） にならないこと。 図4 NVCの4要素 1 観察 何が起きたか 2 感情 私はどう感じるか 3 ニーズ 何を大事にしているか 4 お願い 具体的に何を頼むか × 「最近LINE冷たいよね」 ○ 「最近、連絡が一日一回くらいの日が増えてて（観察）、少し寂しい（感情）。もう少しつながりを感じたい（ニーズ）。忙しくない日は夜に少し話すのはどう？（お願い）」 NVCは定型句を言えば成功する魔法ではない。観察と評価、お願いと要求を分ける意識が中心。"
+      },
+      "tags": [
+        "恋愛・コミュニケーション心理学｜学習版"
+      ],
+      "manual_override": true
+    },
+    {
+      "question_id": "relationship-communication:attachment-limits:free_response:1",
+      "concept_key": "attachment-limits",
+      "revision": 1,
+      "type": "free_response",
+      "status": "active",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "成人愛着を考える2次元は何ですか？一度の行動で相手を固定分類してよいですか？",
+      "answer": "愛着不安と愛着回避。タイプは理解の補助であり、一度の行動で固定分類する診断には使わない。",
+      "explanation": "連続尺度を模式的に示す枠組みであり、返信頻度だけで判断したり操作ルールへ変換したりしない。",
+      "source": {
+        "path": "99_その他/04_恋愛コミュニケーション心理学/260919_恋愛コミュニケーション心理学_学習版.html",
+        "anchor": "#attachment",
+        "evidence": "絶に敏感になりやすく、回避が高い人は依存や親密さから距離を取りやすい傾向がある。タイプ名は理解の補助であって、人を固定分類する診断ではない。 図1 成人愛着を2次元でみる模式図 低不安 × 低回避 安定に近い 親密さを受け入れやすく、相手の反応を過度に脅威化しにくい。 高不安 × 低回避 不安が前面に出やすい 返信や拒絶の手掛かりに注意が向きやすい。 低不安 × 高回避 回避が前面に出やすい 自立を重視し、依存・親密さを抑えやすい。 高不安 × 高回避 近づきたい／怖いが併存しやすい 接近と回避が文脈で揺れやすい。 ← 低い 愛着不安 高い → ← 低い 愛着回避 高い → 模式図。実際の測定は連続尺度で行われることが多く、4象限は理解補助。人を一度の行動で分類しない。 具体的な用法 「返信は遅いが、会うとよく話す」なら、LINE頻度だけを好意の指標にせず、対面時の行動や予定調整を含めて見る。 避ける使い方 「回避型だから追えば逃げる。だから○日無視する」のような操作ルールに変換しない。"
+      },
+      "tags": [
+        "恋愛・コミュニケーション心理学｜学習版"
+      ],
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（原文との編集照合）",
+    "limitations": "同じ作成者による原文照合。独立AI評価・第三者レビューではない。教材全章を網羅せず、外部出典の独立検証も行っていない。",
+    "validated_at": "2026-09-19T11:56:48.617931+00:00",
+    "results": [
+      {
+        "question_id": "relationship-communication:validation-meaning:free_response:1",
+        "pass": true,
+        "reason": "理解を示すことと同意の区別を3節で確認。全意見への同意を求めていない。",
+        "question_hash": "8163210a2c3c72d2b11c768a226fbdfc597b31e0565e6663ed0a80c49da5b33c"
+      },
+      {
+        "question_id": "relationship-communication:oars-elements:free_response:1",
+        "pass": true,
+        "reason": "OARS表の4要素を順番に照合。相手の主体性を守るという原文の用途制限を保持。",
+        "question_hash": "b73be6779a6d070b73988e33d9f4ac809726f65016fc43c3cc1cd6329efa242c"
+      },
+      {
+        "question_id": "relationship-communication:nvc-request:free_response:1",
+        "pass": true,
+        "reason": "観察・感情・ニーズ・お願いの順序とNoを許さない圧力を避ける条件を照合。成功を保証していない。",
+        "question_hash": "1e908bc41e752ecc52818c2039f2b524384149184a0fc25b8353ffc8c9cada86"
+      },
+      {
+        "question_id": "relationship-communication:attachment-limits:free_response:1",
+        "pass": true,
+        "reason": "不安・回避の2次元、連続尺度と理解補助、一度の行動で分類しないという同節の記述を照合。診断・操作への拡張なし。",
+        "question_hash": "b48c3fb11151eb12ede42e46ac787669e3e20f69fa5d1e7e3f4df7cf2273f193"
+      }
+    ]
+  }
+}

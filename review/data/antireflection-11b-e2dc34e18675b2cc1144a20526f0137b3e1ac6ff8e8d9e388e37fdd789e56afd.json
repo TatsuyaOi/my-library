@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "lesson_id": "antireflection-11b",
+  "content_hash": "75bfc0375a443ddbd6748fa2dee7e2c0d4370253b7a2e25d275bc6e83f24cdae",
+  "generated_at": "2026-09-19T11:18:22.607320+00:00",
+  "questions": [
+    {
+      "question_id": "antireflection-11b:design-variables:reveal:1",
+      "concept_key": "design-variables",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "多層膜化すると、各層について設計変数になる2つの量は？",
+      "answer": "屈折率nと膜厚d",
+      "explanation": "各層の屈折率と膜厚を調整して、複数波長や角度などの目標を整えます。",
+      "source": {
+        "path": "71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+        "anchor": "#multilayer",
+        "evidence": "各層の n・d が設計変数"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "antireflection-11b:matrix-order:fill_blank:1",
+      "concept_key": "matrix-order",
+      "revision": 1,
+      "type": "fill_blank",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "各層の特性行列は、光の何順に掛けますか？",
+      "answer": "入射順",
+      "explanation": "層の並び順を反映して、積層全体の応答を計算します。",
+      "source": {
+        "path": "71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+        "anchor": "#multilayer",
+        "evidence": "各層の2×2行列を入射順に掛ければ"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "antireflection-11b:stack-universal:true_false:1",
+      "concept_key": "stack-universal",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "多層膜の最適な順序と膜厚は、基材・波長帯・入射側・目標色によって変わる。",
+      "answer": true,
+      "explanation": "図は層の役割を示す概念図であり、万能な積層順序ではありません。",
+      "source": {
+        "path": "71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+        "anchor": "#multilayer",
+        "evidence": "最適順序と膜厚は、基材・波長帯・入射側・目標色によって変わります。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "antireflection-11b:absorbing-ar:true_false:1",
+      "concept_key": "absorbing-ar",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "吸収性ARで反射率が低ければ、透過率は必ず高い。",
+      "answer": false,
+      "explanation": "吸収性ARは特定条件で低反射にできますが、低反射と高透過は同じ条件ではありません。",
+      "source": {
+        "path": "71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+        "anchor": "#multilayer",
+        "evidence": "代表的なAR構造 表は横にスクロールできます 構造 強み 弱み・用途 単層 λ/4 簡単、低コスト、原理が明瞭 狭帯域・角度依存。眼鏡、センサー窓などの基本設計。 離散多層膜 広帯域化、色・角度の最適化が可能 膜厚誤差、応力、界面増加。カメラ、ディスプレイ、レーザー光学。 屈折率傾斜膜 急な n ジャンプを抑え、広帯域・広角化しやすい 連続組成・空隙率制御が難しい。共蒸着、反応性制御、ナノ多孔質。 モスアイ構造 波長より十分小さい凹凸で実効 n を連続変化 汚れ、機械耐久、金型・加工性。ディスプレイ、太陽電池。 吸収性AR 金属・半導体を含め、特定条件で低反射 透過率は必ずしも高くない。センサー、熱制御、特殊フィルター。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "antireflection-11b:manufacturing-tolerance:free_response:1",
+      "concept_key": "manufacturing-tolerance",
+      "revision": 1,
+      "type": "free_response",
+      "level": "application",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "最低反射率だけで量産向け多層膜を選ぶことの問題点は？",
+      "answer": "膜厚が少しずれるだけで性能が崩れる可能性があるため、膜厚公差や角度・色なども評価する必要がある。",
+      "explanation": "自己採点では最低値だけでなく、製造誤差への強さを評価する点を確認します。",
+      "source": {
+        "path": "71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+        "anchor": "#multilayer",
+        "evidence": "最小値が深くても、少し膜厚がずれるだけで崩れる設計は量産に弱い設計です。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "antireflection-11b:layer-burdens:reveal:1",
+      "concept_key": "layer-burdens",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "教材で挙げられている、多層化で増える負担を2つ挙げてください。",
+      "answer": "界面数、応力、吸収、膜厚誤差のうち2つ",
+      "explanation": "自由度が増える一方で、界面や製造誤差などの負担も増えます。",
+      "source": {
+        "path": "71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+        "anchor": "#multilayer",
+        "evidence": "界面数、応力、吸収、膜厚誤差も増えます。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（作成者による原文再照合）",
+    "validated_at": "2026-09-19T11:21:07.995725+00:00",
+    "limitations": "同じ作成者による照合であり、独立したAI・第三者レビューではありません。教材全体の網羅問題ではなく初期問題です。時点依存の資料は当該資料の読解として扱い、外部情報の最新性は保証しません。",
+    "results": [
+      {
+        "question_id": "antireflection-11b:design-variables:reveal:1",
+        "question_hash": "63a017e2eb166e83a44b508687f4918ae7bdc4daf467f60d57aeb2ac40ea2798",
+        "reason": "各層の屈折率と膜厚を調整して、複数波長や角度などの目標を整えます。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-11b:matrix-order:fill_blank:1",
+        "question_hash": "02edc7e730f6391a6a30f47b236237bb456d330b4abc35e52afc2ae9bbaf18f8",
+        "reason": "層の並び順を反映して、積層全体の応答を計算します。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-11b:stack-universal:true_false:1",
+        "question_hash": "b268f8e03eaffc27f4af55ae3501b28277a14a69e1e22469e3c8d8d81afb02d6",
+        "reason": "図は層の役割を示す概念図であり、万能な積層順序ではありません。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-11b:absorbing-ar:true_false:1",
+        "question_hash": "6368a82879c84c8a9baaef98e89be56eea1eb457d877ab7cc5f400914f569aea",
+        "reason": "吸収性ARは特定条件で低反射にできますが、低反射と高透過は同じ条件ではありません。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-11b:manufacturing-tolerance:free_response:1",
+        "question_hash": "f53bd951724c921744a00e31b5f28e3f9b507a74b0e35658eef552aa07f92066",
+        "reason": "自己採点では最低値だけでなく、製造誤差への強さを評価する点を確認します。",
+        "pass": true
+      },
+      {
+        "question_id": "antireflection-11b:layer-burdens:reveal:1",
+        "question_hash": "b345ee554279f64cdd47cadf8283529063f1b33367a406f5e50b728fe635bc10",
+        "reason": "自由度が増える一方で、界面や製造誤差などの負担も増えます。",
+        "pass": true
+      }
+    ],
+    "path_migration": {
+      "from": "51_仕事/07_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+      "to": "71_勉強/03_反射防止膜光学11B/反射防止膜_光学入門_11Bスタイル版.html",
+      "verified_at": "2026-09-20T00:16:30.092419+00:00",
+      "verification": "移動前後の原文バイト・抽出本文ハッシュ・根拠アンカーが一致。問題文・解答・根拠引用・ID・revisionは変更せず、参照パスのみ更新。"
+    }
+  }
+}

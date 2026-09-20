@@ -2,12 +2,14 @@
   "schema_version": "1.0",
   "id": "ar-optics-11b",
   "title": "反射防止膜の光学入門｜11Bスタイル版",
-  "type": "reference",
-  "category": "51_仕事",
-  "subcategory": "反射防止膜の光学入門",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "光学・薄膜",
   "summary": "電磁波・界面反射・薄膜干渉・多層膜設計を学ぶ教材。",
   "tags": [
-    "仕事"
+    "光学",
+    "反射防止膜",
+    "薄膜干渉"
   ],
   "status": "active",
   "version": null,

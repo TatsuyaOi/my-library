@@ -2,12 +2,15 @@
   "schema_version": "1.0",
   "id": "qualification-schedule-20260817",
   "title": "3資格の応募・受験・勉強開始スケジュール",
-  "type": "reference",
-  "category": "99_その他",
-  "subcategory": "3資格の応募・受験・勉強開始スケジュール",
+  "type": "plan",
+  "category": "71_勉強",
+  "subcategory": "資格・学習計画",
   "summary": "2026年8月17日時点の簿記3級・危険物甲種・統計検定2級の比較図。",
   "tags": [
-    "その他"
+    "学習計画",
+    "簿記3級",
+    "危険物甲種",
+    "統計検定2級"
   ],
   "status": "active",
   "version": null,

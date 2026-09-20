@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "lesson_id": "ceramics-engineering",
+  "content_hash": "6c4344351a9042d7c685d1fee318110841bc934426af059abce187670fc2035b",
+  "generated_at": "2026-09-19T11:18:22.183116+00:00",
+  "questions": [
+    {
+      "question_id": "ceramics-engineering:hardness-toughness:true_false:1",
+      "concept_key": "hardness-toughness",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "セラミックスの硬度と破壊靭性は、別の指標として評価する必要がある。",
+      "answer": true,
+      "explanation": "弾性的に硬くても亀裂先端の応力を塑性変形で逃がしにくい場合があり、別々に評価します。",
+      "source": {
+        "path": "71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+        "anchor": "#ch1",
+        "evidence": "硬度と破壊靭性は別の指標"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ceramics-engineering:valence-electrons:fill_blank:1",
+      "concept_key": "valence-electrons",
+      "revision": 1,
+      "type": "fill_blank",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "主として結合や反応に関わる電子を何と呼びますか？",
+      "answer": "価電子",
+      "explanation": "電子の占有状態や移動しやすさは、吸収・電気伝導にも関係します。",
+      "source": {
+        "path": "71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+        "anchor": "#ch2",
+        "evidence": "価電子とは主として結合や反応に関わる電子である。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ceramics-engineering:oxidation-formal:true_false:1",
+      "concept_key": "oxidation-formal",
+      "revision": 1,
+      "type": "true_false",
+      "level": "understanding",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "酸化数は、実際の電子密度が完全に整数電荷へ分離したことを意味する。",
+      "answer": false,
+      "explanation": "酸化数は形式的な帳簿です。実際の電子密度の分布そのものと同一視しません。",
+      "source": {
+        "path": "71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+        "anchor": "#ch2",
+        "evidence": "酸化数は、結合電子を一定の規則で割り振った形式的な数である。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ceramics-engineering:polymorphism:reveal:1",
+      "concept_key": "polymorphism",
+      "revision": 1,
+      "type": "reveal",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "同じ組成で異なる結晶構造を取ることを何と呼びますか？",
+      "answer": "多形",
+      "explanation": "化学式が同じでも結晶構造が違う場合があるため、相組成も確認します。",
+      "source": {
+        "path": "71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+        "anchor": "#ch5",
+        "evidence": "多形は同じ組成で異なる結晶構造を取ることである。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    },
+    {
+      "question_id": "ceramics-engineering:frenkel-pair:choice:1",
+      "concept_key": "frenkel-pair",
+      "revision": 1,
+      "type": "choice",
+      "level": "basic",
+      "difficulty": 1,
+      "importance": "medium",
+      "question": "Frenkel欠陥を構成する組合せは？",
+      "answer": "c",
+      "explanation": "元のサイトの空孔と、格子間位置にある同種イオンの組合せです。",
+      "source": {
+        "path": "71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+        "anchor": "#ch6",
+        "evidence": "Frenkel欠陥は同種イオンの空孔と格子間イオンの組合せである。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true,
+      "choices": [
+        {
+          "id": "a",
+          "text": "気孔と亀裂"
+        },
+        {
+          "id": "b",
+          "text": "粒界と転位"
+        },
+        {
+          "id": "c",
+          "text": "同種イオンの空孔と格子間イオン"
+        },
+        {
+          "id": "d",
+          "text": "異なる結晶相とガラス相"
+        }
+      ]
+    },
+    {
+      "question_id": "ceramics-engineering:vacancy-mobility:free_response:1",
+      "concept_key": "vacancy-mobility",
+      "revision": 1,
+      "type": "free_response",
+      "level": "understanding",
+      "difficulty": 2,
+      "importance": "medium",
+      "question": "酸素空孔が多ければ、イオン伝導率も必ず高くなると言えますか？理由も答えてください。",
+      "answer": "言えない。欠陥会合や秩序化によって移動度が下がる場合があるため。",
+      "explanation": "自己採点では、欠陥の数と移動度を分けて説明できることを確認します。",
+      "source": {
+        "path": "71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+        "anchor": "#ch6",
+        "evidence": "空孔濃度が高いほど必ず伝導率が高いわけではない。欠陥会合や秩序化は移動度を下げうる。"
+      },
+      "tags": [
+        "51_仕事"
+      ],
+      "status": "active",
+      "manual_override": true
+    }
+  ],
+  "quality": {
+    "method": "source-reviewed",
+    "reviewer": "Codex（作成者による原文再照合）",
+    "validated_at": "2026-09-19T11:21:07.956719+00:00",
+    "limitations": "同じ作成者による照合であり、独立したAI・第三者レビューではありません。教材全体の網羅問題ではなく初期問題です。時点依存の資料は当該資料の読解として扱い、外部情報の最新性は保証しません。",
+    "results": [
+      {
+        "question_id": "ceramics-engineering:hardness-toughness:true_false:1",
+        "question_hash": "0c82a36de7fab459fdcf7c52ea79b7d78634674eecf58546abb8329a977cc6c1",
+        "reason": "弾性的に硬くても亀裂先端の応力を塑性変形で逃がしにくい場合があり、別々に評価します。",
+        "pass": true
+      },
+      {
+        "question_id": "ceramics-engineering:valence-electrons:fill_blank:1",
+        "question_hash": "99bf97e2d9926b94acd32f0cb596a9352f80a372631adfa5a4bf469b96c52a33",
+        "reason": "電子の占有状態や移動しやすさは、吸収・電気伝導にも関係します。",
+        "pass": true
+      },
+      {
+        "question_id": "ceramics-engineering:oxidation-formal:true_false:1",
+        "question_hash": "68b24b5000aed139244cc5856ea29d8903d272c02732d63117744b8dc6eae728",
+        "reason": "酸化数は形式的な帳簿です。実際の電子密度の分布そのものと同一視しません。",
+        "pass": true
+      },
+      {
+        "question_id": "ceramics-engineering:polymorphism:reveal:1",
+        "question_hash": "e59873b5faa0c7278f84ecac75cd992a5c7db5ab6997b1c435a4daf6ab8cd4a3",
+        "reason": "化学式が同じでも結晶構造が違う場合があるため、相組成も確認します。",
+        "pass": true
+      },
+      {
+        "question_id": "ceramics-engineering:frenkel-pair:choice:1",
+        "question_hash": "64e15fcd614da377058c6527bddc12a1200839224fa81863a380a3c7ee7b344a",
+        "reason": "元のサイトの空孔と、格子間位置にある同種イオンの組合せです。",
+        "pass": true
+      },
+      {
+        "question_id": "ceramics-engineering:vacancy-mobility:free_response:1",
+        "question_hash": "1e690fac8719b3bd850d8c0c8f4155b92386d420013a628b02c13bc0bde54b9f",
+        "reason": "自己採点では、欠陥の数と移動度を分けて説明できることを確認します。",
+        "pass": true
+      }
+    ],
+    "path_migration": {
+      "from": "51_仕事/06_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+      "to": "71_勉強/02_セラミックス材料工学/セラミックス材料工学_全54章_11B学習版.html",
+      "verified_at": "2026-09-20T00:16:30.061088+00:00",
+      "verification": "移動前後の原文バイト・抽出本文ハッシュ・根拠アンカーが一致。問題文・解答・根拠引用・ID・revisionは変更せず、参照パスのみ更新。"
+    }
+  }
+}

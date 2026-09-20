@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "hardcoat-ar-design",
+  "title": "ハードコートとAR積層設計｜学習版",
+  "type": "study-note",
+  "category": "71_勉強",
+  "subcategory": "材料・表面技術",
+  "summary": "ハードコートの材料・硬化・評価、20 nmと50 nmのナノシリカ、関連特許、AR積層の屈曲・摺動設計を8章で学ぶ教材。外部写真の内包などに未達事項を残す暫定版。",
+  "tags": [
+    "ハードコート",
+    "AR",
+    "ナノシリカ",
+    "屈曲",
+    "摺動"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-19",
+    "updated": null
+  },
+  "files": {
+    "source": "260919_ハードコートとAR積層設計_学習版.html",
+    "guide": "260919_ハードコートとAR積層設計_学習版.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "8223ff84d97d29d0d05347d69de36d8e5a28c27fdbe9adc8e688307e86118ce5",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260919_ハードコートとAR積層設計_学習版.html": "6dc2b306c364378f144a45c52e1aec10209c94d474d0b310fad4e2e8aa1cbaa7"
+    },
+    "output_sha256": {
+      "260919_ハードコートとAR積層設計_学習版.html": "6dc2b306c364378f144a45c52e1aec10209c94d474d0b310fad4e2e8aa1cbaa7"
+    }
+  }
+}

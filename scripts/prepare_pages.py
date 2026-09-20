@@ -121,6 +121,8 @@ def prepare(root: Path, preview=False):
         if preview:
             add_preview_items(root, stage)
         count = validate_index(stage)
+        from library_moves import export_legacy_urls
+        export_legacy_urls(root, stage)
         (stage / MARKER).write_text('my-library-pages-v1\n', encoding='utf-8')
         destination = root / ('_preview' if preview else '_site')
         if destination.is_symlink():
