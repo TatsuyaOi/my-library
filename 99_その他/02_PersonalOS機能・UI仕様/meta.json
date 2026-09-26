@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "id": "personal-os-spec-v11",
+  "title": "Personal OS｜機能・データ・UI実装仕様 v1.1",
+  "type": "reference",
+  "category": "99_その他",
+  "subcategory": "アプリ開発",
+  "summary": "新規AndroidアプリPersonal OSの機能・データ・実装方針と、3タブ・12画面のUI、アイコン、操作と動きをまとめた仕様資料。HTMLの操作見本とMarkdownの機能仕様を一組として参照する。",
+  "tags": [
+    "Personal OS",
+    "Android",
+    "ToDo",
+    "UI設計",
+    "実装仕様"
+  ],
+  "status": "active",
+  "version": "1.1",
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": "2026-09-26"
+  },
+  "files": {
+    "source": "Personal_OS_Functional_Technical_Spec.md",
+    "guide": "Personal_OS_UI_Interaction_Guide.html",
+    "preview": null,
+    "additional": [
+      "PersonalOS機能・実装仕様_guide.html"
+    ]
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "621b5749540e85ef656676c7d6204747ca629e49f511cdd1988089a5d8f2d9da",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "Personal_OS_Functional_Technical_Spec.md": "a01743dd34fecb5acf42d49eebccfc6d0653c35468f0e800870b3c6f9dffe2d6",
+      "Personal_OS_UI_Interaction_Guide.html": "1534349c34ffa4572ef22c9710128c2bb698f856c7944305eb39e5b064e75265"
+    },
+    "output_sha256": {
+      "Personal_OS_Functional_Technical_Spec.md": "a01743dd34fecb5acf42d49eebccfc6d0653c35468f0e800870b3c6f9dffe2d6",
+      "Personal_OS_UI_Interaction_Guide.html": "1534349c34ffa4572ef22c9710128c2bb698f856c7944305eb39e5b064e75265",
+      "PersonalOS機能・実装仕様_guide.html": "4edb619a48585a4d4d1a00365e269e370e469dff7509f6f062cd224d0e30a5a3"
+    }
+  }
+}

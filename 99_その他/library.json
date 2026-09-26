@@ -6,8 +6,24 @@
     "description": "分類前の資料や、ほかのカテゴリに入らない情報をまとめるライブラリ",
     "accent": "#666666"
   },
-  "generated_at": "2026-09-20T09:19:03+09:00",
+  "generated_at": "2026-09-26T16:41:33+09:00",
   "items": [
+    {
+      "title": "Personal OS｜機能・データ・UI実装仕様 v1.1",
+      "description": "新規AndroidアプリPersonal OSの機能・データ・実装方針と、3タブ・12画面のUI、アイコン、操作と動きをまとめた仕様資料。HTMLの操作見本とMarkdownの機能仕様を一組として参照する。",
+      "group": "アプリ開発",
+      "tags": [
+        "Personal OS",
+        "Android",
+        "ToDo",
+        "UI設計",
+        "実装仕様"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-26",
+      "file": "02_PersonalOS機能・UI仕様/Personal_OS_UI_Interaction_Guide.html"
+    },
     {
       "title": "Lyrics Companion 仮運用引継ぎ",
       "description": "Android Auto向けLyrics Companionのシステム構成、仮運用手順、RC確認項目と今後の計画をまとめた資料。Release署名版の最終導入と長期耐久試験は未確認として記録されている。",
