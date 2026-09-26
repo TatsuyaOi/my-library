@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Nitto オプトロニクス事業 売上マップ｜投資家向け</title>
+<style>
+:root {
+  --bg:#071019; --panel:#0c1723; --panel2:#101e2d; --line:#21364a;
+  --text:#eaf2f8; --muted:#93a7b8; --cyan:#40d9ff; --blue:#6798ff;
+  --green:#46e6a7; --amber:#ffc861; --red:#ff7f8f; --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#061019 0%,#08131d 45%,#071019 100%);color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif;line-height:1.65}
+.wrap{max-width:820px;margin:auto;padding:18px 14px 70px}
+.hero{padding:24px 2px 18px}
+.eyebrow{font-size:12px;letter-spacing:.16em;color:var(--cyan);font-weight:700}
+h1{font-size:29px;line-height:1.25;margin:8px 0 8px;letter-spacing:-.03em}
+.sub{color:var(--muted);font-size:14px}
+.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#0a1622;border-radius:999px;
+padding:6px 10px;font-size:11px;color:#b9cad6;margin:4px 6px 0 0}
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+nav{position:sticky;top:0;z-index:5;margin:0 -14px;padding:8px 14px;background:rgba(7,16,25,.92);backdrop-filter:blur(12px);
+border-top:1px solid #102130;border-bottom:1px solid #102130;overflow:auto;white-space:nowrap}
+nav a{display:inline-block;color:#b8c8d5;text-decoration:none;font-size:12px;padding:7px 10px;border-radius:8px}
+nav a:hover{background:#122234;color:white}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.card{background:linear-gradient(180deg,rgba(18,33,48,.94),rgba(10,23,35,.96));border:1px solid var(--line);border-radius:16px;padding:15px}
+.kpi{min-height:126px}
+.kpi .label{font-size:12px;color:var(--muted)}
+.kpi .num{font-size:27px;font-weight:800;letter-spacing:-.04em;margin-top:7px}
+.kpi .unit{font-size:13px;color:var(--muted);margin-left:4px}
+.kpi .delta{font-size:12px;margin-top:5px}
+.up{color:var(--green)} .down{color:var(--red)} .flat{color:var(--amber)}
+section{margin-top:28px}
+h2{font-size:20px;margin:0 0 11px;letter-spacing:-.02em}
+h3{font-size:15px;margin:0 0 5px}
+.lead{color:#c4d3de;font-size:14px;margin:0 0 13px}
+.note{font-size:12px;color:var(--muted)}
+.callout{border-left:3px solid var(--amber);background:#171a18;padding:12px 13px;border-radius:0 12px 12px 0;font-size:13px;color:#e7e0cc}
+.tree-root{border:1px solid #28506d;background:linear-gradient(135deg,#0b2233,#102238);border-radius:18px;padding:18px;margin-bottom:12px}
+.root-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-end}
+.root-num{font-size:32px;font-weight:850;letter-spacing:-.04em}
+.root-label{font-size:12px;color:var(--muted)}
+.split{display:flex;height:13px;border-radius:999px;overflow:hidden;background:#122130;margin:14px 0 7px}
+.split .a{background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.split .b{background:linear-gradient(90deg,#32d8a0,#68e1bf)}
+.splitlabels{display:flex;justify-content:space-between;color:#b8cbd7;font-size:11px}
+.subseg{position:relative;overflow:hidden}
+.subseg:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--cyan)}
+.subseg.green:before{background:var(--green)}
+.big{font-size:25px;font-weight:800}
+.minirow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px;font-size:12px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:3px 8px;color:#b7cad6}
+.product-grid{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
+.product{background:#0a1620;border:1px solid #1d3143;border-radius:13px;padding:12px}
+.product .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.tag{font-size:10px;padding:3px 7px;border-radius:999px;border:1px solid #2a4358;color:#aec5d4;white-space:nowrap}
+.tag.growth{border-color:#22694f;color:#7cf0bc;background:#0c2a20}
+.tag.weak{border-color:#6b3440;color:#ff9cab;background:#261219}
+.tag.watch{border-color:#695321;color:#ffd77d;background:#241e0e}
+.product p{font-size:12px;color:#aabcc9;margin:5px 0 0}
+.disclosure{font-size:11px;color:#8097a8;margin-top:8px}
+.chart{padding:14px;background:#09151f;border:1px solid var(--line);border-radius:16px}
+.chart-row{display:grid;grid-template-columns:78px 1fr 70px;gap:8px;align-items:center;margin:11px 0}
+.chart-label{font-size:12px;color:#b9ccd8}
+.bar-bg{height:15px;background:#122433;border-radius:999px;overflow:hidden}
+.bar-info{height:100%;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.bar-circ{height:100%;background:linear-gradient(90deg,#38d9a4,#78e3c4)}
+.chart-num{text-align:right;font-size:12px;font-variant-numeric:tabular-nums}
+.year-block{padding:12px 0;border-bottom:1px solid #162a3b}
+.year-block:last-child{border:0}
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin:4px 0 14px;color:#9db2c1;font-size:11px}
+.legend span{display:flex;gap:5px;align-items:center}
+.legend i{width:9px;height:9px;border-radius:2px;display:inline-block}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:14px}
+table{border-collapse:collapse;width:100%;min-width:610px;background:#0a1620}
+th,td{padding:10px 11px;border-bottom:1px solid #1c3041;font-size:12px;text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{color:#9fb2c0;background:#0e1d2a;font-weight:650;position:sticky;top:0}
+td strong{color:white}
+.driver{display:grid;grid-template-columns:32px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid #1a2a38}
+.driver:last-child{border:0}
+.icon{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:#112435;border:1px solid #224057;font-weight:800;color:var(--cyan)}
+.driver p{margin:2px 0 0;color:#aabdc9;font-size:12px}
+.score{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;margin:10px 0}
+.meter{height:7px;background:#152838;border-radius:999px;overflow:hidden}
+.meter span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--green),var(--cyan))}
+.small{font-size:11px;color:var(--muted)}
+.source a{color:#7adfff;text-decoration:none}
+.source{font-size:12px;color:#9eb0bd;padding:9px 0;border-bottom:1px solid #1b2a37}
+.footer{margin-top:28px;padding-top:16px;border-top:1px solid #1b2f40;color:#7890a2;font-size:11px}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+button{appearance:none;border:1px solid #29435a;background:#0f2231;color:#dceaf3;padding:9px 12px;border-radius:10px;font-weight:650}
+button:active{transform:translateY(1px)}
+details{background:#0a1620;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-top:8px}
+summary{cursor:pointer;font-size:13px;font-weight:700}
+details p{font-size:12px;color:#a9bac6}
+@media(min-width:700px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){
+ h1{font-size:26px} .kpi .num{font-size:24px} .grid{gap:8px} .card{padding:13px}
+ .chart-row{grid-template-columns:68px 1fr 58px;gap:6px}
+}
+@media print{nav,.btnrow{display:none} body{background:white;color:#111} .card,.chart,.tree-root,.product,details{background:white;color:#111;border-color:#ddd} .sub,.note,.product p,.driver p,.small,.source{color:#555}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">NITTO DENKO / OPTRONICS REVENUE MAP</div>
+    <h1>オプトロニクス事業<br>「何が、どれだけ売れているか」</h1>
+    <div class="sub">投資家向け・スマホ閲覧版｜更新: 2026-09-22｜単位は原則「億円」</div>
+    <div style="margin-top:10px">
+      <span class="badge"><span class="dot" style="background:var(--cyan)"></span>会社開示値</span>
+      <span class="badge"><span class="dot" style="background:var(--amber)"></span>製品別金額は非開示</span>
+      <span class="badge"><span class="dot" style="background:var(--green)"></span>最新Q1反映</span>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#snapshot">要点</a><a href="#map">売上マップ</a><a href="#products">製品</a>
+    <a href="#trend">推移</a><a href="#latest">最新Q1</a><a href="#investor">投資家視点</a><a href="#sources">出典</a>
+  </nav>
+
+  <section id="snapshot">
+    <h2>01｜まず4数字だけ</h2>
+    <div class="grid">
+      <div class="card kpi">
+        <div class="label">2025年度 オプトロニクス売上</div>
+        <div class="num">5,278<span class="unit">億円</span></div>
+        <div class="delta down">前年比 -2.6%</div>
+      </div>
+      <div class="card kpi">
+        <div class="label">2025年度 営業利益</div>
+        <div class="num">1,499<span class="unit">億円</span></div>
+        <div class="delta down">前年比 -13.4% / 利益率 28.4%</div>
+      </div>
+      <div class="card kpi">
+        <div class="label">情報機能材料</div>
+        <div class="num">3,862<span class="unit">億円</span></div>
+        <div class="delta down">前年比 -5.3%</div>
+      </div>
+      <div class="card kpi">
+        <div class="label">回路材料</div>
+        <div class="num">1,416<span class="unit">億円</span></div>
+        <div class="delta up">前年比 +5.4%</div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:12px">
+      <b>投資家向けの読み方：</b>2025年度は「光学フィルム中心の情報機能材料」が縮小する一方、
+      「CIS＋高精度基板の回路材料」が拡大。2026年度会社予想ではこのシフトがさらに強まり、
+      回路材料は1,785億円（前年比+26.1%）を見込む。
+    </div>
+  </section>
+
+  <section id="map">
+    <h2>02｜売上の階層を1枚で</h2>
+    <p class="lead">製品単位の売上は非開示。したがって「会社が数字を出している最小単位」は現在この2事業です。</p>
+    <div class="tree-root">
+      <div class="root-top">
+        <div>
+          <div class="root-label">OPTRONICS / 2025年度実績</div>
+          <div class="root-num">5,278 億円</div>
+        </div>
+        <div style="text-align:right">
+          <div class="root-label">営業利益</div>
+          <div style="font-weight:800;font-size:20px">1,499 億円</div>
+          <div class="small">利益率 28.4%</div>
+        </div>
+      </div>
+      <div class="split">
+        <div class="a" style="width:73.2%"></div>
+        <div class="b" style="width:26.8%"></div>
+      </div>
+      <div class="splitlabels"><span>情報機能材料 73.2%</span><span>回路材料 26.8%</span></div>
+    </div>
+
+    <div class="grid">
+      <div class="card subseg">
+        <div class="label">INFORMATION FINE MATERIALS</div>
+        <h3>情報機能材料</h3>
+        <div class="big">3,862 億円</div>
+        <div class="minirow"><span class="pill">構成比 73.2%</span><span class="down">前年比 -5.3%</span></div>
+        <div class="small" style="margin-top:8px">2026年度予想 3,680億円（-4.7%）</div>
+      </div>
+      <div class="card subseg green">
+        <div class="label">CIRCUIT MATERIALS</div>
+        <h3>回路材料</h3>
+        <div class="big">1,416 億円</div>
+        <div class="minirow"><span class="pill">構成比 26.8%</span><span class="up">前年比 +5.4%</span></div>
+        <div class="small" style="margin-top:8px">2026年度予想 1,785億円（+26.1%）</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>03｜代表製品は何が入っている？</h2>
+    <p class="lead">下記の「製品別売上」はNittoが非開示です。そこで、金額を推測で埋めず、最新IRで確認できる需要方向を併記しています。</p>
+
+    <div class="card" style="margin-bottom:12px">
+      <div class="top"><span class="eyebrow">A｜情報機能材料 / 3,862億円</span></div>
+      <div class="product-grid">
+        <div class="product">
+          <div class="top"><h3>光学フィルム／偏光フィルム</h3><span class="tag watch">最大級の主力群</span></div>
+          <p>ノートPC、タブレット、スマホ、車載ディスプレイ向け。車載は大型化・搭載数増が追い風。</p>
+          <div class="disclosure">製品別売上：非開示｜Q1'26：IT機器向け弱含み、車載は堅調</div>
+        </div>
+        <div class="product">
+          <div class="top"><h3>工程保護フィルム</h3><span class="tag weak">価格影響</span></div>
+          <p>OLEDなどの製造工程で表面を保護。2025年度は材料合理化に伴う値下げが売上減要因。</p>
+          <div class="disclosure">製品別売上：非開示</div>
+        </div>
+        <div class="product">
+          <div class="top"><h3>透明導電性フィルム</h3><span class="tag watch">変動あり</span></div>
+          <p>タッチ・表示周辺、透明電極用途。2024年度にはIT機器向け需要増が寄与。</p>
+          <div class="disclosure">製品別売上：非開示｜Q1→Q2会社見通しは減少方向</div>
+        </div>
+        <div class="product">
+          <div class="top"><h3>透明粘着シート / OCA系</h3><span class="tag growth">Total Solution</span></div>
+          <p>ディスプレイ貼合。保護フィルムなどと組み合わせ、1台あたり採用点数を増やす戦略。</p>
+          <div class="disclosure">製品別売上：非開示</div>
+        </div>
+        <div class="product">
+          <div class="top"><h3>反射防止フィルム</h3><span class="tag watch">光学技術</span></div>
+          <p>ディスプレイの反射低減。Nittoの光学・塗工・薄膜技術を活用する代表製品群。</p>
+          <div class="disclosure">製品別売上：非開示</div>
+        </div>
+        <div class="product">
+          <div class="top"><h3>OLED / Foldable関連</h3><span class="tag growth">中長期重点</span></div>
+          <p>偏光、粘着、保護など複数部材の採用拡大を狙う。OLED・車載は戦略投資領域。</p>
+          <div class="disclosure">製品別売上：非開示</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><span class="eyebrow" style="color:var(--green)">B｜回路材料 / 1,416億円</span></div>
+      <div class="product-grid">
+        <div class="product">
+          <div class="top"><h3>CIS / CISFLEX™</h3><span class="tag growth">AI・HDD</span></div>
+          <p>HDDの磁気ヘッド周辺に使う高精度回路付きサスペンション。生成AI→データセンター→高容量HDDが需要源。</p>
+          <div class="disclosure">製品別売上：非開示｜Q1'26：好調継続</div>
+        </div>
+        <div class="product">
+          <div class="top"><h3>高精度基板 / 高精度回路</h3><span class="tag growth">スマホ</span></div>
+          <p>ハイエンドスマートフォン向け。Q1'26は顧客生産増＋新製品立ち上がりが増収寄与。</p>
+          <div class="disclosure">製品別売上：非開示｜Q1'26：増収</div>
+        </div>
+        <div class="product">
+          <div class="top"><h3>低誘電基板</h3><span class="tag watch">次世代</span></div>
+          <p>通信高速化・多規格化に対応する低誘電材料。既存高精度基板に続く新たな回路材料候補。</p>
+          <div class="disclosure">製品別売上：非開示｜成長投資・開発段階を含む</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trend">
+    <h2>04｜3年で構成がどう変わるか</h2>
+    <div class="chart">
+      <div class="legend"><span><i style="background:var(--cyan)"></i>情報機能材料</span><span><i style="background:var(--green)"></i>回路材料</span></div>
+
+      <div class="year-block">
+        <div style="display:flex;justify-content:space-between"><b>2024年度実績</b><span class="small">合計 5,420億円</span></div>
+        <div class="chart-row"><div class="chart-label">情報機能</div><div class="bar-bg"><div class="bar-info" style="width:90.6%"></div></div><div class="chart-num">4,077</div></div>
+        <div class="chart-row"><div class="chart-label">回路</div><div class="bar-bg"><div class="bar-circ" style="width:29.9%"></div></div><div class="chart-num">1,343</div></div>
+      </div>
+
+      <div class="year-block">
+        <div style="display:flex;justify-content:space-between"><b>2025年度実績</b><span class="small">合計 5,278億円</span></div>
+        <div class="chart-row"><div class="chart-label">情報機能</div><div class="bar-bg"><div class="bar-info" style="width:85.8%"></div></div><div class="chart-num">3,862</div></div>
+        <div class="chart-row"><div class="chart-label">回路</div><div class="bar-bg"><div class="bar-circ" style="width:31.5%"></div></div><div class="chart-num">1,416</div></div>
+      </div>
+
+      <div class="year-block">
+        <div style="display:flex;justify-content:space-between"><b>2026年度 会社予想</b><span class="small">合計 5,465億円</span></div>
+        <div class="chart-row"><div class="chart-label">情報機能</div><div class="bar-bg"><div class="bar-info" style="width:81.8%"></div></div><div class="chart-num">3,680</div></div>
+        <div class="chart-row"><div class="chart-label">回路</div><div class="bar-bg"><div class="bar-circ" style="width:39.7%"></div></div><div class="chart-num">1,785</div></div>
+      </div>
+    </div>
+
+    <div class="tablewrap" style="margin-top:12px">
+      <table>
+        <thead><tr><th>年度</th><th>情報機能材料</th><th>回路材料</th><th>オプトロニクス</th><th>営業利益</th><th>利益率</th></tr></thead>
+        <tbody>
+          <tr><td>2024年度</td><td>4,077億円</td><td>1,343億円</td><td><strong>5,420億円</strong></td><td>1,731億円</td><td>31.9%</td></tr>
+          <tr><td>2025年度</td><td>3,862億円</td><td>1,416億円</td><td><strong>5,278億円</strong></td><td>1,499億円</td><td>28.4%</td></tr>
+          <tr><td>2026年度E</td><td>3,680億円</td><td>1,785億円</td><td><strong>5,465億円</strong></td><td>1,480億円</td><td>27.1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">※ 2024年度＝2025年3月期、2025年度＝2026年3月期、2026年度E＝2027年3月期会社予想。</p>
+  </section>
+
+  <section id="latest">
+    <h2>05｜最新Q1で何が起きた？</h2>
+    <div class="grid">
+      <div class="card kpi">
+        <div class="label">Q1 情報機能材料</div>
+        <div class="num">897<span class="unit">億円</span></div>
+        <div class="delta down">前年同期比 -9.9%</div>
+      </div>
+      <div class="card kpi">
+        <div class="label">Q1 回路材料</div>
+        <div class="num">425<span class="unit">億円</span></div>
+        <div class="delta up">前年同期比 +37.0%</div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:10px">
+      <div class="driver"><div class="icon">AI</div><div><h3>CIS：強い</h3><p>生成AI普及 → データセンター用高容量HDD需要 → CIS需要という連鎖が継続。</p></div></div>
+      <div class="driver"><div class="icon">SP</div><div><h3>高精度基板：強い</h3><p>ハイエンドスマホの顧客生産増に加え、新製品の販売開始が寄与。</p></div></div>
+      <div class="driver"><div class="icon">IT</div><div><h3>PC・Tablet光学：弱い</h3><p>メモリ半導体価格高騰を背景に顧客が生産調整。情報機能材料の減収要因。</p></div></div>
+      <div class="driver"><div class="icon">CAR</div><div><h3>車載光学：堅調</h3><p>成長領域。大型化・複数ディスプレイ化が面積需要を支える。</p></div></div>
+    </div>
+  </section>
+
+  <section id="investor">
+    <h2>06｜投資家として見るべきポイント</h2>
+    <div class="card">
+      <h3>① 売上ミックス変化がかなり大きい</h3>
+      <p class="lead">回路材料の構成比は、2025年度 26.8% → 2026年度予想 32.7%へ上昇。光学一本足ではなくなりつつある。</p>
+      <div class="score"><span class="small">2025年度 回路材料構成比</span><b>26.8%</b><div class="meter"><span style="width:26.8%"></span></div><span></span></div>
+      <div class="score"><span class="small">2026年度予想 回路材料構成比</span><b>32.7%</b><div class="meter"><span style="width:32.7%"></span></div><span></span></div>
+    </div>
+
+    <div class="card" style="margin-top:10px">
+      <h3>② 売上は増えても、利益は別問題</h3>
+      <p class="lead">オプトロニクス営業利益率は 2024年度 31.9% → 2025年度 28.4% → 2026年度予想 27.1%。
+      回路材料増収だけでなく、IT光学の需要・価格、人件費、減価償却費も利益を見るうえで重要。</p>
+    </div>
+
+    <div class="card" style="margin-top:10px">
+      <h3>③ 次の決算で見る4項目</h3>
+      <div class="driver"><div class="icon">1</div><div><b>CISの増収率</b><p>AI/HDDテーマが実売上へどこまで継続反映されるか。</p></div></div>
+      <div class="driver"><div class="icon">2</div><div><b>高精度基板のH2反動</b><p>会社は上期前倒し生産後の下期減少を想定。季節性と実需を分けて見る。</p></div></div>
+      <div class="driver"><div class="icon">3</div><div><b>IT光学フィルムの底打ち</b><p>特にタブレットの生産調整が想定以上か、回復するか。</p></div></div>
+      <div class="driver"><div class="icon">4</div><div><b>オプトロニクス利益率</b><p>売上構成が回路材料へ変わる中でも27%前後を維持できるか。</p></div></div>
+    </div>
+
+    <details>
+      <summary>「偏光板だけで何億円？」が分からない理由</summary>
+      <p>Nittoの定期開示で数値が出るのは、現在は主に「情報機能材料」「回路材料」までです。
+      偏光フィルム、透明導電性フィルム、CIS、高精度基板など個別製品ごとの売上額・利益額は通常開示されません。
+      そのため本レポートでは、製品別金額を外挿・推計して事実のように表示していません。</p>
+    </details>
+  </section>
+
+  <section id="sources">
+    <h2>07｜主要ソース</h2>
+    <div class="card">
+      <div class="source"><b>Nitto セグメント別の状況</b><br><a href="https://www.nitto.com/jp/ja/ir/finance/segment/" target="_blank">https://www.nitto.com/jp/ja/ir/finance/segment/</a><br>全社・オプトロニクスの実績、最新Q1、通期予想。</div>
+      <div class="source"><b>Nitto 決算説明会 Q&A</b><br><a href="https://form.nitto.com/jp/ja/ir/library/qa/index.jsp" target="_blank">https://form.nitto.com/jp/ja/ir/library/qa/index.jsp</a><br>IT光学、透明導電性フィルム、CIS、高精度基板の足元需要。</div>
+      <div class="source"><b>Nitto 第161回定時株主総会 招集通知</b><br><a href="https://www.nitto.com/jp/ja/others/ir/shareholdersmeeting/file/161_notice.pdf" target="_blank">PDF</a><br>2025年度オプトロニクス実績と主要製品。</div>
+      <div class="source"><b>Nitto 統合報告書 2025</b><br><a href="https://www.nitto.com/jp/ja/others/sustainability/report/2025/file/2025_print_A4.pdf" target="_blank">PDF</a><br>情報機能材料・回路材料の戦略、OLED・車載・CISFLEX™・低誘電基板。</div>
+      <div class="source"><b>Nitto 連結財務ハイライト</b><br><a href="https://www.nitto.com/jp/ja/ir/finance/highlights/" target="_blank">https://www.nitto.com/jp/ja/ir/finance/highlights/</a><br>全社の売上・利益・予想。</div>
+    </div>
+    <p class="note">作成基準日: 2026-09-22。数値は端数処理のため合計が一致しない場合があります。投資判断そのものではなく、事業構造把握用の資料です。</p>
+  </section>
+
+  <div class="btnrow">
+    <button onclick="window.print()">PDFとして保存 / 印刷</button>
+    <button onclick="document.documentElement.scrollTo({top:0,behavior:'smooth'})">先頭へ</button>
+  </div>
+
+  <div class="footer">
+    Nitto Denko Optronics Revenue Map / Mobile Investor Brief<br>
+    Product-level revenue is not disclosed by the company unless otherwise stated.
+  </div>
+</div>
+</body>
+</html>

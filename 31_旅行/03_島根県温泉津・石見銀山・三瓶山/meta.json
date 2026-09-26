@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "id": "shimane-yunotsu-iwami-drive",
+  "title": "島根県｜温泉津・石見銀山・三瓶山 1泊2日ドライブ",
+  "type": "plan",
+  "category": "31_旅行",
+  "subcategory": "国内ドライブ",
+  "summary": "尾道発の1泊2日モデルプラン。温泉津の海と温泉、石見銀山、三瓶山を巡る行程と、海鮮・地酒・宿候補をまとめた原画像。営業・入荷・宿の取扱いは別途確認が必要。",
+  "tags": [
+    "島根県",
+    "温泉津",
+    "石見銀山",
+    "三瓶山"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260926 旅行 島根県.png",
+    "guide": "島根県温泉津・石見銀山・三瓶山_guide.html",
+    "preview": "260926 旅行 島根県.png",
+    "additional": []
+  },
+  "search": {
+    "keywords": [
+      "島根県",
+      "温泉津",
+      "石見銀山",
+      "三瓶山"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "8db8405df6a241d6da18aa0f14674879c4dc18b103a3dcefadc27f5c066a7093",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260926 旅行 島根県.png": "03b4a6f1376df3f426abafa6dbd1f98a545d03bb5cee687877a4678ad9852f46"
+    },
+    "output_sha256": {
+      "260926 旅行 島根県.png": "03b4a6f1376df3f426abafa6dbd1f98a545d03bb5cee687877a4678ad9852f46",
+      "島根県温泉津・石見銀山・三瓶山_guide.html": "a9526ba1005a3d0a29a5a0e77415a1a0200b4017b976cd8cf24c08524009ebac"
+    }
+  }
+}

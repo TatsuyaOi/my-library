@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "id": "yamaguchi-nagato-drive",
+  "title": "山口県｜長門湯本・仙崎・青海島 1泊2日ドライブ",
+  "type": "plan",
+  "category": "31_旅行",
+  "subcategory": "国内ドライブ",
+  "summary": "尾道発の1泊2日モデルプラン。長門湯本・仙崎・青海島、棚田や神社、温泉・海鮮・地酒・宿候補をまとめた原画像。時刻と移動時間は概算として掲載。",
+  "tags": [
+    "山口県",
+    "長門湯本",
+    "青海島",
+    "ドライブ"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260926 旅行 山口県 長門湯本.png",
+    "guide": "山口県長門湯本・仙崎・青海島_guide.html",
+    "preview": "260926 旅行 山口県 長門湯本.png",
+    "additional": []
+  },
+  "search": {
+    "keywords": [
+      "山口県",
+      "長門湯本",
+      "青海島",
+      "ドライブ"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "aaa9cbe49d9a076a629f7d6fc7ac4f986e936dcf430e798ed240d0c4342b6999",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260926 旅行 山口県 長門湯本.png": "8695ffbfcefff35e891c0abe4caa60830b52085076760f6c6f900078b9525cf5"
+    },
+    "output_sha256": {
+      "260926 旅行 山口県 長門湯本.png": "8695ffbfcefff35e891c0abe4caa60830b52085076760f6c6f900078b9525cf5",
+      "山口県長門湯本・仙崎・青海島_guide.html": "71d0d8b046121c9b06debb3464a6763b125ae63a4a85449fd741b895e7ec1983"
+    }
+  }
+}

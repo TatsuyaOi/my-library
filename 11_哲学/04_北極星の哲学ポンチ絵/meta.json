@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "id": "northstar-philosophy-diagrams",
+  "title": "北極星の哲学｜全体像・十三の行動原則・日々の運用",
+  "type": "reference",
+  "category": "11_哲学",
+  "subcategory": "北極星の哲学",
+  "summary": "北極星の哲学を3枚の図解で整理。思想の全体像と源流、十三の行動原則、迷ったときの七問・60秒手順・朝昼夜の運用を、原画像のまま見返す資料。",
+  "tags": [
+    "北極星の哲学",
+    "行動原則",
+    "図解",
+    "日々の運用"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "北極星の哲学 ポンチ絵①全体像.png",
+    "guide": "北極星の哲学ポンチ絵_guide.html",
+    "preview": "北極星の哲学 ポンチ絵①全体像.png",
+    "additional": [
+      "北極星の哲学 ポンチ絵②.png",
+      "北極星の哲学 ポンチ絵③ 実践フロート日々の運用.png"
+    ]
+  },
+  "search": {
+    "keywords": [
+      "北極星の哲学",
+      "行動原則",
+      "図解",
+      "日々の運用"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "northstar-philosophy-11b"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "05763cd219ce8377b1f417656d73b1aa243e86e8bff0fd7ab3546dc61b777b60",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "北極星の哲学 ポンチ絵①全体像.png": "5f50ebda39914d3e2887e095f6f0d3cb957ecc83edc8643544380efb0dff8afb",
+      "北極星の哲学 ポンチ絵②.png": "4331749535efb0f8cf488aa116e91dad0888cdfa4cd9d041d6a4eaa07d203ffd",
+      "北極星の哲学 ポンチ絵③ 実践フロート日々の運用.png": "f15a53d16c2deffc5c8505fad1e7f45f883b38c46adbd9aec8b81d52688c8be9"
+    },
+    "output_sha256": {
+      "北極星の哲学 ポンチ絵①全体像.png": "5f50ebda39914d3e2887e095f6f0d3cb957ecc83edc8643544380efb0dff8afb",
+      "北極星の哲学 ポンチ絵②.png": "4331749535efb0f8cf488aa116e91dad0888cdfa4cd9d041d6a4eaa07d203ffd",
+      "北極星の哲学 ポンチ絵③ 実践フロート日々の運用.png": "f15a53d16c2deffc5c8505fad1e7f45f883b38c46adbd9aec8b81d52688c8be9",
+      "北極星の哲学ポンチ絵_guide.html": "72aa409787f0c4c4725219d10b0aa711cce17568293e1e2fd597656585b26d4f"
+    }
+  }
+}

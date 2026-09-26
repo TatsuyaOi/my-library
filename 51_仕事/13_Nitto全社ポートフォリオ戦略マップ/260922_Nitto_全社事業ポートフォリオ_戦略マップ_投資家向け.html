@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Nitto 全社事業ポートフォリオ＆戦略マップ｜投資家向け</title>
+<style>
+:root {
+ --bg:#071019; --panel:#0d1925; --panel2:#111f2e; --line:#20364a;
+ --txt:#edf5fa; --muted:#94aabb; --blue:#687dff; --cyan:#42d8ff;
+ --green:#37df9d; --pink:#ff76aa; --amber:#ffca65; --red:#ff8290;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#06101a,#091520 45%,#071019);color:var(--txt);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif;line-height:1.62}
+main{max-width:860px;margin:auto;padding:18px 14px 72px}
+.hero{padding:23px 2px 16px} .eyebrow{font-size:11px;font-weight:800;letter-spacing:.15em;color:var(--cyan)}
+h1{font-size:29px;line-height:1.23;margin:8px 0;letter-spacing:-.035em}
+h2{font-size:20px;margin:0 0 12px;letter-spacing:-.02em} h3{font-size:15px;margin:0 0 5px}
+p{margin:6px 0} .sub,.muted{color:var(--muted)} .sub{font-size:13px}
+nav{position:sticky;top:0;z-index:9;margin:0 -14px;padding:7px 14px;background:rgba(7,16,25,.93);
+backdrop-filter:blur(12px);border-top:1px solid #122536;border-bottom:1px solid #122536;overflow:auto;white-space:nowrap}
+nav a{display:inline-block;text-decoration:none;color:#bdd0dc;font-size:12px;padding:7px 9px;border-radius:8px}
+section{margin-top:29px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.card{background:linear-gradient(180deg,rgba(17,32,46,.97),rgba(9,22,33,.98));border:1px solid var(--line);
+border-radius:16px;padding:14px}
+.kpi{min-height:126px} .label{font-size:11px;color:var(--muted)} .num{font-size:27px;font-weight:850;letter-spacing:-.04em;margin-top:5px}
+.unit{font-size:12px;color:var(--muted);margin-left:3px} .delta{font-size:12px;margin-top:5px} .up{color:var(--green)} .down{color:var(--red)} .warn{color:var(--amber)}
+.chips{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap} .chip{font-size:10px;border:1px solid #2a4357;border-radius:999px;padding:4px 8px;color:#b8ccd8}
+.callout{padding:12px 13px;background:#171a18;border-left:3px solid var(--amber);border-radius:0 12px 12px 0;font-size:13px;color:#e7e3d6;margin-top:11px}
+.seg{position:relative;overflow:hidden} .seg:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--green)}
+.seg.opt:before{background:var(--blue)} .seg.human:before{background:var(--pink)} .seg.other:before{background:var(--amber)}
+.seghead{display:flex;justify-content:space-between;gap:9px;align-items:flex-start}
+.segtitle{font-size:19px;font-weight:850;letter-spacing:-.025em} .sales{font-size:25px;font-weight:850;margin-top:6px}
+.small{font-size:11px;color:var(--muted)} .pill{font-size:10px;padding:3px 7px;border-radius:999px;border:1px solid #2c4457;color:#b7cbd7;white-space:nowrap}
+.bar{height:11px;background:#142838;border-radius:999px;overflow:hidden;margin:10px 0 5px} .bar>span{display:block;height:100%;border-radius:999px}
+.products{display:grid;grid-template-columns:1fr;gap:7px;margin-top:10px}
+.product{background:#091620;border:1px solid #1b3042;border-radius:12px;padding:11px}
+.ptop{display:flex;justify-content:space-between;align-items:flex-start;gap:7px}
+.tag{font-size:10px;padding:3px 7px;border-radius:999px;border:1px solid #284158;color:#adc6d5;white-space:nowrap}
+.tag.g{color:#75eeba;border-color:#266f55;background:#0b2920} .tag.p{color:#ff9fc3;border-color:#713554;background:#291323}
+.tag.a{color:#ffd880;border-color:#6a5423;background:#241e0e} .tag.r{color:#ffa0aa;border-color:#713743;background:#281318}
+.product p{font-size:12px;color:#a8bcc9;margin-top:5px} .disclosure{font-size:10px;color:#7690a3;margin-top:7px}
+.strategy-flow{display:grid;grid-template-columns:1fr 32px 1fr;align-items:center;gap:5px}
+.flowbox{border:1px solid var(--line);border-radius:14px;background:#0b1823;padding:13px;min-height:118px}
+.arrow{text-align:center;font-size:25px;color:#7790a5}
+.mix{display:flex;height:17px;overflow:hidden;border-radius:999px;background:#102331;margin:12px 0 6px}
+.mix span{display:block;height:100%} .mixlabels{display:flex;justify-content:space-between;gap:5px;font-size:10px;color:#9fb4c3}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:14px}
+table{width:100%;min-width:680px;border-collapse:collapse;background:#091620}
+th,td{padding:10px 10px;border-bottom:1px solid #1a3041;text-align:right;font-size:11px;white-space:nowrap}
+th{background:#0e1d2a;color:#9fb3c2} td:first-child,th:first-child{text-align:left}
+.driver{display:grid;grid-template-columns:34px 1fr;gap:9px;padding:11px 0;border-bottom:1px solid #192c3a} .driver:last-child{border:0}
+.icon{width:34px;height:34px;border:1px solid #274157;background:#102433;border-radius:10px;display:grid;place-items:center;font-weight:800;color:var(--cyan)}
+.driver p{font-size:12px;color:#a8bbc8;margin:2px 0 0}
+.invest{display:grid;grid-template-columns:72px 1fr 60px;gap:8px;align-items:center;margin:10px 0}
+.invbar{height:10px;background:#132838;border-radius:999px;overflow:hidden} .invbar span{display:block;height:100%;border-radius:999px}
+.watchgrid{display:grid;grid-template-columns:1fr;gap:8px}
+.watch{border:1px solid var(--line);background:#0a1722;border-radius:13px;padding:12px}
+.watch b{font-size:13px} .watch p{font-size:11px;color:#9db1bf}
+details{border:1px solid var(--line);background:#091620;border-radius:12px;padding:10px 12px;margin-top:8px}
+summary{font-size:13px;font-weight:750;cursor:pointer}
+details p{font-size:12px;color:#a7bac7}
+.source{font-size:11px;color:#9db1bf;padding:8px 0;border-bottom:1px solid #1b2d3a}
+.source a{color:#6fdcff;text-decoration:none;word-break:break-all}
+.foot{margin-top:28px;border-top:1px solid #1b3041;padding-top:14px;color:#708a9c;font-size:10px}
+.btn{display:inline-block;border:1px solid #29445a;background:#102332;color:#e8f2f8;padding:9px 12px;border-radius:10px;font-weight:700;margin:10px 7px 0 0}
+@media(min-width:700px){.products{grid-template-columns:repeat(2,1fr)} .watchgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){h1{font-size:25px} .card{padding:12px} .num{font-size:24px} .strategy-flow{grid-template-columns:1fr} .arrow{transform:rotate(90deg);height:28px}}
+@media print{nav,.btn{display:none}body{background:#fff;color:#111}.card,.product,.flowbox,.watch,details,.tablewrap{background:#fff;border-color:#ddd}.sub,.small,.muted,.product p,.watch p,.driver p{color:#555}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+ <div class="eyebrow">NITTO DENKO / INVESTOR MOBILE BRIEF</div>
+ <h1>日東電工 全社事業ポートフォリオ<br>売上・製品・2028戦略マップ</h1>
+ <div class="sub">2026-09-22時点｜FY2025実績・FY2026会社予想・FY2026 Q1を反映</div>
+ <div class="chips">
+  <span class="chip">3事業＋新規領域</span><span class="chip">製品別売上は非開示を明記</span>
+  <span class="chip">Nitto RISE 2028</span><span class="chip">スマホ縦スクロール最適化</span>
+ </div>
+</header>
+
+<nav>
+<a href="#overview">全社</a><a href="#segments">3事業</a><a href="#strategy">2028戦略</a>
+<a href="#q1">最新Q1</a><a href="#capex">投資</a><a href="#watch">注目点</a><a href="#sources">出典</a>
+</nav>
+
+<section id="overview">
+<h2>01｜全社を4数字で</h2>
+<div class="grid2">
+ <div class="card kpi"><div class="label">FY2025 売上収益</div><div class="num">1兆282<span class="unit">億円</span></div><div class="delta">前年比 +1.4%</div></div>
+ <div class="card kpi"><div class="label">FY2025 営業利益</div><div class="num">1,836<span class="unit">億円</span></div><div class="delta">営業利益率 17.9%</div></div>
+ <div class="card kpi"><div class="label">FY2026 会社予想 売上</div><div class="num">1兆1,100<span class="unit">億円</span></div><div class="delta up">FY2025比 +8.0%</div></div>
+ <div class="card kpi"><div class="label">FY2028 目標 営業利益</div><div class="num">2,200<span class="unit">億円</span></div><div class="delta up">利益率20% / ROE14%</div></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+ <div class="label">FY2025 売上構成（調整前の概算表示）</div>
+ <div class="mix">
+  <span style="width:51.3%;background:var(--blue)"></span>
+  <span style="width:35.7%;background:var(--green)"></span>
+  <span style="width:14.0%;background:var(--pink)"></span>
+ </div>
+ <div class="mixlabels"><span>オプトロニクス 51.3%</span><span>インダストリアル 35.7%</span><span>Human Life 14.0%</span></div>
+</div>
+
+<div class="callout"><b>会社の大きな方向性：</b> 「偏光板だけの会社」から、①デジタルインターフェース、
+②グリーンテック、③ヒューマンライフへ事業を広げ、ニッチトップと社会課題解決を同時に満たす
+「ダブル認定」製品を増やす。低収益・低成長・低差別化事業は規模適正化・構造改革も行う。</div>
+</section>
+
+<section id="segments">
+<h2>02｜3事業＋新規領域を分解</h2>
+
+<div class="card seg">
+ <div class="seghead"><div><div class="eyebrow" style="color:var(--green)">INDUSTRIAL TAPE</div><div class="segtitle">インダストリアルテープ</div></div><span class="pill">既存収益柱</span></div>
+ <div class="sales">3,666 億円 <span class="unit">FY2025</span></div>
+ <div class="chips"><span class="chip">営業利益 517億円</span><span class="chip">利益率 14.1%</span><span class="chip">FY2026予想 4,060億円</span></div>
+ <div class="products">
+  <div class="product"><div class="ptop"><h3>ハイエンドスマホ向け機能性テープ</h3><span class="tag g">成長</span></div><p>薄型固定、保護、工程用途など。Q1は主要顧客の先行生産も追い風。</p><div class="disclosure">個別売上：非開示</div></div>
+  <div class="product"><div class="ptop"><h3>バッテリー固定用 電気剥離テープ</h3><span class="tag g">重点</span></div><p>強固に固定しつつ、電気をトリガーに剥離。修理・リサイクル・電池交換を支える。</p><div class="disclosure">Q1：採用モデル拡大｜個別売上非開示</div></div>
+  <div class="product"><div class="ptop"><h3>半導体向け工程用材料</h3><span class="tag g">強い</span></div><p>バックグラインド、ダイシング、モールディングなどで使う粘着・工程材料。</p><div class="disclosure">Q1：需要増加｜個別売上非開示</div></div>
+  <div class="product"><div class="ptop"><h3>自動車・一般工業・住宅テープ</h3><span class="tag a">基盤</span></div><p>自動車補強、防水、シーリング、表面保護、養生など幅広い産業用途。</p><div class="disclosure">個別売上：非開示</div></div>
+ </div>
+</div>
+
+<div class="card seg opt" style="margin-top:10px">
+ <div class="seghead"><div><div class="eyebrow" style="color:var(--blue)">OPTRONICS</div><div class="segtitle">オプトロニクス</div></div><span class="pill">最大利益柱</span></div>
+ <div class="sales">5,278 億円 <span class="unit">FY2025</span></div>
+ <div class="chips"><span class="chip">営業利益 1,499億円</span><span class="chip">利益率 28.4%</span><span class="chip">FY2026予想 5,465億円</span></div>
+ <div class="products">
+  <div class="product"><div class="ptop"><h3>情報機能材料</h3><span class="tag a">3,862億円</span></div><p>偏光板、光学フィルム、透明導電フィルム、スパッタフィルム、OCA/保護材料など。IT向けは弱含む一方、車載は堅調。</p><div class="disclosure">FY2025サブセグメント売上 3,862億円</div></div>
+  <div class="product"><div class="ptop"><h3>回路材料</h3><span class="tag g">1,416億円</span></div><p>CISFLEX™、高精度基板など。AIデータセンター向け大容量HDDとハイエンドスマホが成長源。</p><div class="disclosure">FY2025サブセグメント売上 1,416億円</div></div>
+  <div class="product"><div class="ptop"><h3>車載・フォルダブル</h3><span class="tag g">拡張</span></div><p>高耐久偏光板、フォルダブル部材、車載ディスプレイ向けトータルソリューション。</p><div class="disclosure">個別売上：非開示</div></div>
+  <div class="product"><div class="ptop"><h3>AI/AR・太陽電池ITO</h3><span class="tag p">次世代</span></div><p>AI/ARグラス用部材、太陽電池向けITOフィルムを次の成長候補に位置づけ。</p><div class="disclosure">個別売上：非開示 / 育成領域</div></div>
+ </div>
+</div>
+
+<div class="card seg human" style="margin-top:10px">
+ <div class="seghead"><div><div class="eyebrow" style="color:var(--pink)">HUMAN LIFE</div><div class="segtitle">ヒューマンライフ</div></div><span class="pill">黒字化フェーズ</span></div>
+ <div class="sales">1,437 億円 <span class="unit">FY2025</span></div>
+ <div class="chips"><span class="chip">営業損失 ▲50億円</span><span class="chip">FY2026予想 1,670億円</span><span class="chip">FY2026利益予想 +10億円</span></div>
+ <div class="products">
+  <div class="product"><div class="ptop"><h3>核酸医薬 受託製造（CDMO）</h3><span class="tag g">最重要</span></div><p>臨床～商用薬の核酸医薬製造。Q1ではB型肝炎向け大型案件が収益改善に寄与。</p><div class="disclosure">個別売上：非開示｜商用化案件が拡大</div></div>
+  <div class="product"><div class="ptop"><h3>NittoPhase™</h3><span class="tag g">成長</span></div><p>核酸医薬合成用ポリマービーズ。顧客商用薬のグローバル展開で需要増。</p><div class="disclosure">個別売上：非開示</div></div>
+  <div class="product"><div class="ptop"><h3>メンブレン / RO膜</h3><span class="tag g">環境</span></div><p>排水再利用・海水淡水化・超純水。Q1はインド・中国を中心とした排水処理需要が増加。</p><div class="disclosure">個別売上：非開示</div></div>
+  <div class="product"><div class="ptop"><h3>ガス・溶剤分離</h3><span class="tag p">育成</span></div><p>グリーンテック領域で新用途を開拓。新中計で設備投資対象。</p><div class="disclosure">個別売上：非開示 / 成長投資20億円</div></div>
+  <div class="product"><div class="ptop"><h3>パーソナルケア材料</h3><span class="tag a">改善</span></div><p>おむつ等の衛生材料、伸縮材料、環境配慮型材料。テクニカルフィルムへの用途拡張も狙う。</p><div class="disclosure">個別売上：非開示</div></div>
+  <div class="product"><div class="ptop"><h3>核酸DDS</h3><span class="tag p">中長期</span></div><p>核酸を狙った部位へ届けるドラッグデリバリー技術。新規成長領域として育成。</p><div class="disclosure">売上規模：未開示 / 研究・事業開発段階を含む</div></div>
+ </div>
+</div>
+
+<div class="card seg other" style="margin-top:10px">
+ <div class="seghead"><div><div class="eyebrow" style="color:var(--amber)">NEW BUSINESS / OTHER</div><div class="segtitle">その他・新規事業</div></div><span class="pill">事業化前</span></div>
+ <div class="sales">Q1売上 0.14 億円</div>
+ <p class="muted" style="font-size:12px">先端半導体、環境ソリューション、医療デバイスなど、まだ十分な売上を伴わないテーマを含む。
+ FY2026会社予想は売上5億円、営業損失▲80億円。</p>
+ <div class="chips"><span class="chip">先端半導体材料</span><span class="chip">半導体プロセス部材</span><span class="chip">環境ソリューション</span><span class="chip">医療デバイス</span></div>
+</div>
+</section>
+
+<section id="strategy">
+<h2>03｜2028年に何を変えたいのか</h2>
+<div class="strategy-flow">
+ <div class="flowbox">
+  <div class="label">FY2025 営業利益構成</div>
+  <div style="font-size:24px;font-weight:850;margin-top:5px">1,836億円</div>
+  <div class="mix"><span style="width:74%;background:var(--blue)"></span><span style="width:26%;background:var(--green)"></span></div>
+  <div class="small">オプトロニクス 74% / インダストリアル 26%<br>Human Lifeは赤字</div>
+ </div>
+ <div class="arrow">→</div>
+ <div class="flowbox">
+  <div class="label">FY2028 目標</div>
+  <div style="font-size:24px;font-weight:850;margin-top:5px">2,200億円</div>
+  <div class="mix"><span style="width:65%;background:var(--blue)"></span><span style="width:30%;background:var(--green)"></span><span style="width:5%;background:var(--pink)"></span></div>
+  <div class="small">オプトロニクス 65% / インダストリアル 30% / Human Life 5%</div>
+ </div>
+</div>
+
+<div class="callout"><b>ここが戦略の核心：</b>オプトロニクス依存を完全に捨てるのではなく、
+高収益を維持しながらインダストリアルテープを伸ばし、ヒューマンライフを黒字化して
+「外部環境に振られにくい3本柱」に近づける。</div>
+
+<div class="card" style="margin-top:11px">
+ <div class="driver"><div class="icon">D</div><div><b>Digital Interface</b><p>フォルダブル、車載ディスプレイ、CISFLEX、高精度基板、AI/ARグラス、先端半導体。</p></div></div>
+ <div class="driver"><div class="icon">G</div><div><b>Green Tech</b><p>電気剥離テープ、太陽電池ITO、ガス・溶剤分離、環境負荷低減型材料。</p></div></div>
+ <div class="driver"><div class="icon">H</div><div><b>Human Life</b><p>核酸CDMO、NittoPhase、核酸DDS、RO膜、パーソナルケア材料。</p></div></div>
+ <div class="driver"><div class="icon">×</div><div><b>構造改革</b><p>低収益・低成長・低差別化事業は規模適正化。Nittoは「何でも残す」ポートフォリオを目指していない。</p></div></div>
+</div>
+</section>
+
+<section id="q1">
+<h2>04｜最新Q1：戦略は数字に出ているか</h2>
+<div class="grid2">
+ <div class="card kpi"><div class="label">インダストリアルテープ</div><div class="num">1,011<span class="unit">億円</span></div><div class="delta up">前年同期比 +17.8% / 利益163億円</div></div>
+ <div class="card kpi"><div class="label">オプトロニクス</div><div class="num">1,322<span class="unit">億円</span></div><div class="delta warn">前年同期比 +1.3% / 利益354億円</div></div>
+ <div class="card kpi"><div class="label">ヒューマンライフ</div><div class="num">408<span class="unit">億円</span></div><div class="delta up">前年同期比 +25.6% / 損失▲3億円</div></div>
+ <div class="card kpi"><div class="label">全社</div><div class="num">2,717<span class="unit">億円</span></div><div class="delta up">営業利益492億円 / 利益率 18.1%</div></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+ <div class="driver"><div class="icon">↑</div><div><b>Industrial：かなり強い</b><p>電気剥離テープの採用モデル拡大、半導体工程材料、ハイエンドスマホ先行生産が寄与。ただし一般工業には価格改定前の前倒し需要もある。</p></div></div>
+ <div class="driver"><div class="icon">↕</div><div><b>Optronics：中で二極化</b><p>IT光学フィルムは減少。対してCIS・高精度基板が伸長。売上横ばい圏でも事業ミックスは変わっている。</p></div></div>
+ <div class="driver"><div class="icon">◎</div><div><b>Human Life：黒字化へ大きく改善</b><p>核酸CDMO大型案件、NittoPhase需要、RO膜、パーソナルケアが増収。Q1損失は前年▲16億円→▲3億円。</p></div></div>
+</div>
+</section>
+
+<section id="capex">
+<h2>05｜3年間でどこにお金を入れるか</h2>
+<p class="sub">Nitto RISE 2028：2026～2028年度の累計設備投資 3,000～4,000億円。</p>
+<div class="card">
+ <div class="invest"><div class="small">Optronics</div><div class="invbar"><span style="width:50%;background:var(--blue)"></span></div><b>50%</b></div>
+ <div class="invest"><div class="small">Industrial</div><div class="invbar"><span style="width:35%;background:var(--green)"></span></div><b>35%</b></div>
+ <div class="invest"><div class="small">Human Life</div><div class="invbar"><span style="width:15%;background:var(--pink)"></span></div><b>15%</b></div>
+</div>
+
+<div class="tablewrap" style="margin-top:10px">
+<table>
+<thead><tr><th>領域</th><th>代表投資</th><th>新中計投資額</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td>Optronics</td><td>情報テープ・スパッタフィルム・偏光板</td><td>830億円</td><td>既存高収益＋車載/次世代</td></tr>
+<tr><td>Optronics</td><td>CISFLEX™・高精度基板</td><td>430億円</td><td>AI/HDD・スマホ</td></tr>
+<tr><td>Industrial</td><td>電気剥離テープ等</td><td>320億円</td><td>修理性・EV・高機能接着</td></tr>
+<tr><td>Human Life</td><td>核酸受託製造・ポリマービーズ</td><td>170億円</td><td>黒字化・商用薬拡大</td></tr>
+<tr><td>Human Life</td><td>ガス・溶剤分離</td><td>20億円</td><td>Green Tech育成</td></tr>
+<tr><td>Cross / New</td><td>先端半導体・半導体プロセス部材</td><td>630億円</td><td>新たな大型成長領域</td></tr>
+</tbody>
+</table>
+</div>
+<p class="small">※会社資料の設備投資計画。個々の投資額の合計は全設備投資総額とは一致しません。半導体投資は横断的な成長領域として表示。</p>
+</section>
+
+<section id="watch">
+<h2>06｜次の決算で見るポイント</h2>
+<div class="watchgrid">
+ <div class="watch"><b>01｜Industrialの+18%増収は続くか</b><p>前倒し需要を除いても半導体工程材料・電気剥離テープが伸びるか。</p></div>
+ <div class="watch"><b>02｜CISのAI/HDD需要</b><p>高精度基板は先行生産反動があり得るため、CISの継続成長を分けて確認。</p></div>
+ <div class="watch"><b>03｜IT光学フィルムの底</b><p>PC・タブレット向け減少を車載・回路材料でどこまで吸収できるか。</p></div>
+ <div class="watch"><b>04｜Human Lifeの黒字転換</b><p>FY2026会社予想+10億円。核酸CDMOとNittoPhaseが通期で計画通り進むか。</p></div>
+ <div class="watch"><b>05｜営業利益率20%への道筋</b><p>FY2025 17.9% → FY2028 20%。売上成長より「高収益化」が中計の本丸。</p></div>
+ <div class="watch"><b>06｜新規投資が売上化する速度</b><p>先端半導体630億円など大型投資が、減価償却負担だけ先行しないか。</p></div>
+</div>
+
+<details><summary>製品別売上をなぜ表示していないものが多い？</summary>
+<p>Nittoはセグメント売上を開示していますが、電気剥離テープ、NittoPhase、RO膜、CISなど各製品単位の売上金額は原則非開示です。
+本資料では、会社が開示した数字と製品名を結び付け、推測売上を事実のように置かない方針にしています。</p></details>
+
+<details><summary>Human Lifeは「医薬だけ」？</summary>
+<p>いいえ。ライフサイエンス（核酸CDMO、NittoPhase、DDS）、メンブレン（水処理・分離膜）、パーソナルケア材料の3系統が中心です。
+そのため医薬の成長性と、水処理・衛生材料の比較的異なる需要サイクルを同じセグメントに持っています。</p></details>
+</section>
+
+<section id="sources">
+<h2>07｜公式ソース</h2>
+<div class="card">
+ <div class="source"><b>セグメント別の状況（最新Q1・通期予想）</b><br><a href="https://www.nitto.com/jp/ja/ir/finance/segment/" target="_blank">Nitto IR / Segment</a></div>
+ <div class="source"><b>連結財務ハイライト</b><br><a href="https://www.nitto.com/jp/ja/ir/finance/highlights/" target="_blank">Nitto IR / Financial Highlights</a></div>
+ <div class="source"><b>2027年3月期 Q1 決算説明会 Q&A</b><br><a href="https://form.nitto.com/jp/ja/ir/library/qa/index.jsp" target="_blank">Nitto IR / Q&A</a></div>
+ <div class="source"><b>Nitto RISE 2028</b><br><a href="https://www.nitto.com/jp/ja/about_us/concepts/mid-term_management_plans/" target="_blank">中期経営計画ページ</a></div>
+ <div class="source"><b>Nitto RISE 2028 説明資料</b><br><a href="https://form.nitto.com/jp/ja/others/about_us/concepts/mid-term_management_plans/pdf/Nitto_RISE_2028.pdf" target="_blank">公式PDF</a></div>
+ <div class="source"><b>製品情報</b><br><a href="https://www.nitto.com/jp/ja/products/" target="_blank">Nitto 製品情報</a></div>
+ <div class="source"><b>ヒューマンライフ事業紹介</b><br><a href="https://www.nitto.com/jp/ja/employment/introduction/business.html" target="_blank">事業紹介</a></div>
+</div>
+<p class="small">作成日: 2026-09-22。FY2025＝2026年3月期、FY2026＝2027年3月期。端数処理により合計が一致しない場合があります。
+本資料は企業分析用であり、個別製品売上の非開示部分を推計値で補完していません。</p>
+</section>
+
+<button class="btn" onclick="window.print()">PDFとして保存 / 印刷</button>
+<button class="btn" onclick="scrollTo({top:0,behavior:'smooth'})">先頭へ</button>
+
+<div class="foot">Nitto Denko Full Portfolio & Strategy Map — Mobile Investor Brief</div>
+</main>
+</body>
+</html>

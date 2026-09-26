@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "id": "nitto-investment-analysis-20260922",
+  "title": "日東電工｜投資分析レポート 2026.09.22",
+  "type": "report",
+  "category": "51_仕事",
+  "subcategory": "企業・事業分析",
+  "summary": "2026年9月22日基準の投資分析保存版。業績・為替寄与・同業比較・EPSとPERによる3シナリオ・判断条件を掲載し、会社開示と分析者の解釈・独自試算を区別する。",
+  "tags": [
+    "日東電工",
+    "投資分析",
+    "業績",
+    "シナリオ分析"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-22",
+    "updated": null
+  },
+  "files": {
+    "source": "260922_日東電工_投資分析レポート.html",
+    "guide": "260922_日東電工_投資分析レポート.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": [
+      "日東電工",
+      "投資分析",
+      "業績",
+      "シナリオ分析"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "nitto-optronics-revenue-20260922",
+      "nitto-portfolio-strategy-20260922"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "c8cd8a682f57cc45a55c829fe12f914be330154ffc45ba7499d4abf877b7cef9",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260922_日東電工_投資分析レポート.html": "f1d0734b58ecaff20167c3786835c90d64edf28eebc8ad07078c23798014cd52"
+    },
+    "output_sha256": {
+      "260922_日東電工_投資分析レポート.html": "f1d0734b58ecaff20167c3786835c90d64edf28eebc8ad07078c23798014cd52"
+    }
+  }
+}

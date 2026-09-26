@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "id": "kochi-ashizuri-drive",
+  "title": "高知県｜足摺・土佐清水・竜串 1泊2日ドライブ",
+  "type": "plan",
+  "category": "31_旅行",
+  "subcategory": "国内ドライブ",
+  "summary": "尾道からしまなみ海道を経由する1泊2日の長距離ドライブ案。足摺・土佐清水・竜串の景観、食事・地酒・宿候補を原画像で保存。行程は概算で、休憩を含む案として掲載。",
+  "tags": [
+    "高知県",
+    "足摺",
+    "土佐清水",
+    "竜串"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260926 旅行 高知県 足摺.png",
+    "guide": "高知県足摺・土佐清水・竜串_guide.html",
+    "preview": "260926 旅行 高知県 足摺.png",
+    "additional": []
+  },
+  "search": {
+    "keywords": [
+      "高知県",
+      "足摺",
+      "土佐清水",
+      "竜串"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "441fdd836f247fffcd66e467eb6ba5c4d3253dfda48d0f4e8226628d8dd3d196",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260926 旅行 高知県 足摺.png": "253fe47f876f97eddafcc5fbb915995e4b194ee90d80412ceae928d1ab063b91"
+    },
+    "output_sha256": {
+      "260926 旅行 高知県 足摺.png": "253fe47f876f97eddafcc5fbb915995e4b194ee90d80412ceae928d1ab063b91",
+      "高知県足摺・土佐清水・竜串_guide.html": "9ac6ed846b9c9c55d241cdb89a6a394d36375f5b5852f81a20fcebe35ea61f40"
+    }
+  }
+}

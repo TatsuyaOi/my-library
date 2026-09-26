@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "id": "nitto-optronics-revenue-20260922",
+  "title": "Nitto オプトロニクス事業 売上マップ｜投資家向け",
+  "type": "report",
+  "category": "51_仕事",
+  "subcategory": "企業・事業分析",
+  "summary": "2026年9月22日基準の保存資料。情報機能材料・回路材料の売上構成、代表製品、年度推移と投資家向け確認事項を整理。開示値と製品別非開示を区別する。",
+  "tags": [
+    "日東電工",
+    "オプトロニクス",
+    "事業分析"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-22",
+    "updated": null
+  },
+  "files": {
+    "source": "260922_Nitto_オプトロニクス_売上マップ_投資家向け.html",
+    "guide": "260922_Nitto_オプトロニクス_売上マップ_投資家向け.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": [
+      "日東電工",
+      "オプトロニクス",
+      "事業分析"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "nitto-portfolio-strategy-20260922",
+      "nitto-investment-analysis-20260922"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "4b161c35fa1848d5486439e7ce563217fa8d3c16f16ed6583ccc92b875076c83",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260922_Nitto_オプトロニクス_売上マップ_投資家向け.html": "3c0182425b1669b91144d31ecc7bcdb8f06cd3fa2c7feb71c678ed414f74340a"
+    },
+    "output_sha256": {
+      "260922_Nitto_オプトロニクス_売上マップ_投資家向け.html": "3c0182425b1669b91144d31ecc7bcdb8f06cd3fa2c7feb71c678ed414f74340a"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "id": "hyogo-kasumi-takeno-drive",
+  "title": "兵庫県｜香住・竹野・余部 1泊2日ドライブ",
+  "type": "plan",
+  "category": "31_旅行",
+  "subcategory": "国内ドライブ",
+  "summary": "尾道発の1泊2日モデルプラン。香住・竹野・余部の海岸景観、海鮮、地酒、宿候補を行程と略図でまとめた原画像。移動時間は概算、営業・入荷・宿の取扱いは要確認と記載。",
+  "tags": [
+    "兵庫県",
+    "香住",
+    "竹野",
+    "ドライブ"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260926 旅行 兵庫県.png",
+    "guide": "兵庫県香住・竹野・余部_guide.html",
+    "preview": "260926 旅行 兵庫県.png",
+    "additional": []
+  },
+  "search": {
+    "keywords": [
+      "兵庫県",
+      "香住",
+      "竹野",
+      "ドライブ"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "485905df235a8362e78337b9fd8e3a6e5ba89e09bd68c87dca40034a698c0c2b",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260926 旅行 兵庫県.png": "113dc2dc18c56b59f971fd7c47068f217f80823f682d0e3dcf277dce0b9a071d"
+    },
+    "output_sha256": {
+      "260926 旅行 兵庫県.png": "113dc2dc18c56b59f971fd7c47068f217f80823f682d0e3dcf277dce0b9a071d",
+      "兵庫県香住・竹野・余部_guide.html": "54f335979664ca8034d034d6f7cfba0b8229ac5027b6975b7f8f78bc0664be11"
+    }
+  }
+}

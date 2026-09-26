@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "id": "nagano-autumn-monthly-plans",
+  "title": "長野県観光プラン｜9月・10月・11月",
+  "type": "plan",
+  "category": "31_旅行",
+  "subcategory": "季節の旅行",
+  "summary": "長野の秋を9月・10月・11月に分け、高山紅葉、紅葉本番、湖畔・宿場町の晩秋を紹介する3枚の原画像。月ごとの景観・体験・服装と注意点を比較して見返せる。",
+  "tags": [
+    "長野県",
+    "紅葉",
+    "秋",
+    "観光"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "長野県観光プラン 9月ver.png",
+    "guide": "長野県秋の観光プラン_guide.html",
+    "preview": "長野県観光プラン 9月ver.png",
+    "additional": [
+      "長野県観光プラン 10月ver.png",
+      "長野県観光プラン 11月ver.png"
+    ]
+  },
+  "search": {
+    "keywords": [
+      "長野県",
+      "紅葉",
+      "秋",
+      "観光"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "fda8b503f212806b37fe6c1d63d5c2ded49a8a049bd86542ea539725f71df728",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "長野県観光プラン 10月ver.png": "8468ad52486c1df7b5d09ad4f5dacc766f0534268f4e65432f0893540febd128",
+      "長野県観光プラン 11月ver.png": "671e54685686309c5d241d670d339c6ea9bfed0252e03440ff1b833a7c379c09",
+      "長野県観光プラン 9月ver.png": "59c4734e6ffe99684a1f759ab42273a7e9651928a86c32cbed4951f77b01c5fd"
+    },
+    "output_sha256": {
+      "長野県観光プラン 9月ver.png": "59c4734e6ffe99684a1f759ab42273a7e9651928a86c32cbed4951f77b01c5fd",
+      "長野県観光プラン 10月ver.png": "8468ad52486c1df7b5d09ad4f5dacc766f0534268f4e65432f0893540febd128",
+      "長野県観光プラン 11月ver.png": "671e54685686309c5d241d670d339c6ea9bfed0252e03440ff1b833a7c379c09",
+      "長野県秋の観光プラン_guide.html": "0ac8908aa9fbf7d9840a5cd00a526981d88cb8ae4be7a66daec5cb9b36f16a7c"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "id": "nitto-portfolio-strategy-20260922",
+  "title": "Nitto 全社事業ポートフォリオ＆戦略マップ｜投資家向け",
+  "type": "report",
+  "category": "51_仕事",
+  "subcategory": "企業・事業分析",
+  "summary": "2026年9月22日基準の保存資料。日東電工の3事業と新規領域、主要製品、Nitto RISE 2028、設備投資計画、決算時の確認事項を整理する。",
+  "tags": [
+    "日東電工",
+    "ポートフォリオ",
+    "経営戦略"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-22",
+    "updated": null
+  },
+  "files": {
+    "source": "260922_Nitto_全社事業ポートフォリオ_戦略マップ_投資家向け.html",
+    "guide": "260922_Nitto_全社事業ポートフォリオ_戦略マップ_投資家向け.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": [
+      "日東電工",
+      "ポートフォリオ",
+      "経営戦略"
+    ]
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "nitto-optronics-revenue-20260922",
+      "nitto-investment-analysis-20260922"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "b2f4a0990dcff1f182df5c1b11ef91a19cf28607acb7916b9de7780243bb473c",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260922_Nitto_全社事業ポートフォリオ_戦略マップ_投資家向け.html": "69fbcfc9481c0ea9c5f8e1601bdae81d97c4dbd1bd32e60664e4bd71ddeada6c"
+    },
+    "output_sha256": {
+      "260922_Nitto_全社事業ポートフォリオ_戦略マップ_投資家向け.html": "69fbcfc9481c0ea9c5f8e1601bdae81d97c4dbd1bd32e60664e4bd71ddeada6c"
+    }
+  }
+}
