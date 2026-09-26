@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "personal-holiday-plan",
+  "title": "本気の休日プラン",
+  "type": "plan",
+  "category": "11_哲学",
+  "subcategory": "行動原則・実践",
+  "summary": "休日のタイムスケジュール例と、厳格案・ストア派の視点など4群20案をまとめた図解。学習・キャリア・個人開発と休息の配分、継続のための行動ルールを整理する。",
+  "tags": [
+    "行動計画",
+    "継続",
+    "習慣",
+    "自己管理"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260926 本気の休日プラン.png",
+    "guide": "本気の休日プラン_guide.html",
+    "preview": "260926 本気の休日プラン.png",
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "15b5df941dca5a252b103e1b1f907fd98811417952f8531ad3fe3124103b9abc",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260926 本気の休日プラン.png": "7b0e058cc0ad1af1277257990b0ae73a56ea361e6ddf97f0d794ec622f36702d"
+    },
+    "output_sha256": {
+      "260926 本気の休日プラン.png": "7b0e058cc0ad1af1277257990b0ae73a56ea361e6ddf97f0d794ec622f36702d",
+      "本気の休日プラン_guide.html": "382c32fe1b1931b197926b6748ce163063be4122eaeb8ce34b6c23a537283f52"
+    }
+  }
+}

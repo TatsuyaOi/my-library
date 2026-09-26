@@ -1,6 +1,6 @@
 {
   "site_title": "My Library",
-  "generated_at": "2026-09-26T16:41:33+09:00",
+  "generated_at": "2026-09-26T17:06:21+09:00",
   "categories": [
     {
       "folder": "00_マニュアル",
@@ -24,7 +24,7 @@
       "icon": "🧠",
       "description": "哲学者・思想・名言・自分の考えを整理するライブラリ",
       "accent": "#6f56d9",
-      "count": 4
+      "count": 6
     },
     {
       "folder": "21_基本情報",
@@ -56,7 +56,7 @@
       "icon": "✨",
       "description": "ChatGPT・Codex・AI活用・AI関連資料を整理するライブラリ",
       "accent": "#8b5a2b",
-      "count": 2
+      "count": 3
     },
     {
       "folder": "51_仕事",
@@ -65,6 +65,14 @@
       "description": "業界分析・市場動向・事業評価・業務の意思決定に使う資料",
       "accent": "#2f6b59",
       "count": 6
+    },
+    {
+      "folder": "61_会話系",
+      "title": "会話系",
+      "icon": "💬",
+      "description": "会話の振り返り・参考書・コミュニケーション資料",
+      "accent": "#98615b",
+      "count": 2
     },
     {
       "folder": "71_勉強",
@@ -80,7 +88,7 @@
       "icon": "🗂️",
       "description": "分類前の資料や、ほかのカテゴリに入らない情報をまとめるライブラリ",
       "accent": "#666666",
-      "count": 2
+      "count": 1
     }
   ],
   "items": [
@@ -175,6 +183,54 @@
       "url": "./31_旅行/05_長野県秋の観光プラン/長野県秋の観光プラン_guide.html",
       "thumbnail_url": "./31_旅行/05_長野県秋の観光プラン/長野県観光プラン 9月ver.png",
       "preview_url": "./31_旅行/05_長野県秋の観光プラン/長野県観光プラン 9月ver.png"
+    },
+    {
+      "title": "本気の休日プラン",
+      "description": "休日のタイムスケジュール例と、厳格案・ストア派の視点など4群20案をまとめた図解。学習・キャリア・個人開発と休息の配分、継続のための行動ルールを整理する。",
+      "group": "行動原則・実践",
+      "tags": [
+        "行動計画",
+        "継続",
+        "習慣",
+        "自己管理"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-26",
+      "file": "06_本気の休日プラン/本気の休日プラン_guide.html",
+      "preview": "06_本気の休日プラン/260926 本気の休日プラン.png",
+      "thumbnail": "06_本気の休日プラン/260926 本気の休日プラン.png",
+      "thumbnail_alt": "本気の休日プラン",
+      "category_folder": "11_哲学",
+      "category_title": "哲学",
+      "category_icon": "🧠",
+      "url": "./11_哲学/06_本気の休日プラン/本気の休日プラン_guide.html",
+      "thumbnail_url": "./11_哲学/06_本気の休日プラン/260926 本気の休日プラン.png",
+      "preview_url": "./11_哲学/06_本気の休日プラン/260926 本気の休日プラン.png"
+    },
+    {
+      "title": "本気の3か月スケジュール",
+      "description": "2026年9月22日から12月31日までの目標とロードマップ、週次運用、継続のルールをまとめた図解。学習・キャリア・個人開発・生活習慣を通じて行動を積み重ねるための計画。",
+      "group": "行動原則・実践",
+      "tags": [
+        "行動計画",
+        "継続",
+        "習慣",
+        "自己管理"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-26",
+      "file": "05_本気の3か月スケジュール/本気の3か月スケジュール_guide.html",
+      "preview": "05_本気の3か月スケジュール/260926 本気の3か月スケジュール.png",
+      "thumbnail": "05_本気の3か月スケジュール/260926 本気の3か月スケジュール.png",
+      "thumbnail_alt": "本気の3か月スケジュール",
+      "category_folder": "11_哲学",
+      "category_title": "哲学",
+      "category_icon": "🧠",
+      "url": "./11_哲学/05_本気の3か月スケジュール/本気の3か月スケジュール_guide.html",
+      "thumbnail_url": "./11_哲学/05_本気の3か月スケジュール/260926 本気の3か月スケジュール.png",
+      "preview_url": "./11_哲学/05_本気の3か月スケジュール/260926 本気の3か月スケジュール.png"
     },
     {
       "title": "日東電工｜投資分析レポート 2026.09.22",
@@ -292,6 +348,42 @@
       "preview_url": "./31_旅行/01_兵庫県香住・竹野・余部/260926 旅行 兵庫県.png"
     },
     {
+      "title": "はるな｜カンニングペーパー兼参考書",
+      "description": "会話前の要点、趣味・好み、関係の流れ、会話の振り返りと今後の話題例を整理した参考書。確認済みの事実、音声補足、見立て、提案を区別して参照する。",
+      "group": "会話の参考書",
+      "tags": [
+        "会話",
+        "振り返り",
+        "コミュニケーション"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-26",
+      "file": "03_はるな会話カンニングペーパー/はるな_カンニングペーパー兼参考書_guide.html",
+      "category_folder": "61_会話系",
+      "category_title": "会話系",
+      "category_icon": "💬",
+      "url": "./61_会話系/03_はるな会話カンニングペーパー/はるな_カンニングペーパー兼参考書_guide.html"
+    },
+    {
+      "title": "あんな｜カンニングペーパー兼参考書",
+      "description": "会話前の要点、趣味・好み、関係の流れ、会話の振り返りと今後の話題例を整理した参考書。確認済みの事実、音声補足、見立て、提案を区別して参照する。",
+      "group": "会話の参考書",
+      "tags": [
+        "会話",
+        "振り返り",
+        "コミュニケーション"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-26",
+      "file": "02_あんな会話カンニングペーパー/あんな_カンニングペーパー兼参考書_guide.html",
+      "category_folder": "61_会話系",
+      "category_title": "会話系",
+      "category_icon": "💬",
+      "url": "./61_会話系/02_あんな会話カンニングペーパー/あんな_カンニングペーパー兼参考書_guide.html"
+    },
+    {
       "title": "Personal OS｜機能・データ・UI実装仕様 v1.1",
       "description": "新規AndroidアプリPersonal OSの機能・データ・実装方針と、3タブ・12画面のUI、アイコン、操作と動きをまとめた仕様資料。HTMLの操作見本とMarkdownの機能仕様を一組として参照する。",
       "group": "アプリ開発",
@@ -305,11 +397,11 @@
       "pinned": false,
       "order": 999999,
       "updated": "2026-09-26",
-      "file": "02_PersonalOS機能・UI仕様/Personal_OS_UI_Interaction_Guide.html",
-      "category_folder": "99_その他",
-      "category_title": "その他",
-      "category_icon": "🗂️",
-      "url": "./99_その他/02_PersonalOS機能・UI仕様/Personal_OS_UI_Interaction_Guide.html"
+      "file": "04_PersonalOS機能・UI仕様/Personal_OS_UI_Interaction_Guide.html",
+      "category_folder": "41_AI",
+      "category_title": "AI",
+      "category_icon": "✨",
+      "url": "./41_AI/04_PersonalOS機能・UI仕様/Personal_OS_UI_Interaction_Guide.html"
     },
     {
       "title": "Nitto 全社事業ポートフォリオ＆戦略マップ｜投資家向け",

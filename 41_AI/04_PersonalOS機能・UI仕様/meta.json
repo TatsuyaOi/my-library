@@ -3,7 +3,7 @@
   "id": "personal-os-spec-v11",
   "title": "Personal OS｜機能・データ・UI実装仕様 v1.1",
   "type": "reference",
-  "category": "99_その他",
+  "category": "41_AI",
   "subcategory": "アプリ開発",
   "summary": "新規AndroidアプリPersonal OSの機能・データ・実装方針と、3タブ・12画面のUI、アイコン、操作と動きをまとめた仕様資料。HTMLの操作見本とMarkdownの機能仕様を一組として参照する。",
   "tags": [

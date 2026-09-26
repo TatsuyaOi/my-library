@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "personal-three-month-schedule",
+  "title": "本気の3か月スケジュール",
+  "type": "plan",
+  "category": "11_哲学",
+  "subcategory": "行動原則・実践",
+  "summary": "2026年9月22日から12月31日までの目標とロードマップ、週次運用、継続のルールをまとめた図解。学習・キャリア・個人開発・生活習慣を通じて行動を積み重ねるための計画。",
+  "tags": [
+    "行動計画",
+    "継続",
+    "習慣",
+    "自己管理"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": null,
+    "updated": null
+  },
+  "files": {
+    "source": "260926 本気の3か月スケジュール.png",
+    "guide": "本気の3か月スケジュール_guide.html",
+    "preview": "260926 本気の3か月スケジュール.png",
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "755601ccb19b1da4f400276282bf1fab1038041388816fe54b9d6190ff49d4a6",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "260926 本気の3か月スケジュール.png": "5fe941ecedb431970dba42c696950a9acae4fa6d64d3a17af52ea8dfe6415154"
+    },
+    "output_sha256": {
+      "260926 本気の3か月スケジュール.png": "5fe941ecedb431970dba42c696950a9acae4fa6d64d3a17af52ea8dfe6415154",
+      "本気の3か月スケジュール_guide.html": "a3f87d7b0a971acddff593eff7081ab00060440b201de61432901e291b7908a6"
+    }
+  }
+}
