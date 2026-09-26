@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "id": "anna-conversation-reference",
+  "title": "あんな｜カンニングペーパー兼参考書",
+  "type": "reference",
+  "category": "61_会話系",
+  "subcategory": "会話の参考書",
+  "summary": "会話前の要点、趣味・好み、関係の流れ、会話の振り返りと今後の話題例を整理した参考書。確認済みの事実、音声補足、見立て、提案を区別して参照する。",
+  "tags": [
+    "会話",
+    "振り返り",
+    "コミュニケーション"
+  ],
+  "status": "active",
+  "version": null,
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-26",
+    "updated": null
+  },
+  "files": {
+    "source": "あんな_カンニングペーパー兼参考書_guide.html",
+    "guide": "あんな_カンニングペーパー兼参考書_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "ca5e09ae82d588e0689b2097efb435447ff945c4c1f13c70258b0a313cd4e52b",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "あんな_カンニングペーパー兼参考書_guide.html": "2b451a30a5b517d25932d2026d453d684ccd9cc9a49060cbc88134d4416e12c1",
+      "あんな_カンニングペーパー兼参考書_20260926.html": "d3176bd25ba1eef2d5ff81fa72d377390b07649c114f2e5c1a1f2d073fecd5fa"
+    },
+    "output_sha256": {
+      "あんな_カンニングペーパー兼参考書_guide.html": "2b451a30a5b517d25932d2026d453d684ccd9cc9a49060cbc88134d4416e12c1"
+    },
+    "publication_note": "ユーザーの明示的な公開コピー指示に基づく。原本はInboxに保持し、公開用コピーで未同梱の出典リンクのみ無効化。"
+  }
+}

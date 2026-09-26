@@ -6,8 +6,24 @@
     "description": "ChatGPT・Codex・AI活用・AI関連資料を整理するライブラリ",
     "accent": "#8b5a2b"
   },
-  "generated_at": "2026-09-19T17:01:44+09:00",
+  "generated_at": "2026-09-26T17:06:20+09:00",
   "items": [
+    {
+      "title": "Personal OS｜機能・データ・UI実装仕様 v1.1",
+      "description": "新規AndroidアプリPersonal OSの機能・データ・実装方針と、3タブ・12画面のUI、アイコン、操作と動きをまとめた仕様資料。HTMLの操作見本とMarkdownの機能仕様を一組として参照する。",
+      "group": "アプリ開発",
+      "tags": [
+        "Personal OS",
+        "Android",
+        "ToDo",
+        "UI設計",
+        "実装仕様"
+      ],
+      "pinned": false,
+      "order": 999999,
+      "updated": "2026-09-26",
+      "file": "04_PersonalOS機能・UI仕様/Personal_OS_UI_Interaction_Guide.html"
+    },
     {
       "title": "AI事業計画｜36案比較と90日検証計画",
       "description": "36事業案を比較し、上位案と90日間の検証計画を整理する。",
