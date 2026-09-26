@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "id": "requirements-completion-interview",
+  "title": "要件完全化インタビュー＋生成前確認ゲート＋完成後検証 汎用メタプロンプト",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "要件定義",
+  "summary": "曖昧な依頼から不足・矛盾・仮定を整理し、重要度に応じて質問する汎用メタプロンプト。要件台帳、生成前確認、完成後検証を備え、完全版・短縮版とAI別の追加モジュールを収録する。",
+  "tags": [
+    "要件定義",
+    "インタビュー",
+    "完成後検証"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "要件完全化インタビュー_汎用メタプロンプト_v1.0.md",
+    "guide": "要件完全化インタビュー_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "b915227b4da6cdc03f90b141f2ea1bb31d55894f58e68363f976921cebcbef0b",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "要件完全化インタビュー_汎用メタプロンプト_v1.0.md": "8c56489cb66825f2d68d52c8f423a0f7f6bf2c3a000238bc1325badb43d63dbd"
+    },
+    "output_sha256": {
+      "要件完全化インタビュー_汎用メタプロンプト_v1.0.md": "8c56489cb66825f2d68d52c8f423a0f7f6bf2c3a000238bc1325badb43d63dbd",
+      "要件完全化インタビュー_guide.html": "06f6285343169ca9780af69587a7af09e3ca5b5c72de0a5a23f46402c0efed54"
+    }
+  }
+}

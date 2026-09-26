@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "id": "rd-deep-research",
+  "title": "研究開発・技術調査専用 Deep Research Master Prompt v1.0",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "研究開発",
+  "summary": "論文・技術資料を探索し、条件比較、反証探索、根拠台帳と検索記録を通じて研究開発向けに統合するプロンプト。初回の要件確認後に調査を進め、適用可能性と次の検証を整理する。",
+  "tags": [
+    "研究開発",
+    "技術調査",
+    "文献レビュー",
+    "根拠監査"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "研究開発・技術調査専用_Deep_Research_Master_Prompt_v1.0.md",
+    "guide": "研究開発・技術調査_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "strict-review-improvement"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "06e13ab1be5b6dc23663414ab3eba8637d743e8e7ae4c559f1fee1483d4ed54a",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "研究開発・技術調査専用_Deep_Research_Master_Prompt_v1.0.md": "a7dbc0d592d4cedbe9f335137389e93974d171ee8b327c21b2e15d8668f28fa1"
+    },
+    "output_sha256": {
+      "研究開発・技術調査専用_Deep_Research_Master_Prompt_v1.0.md": "a7dbc0d592d4cedbe9f335137389e93974d171ee8b327c21b2e15d8668f28fa1",
+      "研究開発・技術調査_guide.html": "08e59e632e4d8aeddafa883aded9731cd44a2944da622cf9e332f580ed8c4aba"
+    }
+  }
+}
