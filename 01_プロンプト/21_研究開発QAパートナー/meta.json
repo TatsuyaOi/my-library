@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "id": "adaptive-rd-qa-partner",
+  "title": "研究開発Q&Aパートナー｜適応型マスタープロンプト",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "研究開発",
+  "summary": "日常の研究開発質問に応じて、機構説明、原因究明、比較、計算、因果分析、実験計画、文献調査の深さを調整するプロンプト。材料・薄膜・塗工分野の確認観点と任意コマンドを備える。",
+  "tags": [
+    "研究開発",
+    "Q&A",
+    "機構説明",
+    "実験計画"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "研究開発_QAパートナー_マスタープロンプト_v1.0.md",
+    "guide": "研究開発QAパートナー_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": [
+      "causal-hypothesis-researcher",
+      "rd-deep-research",
+      "question-discovery-research"
+    ]
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "64c88f75c3037237fa408c04d5426474ea1fd6bc3c50b475cfc977aa22d2ddb3",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "研究開発_QAパートナー_マスタープロンプト_v1.0.md": "9ce39a62d34604e6cb0f005d2477bca069ecbc499db2b03fdb49d4afcf0b3b33"
+    },
+    "output_sha256": {
+      "研究開発_QAパートナー_マスタープロンプト_v1.0.md": "9ce39a62d34604e6cb0f005d2477bca069ecbc499db2b03fdb49d4afcf0b3b33",
+      "研究開発QAパートナー_guide.html": "1e0894b2d5e7322f55153e57e22cf553e3ffbaf7ebd1ef64aea9cf73d31d58ed"
+    }
+  }
+}

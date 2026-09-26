@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "id": "question-discovery-universal",
+  "title": "未発見の問い発掘エンジン｜完全汎用・自動判定版",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "問いの発掘",
+  "summary": "入力テーマの領域を自動判定し、前提、視点、事実と価値の違いから重要な問いを発掘し、優先順位と掘り下げる問いを整理するプロンプト。",
+  "tags": [
+    "問いの発掘",
+    "課題設定",
+    "完全汎用・自動判定版"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "question-discovery-universal_prompt.md",
+    "guide": "問い発掘_汎用_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "488d741a29b23b1535c0173034f194f55b481dd5642564141138ae71a7447c0e",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "question-discovery-universal_prompt.md": "cdeb6556f1b0b6f71e07a3d7d59169359873a390155373686ae52ce18bd87126"
+    },
+    "output_sha256": {
+      "question-discovery-universal_prompt.md": "cdeb6556f1b0b6f71e07a3d7d59169359873a390155373686ae52ce18bd87126",
+      "問い発掘_汎用_guide.html": "e653f96641c6d3a78744e71bcf2551eadc02cbb25d33506d038e930f94ac2459"
+    }
+  }
+}

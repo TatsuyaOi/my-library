@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "id": "question-discovery-business",
+  "title": "未発見の問い発掘エンジン｜仕事・意思決定版",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "問いの発掘",
+  "summary": "課題設定、代替案、費用、運用責任や可逆性などの観点から、仕事と意思決定で見落としている問いを発掘するプロンプト。",
+  "tags": [
+    "問いの発掘",
+    "課題設定",
+    "仕事・意思決定版"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "question-discovery-business_prompt.md",
+    "guide": "問い発掘_仕事・意思決定_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "0fea8fc28d1ada10b639da09fe44617fe74abbaaf0793564416d31efef53cd3b",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "question-discovery-business_prompt.md": "f090419aeef59a3de88377beb2d6dd3760568bfe24f4eaca7a46c8354a0f05a6"
+    },
+    "output_sha256": {
+      "question-discovery-business_prompt.md": "f090419aeef59a3de88377beb2d6dd3760568bfe24f4eaca7a46c8354a0f05a6",
+      "問い発掘_仕事・意思決定_guide.html": "cbfb6b31d35c190986ab2eb7e98fd623732a20728e21c99718b2fdb17c518b54"
+    }
+  }
+}

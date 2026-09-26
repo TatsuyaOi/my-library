@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "id": "question-discovery-research",
+  "title": "未発見の問い発掘エンジン｜研究・実験版",
+  "type": "prompt",
+  "category": "01_プロンプト",
+  "subcategory": "問いの発掘",
+  "summary": "研究の仮説、因果、測定、比較条件や実験の盲点から、まだ見つかっていない重要な問いを発掘し、優先順位を付けるプロンプト。",
+  "tags": [
+    "問いの発掘",
+    "課題設定",
+    "研究・実験版"
+  ],
+  "status": "active",
+  "version": "1.0",
+  "language": "ja",
+  "dates": {
+    "created": "2026-09-05",
+    "updated": null
+  },
+  "files": {
+    "source": "question-discovery-research_prompt.md",
+    "guide": "問い発掘_研究・実験_guide.html",
+    "preview": null,
+    "additional": []
+  },
+  "search": {
+    "keywords": []
+  },
+  "relations": {
+    "parent_id": null,
+    "related_ids": []
+  },
+  "ingestion": {
+    "tool": "my-library-inbox-v1",
+    "fingerprint": "e629f11494bfc2ecafad50bfc1898e9a113fb8f24011b58495eafca2d237c3b8",
+    "publication_reviewed": true,
+    "source_sha256": {
+      "question-discovery-research_prompt.md": "ae770e6d54e906328f66883db9ddd90d697083574b84de706933d43e0a89e4d5"
+    },
+    "output_sha256": {
+      "question-discovery-research_prompt.md": "ae770e6d54e906328f66883db9ddd90d697083574b84de706933d43e0a89e4d5",
+      "問い発掘_研究・実験_guide.html": "b394eaf7194927403caf2440e21744742142903eb16beb44785beb20412caa27"
+    }
+  }
+}
